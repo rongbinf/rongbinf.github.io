@@ -1,0 +1,145 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JavaScript - 标签 - Rongbin&#39;s Blog</title>
+        <link>https://rongbinf.github.io/tags/javascript/</link>
+        <description>JavaScript - 标签 - Rongbin&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 06 Feb 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://rongbinf.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>在使用 Clipboard.js 中学一点 JavaScript</title>
+    <link>https://rongbinf.github.io/posts/clipboard-js-errors/</link>
+    <pubDate>Thu, 06 Feb 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/clipboard-js-errors/</guid>
+    <description><![CDATA[<p>在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。
+我的组合是：Bootstrap（CSS 框架）+ Clipboard.js</p>
+<h2 id="第一次报错uncaught-typeerror-illegal-constructor">第一次报错：Uncaught TypeError: Illegal constructor</h2>
+<p>报错代码：<code>new Clipboard('.btn');</code>
+该语句代表着开始初始化调用 Clipboard.js。一开始调用就出错？回到官方文档中比对：<code>new ClipboardJS('.btn');</code>
+问题解决：一开始所参照的中文教程比较久远，语句更新为 ClipboardJS。</p>
+<h2 id="第二次报错uncaught-typeerror-cannot-read-property-addeventlistener-of-null">第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null</h2>
+<p>报错代码：<code>var clipboard = new ClipboardJS('.btn');</code>
+该语句是为了使用 DOM 选择器。</p>
+<h3 id="为什么在这里要使用-dom-选择器dom-selector">为什么在这里要使用 DOM 选择器(DOM SELECTOR)</h3>
+<p>为了在页面上快速找到引号内（在此为.btn）元素，然后进行下一步。报错原因：调用 JavaScript 时，DOM 选择器还没有渲染完。反映为在使用 DOM 选择器时，没找到或没找完该元素。在我的页面中，因为一开始把<code><script></script></code>都放在<code><head></code>标签之内，所以在<code><body></code>没渲染之前就加载了 DOM 选择器，当然什么都找不到了。</p>
+<p>问题解决：把该段 JS 放到到本来调用 Clipboard.js 那一段之后。</p>
+<h2 id="第三次报错tooltip-is-not-a-function">第三次报错：.tooltip() is not a function</h2>
+<p>在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">clipboard</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ClipboardJS</span><span class="p">(</span><span class="s1">&#39;.btn&#39;</span><span class="p">);</span>
+ 
+<span class="nx">clipboard</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Action:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">action</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Text:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">text</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Trigger:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">trigger</span><span class="p">);</span>
+ 
+    <span class="nx">e</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+<span class="p">});</span>
+ 
+<span class="nx">clipboard</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Action:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">action</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Trigger:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">trigger</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>为了监听是否触发自定义事件，也就是获得用户是否成功复制内容的反馈，加载了这一段代码进行监听。如果成功，则回复 success，失败回复 error。结合 Tooltip.js 的教程，可以直接改为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Tooltip
+</span><span class="c1"></span> 
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+  <span class="nx">trigger</span><span class="o">:</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span>
+  <span class="nx">placement</span><span class="o">:</span> <span class="s1">&#39;bottom&#39;</span>
+<span class="p">});</span>
+ 
+<span class="kd">function</span> <span class="nx">setTooltip</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;data-original-title&#39;</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+ 
+<span class="kd">function</span> <span class="nx">hideTooltip</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+ 
+<span class="c1">// Clipboard
+</span><span class="c1"></span> 
+<span class="kd">var</span> <span class="nx">clipboard</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Clipboard</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">);</span>
+ 
+<span class="nx">clipboard</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">setTooltip</span><span class="p">(</span><span class="s1">&#39;Copied!&#39;</span><span class="p">);</span>
+  <span class="nx">hideTooltip</span><span class="p">();</span>
+<span class="p">});</span>
+ 
+<span class="nx">clipboard</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">setTooltip</span><span class="p">(</span><span class="s1">&#39;Failed!&#39;</span><span class="p">);</span>
+  <span class="nx">hideTooltip</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在对应的按钮加入标签即可。但报错找不到 tooltip 的函数。应该还是加载问题。
+问题解决：Tooltip.js 依赖 jQuery，需要先调用 jQuery 再调用 tooltip.js（也就是 bootstrap.min.js），在<head>内将调用 jquery.js 一行置于 bootstrap.min.js 之前。</p>
+<h2 id="到底学了什么">到底学了什么？</h2>
+<ol>
+<li>注意渲染顺序。</li>
+<li>注意版本更新。</li>
+</ol>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://www.liaoxuefeng.com/wiki/1022910821149312/1023023555539648" target="_blank" rel="noopener noreffer">选择器 – 廖雪峰的官方网站</a></li>
+<li><a href="https://stackoverflow.com/questions/9394390/tooltip-is-not-a-function" target="_blank" rel="noopener noreffer">Stack Overflow 上关于 tooltip is not a function 的讨论</a></li>
+</ul>
+]]></description>
+</item></channel>
+</rss>

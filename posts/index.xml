@@ -1,37 +1,27 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title> - Rongbin&#39;s Blog</title>
+        <title>所有文章 - Rongbin&#39;s Blog</title>
         <link>https://rongbinf.github.io/posts/</link>
-        <description> | Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Mon, 06 Feb 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://rongbinf.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>在 Web 设计中使用系统 UI 默认字体</title>
-    <link>https://rongbinf.github.io/posts/using-default-fonts-in-web-design/</link>
-    <pubDate>Mon, 06 Feb 2017 00:00:00 &#43;0000</pubDate><author>
-        <name></name>
-    </author><guid>https://rongbinf.github.io/posts/using-default-fonts-in-web-design/</guid>
-    <description><![CDATA[<p>内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。</p>
-<p>使用默认 UI 字体可以通过两种方式实现：</p>
-<h2 id="非常用方法不推荐">非常用方法（不推荐）</h2>
+        <description>所有文章 | Rongbin&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 12 Nov 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://rongbinf.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>使用 matplotlib 遇到的几个问题</title>
+    <link>https://rongbinf.github.io/posts/november-matplotlib/</link>
+    <pubDate>Fri, 12 Nov 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/november-matplotlib/</guid>
+    <description><![CDATA[<p>这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">caption</span> <span class="p">{</span>
-    <span class="k">font</span><span class="p">:</span> <span class="n">caption</span><span class="p">;</span>
-    <span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">plt</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>从来没见过这么用的，即使 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font" target="_blank" rel="noopener noreffer">CSS 文档</a>里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。</p>
-<p>使用这种方法会导致几个常见问题：</p>
-<ul>
-<li>在 iOS 设备和众多 Android 浏览器上无法返回正确的字体。</li>
-<li>截止至 2015 年 12 月，仍无法在 Mac OS X 上的 Firefox 上支持 “smart” properties of San Francisco。（指能在 San Francisco Text 和 San Francisco Display 中根据实际情况（大于 20px）切换，并更改字间距。）</li>
-<li>完全和系统相关控件一致，无法再自定义变更字体大小、粗细等。</li>
-</ul>
-<h2 id="常用方法">常用方法</h2>
+</div><p>首先是解决字符串转日期型的问题。<strong>我希望将日期作为横轴，而且显示合理。</strong></p>
+<p>使用 <code>datetime</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -42,44 +32,60 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;en-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="p">:</span>
-    <span class="c">/* 1 */</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span>
-    <span class="c">/* 2 */</span> <span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="s2">&#34;Roboto&#34;</span><span class="p">,</span> <span class="s2">&#34;Oxygen&#34;</span><span class="p">,</span> <span class="s2">&#34;Ubuntu&#34;</span><span class="p">,</span> <span class="s2">&#34;Cantarell&#34;</span><span class="p">,</span> <span class="s2">&#34;Fira Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="p">,</span>
-    <span class="c">/* 3 */</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
-<span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">example</span><span class="o">.</span><span class="n">date</span>
+
+<span class="c1"># example.date 是我的 example.csv 文件中日期对应列。</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题：</p>
-<ul>
-<li>即使这几年不会有多大改变，但每次厂商换字体时都要重新修一遍。</li>
-<li>仅列出适用于大多数用户的字体。</li>
-<li>若用户所用系统有比默认 UI 字体排序更前的字体（例如一个 Android 开发者在 Windows 上安装了 Roboto），则声明的是排序更前的字体（显示 Segoe UI 而并非 Roboto）。</li>
-<li>命名冲突（例如 Oxygen）</li>
+</div><p>更多时间处理参数，详见下方链接。</p>
+<p>自动格式化：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><a href="https://docs.python.org/zh-cn/3/library/datetime.html" target="_blank" rel="noopener noreffer">datetime - Python 3 中文文档</a></li>
+<li><a href="https://blog.csdn.net/gty931008/article/details/80254806" target="_blank" rel="noopener noreffer">python之时间、日期处理模块（datetime）- CSDN</a></li>
 </ul>
-<h3 id="细节">细节</h3>
-<h4 id="-1--macos">/* 1 */ macOS</h4>
-<ul>
-<li>-apple-system 在最新版本的 macOS 上使用 San Francisco，旧版本则使用 Helvetica Neue 或 Lucida Grande。支持 “smart” properties of San Francisco。</li>
-<li>BlinkMacSystemFont 用于 macOS 上的 Chrome。
-（San Francisco 在 macOS 上 Firefox 浏览器中的字间距比 Safari 和 Chrome 都更小。）</li>
+<p>**我希望定位一个具体日期，并用竖线标识。**这里用到 <code>pandas</code> 把我希望的具体日期转为时间戳。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2014-06-30&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#000&#39;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvline.html" target="_blank" rel="noopener noreffer">matplotlib.pyplot.axvline</a></li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html" target="_blank" rel="noopener noreffer">pandas.Timestamp</a></li>
 </ul>
-<h4 id="-2--其他系统">/* 2 */ 其他系统</h4>
-<ul>
-<li>Segoe UI 面向 Windows 及 Windows Phone/Windows 10 Mobile。</li>
-<li>Roboto 面向 Android 和较新版本的 Chrome OS。</li>
-<li>Oxygen 面向 KDE。</li>
-<li>Ubuntu 还需要说吗&hellip;</li>
-<li>Cantarell 面向 GNOME。</li>
-<li>Fira Sans 面向 Firefox OS。</li>
-<li>Droid Sans 面向较旧版本的 Android。</li>
-</ul>
-<h4 id="-3--备用字体">/* 3 */ 备用字体</h4>
-<ul>
-<li>Helvetica Neue 因为这很经典（雾）。</li>
-<li>sans-serif 因为这很默认（大雾）。</li>
-</ul>
-<h3 id="包括中文字体的解决方法">包括中文字体的解决方法</h3>
+<p></p>
+<p><strong>我希望在一张图（单个文件）中同时展示多个图表</strong>，既可以用 <code>subplot</code>，也可以用 <code>GridSpec</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">totalb</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">conb</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>也可以：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -88,55 +94,536 @@
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;zh-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="n">system</span><span class="p">,</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span><span class="s2">&#34;PingFang SC&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="s2">&#34;Microsoft YaHei UI&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Source Han Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;wenquanyi micro hei&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Hiragino Sans GB&#34;</span><span class="p">,</span> <span class="s2">&#34;Hiragino Sans GB W3&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Roboto&#34;</span><span class="p">,</span> <span class="s2">&#34;Oxygen&#34;</span><span class="p">,</span> <span class="s2">&#34;Ubuntu&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Cantarell&#34;</span><span class="p">,</span> <span class="s2">&#34;Fira Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
-<span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">GridSpec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">.25</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">.25</span><span class="p">)</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">totalb</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">conb</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="细节-1">细节</h4>
+</div><p>如何定义具体位置或查看更多实例，请见 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html?" target="_blank" rel="noopener noreffer">matplotlib.pyplot.subplot</a> 和 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" target="_blank" rel="noopener noreffer">matplotlib.gridspec.GridSpec</a>。</p>
+<p></p>
+<p></p>
+<p>参考了实例 <a href="https://matplotlib.org/stable/gallery/subplots_axes_and_figures/axes_zoom_effect.html" target="_blank" rel="noopener noreffer">Axes Zoom Effect</a>。</p>
+<p>待持续补充。</p>
+]]></description>
+</item><item>
+    <title>eclipse, indices / indexes 与股价指数</title>
+    <link>https://rongbinf.github.io/posts/eclipse-indices-indexes/</link>
+    <pubDate>Tue, 02 Nov 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/eclipse-indices-indexes/</guid>
+    <description><![CDATA[<p>北京时间今天早上的一则新闻：</p>
+<blockquote>
+<p>Nov 1 (Reuters) - Wall Street&rsquo;s main <strong>indexes</strong> notched record closing highs on Monday as Tesla shares surged and the energy sector gained while investors looked ahead to a major Federal Reserve meeting later in the week.</p>
+<p>The Dow Jones Industrial Average (.DJI) <strong>eclipsed</strong> 36,000 points for the first time ever during intraday trading, ending just shy of that level.</p>
+<p><a href="https://www.reuters.com/business/wall-street-hits-records-tesla-surges-focus-fed-meeting-2021-11-01/" target="_blank" rel="noopener noreffer">Reuters</a></p>
+</blockquote>
+<h2 id="eclipse">eclipse?</h2>
+<p>eclipse 作动词除了天文上「遮住⋯⋯的光」即「食」（日食、月食）的意思、比较文学性的「使⋯⋯黯淡无光/黯然失色」的意思之外，还可以如引用所指，在商务英语中，表示在数量上或级别上「超过、高过」的意思。</p>
+<p>下引剑桥词典：</p>
+<blockquote>
+<p><strong>to become greater in amount or level than something else:</strong></p>
+<p><em>The increased consumer spending from new businesses has already helped shopping, dining, and real estate <strong>eclipse</strong> oil revenues.</em></p>
+<p><em>Their stock is up 50% so far this year, as their profit growth is expected to <strong>eclipse</strong> that of larger companies.</em></p>
+<p>(Definition of eclipse from <a href="https://dictionary.cambridge.org/dictionary/english/eclipse" target="_blank" rel="noopener noreffer">the Cambridge Business English Dictionary</a> © Cambridge University Press)</p>
+</blockquote>
+<h2 id="indices-或-indexes">indices 或 indexes?</h2>
+<p>都可以，它们都是 index 的复数形式。indices 经常出现在在数学、统计学、金融学、科学等相关文章中，书面也经常用。北美用 indexes 更多，其他英语国家用 indices 更多。</p>
+<h2 id="股票价格指数">股票价格指数</h2>
+<p>股票价格指数（Stock Price Index）也即股票指数。其制定，以方便投资者了解多只股票价格的波动，进而也能反应市场的态势。进一步也能体现政治、社会的发展形势。</p>
+<p>有多种编制方式：</p>
+<h3 id="按覆盖范围分">按覆盖范围分：</h3>
 <ul>
-<li>PingFang SC 即「苹方」，面向最新 macOS。</li>
-<li>Microsoft YaHei UI 即「微软雅黑」，面向较新版本 Windows。</li>
-<li>Source Han Sans 即「思源黑体」，面向较新版本 Android 和 Chrome OS。</li>
-<li>wenquanyi micro hei 即「文泉驛微米黑」，面向较旧版本 Android 和多数 Linux。</li>
-<li>Hiragino Sans GB (W3) 即「冬青黑体」，能够给网页浏览带来较好体验。</li>
+<li><strong>宽基指数</strong>（广基指数）（broad-based indices）
+<ul>
+<li>沪深 300，中证 500</li>
+<li>道琼斯工业指数</li>
+<li>标准普尔 500 指数</li>
 </ul>
-<h2 id="关于苹方">关于「苹方」</h2>
-<p>「苹方」有不同的字重可供选择，可以直接使用。（没有 Bold 我很服气）</p>
+</li>
+<li><strong>窄基指数</strong>（narrow-based indices）（行业/主题指数）
+<ul>
+<li>万得能源指数</li>
+<li>台湾 50 指数</li>
+<li>摩根士丹利生物技术指数</li>
+</ul>
+</li>
+</ul>
+<h3 id="按计算方式分不全">按计算方式分：（不全）</h3>
+<ul>
+<li>
+<p><strong>价格加权指数</strong>（Price Weighting based indices）</p>
+<p>成分股股价的简单算术平均。</p>
+<ul>
+<li>道琼斯工业指数</li>
+<li>纽约证交所科技 100 指数</li>
+<li>日经 225 指数（日经平均指数）</li>
+</ul>
+</li>
+<li>
+<p><strong>市值/股本/资本加权指数</strong>（Market-Capitalisation Weighting based indices）</p>
+<p>给予的权重基于该股票<strong>市值</strong>在整个<strong>组合市值</strong>中的权重。</p>
+<ul>
+<li>中证 500 指数</li>
+<li>标准普尔 500 指数</li>
+<li>香港恒生指数</li>
+</ul>
+</li>
+<li>
+<p><strong>自由流通市值/股本加权指数</strong>（Free-float adjusted Market-Capitalisation Weighting based indices）</p>
+<p>类似市值加权。但这里的市值使用流通市值，即可供公众交易的部分。</p>
+<ul>
+<li>沪深 300 指数</li>
+</ul>
+</li>
+<li>
+<p><strong>等权重加权指数（无权重指数）</strong>（Equal Weighting based indices）</p>
+<p>给予所有的成分股票以相同的权重，即假设每只成分股都购买了相同的金额。</p>
+<ul>
+<li>巴伦 400 指数</li>
+<li>标普 500 等权重指数</li>
+</ul>
+</li>
+<li>
+<p><strong>基本面加权指数</strong>（Fundamentally based indices）</p>
+<p>通常以公司的基本面（销售收入、现金流、分红等）为基础来分配个股的权重。</p>
+<ul>
+<li>上证 380 基本面加权指数</li>
+<li>富时 RAFI 指数系列</li>
+</ul>
+</li>
+<li>
+<p><strong>因子指数</strong>（Factor Weighting based indices）</p>
+<p>用以反映特定因子特性的绩效。（如股票价值、企业质量、红利、风险等）</p>
+<ul>
+<li>富时环球因子指数系列</li>
+<li>标普中国 A 股低波红利指数</li>
+</ul>
+</li>
+<li>
+<p><strong>波动率加权指数</strong>（Volatility Weighting based indices）</p>
+<ul>
+<li>芝加哥期权交易所市场波动率指数（恐慌指数 CBOE Volatility Index, ^VIX）</li>
+</ul>
+</li>
+<li>
+<p><strong>最小方差指数</strong>（Minimum Variance Weighting based indices）</p>
+<p>以实现组合方差最小化为目标的指数。</p>
+<ul>
+<li>斯托克全球 1800 最小方差指数</li>
+</ul>
+</li>
+</ul>
+<h3 id="比较有代表性的指数">比较有代表性的指数</h3>
+<h4 id="按地域">按地域</h4>
+<ul>
+<li>美国
+<ul>
+<li>标准普尔 500 指数（S&amp;P 500, ^GSPC）</li>
+<li>道琼斯工业指数（Dow 30, ^DJI）</li>
+<li>纳斯达克综合指数（Nasdaq, ^IXIC）</li>
+</ul>
+</li>
+<li>亚洲
+<ul>
+<li>日经 225 指数（Nikkei 225, ^N225）</li>
+<li>香港恒生指数（HANG SENG INDEX, ^HSI）</li>
+<li>韩国综合股价指数（KOSPI Composite Index, ^KS11）</li>
+<li>上证综合指数（SSE Composite Index, 000001.SS）</li>
+<li>深证成份股指数（Shenzhen Component, 399001.SZ）</li>
+</ul>
+</li>
+<li>欧洲
+<ul>
+<li>英国富时 100 指数（FTSE 100, ^FTSE）</li>
+<li>法国 CAC 40 指数（CAC 40, ^FCHI）</li>
+<li>德国 DAX 30 指数（DAX PERFORMANCE-INDEX, ^GDAXI）</li>
+<li>欧洲斯托克 50 指数（ESTX 50 PR.EUR, ^STOXX50E）</li>
+</ul>
+</li>
+</ul>
+]]></description>
+</item><item>
+    <title>Engadget 简体中文版关闭</title>
+    <link>https://rongbinf.github.io/posts/engadget-cn-closed/</link>
+    <pubDate>Tue, 02 Nov 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/engadget-cn-closed/</guid>
+    <description><![CDATA[<blockquote>
+<p>2021 年 11 月 1 日起，用户无法从中国大陆使用 Yahoo 的产品与服务。这并不影响 Yahoo 在全球其他地方的产品及服务。</p>
+<p>Yahoo 中国</p>
+</blockquote>
+<p>同时，Yahoo Weather（雅虎天气）宣布停止中国大陆服务，Engadget 简体中文版亦宣布停止更新。</p>
+<p></p>
+<p>Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，触角广泛，文字亦精炼扼要。中间编辑团队一度更换，希望了解更多的话，可见文末。</p>
+<p>记得最初是在 Flipboard 或者 Zaker 上偶然订阅了 Engadget 中文版，它是我所接触到的第一个科技资讯媒体。后来陆陆续续地还订阅了 The Verge、TechCrunch，还有 LiveSino、月光博客。它们构成我的很多回忆。</p>
+<p>现在的话，新资讯有赖于 Telegram 上的几个频道推送通知，产品测评的话看 YouTube 多一点（Dave2D、TESTV 等等），市场新闻、创投等也有比较集中的信源了。</p>
+<p>关于团队更换：</p>
+<ul>
+<li><a href="https://chinese.engadget.com/chinese-2011-06-27-new-engadget-chinese.html" target="_blank" rel="noopener noreffer">《歡迎來到全新的 Engadget 中文版》</a> - Richard Lai@Engadget</li>
+<li><a href="http://yblog.org/archive/index.php/aol_relocate_engadget_chinese_201106" target="_blank" rel="noopener noreffer">《Engadget 中文版與癮科技拆夥的可能內幕》</a>- 永遠的真田幸村</li>
+</ul>
+<p>祝新老成员未来都好。</p>
+<p>正式开站纪念博文存档：</p>
+<p></p>
+]]></description>
+</item><item>
+    <title>QDII 与 QDII 基金买卖</title>
+    <link>https://rongbinf.github.io/posts/qdii/</link>
+    <pubDate>Sun, 31 Oct 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/qdii/</guid>
+    <description><![CDATA[<p>现<strong>境内向境外</strong>进行合法投资（除境外直接投资 ODI、陆股通）的三种形式：</p>
+<p></p>
+<p>而<strong>境外向境内</strong>进行投资，可分直接投资和间接投资。QFII 和 RQFII 属于外资直接投资境内证券二级市场。其包括股息及买卖价差等在内的各种资本所得，经审核后可转换为外汇汇出。实际为对外资有限度地开放境内的证券市场。</p>
+<p></p>
+<p></p>
+<p>QDII 基金，即从事境外证券市场的股票、债券等有价证券业务的证券投资基金。也就是 QDII 中合格的基金公司以设立基金的方式进行募资，进而在境外投资。</p>
+<p>在国内购买 QDII 基金的目的，主要在于分散单一市场可能的风险。</p>
+<h2 id="主要子分类">主要子分类</h2>
+<ul>
+<li>主动股票型</li>
+<li>指数型</li>
+<li>债券型</li>
+<li>混合型</li>
+<li>另类投资型
+<ul>
+<li>大宗商品型</li>
+<li>房地产信托型 REITs</li>
+<li>绝对收益型</li>
+<li>资产配置型 FOF</li>
+</ul>
+</li>
+</ul>
+<h2 id="t2-交易规则">T+2 交易规则</h2>
+<p>只投资港股的 QDII 基金遵循 T+1 交易规则，包括美股的 QDII 基金遵循 T+2 交易规则。</p>
+<p>美股交易时间（除节假日等休市日）：</p>
+<p></p>
+<p>而 QDII 基金遵循国内交易时间（除节假日等休市日）：即周一至周五 9:30-11:30，13:00-15:00。</p>
+<p><strong>境内外</strong>节假日休市都暂停申购、赎回。</p>
+<p><strong>买入延迟</strong>：在国内交易时间买入，需要等美股收盘后（第二天）按其收盘价计算买入份额。</p>
+<p><strong>基金净值更新延迟</strong>：美股凌晨收盘后，可见预估净值，但最终净值需待基金公司核准确认。但美股此时（第二天国内交易时间范围内）未开盘交易，无法计算净值，只能等第三天美股收盘后确认最终净值，确认买入份额。</p>
+<p>相应地，<strong>份额更新延迟</strong>，<strong>收益更新延迟</strong>。</p>
+<blockquote>
+<p>在 2021 年 10 月 25 日周一 14:00（第一天盘前或交易时间内）买入某 QDII 基金，以 10 月 26 日周二 4:00（第二天）美股收盘价计算买入份额，在 10 月 27 日周三（第三天）更新净值，确认买入份额。在 10 月 28 日周四（第四天）可查看 T+1 日收益。赎回同理。
+实际在周一看到的净值，是根据周日的行情。</p>
+</blockquote>
+<h2 id="低门槛高费率">低门槛、高费率</h2>
+<p>通常 10 元起即可申购。</p>
+<p>费率主要表现在<strong>管理费率</strong>上。</p>
+<h2 id="风险">风险</h2>
+<h3 id="交易风险">交易风险</h3>
+<p>隔日计算，无法预知第二天的大盘情况。</p>
+<h3 id="汇率风险">汇率风险</h3>
+<p>情形：人民币兑美元贬值（又或美元自身走强），配置美元资产的 QDII 基金获得收益增强。</p>
+<h3 id="流动性风险">流动性风险</h3>
+<p>情形 1：QDII 基金申购踊跃，其本身因额度限制而暂停申购。</p>
+<p>情形 2：美股节假日休市，亦无法申购赎回。</p>
+<p>情形 3：未开放二级市场交易的某 QDII 基金，从赎回到到账需约 8-10 个工作日。</p>
+]]></description>
+</item><item>
+    <title>建立健康的关系</title>
+    <link>https://rongbinf.github.io/posts/healthy-relationship/</link>
+    <pubDate>Fri, 13 Aug 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/healthy-relationship/</guid>
+    <description><![CDATA[<p>同友人聊天，谈及河南暴雨，再到自疫情初至今仍层出不穷的呼救、求助，不约而同发问：「如果我或我身边的人也遇到这样的紧急事件，而依靠网络仍无法得到回应，该怎么办？」我有对城市生活多加警惕的意识吗？我知道发生山洪应该往哪里跑吗？我知道除了互联网之外的呼救途径吗？如果断水、断电、断网、断信号，该怎么办？</p>
+<p>我们都不觉得这是杞人忧天，也不觉得活得自在豁达与多加警惕之间有任何冲突。只是觉得生命不能被肆意对待。尤其是在这不过一年间，见证了这么多生命的离开。</p>
+<p>一开始 Apple 发布 Memoji 时，我在猜，是不是以后就真靠这么一个会动的头把「我」替代了？未来在动物森友会世界里归农，在 Gather Town 或者 Online Town 里上班。甚至想过《黑镜》里骑动感单车赚点数的生活只需要再优化一下，例如不要那么单一、再有创造力一些，会不会也是能接受的选项？</p>
+<p>现在是惊醒了，要走一条反产业潮流的老路，不论如何要在真实世界里去建立健康的关系，这种关系除了是人与人之间的，更要包括和物件之间、和环境之间、和自己。</p>
+<p>环境的改变会催生出很多东西，梭罗去瓦尔登湖，拉姆齐一家靠去灯塔作信念。被关在家里久了，看上去跟人的交流更多了，但真正「有效」的、面对面察言观色的、与分享超链接跳转无关的，其实大幅减少。要思考使用这些 IM 工具和平台的新方法。</p>
+<p>我做了更多的运动，也看到居家健身市场的蓬勃发展；跑了更多的步，家门口的绿道，人多了起来，也维护得更好。保护环境的话题，这里不能再赘述，但有一问题希望引起反思：「享受城市生活便利的同时，对其保持警惕」。其实对于所有能带来便捷的东西都一样，或者都不用说是否带来便捷，只要是能让人养成如此的依赖，或者说太报以信任的东西，难道不都需要加以警惕吗？</p>
+<p>常待的书桌被我架高，站着阅读或码字，至少让身体动得更多。喝的水更多了，饮食和作息上进步空间还很大。</p>
+<p>我把家人手机上的 SOS 功能设置好，把当地的紧急电话加入通讯录，开始了解如何为家中配备急救包，了解在与外界完全隔绝的情况下什么是必需的。</p>
+<p>这些是和物件、环境和自己之间的关系。</p>
+<p>前些天看到 <a href="https://www.nytimes.com/2021/07/17/opinion/culture/social-media-cancel-culture-roxane-gay.html" target="_blank" rel="noopener noreffer">NYT 上一篇文章</a>，谈「为什么互联网上的人都那么糟」，简体中文互联网环境则更如是。除了庞大的基数，算法干预下再加一重 censor 与 business，以至于我们造成的争端比谁都多，进入沉思过程的少之又少，达成的结论更屈指可数。作者说他有时感觉被铺天盖地的新闻所淹没，我俨然像在极度正面与极度负面的两种情绪中溺亡了。</p>
+<p>如果觉得自己是个「布道者」，继续这么做下去也无妨。但如果带来的创伤更多，那还是别做了。只要人人都幻想，那一天到不到来，没什么关系。</p>
+<p>信源一简再简，关注「人」而少关注「事」。「关注事」的大把，挑一两个能把前因后果、来龙去脉讲清楚的已经很足够，部分评论作非自愿加餐。大力学习、深度学习能持续输出观点的人、能鞭辟入里又简明扼要讲话的人、友好型肯争论的异见持有者，如果这些人有些还在网上，那就接着看。有些在书里，就继续读。至于实在是 voluble，造成 vociferous 的，不看不就行了，别总以为少看点什么就会错过什么，错过的东西太多了，没看过没见识过的也太多了。记得第一次读《文学回忆录》，或者是第一次读《地理学与生活》，或者是第一次读《视差之见》，读得面红耳赤，读得「欲火焚身」。不要养成「每当做点什么，总要看评论/看眼色」的习惯。</p>
+<p>我还更多地去阅读 Newsletter，虽然不是那个「一期一会」，但这种「一期」看「一会」也让我对早起（以阅读和做点自己的事）有了更大的兴趣和信心。方便 Archive，可以复制粘贴，也可以直接在收件箱标签。有的作者还设置了读者信箱，多好，这都是人与人的关系。</p>
+<blockquote>
+<p>But I have more of a life than I once did. I have a wife, a busy career, aging parents and a large family. I have more physical mobility and, in turn, more interest in being active and out in the world. I now spend most of my time with people who are not Very Online. When I talk to them about some weird or frustrating internet conflagration, they tend to look at me as if I am speaking a foreign language from a distant land. And, I suppose, I am.</p>
+<p>Roxane Gay</p>
+</blockquote>
+<p>听 Solar Power，看乐评人批 Lorde 逃离现实又没有完全逃离。苛刻是他们的工作。我觉得这种微妙的、游走于这之间的平衡，太难找了。Lorde 找了几年，有了一点苗头，先跟大家说道说道，所以整张专辑显得文学性大过音乐性，一首接一首听起来不很连贯。（不过在这个时代，我们还那么讲究连贯吗？）我想我也应该寻找这属于我的平衡。</p>
+<p>自知做不了太多，连家人有时都无法坐下来和平聊天。那也要做啊。</p>
+<blockquote>
+<p>Update: 2021/08/28</p>
+</blockquote>
+]]></description>
+</item><item>
+    <title>Winslow Homer 温斯洛·霍默</title>
+    <link>https://rongbinf.github.io/posts/winslow-homer/</link>
+    <pubDate>Sun, 08 Aug 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/winslow-homer/</guid>
+    <description><![CDATA[<blockquote>
+<p>发布于 <a href="https://matters.news/@laefan/%E7%9C%8B%E7%95%AB-winslow-homer-%E6%BA%AB%E6%96%AF%E6%B4%9B-%E9%9C%8D%E9%BB%98-bafyreifjxdssns3s6xkf6t7lgk6jaxjrpxg4semolhembefe4o3mi2n4ja" target="_blank" rel="noopener noreffer">Matters.news</a>。</p>
+</blockquote>
+<p>首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。</p>
+<p></p>
+<p><em>Prout&rsquo;s Neck, Breakers</em>, 1883, Winslow Homer, Painting, watercolor on wove paper</p>
+<p>Source: <a href="https://www.artic.edu/artworks/16815/prout-s-neck-breakers" target="_blank" rel="noopener noreffer">The Art Institute of Chicago</a></p>
+<p>很偶然，从这幅画初次得知霍默大名，之后开始继续寻找他的画作，感叹于他融会贯通的技艺和想法。我其实不曾在阴天见过这样蓝的海浪，也许最接近画中景象的一次是在乔伊斯博物馆前的海角处。大概是被这种未曾见过的模样吸引着。</p>
+<p>除了十分显然的深蓝、亮蓝叠加使用以塑造前后关系，还能看到他多利用了纸张本身的白色，例如下半部分近礁石的部分。这也是水彩常用的方法。整幅画也给我一种非常轻快的感觉，倒不是因为画面主体的海浪，而是它前侧用或大或小的色块柔和铺排开的、礁石上附着的细浪。</p>
+<p></p>
+<p><em>Paul Morphy, the Chess Champion</em>, 1859, Winslow Homer, Print, wood engraving</p>
+<p>Credit line: The Museum of Fine Arts, Houston, The Mavis P. and Mary Wilson Kelsey Collection of Winslow Homer Graphics</p>
+<p>Source: <a href="https://artsandculture.google.com/asset/paul-morphy-the-chess-champion-winslow-homer/6AE0gmpNUzDrzA" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
+<p>温斯洛·霍默（Winslow Homer, 1836-1910）出生于波士顿，童年在剑桥长大，父母皆为新英格兰移民。父亲是典型的商人，而母亲有着画水彩的天赋异禀，顺理成章地成为霍默的“第一任老师”。19 岁高中毕业，父亲安排他去做广告平板印刷。就这样重复进行日常工作近两年后，他开始为一些杂志刊物制作插画，在当时那个年代也意味着就是木版画。霍默的线条感和对黑白分明的把握很好，不几笔就能把最鲜明的特点勾勒出来，如上图。</p>
+<p></p>
+<p><em>Mounted Bugler</em>,1862, Winslow Homer, Graphite, brush and gray wash on off-white paper</p>
+<p>Credit line: Gift of Charles Savage Homer, Jr.</p>
+<p>Source: <a href="https://artsandculture.google.com/asset/mounted-bugler-winslow-homer-american-1836%E2%80%931910/FgF0ghbzo-z6dw" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
+<p></p>
+<p><em>Home, Sweet Home</em>, 1863, Winslow Homer, Painting, oil on canvas</p>
+<p>Copyright: Patrons' Permanent Fund</p>
+<p>Source: <a href="https://artsandculture.google.com/asset/home-sweet-home/RwErgtlB6qAFTg" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
+<p>直到 1863 年他才正式进入国家设计学院（现国家学院博物馆和学校，National Academy Museum and School）学习绘画基础。美国内战期间，他被长期供图的一家报社送去前线，留下了许多战地场景与人物的插画手稿，除战争中的将士名人肖像，也有纷乱中的妇女儿童和留下的残迹。这一段时期以及之后的五到十年，也是霍默从单纯的插画师拓展成画家的时期，我们可以看见其绘画的个人风格已经渐趋成熟，例如选材的角度比起激烈、冲突的场景而言，更常描绘日常与闲暇，主题和所传达的态度也更为暧昧和难以捉摸。画面用色和明暗的对比十分优雅，线条的运用也更加果敢，构图更加简练。</p>
+<p></p>
+<p><em>Croquet Scene</em>, 1866, Winslow Homer, Painting, oil on canvas</p>
+<p>Credit Line: The Art Institute of Chicago, Friends of American Art Collection; Goodman Fund, 1942.35</p>
+<p>Source: <a href="https://artsandculture.google.com/asset/croquet-scene-winslow-homer-american-1836%E2%80%931910/xgGjRZZn3Qn5nA" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
+<p></p>
+<p><em>Art-Students and Copyists in the Louvre Gallery, Paris</em>, 1868, Winslow Homer, Print, wood engraving on wove paper</p>
+<p>Object Credit Line: Davison Art Center, Wesleyan University. Purchase funds, 1958</p>
+<p>Image Credit Line: <a href="http://www.wesleyan.edu/dac/openaccess" target="_blank" rel="noopener noreffer">Open Access Image from the Davison Art Center, Wesleyan University (http://www.wesleyan.edu/dac/openaccess)</a></p>
+<p>Source: <a href="https://artsandculture.google.com/asset/art-students-and-copyists-in-the-louvre-gallery-paris-winslow-homer/qwFCQK-sxPsOGQ" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
+<p></p>
+<p><em>Study for Eagle Head, Manchester, Massachusetts</em>, 1869, Winslow Homer, Painting, oil on wood</p>
+<p>Source: <a href="http://www.metmuseum.org/art/collection/search/11142" target="_blank" rel="noopener noreffer">The Metropolitan Museum of Art</a></p>
+<p></p>
+<p><em>Eagle Head, Manchester, Massachusetts (High Tide)</em>, 1870, Winslow Homer, Painting, oil on canvas</p>
+<p>Source: <a href="https://www.metmuseum.org/art/collection/search/11117" target="_blank" rel="noopener noreffer">The Metropolitan Museum of Art</a></p>
+<p>1867-1868 年他在巴黎短住一年，这段期间他仍继续为报社供图，主题转向描述巴黎人的生活，同时作风景绘画的练习。此时亦正值印象派兴起之初，他也展示出如何更好用绘画表现自然光影的探讨，在用笔上也更加放松。但是否能够确证其受到如马奈、莫内等印象派画家的影响，我们无从得知。他的绘画风格，大角度来说是站在写实的基础上去展示光线。</p>
+<p>在上两幅画作的比较中，我们可以发现霍默对阳光和天气的捕捉，这反映在浅滩处蓝色与绿色海浪和远处海面的对比，以及三个人物身上向阳处背阳处的色彩。高度饱和、反差明显、边缘轮廓准确充实，这样的用色和线条风格从一至终，也是最吸引我的地方。中部正在拧水的女子在强日光的照射下，衣服变湿的重量感也有一定体现。</p>
+<p>我们还可以从 <em>Eagle Head, Manchester, Massachusetts (High Tide), 1870</em> 创作的时代背景中窥见霍默关注的主题。正在快步工业化的美国，到海滩游泳、晒太阳是当时工人们的新潮休闲。三位女子身着如此厚重的衣物下水走了一遭，前两位亦未注意社会所定义的「仪态」，掀开长裙、露出小腿，当时即有评论称「exceedingly red-legged and ungainly」。但我们在绘画中难道不能呈现这样的人物吗？她们是如此的鲜活。</p>
+<p>大都会博物馆的播客中，<a href="https://itunesu.itunes.apple.com/feed/id430943000" target="_blank" rel="noopener noreffer">有一期</a>（Author Elizabeth Strout Discusses Two Paintings by Winslow Homer）邀请到了普利策小说奖得主伊丽莎白·斯特劳特（Elizabeth Strout, 1956-）分享她在这幅画中所想象出的故事。</p>
+<p></p>
+<p><em>The Country School</em>, 1871, Winslow Homer, Painting, oil on canvas</p>
+<p>Source: <a href="https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Country_School.jpg" target="_blank" rel="noopener noreffer">Wikimedia Commons</a></p>
+<p>1870 年代，霍默致力于描绘田园农村的质朴生活，例如小孩子的童趣嬉闹、年轻人的热恋和大人们的劳作。可不去关注工业化又到什么阶段了，逆行。我们可以在上副画作中捕捉许多细节，例如学生神色中的专注、讲台上的鲜花、挂在黑板边上的帽子、窗布的轻盈和透过窗栅的光影。中部偏左翘起腿的、讲台右侧合看一本书的、画面右部正哭泣着的小男孩和望着他的小女孩，实在是形形色色。</p>
+<p>1875 年后他不再作商业插画，希望能凭绘制油画和水彩维持生计。他最有名的作品 <em>Breezing Up (A Fair Wind), 1873-1876</em> 亦在这期间绘成。</p>
+<p></p>
+<p><em>Breezing Up (A Fair Wind)</em>, 1873-1876, Winslow Homer, Painting, oil on canvas</p>
+<p>Source: <a href="https://commons.wikimedia.org/wiki/File:Winslow_Homer,_Breezing_Up_%28A_Fair_Wind%29,_1873-1876,_NGA_30228.jpg" target="_blank" rel="noopener noreffer">Wikimedia Commons</a></p>
+<p>当时的评论对这幅画赞赏有加，多为与霍默之前的画作相比认为要出色。但我初见这幅画作时并不懂它为何得以成为「最有名」。是船与船帆的动态感吗？是船与浪之间精妙的推移和被搅乱的倒影吗？是它各方面都很平衡恰当？想来，或是因为其被解读的意义要大于其本身吗？乘风破浪的 19 世纪美国人。在艺术上，他们应该怎么在大杂烩中「孕育本土」、在本土中「重建本土」？</p>
+<blockquote>
+<p>Even the critic from the <em>Art Journal</em>, who thought the picture typical of Homer&rsquo;s &ldquo;hasty mode of treatment,&rdquo; found it winning nevertheless: &ldquo;It may be accepted as the most spirited of his works; the waves roll, the boat flies swiftly before the wind, and the group of happy boys are felicitous in every pose.&rdquo; Two others concurred: &ldquo;It is painted in his customary coarse and negligé style, but suggests with unmistakable force the life and motion of a breezy summer day off the coast&hellip;.There is no truer or heatier work in the present exhibition.&rdquo;</p>
+<p><em><a href="https://www.nga.gov/content/dam/ngaweb/research/publications/pdfs/american-paintings-19th-century-part-1.pdf" target="_blank" rel="noopener noreffer">American Paintings of the Nineteenth Century, Part I</a></em>, pages 312-318, National Gallery of Art, In-gallery publication, free to download online</p>
+</blockquote>
+<p></p>
+<p><em>Blackboard</em>, 1877, Winslow Homer, Painting, watercolor on wove paper</p>
+<p>Source: <a href="https://www.nga.gov/collection/art-object-page.71552.html" target="_blank" rel="noopener noreffer">National Gallery of Art</a></p>
+<p></p>
+<p><em>Schooner at Sunset</em>, 1880, Winslow Homer, Painting, watercolor on wove paper</p>
+<p>Source: <a href="https://hvrd.art/o/299942" target="_blank" rel="noopener noreffer">Harvard Art Museum</a></p>
+<p>1873 年夏之后他开始将水彩作为常用工具，笔触有的放矢，画面易读。有关注细节的如 <em>Blackboard, 1877</em>，衣着上的格子花纹、布面的褶皱、后背的绑带以及教师并不愉悦的神情。有非常印象派的如 <em>Schooner at Sunset, 1880</em>，落日与即将入夜的天空互相切开，水面上的波光与涟漪处理得精致。</p>
+<p></p>
+<p><em>Two Figures by the Sea</em>, 1882, Winslow Homer, Painting, oil on canvas</p>
+<p>Source: <a href="https://artsandculture.google.com/asset/two-figures-by-the-sea-winslow-homer/IQGb5h7OYzTtrw" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
+<p>1881-1882 年，霍默在英格兰东北部的一个海边小镇度过。他更多关注劳动人民个体身上的英雄主义。抛开过于宏大的集体叙事后，反而打开了更加广阔的天地。其画作变得更加沉静，思考也更加深邃。这样的风格一直延续到之后。过去常作为题材的衣着时尚女子，如今更多转向塑造无私无畏的妇女。1883 年他搬到缅因州海边，整个 1880 年代中期都把精力放在海边景象与人物的创作上，除油画和水彩，他还尝试制作蚀刻版画。（更多关于他的蚀刻版画信息<a href="http://oldprintshop.com/artists/3931" target="_blank" rel="noopener noreffer">可见此</a>）</p>
+<p></p>
+<p><em>Undertow</em>, 1886, Winslow Homer, Painting, oil on canvas</p>
+<p>Source: <a href="https://www.clarkart.edu/artpiece/detail/undertow" target="_blank" rel="noopener noreffer">The Clark Art Institute</a></p>
+<p>这幅画戏剧性很足，在人物动作中格外显著，肌肉线条和人物比例上俨然是古希腊雕塑的架势。这样夸张的手法，无法让人忽略身体中蕴含的力量。水光与迸溅处的浪花刻画已臻于完美，占画面三分之二的海浪背景也形成了一定的压抑感，以突出海的力量意志。</p>
+<p>一连串的海边主题绘画，评论家们称其为「带着画笔的隐士（a hermit with a brush）」，但商业上不为大众所服，画作售价未达预期。</p>
+<p></p>
+<p><em>A Garden in Nassau</em>, 1885, Winslow Homes, Painting, watercolor on wove paper</p>
+<p>1884-1885 年的冬季，霍默在佛州、古巴和巴哈马群岛度过。受世纪杂志（Century Magazine）所托，完成了一系列的具有热带风情的水彩画。色彩更为明亮，所体现的情感也更显欢快。和他早年的作品相比，色彩在冷暖上更加分明，而不是一味的偏向于符合日光的暖，表达场景上也就有了更多语言。有人比喻道，他的这次旅程如同高更去往塔希提岛那般，给自己带来陌生与新奇。而在阿第伦达克山脉附近村庄的夏日之旅，也给他的绘画增添不少豁达与奔放。经此几行，他更像是找到了在冷静与轻快转换的滚轮开关。</p>
+<p></p>
+<p><em>Fox Hunt</em>, 1893, Winslow Homer, Painting, oil on canvas</p>
+<p>Source: <a href="https://www.pafa.org/museum/collection/item/fox-hunt" target="_blank" rel="noopener noreffer">Pennsylvania Academy of the Fine Arts</a></p>
+<p>1890 年后霍默创作了许多与自然中「捕猎」相关的作品，除人类的捕猎外，也包含着动物间的捕猎。正值达尔文进化论阐发、兴盛，时人称其画作表达的便是「物竞天择」。上幅画作中即一场老鹰对狐狸的捕猎，刚上架就被宾夕法尼亚美术学院买下，这也是他的画作首次藏录于主要博物馆。情节性解读这里姑且略去。值得注意的还有他所选择的视角和构图。起初我以为是选取了一个像是几乎卧倒在远处拿长焦推前去拍摄的视角，但我们能够看见老鹰的背部，说明其实是俯视。这在西方绘画里并不常见，更像是他对日本浮世绘的借鉴。1900 年后他的经济来源渐趋稳定。</p>
+<p>霍默的晚年依然热衷于创作海景画，毕竟，他可是这个领域的能者。能者多劳。</p>
+<p></p>
+<p><em>The Bather</em>, 1899, Winslow Homer, 1899, Painting, watercolor on wove paper</p>
+<p>Source: <a href="https://www.metmuseum.org/art/collection/search/11109" target="_blank" rel="noopener noreffer">The Metropolitan Museum</a></p>
+<p>好的作品为什么能给人以震慑力？为什么能被人口耳相传、收藏至今？大都离不开对那些纯粹的、美好的事物进行追问。这种追问可以是现实主义的无限观察，可以是现代主义的打破重构，它可以是无数的一切，但它一定基于非常高的人文起点。平白展示也好，挖掘黑暗也罢，当创作想要去往「能使更多人都接受和同意」的路径时，就要自己权衡好该怎么去体现「美中不足」，就要在情趣和意味上，探讨如何才能做到先进而不造成疏离感。在这中间地带如鱼得水的霍默，无疑是成功的。</p>
+<p></p>
+<p><em>Taking on Wet Provisions (Schooner Marked Newport, K. W.)</em>, 1903, Winslow Homer, Painting, watercolor on wove paper</p>
+<p>Source: <a href="https://www.metmuseum.org/art/collection/search/11143" target="_blank" rel="noopener noreffer">The Metropolitan Museum</a></p>
+<p></p>
+<p><em>Rocky Shore, Bermuda</em>, 1900, Winslow Homer, Painting, watercolor on wove paper</p>
+<p>Source: <a href="https://collections.mfa.org/objects/5016" target="_blank" rel="noopener noreffer">Museum of Fine Arts Boston</a></p>
+]]></description>
+</item><item>
+    <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
+    <link>https://rongbinf.github.io/posts/network-resetting-2021/</link>
+    <pubDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/network-resetting-2021/</guid>
+    <description><![CDATA[<p>原先的布置：</p>
+
+<p>之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。</p>
+<p>现在的布置：</p>
+
+<p>解决了几个痛点，记录一下：</p>
+<ul>
+<li>信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 + 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯</li>
+<li>速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。</li>
+<li>切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC+AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。</li>
+<li>丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。</li>
+</ul>
+<h2 id="电信网关拨号改桥接">电信网关拨号改桥接</h2>
+<p>所用网关型号为 HS8145C，通过超级管理员帐户进入后台，用户名为 <code>telecomadmin</code>。一说有通用密码 <code>nE7jA%5m</code>，我也是使用该密码进入的。</p>
+<p>如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 <code>http://192.168.1.1/backupsettings.conf</code>，下载 <code>backupsettings.conf</code>。搜索 <code>password</code> 获得经 base64 加密过的密码，使用在线工具解密即可，如 <a href="https://md5hashing.net/" target="_blank" rel="noopener noreffer">md5hashing</a>。</p>
+<p>进入菜单「网络」选项，在上网业务中将 <code>3_INTERNET_B_VID_41</code> 项连接方式改为桥接即可。</p>
+<p>相应的，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。</p>
+<h2 id="tp-link-易展有线回程">TP-LINK 易展有线回程</h2>
+<p>有几个需要注意的：</p>
+<ol>
+<li>易展路由器应在同一网段下，例如各自 IP 地址为 <code>192.168.2.1</code>、<code>192.168.2.2</code>。</li>
+<li>接好网线。</li>
+<li>先设置作为<strong>主路由</strong>的那台，例如我希望将 XDR5430 作为主路由，则它先接网线并上电配置。</li>
+</ol>
+<p>步骤如下：</p>
+<ol>
+<li>（如果之前使用无线回程，需要对所有易展路由器恢复出厂设置。）</li>
+<li>主路由上电，配置上网，关闭 DHCP。</li>
+<li>确认主路由是否正常上网。此时主路由可能提示 WAN 口未正常连接。但只要能上网就行。</li>
+<li>将其他易展路由器接网线上电，按易展按钮进行易展。</li>
+</ol>
+
+<p>右上角显示连接网线的 icon 即实现有线回程。</p>
+]]></description>
+</item><item>
+    <title>树莓派实现开机自动播放 RTSP 流视频</title>
+    <link>https://rongbinf.github.io/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
+    <pubDate>Wed, 06 Jan 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
+    <description><![CDATA[<p>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。</p>
+<h2 id="获取摄像头-rtsp-流">获取摄像头 RTSP 流</h2>
+<ul>
+<li>对于海康威视和萤石摄像头，其 RTSP 流地址格式如下：</li>
+</ul>
+<p><code>rtsp://<sup>username]:[password]@[ip]:[port</sup>/<sub>codec</sub>/<sup>channel</sup>/<sub>subtype</sub>/av_stream</code></p>
+<p>举例：<code>rtsp://admin:password@192.168.1.2:554/h264/ch1/main/av_stream</code></p>
+<p>具体参数（如视频编码）自行调整。</p>
+<ul>
+<li>对于 TP-LINK 摄像头，其 RTSP 流地址格式如下：</li>
+</ul>
+<p>主码流为：<code>rtsp://[username]:[password]@[ip]:[port]/stream1</code></p>
+<p>子码流将 <code>stream1</code> 替换为 <code>stream2</code> 即可。</p>
+<p>RTSP 端口 <code>port</code> 默认为 <code>554</code>，若为默认可不填写。</p>
+<h2 id="使用-vlc-播放">使用 VLC 播放</h2>
+<p>有两种方法：</p>
+<h3 id="1-使用命令">1. 使用命令</h3>
+<ul>
+<li>Run on the server:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc -vvv input_stream --sout <span class="s1">&#39;#rtp{dst=192.168.0.12,port=1234,sdp=rtsp://server.example.org:8080/test.sdp}&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Run on the client(s):</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc rtsp://server.example.org:8080/test.sdp
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="2-创建-playlist-文件">2. 创建 playlist 文件</h3>
+<p>新建一个播放列表，或直接使用播放 URL 打开 RTSP 流视频，确认能够正常播放。</p>
+<p>将播放列表另存为文件。这里建议另存为 <code>.m3u</code> 格式，因为打开 <code>.xspf</code> 格式文件会弹窗提示你选择 execute 或 open。</p>
+<p>运行该 playlist 文件即可播放。</p>
+<h2 id="使用其他方式播放">使用其他方式播放</h2>
+<p>你也可以使用 omxplayer 或 mplayer 进行播放。</p>
+<h2 id="实现开机自启动">实现开机自启动</h2>
+<p>在 Linux 上有多种实现开机自启动的方法。我尝试向 <code>rc.local</code> 添加启动代码但未起作用。目前使用通过桌面启动的方法。</p>
+<p>在 <code>/home/pi/.config/</code> 下创建名为 <code>autostart</code> 的新文件夹。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> /home/pi/.config
+mkdir autostart
+</code></pre></td></tr></table>
+</div>
+</div><p>在 <code>autostart</code> 目录下创建一个后缀为 <code>.desktop</code> 的文件。文件名任意。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> autostart
+nano test.desktop
+</code></pre></td></tr></table>
+</div>
+</div><p>更改文件内容：</p>
+<ol>
+<li>若采用命令打开：</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">some-element</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC ExtraLight&#34;</span><span class="p">;</span> <span class="c">/* 或者 &#34;PingFang SC Thin&#34; */</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Light&#34;</span><span class="p">;</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC&#34;</span><span class="p">;</span> <span class="c">/* 或者 &#34;PingFang SC Regular&#34; */</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Medium&#34;</span><span class="p">;</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Semibold&#34;</span><span class="p">;</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Heavy&#34;</span><span class="p">;</span>
-<span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
+Type=Application
+Exec=vlc rtsp://server.example.org:8080/test.sdp
 </code></pre></td></tr></table>
 </div>
-</div><p>或者预先定义好，使用 <code>&quot;PingFang-SC&quot;</code> 引用，浏览器根据 <code>font-weight</code> 去选择不同的变体。</p>
+</div><ol start="2">
+<li>若采用 playlist 文件，则更改为文件路径：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
+Type=Application
+Exec=vlc /home/pi/test.m3u
+</code></pre></td></tr></table>
+</div>
+</div><p>运行 <code>sudo reboot</code> 重启测试。</p>
+<ol start="3">
+<li>也可以在一个新的 shell 脚本中添加 vlc 命令，将 <code>Exec=</code> 后内容直接修改为 .sh 文件路径。如：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
+Type=Application
+Exec=/home/pi/test.sh
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="使-vlc-默认全屏打开">使 VLC 默认全屏打开</h2>
+<h3 id="1-修改命令">1. 修改命令</h3>
+<p>在 RTSP 流地址或 playlist 路径前添加选项 <code>-f</code> 或 <code>--fullscreen</code>，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc -f /home/pi/test.m3u
+</code></pre></td></tr></table>
+</div>
+</div><p>其他支持的选项：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -153,100 +640,1468 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">100</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Thin&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">300</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Light&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">400</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Regular&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">500</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Medium&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">700</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Semibold&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">800</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Heavy&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="nt">body</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
-<span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 全屏幕视频输出 (默认关闭)
+-f, --fullscreen, --no-fullscreen 
+# 总在最前 (默认关闭) 
+--video-on-top, --no-video-on-top 
+# 开启壁纸模式 (默认关闭)
+--video-wallpaper, --no-video-wallpaper 
+# 在视频上显示媒体标题 (默认开启)
+--video-title-show, --no-video-title-show 
+# 显示视频标题 x 毫秒
+--video-title-timeout &lt;整数 [-2147483648 .. 2147483647]&gt; 
+# 视频标题的位置
+--video-title-position {0 (居中), 1 (左), 2 (右), 4 (上), 8 (下), 5 (左上), 6 (右上), 9 (左下), 10 (右下)}
+# 在 x 毫秒后隐藏光标和全屏控制器
+--mouse-hide-timeout &lt;整数 [-2147483648 .. 2147483647]&gt;
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="参考文章">参考文章</h2>
-<ol>
-<li><cite lang="en"><a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/" target="_blank" rel="noopener noreffer">Using System UI Fonts In Web Design: A Quick Practical Guide</a></cite>, Marcin Wichary, 2015</li>
-<li><a href="https://csspod.com/using-the-system-font-in-web-content/" target="_blank" rel="noopener noreffer">在 Web 内容中使用系统字体</a>，minwe，2016</li>
-</ol>
+</div><p>更多详见 <a href="https://wiki.videolan.org/Documentation:Documentation/" target="_blank" rel="noopener noreffer">VLC 帮助文档</a>。</p>
+<h3 id="2-在-gui-修改-preference">2. 在 GUI 修改 Preference</h3>
+<p>在 VLC Menu Bar &raquo; Tools &raquo; Preferences，进入 Video 栏，勾选 Fullscreen 即可。</p>
+<h2 id="使命令在后台加载">使命令在后台加载</h2>
+<p>在直接执行 <code>vlc rtsp://...</code> 命令时，遇到 Timestamp conversion failed。转而使用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xdg-open /home/pi/test.m3u
+</code></pre></td></tr></table>
+</div>
+</div><p>直接打开播放列表文件。</p>
+<p>或者改用 mplayer，在 <code>mplayer rtsp://...</code> 后加入 <code>&lt; /dev/null &amp;</code> 或完整的 <code>&lt; /dev/null &gt; /dev/null 2&gt;1 &amp;</code>。</p>
+<h2 id="设置显示器常亮">设置显示器常亮</h2>
+<p>进入 <code>/etc/lightdm</code> 目录修改 <code>lightdm.conf</code> 文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo vi /etc/lightdm/lightdm.conf
+</code></pre></td></tr></table>
+</div>
+</div><p>找到 <code>[Seat:*]</code> 或 <code>[SeatDefaults]</code> 段下的 <code>xserver-command</code>，默认为 <code>-#xserver-command=X</code>，修改为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xserver-command<span class="o">=</span>X -s <span class="m">0</span> -dpms
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="使用-unclutter-设置鼠标指针自动隐藏">使用 unclutter 设置鼠标指针自动隐藏</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install unclutter
+<span class="nb">echo</span> “@unclutter -idle <span class="m">1</span> -root” &gt;&gt; /etc/xdg/lxsession/LXDE/autostart
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="使用-xdotoolwwwsemicompletecomprojectsxdotool-改变窗口大小和位置">使用 <a href="www.semicomplete.com/projects/xdotool/" rel="">xdotool</a> 改变窗口大小和位置</h2>
+<p>首先安装 xdotool：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install xdotool
+</code></pre></td></tr></table>
+</div>
+</div><p>同时实现改变窗口大小和位置，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xdotool search --name <span class="s2">&#34;VLC&#34;</span> windowsize <span class="m">800</span> <span class="m">600</span> windowmove <span class="m">0</span> <span class="m">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>解释：</p>
+<ul>
+<li><code>search --name [keyword]</code> ：将搜索名称中带有关键词的窗口</li>
+<li><code>windowsize 800 600</code>：改变窗口大小，<code>$WIDTH $HEIGHT</code></li>
+<li><code>windowmove 0 0</code>：改变窗口位置，<code>$X $Y</code>，具体视屏幕分辨率而定</li>
+</ul>
 ]]></description>
 </item><item>
-    <title>在信息爆炸后的粉尘里「断舍离」</title>
-    <link>https://rongbinf.github.io/posts/danshari/</link>
-    <pubDate>Sun, 20 Nov 2016 00:00:00 &#43;0000</pubDate><author>
-        <name></name>
-    </author><guid>https://rongbinf.github.io/posts/danshari/</guid>
-    <description><![CDATA[<p>结束一周的住校生活，班主任从抽屉里拿出手机一一交还，长按锁屏键，开机，别忘了把振动模式打上，因为随之而来的是一条又一条不断叠加的推送消息。</p>
-<p>我开始想：我通过互联网获取的，真的就是我想获取的吗？</p>
-<p>信息每天都在爆炸，无时无刻都在爆炸，我们通过搜索引擎、新媒体和社交媒体以及种种不同类型的网站获取信息，同时也被这些网站的态度和舆论导向如同傀儡一般支配着，即使我们或许永远不能摆脱这样的获取和支配，至少它还留有些许空间给我们进行余下的整理。</p>
-<p>「断舍离」派上了用场。这个概念不仅仅适用于家居收纳方面，同样能够帮助人们更条理性、效率性地去处理事务，尤其是在应对「信息量过载」的今天。「断绝」与现在对你毫无用处的信息源的一切关系，「舍弃」在获取信息中与实际目标不符的「饱腹信息」，「脱离」自己潜意识中对「富文本阅读模式」的认可所导致的执念。</p>
-<h1 id="断绝">「断绝」</h1>
-<p>从源头开始断绝，也就是断绝现在所说的「信息源」。它可以是一个微信公众号，是一个手机应用，是一个电视台。在一开始接触到这些信息源的时候就开始筛选，不断问自己「这个公众号里的文章是否值得我深度阅读？」，「这个应用给我推送的信息能不能帮助我获取到有效信息？」，像在超市里购物一样，控制好自己对「毫无必要的事物」存在的执念，专注于「把必须要买的东西放进购物车」这一件事，学会按一开始的目标行动，制定目标前，三思。</p>
-<h1 id="舍弃">「舍弃」</h1>
-<p>即使你认为找到了合适的「信息源」，同样不能够给予其全盘的认可。保存好自己对事物应有的独特看法，培养人们常说的「批判性思维」，从你已经经过筛选的信息中，再进行分析推理，进一步消化它，才能够获得更具有条理和结构的，更让人信服的知识。「大 V 说的话就是对的于是照单全收、这段文字看起来特别丰富，我绝对从中获取到了什么」，这种似曾相识的阅读经历，回想一下，你看过的这些信息给你带来了什么？大多时候我们只是在互联网上千奇百怪的信息中，获得了不同人的不同观点，观点的是非对错我们甚至也未曾想要去证明或者辩驳，看完了就感觉特别充实，但其实什么什么都没有，像吃了一个屁，结果肚子饱了。也就是说，当你在已经经过筛选的信息源里进行阅读时，例如在一家新闻网上看新闻，同样需要在不同的新闻栏目中找到自己所需的信息，在不同的新闻文本中分析哪些是合理有用的，从而做到「舍弃」在获取信息中与实际目标不符的「饱腹信息」。</p>
-<h1 id="脱离">「脱离」</h1>
-<p>信息爆炸时代，也是富文本时代，人们将会越来越习惯于阅读带有图片、视频、音频等新媒体介质的文本。这种阅读习惯必然会导致一些经典文学著作和理论分析文章的传播缺失，人们也同样无法进行「深层次的阅读」，只停留在对表面文字能够理解的程度即可得到满足。所有人都对这种说法表示认可，但所有人都选择了适应。由于观看图片和音视频能够给人带来愉悦感，便对「富文本阅读模式」产生一定程度上的认可，传统的「单一文字呈现」的阅读模式便被认为是枯燥无味的，人们能够细细品味一字一词的时代悄无声息地离开。我们意识到了，于是应该做出一些改变。</p>
-<p>当新的事物出现在我们面前时，我们总是想办法排斥。经过了这段「磨合期」，又像是热恋中的情侣一样久久不能分离。别人偶然间的一句话，让你和恋人果断分了手。最后又开始思考旁人是一家之言，即使不无道理，但却不一定需要去采纳。一来二去，终于明白自己是一个纠结的矛盾体，能做的只有一次又一次反思，提出新的解决方案，修修补补。</p>
-<p>信息已经在爆炸，只要不被粉尘淹没。</p>
+    <title>《社会学的邀请》阅读笔记</title>
+    <link>https://rongbinf.github.io/posts/the-big-picture-reading-notes/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/the-big-picture-reading-notes/</guid>
+    <description><![CDATA[<h2 id="社会学的视角">社会学的视角</h2>
+<h3 id="社会学是对个体与社会之间的关系以及差异性后果的系统研究">社会学是对个体与社会之间的关系以及差异性后果的系统研究</h3>
+<ul>
+<li>我们自己的抉择受到我们所处的社会地位和我们有时能控制有时则不能控制的资源的限制。我们通过我们所做出的抉择、我们所做的事情去创造社会。与此同时，我们又是社会的产物，为我们周围的人所塑造。</li>
+</ul>
 <blockquote>
-<p>我们所反对的碎片化阅读，指的是浮浅和无视语境的阅读。这和长短无关，和读者有没有整体性的视角有关。- <a href="https://blog.yitianshijie.net/2016/07/05/what-is-fragmented-reading/" target="_blank" rel="noopener noreffer">李如一</a></p>
+<p>社会学说明的是群体如何发挥作用，以及如何利用这些能够控制群体发挥作用的规律去努力驾驭它们。</p>
+<p>布迪厄</p>
+</blockquote>
+<h3 id="我们所处的地位决定我们是谁">我们所处的地位决定我们是谁</h3>
+<ul>
+<li>世代
+<ul>
+<li>世代群体——「年龄同期群」：生在差不多同一时代而具有相近年龄，并因之而具有类似经历的一群人</li>
+<li>历史事件与每代人的标志性事件</li>
+</ul>
+</li>
+<li>年龄与社会性别</li>
+<li>其他人口学因素</li>
+<li>生活方式簇：根据人们的消费偏好、群体成员身份、品味、价值观和态度划分类群
+<ul>
+<li>韦斯（Michael Weiss, 2020）运用聚类研究绘制出 62 个类群</li>
+</ul>
+</li>
+</ul>
+<h3 id="社会生活的象征意义作为标志的都市传闻">社会生活的象征意义：作为标志的都市传闻</h3>
+<ul>
+<li>在传闻中、周围的一切事物和象征符号中，发现我们对社会性别、性，社会变迁等事物的态度</li>
+<li>大众文化有助于我们了解自己和<strong>所生活的世界</strong></li>
+</ul>
+<h3 id="权力特权和地位">权力、特权和地位</h3>
+<ul>
+<li>重视社会地位的意义
+<ul>
+<li>我们是基于自己的社会地位而继承了优势和劣势</li>
+</ul>
+</li>
+</ul>
+<h2 id="社会学的想象力">社会学的想象力</h2>
+<h3 id="个体与社会的平衡问题">个体与社会的平衡问题</h3>
+<ul>
+<li>米尔斯（C. Wright Mills, 1959）提出了「社会学的想象力」：理解社会如何对我们的生活施加影响
+<ul>
+<li>换言之，社会学的想象力是分析作为个体的我们与塑造我们生活的更大的社会和历史力量之间关系的意愿和能力</li>
+<li>我们是在我们的社会结构与文化（我们的「历史」）中行动的</li>
+</ul>
+</li>
+<li>韦伯（Max Weber, 1920）：「生活机会」
+<ul>
+<li>个体可能获得的成就是以其所处的社会地位与其所能得到的资源为<strong>基础</strong>的。</li>
+<li>处在相似地位的人们会做出相似的选择。他们拥有相似资源，面对相似的障碍与机会
+<ul>
+<li>物质或经济资源：资产和土地</li>
+<li>社会资源：社会网络与声望</li>
+<li>文化资源：观点、信念与价值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="社会问题私人难题与公共难题">社会问题：私人难题与公共难题</h3>
+<ul>
+<li>基于个体与社会之间的区别，米尔斯指出，我们应该区分个体作为个人所面对的障碍（私人难题）与处于相似地位的个体所共同面对的障碍（公共问题，社会问题）</li>
+</ul>
+<h3 id="作者对社会学的定义社会学是对个体与社会之间的关系以及差异性后果的系统研究">作者对社会学的定义：社会学是对个体与社会之间的关系以及差异性后果的系统研究</h3>
+<ul>
+<li>系统研究
+<ul>
+<li>两个核心问题：方法和立场
+<ul>
+<li>方法：定量法、定性法</li>
+<li>立场：但也并非两分
+<ul>
+<li>「科学的社会学」：观察者置身于其研究对象之外或之上，观察行动被假定为被动的，不会对所分析的事物产生任何影响</li>
+<li>「改革社会学」：社会学家必须积极主动；寻求去讲述他者、受排挤者及弱势者的故事，并与他们并肩战斗防抗不平等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>个体
+<ul>
+<li>社会学的基本层面：个体分析</li>
+<li>社会学的研究内容：现实的人类建构
+<ul>
+<li>社会学家既强调我们选择行动的能力（能动性，个体有选择和行动的自由），又强调我们不可能任意地选择（受所处地位限制）
+<ul>
+<li>我们通常都会遵循「阻力最小路径」原则，其含义是为他人所接受和期望的行动和信仰</li>
+<li>我们根据所能获得资源的种类，在了解各种可能结果的基础上做出选择</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>社会
+<ul>
+<li>三个密切相关的要素：结构、文化、互动
+<ul>
+<li>结构：关系与社会网络模式
+<ul>
+<li>社会系统：个体参与的比自身更大的事物
+<ul>
+<li>结构就是描述这一社会系统的方式</li>
+</ul>
+</li>
+<li>总体结构的主要要素称为「制度」
+<ul>
+<li>最普遍的五种制度：经济、家庭、教育、政府、宗教</li>
+</ul>
+</li>
+<li>群体、子群体以及我们所占据的地位是嵌入制度中的</li>
+</ul>
+</li>
+<li>文化：人为建构的与身外世界的关系
+<ul>
+<li>物质文化：实材</li>
+<li>认知文化：语言、思想、信仰、知识、观念</li>
+<li>规范文化：行为的规则</li>
+</ul>
+</li>
+<li>互动：结构地位内部文化资源的交换
+<ul>
+<li>关系网络必须由互动以<strong>激活</strong></li>
+<li>结构与能动性是通过互动同时产生的
+<ul>
+<li>社会必须通过行动的个体才得以确立、具体化，并被带入生活</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>差异性的后果
+<ul>
+<li>社会学不仅描述，也分析资源是如何分配的，并根据它们为个体所创造的机会与障碍讨论分配的结果</li>
+<li>社会权力的分析
+<ul>
+<li>资源的控制</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="社会学的呈现方式">社会学的呈现方式</h3>
+<ul>
+<li>宏观分析法（自上而下的视角）
+<ul>
+<li>创立早期</li>
+<li>倾向于认为能站在社会的外部去解释社会的作用以及如何决定个体的行动</li>
+<li>孔德、马克思、涂尔干
+<ul>
+<li>孔德（August Comte）：实证主义
+<ul>
+<li>我们可以通过对某些主张进行经验检验，并证明其起作用的因果关系：<strong>在调查研究的基础上系统地解释社会关系的目标</strong></li>
+<li>对社会稳定与社会变迁基本规律的认识，能让社会学家设计出一个「美好社会」</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>微观分析法（从下至上的视角）
+<ul>
+<li>个体的日常生活经验</li>
+<li>「社会并无行动，是人们在行动」</li>
+</ul>
+</li>
+<li>科学社会学
+<ul>
+<li>学术合法性</li>
+<li>在客观、科学观察中寻找「社会规律」</li>
+</ul>
+</li>
+<li>改革社会学
+<ul>
+<li>更关注描述、分析与纠正社会不平等</li>
+<li>简·亚当斯（Jane Addams）</li>
+<li>马蒂诺：对「道德」（即我们认为什么是适当的）和「行为方式」（即我们实际所做的）的观察与分析，应成为社会研究的中心问题。社会批评应作为社会学的核心</li>
+</ul>
+</li>
+</ul>
+<h3 id="社会学作为一种工具">社会学作为一种工具</h3>
+<ul>
+<li>帮助我们理解日常生活</li>
+<li>帮助我们做出更有根据的选择</li>
+<li>帮助我们深入事物的本质</li>
+<li>帮助我们澄清、检验，计划未来</li>
+</ul>
+<h2 id="寻求答案社会学的研究">寻求答案：社会学的研究</h2>
+<ul>
+<li>做研究
+<ul>
+<li>在观察、询问、参与对方生活、从他们自身的角度中理解他们的经历</li>
+</ul>
+</li>
+<li>研究方法
+<ul>
+<li>演绎法：始于特定理论或解释，通过收集资料验证</li>
+<li>归纳法：始于社会生活的详细描述，试图发展出一套理论和一般模式来解释</li>
+</ul>
+</li>
+<li>科学研究循环（Wallace, 1971）
+<ul>
+<li>-&gt;理论-&gt;假设-&gt;收集资料-&gt;经验概括（概化）</li>
+</ul>
+</li>
+<li>收集资料
+<ul>
+<li>定量资料
+<ul>
+<li>可衡量的数字常用来验证结论</li>
+</ul>
+</li>
+<li>定性资料
+<ul>
+<li>完全融入研究对象自己提供的生活经验资料中、融入研究对象中</li>
+<li>人类学家称为：民族志法或「深描」</li>
+</ul>
+</li>
+<li>调查法：提问、回答</li>
+<li>参与观察法：实地研究</li>
+<li>访谈法</li>
+<li>实验法</li>
+<li>二手资料分析法</li>
+</ul>
+</li>
+<li>概化
+<ul>
+<li>资料的信度和效度</li>
+<li>确保研究结果具有概括性
+<ul>
+<li>随机抽样</li>
+<li>深度个案研究</li>
+<li>接受公开评论和批评</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="经典案例">经典案例</h3>
+<h4 id="涂尔干论自杀">涂尔干：论自杀</h4>
+<ul>
+<li>基本理论：社会塑造个人
+<ul>
+<li>当时的正统观点：决定人的行为要么是神，要么是生理机能，要么是个人的思想和精神</li>
+</ul>
+</li>
+<li>基本假设：社会整合影响个人选择
+<ul>
+<li>社会关联度或融入社会的程度影响着社会机会对个人的开放或封闭程度</li>
+</ul>
+</li>
+<li>假设可操作化
+<ul>
+<li>自杀作为衡量个人选择的指标
+<ul>
+<li>「自杀与个人所处的社会群体的整合度呈反向变化」</li>
+</ul>
+</li>
+<li>宗教归属作为衡量社会整合度的主要指标
+<ul>
+<li>了解各宗教派别的归属程度，就能预测自杀的可能性
+<ul>
+<li>预设：罗马天主教社会整合度比新教高
+<ul>
+<li>对传统信仰的坚持</li>
+<li>严格的权威等级体系</li>
+<li>《圣经》的解释权与教派的分裂</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>资料搜集以验证假设
+<ul>
+<li>区分资料收集区域以进行比较</li>
+</ul>
+</li>
+<li>概化
+<ul>
+<li>评价资料的有效性
+<ul>
+<li>即是有具有对整个研究群体的代表性，而不是仅仅为符合所研究的情况
+<ul>
+<li>涂尔干受到的质疑：主要使用群体资料分析技术（用群体资料对个体行动下结论）</li>
+<li>也采用了基于个体层面的资料分析</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>观点上升至理论高度</li>
+</ul>
+</li>
+<li>理论的进一步完善
+<ul>
+<li>「一个人跟他人的关联和融合越少，他们就越不考虑其行动对他人的影响。在更个人主义的社会背景下，社会力量的控制力较弱，其对个人行动的影响（或积极或消极）非常有限。」</li>
+<li>「当我们除了自己而无其他目标的话，不可避免地，我们的一切努力皆归于无意义」</li>
+</ul>
+</li>
+<li>理论形成
+<ul>
+<li>社会是一个实体，它外在与个体的存在，并拥有无异于物质世界的真实力量</li>
+<li>确立了社会与个体之间的联系</li>
+</ul>
+</li>
+<li>反思
+<ul>
+<li>现实生活中，大多数问题都是多种因素的复合</li>
+</ul>
+</li>
+</ul>
+<h4 id="杜波依斯关于种族的研究">杜波依斯：关于种族的研究</h4>
+<ul>
+<li>鼓励社会学家去倾听自然情景下被研究者的声音
+<ul>
+<li>个人构建了他们自己的世界——个人用他们自己的方式去解释外部世界或理解它</li>
+</ul>
+</li>
+<li>《费城黑人》
+<ul>
+<li>美国城市黑人的观念和行动，受到它们所处社会结构地位的影响</li>
+</ul>
+</li>
+<li>三个概念：肤色界限、二重性、面纱
+<ul>
+<li>肤色界限（《黑人的灵魂》）：黑人与白人之间有明显的区分
+<ul>
+<li>缺乏共享的智力生活、思想和观念的直接交流、情感上的相互同情</li>
+<li>这种隔离使得美国黑人不能充分获得有价值的公共资源。美国白人也同样受到这一限制</li>
+</ul>
+</li>
+<li>二重性：强势群体（白人）可以忽略民族差异性而弱势群体（黑人）无法做到这一点
+<ul>
+<li>必须带上别人的眼光来看待自己</li>
+<li>相互矛盾的生活经历的产生</li>
+</ul>
+</li>
+<li>面纱：微妙和无形地将两者隔开
+<ul>
+<li>人们可以忘记甚至注意不到这一隔离的存在</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>认识：相比社会强势群体，较少获得社会资源的弱势群体拥有不同的观念、行为和机会</li>
+</ul>
+<h2 id="社会学的大观念涂尔干">社会学的大观念（涂尔干）</h2>
+<ul>
+<li>早期社会学家：把握工业革命带来的转型</li>
+<li>汉堡的奇迹
+<ul>
+<li>人类相互依赖的机器复杂性和看似自然性</li>
+<li>我们的相互依存，意味着我们不需要依赖我们自己对生存的领悟</li>
+</ul>
+</li>
+</ul>
+<h3 id="涂尔干关于社会整合的观点现代社会中的社会整合">涂尔干关于社会整合的观点（现代社会中的社会整合）</h3>
+<ul>
+<li>集体意识：一个群体共享的一套观念、信仰和价值
+<ul>
+<li>「一个社会的普通成员所共有的全部信仰和情感，它形成了一个具有自己生命的固定体系」</li>
+</ul>
+</li>
+<li>劳动分工：生产的专门化程度</li>
+<li>社会团结：社会各部分相互联系和稳定的程度
+<ul>
+<li>「传统社会以机械团结为特征」：社会的凝聚力基于稳定性或共同性
+<ul>
+<li>类似的人以固有的方式做同样的事</li>
+</ul>
+</li>
+<li>「现代社会以有机团结为特征」：基于差异性和相互依赖性
+<ul>
+<li>不同的人做不同的事，但仍能意识到彼此的依赖</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>集体意识的弱化与高度的劳动分工有直接关系：共同经验的缺乏
+<ul>
+<li>人很难形成一种统一的信念或共享的价值观</li>
+<li>必须通过外在法律形式来强化秩序</li>
+<li>更强烈的个人主义的形成</li>
+</ul>
+</li>
+<li>涂尔干：只有通过相互依靠，才能使现代世界的生活变为可能</li>
+</ul>
+<h3 id="传统社会中的社会整合门诺人">传统社会中的社会整合——门诺人</h3>
+<ul>
+<li>门诺人衡量技术进步对于<strong>社会、家庭以及信仰</strong>的利益得失，衡量共同体与进步、共同体与竞争、共同体与个人的轻重关系，不是选择被动接受或断然拒绝</li>
+<li>门诺人减少劳动分工</li>
+<li>我们意识到了这些问题吗？
+<ul>
+<li>什么是进步？如何对什么是进步作价值判断？技术是否降低了我们可能做出的任何个人选择的价值？我们意识到我们所做选择的后果了吗？</li>
+</ul>
+</li>
+</ul>
+<h3 id="当代社会中的个人主义和相互依赖性">当代社会中的个人主义和相互依赖性</h3>
+<ul>
+<li>讽刺：我们因极端劳动分工而不能自给自足，但我们却有一种强烈的独立愿望。我们比以前更需要对方，但我们却认为我们可以不需要对方。</li>
+<li>「社会资本」：相互依赖的社会网络，共享如何采取行动和相互间的信任，以帮助我们达成共同的目标
+<ul>
+<li>普特南（Robert Putnan, 1995）：美国社会资本的总量在近几十年来有明显下降。公共生活的许多方面，人们的参与率都有所下降。</li>
+<li>可能的原因
+<ul>
+<li>地理位置重要性的下降</li>
+<li>我们与工作场所之间关系的变化：我们更经常选择个人事业上的进步，相对于家庭和共同体纽带</li>
+<li>妇女更广泛地参加有偿劳动
+<ul>
+<li>注意：社会资本中的关键术语不是性别，而是时间。由于经济原因，我们在工作上花更多时间精力，而不是在家庭或共同体上。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>普特南：「赛博巴尔干化」
+<ul>
+<li>？</li>
+</ul>
+</li>
+<li>贝拉和他的同事（Robert Bella eg., 1985）：「生活型领地」
+<ul>
+<li>生活型社会本质上是分割的，并鼓励相似意义上的自恋</li>
+<li>而非「共同体」——试图成为一个包容性的整体，鼓励不同类群间在公共和个人生活中的相互依赖</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>普特南：有意识地制定政策来扩大社会资本
+<ul>
+<li>社会资本的益处
+<ul>
+<li>普遍互惠的规范</li>
+<li>社会信任的出现</li>
+<li>有利于协作和交流</li>
+<li>解决集体行动困境</li>
+</ul>
+</li>
+<li>部分错位的强调：增加个人机会</li>
+<li>关注社会发展</li>
+<li>扩大人们与不同于他们自己的人在非正式背景下互动的机会</li>
+</ul>
+</li>
+</ul>
+<h3 id="美好社会">美好社会</h3>
+<ul>
+<li>涂尔干：美好社会必然到来，进步历史观</li>
+</ul>
+<h2 id="生产与革新马克思">生产与革新（马克思）</h2>
+<ul>
+<li>涂尔干重在关注工业革命对社会的影响，忽视了对生产的影响，把劳动分工看成是给定的，忽视了劳动分工对工作和工人的影响</li>
+<li>工作的去技术性，工人的机器附属品化</li>
+<li>马克思大致认同涂尔干揭示的社会结构如何影响思想行动（通过比较传统社会和现代社会）
+<ul>
+<li>在「美好社会」以及「如何实现美好社会」上存在分歧</li>
+<li>涂尔干：强调相互依赖性的有机团结是社会进化的必然结果</li>
+<li>马克思：革命（彻底推翻既有社会关系）看作是实现美好社会的唯一途径</li>
+</ul>
+</li>
+<li>马克思的两个关键概念：
+<ul>
+<li>劳动力：人们生产的能力或把原材料转换成产品的能力</li>
+<li>技术革新：永无止境地在生产中开发新技术和工具</li>
+</ul>
+</li>
+</ul>
+<h3 id="马克思的五个预设">马克思的五个预设</h3>
+<ul>
+<li>人类必须生产
+<ul>
+<li>人类缺乏复杂的维持生存的本能，基因没有告诉我们如何获得生存所需的东西，人类必须建立或构建我们和自然的联系</li>
+</ul>
+</li>
+<li>生产使我们成为独一无二的人类
+<ul>
+<li>生产能力是人和其他动物的根本区别</li>
+<li>人在生产方面表现出极大的创造性</li>
+<li>吉尔曼：「劳动不只是人类生存的手段，劳动就是人类生活」</li>
+</ul>
+</li>
+<li>我们把自己投入产品之中</li>
+</ul>
+<p>前三个预设的中心思想即劳动力概念。产品 = 原材料 + 劳动力。</p>
+<ul>
+<li>经济决定社会
+<ul>
+<li>经济基础与上层建筑</li>
+<li>社会关系制度是为统治精英利益服务的</li>
+<li>生产制度随着技术革新的转变使得资源的把持地位存在转变可能</li>
+<li>明确划分人类发展的四个阶段
+<ul>
+<li>原始共产主义、封建主义（土地）、资本主义（私有财产）、共产主义</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>短缺和分配是实现美好社会的障碍</li>
+</ul>
+<h4 id="短缺">短缺</h4>
+<ul>
+<li>居于统治地位的人能够通过生产进而控制产品的分配</li>
+<li>马克思肯定资本主义解决生产问题的能力</li>
+<li>资本家内部的竞争同样值得关注
+<ul>
+<li>资本主义需要自由市场，但资本家希望垄断</li>
+<li>生产流程机械化和去技术性来降低劳动力成本</li>
+</ul>
+</li>
+</ul>
+<h4 id="分配">分配</h4>
+<ul>
+<li>马克思：我们的社会关系制度决定了谁有权利得到物品和为什么能够得到</li>
+<li>资产阶级和无产阶级的互相依赖是不平等的</li>
+<li>「异化」：与社区的分离，与工作伙伴的分离，与我们制造的产品的分离，最重要的是与我们生产的创造性、动态性、独特的人类潜能的分离</li>
+<li>人的价值降低为市场价值</li>
+</ul>
+<h3 id="革命与美好社会">革命与美好社会</h3>
+<ul>
+<li>
+<p>劳动力潜在的集体力量在扩大，马克思预测阶级分化越来越明显，结果导致一种新的社会关系革命</p>
+</li>
+<li>
+<p>人们试图通过提高自己的地位来逃脱去技术性工作</p>
+</li>
+</ul>
+<h3 id="变革经济学">变革经济学</h3>
+<ul>
+<li>制度决定了资本家和工人的行动</li>
+<li>当短缺问题靠技术革新解决后，资本主义的社会关系变得没有意义</li>
+<li>角度：物质资料分配
+<ul>
+<li>「拥有黄金的人制定规则」</li>
+<li>马克思：「任何一个时代的统治思想，始终都不过是统治阶级的思想。」</li>
+</ul>
+</li>
+<li>美好社会必将到来：人类的创新生产能力</li>
+</ul>
+<h2 id="权力权威与社会控制韦伯">权力、权威与社会控制（韦伯）</h2>
+<ul>
+<li>马克思：我们的所作所为影响了我们怎样思考</li>
+<li>韦伯：我们的思维方式决定了我们做什么
+<ul>
+<li>拓展马克思的「权力建立在社会阶级或物质财富基础上」一理论</li>
+</ul>
+</li>
+</ul>
+<h3 id="韦伯与观念的重要性">韦伯，与观念的重要性</h3>
+<ul>
+<li>除了生产活动，思想和信仰也会影响我们的行动</li>
+</ul>
+<h4 id="新教伦理与资本主义精神">《新教伦理与资本主义精神》</h4>
+<ul>
+<li>
+<p>宗教促进现代资本主义的产生</p>
+</li>
+<li>
+<p>资本主义需要「自由劳动者」，需要即使基本需求和需要得到满足依然努力工作的人，需要人们有工作的愿望</p>
+<ul>
+<li>
+<p>非自由劳动者或奴隶是没有效率的</p>
+</li>
+<li>
+<p>工作动机必须发自内心</p>
+</li>
+<li>
+<p>认为这种工作态度的转变是由于<strong>新教改革</strong>（马丁·路德）所致，它预示了现代资本主义的诞生</p>
+<ul>
+<li>所有信徒都受到上帝的召唤，按照上帝的方式生活，服从上帝的命令</li>
+<li>上帝给每个信徒都安排了一份职业</li>
+</ul>
+<p>使得人们的世俗活动变得更有意义</p>
+</li>
+</ul>
+</li>
+<li>
+<p>「资本主义精神」发展的第二个阶段：<strong>预定论</strong>（约翰·加尔文）</p>
+<ul>
+<li>预定论：上帝在人出生前就选定了谁上天堂谁下地狱，我们不知道上帝的旨意，因此我们不知道自己是否得到恩宠
+<ul>
+<li>韦伯：「救赎恐慌」</li>
+</ul>
+</li>
+<li>在上帝安排的职业中努力工作，就能获得上帝的恩宠</li>
+</ul>
+</li>
+<li>
+<p>「新教工作伦理」：人们工作不是因为他们必须工作（既不是为了生存也不是被强迫），而是因为他们要遵守他们感受到的上帝的感召</p>
+</li>
+<li>
+<p>一个实验：「你直接对上帝负责」，为了获得自己讲上天堂而不是下地狱的安慰，你尽最大努力做好自己的工作</p>
+</li>
+<li>
+<p>因此，现代资本主义精神的一个基本要素：建立在天职观念基础上的理性行为与生俱来⋯⋯源自基督教禁欲精神</p>
+<ul>
+<li>时间的推移下宗教动机衰退，但这种精神保留下来</li>
+</ul>
+</li>
+</ul>
+<h4 id="合法性权力和权威">合法性权力和权威</h4>
+<ul>
+<li>权力：「一个人或一个群体在一项公共行动中即使参与这项行动的其他人反对依然能够实现自己意愿的机会。」
+<ul>
+<li>关键问题：别人认为我们的权力合法的程度
+<ul>
+<li>强制：一种被<strong>被施加者</strong>视作不合法的权力
+<ul>
+<li>以武力或武力威胁为支撑</li>
+</ul>
+</li>
+<li>权威：<strong>被施加者</strong>视其合法
+<ul>
+<li>以信心或信仰为支撑</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>合法权力的三种类型：传统型权威、卡里斯马型权威、法理型权威</li>
+<li>传统型权威：「日常生活惯例为每个人提供了毋庸置疑的行为规范」
+<ul>
+<li>「过去为现在提供了正当性」权威来自这个人占据的地位以及以前站在这个地位上的人的权威</li>
+<li>国王</li>
+<li>父母</li>
+</ul>
+</li>
+<li>卡里斯马型权威：特殊的人格品质（超自然的、超人的或至少是极不寻常的力量和特质）吸引人们信任和追随
+<ul>
+<li>权威来自一个特定的特殊的人</li>
+<li>耶稣</li>
+<li>马丁·路德·金</li>
+</ul>
+</li>
+<li>法理型权威与科层制
+<ul>
+<li>其基础是「规则、程序和为了以最有效的方式达成目标而建立的规则」「是地位而不是个人」</li>
+<li>如果程序被证明无效率，则会受到修改</li>
+<li>最纯粹的表现形式：科层制
+<ul>
+<li>组织优势：严格的等级结构</li>
+<li>理性、定量的计算：忽略被认为对工作不必要的部分自我，如情感需求和家庭责任</li>
+<li>工人的怠工和下降的效率作为一种结果也开始受到重视，对工人的关心和重视也开始制度化（自我纠正机制）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>韦伯的警告：20 世纪可能并不会带来肯定的、无限的进步</li>
+</ul>
+<h3 id="权力的来源">权力的来源</h3>
+<ul>
+<li>权力的多维观：联系三种类型的资源（阶级、地位和党派）</li>
+<li>阶级：一个经济或物质变量，两个主要要素：
+<ul>
+<li>经济资源（包括生产资料）：决定因素</li>
+<li>在市场中的技术知识
+<ul>
+<li>马克思：技术知识会随着机械化和去技术性而变得无关紧要</li>
+<li>韦伯：技术知识仍会继续有价值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>地位：一个社会变量
+<ul>
+<li>基于职业声望、道德身份和/或接近拥有其他权力的人的社会等级</li>
+<li>取决于<strong>别人</strong>如何看待你
+<ul>
+<li>如宗教领袖（不因为经济资源，而因为人们的尊重和服从）</li>
+</ul>
+</li>
+<li>地位是相对产生的</li>
+<li>地位是一个群体变量</li>
+<li>一个人的地位<strong>体现</strong>其权力</li>
+</ul>
+</li>
+<li>党派：组织起来实现某个特定目标的能力（类似政党但不一定和政治相关）
+<ul>
+<li>社会运动经常运用组织力量来改善成员的经济地位和社会地位</li>
+<li>解释：为什么马丁·路德·金坚持把非暴力作为保持组织统一的策略</li>
+</ul>
+</li>
+</ul>
+<h3 id="观念权力和行动">观念、权力和行动</h3>
+<ul>
+<li>理解改变现状的可能性
+<ul>
+<li>涂尔干、马克思：强调结构和社会地位的影响</li>
+<li>韦伯：我们的思想和行动并不是简单地被我们的社会或经济地位所决定</li>
+</ul>
+</li>
+</ul>
+<h2 id="自我与社会现实的社会建构视角转向个人和认知">自我与社会：现实的社会建构（视角转向个人和认知）</h2>
+<ul>
+<li>认知的重要性、我们所认为的事物是真实的之重要性，以及它如何影响到我们怎样去思考和行动</li>
+<li>塑造我们生活的动力机制（自上而下研究）：社会整合、劳动力与技术革新、权力与资源等</li>
+<li>自下而上的视角：个人行动的重要性
+<ul>
+<li>「社会作为实体并不存在。它是由集体观念、信仰、知识及个体行动等所构成的。」</li>
+<li>「社会」只是我们用来描述集体大众时一个比较方便的术语</li>
+</ul>
+</li>
+<li>彼得·伯格和托马斯·勒克曼：《现实的社会建构》
+<ul>
+<li>「世界建构」的三阶段模型
+<ol>
+<li>建构文化：我们建构世界，因为我们人类缺乏本能去决定如何处理跟其他人以及周围世界的关系；为了建立<strong>秩序和意义</strong>，人类创造出工具、语言、观念、信仰、行为准则等</li>
+<li>建构自我：我们是被我们建构出来的特定文化束缚着的</li>
+<li>建构社会：社会建构中我们分享文化，文化一经分享即失去个体控制。最终我们会认为它<strong>本来</strong>就是「存在」的</li>
+</ol>
+</li>
+<li>简单而言，现实的社会建构包括目标物、知识以及行为准则的建构，它们被我们集体共享</li>
+<li>被创造出来的产物又会塑造或限制我们的观念和行动</li>
+<li>结果：社会互动、集体性所需要的可预测性和秩序</li>
+</ul>
+</li>
+</ul>
+<h3 id="建构文化">建构文化</h3>
+<ul>
+<li>从生存开始：人类可以自由选择，伴随个体不稳定生存的问题；被隔离所造成的生存困难；期望稳定</li>
+<li>文化：人类在确立跟自然界以及社会中其他成员之间关系时建构的所有东西的总和
+<ul>
+<li>物质文化：人类技术（人类创造和使用的所有对象）
+<ul>
+<li>物质文化<strong>事物</strong>只有在于其他事物相联系并存在于一定的社会框架中才有意义
+<ul>
+<li>一支铅笔只有在书写这种文化背景中才有真实的意义</li>
+<li>我们创造的事物最终也限制我们能做出的选择</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>认知文化：语言、观念、信仰和知识（关于现实的思想和符号表达，包括我们相信/重视/思考且知道的所有对象）
+<ul>
+<li>语言：一种共享的符号体系，其意义是集体持有的
+<ul>
+<li>萨丕尔—沃尔夫假设：一个人所用的语言会形塑他对现实的感知，进而影响他的思想和行动</li>
+</ul>
+</li>
+<li>关于现实的这些共享观念，其意义也依赖于其所存在的社会背景
+<ul>
+<li>价值观：美国梦的个人主义取向</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>规范文化：行为的准则
+<ul>
+<li>规范使得我们的行动可以被预测，生活更便利</li>
+<li>如伦常——大规范</li>
+<li>如习俗，但可容忍较多的个体偏向</li>
+<li>规范是社会建构出来指引我们行为的，而行为具有社会应变性，所以其执行也依赖于特定的背景</li>
+<li>检验规范存在程度大小的一个方式，就是看在违犯它之后有何种反应</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="建构自我">建构自我</h3>
+<ul>
+<li>
+<p>社会化：我们共同创造的世界<strong>形塑</strong>个体的思维及行动的过程</p>
+</li>
+<li>
+<p>社会性别的社会化</p>
+</li>
+<li>
+<p>自我与社会</p>
+<ul>
+<li>
+<p>自我：构成个体的特征和经验的综合体。包括社会纽带关系</p>
+<ul>
+<li>我们把他人作为自己的标尺，来明白自己是谁</li>
+<li>这个关系性概念与所谓的独立自主意识相对立
+<ul>
+<li>即使是被隔离意义上的自我，也只有在同未被隔离的自我建立关系时才有意义</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>查尔斯·库利：镜中我（反身自我）</p>
+<ol>
+<li>我们设想我们在他人面前怎样表现（但实际并不知道他们如何想。只能利用所有能想到的信息进行想象）</li>
+<li>我们设想他人将会怎样判断我们的认识（在「怎么看自己」进一步到「是否认可自己」）</li>
+<li>我们根据<u>我们</u><strong>所设想</strong>的他人会如何评价<u>我们认为</u>他们所看到的东西，来判断我们的自我。通过<strong>内化</strong><u>我们认为</u>他人将会产生的对我们的<strong>反应</strong>而拥有自我。</li>
+</ol>
+<ul>
+<li>我们的自我概念很大程度上是由我们同他人的互动中塑造的</li>
+<li>此观点有过度社会化的态势</li>
+</ul>
+</li>
+<li>
+<p>米德的拓展：主我（I）和客我（me）</p>
+<ul>
+<li>主我：行动着的我们的一部分——是对他人态度的<strong>机体反应</strong></li>
+<li>客我：规划行动并判断我们怎么做（是自我社会化的一部分）
+<ul>
+<li>米德：客我就是「一个人假想的他人的一组态度」，是我们脑海中的社会</li>
+</ul>
+</li>
+<li>此观点引入了「他人在场」</li>
+<li>「耍玩」阶段：孩子头脑中没有社会概念在内部指导的阶段</li>
+<li>「游戏」阶段：孩子开始考虑他人的期望和对他人的责任</li>
+<li>一般化他人：我们共有的对他人所占据位置以及基于这些位置所期望的行动的认识
+<ul>
+<li>团体体育排兵布阵</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>作为个体，我们制定了规则（文化创造）并教他人认识它们（社会化）</p>
+</li>
+<li>
+<p>没有规则就没有游戏</p>
+</li>
+<li>
+<p>有了规则之后规则就超越了个体的控制，存在于集体意识当中</p>
+<ul>
+<li>为了改变规则，你必须改变所有或足够多游戏者的观念
+<ul>
+<li>规则被创造出来首先就是为了限制各种可能性（通过提供结构和秩序）</li>
+<li>而改变意味着允许存在各种可能性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="建构社会">建构社会</h3>
+<ul>
+<li>
+<p>我们的行动方式早已被社会化，我们的行动实际上就是模式化的</p>
+</li>
+<li>
+<p>地位和角色</p>
+<ul>
+<li>
+<p>地位：我们相对于他人在社会中所占有的位置</p>
+<ul>
+<li>包括声望，但更多指<strong>社会位置</strong>之间的关系</li>
+<li>地位只有在与其他地位相关联时才有意义</li>
+<li>总意味着权利和义务</li>
+</ul>
+</li>
+<li>
+<p>角色：指示地位占有者所被期望的<strong>行动</strong></p>
+<ul>
+<li>
+<p>占有某一地位，同时就扮演某一角色</p>
+</li>
+<li>
+<p>角色与行动相关</p>
+</li>
+<li>
+<p>学生（地位）认真读书（角色）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>首属群体和次属群体</p>
+<ul>
+<li>社会群体：地位的结合体。包括一组相互联系的地位和一个标明群体内外的分界线
+<ul>
+<li>必须结合或依靠在一起</li>
+</ul>
+</li>
+<li>首属群体：不正式，但关系亲密和持久，并使我们整个自我完全融入
+<ul>
+<li>家庭、朋友圈</li>
+</ul>
+</li>
+<li>次属群体：更正式，关系不亲密，更加工具性，仅融入一小部分自我
+<ul>
+<li>公司、课堂</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>制度：<strong>包括</strong>相互联系的<strong>社会群体</strong>，以及他们的<strong>地位和角色</strong>，目的是实现某些领域的社会需要</p>
+<ul>
+<li>五类重要制度
+<ol>
+<li>家庭：生物和社会再生产</li>
+<li>教育：与讲授更多关于我们参与家庭之外的更大社会所需的正式和公开文化相关的群体、地位和角色</li>
+<li>政府：保持社会内外部的社会秩序的</li>
+<li>经济：与商品和服务的生产分配消费有关的</li>
+<li>宗教：与对终极意义的追求和社会稳定或是社会「凝聚」在一起有关的</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>自我、社会与认识</p>
+<ul>
+<li>「托马斯定理」：我们以我们<strong>认为</strong>是真实的东西（即使它与现实本身相反）为基础去行事
+<ul>
+<li>如果我们与他人具有共同的思维和行动</li>
+<li>如果我们相信他人能够按照期望去做</li>
+<li>高度社会分工</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="规划我们的世界">规划我们的世界</h3>
+<ul>
+<li>社会既存在于我们之外（在他人的观念中，在我们帮助建构的结构中），又存在于我们之内（我们的建构、认识、判断）</li>
+<li>从社会到自我：剧本中的生活
+<ul>
+<li>从大到小、由上至下</li>
+</ul>
+</li>
+<li>从自我到社会：拟剧论
+<ul>
+<li>由下而上</li>
+<li>戈夫曼（Erving Goffman）：我们日常所有的互动中，我们都在努力进行成功的表演
+<ul>
+<li>如同戏剧，根据剧本，在后台准备，在前台表演</li>
+<li>使用适当的道具</li>
+<li>尽管有即兴表演，我们尽力使得表演有可信度</li>
+<li>为了表演成功，我们团队合作</li>
+<li>最终观众给表演打分</li>
+</ul>
+</li>
+<li>不连贯——互动的不稳定性
+<ul>
+<li>社会结构被打乱时，我们尽力复原的这种反应，表示社会秩序来源于个体的行动，而并非简单地起源于强加给个体的外部社会力量和内部遗传的本能</li>
+<li>社会是我们日常表演的动态结果
+<ul>
+<li>我们主动连续地参与到构建社会的活动</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="理解我们的选择结构和选择">理解我们的选择：结构和选择</h3>
+<ul>
+<li>选择受到限制
+<ul>
+<li>我们所前乳的社会结构以及我们已得到的作为我们位置的结果的相关资源，总是在影响我们的行动</li>
+</ul>
+</li>
+<li>有变通的可能性
+<ul>
+<li>新的、后现代时期
+<ul>
+<li>不再拥有唯一的关于现实本质的说明</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="后现代生活是的含义">后现代生活：「是」的含义</h2>
+<ul>
+<li>「现代」
+<ul>
+<li>把现实的性质看作是单一的，并且是可以通过主要运用科学方法的经验研究去认识</li>
+</ul>
+</li>
+<li>时代的后现代性
+<ul>
+<li>强调我们社会世界的多元性、相互联结性和全球性特征</li>
+</ul>
+</li>
+<li>后现代主义
+<ul>
+<li>质疑现实的单一性质</li>
+<li><strong>并怀疑我们能用绝对术语去认识有关的现实</strong></li>
+<li>把现实看做事多元的和被社会建构的</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>如果那天有人问我：「你和莱温斯基小姐之间有任何性关系吗？」这也就是问我一种现代时态的问题（are you having&hellip;），我将会回答「没有」，而且它将是完全真实⋯⋯因而所有用现在时态陈述自己观点的人，都会用现在时态讲述事实真相，如果他说没有，那就是真的⋯⋯我没有试图给你一个诡辩的回答⋯⋯</p>
+<p>比尔·克林顿</p>
+</blockquote>
+<ul>
+<li>后现代时代词语的问题性本质
+<ul>
+<li>指代符号（语言）和现实直接的关系？
+<ul>
+<li>语言被社会建构的性质</li>
+<li>没有文本，只有对文本的阅读，并且每个人的阅读仅仅是个人的事情，阅读更多地受到阅读者自身的影响，而非纯文本的影响</li>
+<li>社会共识变成了纯粹的假象
+<ul>
+<li>假象能够存在：强权用其定义和现实，对他人施加影响</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>后现代主义的本质：没有本质。没有我们可以直接获得的基本现实</li>
+</ul>
+<h3 id="故事叙事和元叙事">故事：叙事和元叙事</h3>
+<ul>
+<li>后现代世界个人故事或叙事的泛滥
+<ul>
+<li>许多故事的讲述可以有许多角度</li>
+<li>所以我们所拥有的现实可能并不是「真实」
+<ul>
+<li>被社会建构出的，所以也可以被重新建构</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>元叙事：处在关于我们自身经验的叙述层次之上的，关于现实本质的大故事
+<ul>
+<li>答案诉诸
+<ul>
+<li>如宗教性的元叙事：上帝带濒死者上天堂</li>
+<li>科学性的元叙事：濒死者只是因为身体机能老化</li>
+<li>提供秩序感或内在统一感</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>后现代世界：元叙事的矛盾与冲突
+<ul>
+<li>后现代：对元叙事的怀疑</li>
+<li>真实故事是相对的，没有一个故事能把我们统一起来
+<ul>
+<li>涂尔干：人们没有统一的集体意识</li>
+</ul>
+</li>
+<li>既是社会和人的分裂，也是个体自由和自我认同的扩张</li>
+</ul>
+</li>
+</ul>
+<h3 id="图像现实认识和超现实">图像：现实、认识和超现实</h3>
+<ul>
+<li>孤立的集体经历
+<ul>
+<li>看电视：在同一房间看同一电视，但却极少相互进行交流</li>
+</ul>
+</li>
+<li>后现代世界中，图像常变得比现实更重要
+<ul>
+<li>后现代理论家：我们从不<strong>直接</strong>接触任何东西或<strong>直接</strong>与任何东西进行互动，我们关于「真实」的经验总是以符号、象征物和话语为中介
+<ul>
+<li>我们对事物的认识并不是事物本身，也看不到自己所拥有的图像全貌</li>
+<li>鲍德里亚（Jean Baudrillard, 1981）：「领土不再先于地图存在，也不会再依赖它而存在。相反，是地图先于领土而存在，并造就领土。」</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>超现实：在真实之上，超越真实，在真实之外
+<ul>
+<li>图像层面：我们被图像所淹没，以致不能确切地辨别出哪一个是真实，哪一个是现实的建构</li>
+<li>没有事物是真实的，除非我们认定它是真实的
+<ul>
+<li>迪士尼世界</li>
+<li>「真实性世界」</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>后现代现实：世界不是一个<strong>单一</strong>事物
+<ul>
+<li>我们从现代的一种以经验为基础的现实转变到了后现代以图像为基础的现实
+<ul>
+<li>对我们所依赖的、能提供给我们确定性和目标的文化提出了疑问</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="选择消费现实">选择：消费现实</h3>
+<ul>
+<li>后现代：现实是磋商的成果，而不是特定的
+<ul>
+<li>我们<strong>挑选</strong>出真实</li>
+<li>我们面临强制选择（世俗的食物、衣服；朋友、学校、工作、信仰、身份等等）
+<ul>
+<li>我们太习惯于选择以至于过分自然</li>
+</ul>
+</li>
+<li>核心：消费主义
+<ul>
+<li>与其说是买产品或体验，不如说我们是在<strong>创造图像或印象</strong></li>
+<li>我们还要的是这个产品对我们的象征意义
+<ul>
+<li>消费也是一种再创造</li>
+<li>消费是社会性的，可以帮助我们建构我们的身份</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>讽刺：我们在批量生产产品的世界里试图刻画我们独特的个体身份
+<ul>
+<li>流动的环境里，个体努力地构建身份，通过使自己跟某一共同体联系起来试图减弱他们的焦虑</li>
+<li>后现代：自由创造
+<ul>
+<li>但也可能使得我们失去自我身份存在的坚实基础</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>消费使我们满足（图像是饱满的），但经济依赖于我们的永不满足</li>
+</ul>
+<h3 id="网络小世界">网络：小世界</h3>
+<ul>
+<li>整体可能远大于部分之和</li>
+<li>复杂的联系，模糊的边界
+<ul>
+<li>全球化
+<ul>
+<li>文化霸权主义与地方文化分裂、衰退</li>
+<li>处在相同经济簇的人会有更多共同点</li>
+</ul>
+</li>
+<li>网络组织/赛博化
+<ul>
+<li>人和技术、网络的结合
+<ul>
+<li>银翼杀手、黑客帝国</li>
+</ul>
+</li>
+<li>孤立的自我让步于网络化的自我</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>讽刺：设想达到一个确定归宿的可能性，以一种不变的自我意识为基础；但后现代的现实则是我们永远处于永不停止的变化之中</li>
+</ul>
+<h3 id="跨界交叉的边界">跨界：交叉的边界</h3>
+<ul>
+<li>
+<p>后现代的一个特点：跨界；模糊边界；</p>
+<ul>
+<li>
+<p>罗德里格斯：我们是灰色的</p>
+<blockquote>
+<p>灰色，并不必然具有一种颜色上的意义，但却只有灰色的必然的，因为它是混合的、困惑的、结块的、不纯的、未经高温消毒的。</p>
+<p>罗德里格斯</p>
+</blockquote>
+</li>
+<li>
+<p>世界上没有「纯正」的文化</p>
+<ul>
+<li>我们共享、交换、乞求、借鉴甚至偷取别人的文化，别人也在这样做</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>一个明显含义：相对主义</p>
+<ul>
+<li>如果我们都被混合在一起，你如何使别人相信你的故事是正确的而他们的故事是错误的？你如何证明？依据？</li>
+</ul>
+</li>
+<li>
+<p>一个经验：生活中并没有<strong>单一</strong>的历史和<strong>单一</strong>的经验</p>
+</li>
+</ul>
+<h2 id="我们生活的世界">我们生活的世界</h2>
+<h3 id="家庭联结纽带">家庭：联结纽带</h3>
+<h4 id="家庭结构与历史变迁">家庭结构与历史变迁</h4>
+<ul>
+<li>历史上，家庭是我们社会生活的中心
+<ul>
+<li>酋长、贵族、国王王后；门当户对</li>
+<li>相比扩大家族网络和资源，爱情在婚姻中所占的分量相对较小</li>
+</ul>
+</li>
+<li>现代家庭的迅速萎缩
+<ul>
+<li>经济地位、教育地位和公民政治地位的重要性超越家庭的重要性</li>
+</ul>
+</li>
+<li>制度家庭：家庭是经济、社会和文化资源转换的中心制度
+<ul>
+<li>婚姻作为增加资本、构建联盟、以年龄和性别组织劳动分工、决定孩子所拥有的对父母的要求，以及父母在孩子身上所拥有的权利的主要手段
+<ul>
+<li>姻缘关系为首要目的</li>
+</ul>
+</li>
+<li>地位、结构、角色期待都十分清晰</li>
+<li>工作和家庭是重叠的</li>
+<li>以实际的经济、社会和政治利益的算计
+<ul>
+<li>基于「单个人仅靠自身力量做某事，将无法生存下去」的传统理由</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>伙伴家庭：重视夫妻关系而不是扩大家庭外在的联系，重视情感支持
+<ul>
+<li>工作成为公共领域的一部分，家庭成为私人领域的一部分
+<ul>
+<li>工业革命，人们离开土地而为他人工作</li>
+</ul>
+</li>
+<li>以性别为基础的隔离领域被认为是理想化形式：男人属于公共领域，女人属于私人领域
+<ul>
+<li>养家糊口的丈夫和操持家务的家庭主妇</li>
+<li>人们为妻子设计了新的价值和规范，被赋予一套明确定义好的角色</li>
+</ul>
+</li>
+<li>流行文化的强化
+<ul>
+<li>其他替代性的选择被认为是不正常的</li>
+</ul>
+</li>
+<li>流变：妇女成为有偿劳动力，重新参与到公共领域</li>
+</ul>
+</li>
+<li>后现代家庭：伙伴家庭的发展
+<ul>
+<li>家庭成为我们个人身份建构的一部分</li>
+<li>家庭反映个人选择的多样性</li>
+<li>基本价值观：自主，而不是团结友爱
+<ul>
+<li>强调双方<strong>相互同意的、共意的</strong>爱</li>
+<li>共同养育</li>
+<li>温文尔雅（允许家庭成员和外面更大的世界接触联系）</li>
+<li>更具有弹性，而不是一定要符合某种特定方式，只要给予我们基本的心理上和感情上的健康即可</li>
+<li>可以退出</li>
+</ul>
+</li>
+<li>去制度化
+<ul>
+<li>孔茨：对许多配偶来说，婚姻已经变得比历史上任何时候更令人感到愉悦</li>
+<li>破坏了涂尔干论及的社会整合
+<ul>
+<li>关系的随意性和脆弱性</li>
+<li>关系的意义性和互利性</li>
+</ul>
+</li>
+<li>？转向具有相同观念/相同构成的群体支撑</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="家庭的功能">家庭的功能</h3>
+<ul>
+<li>家庭的专有定义
+<ul>
+<li>传统定义：生物学意义、法律意义
+<ul>
+<li>有清晰的边界</li>
+</ul>
+</li>
+<li>宽泛定义：用功能定义</li>
+</ul>
+</li>
+<li>两个重要功能
+<ul>
+<li>社会网络功能
+<ul>
+<li>家庭和社会的关系</li>
+</ul>
+</li>
+<li>个人需要功能
+<ul>
+<li>生理需要和情感需要</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="社会网络">社会网络</h4>
+<ul>
+<li>家庭传承社会地位：继承生活机会
+<ul>
+<li>家庭出身是形成我们社会地位的最基本的因素，也是可以终生利用的资源</li>
+<li>韦伯：生活机会</li>
+<li>把我们嵌入会影响我们获得资源的社会网络之中</li>
+</ul>
+</li>
+<li>新家庭的组建：平衡同与异
+<ul>
+<li>一定程度上相重叠的物质资源、社会资源和文化资源</li>
+</ul>
+</li>
+<li>再生产：寻求人口和社会的连续性
+<ul>
+<li>迁移：获得来自外群的新成员</li>
+<li>生物意义再生产</li>
+<li>社会再生产：对孩子的教育，让其接受群体的价值观和规范
+<ul>
+<li>家庭是我们获得生存必要的社会和文化资源的场所</li>
+<li>学会个人和社会之间的互动</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="个人需要">个人需要</h4>
+<ul>
+<li>生理需要
+<ul>
+<li>如果家庭满足了我们基本的生理需要，就说明家庭的消费多于家庭的生产</li>
+<li>生产到消费的转变：父母和孩子之间关系性质的转变</li>
+</ul>
+</li>
+<li>情感需要和心理需要
+<ul>
+<li>理想化：家庭成员应该无条件地彼此相爱</li>
+<li>新家庭的组建：努力寻找一个能满足这种需要的家庭，打造「避风港」的尝试</li>
+</ul>
+</li>
+</ul>
+<h3 id="社会结构和家庭选择">社会结构和家庭选择</h3>
+<ul>
+<li>社会世界正在塑造我们的偏好（社会和历史潮流）</li>
+<li>伴侣选择
+<ul>
+<li>现如今：浪漫的爱情基础，能建立长期的情感、社会和经济义务</li>
+<li>感觉？</li>
+<li>我们的社会地位影响着我们对所爱的人的<strong>认识</strong>
+<ul>
+<li>降低了每个人都可能成为我们配偶的可能性</li>
+<li>社会规则的限制
+<ul>
+<li>我们只能选择那些我们能够联系上的人</li>
+<li>家庭、朋友、所属组织观念的影响</li>
+<li>更容易被于我们相似的人吸引
+<ul>
+<li>同类婚：选择与拥有共同社会特征的人结婚</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></description>
+</item><item>
+    <title>2020 年终：日期的变更，只能是期待有所改变的美好祝愿</title>
+    <link>https://rongbinf.github.io/posts/2020-the-end/</link>
+    <pubDate>Thu, 31 Dec 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/2020-the-end/</guid>
+    <description><![CDATA[<p>谁能想到，2020 离奇地开始，平白无奇地结束了。</p>
+<p>站在最后一天回望这一年，一切充满变数。年初疫情爆发，现代人的生活与工作节奏被全盘打乱。生理和心理上的隔离、死亡、复活，个人、家庭、社会与世界的焦灼。人是群居动物，但真的让我们全都二十四小时待在家里，我们会变回动物。</p>
+<p>更怕这么一变，就从动物变不回人来。</p>
+<p>同样被打乱的还有我们感知信息的能力、发出声音的欲望、进行思考和处理感情的冲动。一年下来，每个人的目标似乎都变成了「好好活着」，活出动物本色。无所求、无所欲，「即心即佛」。</p>
+<p>这是正常的，但应该逐渐回到正轨。该有的反思请及时出现，该有的行动请按部就班。「吃一堑长一智」，吃了这么久社会撕裂出来的「堑」，别就这么住在里面不出来了。</p>
+<p>要和平不要战争，要缝合不要撕裂。</p>
+<p>但我们怎么让一列超速脱轨行驶的列车停下进行检修？乘客们感到十分害怕。面对记者采访时，乘客们无不表示：</p>
+<p>「不敢，不明白。」</p>
+<p>总爱用小人物堆砌大时代，用小故事构建大叙事，希望你我都能记住这一年在眼前行走过的各色人物。已死，就和阎连科一样「心中留座坟墓」。活着，就循着他们的行踪，自己写一遭春秋笔法。至于各色小人物何以组成大时代，我相信你懂得如何表里不一。</p>
+<p>日期的变更，只能是期待有所改变的美好祝愿。焦虑与悬浮着的，苟且偷生的，抽空期待改变已经可以庆幸，指望做出改变，那能耐可不小。前头都说了，目标都调整成「好好活着」了，还制定什么新年计划，这样的一层仪式感也没了。</p>
+<p>国际局势风云莫测，你看豹子秃鹰，同时遇到一块肉也懂得小组合作、组长分配了。它们的改变，是为了不变。</p>
+<p>希望我们的不变，是为了改变。</p>
+<blockquote>
+<p>疫情之后，世界将会走向何处，仍未可知。面对变化，原有的知识体系与「秩序」现出裂隙，这就需要我们不断调整，重新向世界发问，寻找新的解释之路，同时，承认人类智识的有限，面对天地万物，懂得心存敬畏，时时保持反思之心，自我的觉知与谦卑，许是我们的最后一道防线。</p>
+<p>段颖</p>
 </blockquote>
 ]]></description>
 </item></channel>

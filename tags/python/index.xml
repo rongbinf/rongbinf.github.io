@@ -1,0 +1,114 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Python - 标签 - Rongbin&#39;s Blog</title>
+        <link>https://rongbinf.github.io/tags/python/</link>
+        <description>Python - 标签 - Rongbin&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 12 Nov 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://rongbinf.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>使用 matplotlib 遇到的几个问题</title>
+    <link>https://rongbinf.github.io/posts/november-matplotlib/</link>
+    <pubDate>Fri, 12 Nov 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://rongbinf.github.io/posts/november-matplotlib/</guid>
+    <description><![CDATA[<p>这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>首先是解决字符串转日期型的问题。<strong>我希望将日期作为横轴，而且显示合理。</strong></p>
+<p>使用 <code>datetime</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">example</span><span class="o">.</span><span class="n">date</span>
+
+<span class="c1"># example.date 是我的 example.csv 文件中日期对应列。</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>更多时间处理参数，详见下方链接。</p>
+<p>自动格式化：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><a href="https://docs.python.org/zh-cn/3/library/datetime.html" target="_blank" rel="noopener noreffer">datetime - Python 3 中文文档</a></li>
+<li><a href="https://blog.csdn.net/gty931008/article/details/80254806" target="_blank" rel="noopener noreffer">python之时间、日期处理模块（datetime）- CSDN</a></li>
+</ul>
+<p>**我希望定位一个具体日期，并用竖线标识。**这里用到 <code>pandas</code> 把我希望的具体日期转为时间戳。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2014-06-30&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#000&#39;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvline.html" target="_blank" rel="noopener noreffer">matplotlib.pyplot.axvline</a></li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html" target="_blank" rel="noopener noreffer">pandas.Timestamp</a></li>
+</ul>
+<p></p>
+<p><strong>我希望在一张图（单个文件）中同时展示多个图表</strong>，既可以用 <code>subplot</code>，也可以用 <code>GridSpec</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">totalb</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">conb</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>也可以：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">GridSpec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">.25</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">.25</span><span class="p">)</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">totalb</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">conb</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>如何定义具体位置或查看更多实例，请见 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html?" target="_blank" rel="noopener noreffer">matplotlib.pyplot.subplot</a> 和 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" target="_blank" rel="noopener noreffer">matplotlib.gridspec.GridSpec</a>。</p>
+<p></p>
+<p></p>
+<p>参考了实例 <a href="https://matplotlib.org/stable/gallery/subplots_axes_and_figures/axes_zoom_effect.html" target="_blank" rel="noopener noreffer">Axes Zoom Effect</a>。</p>
+<p>待持续补充。</p>
+]]></description>
+</item></channel>
+</rss>

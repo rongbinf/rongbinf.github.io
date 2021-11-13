@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">树莓派实现开机自动播放 RTSP 流视频 - Rongbin&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="树莓派实现开机自动播放 RTSP 流视频" />
+<meta property="og:description" content="家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rongbinf.github.io/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-06T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="树莓派实现开机自动播放 RTSP 流视频"/>
+<meta name="twitter:description" content="家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机"/>
+<meta name="application-name" content="Rongbin&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Rongbin&#39;s Blog">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#ffffff"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff"><link rel="canonical" href="https://rongbinf.github.io/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/" /><link rel="prev" href="https://rongbinf.github.io/posts/the-big-picture-reading-notes/" /><link rel="next" href="https://rongbinf.github.io/posts/network-resetting-2021/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "树莓派实现开机自动播放 RTSP 流视频",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/rongbinf.github.io\/posts\/raspberrypi-autostart-vlc-autoplay-rtsp-stream\/"
+        },"genre": "posts","keywords": "家庭网络","wordcount":  1272 ,
+        "url": "https:\/\/rongbinf.github.io\/posts\/raspberrypi-autostart-vlc-autoplay-rtsp-stream\/","datePublished": "2021-01-06T00:00:00+00:00","dateModified": "2021-01-06T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Rongbin&#39;s Blog"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" rel="noopener noreffer" target="_blank"> brackets &amp; comma </a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Rongbin&#39;s Blog"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="" rel="noopener noreffer" target="_blank">brackets &amp; comma</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">树莓派实现开机自动播放 RTSP 流视频</h1><div class="post-meta">
+            <div class="post-meta-line">
+                </div>
+            <div class="post-meta-line">
+                    <i class="fa-fw"></i><time datetime="2021-01-06">2021-01-06</time>&nbsp;
+                <i class="fa-fw"></i>&nbsp;约 1272 字&nbsp;
+                <i class="fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;
+            </div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#获取摄像头-rtsp-流">获取摄像头 RTSP 流</a></li>
+    <li><a href="#使用-vlc-播放">使用 VLC 播放</a>
+      <ul>
+        <li><a href="#1-使用命令">1. 使用命令</a></li>
+        <li><a href="#2-创建-playlist-文件">2. 创建 playlist 文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#使用其他方式播放">使用其他方式播放</a></li>
+    <li><a href="#实现开机自启动">实现开机自启动</a></li>
+    <li><a href="#使-vlc-默认全屏打开">使 VLC 默认全屏打开</a>
+      <ul>
+        <li><a href="#1-修改命令">1. 修改命令</a></li>
+        <li><a href="#2-在-gui-修改-preference">2. 在 GUI 修改 Preference</a></li>
+      </ul>
+    </li>
+    <li><a href="#使命令在后台加载">使命令在后台加载</a></li>
+    <li><a href="#设置显示器常亮">设置显示器常亮</a></li>
+    <li><a href="#使用-unclutter-设置鼠标指针自动隐藏">使用 unclutter 设置鼠标指针自动隐藏</a></li>
+    <li><a href="#使用-xdotoolwwwsemicompletecomprojectsxdotool-改变窗口大小和位置">使用 <a href="www.semicomplete.com/projects/xdotool/">xdotool</a> 改变窗口大小和位置</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。</p>
+<h2 id="获取摄像头-rtsp-流">获取摄像头 RTSP 流</h2>
+<ul>
+<li>对于海康威视和萤石摄像头，其 RTSP 流地址格式如下：</li>
+</ul>
+<p><code>rtsp://<sup>username]:[password]@[ip]:[port</sup>/<sub>codec</sub>/<sup>channel</sup>/<sub>subtype</sub>/av_stream</code></p>
+<p>举例：<code>rtsp://admin:password@192.168.1.2:554/h264/ch1/main/av_stream</code></p>
+<p>具体参数（如视频编码）自行调整。</p>
+<ul>
+<li>对于 TP-LINK 摄像头，其 RTSP 流地址格式如下：</li>
+</ul>
+<p>主码流为：<code>rtsp://[username]:[password]@[ip]:[port]/stream1</code></p>
+<p>子码流将 <code>stream1</code> 替换为 <code>stream2</code> 即可。</p>
+<p>RTSP 端口 <code>port</code> 默认为 <code>554</code>，若为默认可不填写。</p>
+<h2 id="使用-vlc-播放">使用 VLC 播放</h2>
+<p>有两种方法：</p>
+<h3 id="1-使用命令">1. 使用命令</h3>
+<ul>
+<li>Run on the server:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc -vvv input_stream --sout <span class="s1">&#39;#rtp{dst=192.168.0.12,port=1234,sdp=rtsp://server.example.org:8080/test.sdp}&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Run on the client(s):</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc rtsp://server.example.org:8080/test.sdp
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="2-创建-playlist-文件">2. 创建 playlist 文件</h3>
+<p>新建一个播放列表，或直接使用播放 URL 打开 RTSP 流视频，确认能够正常播放。</p>
+<p>将播放列表另存为文件。这里建议另存为 <code>.m3u</code> 格式，因为打开 <code>.xspf</code> 格式文件会弹窗提示你选择 execute 或 open。</p>
+<p>运行该 playlist 文件即可播放。</p>
+<h2 id="使用其他方式播放">使用其他方式播放</h2>
+<p>你也可以使用 omxplayer 或 mplayer 进行播放。</p>
+<h2 id="实现开机自启动">实现开机自启动</h2>
+<p>在 Linux 上有多种实现开机自启动的方法。我尝试向 <code>rc.local</code> 添加启动代码但未起作用。目前使用通过桌面启动的方法。</p>
+<p>在 <code>/home/pi/.config/</code> 下创建名为 <code>autostart</code> 的新文件夹。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> /home/pi/.config
+mkdir autostart
+</code></pre></td></tr></table>
+</div>
+</div><p>在 <code>autostart</code> 目录下创建一个后缀为 <code>.desktop</code> 的文件。文件名任意。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> autostart
+nano test.desktop
+</code></pre></td></tr></table>
+</div>
+</div><p>更改文件内容：</p>
+<ol>
+<li>若采用命令打开：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
+Type=Application
+Exec=vlc rtsp://server.example.org:8080/test.sdp
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>若采用 playlist 文件，则更改为文件路径：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
+Type=Application
+Exec=vlc /home/pi/test.m3u
+</code></pre></td></tr></table>
+</div>
+</div><p>运行 <code>sudo reboot</code> 重启测试。</p>
+<ol start="3">
+<li>也可以在一个新的 shell 脚本中添加 vlc 命令，将 <code>Exec=</code> 后内容直接修改为 .sh 文件路径。如：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
+Type=Application
+Exec=/home/pi/test.sh
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="使-vlc-默认全屏打开">使 VLC 默认全屏打开</h2>
+<h3 id="1-修改命令">1. 修改命令</h3>
+<p>在 RTSP 流地址或 playlist 路径前添加选项 <code>-f</code> 或 <code>--fullscreen</code>，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc -f /home/pi/test.m3u
+</code></pre></td></tr></table>
+</div>
+</div><p>其他支持的选项：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 全屏幕视频输出 (默认关闭)
+-f, --fullscreen, --no-fullscreen 
+# 总在最前 (默认关闭) 
+--video-on-top, --no-video-on-top 
+# 开启壁纸模式 (默认关闭)
+--video-wallpaper, --no-video-wallpaper 
+# 在视频上显示媒体标题 (默认开启)
+--video-title-show, --no-video-title-show 
+# 显示视频标题 x 毫秒
+--video-title-timeout &lt;整数 [-2147483648 .. 2147483647]&gt; 
+# 视频标题的位置
+--video-title-position {0 (居中), 1 (左), 2 (右), 4 (上), 8 (下), 5 (左上), 6 (右上), 9 (左下), 10 (右下)}
+# 在 x 毫秒后隐藏光标和全屏控制器
+--mouse-hide-timeout &lt;整数 [-2147483648 .. 2147483647]&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>更多详见 <a href="https://wiki.videolan.org/Documentation:Documentation/" target="_blank" rel="noopener noreffer">VLC 帮助文档</a>。</p>
+<h3 id="2-在-gui-修改-preference">2. 在 GUI 修改 Preference</h3>
+<p>在 VLC Menu Bar &raquo; Tools &raquo; Preferences，进入 Video 栏，勾选 Fullscreen 即可。</p>
+<h2 id="使命令在后台加载">使命令在后台加载</h2>
+<p>在直接执行 <code>vlc rtsp://...</code> 命令时，遇到 Timestamp conversion failed。转而使用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xdg-open /home/pi/test.m3u
+</code></pre></td></tr></table>
+</div>
+</div><p>直接打开播放列表文件。</p>
+<p>或者改用 mplayer，在 <code>mplayer rtsp://...</code> 后加入 <code>&lt; /dev/null &amp;</code> 或完整的 <code>&lt; /dev/null &gt; /dev/null 2&gt;1 &amp;</code>。</p>
+<h2 id="设置显示器常亮">设置显示器常亮</h2>
+<p>进入 <code>/etc/lightdm</code> 目录修改 <code>lightdm.conf</code> 文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo vi /etc/lightdm/lightdm.conf
+</code></pre></td></tr></table>
+</div>
+</div><p>找到 <code>[Seat:*]</code> 或 <code>[SeatDefaults]</code> 段下的 <code>xserver-command</code>，默认为 <code>-#xserver-command=X</code>，修改为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xserver-command<span class="o">=</span>X -s <span class="m">0</span> -dpms
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="使用-unclutter-设置鼠标指针自动隐藏">使用 unclutter 设置鼠标指针自动隐藏</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install unclutter
+<span class="nb">echo</span> “@unclutter -idle <span class="m">1</span> -root” &gt;&gt; /etc/xdg/lxsession/LXDE/autostart
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="使用-xdotoolwwwsemicompletecomprojectsxdotool-改变窗口大小和位置">使用 <a href="www.semicomplete.com/projects/xdotool/" rel="">xdotool</a> 改变窗口大小和位置</h2>
+<p>首先安装 xdotool：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install xdotool
+</code></pre></td></tr></table>
+</div>
+</div><p>同时实现改变窗口大小和位置，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xdotool search --name <span class="s2">&#34;VLC&#34;</span> windowsize <span class="m">800</span> <span class="m">600</span> windowmove <span class="m">0</span> <span class="m">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>解释：</p>
+<ul>
+<li><code>search --name [keyword]</code> ：将搜索名称中带有关键词的窗口</li>
+<li><code>windowsize 800 600</code>：改变窗口大小，<code>$WIDTH $HEIGHT</code></li>
+<li><code>windowmove 0 0</code>：改变窗口位置，<code>$X $Y</code>，具体视屏幕分辨率而定</li>
+</ul>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><a href="/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/">家庭网络</a></section>
+        <section>
+            
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/the-big-picture-reading-notes/" class="prev" rel="prev" title="《社会学的邀请》阅读笔记"><i class="fas fa-angle-left fa-fw"></i>《社会学的邀请》阅读笔记</a>
+            <a href="/posts/network-resetting-2021/" class="next" rel="next" title="电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程">电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><a href="https://gohugo.io/">Hugo</a> + <a href="https://github.com/HEIGE-PCloud/DoIt">DoIt</a> + <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></div><div class="footer-line"></div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{"valine":{"appId":"OfNVI3e5Lb8sKVwzWrvyuRnE-gzGzoHsz","appKey":"2PC5INQ6gzBSTk0mun3J7VhP","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-twitter@5.0.1/img/twitter/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Support Markdown","recordIP":true,"visitor":true}},"data":{"desktop-header-typeit":"Rongbin's Blog","mobile-header-typeit":"Rongbin's Blog"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"twemoji":true,"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/valine/valine.min.css">
+    <noscript><link rel="stylesheet" href="/lib/valine/valine.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+    <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
+</body>
+
+</html>
