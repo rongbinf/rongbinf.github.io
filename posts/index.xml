@@ -1,28 +1,253 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title> - FAN Rongbin</title>
+        <title> - Rongbin&#39;s Blog</title>
         <link>https://rongbinf.github.io/posts/</link>
-        <description> | FAN Rongbin</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Sat, 13 Nov 2021 20:32:27 &#43;0800</lastBuildDate><atom:link href="https://rongbinf.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程设置</title>
-    <link>https://rongbinf.github.io/posts/%E7%94%B5%E4%BF%A1%E7%BD%91%E5%85%B3%E6%8B%A8%E5%8F%B7%E6%94%B9%E6%A1%A5%E6%8E%A5-&#43;-%E8%BD%AF%E8%B7%AF%E7%94%B1-&#43;-tp-link-%E6%98%93%E5%B1%95-mesh-%E6%9C%89%E7%BA%BF%E5%9B%9E%E7%A8%8B%E7%9A%84%E5%89%AF%E6%9C%AC/</link>
-    <pubDate>Sat, 13 Nov 2021 20:32:27 &#43;0800</pubDate><author>
+        <description> | Rongbin&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Mon, 06 Feb 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://rongbinf.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>在 Web 设计中使用系统 UI 默认字体</title>
+    <link>https://rongbinf.github.io/posts/using-default-fonts-in-web-design/</link>
+    <pubDate>Mon, 06 Feb 2017 00:00:00 &#43;0000</pubDate><author>
         <name></name>
-    </author><guid>https://rongbinf.github.io/posts/%E7%94%B5%E4%BF%A1%E7%BD%91%E5%85%B3%E6%8B%A8%E5%8F%B7%E6%94%B9%E6%A1%A5%E6%8E%A5-&#43;-%E8%BD%AF%E8%B7%AF%E7%94%B1-&#43;-tp-link-%E6%98%93%E5%B1%95-mesh-%E6%9C%89%E7%BA%BF%E5%9B%9E%E7%A8%8B%E7%9A%84%E5%89%AF%E6%9C%AC/</guid>
-    <description><![CDATA[原先的布置： 之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放]]></description>
+    </author><guid>https://rongbinf.github.io/posts/using-default-fonts-in-web-design/</guid>
+    <description><![CDATA[<p>内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。</p>
+<p>使用默认 UI 字体可以通过两种方式实现：</p>
+<h2 id="非常用方法不推荐">非常用方法（不推荐）</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">caption</span> <span class="p">{</span>
+    <span class="k">font</span><span class="p">:</span> <span class="n">caption</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>从来没见过这么用的，即使 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font" target="_blank" rel="noopener noreffer">CSS 文档</a>里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。</p>
+<p>使用这种方法会导致几个常见问题：</p>
+<ul>
+<li>在 iOS 设备和众多 Android 浏览器上无法返回正确的字体。</li>
+<li>截止至 2015 年 12 月，仍无法在 Mac OS X 上的 Firefox 上支持 “smart” properties of San Francisco。（指能在 San Francisco Text 和 San Francisco Display 中根据实际情况（大于 20px）切换，并更改字间距。）</li>
+<li>完全和系统相关控件一致，无法再自定义变更字体大小、粗细等。</li>
+</ul>
+<h2 id="常用方法">常用方法</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;en-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span>
+    <span class="c">/* 1 */</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span>
+    <span class="c">/* 2 */</span> <span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="s2">&#34;Roboto&#34;</span><span class="p">,</span> <span class="s2">&#34;Oxygen&#34;</span><span class="p">,</span> <span class="s2">&#34;Ubuntu&#34;</span><span class="p">,</span> <span class="s2">&#34;Cantarell&#34;</span><span class="p">,</span> <span class="s2">&#34;Fira Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="p">,</span>
+    <span class="c">/* 3 */</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题：</p>
+<ul>
+<li>即使这几年不会有多大改变，但每次厂商换字体时都要重新修一遍。</li>
+<li>仅列出适用于大多数用户的字体。</li>
+<li>若用户所用系统有比默认 UI 字体排序更前的字体（例如一个 Android 开发者在 Windows 上安装了 Roboto），则声明的是排序更前的字体（显示 Segoe UI 而并非 Roboto）。</li>
+<li>命名冲突（例如 Oxygen）</li>
+</ul>
+<h3 id="细节">细节</h3>
+<h4 id="-1--macos">/* 1 */ macOS</h4>
+<ul>
+<li>-apple-system 在最新版本的 macOS 上使用 San Francisco，旧版本则使用 Helvetica Neue 或 Lucida Grande。支持 “smart” properties of San Francisco。</li>
+<li>BlinkMacSystemFont 用于 macOS 上的 Chrome。
+（San Francisco 在 macOS 上 Firefox 浏览器中的字间距比 Safari 和 Chrome 都更小。）</li>
+</ul>
+<h4 id="-2--其他系统">/* 2 */ 其他系统</h4>
+<ul>
+<li>Segoe UI 面向 Windows 及 Windows Phone/Windows 10 Mobile。</li>
+<li>Roboto 面向 Android 和较新版本的 Chrome OS。</li>
+<li>Oxygen 面向 KDE。</li>
+<li>Ubuntu 还需要说吗&hellip;</li>
+<li>Cantarell 面向 GNOME。</li>
+<li>Fira Sans 面向 Firefox OS。</li>
+<li>Droid Sans 面向较旧版本的 Android。</li>
+</ul>
+<h4 id="-3--备用字体">/* 3 */ 备用字体</h4>
+<ul>
+<li>Helvetica Neue 因为这很经典（雾）。</li>
+<li>sans-serif 因为这很默认（大雾）。</li>
+</ul>
+<h3 id="包括中文字体的解决方法">包括中文字体的解决方法</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;zh-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">system</span><span class="p">,</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span><span class="s2">&#34;PingFang SC&#34;</span><span class="p">,</span> 
+<span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="s2">&#34;Microsoft YaHei UI&#34;</span><span class="p">,</span> 
+<span class="s2">&#34;Source Han Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;wenquanyi micro hei&#34;</span><span class="p">,</span> 
+<span class="s2">&#34;Hiragino Sans GB&#34;</span><span class="p">,</span> <span class="s2">&#34;Hiragino Sans GB W3&#34;</span><span class="p">,</span> 
+<span class="s2">&#34;Roboto&#34;</span><span class="p">,</span> <span class="s2">&#34;Oxygen&#34;</span><span class="p">,</span> <span class="s2">&#34;Ubuntu&#34;</span><span class="p">,</span> 
+<span class="s2">&#34;Cantarell&#34;</span><span class="p">,</span> <span class="s2">&#34;Fira Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="p">,</span> 
+<span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="细节-1">细节</h4>
+<ul>
+<li>PingFang SC 即「苹方」，面向最新 macOS。</li>
+<li>Microsoft YaHei UI 即「微软雅黑」，面向较新版本 Windows。</li>
+<li>Source Han Sans 即「思源黑体」，面向较新版本 Android 和 Chrome OS。</li>
+<li>wenquanyi micro hei 即「文泉驛微米黑」，面向较旧版本 Android 和多数 Linux。</li>
+<li>Hiragino Sans GB (W3) 即「冬青黑体」，能够给网页浏览带来较好体验。</li>
+</ul>
+<h2 id="关于苹方">关于「苹方」</h2>
+<p>「苹方」有不同的字重可供选择，可以直接使用。（没有 Bold 我很服气）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">some-element</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC ExtraLight&#34;</span><span class="p">;</span> <span class="c">/* 或者 &#34;PingFang SC Thin&#34; */</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Light&#34;</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC&#34;</span><span class="p">;</span> <span class="c">/* 或者 &#34;PingFang SC Regular&#34; */</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Medium&#34;</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Semibold&#34;</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Heavy&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>或者预先定义好，使用 <code>&quot;PingFang-SC&quot;</code> 引用，浏览器根据 <code>font-weight</code> 去选择不同的变体。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">100</span><span class="o">;</span>
+    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Thin&#34;</span><span class="o">);</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">300</span><span class="o">;</span>
+    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Light&#34;</span><span class="o">);</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">400</span><span class="o">;</span>
+    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Regular&#34;</span><span class="o">);</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">500</span><span class="o">;</span>
+    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Medium&#34;</span><span class="o">);</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">700</span><span class="o">;</span>
+    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Semibold&#34;</span><span class="o">);</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">800</span><span class="o">;</span>
+    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Heavy&#34;</span><span class="o">);</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="参考文章">参考文章</h2>
+<ol>
+<li><cite lang="en"><a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/" target="_blank" rel="noopener noreffer">Using System UI Fonts In Web Design: A Quick Practical Guide</a></cite>, Marcin Wichary, 2015</li>
+<li><a href="https://csspod.com/using-the-system-font-in-web-content/" target="_blank" rel="noopener noreffer">在 Web 内容中使用系统字体</a>，minwe，2016</li>
+</ol>
+]]></description>
 </item><item>
-    <title>Winslow Homer</title>
-    <link>https://rongbinf.github.io/posts/winslow-homer-%E6%B8%A9%E6%96%AF%E6%B4%9B%E9%9C%8D%E9%BB%98/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate><author>
+    <title>在信息爆炸后的粉尘里「断舍离」</title>
+    <link>https://rongbinf.github.io/posts/danshari/</link>
+    <pubDate>Sun, 20 Nov 2016 00:00:00 &#43;0000</pubDate><author>
         <name></name>
-    </author><guid>https://rongbinf.github.io/posts/winslow-homer-%E6%B8%A9%E6%96%AF%E6%B4%9B%E9%9C%8D%E9%BB%98/</guid>
-    <description><![CDATA[Winslow Homer 温斯洛·霍默 首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。 Prout&rsquo;s Neck, Breakers, 1883, Winslow Homer, Painting, watercolor on wove paper Source:]]></description>
-</item><item>
-    <title>建立健康的关系</title>
-    <link>https://rongbinf.github.io/posts/%E5%BB%BA%E7%AB%8B%E5%81%A5%E5%BA%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate><author>
-        <name></name>
-    </author><guid>https://rongbinf.github.io/posts/%E5%BB%BA%E7%AB%8B%E5%81%A5%E5%BA%B7%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
-    <description><![CDATA[同友人聊天，谈及河南暴雨，再到自疫情初至今仍层出不穷的呼救、求助，不约而同发问：「如果我或我身边的人也遇到这样的紧急事件，而依靠网络仍无法得]]></description>
+    </author><guid>https://rongbinf.github.io/posts/danshari/</guid>
+    <description><![CDATA[<p>结束一周的住校生活，班主任从抽屉里拿出手机一一交还，长按锁屏键，开机，别忘了把振动模式打上，因为随之而来的是一条又一条不断叠加的推送消息。</p>
+<p>我开始想：我通过互联网获取的，真的就是我想获取的吗？</p>
+<p>信息每天都在爆炸，无时无刻都在爆炸，我们通过搜索引擎、新媒体和社交媒体以及种种不同类型的网站获取信息，同时也被这些网站的态度和舆论导向如同傀儡一般支配着，即使我们或许永远不能摆脱这样的获取和支配，至少它还留有些许空间给我们进行余下的整理。</p>
+<p>「断舍离」派上了用场。这个概念不仅仅适用于家居收纳方面，同样能够帮助人们更条理性、效率性地去处理事务，尤其是在应对「信息量过载」的今天。「断绝」与现在对你毫无用处的信息源的一切关系，「舍弃」在获取信息中与实际目标不符的「饱腹信息」，「脱离」自己潜意识中对「富文本阅读模式」的认可所导致的执念。</p>
+<h1 id="断绝">「断绝」</h1>
+<p>从源头开始断绝，也就是断绝现在所说的「信息源」。它可以是一个微信公众号，是一个手机应用，是一个电视台。在一开始接触到这些信息源的时候就开始筛选，不断问自己「这个公众号里的文章是否值得我深度阅读？」，「这个应用给我推送的信息能不能帮助我获取到有效信息？」，像在超市里购物一样，控制好自己对「毫无必要的事物」存在的执念，专注于「把必须要买的东西放进购物车」这一件事，学会按一开始的目标行动，制定目标前，三思。</p>
+<h1 id="舍弃">「舍弃」</h1>
+<p>即使你认为找到了合适的「信息源」，同样不能够给予其全盘的认可。保存好自己对事物应有的独特看法，培养人们常说的「批判性思维」，从你已经经过筛选的信息中，再进行分析推理，进一步消化它，才能够获得更具有条理和结构的，更让人信服的知识。「大 V 说的话就是对的于是照单全收、这段文字看起来特别丰富，我绝对从中获取到了什么」，这种似曾相识的阅读经历，回想一下，你看过的这些信息给你带来了什么？大多时候我们只是在互联网上千奇百怪的信息中，获得了不同人的不同观点，观点的是非对错我们甚至也未曾想要去证明或者辩驳，看完了就感觉特别充实，但其实什么什么都没有，像吃了一个屁，结果肚子饱了。也就是说，当你在已经经过筛选的信息源里进行阅读时，例如在一家新闻网上看新闻，同样需要在不同的新闻栏目中找到自己所需的信息，在不同的新闻文本中分析哪些是合理有用的，从而做到「舍弃」在获取信息中与实际目标不符的「饱腹信息」。</p>
+<h1 id="脱离">「脱离」</h1>
+<p>信息爆炸时代，也是富文本时代，人们将会越来越习惯于阅读带有图片、视频、音频等新媒体介质的文本。这种阅读习惯必然会导致一些经典文学著作和理论分析文章的传播缺失，人们也同样无法进行「深层次的阅读」，只停留在对表面文字能够理解的程度即可得到满足。所有人都对这种说法表示认可，但所有人都选择了适应。由于观看图片和音视频能够给人带来愉悦感，便对「富文本阅读模式」产生一定程度上的认可，传统的「单一文字呈现」的阅读模式便被认为是枯燥无味的，人们能够细细品味一字一词的时代悄无声息地离开。我们意识到了，于是应该做出一些改变。</p>
+<p>当新的事物出现在我们面前时，我们总是想办法排斥。经过了这段「磨合期」，又像是热恋中的情侣一样久久不能分离。别人偶然间的一句话，让你和恋人果断分了手。最后又开始思考旁人是一家之言，即使不无道理，但却不一定需要去采纳。一来二去，终于明白自己是一个纠结的矛盾体，能做的只有一次又一次反思，提出新的解决方案，修修补补。</p>
+<p>信息已经在爆炸，只要不被粉尘淹没。</p>
+<blockquote>
+<p>我们所反对的碎片化阅读，指的是浮浅和无视语境的阅读。这和长短无关，和读者有没有整体性的视角有关。- <a href="https://blog.yitianshijie.net/2016/07/05/what-is-fragmented-reading/" target="_blank" rel="noopener noreffer">李如一</a></p>
+</blockquote>
+]]></description>
 </item></channel>
 </rss>
