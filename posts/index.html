@@ -36,7 +36,18 @@
             <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item active" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank">  <i class='fas fa-campground'></i></a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+            <div class="menu-inner"><a class="menu-item active" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank">  <i class='fas fa-campground'></i></a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                     <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
                         <option value="light">浅色</option>
@@ -57,7 +68,23 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank"><i class='fas fa-campground'></i></a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank"><i class='fas fa-campground'></i></a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
                 <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
                     <option value="light">浅色</option>
@@ -157,9 +184,9 @@
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
 
-<div class="pjax-assets"><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"twemoji":true};</script><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
+<div class="pjax-assets"><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"useExtendedSearch":false},"twemoji":true};</script><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
     <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
     <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
 </body>
