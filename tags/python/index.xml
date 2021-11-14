@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Python - 标签 - Rongbin&#39;s Blog</title>
-        <link>https://rongbinf.github.io/tags/python/</link>
+        <link>https://fanrongbin.com/tags/python/</link>
         <description>Python - 标签 - Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 12 Nov 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://rongbinf.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 12 Nov 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>使用 matplotlib 遇到的几个问题</title>
-    <link>https://rongbinf.github.io/posts/november-matplotlib/</link>
+    <link>https://fanrongbin.com/posts/november-matplotlib/</link>
     <pubDate>Fri, 12 Nov 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/november-matplotlib/</guid>
+    </author><guid>https://fanrongbin.com/posts/november-matplotlib/</guid>
     <description><![CDATA[<p>这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

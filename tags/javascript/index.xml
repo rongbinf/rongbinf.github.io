@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>JavaScript - 标签 - Rongbin&#39;s Blog</title>
-        <link>https://rongbinf.github.io/tags/javascript/</link>
+        <link>https://fanrongbin.com/tags/javascript/</link>
         <description>JavaScript - 标签 - Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 06 Feb 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://rongbinf.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 06 Feb 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/javascript/" rel="self" type="application/rss+xml" /><item>
     <title>在使用 Clipboard.js 中学一点 JavaScript</title>
-    <link>https://rongbinf.github.io/posts/clipboard-js-errors/</link>
+    <link>https://fanrongbin.com/posts/clipboard-js-errors/</link>
     <pubDate>Thu, 06 Feb 2020 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/clipboard-js-errors/</guid>
+    </author><guid>https://fanrongbin.com/posts/clipboard-js-errors/</guid>
     <description><![CDATA[<p>在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。
 我的组合是：Bootstrap（CSS 框架）+ Clipboard.js</p>
 <h2 id="第一次报错uncaught-typeerror-illegal-constructor">第一次报错：Uncaught TypeError: Illegal constructor</h2>

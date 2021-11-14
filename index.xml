@@ -1,16 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Rongbin&#39;s Blog</title>
-        <link>https://rongbinf.github.io/</link>
+        <link>https://fanrongbin.com/</link>
         <description>Rongbin&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 12 Nov 2021 00:00:00 &#43;0000</lastBuildDate>
-            <atom:link href="https://rongbinf.github.io/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>使用 matplotlib 遇到的几个问题</title>
-    <link>https://rongbinf.github.io/posts/november-matplotlib/</link>
+    <link>https://fanrongbin.com/posts/november-matplotlib/</link>
     <pubDate>Fri, 12 Nov 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/november-matplotlib/</guid>
+    </author><guid>https://fanrongbin.com/posts/november-matplotlib/</guid>
     <description><![CDATA[<p>这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -114,10 +114,10 @@
 ]]></description>
 </item><item>
     <title>eclipse, indices / indexes 与股价指数</title>
-    <link>https://rongbinf.github.io/posts/eclipse-indices-indexes/</link>
+    <link>https://fanrongbin.com/posts/eclipse-indices-indexes/</link>
     <pubDate>Tue, 02 Nov 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/eclipse-indices-indexes/</guid>
+    </author><guid>https://fanrongbin.com/posts/eclipse-indices-indexes/</guid>
     <description><![CDATA[<p>北京时间今天早上的一则新闻：</p>
 <blockquote>
 <p>Nov 1 (Reuters) - Wall Street&rsquo;s main <strong>indexes</strong> notched record closing highs on Monday as Tesla shares surged and the energy sector gained while investors looked ahead to a major Federal Reserve meeting later in the week.</p>
@@ -251,10 +251,10 @@
 ]]></description>
 </item><item>
     <title>Engadget 简体中文版关闭</title>
-    <link>https://rongbinf.github.io/posts/engadget-cn-closed/</link>
+    <link>https://fanrongbin.com/posts/engadget-cn-closed/</link>
     <pubDate>Tue, 02 Nov 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/engadget-cn-closed/</guid>
+    </author><guid>https://fanrongbin.com/posts/engadget-cn-closed/</guid>
     <description><![CDATA[<blockquote>
 <p>2021 年 11 月 1 日起，用户无法从中国大陆使用 Yahoo 的产品与服务。这并不影响 Yahoo 在全球其他地方的产品及服务。</p>
 <p>Yahoo 中国</p>
@@ -275,10 +275,10 @@
 ]]></description>
 </item><item>
     <title>QDII 与 QDII 基金买卖</title>
-    <link>https://rongbinf.github.io/posts/qdii/</link>
+    <link>https://fanrongbin.com/posts/qdii/</link>
     <pubDate>Sun, 31 Oct 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/qdii/</guid>
+    </author><guid>https://fanrongbin.com/posts/qdii/</guid>
     <description><![CDATA[<p>现<strong>境内向境外</strong>进行合法投资（除境外直接投资 ODI、陆股通）的三种形式：</p>
 <p></p>
 <p>而<strong>境外向境内</strong>进行投资，可分直接投资和间接投资。QFII 和 RQFII 属于外资直接投资境内证券二级市场。其包括股息及买卖价差等在内的各种资本所得，经审核后可转换为外汇汇出。实际为对外资有限度地开放境内的证券市场。</p>
@@ -329,10 +329,10 @@
 ]]></description>
 </item><item>
     <title>建立健康的关系</title>
-    <link>https://rongbinf.github.io/posts/healthy-relationship/</link>
+    <link>https://fanrongbin.com/posts/healthy-relationship/</link>
     <pubDate>Fri, 13 Aug 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/healthy-relationship/</guid>
+    </author><guid>https://fanrongbin.com/posts/healthy-relationship/</guid>
     <description><![CDATA[<p>同友人聊天，谈及河南暴雨，再到自疫情初至今仍层出不穷的呼救、求助，不约而同发问：「如果我或我身边的人也遇到这样的紧急事件，而依靠网络仍无法得到回应，该怎么办？」我有对城市生活多加警惕的意识吗？我知道发生山洪应该往哪里跑吗？我知道除了互联网之外的呼救途径吗？如果断水、断电、断网、断信号，该怎么办？</p>
 <p>我们都不觉得这是杞人忧天，也不觉得活得自在豁达与多加警惕之间有任何冲突。只是觉得生命不能被肆意对待。尤其是在这不过一年间，见证了这么多生命的离开。</p>
 <p>一开始 Apple 发布 Memoji 时，我在猜，是不是以后就真靠这么一个会动的头把「我」替代了？未来在动物森友会世界里归农，在 Gather Town 或者 Online Town 里上班。甚至想过《黑镜》里骑动感单车赚点数的生活只需要再优化一下，例如不要那么单一、再有创造力一些，会不会也是能接受的选项？</p>
@@ -358,10 +358,10 @@
 ]]></description>
 </item><item>
     <title>Winslow Homer 温斯洛·霍默</title>
-    <link>https://rongbinf.github.io/posts/winslow-homer/</link>
+    <link>https://fanrongbin.com/posts/winslow-homer/</link>
     <pubDate>Sun, 08 Aug 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/winslow-homer/</guid>
+    </author><guid>https://fanrongbin.com/posts/winslow-homer/</guid>
     <description><![CDATA[<blockquote>
 <p>发布于 <a href="https://matters.news/@laefan/%E7%9C%8B%E7%95%AB-winslow-homer-%E6%BA%AB%E6%96%AF%E6%B4%9B-%E9%9C%8D%E9%BB%98-bafyreifjxdssns3s6xkf6t7lgk6jaxjrpxg4semolhembefe4o3mi2n4ja" target="_blank" rel="noopener noreffer">Matters.news</a>。</p>
 </blockquote>
@@ -454,10 +454,10 @@
 ]]></description>
 </item><item>
     <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
-    <link>https://rongbinf.github.io/posts/network-resetting-2021/</link>
+    <link>https://fanrongbin.com/posts/network-resetting-2021/</link>
     <pubDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/network-resetting-2021/</guid>
+    </author><guid>https://fanrongbin.com/posts/network-resetting-2021/</guid>
     <description><![CDATA[<p>原先的布置：</p>
 
 <p>之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。</p>
@@ -494,10 +494,10 @@
 ]]></description>
 </item><item>
     <title>树莓派实现开机自动播放 RTSP 流视频</title>
-    <link>https://rongbinf.github.io/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
+    <link>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
     <pubDate>Wed, 06 Jan 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
+    </author><guid>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
     <description><![CDATA[<p>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。</p>
 <h2 id="获取摄像头-rtsp-流">获取摄像头 RTSP 流</h2>
 <ul>
@@ -733,10 +733,10 @@ Exec=/home/pi/test.sh
 ]]></description>
 </item><item>
     <title>《社会学的邀请》阅读笔记</title>
-    <link>https://rongbinf.github.io/posts/the-big-picture-reading-notes/</link>
+    <link>https://fanrongbin.com/posts/the-big-picture-reading-notes/</link>
     <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/the-big-picture-reading-notes/</guid>
+    </author><guid>https://fanrongbin.com/posts/the-big-picture-reading-notes/</guid>
     <description><![CDATA[<h2 id="社会学的视角">社会学的视角</h2>
 <h3 id="社会学是对个体与社会之间的关系以及差异性后果的系统研究">社会学是对个体与社会之间的关系以及差异性后果的系统研究</h3>
 <ul>
@@ -2085,10 +2085,10 @@ Exec=/home/pi/test.sh
 ]]></description>
 </item><item>
     <title>2020 年终：日期的变更，只能是期待有所改变的美好祝愿</title>
-    <link>https://rongbinf.github.io/posts/2020-the-end/</link>
+    <link>https://fanrongbin.com/posts/2020-the-end/</link>
     <pubDate>Thu, 31 Dec 2020 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/2020-the-end/</guid>
+    </author><guid>https://fanrongbin.com/posts/2020-the-end/</guid>
     <description><![CDATA[<p>谁能想到，2020 离奇地开始，平白无奇地结束了。</p>
 <p>站在最后一天回望这一年，一切充满变数。年初疫情爆发，现代人的生活与工作节奏被全盘打乱。生理和心理上的隔离、死亡、复活，个人、家庭、社会与世界的焦灼。人是群居动物，但真的让我们全都二十四小时待在家里，我们会变回动物。</p>
 <p>更怕这么一变，就从动物变不回人来。</p>

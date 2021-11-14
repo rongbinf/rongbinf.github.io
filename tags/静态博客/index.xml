@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>静态博客 - 标签 - Rongbin&#39;s Blog</title>
-        <link>https://rongbinf.github.io/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+        <link>https://fanrongbin.com/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
         <description>静态博客 - 标签 - Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 13 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://rongbinf.github.io/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 13 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
     <title>Hexo &#43; GitHub Pages &#43; Cloudflare</title>
-    <link>https://rongbinf.github.io/posts/hexo-github-pages-cloudflare/</link>
+    <link>https://fanrongbin.com/posts/hexo-github-pages-cloudflare/</link>
     <pubDate>Tue, 13 Feb 2018 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/hexo-github-pages-cloudflare/</guid>
+    </author><guid>https://fanrongbin.com/posts/hexo-github-pages-cloudflare/</guid>
     <description><![CDATA[<h1 id="系统环境配置">系统环境配置</h1>
 <h2 id="安装-nodejs">安装 Node.js</h2>
 <p>Node.js 是一种 JavaScript 的运行环境，<a href="https://nodejs.org/download/" target="_blank" rel="noopener noreffer">点击此处</a>以下载。</p>

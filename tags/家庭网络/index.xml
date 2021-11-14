@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>家庭网络 - 标签 - Rongbin&#39;s Blog</title>
-        <link>https://rongbinf.github.io/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/</link>
+        <link>https://fanrongbin.com/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/</link>
         <description>家庭网络 - 标签 - Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://rongbinf.github.io/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/" rel="self" type="application/rss+xml" /><item>
     <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
-    <link>https://rongbinf.github.io/posts/network-resetting-2021/</link>
+    <link>https://fanrongbin.com/posts/network-resetting-2021/</link>
     <pubDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/network-resetting-2021/</guid>
+    </author><guid>https://fanrongbin.com/posts/network-resetting-2021/</guid>
     <description><![CDATA[<p>原先的布置：</p>
 
 <p>之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。</p>
@@ -45,10 +45,10 @@
 ]]></description>
 </item><item>
     <title>树莓派实现开机自动播放 RTSP 流视频</title>
-    <link>https://rongbinf.github.io/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
+    <link>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
     <pubDate>Wed, 06 Jan 2021 00:00:00 &#43;0000</pubDate><author>
         <name>作者</name>
-    </author><guid>https://rongbinf.github.io/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
+    </author><guid>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
     <description><![CDATA[<p>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。</p>
 <h2 id="获取摄像头-rtsp-流">获取摄像头 RTSP 流</h2>
 <ul>
