@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">初探 Fluent Design System - Rongbin&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="初探 Fluent Design System" />
+<meta property="og:description" content="微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fanrongbin.com/glimpse-of-fluent-design/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-05-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-05-14T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="初探 Fluent Design System"/>
+<meta name="twitter:description" content="微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的"/>
+<meta name="application-name" content="Rongbin&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Rongbin&#39;s Blog">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#ffffff"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff"><link rel="canonical" href="https://fanrongbin.com/glimpse-of-fluent-design/" /><link rel="prev" href="https://fanrongbin.com/using-default-fonts-in-web-design/" /><link rel="next" href="https://fanrongbin.com/how-we-learn-reading-notes/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "初探 Fluent Design System",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/fanrongbin.com\/glimpse-of-fluent-design\/"
+        },"genre": "posts","wordcount":  1119 ,
+        "url": "https:\/\/fanrongbin.com\/glimpse-of-fluent-design\/","datePublished": "2017-05-14T00:00:00+00:00","dateModified": "2017-05-14T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "FAN Rongbin"},"author": {
+                "@type": "Person",
+                "name": "FAN Rongbin"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank">  <i class='fas fa-campground'></i></a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank"><i class='fas fa-campground'></i></a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__fadeIn">初探 Fluent Design System</h1><div class="post-meta">
+            <div class="post-meta-line">
+                </div>
+            <div class="post-meta-line">
+                    <i class="fa-fw"></i><time datetime="2017-05-14">2017-05-14</time>&nbsp;
+                <i class="fa-fw"></i>&nbsp;约 1119 字&nbsp;
+                <i class="fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;
+            </div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#宣传视频">宣传视频</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#light-光">Light (光)</a></li>
+    <li><a href="#depth-深">Depth (深)</a></li>
+    <li><a href="#motion-动">Motion (动)</a></li>
+    <li><a href="#material-材">Material (材)</a></li>
+    <li><a href="#scale-维">Scale (维)</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。</p>
+<p><img
+        class="lazyload"
+        data-src="https://i.loli.net/2018/02/02/5a7437cf5a31e.png"
+        data-srcset="https://i.loli.net/2018/02/02/5a7437cf5a31e.png, https://i.loli.net/2018/02/02/5a7437cf5a31e.png 1.5x, https://i.loli.net/2018/02/02/5a7437cf5a31e.png 2x"
+        data-sizes="auto"
+        alt="https://i.loli.net/2018/02/02/5a7437cf5a31e.png"
+        title="microsoft-fluent-design-elements.png"
+    /></p>
+<h4 id="宣传视频">宣传视频</h4>
+<p><a href="http://fluent.microsoft.com" target="_blank" rel="noopener noreffer">官方网页</a> （无法在以中文为界面语言的 Chrome 正常浏览）| <a href="http://v.youku.com/v_show/id_XMjc1ODYzMjcwMA==.html" target="_blank" rel="noopener noreffer">优酷</a> (来自 Livesino)</p>
+<h2 id="light-光">Light (光)</h2>
+<p><img
+        class="lazyload"
+        data-src="https://i.loli.net/2018/02/02/5a7437cf378f5.jpg"
+        data-srcset="https://i.loli.net/2018/02/02/5a7437cf378f5.jpg, https://i.loli.net/2018/02/02/5a7437cf378f5.jpg 1.5x, https://i.loli.net/2018/02/02/5a7437cf378f5.jpg 2x"
+        data-sizes="auto"
+        alt="https://i.loli.net/2018/02/02/5a7437cf378f5.jpg"
+        title="2040_VRG0158.jpg"
+    /></p>
+<p>via The Verge</p>
+<p>利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。</p>
+<blockquote>
+<p>Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.</p>
+</blockquote>
+<p>引用部分是微软官方的定义。</p>
+<p>光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。</p>
+<h2 id="depth-深">Depth (深)</h2>
+<p>Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。</p>
+<p><img
+        class="lazyload"
+        data-src="https://i.loli.net/2018/02/02/5a7437cf3b8ab.png"
+        data-srcset="https://i.loli.net/2018/02/02/5a7437cf3b8ab.png, https://i.loli.net/2018/02/02/5a7437cf3b8ab.png 1.5x, https://i.loli.net/2018/02/02/5a7437cf3b8ab.png 2x"
+        data-sizes="auto"
+        alt="https://i.loli.net/2018/02/02/5a7437cf3b8ab.png"
+        title="whatismaterial_3d_elevation1-1024x647.png"
+    /></p>
+<p>不同高度下(Z 值)的阴影。via Android Developers</p>
+<p>Fluent Design System 的出现就是为了打破原有仅适用于平面的设计语言 (Metro UI)，引入三维空间的设计理念便于在今后发展 VR/AR/MR，实现统一可操作的设计规范。</p>
+<blockquote>
+<p>Think about the frame that contains your information. Now break it apart, and reinvent how things relate to each other within a more layered, physical environment. This is how we’ll keep people in their flow – by giving them more space.</p>
+</blockquote>
+<p>打破原有二维框架，在层次区分度更高的物理环境（三维空间）中重新思考事物中的联系。</p>
+<h2 id="motion-动">Motion (动)</h2>
+<p><img
+        class="lazyload"
+        data-src="https://i.loli.net/2018/02/02/5a7437cf3c198.jpg"
+        data-srcset="https://i.loli.net/2018/02/02/5a7437cf3c198.jpg, https://i.loli.net/2018/02/02/5a7437cf3c198.jpg 1.5x, https://i.loli.net/2018/02/02/5a7437cf3c198.jpg 2x"
+        data-sizes="auto"
+        alt="https://i.loli.net/2018/02/02/5a7437cf3c198.jpg"
+        title="2040_VRG0159.jpg"
+    /></p>
+<p>via The Verge</p>
+<blockquote>
+<p>Think of motion design like a movie. Seamless transitions keep you focused on the story, and bring experiences to life. We can invite that feeling into our designs, leading people from one task to the next with cinematic ease.</p>
+</blockquote>
+<p>微软认为，动效的作用在于带给用户如同观看电影般的沉浸感，做到无缝过渡、由虚转实，使用户轻松、愉快地完成多项任务。在我看来，动效一词需要分真假。「真动效」无限接近生活，能够唤起用户对物理环境下该操作引起动效的感知，因此也可叫「拟物动效」。「假动效」即对二维动画进行空间上的拓展，主要作用是提示用户完成了某一操作，并且能通过细节优化给予愉悦感。</p>
+<h2 id="material-材">Material (材)</h2>
+<p><img
+        class="lazyload"
+        data-src="https://i.loli.net/2018/02/02/5a7437cee7327.jpg"
+        data-srcset="https://i.loli.net/2018/02/02/5a7437cee7327.jpg, https://i.loli.net/2018/02/02/5a7437cee7327.jpg 1.5x, https://i.loli.net/2018/02/02/5a7437cee7327.jpg 2x"
+        data-sizes="auto"
+        alt="https://i.loli.net/2018/02/02/5a7437cee7327.jpg"
+        title="2040_VRG0160.jpg"
+    /></p>
+<p>via The Verge</p>
+<blockquote>
+<p>The things that surround us in the real world are sensory and invigorating. They bend, stretch, bounce, shatter, and glide. Those material qualities translate to digital environments, making people want to reach out and touch our designs.</p>
+</blockquote>
+<p>真实世界中存在着「感知」和「活力」。在数字环境中运用恰当的材料，带给用户想去触碰的想法，增加了操作的可能性，是和 Light 一样体现着以自然为设计基础的理念。</p>
+<h2 id="scale-维">Scale (维)</h2>
+<p><img
+        class="lazyload"
+        data-src="https://i.loli.net/2018/02/02/5a7437cef3312.jpg"
+        data-srcset="https://i.loli.net/2018/02/02/5a7437cef3312.jpg, https://i.loli.net/2018/02/02/5a7437cef3312.jpg 1.5x, https://i.loli.net/2018/02/02/5a7437cef3312.jpg 2x"
+        data-sizes="auto"
+        alt="https://i.loli.net/2018/02/02/5a7437cef3312.jpg"
+        title="2040_VRG0161.jpg"
+    /></p>
+<p>via The Verge</p>
+<blockquote>
+<p>The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.</p>
+</blockquote>
+<p>之所以把 Scale 译作「维」，是因为这一点集中体现了 Fluent Design System 最终的作用——实现从零维到三维的，多种场景适用的设计规范，利用设备提供并拓展面向多维度的体验。</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/using-default-fonts-in-web-design/" class="prev" rel="prev" title="在 Web 设计中使用系统 UI 默认字体"><i class="fas fa-angle-left fa-fw"></i>在 Web 设计中使用系统 UI 默认字体</a>
+            <a href="/how-we-learn-reading-notes/" class="next" rel="next" title="《如何学习》阅读笔记：可行的学习方法总结">《如何学习》阅读笔记：可行的学习方法总结<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="telegram-comments" class="comment">
+                <script type="text/javascript" src="https://comments.app/js/widget.js?3" defer="" data-comments-app-website="GYI4GPm3" data-limit="5" data-colorful="1"></script>
+            </div>
+            <noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://comments.app/">Telegram Comments</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><a href="https://gohugo.io/">Hugo</a> + <a href="https://github.com/HEIGE-PCloud/DoIt">DoIt</a> + <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></div><div class="footer-line"></div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-7EJXLY66RT', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-7EJXLY66RT" async></script></div>
+
+<div class="pjax-assets"><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"useExtendedSearch":false},"twemoji":true};</script><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+    <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
+</body>
+
+</html>
