@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 100 100"><path d="M18.02 21.95L33.02 21.95L33.02 28.85L26.02 28.85L26.02 71.10L33.02 71.10L33.02 78.05L18.02 78.05L18.02 21.95ZM41.73 59.70L49.83 59.70L44.27 74.05L38.82 74.05L41.73 59.70ZM81.97 21.95L81.97 78.05L66.97 78.05L66.97 71.10L73.97 71.10L73.97 28.85L66.97 28.85L66.97 21.95L81.97 21.95Z" fill="#000000"></path></svg>
+<svg id="组_1" data-name="组 1" xmlns="http://www.w3.org/2000/svg" width="1036" height="867" viewBox="0 0 1036 867">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 951.125px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        text-anchor: middle;
+        font-family: "Helvetica Neue";
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        font-size: 465.237px;
+      }
+
+      .cls-3 {
+        font-size: 300.224px;
+      }
+    </style>
+  </defs>
+  <text id="_" data-name="[" class="cls-1" x="94.511" y="694.724">[</text>
+  <text id="_2" data-name="," class="cls-2" transform="translate(457.979 621.674) scale(3.17)">,</text>
+  <text id="_3" data-name="]" class="cls-3" transform="translate(941.483 695.066) scale(3.168)">]</text>
+</svg>
