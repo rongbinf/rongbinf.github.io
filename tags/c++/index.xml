@@ -1,0 +1,250 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>C&#43;&#43; - 标签 - Rongbin&#39;s Blog</title>
+        <link>https://fanrongbin.com/tags/c&#43;&#43;/</link>
+        <description>C&#43;&#43; - 标签 - Rongbin&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
+            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Mon, 29 Nov 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43; 中的拷贝构造函数：浅拷贝、深拷贝</title>
+    <link>https://fanrongbin.com/cpp-copy-constructor/</link>
+    <pubDate>Mon, 29 Nov 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>FAN Rongbin</name>
+    </author><guid>https://fanrongbin.com/cpp-copy-constructor/</guid>
+    <description><![CDATA[<h2 id="什么时候会调用拷贝构造函数">什么时候会调用拷贝构造函数</h2>
+<ul>
+<li>一个对象以<strong>值传递</strong>的方式<strong>传入函数体</strong></li>
+<li>一个对象以<strong>值传递</strong>的方式<strong>从函数返回</strong></li>
+<li>一个对象<strong>通过另一个对象</strong>以进行<strong>初始化</strong></li>
+</ul>
+<h2 id="默认拷贝构造函数浅拷贝深拷贝">默认拷贝构造函数：浅拷贝/深拷贝</h2>
+<p>即：将被拷贝对象的数据成员的值一一赋值给新创建的对象</p>
+<ul>
+<li>如果数据成员中有指针成员
+<ul>
+<li>则<strong>新对象的指针所指向的地址</strong>与<strong>被拷贝对象的指针所指向的地址</strong>相同</li>
+<li>则析构 delete 对象时会重复 delete 两次同一个内存空间而出错</li>
+</ul>
+</li>
+</ul>
+<h3 id="实例">实例</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">Rect</span><span class="p">{</span>
+<span class="k">private</span><span class="o">:</span>
+		<span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>     <span class="c1">// 一指针成员
+</span><span class="c1"></span><span class="k">public</span><span class="o">:</span>
+    <span class="n">Rect</span><span class="p">(){</span>      <span class="c1">// 构造函数，p指向堆中分配的一内存
+</span><span class="c1"></span>        <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span> <span class="c1">//new动态分配
+</span><span class="c1"></span>    <span class="p">}</span>
+    <span class="o">~</span><span class="n">Rect</span><span class="p">(){</span>     <span class="c1">// 析构函数，释放动态分配的内存
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">p</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+            <span class="k">delete</span> <span class="n">p</span><span class="p">;</span> <span class="c1">//delete释放
+</span><span class="c1"></span>        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">Rect</span> <span class="n">rect1</span><span class="p">;</span>
+    <span class="n">Rect</span> <span class="n">rect2</span><span class="p">(</span><span class="n">rect1</span><span class="p">);</span>   <span class="c1">// 通过复制对象来初始化rect2
+</span><span class="c1"></span>		<span class="c1">// 也即： Rect rect2 = rect1;
+</span><span class="c1"></span>				<span class="c1">// 浅拷贝，将成员的值进行拷贝 rect2.p = rect1.p （地址=地址）
+</span><span class="c1"></span>
+		<span class="c1">// 会出现错误
+</span><span class="c1"></span>				<span class="c1">// 在delete时候既要delete rect2.p指向的空间 又要delete rect1.p指向的内存
+</span><span class="c1"></span>				<span class="c1">// 但它们指向同一个内存：同一个内存被释放两次
+</span><span class="c1"></span>
+		<span class="c1">// 同时还造成另外两个错误：
+</span><span class="c1"></span>				<span class="c1">// rect2.p 在初始化时新建的p所指向的内存没被释放（因为构造函数新建之后，又直接值传递换了地址），造成内存泄漏
+</span><span class="c1"></span>				<span class="c1">// rect2.p（指针） 和 rect1.p（指针）指向同一块内存（同一个地址）任何一方变动都会影响另一方
+</span><span class="c1"></span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="自行新建拷贝构造函数并使用深拷贝">自行新建拷贝构造函数：并使用深拷贝</h2>
+<h3 id="实例-1">实例</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">Rect</span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>     <span class="c1">// 一指针成员
+</span><span class="c1"></span>    <span class="n">Rect</span><span class="p">(){</span>     <span class="c1">// 构造函数，p指向堆中分配的一内存
+</span><span class="c1"></span>        <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">Rect</span><span class="p">(</span><span class="k">const</span> <span class="n">Rect</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">){</span> <span class="c1">// 自行新建拷贝构造函数
+</span><span class="c1"></span>        <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span>     <span class="c1">// 为新对象重新动态分配内存
+</span><span class="c1"></span>        <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">*</span><span class="n">r</span><span class="p">.</span><span class="n">p</span><span class="p">;</span>
+                <span class="c1">// 或带括号 *p = *(r.p);
+</span><span class="c1"></span>    <span class="p">}</span>
+    <span class="o">~</span><span class="n">Rect</span><span class="p">(){</span>    <span class="c1">// 析构函数，释放动态分配的内存
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">p</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+            <span class="k">delete</span> <span class="n">p</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">Rect</span> <span class="n">rect1</span><span class="p">;</span>
+    <span class="n">Rect</span> <span class="n">rect2</span><span class="p">(</span><span class="n">rect1</span><span class="p">);</span>   <span class="c1">// 通过复制对象来初始化rect2
+</span><span class="c1"></span>												 <span class="c1">// 也即： Rect rect2 = rect1;
+</span><span class="c1"></span>                <span class="c1">// 深拷贝，创建新的p以及其所指向的空间，然后把值赋过去 *r.p = *rect1.p; 然后 *rect2.p = *r.p;
+</span><span class="c1"></span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>不妨输出地址比对一下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">Rect</span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>     <span class="c1">// 一指针成员
+</span><span class="c1"></span>    <span class="n">Rect</span><span class="p">(){</span>     <span class="c1">// 构造函数，p指向堆中分配的一内存
+</span><span class="c1"></span>        <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;start new: &#34;</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">Rect</span><span class="p">(</span><span class="k">const</span> <span class="n">Rect</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">){</span> <span class="c1">// 自行新建拷贝构造函数
+</span><span class="c1"></span>        <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span>     <span class="c1">// 为新对象重新动态分配内存
+</span><span class="c1"></span>        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;copy: &#34;</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+        <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">*</span><span class="n">r</span><span class="p">.</span><span class="n">p</span><span class="p">;</span>
+                <span class="c1">// 或带括号 *p = *(r.p);
+</span><span class="c1"></span>    <span class="p">}</span>
+    <span class="o">~</span><span class="n">Rect</span><span class="p">(){</span>    <span class="c1">// 析构函数，释放动态分配的内存
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">p</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+            <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;de: &#34;</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+            <span class="k">delete</span> <span class="n">p</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">Rect</span> <span class="n">rect1</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">rect1</span><span class="p">.</span><span class="n">p</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">Rect</span> <span class="n">rect2</span><span class="p">(</span><span class="n">rect1</span><span class="p">);</span>   <span class="c1">// 通过复制对象来初始化rect2
+</span><span class="c1"></span>												 <span class="c1">// 也即： Rect rect2 = rect1;
+</span><span class="c1"></span>    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">rect2</span><span class="p">.</span><span class="n">p</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+                <span class="c1">// 深拷贝，创建新的p以及其所指向的空间，然后把值赋过去 *r.p = *rect1.p; 然后 *rect2.p = *r.p;
+</span><span class="c1"></span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// output:
+</span><span class="c1"></span><span class="n">start</span> <span class="k">new</span><span class="o">:</span> <span class="mh">0x10582d930</span>
+<span class="mh">0x10582d930</span>
+<span class="nl">copy</span><span class="p">:</span> <span class="mh">0x10582f220</span>
+<span class="mh">0x10582f220</span>
+<span class="nl">de</span><span class="p">:</span> <span class="mh">0x10582f220</span>
+<span class="nl">de</span><span class="p">:</span> <span class="mh">0x10582d930</span>
+<span class="n">Program</span> <span class="n">ended</span> <span class="n">with</span> <span class="n">exit</span> <span class="nl">code</span><span class="p">:</span> <span class="mi">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://blog.csdn.net/xunye_dream/article/details/77547438" target="_blank" rel="noopener noreffer">C语言中的位拷贝与值拷贝浅谈</a></li>
+<li><a href="https://blog.csdn.net/lwbeyond/article/details/6202256" target="_blank" rel="noopener noreffer">C++拷贝构造函数详解</a></li>
+</ul>
+]]></description>
+</item></channel>
+</rss>
