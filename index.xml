@@ -189,15 +189,6 @@
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">Rect</span><span class="p">{</span>
@@ -231,15 +222,27 @@
 </span><span class="c1"></span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-
-<span class="c1">// output:
-</span><span class="c1"></span><span class="n">start</span> <span class="k">new</span><span class="o">:</span> <span class="mh">0x10582d930</span>
-<span class="mh">0x10582d930</span>
-<span class="nl">copy</span><span class="p">:</span> <span class="mh">0x10582f220</span>
-<span class="mh">0x10582f220</span>
-<span class="nl">de</span><span class="p">:</span> <span class="mh">0x10582f220</span>
-<span class="nl">de</span><span class="p">:</span> <span class="mh">0x10582d930</span>
-<span class="n">Program</span> <span class="n">ended</span> <span class="n">with</span> <span class="n">exit</span> <span class="nl">code</span><span class="p">:</span> <span class="mi">0</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>输出得到：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">start new: 0x10582d930
+0x10582d930
+copy: 0x10582f220
+0x10582f220
+de: 0x10582f220
+de: 0x10582d930
+Program ended with <span class="nb">exit</span> code: <span class="m">0</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="参考">参考</h2>
