@@ -2,9 +2,15 @@
     {
         "title": "关于",
         "uri": "about",
-        "content": "2014                         WordPress       ftp                                                                                          WordPress    Ghost   Typecho       Medium     Github Pages                                                                                                                                                                                          Tiddlywiki                                               Newsletter                                              CC BY NC 4 0          4 0               Creative Commons                                        blog posts photos licensed Creative Commons Attribution NonCommercial 4 0 International License CC BY NC 4 0   Creative Commons nonprofit organisation dedicated building globally accessible public commons knowledge culture",
+        "content": "2014                         WordPress       ftp                                                                                          WordPress    Ghost   Typecho       Medium     Github Pages                                                                                                                                                                                          Tiddlywiki                                                                   CC BY NC 4 0          4 0               Creative Commons                                        blog posts photos licensed Creative Commons Attribution NonCommercial 4 0 International License CC BY NC 4 0   Creative Commons nonprofit organisation dedicated building globally accessible public commons knowledge culture",
         "objectID": "about",
         "comment": false
+    },
+    {
+        "title": "留言板 Comment board",
+        "uri": "comment-board",
+        "content": "",
+        "objectID": "comment-board"
     },
     {
         "title": "2020 年终：日期的变更，只能是期待有所改变的美好祝愿",
@@ -95,7 +101,7 @@
     {
         "title": "Engadget 简体中文版关闭",
         "uri": "posts/engadget-cn-closed",
-        "content": "2021   11   1                Yahoo              Yahoo                    Yahoo       Yahoo Weather                 Engadget               Engadget             2005   10   1                                                     Flipboard    Zaker        Engadget                                   Verge TechCrunch    LiveSino                              Telegram                    YouTube     Dave2D TESTV                                          Engadget        Richard Lai Engadget  Engadget",
+        "content": "2021   11   1                Yahoo              Yahoo                    Yahoo       Yahoo Weather                 Engadget               Engadget             2005   10   1                           Flipboard    Zaker        Engadget                                   Verge TechCrunch    LiveSino                                                       Telegram                    YouTube     Dave2D TESTV                                          Engadget        Richard Lai Engadget  Engadget",
         "objectID": "posts/engadget-cn-closed",
         "date": "2021-11-02T00:00:00.000Z",
         "tags": null
