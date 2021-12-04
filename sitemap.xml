@@ -2,10 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://fanrongbin.com/posts/</loc><lastmod>2021-12-04T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://fanrongbin.com/</loc><lastmod>2021-12-04T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://fanrongbin.com/apple-media-service-marketing/</loc><lastmod>2021-12-04T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://fanrongbin.com/tags/c&#43;&#43;/</loc><lastmod>2021-11-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://fanrongbin.com/cpp-copy-constructor/</loc><lastmod>2021-11-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://fanrongbin.com/posts/</loc><lastmod>2021-11-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://fanrongbin.com/</loc><lastmod>2021-11-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://fanrongbin.com/tags/</loc><lastmod>2021-11-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://fanrongbin.com/tags/python/</loc><lastmod>2021-11-12T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://fanrongbin.com/november-matplotlib/</loc><lastmod>2021-11-12T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
