@@ -21,6 +21,7 @@
 <ul>
 <li>如果数据成员中有指针成员
 <ul>
+<li><strong>浅拷贝只是增加了一个指针指向已经存在的内存</strong></li>
 <li>则<strong>新对象的指针所指向的地址</strong>与<strong>被拷贝对象的指针所指向的地址</strong>相同</li>
 <li>则析构 delete 对象时会重复 delete 两次同一个内存空间而出错</li>
 </ul>
@@ -89,6 +90,7 @@
 <li><code>rect2.p</code>（指针） 和 <code>rect1.p</code>（指针）指向同一块内存（同一个地址），任何一方的变动都会影响另一方</li>
 </ul>
 <h2 id="自行新建拷贝构造函数并使用深拷贝">自行新建拷贝构造函数：并使用深拷贝</h2>
+<p>新增加一个指针，并申请一个新的内存。新指针指向新内存。</p>
 <h3 id="实例-1">实例</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
