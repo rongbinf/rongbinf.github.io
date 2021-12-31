@@ -4,7 +4,195 @@
         <link>https://fanrongbin.com/tags/c&#43;&#43;/</link>
         <description>C&#43;&#43; - 标签 - Rongbin&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Mon, 29 Nov 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Fri, 31 Dec 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
+    <link>https://fanrongbin.com/cpp-template-friend/</link>
+    <pubDate>Fri, 31 Dec 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>FAN Rongbin</name>
+    </author><guid>https://fanrongbin.com/cpp-template-friend/</guid>
+    <description><![CDATA[<p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
+<h2 id="方法-1提前声明并使用--确认">方法 1：提前声明并使用 &lt;&gt; 确认</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">//需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数
+</span><span class="c1"></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">complex</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="o">&gt;</span> <span class="n">ostream</span> <span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">newout</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">complex</span><span class="p">{</span> <span class="c1">//以复数类为例
+</span><span class="c1"></span>  <span class="k">private</span><span class="o">:</span>
+  	<span class="n">A</span> <span class="n">real</span><span class="p">,</span> <span class="n">image</span><span class="p">;</span>
+	<span class="k">public</span><span class="o">:</span>
+		<span class="n">complex</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">,</span> <span class="n">A</span> <span class="n">b</span><span class="p">)</span><span class="o">:</span><span class="n">real</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">image</span><span class="p">(</span><span class="n">b</span><span class="p">){</span>
+		<span class="p">}</span>
+
+<span class="c1">//在运算符 &lt;&lt; 后加入 &lt;&gt; 以帮助编译器进一步确定该友元函数为模板函数
+</span><span class="c1"></span>		<span class="k">friend</span> <span class="n">ostream</span> <span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">newout</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">);</span> 
+<span class="p">};</span> 
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="o">&gt;</span>
+<span class="n">ostream</span> <span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">newout</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">){</span>
+	<span class="n">newout</span><span class="o">&lt;&lt;</span><span class="s">&#34;(&#34;</span><span class="o">&lt;&lt;</span><span class="n">m</span><span class="p">.</span><span class="n">real</span><span class="o">&lt;&lt;</span><span class="s">&#34;,&#34;</span><span class="o">&lt;&lt;</span><span class="n">m</span><span class="p">.</span><span class="n">image</span><span class="o">&lt;&lt;</span><span class="s">&#34;)&#34;</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">newout</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">complex</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span> 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="方法-2在声明友元函数的同时定义友元函数">方法 2：在声明友元函数的同时定义友元函数</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">complex</span><span class="p">{</span>
+  <span class="k">private</span><span class="o">:</span>
+  	<span class="n">A</span> <span class="n">real</span><span class="p">,</span> <span class="n">image</span><span class="p">;</span>
+	<span class="k">public</span><span class="o">:</span>
+		<span class="n">complex</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">,</span> <span class="n">A</span> <span class="n">b</span><span class="p">)</span><span class="o">:</span><span class="n">real</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">image</span><span class="p">(</span><span class="n">b</span><span class="p">){</span>
+		<span class="p">}</span>
+
+<span class="c1">//在声明友元函数的同时定义友元函数
+</span><span class="c1"></span>		<span class="k">friend</span> <span class="n">ostream</span> <span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">newout</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">){</span>
+			<span class="n">newout</span><span class="o">&lt;&lt;</span><span class="s">&#34;(&#34;</span><span class="o">&lt;&lt;</span><span class="n">m</span><span class="p">.</span><span class="n">real</span><span class="o">&lt;&lt;</span><span class="s">&#34;,&#34;</span><span class="o">&lt;&lt;</span><span class="n">m</span><span class="p">.</span><span class="n">image</span><span class="o">&lt;&lt;</span><span class="s">&#34;)&#34;</span><span class="p">;</span>
+			<span class="k">return</span> <span class="n">newout</span><span class="p">;</span>
+		<span class="p">}</span>
+<span class="p">};</span> 
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">complex</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span> 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="如果可以不使用友元函数">如果可以不使用友元函数</h2>
+<p>如果模板类中的成员为公有，则完全不需要在模板类中声明友元。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">complex</span><span class="p">{</span>
+	<span class="k">public</span><span class="o">:</span>
+		<span class="n">A</span> <span class="n">real</span><span class="p">,</span> <span class="n">image</span><span class="p">;</span> <span class="c1">//成员为公有
+</span><span class="c1"></span>		<span class="n">complex</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">,</span> <span class="n">A</span> <span class="n">b</span><span class="p">)</span><span class="o">:</span><span class="n">real</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">image</span><span class="p">(</span><span class="n">b</span><span class="p">){</span>
+		<span class="p">}</span>
+<span class="c1">//		friend ostream &amp; operator &lt;&lt; &lt;&gt;(ostream &amp;newout, const complex&lt;A&gt; &amp;m);
+</span><span class="c1">//友元在此是不必要的
+</span><span class="c1"></span><span class="p">};</span> 
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="o">&gt;</span>
+<span class="n">ostream</span> <span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">newout</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">){</span>
+	<span class="n">newout</span><span class="o">&lt;&lt;</span><span class="s">&#34;(&#34;</span><span class="o">&lt;&lt;</span><span class="n">m</span><span class="p">.</span><span class="n">real</span><span class="o">&lt;&lt;</span><span class="s">&#34;,&#34;</span><span class="o">&lt;&lt;</span><span class="n">m</span><span class="p">.</span><span class="n">image</span><span class="o">&lt;&lt;</span><span class="s">&#34;)&#34;</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">newout</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">complex</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span> 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://isocpp.org/wiki/faq/templates#template-friends" target="_blank" rel="noopener noreffer">Why do I get linker errors when I use template friends? - Standard C++</a></li>
+</ul>
+]]></description>
+</item><item>
     <title>C&#43;&#43; 中的拷贝构造函数：浅拷贝、深拷贝</title>
     <link>https://fanrongbin.com/cpp-copy-constructor/</link>
     <pubDate>Mon, 29 Nov 2021 00:00:00 &#43;0000</pubDate><author>

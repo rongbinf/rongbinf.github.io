@@ -102,6 +102,16 @@
         ]
     },
     {
+        "Title": "C++ 模版类重载流输入输出运算符",
+        "uri": "posts/cpp-template-friend",
+        "content": "C                                                                        1             include using namespace std                                      template class complex  template ostream   operator  m   template class complex           private  real  image  public  complex A a  b  real a  image b                                  friend ostream   operator  ostream  newout  const complex  m      template ostream   operator  m   newout a 1 2   cout using namespace std  template class complex  private  real  image  public  complex A a  b  real a  image b                        friend ostream   operator  m   newout a 1 2   cout using namespace std  template class complex  public  real  image          complex A a  b  real a  image b        friend ostream   operator  ostream  newout  const complex  m                  template ostream   operator  m   newout a 1 2   cout",
+        "objectID": "posts/cpp-template-friend",
+        "Date": "2021-12-31T00:00:00.000Z",
+        "Tags": [
+            "C++"
+        ]
+    },
+    {
         "title": "在信息爆炸后的粉尘里「断舍离」",
         "uri": "posts/danshari",
         "content": "V",
