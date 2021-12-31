@@ -4,10 +4,10 @@
         <link>https://fanrongbin.com/posts/</link>
         <description>所有文章 | Rongbin&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Fri, 31 Dec 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</lastBuildDate><atom:link href="https://fanrongbin.com/posts/" rel="self" type="application/rss+xml" /><item>
     <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
     <link>https://fanrongbin.com/cpp-template-friend/</link>
-    <pubDate>Fri, 31 Dec 2021 00:00:00 &#43;0000</pubDate><author>
+    <pubDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</pubDate><author>
         <name>FAN Rongbin</name>
     </author><guid>https://fanrongbin.com/cpp-template-friend/</guid>
     <description><![CDATA[<p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
@@ -111,8 +111,8 @@
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="o">&gt;</span>
 <span class="k">class</span> <span class="nc">complex</span><span class="p">{</span>
-  <span class="k">private</span><span class="o">:</span>
-  	<span class="n">A</span> <span class="n">real</span><span class="p">,</span> <span class="n">image</span><span class="p">;</span>
+	<span class="k">private</span><span class="o">:</span>
+		<span class="n">A</span> <span class="n">real</span><span class="p">,</span> <span class="n">image</span><span class="p">;</span>
 	<span class="k">public</span><span class="o">:</span>
 		<span class="n">complex</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">,</span> <span class="n">A</span> <span class="n">b</span><span class="p">)</span><span class="o">:</span><span class="n">real</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">image</span><span class="p">(</span><span class="n">b</span><span class="p">){</span>
 		<span class="p">}</span>
@@ -195,14 +195,14 @@
 </item><item>
     <title>昨天一直是今天，就像今天一直是明天</title>
     <link>https://fanrongbin.com/yesterday-is-today-is-tomorrow/</link>
-    <pubDate>Fri, 31 Dec 2021 00:00:00 &#43;0000</pubDate><author>
+    <pubDate>Fri, 31 Dec 2021 20:51:59 &#43;0800</pubDate><author>
         <name>FAN Rongbin</name>
     </author><guid>https://fanrongbin.com/yesterday-is-today-is-tomorrow/</guid>
-    <description><![CDATA[<p>我想了很久，因为两年过得像一年。翻了翻手机相册，还是放弃了理顺今年“所作所为”的念头，意义不大。明天开始的新一年，似乎也将和过去的十二个月，在巨大的混凝土运送车里保持匀速搅拌，作为一大团不至于凝固的泥巴。</p>
+    <description><![CDATA[<p>我想了很久，因为两年过得像一年。翻了翻手机相册，还是放弃了理顺今年「所作所为」的念头，意义不大。明天开始的新一年，似乎也将和过去的十二个月，在巨大的混凝土运送车里保持匀速搅拌，作为一大团不至于凝固的泥巴。</p>
 <p>已经对新冠脱敏，指不论是日增或新变种的消息，或者突然的封校封城，在生理和心理上不为所动。其实也不仅是疫情，整体上对很多事物都看开了很多，离开了很多过去被动或主动设下的困境，或者说从源头开始避免。现在常是这样的状态，在不相调和时，我先选择离开，停止消耗，这样才能更好地拥抱自己。</p>
 <p>但这种改变的确是懦弱的、畏怯的，是不能也不值得美化的。总不是束手无策的，必须承认。</p>
 <p>很恍然，对明年原来没有什么特别的期待，这样的一个好处是对目标和进度的把控拉得更近了，就像在触控板上将拇指和食指收拢再分开。还有是继续向内走。我觉得这个不仅仅是我，也是这两年之后许多人或多或少都会有的行动，面对自身的时间多了，出现从复杂往简单调转的诉求。另一个好处是停止对自己预期看涨，幻想多头，这个应该是影响最大的。</p>
-<p>困扰我许久的那种感受，在接连读了项飚老师的访谈录《把自己作为方法》以及《正午故事 1》中另一篇对谈后有了新的把握，“悬浮”与“错置”，都在慢慢展开的脱敏中渐渐从裹挟里剥离。还有就是大概保持着每三个月跟家人吵一次架的频率，把话讲开了。</p>
+<p>困扰我许久的那种感受，在接连读了项飚老师的访谈录《把自己作为方法》以及《正午故事 1》中另一篇对谈后有了新的把握，「悬浮」与「错置」，都在慢慢展开的脱敏中渐渐从裹挟里剥离。还有就是大概保持着每三个月跟家人吵一次架的频率，把话讲开了。</p>
 <p>这么看来，今年的收获还挺大。</p>
 <p>今年听到比较有启发的播客节目有《新闻实验室》关于非虚构写作的第 17 期（《正午故事》郭玉洁，端传媒张洁平）和第 19 期（《正面连接》梁鸣），以及《晚风说》智堡 Mikko 和 Yachak 来的两期。无意中发现的《暮酒朝谈》，也给我很多帮助。</p>
 <p>2021 年 12 月 31 日</p>

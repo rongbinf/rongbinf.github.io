@@ -4,10 +4,10 @@
         <link>https://fanrongbin.com/tags/c&#43;&#43;/</link>
         <description>C&#43;&#43; - 标签 - Rongbin&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Fri, 31 Dec 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</lastBuildDate><atom:link href="https://fanrongbin.com/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
     <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
     <link>https://fanrongbin.com/cpp-template-friend/</link>
-    <pubDate>Fri, 31 Dec 2021 00:00:00 &#43;0000</pubDate><author>
+    <pubDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</pubDate><author>
         <name>FAN Rongbin</name>
     </author><guid>https://fanrongbin.com/cpp-template-friend/</guid>
     <description><![CDATA[<p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
@@ -111,8 +111,8 @@
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="o">&gt;</span>
 <span class="k">class</span> <span class="nc">complex</span><span class="p">{</span>
-  <span class="k">private</span><span class="o">:</span>
-  	<span class="n">A</span> <span class="n">real</span><span class="p">,</span> <span class="n">image</span><span class="p">;</span>
+	<span class="k">private</span><span class="o">:</span>
+		<span class="n">A</span> <span class="n">real</span><span class="p">,</span> <span class="n">image</span><span class="p">;</span>
 	<span class="k">public</span><span class="o">:</span>
 		<span class="n">complex</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">,</span> <span class="n">A</span> <span class="n">b</span><span class="p">)</span><span class="o">:</span><span class="n">real</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">image</span><span class="p">(</span><span class="n">b</span><span class="p">){</span>
 		<span class="p">}</span>
