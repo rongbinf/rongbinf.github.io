@@ -187,7 +187,7 @@
 <span class="p">}</span> 
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="参考">参考</h2>
+</div><h2 id="参考文章">参考文章</h2>
 <ul>
 <li><a href="https://isocpp.org/wiki/faq/templates#template-friends" target="_blank" rel="noopener noreffer">Why do I get linker errors when I use template friends? - Standard C++</a></li>
 </ul>
