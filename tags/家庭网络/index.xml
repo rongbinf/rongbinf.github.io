@@ -23,9 +23,9 @@
 <li>丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。</li>
 </ul>
 <h2 id="电信网关拨号改桥接">电信网关拨号改桥接</h2>
-<p>所用网关型号为 HS8145C，通过超级管理员帐户进入后台，用户名为 <code>telecomadmin</code>。一说有通用密码 <code>nE7jA%5m</code>，我也是使用该密码进入的。</p>
-<p>如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 <code>http://192.168.1.1/backupsettings.conf</code>，下载 <code>backupsettings.conf</code>。搜索 <code>password</code> 获得经 base64 加密过的密码，使用在线工具解密即可，如 <a href="https://md5hashing.net/" target="_blank" rel="noopener noreffer">md5hashing</a>。</p>
-<p>进入菜单「网络」选项，在上网业务中将 <code>3_INTERNET_B_VID_41</code> 项连接方式改为桥接即可。</p>
+<p>所用网关型号为 HS8145C，通过<strong>超级管理员帐户</strong>进入后台，用户名为 <code>telecomadmin</code>。一说有通用密码 <code>nE7jA%5m</code>，我也是使用该密码进入的。</p>
+<p>如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 <code>http://192.168.1.1/backupsettings.conf</code>，下载 <code>backupsettings.conf</code>。搜索 <code>password</code> 获得经 base64 加密过的密码，可尝试使用在线工具解密，如 <a href="https://md5hashing.net/" target="_blank" rel="noopener noreffer">md5hashing</a>。</p>
+<p>进入菜单「网络」选项，在上网业务中将 <code>3_INTERNET_B_VID_41</code> 项连接方式改为<strong>桥接</strong>即可。</p>
 <p>相应的，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。</p>
 <h2 id="tp-link-易展有线回程">TP-LINK 易展有线回程</h2>
 <p>有几个需要注意的：</p>
@@ -60,7 +60,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">rtsp://<sup>username]:[password]@[ip]:[port</sup>/<sub>codec</sub>/<sup>channel</sup>/<sub>subtype</sub>/av_stream
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
 </code></pre></td></tr></table>
 </div>
 </div><p>具体参数（如视频编码）自行调整。</p>
