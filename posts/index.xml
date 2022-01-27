@@ -4,7 +4,104 @@
         <link>https://fanrongbin.com/posts/</link>
         <description>所有文章 | Rongbin&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</lastBuildDate><atom:link href="https://fanrongbin.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Thu, 27 Jan 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>半导体制作工序 &amp; 行业常见软件模块梳理</title>
+    <link>https://fanrongbin.com/semiconductor-procedure/</link>
+    <pubDate>Thu, 27 Jan 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>FAN Rongbin</name>
+    </author><guid>https://fanrongbin.com/semiconductor-procedure/</guid>
+    <description><![CDATA[<p>由于涉及英文简称较多，以及行业常用英文单词指代，此博文会在初次提及某简称或某单词时标明中文。</p>
+<h2 id="半导体制作工序">半导体制作工序</h2>
+<div class="mermaid" id="id-1"></div>
+<p>英文对照请见<a href="#%e8%8b%b1%e6%96%87%e5%af%b9%e7%85%a7" rel="">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/" target="_blank" rel="noopener noreffer">按此访问</a>东京威力科创制作的工序介绍。</p>
+<p>半导体制作工序可分为前、后两道。前道包括 <code>1.晶圆加工</code> -&gt;<code> 7.测试</code>，后道包括<code>8.封装</code>及后期测试、成品入库。</p>
+<p>常用英文名词：</p>
+<ul>
+<li>wafer：晶圆，硅晶片。分有 6、8、12 英寸。</li>
+<li>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</li>
+<li>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</li>
+<li>cassette：晶盒。用来装 wafer。
+<ul>
+<li>FOUP（Front Opening Unified Pod）：前开晶片（统一）传送盒。一般用于厂内运输 wafer。</li>
+<li>FOSB（Front Opening Shipping Box）：前开晶片运输盒。一般用于厂间成品或半成品运输。</li>
+</ul>
+</li>
+<li>lot：批次。</li>
+<li>recipe：制程配方。</li>
+<li>equipment：机台，加工线上的所有设备。</li>
+</ul>
+<h2 id="半导体行业常用工业软件">半导体行业常用工业软件</h2>
+<p>一般可以分为四个层级：</p>
+<h3 id="计划管理决策层">计划管理/决策层</h3>
+<ul>
+<li><strong><ruby>ERP<rt>企业资源计划</rt></ruby></strong>（Enterprise Resource Planning）</li>
+<li><strong><ruby>SCM<rt>供应链管理</rt></ruby></strong>（Supply Chain Management）</li>
+<li><strong><ruby>PLM<rt>产品生命周期管理</rt></ruby></strong>（Product Lifecycle Management）</li>
+<li><strong><ruby>WMS<rt>仓储管理系统</rt></ruby></strong>（Warehouse Management System）</li>
+<li><strong><ruby>OA<rt>办公自动化</rt></ruby></strong>、<strong><ruby>CRM<rt>消费者关系管理</rt></ruby></strong>、<strong><ruby>APS<rt>先进计划和排程</rt></ruby></strong>（Advanced Planning and Scheduling）等</li>
+</ul>
+<h3 id="计算机集成制造层">计算机集成制造层</h3>
+<p><strong><ruby>CIM<rt>计算机集成制造</rt></ruby></strong>（Computer Integrated Manufacturing）</p>
+<ul>
+<li>生产管理和监测</li>
+<li>制造执行
+<ul>
+<li><strong><ruby>MES<rt>制造执行系统</rt></ruby></strong>（Manufacturing Execution System）</li>
+<li><strong><ruby>RTD<rt>实时派工系统</rt></ruby></strong>（Real-time Dispatch）</li>
+<li><strong><ruby>SPC<rt>统计制程控制</rt></ruby></strong>（Statistical Process Control）</li>
+</ul>
+</li>
+</ul>
+<h3 id="一般控制层">一般控制层</h3>
+<ul>
+<li>自动化系统
+<ul>
+<li><strong><ruby>EAP<rt>设备自动化程序</rt></ruby></strong>（Equipment Automatic Programme)</li>
+</ul>
+</li>
+<li><strong><ruby>EES<rt>设备工程系统</rt></ruby></strong>（Equipment Engineer System）
+<ul>
+<li><strong><ruby>APC<rt>先进过程控制</rt></ruby></strong>（Advanced Process Control）
+<ul>
+<li>一般会认定其包含 <strong><ruby>R2R<rt>批次控制</rt></ruby></strong>（Run-to-Run）、FDC、<strong><ruby>OEE<rt>整体设备效率</rt></ruby></strong>（Overall Equipment Efficiency），但包含关系和范围没有明显界定</li>
+</ul>
+</li>
+<li><strong><ruby>FDC<rt>故障侦测与分类</rt></ruby></strong>（Fault Detection and Classification）</li>
+<li><strong><ruby>PMS<rt>预防保养系统</rt></ruby></strong>（Preventive Maintenance System）</li>
+<li><strong><ruby>YMS<rt>良率管理系统</rt></ruby></strong>（Yield Management System）</li>
+<li><strong><ruby>TMS<rt>运输管理系统</rt></ruby></strong>（Transportation Management System）</li>
+<li><strong><ruby>RMS<rt>Recipe/配方管理系统</rt></ruby></strong>（Recipe Management System）</li>
+<li>与 <strong><ruby>AMHS<rt>自动物料搬送系统/天车</rt></ruby></strong>（Automatic Material Handling System）和 <strong><ruby>AGV<rt>自动导引车</rt></ruby></strong>（Automated Guided Vehicle）的配合</li>
+</ul>
+</li>
+</ul>
+<h3 id="现场设备层机台">现场设备层：机台</h3>
+<ul>
+<li><strong><ruby>PLC<rt>可编程逻辑控制器</rt></ruby></strong>（Programmable Logic Controller）</li>
+<li>其他 censor 等</li>
+</ul>
+<p>CIM 主体包括 <strong>MES</strong> 和 <strong>EAP</strong>。MES 负责车间生产管理和调度执行，实时监控生产过程并响应状态变化。EAP 对接 MES 和机台设备，负责信息传输、数据搜集、流程控制和异常捕捉。因而 APC、FDC、 PMS 等系统通常都围绕 EAP 运作。</p>
+<p>EAP 与机台设备间使用如 SECS/GEM、TCP/IP 等通信协议进行连接和信息传递。</p>
+<div class="mermaid" id="id-2"></div>
+<h2 id="讲讲-mes">讲讲 MES</h2>
+<p>可以把 MES 理解为「车间的头子」。它上接计划层（如 ERP），下接一般控制层（如 EAP），主要面向在现场一线操作的车间管理人员。实际上就是多个模块集中呈现的一个平台。实际解决方案包括：</p>
+<ul>
+<li>计划排程管理</li>
+<li><strong><ruby>PRP<rt>生产工艺流程</rt></ruby></strong>（Process Plan）：对生产的流程进行四层抽象（从单个 <strong><ruby>operation<rt>操作</rt></ruby></strong> 到连接成 <strong><ruby>stage<rt>步骤</rt></ruby></strong>，再连接为一个大的 <strong><ruby>layer<rt>层</rt></ruby></strong>，最后成为一条完整的 <strong><ruby>route<rt>路径</rt></ruby></strong>）</li>
+<li><strong><ruby>WIP<rt>制品管理模块</rt></ruby></strong>（Wafer in Process）：创建批次、查询批次、报废批次等批次相关的处理</li>
+<li>设备管理</li>
+<li>数据管理</li>
+<li>报表管理</li>
+<li><strong><ruby>GUI<rt>用户界面设计</rt></ruby></strong>：包括面向生产线操作员和面向工艺工程师等不同界面</li>
+</ul>
+<h2 id="讲讲-eap">讲讲 EAP</h2>
+<p>EAP 上接 MES，下接机台设备。MES 所管理的各项数据都来自 EAP。EAP 先搜集所有生产数据和机台状态数据，再经由特定通讯协议传送到 MES 数据库，MES 再借由数据分析监控设备和生产流程。其同时也是整个 CIM 中其他模块的数据源。</p>
+<p>例如生产状态的变化：由 EAP <strong>告知</strong> MES 一批货物状态的变化，MES <strong>改变</strong>这批货物的状态。</p>
+<div class="mermaid" id="id-3"></div>
+<h2 id="半导体制作工序英文对照">半导体制作工序：英文对照</h2>
+<div class="mermaid" id="id-4"></div>
+]]></description>
+</item><item>
     <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
     <link>https://fanrongbin.com/cpp-template-friend/</link>
     <pubDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</pubDate><author>
@@ -820,102 +917,6 @@ Program ended with <span class="nb">exit</span> code: <span class="m">0</span>
 <blockquote>
 <p>Update: 2021/08/28</p>
 </blockquote>
-]]></description>
-</item><item>
-    <title>Winslow Homer 温斯洛·霍默</title>
-    <link>https://fanrongbin.com/winslow-homer/</link>
-    <pubDate>Sun, 08 Aug 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>FAN Rongbin</name>
-    </author><guid>https://fanrongbin.com/winslow-homer/</guid>
-    <description><![CDATA[<blockquote>
-<p>发布于 <a href="https://matters.news/@laefan/%E7%9C%8B%E7%95%AB-winslow-homer-%E6%BA%AB%E6%96%AF%E6%B4%9B-%E9%9C%8D%E9%BB%98-bafyreifjxdssns3s6xkf6t7lgk6jaxjrpxg4semolhembefe4o3mi2n4ja" target="_blank" rel="noopener noreffer">Matters.news</a>。</p>
-</blockquote>
-<p>首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。</p>
-<p></p>
-<p><em>Prout&rsquo;s Neck, Breakers</em>, 1883, Winslow Homer, Painting, watercolor on wove paper</p>
-<p>Source: <a href="https://www.artic.edu/artworks/16815/prout-s-neck-breakers" target="_blank" rel="noopener noreffer">The Art Institute of Chicago</a></p>
-<p>很偶然，从这幅画初次得知霍默大名，之后开始继续寻找他的画作，感叹于他融会贯通的技艺和想法。我其实不曾在阴天见过这样蓝的海浪，也许最接近画中景象的一次是在乔伊斯博物馆前的海角处。大概是被这种未曾见过的模样吸引着。</p>
-<p>除了十分显然的深蓝、亮蓝叠加使用以塑造前后关系，还能看到他多利用了纸张本身的白色，例如下半部分近礁石的部分。这也是水彩常用的方法。整幅画也给我一种非常轻快的感觉，倒不是因为画面主体的海浪，而是它前侧用或大或小的色块柔和铺排开的、礁石上附着的细浪。</p>
-<p></p>
-<p><em>Paul Morphy, the Chess Champion</em>, 1859, Winslow Homer, Print, wood engraving</p>
-<p>Credit line: The Museum of Fine Arts, Houston, The Mavis P. and Mary Wilson Kelsey Collection of Winslow Homer Graphics</p>
-<p>Source: <a href="https://artsandculture.google.com/asset/paul-morphy-the-chess-champion-winslow-homer/6AE0gmpNUzDrzA" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
-<p>温斯洛·霍默（Winslow Homer, 1836-1910）出生于波士顿，童年在剑桥长大，父母皆为新英格兰移民。父亲是典型的商人，而母亲有着画水彩的天赋异禀，顺理成章地成为霍默的“第一任老师”。19 岁高中毕业，父亲安排他去做广告平板印刷。就这样重复进行日常工作近两年后，他开始为一些杂志刊物制作插画，在当时那个年代也意味着就是木版画。霍默的线条感和对黑白分明的把握很好，不几笔就能把最鲜明的特点勾勒出来，如上图。</p>
-<p></p>
-<p><em>Mounted Bugler</em>,1862, Winslow Homer, Graphite, brush and gray wash on off-white paper</p>
-<p>Credit line: Gift of Charles Savage Homer, Jr.</p>
-<p>Source: <a href="https://artsandculture.google.com/asset/mounted-bugler-winslow-homer-american-1836%E2%80%931910/FgF0ghbzo-z6dw" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
-<p></p>
-<p><em>Home, Sweet Home</em>, 1863, Winslow Homer, Painting, oil on canvas</p>
-<p>Copyright: Patrons' Permanent Fund</p>
-<p>Source: <a href="https://artsandculture.google.com/asset/home-sweet-home/RwErgtlB6qAFTg" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
-<p>直到 1863 年他才正式进入国家设计学院（现国家学院博物馆和学校，National Academy Museum and School）学习绘画基础。美国内战期间，他被长期供图的一家报社送去前线，留下了许多战地场景与人物的插画手稿，除战争中的将士名人肖像，也有纷乱中的妇女儿童和留下的残迹。这一段时期以及之后的五到十年，也是霍默从单纯的插画师拓展成画家的时期，我们可以看见其绘画的个人风格已经渐趋成熟，例如选材的角度比起激烈、冲突的场景而言，更常描绘日常与闲暇，主题和所传达的态度也更为暧昧和难以捉摸。画面用色和明暗的对比十分优雅，线条的运用也更加果敢，构图更加简练。</p>
-<p></p>
-<p><em>Croquet Scene</em>, 1866, Winslow Homer, Painting, oil on canvas</p>
-<p>Credit Line: The Art Institute of Chicago, Friends of American Art Collection; Goodman Fund, 1942.35</p>
-<p>Source: <a href="https://artsandculture.google.com/asset/croquet-scene-winslow-homer-american-1836%E2%80%931910/xgGjRZZn3Qn5nA" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
-<p></p>
-<p><em>Art-Students and Copyists in the Louvre Gallery, Paris</em>, 1868, Winslow Homer, Print, wood engraving on wove paper</p>
-<p>Object Credit Line: Davison Art Center, Wesleyan University. Purchase funds, 1958</p>
-<p>Image Credit Line: <a href="http://www.wesleyan.edu/dac/openaccess" target="_blank" rel="noopener noreffer">Open Access Image from the Davison Art Center, Wesleyan University (http://www.wesleyan.edu/dac/openaccess)</a></p>
-<p>Source: <a href="https://artsandculture.google.com/asset/art-students-and-copyists-in-the-louvre-gallery-paris-winslow-homer/qwFCQK-sxPsOGQ" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
-<p></p>
-<p><em>Study for Eagle Head, Manchester, Massachusetts</em>, 1869, Winslow Homer, Painting, oil on wood</p>
-<p>Source: <a href="http://www.metmuseum.org/art/collection/search/11142" target="_blank" rel="noopener noreffer">The Metropolitan Museum of Art</a></p>
-<p></p>
-<p><em>Eagle Head, Manchester, Massachusetts (High Tide)</em>, 1870, Winslow Homer, Painting, oil on canvas</p>
-<p>Source: <a href="https://www.metmuseum.org/art/collection/search/11117" target="_blank" rel="noopener noreffer">The Metropolitan Museum of Art</a></p>
-<p>1867-1868 年他在巴黎短住一年，这段期间他仍继续为报社供图，主题转向描述巴黎人的生活，同时作风景绘画的练习。此时亦正值印象派兴起之初，他也展示出如何更好用绘画表现自然光影的探讨，在用笔上也更加放松。但是否能够确证其受到如马奈、莫内等印象派画家的影响，我们无从得知。他的绘画风格，大角度来说是站在写实的基础上去展示光线。</p>
-<p>在上两幅画作的比较中，我们可以发现霍默对阳光和天气的捕捉，这反映在浅滩处蓝色与绿色海浪和远处海面的对比，以及三个人物身上向阳处背阳处的色彩。高度饱和、反差明显、边缘轮廓准确充实，这样的用色和线条风格从一至终，也是最吸引我的地方。中部正在拧水的女子在强日光的照射下，衣服变湿的重量感也有一定体现。</p>
-<p>我们还可以从 <em>Eagle Head, Manchester, Massachusetts (High Tide), 1870</em> 创作的时代背景中窥见霍默关注的主题。正在快步工业化的美国，到海滩游泳、晒太阳是当时工人们的新潮休闲。三位女子身着如此厚重的衣物下水走了一遭，前两位亦未注意社会所定义的「仪态」，掀开长裙、露出小腿，当时即有评论称「exceedingly red-legged and ungainly」。但我们在绘画中难道不能呈现这样的人物吗？她们是如此的鲜活。</p>
-<p>大都会博物馆的播客中，<a href="https://itunesu.itunes.apple.com/feed/id430943000" target="_blank" rel="noopener noreffer">有一期</a>（Author Elizabeth Strout Discusses Two Paintings by Winslow Homer）邀请到了普利策小说奖得主伊丽莎白·斯特劳特（Elizabeth Strout, 1956-）分享她在这幅画中所想象出的故事。</p>
-<p></p>
-<p><em>The Country School</em>, 1871, Winslow Homer, Painting, oil on canvas</p>
-<p>Source: <a href="https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Country_School.jpg" target="_blank" rel="noopener noreffer">Wikimedia Commons</a></p>
-<p>1870 年代，霍默致力于描绘田园农村的质朴生活，例如小孩子的童趣嬉闹、年轻人的热恋和大人们的劳作。可不去关注工业化又到什么阶段了，逆行。我们可以在上副画作中捕捉许多细节，例如学生神色中的专注、讲台上的鲜花、挂在黑板边上的帽子、窗布的轻盈和透过窗栅的光影。中部偏左翘起腿的、讲台右侧合看一本书的、画面右部正哭泣着的小男孩和望着他的小女孩，实在是形形色色。</p>
-<p>1875 年后他不再作商业插画，希望能凭绘制油画和水彩维持生计。他最有名的作品 <em>Breezing Up (A Fair Wind), 1873-1876</em> 亦在这期间绘成。</p>
-<p></p>
-<p><em>Breezing Up (A Fair Wind)</em>, 1873-1876, Winslow Homer, Painting, oil on canvas</p>
-<p>Source: <a href="https://commons.wikimedia.org/wiki/File:Winslow_Homer,_Breezing_Up_%28A_Fair_Wind%29,_1873-1876,_NGA_30228.jpg" target="_blank" rel="noopener noreffer">Wikimedia Commons</a></p>
-<p>当时的评论对这幅画赞赏有加，多为与霍默之前的画作相比认为要出色。但我初见这幅画作时并不懂它为何得以成为「最有名」。是船与船帆的动态感吗？是船与浪之间精妙的推移和被搅乱的倒影吗？是它各方面都很平衡恰当？想来，或是因为其被解读的意义要大于其本身吗？乘风破浪的 19 世纪美国人。在艺术上，他们应该怎么在大杂烩中「孕育本土」、在本土中「重建本土」？</p>
-<blockquote>
-<p>Even the critic from the <em>Art Journal</em>, who thought the picture typical of Homer&rsquo;s &ldquo;hasty mode of treatment,&rdquo; found it winning nevertheless: &ldquo;It may be accepted as the most spirited of his works; the waves roll, the boat flies swiftly before the wind, and the group of happy boys are felicitous in every pose.&rdquo; Two others concurred: &ldquo;It is painted in his customary coarse and negligé style, but suggests with unmistakable force the life and motion of a breezy summer day off the coast&hellip;.There is no truer or heatier work in the present exhibition.&rdquo;</p>
-<p><em><a href="https://www.nga.gov/content/dam/ngaweb/research/publications/pdfs/american-paintings-19th-century-part-1.pdf" target="_blank" rel="noopener noreffer">American Paintings of the Nineteenth Century, Part I</a></em>, pages 312-318, National Gallery of Art, In-gallery publication, free to download online</p>
-</blockquote>
-<p></p>
-<p><em>Blackboard</em>, 1877, Winslow Homer, Painting, watercolor on wove paper</p>
-<p>Source: <a href="https://www.nga.gov/collection/art-object-page.71552.html" target="_blank" rel="noopener noreffer">National Gallery of Art</a></p>
-<p></p>
-<p><em>Schooner at Sunset</em>, 1880, Winslow Homer, Painting, watercolor on wove paper</p>
-<p>Source: <a href="https://hvrd.art/o/299942" target="_blank" rel="noopener noreffer">Harvard Art Museum</a></p>
-<p>1873 年夏之后他开始将水彩作为常用工具，笔触有的放矢，画面易读。有关注细节的如 <em>Blackboard, 1877</em>，衣着上的格子花纹、布面的褶皱、后背的绑带以及教师并不愉悦的神情。有非常印象派的如 <em>Schooner at Sunset, 1880</em>，落日与即将入夜的天空互相切开，水面上的波光与涟漪处理得精致。</p>
-<p></p>
-<p><em>Two Figures by the Sea</em>, 1882, Winslow Homer, Painting, oil on canvas</p>
-<p>Source: <a href="https://artsandculture.google.com/asset/two-figures-by-the-sea-winslow-homer/IQGb5h7OYzTtrw" target="_blank" rel="noopener noreffer">Google Arts &amp; Culture</a></p>
-<p>1881-1882 年，霍默在英格兰东北部的一个海边小镇度过。他更多关注劳动人民个体身上的英雄主义。抛开过于宏大的集体叙事后，反而打开了更加广阔的天地。其画作变得更加沉静，思考也更加深邃。这样的风格一直延续到之后。过去常作为题材的衣着时尚女子，如今更多转向塑造无私无畏的妇女。1883 年他搬到缅因州海边，整个 1880 年代中期都把精力放在海边景象与人物的创作上，除油画和水彩，他还尝试制作蚀刻版画。（更多关于他的蚀刻版画信息<a href="http://oldprintshop.com/artists/3931" target="_blank" rel="noopener noreffer">可见此</a>）</p>
-<p></p>
-<p><em>Undertow</em>, 1886, Winslow Homer, Painting, oil on canvas</p>
-<p>Source: <a href="https://www.clarkart.edu/artpiece/detail/undertow" target="_blank" rel="noopener noreffer">The Clark Art Institute</a></p>
-<p>这幅画戏剧性很足，在人物动作中格外显著，肌肉线条和人物比例上俨然是古希腊雕塑的架势。这样夸张的手法，无法让人忽略身体中蕴含的力量。水光与迸溅处的浪花刻画已臻于完美，占画面三分之二的海浪背景也形成了一定的压抑感，以突出海的力量意志。</p>
-<p>一连串的海边主题绘画，评论家们称其为「带着画笔的隐士（a hermit with a brush）」，但商业上不为大众所服，画作售价未达预期。</p>
-<p></p>
-<p><em>A Garden in Nassau</em>, 1885, Winslow Homes, Painting, watercolor on wove paper</p>
-<p>1884-1885 年的冬季，霍默在佛州、古巴和巴哈马群岛度过。受世纪杂志（Century Magazine）所托，完成了一系列的具有热带风情的水彩画。色彩更为明亮，所体现的情感也更显欢快。和他早年的作品相比，色彩在冷暖上更加分明，而不是一味的偏向于符合日光的暖，表达场景上也就有了更多语言。有人比喻道，他的这次旅程如同高更去往塔希提岛那般，给自己带来陌生与新奇。而在阿第伦达克山脉附近村庄的夏日之旅，也给他的绘画增添不少豁达与奔放。经此几行，他更像是找到了在冷静与轻快转换的滚轮开关。</p>
-<p></p>
-<p><em>Fox Hunt</em>, 1893, Winslow Homer, Painting, oil on canvas</p>
-<p>Source: <a href="https://www.pafa.org/museum/collection/item/fox-hunt" target="_blank" rel="noopener noreffer">Pennsylvania Academy of the Fine Arts</a></p>
-<p>1890 年后霍默创作了许多与自然中「捕猎」相关的作品，除人类的捕猎外，也包含着动物间的捕猎。正值达尔文进化论阐发、兴盛，时人称其画作表达的便是「物竞天择」。上幅画作中即一场老鹰对狐狸的捕猎，刚上架就被宾夕法尼亚美术学院买下，这也是他的画作首次藏录于主要博物馆。情节性解读这里姑且略去。值得注意的还有他所选择的视角和构图。起初我以为是选取了一个像是几乎卧倒在远处拿长焦推前去拍摄的视角，但我们能够看见老鹰的背部，说明其实是俯视。这在西方绘画里并不常见，更像是他对日本浮世绘的借鉴。1900 年后他的经济来源渐趋稳定。</p>
-<p>霍默的晚年依然热衷于创作海景画，毕竟，他可是这个领域的能者。能者多劳。</p>
-<p></p>
-<p><em>The Bather</em>, 1899, Winslow Homer, 1899, Painting, watercolor on wove paper</p>
-<p>Source: <a href="https://www.metmuseum.org/art/collection/search/11109" target="_blank" rel="noopener noreffer">The Metropolitan Museum</a></p>
-<p>好的作品为什么能给人以震慑力？为什么能被人口耳相传、收藏至今？大都离不开对那些纯粹的、美好的事物进行追问。这种追问可以是现实主义的无限观察，可以是现代主义的打破重构，它可以是无数的一切，但它一定基于非常高的人文起点。平白展示也好，挖掘黑暗也罢，当创作想要去往「能使更多人都接受和同意」的路径时，就要自己权衡好该怎么去体现「美中不足」，就要在情趣和意味上，探讨如何才能做到先进而不造成疏离感。在这中间地带如鱼得水的霍默，无疑是成功的。</p>
-<p></p>
-<p><em>Taking on Wet Provisions (Schooner Marked Newport, K. W.)</em>, 1903, Winslow Homer, Painting, watercolor on wove paper</p>
-<p>Source: <a href="https://www.metmuseum.org/art/collection/search/11143" target="_blank" rel="noopener noreffer">The Metropolitan Museum</a></p>
-<p></p>
-<p><em>Rocky Shore, Bermuda</em>, 1900, Winslow Homer, Painting, watercolor on wove paper</p>
-<p>Source: <a href="https://collections.mfa.org/objects/5016" target="_blank" rel="noopener noreffer">Museum of Fine Arts Boston</a></p>
 ]]></description>
 </item></channel>
 </rss>

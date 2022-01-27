@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">半导体制作工序 &amp; 行业常见软件模块梳理 - Rongbin&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="半导体制作工序 &amp; 行业常见软件模块梳理" />
+<meta property="og:description" content="由于涉及英文简称较多，以及行业常用英文单词指代，此博文会在初次提及某简称或某单词时标明中文。 半导体制作工序 英文对照请见文末。你也可以按此访问" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fanrongbin.com/semiconductor-procedure/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-27T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="半导体制作工序 &amp; 行业常见软件模块梳理"/>
+<meta name="twitter:description" content="由于涉及英文简称较多，以及行业常用英文单词指代，此博文会在初次提及某简称或某单词时标明中文。 半导体制作工序 英文对照请见文末。你也可以按此访问"/>
+<meta name="application-name" content="Rongbin&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Rongbin&#39;s Blog">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#ffffff"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script>
+      window.onload=function () {
+        document.addEventListener('touchstart',function (event) {
+          if(event.touches.length>1){
+            event.preventDefault();
+          }
+        });
+        var lastTouchEnd=0;
+        document.addEventListener('touchend',function (event) {
+          var now=(new Date()).getTime();
+          if(now-lastTouchEnd<=300){
+            event.preventDefault();
+          }
+          lastTouchEnd=now;
+        },false);
+        document.addEventListener('gesturestart', function (event) {
+          event.preventDefault();
+        });
+      }
+    </script>
+<link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000"><link rel="canonical" href="https://fanrongbin.com/semiconductor-procedure/" /><link rel="prev" href="https://fanrongbin.com/cpp-template-friend/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "半导体制作工序 \u0026 行业常见软件模块梳理",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/fanrongbin.com\/semiconductor-procedure\/"
+        },"genre": "posts","wordcount":  1879 ,
+        "url": "https:\/\/fanrongbin.com\/semiconductor-procedure\/","datePublished": "2022-01-27T00:00:00+00:00","dateModified": "2022-01-27T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "FAN Rongbin"},"author": {
+                "@type": "Person",
+                "name": "FAN Rongbin"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章 All Posts"> 文章 </a><a class="menu-item" href="/tags/" title="标签 Tags"> 标签 </a><a class="menu-item" href="/about/" title="关于 About"> 关于 </a><a class="menu-item" href="https://www.are.na/rongbin-fan/brackets-and-comma" title="作品集 Portfolio" rel="noopener noreffer" target="_blank"> Are.na </a><a class="menu-item" href="/comment-board/" title="留言板 Comment Board"> 留言板 </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="一个不太好用的站内搜索" id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="far fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-circle-notch fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="一个不太好用的站内搜索" id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="far fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-circle-notch fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章 All Posts">文章</a><a class="menu-item" href="/tags/" title="标签 Tags">标签</a><a class="menu-item" href="/about/" title="关于 About">关于</a><a class="menu-item" href="https://www.are.na/rongbin-fan/brackets-and-comma" title="作品集 Portfolio" rel="noopener noreffer" target="_blank">Are.na</a><a class="menu-item" href="/comment-board/" title="留言板 Comment Board">留言板</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__fadeIn">半导体制作工序 &amp; 行业常见软件模块梳理</h1><div class="post-meta">
+            <div class="post-meta-line">
+                </div>
+            <div class="post-meta-line">
+                    <i class="fa-fw"></i><time datetime="2022-01-27">2022-01-27</time>&nbsp;
+                <i class="fa-fw"></i>&nbsp;约 1879 字&nbsp;
+                <i class="fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;
+            </div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#半导体制作工序">半导体制作工序</a></li>
+    <li><a href="#半导体行业常用工业软件">半导体行业常用工业软件</a>
+      <ul>
+        <li><a href="#计划管理决策层">计划管理/决策层</a></li>
+        <li><a href="#计算机集成制造层">计算机集成制造层</a></li>
+        <li><a href="#一般控制层">一般控制层</a></li>
+        <li><a href="#现场设备层机台">现场设备层：机台</a></li>
+      </ul>
+    </li>
+    <li><a href="#讲讲-mes">讲讲 MES</a></li>
+    <li><a href="#讲讲-eap">讲讲 EAP</a></li>
+    <li><a href="#半导体制作工序英文对照">半导体制作工序：英文对照</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>由于涉及英文简称较多，以及行业常用英文单词指代，此博文会在初次提及某简称或某单词时标明中文。</p>
+<h2 id="半导体制作工序">半导体制作工序</h2>
+<div class="mermaid" id="id-1"></div>
+<p>英文对照请见<a href="#%e8%8b%b1%e6%96%87%e5%af%b9%e7%85%a7" rel="">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/" target="_blank" rel="noopener noreffer">按此访问</a>东京威力科创制作的工序介绍。</p>
+<p>半导体制作工序可分为前、后两道。前道包括 <code>1.晶圆加工</code> -&gt;<code> 7.测试</code>，后道包括<code>8.封装</code>及后期测试、成品入库。</p>
+<p>常用英文名词：</p>
+<ul>
+<li>wafer：晶圆，硅晶片。分有 6、8、12 英寸。</li>
+<li>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</li>
+<li>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</li>
+<li>cassette：晶盒。用来装 wafer。
+<ul>
+<li>FOUP（Front Opening Unified Pod）：前开晶片（统一）传送盒。一般用于厂内运输 wafer。</li>
+<li>FOSB（Front Opening Shipping Box）：前开晶片运输盒。一般用于厂间成品或半成品运输。</li>
+</ul>
+</li>
+<li>lot：批次。</li>
+<li>recipe：制程配方。</li>
+<li>equipment：机台，加工线上的所有设备。</li>
+</ul>
+<h2 id="半导体行业常用工业软件">半导体行业常用工业软件</h2>
+<p>一般可以分为四个层级：</p>
+<h3 id="计划管理决策层">计划管理/决策层</h3>
+<ul>
+<li><strong><ruby>ERP<rt>企业资源计划</rt></ruby></strong>（Enterprise Resource Planning）</li>
+<li><strong><ruby>SCM<rt>供应链管理</rt></ruby></strong>（Supply Chain Management）</li>
+<li><strong><ruby>PLM<rt>产品生命周期管理</rt></ruby></strong>（Product Lifecycle Management）</li>
+<li><strong><ruby>WMS<rt>仓储管理系统</rt></ruby></strong>（Warehouse Management System）</li>
+<li><strong><ruby>OA<rt>办公自动化</rt></ruby></strong>、<strong><ruby>CRM<rt>消费者关系管理</rt></ruby></strong>、<strong><ruby>APS<rt>先进计划和排程</rt></ruby></strong>（Advanced Planning and Scheduling）等</li>
+</ul>
+<h3 id="计算机集成制造层">计算机集成制造层</h3>
+<p><strong><ruby>CIM<rt>计算机集成制造</rt></ruby></strong>（Computer Integrated Manufacturing）</p>
+<ul>
+<li>生产管理和监测</li>
+<li>制造执行
+<ul>
+<li><strong><ruby>MES<rt>制造执行系统</rt></ruby></strong>（Manufacturing Execution System）</li>
+<li><strong><ruby>RTD<rt>实时派工系统</rt></ruby></strong>（Real-time Dispatch）</li>
+<li><strong><ruby>SPC<rt>统计制程控制</rt></ruby></strong>（Statistical Process Control）</li>
+</ul>
+</li>
+</ul>
+<h3 id="一般控制层">一般控制层</h3>
+<ul>
+<li>自动化系统
+<ul>
+<li><strong><ruby>EAP<rt>设备自动化程序</rt></ruby></strong>（Equipment Automatic Programme)</li>
+</ul>
+</li>
+<li><strong><ruby>EES<rt>设备工程系统</rt></ruby></strong>（Equipment Engineer System）
+<ul>
+<li><strong><ruby>APC<rt>先进过程控制</rt></ruby></strong>（Advanced Process Control）
+<ul>
+<li>一般会认定其包含 <strong><ruby>R2R<rt>批次控制</rt></ruby></strong>（Run-to-Run）、FDC、<strong><ruby>OEE<rt>整体设备效率</rt></ruby></strong>（Overall Equipment Efficiency），但包含关系和范围没有明显界定</li>
+</ul>
+</li>
+<li><strong><ruby>FDC<rt>故障侦测与分类</rt></ruby></strong>（Fault Detection and Classification）</li>
+<li><strong><ruby>PMS<rt>预防保养系统</rt></ruby></strong>（Preventive Maintenance System）</li>
+<li><strong><ruby>YMS<rt>良率管理系统</rt></ruby></strong>（Yield Management System）</li>
+<li><strong><ruby>TMS<rt>运输管理系统</rt></ruby></strong>（Transportation Management System）</li>
+<li><strong><ruby>RMS<rt>Recipe/配方管理系统</rt></ruby></strong>（Recipe Management System）</li>
+<li>与 <strong><ruby>AMHS<rt>自动物料搬送系统/天车</rt></ruby></strong>（Automatic Material Handling System）和 <strong><ruby>AGV<rt>自动导引车</rt></ruby></strong>（Automated Guided Vehicle）的配合</li>
+</ul>
+</li>
+</ul>
+<h3 id="现场设备层机台">现场设备层：机台</h3>
+<ul>
+<li><strong><ruby>PLC<rt>可编程逻辑控制器</rt></ruby></strong>（Programmable Logic Controller）</li>
+<li>其他 censor 等</li>
+</ul>
+<p>CIM 主体包括 <strong>MES</strong> 和 <strong>EAP</strong>。MES 负责车间生产管理和调度执行，实时监控生产过程并响应状态变化。EAP 对接 MES 和机台设备，负责信息传输、数据搜集、流程控制和异常捕捉。因而 APC、FDC、 PMS 等系统通常都围绕 EAP 运作。</p>
+<p>EAP 与机台设备间使用如 SECS/GEM、TCP/IP 等通信协议进行连接和信息传递。</p>
+<div class="mermaid" id="id-2"></div>
+<h2 id="讲讲-mes">讲讲 MES</h2>
+<p>可以把 MES 理解为「车间的头子」。它上接计划层（如 ERP），下接一般控制层（如 EAP），主要面向在现场一线操作的车间管理人员。实际上就是多个模块集中呈现的一个平台。实际解决方案包括：</p>
+<ul>
+<li>计划排程管理</li>
+<li><strong><ruby>PRP<rt>生产工艺流程</rt></ruby></strong>（Process Plan）：对生产的流程进行四层抽象（从单个 <strong><ruby>operation<rt>操作</rt></ruby></strong> 到连接成 <strong><ruby>stage<rt>步骤</rt></ruby></strong>，再连接为一个大的 <strong><ruby>layer<rt>层</rt></ruby></strong>，最后成为一条完整的 <strong><ruby>route<rt>路径</rt></ruby></strong>）</li>
+<li><strong><ruby>WIP<rt>制品管理模块</rt></ruby></strong>（Wafer in Process）：创建批次、查询批次、报废批次等批次相关的处理</li>
+<li>设备管理</li>
+<li>数据管理</li>
+<li>报表管理</li>
+<li><strong><ruby>GUI<rt>用户界面设计</rt></ruby></strong>：包括面向生产线操作员和面向工艺工程师等不同界面</li>
+</ul>
+<h2 id="讲讲-eap">讲讲 EAP</h2>
+<p>EAP 上接 MES，下接机台设备。MES 所管理的各项数据都来自 EAP。EAP 先搜集所有生产数据和机台状态数据，再经由特定通讯协议传送到 MES 数据库，MES 再借由数据分析监控设备和生产流程。其同时也是整个 CIM 中其他模块的数据源。</p>
+<p>例如生产状态的变化：由 EAP <strong>告知</strong> MES 一批货物状态的变化，MES <strong>改变</strong>这批货物的状态。</p>
+<div class="mermaid" id="id-3"></div>
+<h2 id="半导体制作工序英文对照">半导体制作工序：英文对照</h2>
+<div class="mermaid" id="id-4"></div>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/cpp-template-friend/" class="prev" rel="prev" title="C&#43;&#43; 模版类重载流输入输出运算符"><i class="fas fa-angle-left fa-fw"></i>C&#43;&#43; 模版类重载流输入输出运算符</a></div>
+</div>
+<div id="comments"><div id="waline" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><a href="https://gohugo.io/">Hugo</a> + <a href="https://github.com/HEIGE-PCloud/DoIt">DoIt</a> + <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></div><div class="footer-line"></div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-7EJXLY66RT');
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-7EJXLY66RT" async></script></div>
+
+<div class="pjax-assets"><script type="text/javascript" src="/lib/waline/Waline.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{"waline":{"avatar":"hide","copyright":true,"dark":"body[theme='dark'], body[theme='black']","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/tw-emoji","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus"],"highlight":true,"lang":"zh-cn","login":"enable","meta":["nick","mail","link"],"pageSize":10,"serverURL":"https://waline-phi-beige.vercel.app"}},"data":{"id-1":"flowchart TD\n\tsubgraph 1.晶圆加工\n\t铸锭--\u003e锭切割--\u003e裸片表面抛光\n\tend\n\tsubgraph 2.氧化\n\t消除杂质--\u003ebb2[高温形成氧化层]--\u003e氧化层厚度测试\n\tend\n\tsubgraph 3.光刻\n\t涂覆光刻胶--\u003ecc2[曝光]--\u003ecc3[显影]\n\tend\n\tsubgraph 4.刻蚀\n\t去除多余的氧化膜\n\tend\n\tsubgraph 5.薄膜沉积\n\tee1[CVD/PVD]\n\tend\n\tsubgraph 6.互连\n\t用铝或铜连接晶体管\n\tend\n\tsubgraph 7.测试\n\tEDS\n\tend\n\tsubgraph 8.封装\n\thh1[晶圆锯切成 die]--\u003e单个晶片附着框架--\u003e屏蔽焊接--\u003e模具塑封成型--\u003e封装测试\n\tend\n\t1.晶圆加工--\u003e2.氧化--\u003e3.光刻--\u003e4.刻蚀--\u003e5.薄膜沉积--\u003e6.互连--\u003e7.测试--\u003e8.封装","id-2":"classDiagram\n\tclass 计划层{\n\t\t ERP/SCM/PLM\n\t\t OA/CRM/APS/...\n\t}\n\tclass CIM{\n\t\tMES/RTD/SPC...\n\t}\n\tclass 一般控制层{\n\t\tEAP\n\t\tEES/APC/FDC...\n\t}\n\t计划层 \u003c--\u003e CIM\n\tCIM \u003c--\u003e 一般控制层 : SECS/GEM","id-3":"stateDiagram\n\ts1: 计划(planned)\n\ts2: 激活(activated)\n\ts3: 等待处理(waiting)\n\ts4: 结束(completed)\n\ts5: 派工(dispatch)\n\ts6: 正在加工(processing)\n\ts7: 加工完成(finish)\n\t[*]--\u003es1\n\ts1--\u003es2:分配输送盒\n\ts2--\u003es3\n\ts3--\u003es2:解除等待\n\ts2--\u003es5\n\ts5--\u003es2:解除派工\n\ts5--\u003es6:移入加工\n\ts6--\u003es5:取消移入\n\ts6--\u003es7\n\ts7--\u003es3\n\ts3--\u003es7\n\ts7--\u003es4\n\ts2--\u003es4\n\ts3--\u003es5","id-4":"flowchart TD\n\tsubgraph a[1.Wafer Processing]\n\ta1[Casting]--\u003ea2[Slicing]--\u003ea3[Polishing the surface]\n\tend\n\tsubgraph b[2.Exposed to oxygen]\n\tb1[Cleaning]--\u003eb2[Exposed to oxygen at high temperatures to create a layer of silicon oxide]--\u003eb3[Layer Thickness Test]\n\tend\n\tsubgraph c[3.Lithography]\n\tc1[Applying a UV-sensitive photoresist on the surface]--\u003ec2[irradiate the UV light to transfer the pattern drawn on the glass mask onto the photoresist]--\u003ec3[Remove unexposed area]\n\tend\n\tsubgraph d[4.Etching and Removing]\n\td1[Etching films of unmasked area and remove the photoresist]\n\tend\n\tsubgraph e[5.Film Depositing]\n\te1[using CVD or PVD]\n\tend\n\tsubgraph f[6.Interconnect Formation]\n\tf1[Forming wiring layers]\n\tend\n\tsubgraph g[7.Wafer Testing]\n\tg1[EDS]\n\tend\n\tsubgraph h[8.Assembling]\n\th1[Cut into die]--\u003eh2[Attached to the package substrate]--\u003eh3[Connected to inner leads]--\u003eh4[Sealed in an epoxy resin envelope]--\u003eh5[Assembly Test]\n\tend\n\ta--\u003eb--\u003ec--\u003ed--\u003ee--\u003ef--\u003eg--\u003eh"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"mermaid":true,"search":{"algoliaAppID":"GWFPDOM059","algoliaIndex":"blog","algoliaSearchKey":"1abb8ad20b4133d6e644b1a4174ee095","highlightTag":"em","maxResultLength":5,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"twemoji":true};</script>
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+    <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/mermaid/mermaid.min.css">
+    <noscript><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"></noscript></div>
+</body>
+
+</html>
