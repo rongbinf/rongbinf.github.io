@@ -4,59 +4,50 @@
         <link>https://fanrongbin.com/posts/</link>
         <description>所有文章 | Rongbin&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Thu, 27 Jan 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Fri, 28 Jan 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>糕点铺</title>
+    <link>https://fanrongbin.com/bakery/</link>
+    <pubDate>Fri, 28 Jan 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>FAN Rongbin</name>
+    </author><guid>https://fanrongbin.com/bakery/</guid>
+    <description><![CDATA[<p>实习，住在团结湖，附近有一家糕点铺，晚上下班总要路过它。门口常常排着不长不短的队，几乎每次我都会装作心不在焉地往亮堂堂的橱窗一瞥，看看今天是绿豆酥饼卖得好，还是有新面包出炉。暗地里，我也决定找个时间也去排排队，买一盒试试看。今天是这个月最后一天班，坐上公交，想象那条刚认识没多久的路，先过路口，拐弯，直行，再走到对面，就能到糕点铺了。刷卡下车后我抬起头走路，可劲儿往对面瞧，却怎么也看不到那面墨绿色的招牌，一时以为是自己搞混了。怀疑的脚步越来越近，才发现关了灯、拉了铁门，赖以辨认的人群四散。今天已经是廿六了，后天回家，节后总要再过来。「所以总有机会吧」，这么想着，埋头往别处走了。</p>
+<p>过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己吃上酥饼的希望真的很渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要「把握住机会」和「活在当下」的道理戒律，如此这般活，由着很多事情错过。</p>
+]]></description>
+</item><item>
     <title>半导体制作工序 &amp; 行业常见软件模块梳理</title>
     <link>https://fanrongbin.com/semiconductor-procedure/</link>
     <pubDate>Thu, 27 Jan 2022 00:00:00 &#43;0000</pubDate><author>
         <name>FAN Rongbin</name>
     </author><guid>https://fanrongbin.com/semiconductor-procedure/</guid>
-    <description><![CDATA[<p>由于涉及英文简称较多，以及行业常用英文单词作指代，此博文会在初次提及某简称或某单词时标明中文。</p>
-<h2 id="半导体制作工序">半导体制作工序</h2>
+    <description><![CDATA[<h2 id="半导体制作工序">半导体制作工序</h2>
 <div class="mermaid" id="id-1"></div>
 <p>参考自泛林集团科普文章：<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&amp;mid=2653071344&amp;idx=1&amp;sn=5afa34f0343fe651c352fb1db90e4078&amp;chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b" target="_blank" rel="noopener noreffer">上篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&amp;new=1" target="_blank" rel="noopener noreffer">中篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&amp;new=1" target="_blank" rel="noopener noreffer">下篇</a>。英文对照请见<a href="#%e5%8d%8a%e5%af%bc%e4%bd%93%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f%e8%8b%b1%e6%96%87%e5%af%b9%e7%85%a7" rel="">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/" target="_blank" rel="noopener noreffer">按此访问</a>东京威力科创制作的工序介绍。</p>
 <p>半导体制作工序可分为前、后两道。前道包括 <code>1.晶圆加工</code> -&gt;<code> 7.测试</code>，后道包括<code>8.封装</code>及后期测试、其他组装、成品入库等。</p>
 <p>常用英文名词：</p>
 <ul>
-<li>
-<p>wafer：晶圆，硅晶片。分有 6、8、12 吋。</p>
-</li>
-<li>
-<p>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</p>
-</li>
-<li>
-<p>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</p>
-</li>
-<li>
-<p>cassette：晶盒。用来装 wafer。</p>
+<li>wafer：晶圆，硅晶片。分有 6、8、12 吋。</li>
+<li>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</li>
+<li>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</li>
+<li>cassette：晶盒。用来装 wafer。
 <ul>
 <li>FOUP（Front Opening Unified Pod）：前开晶片（统一）传送盒。一般用于厂内运输 wafer。</li>
 <li>FOSB（Front Opening Shipping Box）：前开晶片运输盒。一般用于厂间成品或半成品运输。</li>
 </ul>
 </li>
-<li>
-<p>lot：批次。</p>
-</li>
-<li>
-<p>recipe：制程配方。</p>
-</li>
-<li>
-<p>equipment：机台，加工线上的所有设备。</p>
-</li>
-<li>
-<p>fab（Semiconductor Fabrication Plant）：半导体制造厂。</p>
-</li>
-<li>
-<p>WAT（Wafer Acceptance Test）：晶圆允收测试</p>
-</li>
-<li>
-<p>UAT（User Acceptance Test）：用户允收测试</p>
-</li>
-<li>
-<p>CP Yield（Circuit Probe Yield）：晶圆测试良率</p>
-</li>
-<li>
-<p>RFP/RP（Request for Proposal）：需求建议书</p>
-</li>
+<li>lot：批次。</li>
+<li>recipe：制程配方。</li>
+<li>equipment：机台，加工线上的所有设备。</li>
+<li>fab（Semiconductor Fabrication Plant）：半导体制造厂。</li>
+<li>WAT（Wafer Acceptance Test）：晶圆允收测试</li>
+<li>UAT（User Acceptance Test）：用户允收测试</li>
+<li>CP Yield（Circuit Probe Yield）：晶圆测试良率</li>
+<li>RFP/RP（Request for Proposal）：需求建议书</li>
+</ul>
+<p>半导体产业有几种常见商业模式：</p>
+<ul>
+<li>Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多个环节。如台积电。</li>
+<li>IDM：包括 IC 设计、晶圆制造、封装测试等多个环节。如三星。</li>
+<li>Fabless：只负责 IC 设计和销售，其他环节外包。如联发科。</li>
 </ul>
 <h2 id="半导体行业常用工业软件">半导体行业常用工业软件</h2>
 <p>对于半导体厂内<em>自动化系统</em>常用工业软件，一般可分为四个层级：</p>
@@ -80,7 +71,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="一般控制层">一般<strong>控制</strong>层</h3>
+<h3 id="一般控制层">一般控制层</h3>
 <ul>
 <li>自动化系统
 <ul>
@@ -108,6 +99,7 @@
 <li><strong><ruby>PLC<rt>可编程逻辑控制器</rt></ruby></strong>（Programmable Logic Controller）</li>
 <li>其他 censor 等</li>
 </ul>
+<hr>
 <p>CIM 主体包括 <strong>MES</strong> 和 <strong>EAP</strong>。MES 负责车间生产管理和调度执行，实时监控生产过程并响应状态变化。EAP 对接 MES 和机台设备，负责信息传输、数据搜集、流程控制和异常捕捉。因而 APC、FDC、 PMS 等系统通常都围绕 EAP 运作。</p>
 <p>EAP 与 MES 等其他系统间通讯采用 Tibco RV 协议、与机台设备间通讯采用 SECS/GEM 等等协议。</p>
 <div class="mermaid" id="id-2"></div>
@@ -132,7 +124,7 @@
 <li>西门子（CAMSTAR、SIMATIC IT）</li>
 </ul>
 <h2 id="mes车间的头子">MES：「车间的头子」</h2>
-<p>MES 上接计划层（如 ERP），下接一般控制层（如 EAP），主要面向在现场一线操作的车间管理人员。实际上是多个模块集中呈现的平台，针对整个工厂，对稳定性要求较高。实际解决方案包括：</p>
+<p>MES 上接计划层（如 ERP），下接一般控制层（如 EAP 或 <strong><ruby>SCADA<rt>监控与资料收集系统</rt></ruby></strong>），主要面向在现场一线操作的车间管理人员。实际上是多个模块集中呈现的平台，针对整个工厂，对稳定性要求较高。实际解决方案包括：</p>
 <ul>
 <li>计划排程管理</li>
 <li><strong><ruby>PRP<rt>生产工艺流程</rt></ruby></strong>（Process Plan）：对生产的流程进行四层抽象（从单个 <strong><ruby>operation<rt>操作</rt></ruby></strong> 到连接成 <strong><ruby>stage<rt>步骤</rt></ruby></strong>，再连接为一个大的 <strong><ruby>layer<rt>层</rt></ruby></strong>，最后成为一条完整的 <strong><ruby>route<rt>路径</rt></ruby></strong>）</li>
@@ -146,6 +138,7 @@
 <p>EAP 上接 MES，下接机台设备。MES 所管理的各项数据都来自 EAP。EAP 先搜集所有生产数据和机台状态数据，再经由特定通讯协议传送到 MES 数据库，MES 再借由数据分析监控设备和生产流程。其同时也是整个 CIM 中其他模块的数据源。</p>
 <p>例如生产状态的变化：由 EAP <strong>告知</strong> MES 一批货物状态的变化，MES <strong>改变</strong>这批货物的状态。</p>
 <div class="mermaid" id="id-3"></div>
+<p>对比单纯进行数据采集和一定图形界面化呈现的 SCADA，EAP 能配合其他模块达到生产自动化的要求、作为管理平台、融合 <strong><ruby>BI<rt>商业智能</rt></ruby></strong>（business intelligence）分析。</p>
 <h2 id="apc管控过程提升良率">APC：管控过程、提升良率</h2>
 <p>半导体量产中，由于投资规模庞大，良率哪怕能做到 1% 的提升，都能带来非常可观的收益增加。APC 就是一种提升良率或产能的综合解决方案。一般包括 R2R、FDC、OEE。在制程执行时，期间存在各种影响因素导致量产出的晶圆存在差异，需要通过实时监控影响因素变化的参数来提升良率或产能，而这依赖于 APC 对数据的搜集，包括 <strong><ruby>DCU<rt>数据收集单元</rt></ruby></strong>（Data Collection Unit）主动收集的资料以及对其他系统（如 MES、PMS 等）资料的运用。</p>
 <p>有关 APC 的更多信息，可<a href="http://franktsao.blogspot.com/2009/10/apc.html" target="_blank" rel="noopener noreffer">按此访问</a>鼎捷软件曹永诚所撰导论（2005 年 6 月，Blogspot 链接）。</p>
@@ -154,8 +147,8 @@
 <ul>
 <li><strong><ruby>OHT<rt>空中行走式/高架搬运系统</rt></ruby></strong>（Overhead Hoist Transfer），多用在加工区间内（Intra-bay），也可用于不同区间之间（Inter-bay）或覆盖全厂（factory wide）的运输。</li>
 <li><strong><ruby>OHS<rt>空中行走式/高架搬运车</rt></ruby></strong>（Overhead Shuttle），常用于不同仓储设备间（也称 Inter-bay Transport System）。</li>
-<li>AGV（Automated Guided Vehicle），常用在复杂路径。</li>
-<li>RGV（Rail Guided Vehicle），轨道运输，带机械臂。</li>
+<li><strong><ruby>AGV<rt>自动导引车</rt></ruby></strong>（Automated Guided Vehicle），常用在复杂路径。</li>
+<li><strong><ruby>RGV<rt>有轨导引车</rt></ruby></strong>（Rail Guided Vehicle），轨道运输，带机械臂。</li>
 </ul>
 <h2 id="半导体制作工序英文对照">半导体制作工序：英文对照</h2>
 <div class="mermaid" id="id-4"></div>
@@ -947,35 +940,6 @@ Program ended with <span class="nb">exit</span> code: <span class="m">0</span>
 <p>情形 1：QDII 基金申购踊跃，其本身因额度限制而暂停申购。</p>
 <p>情形 2：美股节假日休市，亦无法申购赎回。</p>
 <p>情形 3：未开放二级市场交易的某 QDII 基金，从赎回到到账需约 8-10 个工作日。</p>
-]]></description>
-</item><item>
-    <title>建立健康的关系</title>
-    <link>https://fanrongbin.com/healthy-relationship/</link>
-    <pubDate>Fri, 13 Aug 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>FAN Rongbin</name>
-    </author><guid>https://fanrongbin.com/healthy-relationship/</guid>
-    <description><![CDATA[<p>同友人聊天，谈及河南暴雨，再到自疫情初至今仍层出不穷的呼救、求助，不约而同发问：「如果我或我身边的人也遇到这样的紧急事件，而依靠网络仍无法得到回应，该怎么办？」我有对城市生活多加警惕的意识吗？我知道发生山洪应该往哪里跑吗？我知道除了互联网之外的呼救途径吗？如果断水、断电、断网、断信号，该怎么办？</p>
-<p>我们都不觉得这是杞人忧天，也不觉得活得自在豁达与多加警惕之间有任何冲突。只是觉得生命不能被肆意对待。尤其是在这不过一年间，见证了这么多生命的离开。</p>
-<p>一开始 Apple 发布 Memoji 时，我在猜，是不是以后就真靠这么一个会动的头把「我」替代了？未来在动物森友会世界里归农，在 Gather Town 或者 Online Town 里上班。甚至想过《黑镜》里骑动感单车赚点数的生活只需要再优化一下，例如不要那么单一、再有创造力一些，会不会也是能接受的选项？</p>
-<p>现在是惊醒了，要走一条反产业潮流的老路，不论如何要在真实世界里去建立健康的关系，这种关系除了是人与人之间的，更要包括和物件之间、和环境之间、和自己。</p>
-<p>环境的改变会催生出很多东西，梭罗去瓦尔登湖，拉姆齐一家靠去灯塔作信念。被关在家里久了，看上去跟人的交流更多了，但真正「有效」的、面对面察言观色的、与分享超链接跳转无关的，其实大幅减少。要思考使用这些 IM 工具和平台的新方法。</p>
-<p>我做了更多的运动，也看到居家健身市场的蓬勃发展；跑了更多的步，家门口的绿道，人多了起来，也维护得更好。保护环境的话题，这里不能再赘述，但有一问题希望引起反思：「享受城市生活便利的同时，对其保持警惕」。其实对于所有能带来便捷的东西都一样，或者都不用说是否带来便捷，只要是能让人养成如此的依赖，或者说太报以信任的东西，难道不都需要加以警惕吗？</p>
-<p>常待的书桌被我架高，站着阅读或码字，至少让身体动得更多。喝的水更多了，饮食和作息上进步空间还很大。</p>
-<p>我把家人手机上的 SOS 功能设置好，把当地的紧急电话加入通讯录，开始了解如何为家中配备急救包，了解在与外界完全隔绝的情况下什么是必需的。</p>
-<p>这些是和物件、环境和自己之间的关系。</p>
-<p>前些天看到 <a href="https://www.nytimes.com/2021/07/17/opinion/culture/social-media-cancel-culture-roxane-gay.html" target="_blank" rel="noopener noreffer">NYT 上一篇文章</a>，谈「为什么互联网上的人都那么糟」，简体中文互联网环境则更如是。除了庞大的基数，算法干预下再加一重 censor 与 business，以至于我们造成的争端比谁都多，进入沉思过程的少之又少，达成的结论更屈指可数。作者说他有时感觉被铺天盖地的新闻所淹没，我俨然像在极度正面与极度负面的两种情绪中溺亡了。</p>
-<p>如果觉得自己是个「布道者」，继续这么做下去也无妨。但如果带来的创伤更多，那还是别做了。只要人人都幻想，那一天到不到来，没什么关系。</p>
-<p>信源一简再简，关注「人」而少关注「事」。「关注事」的大把，挑一两个能把前因后果、来龙去脉讲清楚的已经很足够，部分评论作非自愿加餐。大力学习、深度学习能持续输出观点的人、能鞭辟入里又简明扼要讲话的人、友好型肯争论的异见持有者，如果这些人有些还在网上，那就接着看。有些在书里，就继续读。至于实在是 voluble，造成 vociferous 的，不看不就行了，别总以为少看点什么就会错过什么，错过的东西太多了，没看过没见识过的也太多了。记得第一次读《文学回忆录》，或者是第一次读《地理学与生活》，或者是第一次读《视差之见》，读得面红耳赤，读得「欲火焚身」。不要养成「每当做点什么，总要看评论/看眼色」的习惯。</p>
-<p>我还更多地去阅读 Newsletter，虽然不是那个「一期一会」，但这种「一期」看「一会」也让我对早起（以阅读和做点自己的事）有了更大的兴趣和信心。方便 Archive，可以复制粘贴，也可以直接在收件箱标签。有的作者还设置了读者信箱，多好，这都是人与人的关系。</p>
-<blockquote>
-<p>But I have more of a life than I once did. I have a wife, a busy career, aging parents and a large family. I have more physical mobility and, in turn, more interest in being active and out in the world. I now spend most of my time with people who are not Very Online. When I talk to them about some weird or frustrating internet conflagration, they tend to look at me as if I am speaking a foreign language from a distant land. And, I suppose, I am.</p>
-<p>Roxane Gay</p>
-</blockquote>
-<p>听 Solar Power，看乐评人批 Lorde 逃离现实又没有完全逃离。苛刻是他们的工作。我觉得这种微妙的、游走于这之间的平衡，太难找了。Lorde 找了几年，有了一点苗头，先跟大家说道说道，所以整张专辑显得文学性大过音乐性，一首接一首听起来不很连贯。（不过在这个时代，我们还那么讲究连贯吗？）我想我也应该寻找这属于我的平衡。</p>
-<p>自知做不了太多，连家人有时都无法坐下来和平聊天。那也要做啊。</p>
-<blockquote>
-<p>Update: 2021/08/28</p>
-</blockquote>
 ]]></description>
 </item></channel>
 </rss>

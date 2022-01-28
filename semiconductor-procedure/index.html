@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
     <title class="pjax-title">半导体制作工序 &amp; 行业常见软件模块梳理 - Rongbin&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="半导体制作工序 &amp; 行业常见软件模块梳理" />
-<meta property="og:description" content="由于涉及英文简称较多，以及行业常用英文单词作指代，此博文会在初次提及某简称或某单词时标明中文。 半导体制作工序 参考自泛林集团科普文章：上篇、中" />
+<meta property="og:description" content="半导体制作工序 参考自泛林集团科普文章：上篇、中篇、下篇。英文对照请见文末。你也可以按此访问东京威力科创制作的工序介绍。 半导体制作工序可分为前" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fanrongbin.com/semiconductor-procedure/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-01-27T00:00:00+00:00" />
@@ -14,7 +14,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="半导体制作工序 &amp; 行业常见软件模块梳理"/>
-<meta name="twitter:description" content="由于涉及英文简称较多，以及行业常用英文单词作指代，此博文会在初次提及某简称或某单词时标明中文。 半导体制作工序 参考自泛林集团科普文章：上篇、中"/>
+<meta name="twitter:description" content="半导体制作工序 参考自泛林集团科普文章：上篇、中篇、下篇。英文对照请见文末。你也可以按此访问东京威力科创制作的工序介绍。 半导体制作工序可分为前"/>
 <meta name="application-name" content="Rongbin&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Rongbin&#39;s Blog">
 
@@ -40,7 +40,7 @@
         });
       }
     </script>
-<link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000"><link rel="canonical" href="https://fanrongbin.com/semiconductor-procedure/" /><link rel="prev" href="https://fanrongbin.com/cpp-template-friend/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000"><link rel="canonical" href="https://fanrongbin.com/semiconductor-procedure/" /><link rel="prev" href="https://fanrongbin.com/cpp-template-friend/" /><link rel="next" href="https://fanrongbin.com/bakery/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -51,7 +51,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/fanrongbin.com\/semiconductor-procedure\/"
-        },"genre": "posts","wordcount":  2878 ,
+        },"genre": "posts","wordcount":  3076 ,
         "url": "https:\/\/fanrongbin.com\/semiconductor-procedure\/","datePublished": "2022-01-27T00:00:00+00:00","dateModified": "2022-01-27T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": "FAN Rongbin"},"author": {
@@ -150,8 +150,8 @@
                 </div>
             <div class="post-meta-line">
                     <i class="fa-fw"></i><time datetime="2022-01-27">2022-01-27</time>&nbsp;
-                <i class="fa-fw"></i>&nbsp;约 2878 字&nbsp;
-                <i class="fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;
+                <i class="fa-fw"></i>&nbsp;约 3076 字&nbsp;
+                <i class="fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;
             </div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -165,7 +165,7 @@
       <ul>
         <li><a href="#计划管理决策层">计划管理/决策层</a></li>
         <li><a href="#计算机集成制造层">计算机集成制造层</a></li>
-        <li><a href="#一般控制层">一般<strong>控制</strong>层</a></li>
+        <li><a href="#一般控制层">一般控制层</a></li>
         <li><a href="#现场设备层机台">现场设备层：机台</a></li>
         <li><a href="#市场主要厂商">市场主要厂商</a></li>
       </ul>
@@ -177,53 +177,35 @@
     <li><a href="#半导体制作工序英文对照">半导体制作工序：英文对照</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>由于涉及英文简称较多，以及行业常用英文单词作指代，此博文会在初次提及某简称或某单词时标明中文。</p>
-<h2 id="半导体制作工序">半导体制作工序</h2>
+            </div><div class="content" id="content"><h2 id="半导体制作工序">半导体制作工序</h2>
 <div class="mermaid" id="id-1"></div>
 <p>参考自泛林集团科普文章：<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&amp;mid=2653071344&amp;idx=1&amp;sn=5afa34f0343fe651c352fb1db90e4078&amp;chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b" target="_blank" rel="noopener noreffer">上篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&amp;new=1" target="_blank" rel="noopener noreffer">中篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&amp;new=1" target="_blank" rel="noopener noreffer">下篇</a>。英文对照请见<a href="#%e5%8d%8a%e5%af%bc%e4%bd%93%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f%e8%8b%b1%e6%96%87%e5%af%b9%e7%85%a7" rel="">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/" target="_blank" rel="noopener noreffer">按此访问</a>东京威力科创制作的工序介绍。</p>
 <p>半导体制作工序可分为前、后两道。前道包括 <code>1.晶圆加工</code> -&gt;<code> 7.测试</code>，后道包括<code>8.封装</code>及后期测试、其他组装、成品入库等。</p>
 <p>常用英文名词：</p>
 <ul>
-<li>
-<p>wafer：晶圆，硅晶片。分有 6、8、12 吋。</p>
-</li>
-<li>
-<p>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</p>
-</li>
-<li>
-<p>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</p>
-</li>
-<li>
-<p>cassette：晶盒。用来装 wafer。</p>
+<li>wafer：晶圆，硅晶片。分有 6、8、12 吋。</li>
+<li>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</li>
+<li>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</li>
+<li>cassette：晶盒。用来装 wafer。
 <ul>
 <li>FOUP（Front Opening Unified Pod）：前开晶片（统一）传送盒。一般用于厂内运输 wafer。</li>
 <li>FOSB（Front Opening Shipping Box）：前开晶片运输盒。一般用于厂间成品或半成品运输。</li>
 </ul>
 </li>
-<li>
-<p>lot：批次。</p>
-</li>
-<li>
-<p>recipe：制程配方。</p>
-</li>
-<li>
-<p>equipment：机台，加工线上的所有设备。</p>
-</li>
-<li>
-<p>fab（Semiconductor Fabrication Plant）：半导体制造厂。</p>
-</li>
-<li>
-<p>WAT（Wafer Acceptance Test）：晶圆允收测试</p>
-</li>
-<li>
-<p>UAT（User Acceptance Test）：用户允收测试</p>
-</li>
-<li>
-<p>CP Yield（Circuit Probe Yield）：晶圆测试良率</p>
-</li>
-<li>
-<p>RFP/RP（Request for Proposal）：需求建议书</p>
-</li>
+<li>lot：批次。</li>
+<li>recipe：制程配方。</li>
+<li>equipment：机台，加工线上的所有设备。</li>
+<li>fab（Semiconductor Fabrication Plant）：半导体制造厂。</li>
+<li>WAT（Wafer Acceptance Test）：晶圆允收测试</li>
+<li>UAT（User Acceptance Test）：用户允收测试</li>
+<li>CP Yield（Circuit Probe Yield）：晶圆测试良率</li>
+<li>RFP/RP（Request for Proposal）：需求建议书</li>
+</ul>
+<p>半导体产业有几种常见商业模式：</p>
+<ul>
+<li>Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多个环节。如台积电。</li>
+<li>IDM：包括 IC 设计、晶圆制造、封装测试等多个环节。如三星。</li>
+<li>Fabless：只负责 IC 设计和销售，其他环节外包。如联发科。</li>
 </ul>
 <h2 id="半导体行业常用工业软件">半导体行业常用工业软件</h2>
 <p>对于半导体厂内<em>自动化系统</em>常用工业软件，一般可分为四个层级：</p>
@@ -247,7 +229,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="一般控制层">一般<strong>控制</strong>层</h3>
+<h3 id="一般控制层">一般控制层</h3>
 <ul>
 <li>自动化系统
 <ul>
@@ -275,6 +257,7 @@
 <li><strong><ruby>PLC<rt>可编程逻辑控制器</rt></ruby></strong>（Programmable Logic Controller）</li>
 <li>其他 censor 等</li>
 </ul>
+<hr>
 <p>CIM 主体包括 <strong>MES</strong> 和 <strong>EAP</strong>。MES 负责车间生产管理和调度执行，实时监控生产过程并响应状态变化。EAP 对接 MES 和机台设备，负责信息传输、数据搜集、流程控制和异常捕捉。因而 APC、FDC、 PMS 等系统通常都围绕 EAP 运作。</p>
 <p>EAP 与 MES 等其他系统间通讯采用 Tibco RV 协议、与机台设备间通讯采用 SECS/GEM 等等协议。</p>
 <div class="mermaid" id="id-2"></div>
@@ -299,7 +282,7 @@
 <li>西门子（CAMSTAR、SIMATIC IT）</li>
 </ul>
 <h2 id="mes车间的头子">MES：「车间的头子」</h2>
-<p>MES 上接计划层（如 ERP），下接一般控制层（如 EAP），主要面向在现场一线操作的车间管理人员。实际上是多个模块集中呈现的平台，针对整个工厂，对稳定性要求较高。实际解决方案包括：</p>
+<p>MES 上接计划层（如 ERP），下接一般控制层（如 EAP 或 <strong><ruby>SCADA<rt>监控与资料收集系统</rt></ruby></strong>），主要面向在现场一线操作的车间管理人员。实际上是多个模块集中呈现的平台，针对整个工厂，对稳定性要求较高。实际解决方案包括：</p>
 <ul>
 <li>计划排程管理</li>
 <li><strong><ruby>PRP<rt>生产工艺流程</rt></ruby></strong>（Process Plan）：对生产的流程进行四层抽象（从单个 <strong><ruby>operation<rt>操作</rt></ruby></strong> 到连接成 <strong><ruby>stage<rt>步骤</rt></ruby></strong>，再连接为一个大的 <strong><ruby>layer<rt>层</rt></ruby></strong>，最后成为一条完整的 <strong><ruby>route<rt>路径</rt></ruby></strong>）</li>
@@ -313,6 +296,7 @@
 <p>EAP 上接 MES，下接机台设备。MES 所管理的各项数据都来自 EAP。EAP 先搜集所有生产数据和机台状态数据，再经由特定通讯协议传送到 MES 数据库，MES 再借由数据分析监控设备和生产流程。其同时也是整个 CIM 中其他模块的数据源。</p>
 <p>例如生产状态的变化：由 EAP <strong>告知</strong> MES 一批货物状态的变化，MES <strong>改变</strong>这批货物的状态。</p>
 <div class="mermaid" id="id-3"></div>
+<p>对比单纯进行数据采集和一定图形界面化呈现的 SCADA，EAP 能配合其他模块达到生产自动化的要求、作为管理平台、融合 <strong><ruby>BI<rt>商业智能</rt></ruby></strong>（business intelligence）分析。</p>
 <h2 id="apc管控过程提升良率">APC：管控过程、提升良率</h2>
 <p>半导体量产中，由于投资规模庞大，良率哪怕能做到 1% 的提升，都能带来非常可观的收益增加。APC 就是一种提升良率或产能的综合解决方案。一般包括 R2R、FDC、OEE。在制程执行时，期间存在各种影响因素导致量产出的晶圆存在差异，需要通过实时监控影响因素变化的参数来提升良率或产能，而这依赖于 APC 对数据的搜集，包括 <strong><ruby>DCU<rt>数据收集单元</rt></ruby></strong>（Data Collection Unit）主动收集的资料以及对其他系统（如 MES、PMS 等）资料的运用。</p>
 <p>有关 APC 的更多信息，可<a href="http://franktsao.blogspot.com/2009/10/apc.html" target="_blank" rel="noopener noreffer">按此访问</a>鼎捷软件曹永诚所撰导论（2005 年 6 月，Blogspot 链接）。</p>
@@ -321,8 +305,8 @@
 <ul>
 <li><strong><ruby>OHT<rt>空中行走式/高架搬运系统</rt></ruby></strong>（Overhead Hoist Transfer），多用在加工区间内（Intra-bay），也可用于不同区间之间（Inter-bay）或覆盖全厂（factory wide）的运输。</li>
 <li><strong><ruby>OHS<rt>空中行走式/高架搬运车</rt></ruby></strong>（Overhead Shuttle），常用于不同仓储设备间（也称 Inter-bay Transport System）。</li>
-<li>AGV（Automated Guided Vehicle），常用在复杂路径。</li>
-<li>RGV（Rail Guided Vehicle），轨道运输，带机械臂。</li>
+<li><strong><ruby>AGV<rt>自动导引车</rt></ruby></strong>（Automated Guided Vehicle），常用在复杂路径。</li>
+<li><strong><ruby>RGV<rt>有轨导引车</rt></ruby></strong>（Rail Guided Vehicle），轨道运输，带机械臂。</li>
 </ul>
 <h2 id="半导体制作工序英文对照">半导体制作工序：英文对照</h2>
 <div class="mermaid" id="id-4"></div>
@@ -351,7 +335,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/cpp-template-friend/" class="prev" rel="prev" title="C&#43;&#43; 模版类重载流输入输出运算符"><i class="fas fa-angle-left fa-fw"></i>C&#43;&#43; 模版类重载流输入输出运算符</a></div>
+    <div class="post-nav"><a href="/cpp-template-friend/" class="prev" rel="prev" title="C&#43;&#43; 模版类重载流输入输出运算符"><i class="fas fa-angle-left fa-fw"></i>C&#43;&#43; 模版类重载流输入输出运算符</a>
+            <a href="/bakery/" class="next" rel="next" title="糕点铺">糕点铺<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="waline" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
@@ -370,7 +355,7 @@
             gtag('config', 'G-7EJXLY66RT');
         </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-7EJXLY66RT" async></script></div>
 
-<div class="pjax-assets"><script type="text/javascript" src="/lib/waline/Waline.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{"waline":{"avatar":"hide","copyright":true,"dark":"body[theme='dark'], body[theme='black']","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/tw-emoji","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus"],"highlight":true,"lang":"zh-cn","login":"enable","meta":["nick","mail","link"],"pageSize":10,"serverURL":"https://waline-phi-beige.vercel.app"}},"data":{"id-1":"flowchart TD\n\tsubgraph 1.晶圆加工\n\taa1[\"铸锭\u003cbr\u003e分离提纯硅，熔化再凝固铸成硅锭（硅柱）\"]--\u003eaa2[锭切割\u003cbr\u003e将硅锭切为薄片]--\u003eaa3[裸片表面抛光\u003cbr\u003e打磨上一步切成的薄片以绘制电路]\n\tend\n\tsubgraph 2.氧化\n\t去除杂质--\u003ebb2[高温形成氧化层]--\u003e氧化层厚度测试\n\tend\n\tsubgraph 3.光刻\n\t涂覆光刻胶--\u003ecc2[\"曝光\u003cbr\u003e光线穿过刻好电路图案的光罩（reticle）照射在光刻胶薄膜上\"]--\u003ecc3[显影\u003cbr\u003e喷涂显影剂去除未覆盖区域的光刻胶\u003cbr\u003e使电路图案显现]\n\tend\n\tsubgraph 4.刻蚀\n\tdd1[\"去除多余的氧化膜，只留下电路图部分\"]\n\tend\n\tsubgraph 5.薄膜沉积\n\tee1[\"通过 CVD/PVD 等技术形成多层半导体结构\u003cbr\u003e将导体和绝缘体沉积到晶圆上\"]\n\tend\n\tsubgraph 6.互连\n\t用铝或铜等导电金属连接晶体管\n\tend\n\tsubgraph 7.测试\n\t\tsubgraph EDS\n\t\t\tEPM--\u003e老化测试--\u003e针测--\u003e修补--\u003e75[点墨\u003cbr\u003e标记缺陷]\n\t\tend\n\tend\n\tsubgraph 8.封装\n\t\tsubgraph hh5[封装]\n\t\t\tsubgraph 传统封装技术\n\t\t\t\t811[\"- DIP\u003cbr\u003e- SOP\u003cbr\u003e- TSOP\u003cbr\u003e- QFP\u003cbr\u003e...\"]\n\t\t\tend\n\t\t\tsubgraph 先进封装技术\n\t\t\t\t821[\"- 倒装（flip chip）\u003cbr\u003e- 凸块（bumping）\u003cbr\u003e- 晶圆级封装（WLP）\u003cbr\u003e- 2.5D\u003cbr\u003e- 3D\u003cbr\u003e...\"]\n\t\t\tend\n\t\tend\n\thh1[晶圆锯切成 die]--\u003e单个晶片附着至引线框架--\u003egg3[屏蔽焊接\u003cbr\u003e连接晶片与基地的接触点实现电信号转换]--\u003e模具塑封成型--\u003ehh5\n\tend\n\t1.晶圆加工--\u003e2.氧化--\u003e3.光刻--\u003e4.刻蚀--\u003e5.薄膜沉积--\u003e6.互连--\u003e7.测试--\u003e8.封装","id-2":"classDiagram\n\tclass 计划层{\n\t\t ERP/SCM/PLM\n\t\t OA/CRM/APS/...\n\t}\n\tclass CIM{\n\t\tMES/RTD/SPC...\n\t}\n\tclass 一般控制层{\n\t\tEAP\n\t\tEES/APC/FDC...\n\t}\n\t计划层 \u003c--\u003e CIM\n\tCIM \u003c--\u003e 一般控制层 : SECS/GEM","id-3":"stateDiagram\n\ts1: 计划(planned)\n\ts2: 激活(activated)\n\ts3: 等待处理(waiting)\n\ts4: 结束(completed)\n\ts5: 派工(dispatch)\n\ts6: 正在加工(processing)\n\ts7: 加工完成(finish)\n\t[*]--\u003es1\n\ts1--\u003es2:分配输送盒\n\ts2--\u003es3\n\ts3--\u003es2:解除等待\n\ts2--\u003es5\n\ts5--\u003es2:解除派工\n\ts5--\u003es6:移入加工\n\ts6--\u003es5:取消移入\n\ts6--\u003es7\n\ts7--\u003es3\n\ts3--\u003es7\n\ts7--\u003es4\n\ts2--\u003es4\n\ts3--\u003es5","id-4":"flowchart TD\n\tsubgraph a[1.Wafer Processing]\n\ta1[Cast]--\u003ea2[Slice]--\u003ea3[Polish the surface]\n\tend\n\tsubgraph b[2.Exposed to oxygen]\n\tb1[Clean]--\u003eb2[Exposed to oxygen\u003cbr\u003eat high temperatures\u003cbr\u003eto create a layer of silicon oxide]--\u003eb3[Layer Thickness Test]\n\tend\n\tsubgraph c[3.Lithography]\n\tc1[Apply a UV-sensitive photoresist on the surface]--\u003ec2[Irradiate the UV light to transfer the pattern onto the photoresist]--\u003ec3[Remove unexposed area]\n\tend\n\tsubgraph d[4.Etching and Removing]\n\td1[To etch films of unmasked area and remove the photoresist]\n\tend\n\tsubgraph e[5.Film Depositing]\n\te1[using CVD or PVD]\n\tend\n\tsubgraph f[6.Interconnect Formation]\n\tf1[To form wiring layers]\n\tend\n\tsubgraph g[7.Wafer Testing]\n\tg1[EDS]\n\tend\n\tsubgraph h[8.Assembly and Testing]\n\th1[Cut into die]--\u003eh2[Attached to the package substrate]--\u003eh3[Connected to inner leads]--\u003eh4[Sealed in an epoxy resin envelope]--\u003eh5[Test]\n\tend\n\ta--\u003eb--\u003ec--\u003ed--\u003ee--\u003ef--\u003eg--\u003eh"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"mermaid":true,"search":{"algoliaAppID":"GWFPDOM059","algoliaIndex":"blog","algoliaSearchKey":"1abb8ad20b4133d6e644b1a4174ee095","highlightTag":"em","maxResultLength":5,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"twemoji":true};</script>
+<div class="pjax-assets"><script type="text/javascript" src="/lib/waline/Waline.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{"waline":{"avatar":"hide","copyright":true,"dark":"body[theme='dark'], body[theme='black']","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/tw-emoji","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus"],"highlight":true,"lang":"zh-cn","login":"enable","meta":["nick","mail","link"],"pageSize":10,"serverURL":"https://waline-phi-beige.vercel.app"}},"data":{"id-1":"flowchart TD\n\tsubgraph 1.晶圆加工\n\taa1[\"铸锭\u003cbr\u003e分离提纯硅，熔化再凝固铸成硅锭（硅柱）\"]--\u003eaa2[锭切割\u003cbr\u003e将硅锭切为薄片]--\u003eaa3[裸片表面抛光\u003cbr\u003e打磨上一步切成的薄片以绘制电路]\n\tend\n\tsubgraph 2.氧化\n\t去除杂质--\u003ebb2[高温形成氧化层]--\u003e氧化层厚度测试\n\tend\n\tsubgraph 3.光刻\n\t涂覆光刻胶--\u003ecc2[\"曝光\u003cbr\u003e光线穿过刻好电路图案的光罩（reticle）照射在光刻胶薄膜上\"]--\u003ecc3[显影\u003cbr\u003e喷涂显影剂去除未覆盖区域的光刻胶\u003cbr\u003e使电路图案显现]\n\tend\n\tsubgraph 4.刻蚀\n\tdd1[\"去除多余的氧化膜，只留下电路图部分\"]\n\tend\n\tsubgraph 5.薄膜沉积\n\tee1[\"通过 CVD/PVD 等技术形成多层半导体结构\u003cbr\u003e将导体和绝缘体沉积到晶圆上\"]\n\tend\n\tsubgraph 6.互连\n\t用铝或铜等导电金属连接晶体管\n\tend\n\tsubgraph 7.测试\n\t\tsubgraph EDS\n\t\t\tEPM--\u003e老化测试--\u003e针测--\u003e修补--\u003e75[点墨\u003cbr\u003e标记缺陷]\n\t\tend\n\tend\n\tsubgraph 8.封装\n\t\tsubgraph hh5[封装]\n\t\t\tsubgraph 传统封装技术\n\t\t\t\t811[\"- DIP\u003cbr\u003e- SOP\u003cbr\u003e- TSOP\u003cbr\u003e- QFP\u003cbr\u003e...\"]\n\t\t\tend\n\t\t\tsubgraph 先进封装技术\n\t\t\t\t821[\"- 倒装（flip chip）\u003cbr\u003e- 凸块（bumping）\u003cbr\u003e- 晶圆级封装（WLP）\u003cbr\u003e- 2.5D\u003cbr\u003e- 3D\u003cbr\u003e...\"]\n\t\t\tend\n\t\tend\n\thh1[晶圆锯切成 die]--\u003e单个晶片附着至引线框架--\u003egg3[屏蔽焊接\u003cbr\u003e连接晶片与基地的接触点实现电信号转换]--\u003e模具塑封成型--\u003ehh5\n\tend\n\tmm(\"（IC 设计）\")--\u003e1.晶圆加工--\u003e2.氧化--\u003e3.光刻--\u003e4.刻蚀--\u003e5.薄膜沉积--\u003e6.互连--\u003e7.测试--\u003e8.封装","id-2":"classDiagram\n\tclass 计划层{\n\t\t ERP/SCM/PLM\n\t\t OA/CRM/APS/...\n\t}\n\tclass CIM{\n\t\tMES/RTD/SPC...\n\t}\n\tclass 一般控制层{\n\t\tEAP\n\t\tEES/APC/FDC...\n\t}\n\t计划层 \u003c--\u003e CIM\n\tCIM \u003c--\u003e 一般控制层 : SECS/GEM","id-3":"stateDiagram\n\ts1: 计划(planned)\n\ts2: 激活(activated)\n\ts3: 等待处理(waiting)\n\ts4: 结束(completed)\n\ts5: 派工(dispatch)\n\ts6: 正在加工(processing)\n\ts7: 加工完成(finish)\n\t[*]--\u003es1\n\ts1--\u003es2:分配输送盒\n\ts2--\u003es3\n\ts3--\u003es2:解除等待\n\ts2--\u003es5\n\ts5--\u003es2:解除派工\n\ts5--\u003es6:移入加工\n\ts6--\u003es5:取消移入\n\ts6--\u003es7\n\ts7--\u003es3\n\ts3--\u003es7\n\ts7--\u003es4\n\ts2--\u003es4\n\ts3--\u003es5","id-4":"flowchart TD\n\tsubgraph a[1.Wafer Processing]\n\ta1[Cast]--\u003ea2[Slice]--\u003ea3[Polish the surface]\n\tend\n\tsubgraph b[2.Exposed to oxygen]\n\tb1[Clean]--\u003eb2[Exposed to oxygen\u003cbr\u003eat high temperatures\u003cbr\u003eto create a layer of silicon oxide]--\u003eb3[Layer Thickness Test]\n\tend\n\tsubgraph c[3.Lithography]\n\tc1[Apply a UV-sensitive photoresist on the surface]--\u003ec2[Irradiate the UV light to transfer the pattern onto the photoresist]--\u003ec3[Remove unexposed area]\n\tend\n\tsubgraph d[4.Etching and Removing]\n\td1[To etch films of unmasked area and remove the photoresist]\n\tend\n\tsubgraph e[5.Film Depositing]\n\te1[using CVD or PVD]\n\tend\n\tsubgraph f[6.Interconnect Formation]\n\tf1[To form wiring layers]\n\tend\n\tsubgraph g[7.Wafer Testing]\n\tg1[EDS]\n\tend\n\tsubgraph h[8.Assembly and Testing]\n\th1[Cut into die]--\u003eh2[Attached to the package substrate]--\u003eh3[Connected to inner leads]--\u003eh4[Sealed in an epoxy resin envelope]--\u003eh5[Test]\n\tend\n\tmm(\"(IC Design)\")--\u003ea--\u003eb--\u003ec--\u003ed--\u003ee--\u003ef--\u003eg--\u003eh"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"mermaid":true,"search":{"algoliaAppID":"GWFPDOM059","algoliaIndex":"blog","algoliaSearchKey":"1abb8ad20b4133d6e644b1a4174ee095","highlightTag":"em","maxResultLength":5,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"twemoji":true};</script>
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
     <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
     <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/mermaid/mermaid.min.css">
