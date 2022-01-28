@@ -15,25 +15,53 @@
     <description><![CDATA[<p>由于涉及英文简称较多，以及行业常用英文单词作指代，此博文会在初次提及某简称或某单词时标明中文。</p>
 <h2 id="半导体制作工序">半导体制作工序</h2>
 <div class="mermaid" id="id-1"></div>
-<p>英文对照请见<a href="#%e5%8d%8a%e5%af%bc%e4%bd%93%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f%e8%8b%b1%e6%96%87%e5%af%b9%e7%85%a7" rel="">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/" target="_blank" rel="noopener noreffer">按此访问</a>东京威力科创制作的工序介绍。</p>
-<p>半导体制作工序可分为前、后两道。前道包括 <code>1.晶圆加工</code> -&gt;<code> 7.测试</code>，后道包括<code>8.封装</code>及后期测试、成品入库。</p>
+<p>参考自泛林集团科普文章：<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&amp;mid=2653071344&amp;idx=1&amp;sn=5afa34f0343fe651c352fb1db90e4078&amp;chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b" target="_blank" rel="noopener noreffer">上篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&amp;new=1" target="_blank" rel="noopener noreffer">中篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&amp;new=1" target="_blank" rel="noopener noreffer">下篇</a>。英文对照请见<a href="#%e5%8d%8a%e5%af%bc%e4%bd%93%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f%e8%8b%b1%e6%96%87%e5%af%b9%e7%85%a7" rel="">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/" target="_blank" rel="noopener noreffer">按此访问</a>东京威力科创制作的工序介绍。</p>
+<p>半导体制作工序可分为前、后两道。前道包括 <code>1.晶圆加工</code> -&gt;<code> 7.测试</code>，后道包括<code>8.封装</code>及后期测试、其他组装、成品入库等。</p>
 <p>常用英文名词：</p>
 <ul>
-<li>wafer：晶圆，硅晶片。分有 6、8、12 英寸。</li>
-<li>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</li>
-<li>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</li>
-<li>cassette：晶盒。用来装 wafer。
+<li>
+<p>wafer：晶圆，硅晶片。分有 6、8、12 吋。</p>
+</li>
+<li>
+<p>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</p>
+</li>
+<li>
+<p>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</p>
+</li>
+<li>
+<p>cassette：晶盒。用来装 wafer。</p>
 <ul>
 <li>FOUP（Front Opening Unified Pod）：前开晶片（统一）传送盒。一般用于厂内运输 wafer。</li>
 <li>FOSB（Front Opening Shipping Box）：前开晶片运输盒。一般用于厂间成品或半成品运输。</li>
 </ul>
 </li>
-<li>lot：批次。</li>
-<li>recipe：制程配方。</li>
-<li>equipment：机台，加工线上的所有设备。</li>
+<li>
+<p>lot：批次。</p>
+</li>
+<li>
+<p>recipe：制程配方。</p>
+</li>
+<li>
+<p>equipment：机台，加工线上的所有设备。</p>
+</li>
+<li>
+<p>fab（Semiconductor Fabrication Plant）：半导体制造厂。</p>
+</li>
+<li>
+<p>WAT（Wafer Acceptance Test）：晶圆允收测试</p>
+</li>
+<li>
+<p>UAT（User Acceptance Test）：用户允收测试</p>
+</li>
+<li>
+<p>CP Yield（Circuit Probe Yield）：晶圆测试良率</p>
+</li>
+<li>
+<p>RFP/RP（Request for Proposal）：需求建议书</p>
+</li>
 </ul>
 <h2 id="半导体行业常用工业软件">半导体行业常用工业软件</h2>
-<p>一般可以分为四个层级：</p>
+<p>对于半导体厂内<em>自动化系统</em>常用工业软件，一般可分为四个层级：</p>
 <h3 id="计划管理决策层">计划管理/决策层</h3>
 <ul>
 <li><strong><ruby>ERP<rt>企业资源计划</rt></ruby></strong>（Enterprise Resource Planning）</li>
@@ -45,7 +73,7 @@
 <h3 id="计算机集成制造层">计算机集成制造层</h3>
 <p><strong><ruby>CIM<rt>计算机集成制造</rt></ruby></strong>（Computer Integrated Manufacturing）</p>
 <ul>
-<li>生产管理和监测</li>
+<li>制造管理和监测</li>
 <li>制造执行
 <ul>
 <li><strong><ruby>MES<rt>制造执行系统</rt></ruby></strong>（Manufacturing Execution System）</li>
@@ -54,7 +82,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="一般控制层">一般控制层</h3>
+<h3 id="一般控制层">一般<strong>控制</strong>层</h3>
 <ul>
 <li>自动化系统
 <ul>
@@ -73,7 +101,7 @@
 <li><strong><ruby>YMS<rt>良率管理系统</rt></ruby></strong>（Yield Management System）</li>
 <li><strong><ruby>TMS<rt>运输管理系统</rt></ruby></strong>（Transportation Management System）</li>
 <li><strong><ruby>RMS<rt>Recipe/配方管理系统</rt></ruby></strong>（Recipe Management System）</li>
-<li>与 <strong><ruby>AMHS<rt>自动物料搬送系统/天车</rt></ruby></strong>（Automatic Material Handling System）和 <strong><ruby>AGV<rt>自动导引车</rt></ruby></strong>（Automated Guided Vehicle）的配合</li>
+<li>与 <strong><ruby>AMHS<rt>自动物料搬送系统/天车</rt></ruby></strong>（Automatic Material Handling System）的配合</li>
 </ul>
 </li>
 </ul>
@@ -83,10 +111,30 @@
 <li>其他 censor 等</li>
 </ul>
 <p>CIM 主体包括 <strong>MES</strong> 和 <strong>EAP</strong>。MES 负责车间生产管理和调度执行，实时监控生产过程并响应状态变化。EAP 对接 MES 和机台设备，负责信息传输、数据搜集、流程控制和异常捕捉。因而 APC、FDC、 PMS 等系统通常都围绕 EAP 运作。</p>
-<p>EAP 与机台设备间使用如 SECS/GEM、TCP/IP 等通信协议进行连接和信息传递。</p>
+<p>EAP 与 MES 等其他系统间通讯采用 Tibco RV 协议、与机台设备间通讯采用 SECS/GEM 等等协议。</p>
 <div class="mermaid" id="id-2"></div>
-<h2 id="讲讲-mes">讲讲 MES</h2>
-<p>可以把 MES 理解为「车间的头子」。它上接计划层（如 ERP），下接一般控制层（如 EAP），主要面向在现场一线操作的车间管理人员。实际上就是多个模块集中呈现的一个平台。实际解决方案包括：</p>
+<h3 id="市场主要厂商">市场主要厂商</h3>
+<p>前道 CIM：</p>
+<ul>
+<li>IBM（SiView）</li>
+<li>应用材料（Applied Materials）（FAB300）</li>
+</ul>
+<p>MES：</p>
+<ul>
+<li>西门子（Siemens）</li>
+<li>霍尼韦尔（Honeywell Forge）</li>
+<li>艾默生（Emerson）</li>
+<li>罗克韦尔（Rockwell Automation）</li>
+<li>达索（Dassault）</li>
+<li>ABB Ability</li>
+</ul>
+<p>YMS 多独立厂家，如 Synopsys（Synopsys Odyssey）。</p>
+<p>后道封装：</p>
+<ul>
+<li>西门子（CAMSTAR、SIMATIC IT）</li>
+</ul>
+<h2 id="mes车间的头子">MES：「车间的头子」</h2>
+<p>MES 上接计划层（如 ERP），下接一般控制层（如 EAP），主要面向在现场一线操作的车间管理人员。实际上是多个模块集中呈现的平台，针对整个工厂，对稳定性要求较高。实际解决方案包括：</p>
 <ul>
 <li>计划排程管理</li>
 <li><strong><ruby>PRP<rt>生产工艺流程</rt></ruby></strong>（Process Plan）：对生产的流程进行四层抽象（从单个 <strong><ruby>operation<rt>操作</rt></ruby></strong> 到连接成 <strong><ruby>stage<rt>步骤</rt></ruby></strong>，再连接为一个大的 <strong><ruby>layer<rt>层</rt></ruby></strong>，最后成为一条完整的 <strong><ruby>route<rt>路径</rt></ruby></strong>）</li>
@@ -94,12 +142,23 @@
 <li>设备管理</li>
 <li>数据管理</li>
 <li>报表管理</li>
-<li><strong><ruby>GUI<rt>用户界面设计</rt></ruby></strong>：包括面向生产线操作员和面向工艺工程师等不同界面</li>
+<li><strong><ruby>GUI<rt>图形界面设计</rt></ruby></strong>：包括面向生产线操作员和面向工艺工程师等不同界面</li>
 </ul>
-<h2 id="讲讲-eap">讲讲 EAP</h2>
+<h2 id="eap搜集信息传达指令">EAP：搜集信息、传达指令</h2>
 <p>EAP 上接 MES，下接机台设备。MES 所管理的各项数据都来自 EAP。EAP 先搜集所有生产数据和机台状态数据，再经由特定通讯协议传送到 MES 数据库，MES 再借由数据分析监控设备和生产流程。其同时也是整个 CIM 中其他模块的数据源。</p>
 <p>例如生产状态的变化：由 EAP <strong>告知</strong> MES 一批货物状态的变化，MES <strong>改变</strong>这批货物的状态。</p>
 <div class="mermaid" id="id-3"></div>
+<h2 id="apc管控过程提升良率">APC：管控过程、提升良率</h2>
+<p>半导体量产中，由于投资规模庞大，良率哪怕能做到 1% 的提升，都能带来非常可观的收益增加。APC 就是一种提升良率或产能的综合解决方案。一般包括 R2R、FDC、OEE。在制程执行时，期间存在各种影响因素导致量产出的晶圆存在差异，需要通过实时监控影响因素变化的参数来提升良率或产能，而这依赖于 APC 对数据的搜集，包括 <strong><ruby>DCU<rt>数据收集单元</rt></ruby></strong>（Data Collection Unit）主动收集的资料以及对其他系统（如 MES、PMS 等）资料的运用。</p>
+<p>有关 APC 的更多信息，可<a href="http://franktsao.blogspot.com/2009/10/apc.html" target="_blank" rel="noopener noreffer">按此访问</a>鼎捷软件曹永诚所撰导论（2005 年 6 月，Blogspot 链接）。</p>
+<h2 id="关于-amhs">关于 AMHS</h2>
+<p>12 吋厂线的 RTD 多与 AMHS 搭配使用以达到更高程度的自动化，通常还与 <strong><ruby>MCS<rt>物料控制系统</rt></ruby></strong>（Material Control System） 一起运作。RTD 针对制程情况给出派货建议，未配备 AMHS 的工厂一般通过人工运输，配备 AMHS 则可以相互通讯以自动运输。AMHS 中各种器械有序灵活的运作，能让人直观感受到工业制造具备的魅力。一般包括：</p>
+<ul>
+<li><strong><ruby>OHT<rt>空中行走式/高架搬运系统</rt></ruby></strong>（Overhead Hoist Transfer），多用在加工区间内（Intra-bay），也可用于不同区间之间（Inter-bay）或覆盖全厂（factory wide）的运输。</li>
+<li><strong><ruby>OHS<rt>空中行走式/高架搬运车</rt></ruby></strong>（Overhead Shuttle），常用于不同仓储设备间（也称 Inter-bay Transport System）。</li>
+<li>AGV（Automated Guided Vehicle），常用在复杂路径。</li>
+<li>RGV（Rail Guided Vehicle），轨道运输，带机械臂。</li>
+</ul>
 <h2 id="半导体制作工序英文对照">半导体制作工序：英文对照</h2>
 <div class="mermaid" id="id-4"></div>
 ]]></description>
