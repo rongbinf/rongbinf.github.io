@@ -11,17 +11,17 @@
         <name>FAN Rongbin</name>
     </author><guid>https://fanrongbin.com/bakery/</guid>
     <description><![CDATA[<p>实习，住在团结湖，附近有一家糕点铺，晚上下班总要路过它。门口常常排着不长不短的队，几乎每次我都会装作心不在焉地往亮堂堂的橱窗一瞥，看看今天是绿豆酥饼卖得好，还是有新面包出炉。暗地里，我也决定找个时间也去排排队，买一盒试试看。今天是这个月最后一天班，坐上公交，想象那条刚认识没多久的路，先过路口，拐弯，直行，再走到对面，就能到糕点铺了。刷卡下车后我抬起头走路，可劲儿往对面瞧，却怎么也看不到那面墨绿色的招牌，一时以为是自己搞混了。怀疑的脚步越来越近，才发现关了灯、拉了铁门，赖以辨认的人群四散。今天已经是廿六了，后天回家，节后总要再过来。「所以总有机会吧」，这么想着，埋头往别处走了。</p>
-<p>过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己吃上酥饼的希望真的很渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要「把握住机会」和「活在当下」的道理戒律，如此这般活，由着很多事情错过。</p>
+<p>过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己再回来买酥饼的希望过分渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要「把握住机会」和「活在当下」的道理戒律，如此这般活，由着很多事情错过。</p>
 ]]></description>
 </item><item>
-    <title>半导体制作工序 &amp; 行业常见软件模块梳理</title>
+    <title>半导体制作工序 &amp; 常见自动化软件模块梳理</title>
     <link>https://fanrongbin.com/semiconductor-procedure/</link>
     <pubDate>Thu, 27 Jan 2022 00:00:00 &#43;0000</pubDate><author>
         <name>FAN Rongbin</name>
     </author><guid>https://fanrongbin.com/semiconductor-procedure/</guid>
     <description><![CDATA[<h2 id="半导体制作工序">半导体制作工序</h2>
 <div class="mermaid" id="id-1"></div>
-<p>参考自泛林集团科普文章：<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&amp;mid=2653071344&amp;idx=1&amp;sn=5afa34f0343fe651c352fb1db90e4078&amp;chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b" target="_blank" rel="noopener noreffer">上篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&amp;new=1" target="_blank" rel="noopener noreffer">中篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&amp;new=1" target="_blank" rel="noopener noreffer">下篇</a>。英文对照请见<a href="#%e5%8d%8a%e5%af%bc%e4%bd%93%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f%e8%8b%b1%e6%96%87%e5%af%b9%e7%85%a7" rel="">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/" target="_blank" rel="noopener noreffer">按此访问</a>东京威力科创制作的工序介绍。</p>
+<p>参考自泛林集团科普文章：<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&amp;mid=2653071344&amp;idx=1&amp;sn=5afa34f0343fe651c352fb1db90e4078&amp;chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b" target="_blank" rel="noopener noreffer">上篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&amp;new=1" target="_blank" rel="noopener noreffer">中篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&amp;new=1" target="_blank" rel="noopener noreffer">下篇</a>。英文对照请见<a href="#%e5%8d%8a%e5%af%bc%e4%bd%93%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f%e8%8b%b1%e6%96%87%e4%b8%8d%e5%ae%8c%e5%85%a8%e5%af%b9%e7%85%a7" rel="">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/" target="_blank" rel="noopener noreffer">按此访问</a>东京威力科创制作的工序介绍。</p>
 <p>半导体制作工序可分为前、后两道。前道包括 <code>1.晶圆加工</code> -&gt;<code> 7.测试</code>，后道包括<code>8.封装</code>及后期测试、其他组装、成品入库等。</p>
 <p>常用英文名词：</p>
 <ul>
@@ -43,7 +43,7 @@
 <li>CP Yield（Circuit Probe Yield）：晶圆测试良率</li>
 <li>RFP/RP（Request for Proposal）：需求建议书</li>
 </ul>
-<p>半导体产业有几种常见商业模式：</p>
+<p>半导体行业有几种常见商业模式：</p>
 <ul>
 <li>Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多个环节。如台积电。</li>
 <li>IDM：包括 IC 设计、晶圆制造、封装测试等多个环节。如三星。</li>
@@ -150,7 +150,7 @@
 <li><strong><ruby>AGV<rt>自动导引车</rt></ruby></strong>（Automated Guided Vehicle），常用在复杂路径。</li>
 <li><strong><ruby>RGV<rt>有轨导引车</rt></ruby></strong>（Rail Guided Vehicle），轨道运输，带机械臂。</li>
 </ul>
-<h2 id="半导体制作工序英文对照">半导体制作工序：英文对照</h2>
+<h2 id="半导体制作工序英文不完全对照">半导体制作工序：英文不完全对照</h2>
 <div class="mermaid" id="id-4"></div>
 ]]></description>
 </item><item>
@@ -893,7 +893,15 @@ Program ended with <span class="nb">exit</span> code: <span class="m">0</span>
     <pubDate>Sun, 31 Oct 2021 00:00:00 &#43;0000</pubDate><author>
         <name>FAN Rongbin</name>
     </author><guid>https://fanrongbin.com/qdii/</guid>
-    <description><![CDATA[<p>现<strong>境内向境外</strong>进行合法投资（除境外直接投资 ODI、陆股通）的三种形式：</p>
+    <description><![CDATA[<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>更新时间<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">本文最后一次更新于 2021 年 10 月 31 日。在<strong>政策</strong>等方面可能有所变化，请知悉。</div>
+        </div>
+    </div>
+<p>现<strong>中国大陆境内向境外</strong>进行合法投资（除境外直接投资 ODI、陆股通）的三种形式：</p>
 <p></p>
 <p>而<strong>境外向境内</strong>进行投资，可分直接投资和间接投资。QFII 和 RQFII 属于外资直接投资境内证券二级市场。其包括股息及买卖价差等在内的各种资本所得，经审核后可转换为外汇汇出。实际为对外资有限度地开放境内的证券市场。</p>
 <p></p>
@@ -937,9 +945,11 @@ Program ended with <span class="nb">exit</span> code: <span class="m">0</span>
 <h3 id="汇率风险">汇率风险</h3>
 <p>情形：人民币兑美元贬值（又或美元自身走强），配置美元资产的 QDII 基金获得收益增强。</p>
 <h3 id="流动性风险">流动性风险</h3>
-<p>情形 1：QDII 基金申购踊跃，其本身因额度限制而暂停申购。</p>
-<p>情形 2：美股节假日休市，亦无法申购赎回。</p>
-<p>情形 3：未开放二级市场交易的某 QDII 基金，从赎回到到账需约 8-10 个工作日。</p>
+<ul>
+<li>情形 1：QDII 基金申购踊跃，其本身因额度限制而暂停申购。</li>
+<li>情形 2：美股节假日休市，亦无法申购赎回。</li>
+<li>情形 3：未开放二级市场交易的某 QDII 基金，从赎回到到账需约 8-10 个工作日。</li>
+</ul>
 ]]></description>
 </item></channel>
 </rss>
