@@ -3,14 +3,13 @@
         <title>静态博客 - 标签 - Rongbin&#39;s Blog</title>
         <link>https://fanrongbin.com/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
         <description>静态博客 - 标签 - Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Tue, 13 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>fanrongbin0201@gmail.com (Rongbin Fan)</managingEditor>
+            <webMaster>fanrongbin0201@gmail.com (Rongbin Fan)</webMaster><lastBuildDate>Tue, 13 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
     <title>Hexo &#43; GitHub Pages &#43; Cloudflare</title>
     <link>https://fanrongbin.com/hexo-github-pages-cloudflare/</link>
     <pubDate>Tue, 13 Feb 2018 00:00:00 &#43;0000</pubDate><author>
-        <name>FAN Rongbin</name>
-    </author><guid>https://fanrongbin.com/hexo-github-pages-cloudflare/</guid>
-    <description><![CDATA[<h1 id="系统环境配置">系统环境配置</h1>
+        <name>Rongbin Fan</name>
+    </author><guid>https://fanrongbin.com/hexo-github-pages-cloudflare/</guid><description><![CDATA[<h1 id="系统环境配置">系统环境配置</h1>
 <h2 id="安装-nodejs">安装 Node.js</h2>
 <p>Node.js 是一种 JavaScript 的运行环境，<a href="https://nodejs.org/download/" target="_blank" rel="noopener noreffer">点击此处</a>以下载。</p>
 <p>如何安装 Node.js 详见<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html/" target="_blank" rel="noopener noreffer">此文章</a>。注意：Linux 上安装 Node.js 需要安装 Python 2.6 或 2.7 ，不建议安装 Python 3.0 以上版本。</p>

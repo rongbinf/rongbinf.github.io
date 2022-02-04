@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Curation - 标签 - Rongbin&#39;s Blog</title>
+        <link>https://fanrongbin.com/tags/curation/</link>
+        <description>Curation - 标签 - Rongbin&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
+            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Sat, 29 Jan 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/curation/" rel="self" type="application/rss+xml" /><item>
+    <title>Hybrid #1</title>
+    <link>https://fanrongbin.com/hybrid-1/</link>
+    <pubDate>Sat, 29 Jan 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>FAN Rongbin</name>
+    </author><guid>https://fanrongbin.com/hybrid-1/</guid>
+    <description><![CDATA[<hr>
+<p>不希望「阅后即忘」、珍惜的文字和图片总怕「次日即焚」、边读才能边写。新的一年，我正式启动这个叫做 Hybrid 的 newsletter 计划。它将会在每周六晚间发送一份我最近读到或看到的精选内容摘录，领域主要为数码科技与社会议题。它的构成通常包括对某篇文章的 tl;dr 小结和一段评论，由于目前正处于起步阶段，还会不断完善。</p>
+<p>Hybrid 搭载于 Hedwi，同步于我的博客、Telegram Channel 更新。同时支持 RSS 订阅。</p>
+]]></description>
+</item></channel>
+</rss>

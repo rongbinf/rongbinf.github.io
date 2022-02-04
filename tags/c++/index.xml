@@ -3,14 +3,13 @@
         <title>C&#43;&#43; - 标签 - Rongbin&#39;s Blog</title>
         <link>https://fanrongbin.com/tags/c&#43;&#43;/</link>
         <description>C&#43;&#43; - 标签 - Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><lastBuildDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</lastBuildDate><atom:link href="https://fanrongbin.com/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>fanrongbin0201@gmail.com (Rongbin Fan)</managingEditor>
+            <webMaster>fanrongbin0201@gmail.com (Rongbin Fan)</webMaster><lastBuildDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</lastBuildDate><atom:link href="https://fanrongbin.com/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
     <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
     <link>https://fanrongbin.com/cpp-template-friend/</link>
     <pubDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</pubDate><author>
-        <name>FAN Rongbin</name>
-    </author><guid>https://fanrongbin.com/cpp-template-friend/</guid>
-    <description><![CDATA[<p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
+        <name>Rongbin Fan</name>
+    </author><guid>https://fanrongbin.com/cpp-template-friend/</guid><description><![CDATA[<p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
 <h2 id="方法-1提前声明并使用--确认">方法 1：提前声明并使用 &lt;&gt; 确认</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -196,9 +195,8 @@
     <title>C&#43;&#43; 中的拷贝构造函数：浅拷贝、深拷贝</title>
     <link>https://fanrongbin.com/cpp-copy-constructor/</link>
     <pubDate>Mon, 29 Nov 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>FAN Rongbin</name>
-    </author><guid>https://fanrongbin.com/cpp-copy-constructor/</guid>
-    <description><![CDATA[<h2 id="什么时候会调用拷贝构造函数">什么时候会调用拷贝构造函数</h2>
+        <name>Rongbin Fan</name>
+    </author><guid>https://fanrongbin.com/cpp-copy-constructor/</guid><description><![CDATA[<h2 id="什么时候会调用拷贝构造函数">什么时候会调用拷贝构造函数</h2>
 <ul>
 <li>一个对象以<strong>值传递</strong>的方式<strong>传入函数体</strong></li>
 <li>一个对象以<strong>值传递</strong>的方式<strong>从函数返回</strong></li>
