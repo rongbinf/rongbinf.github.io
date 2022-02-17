@@ -260,6 +260,13 @@
         ]
     },
     {
+        "title": "在 Big Sur 安装 PocketSphinx 时出现的问题",
+        "uri": "posts/PocketSphinx-install-errors",
+        "content": "swig          swig     setup py    error  command  swig  failed  No file directory    OpenAL          Catalina            setup py   OpenAL         235   sbincludedirs append   System Library Frameworks OpenAL framework Versions A Headers     sbincludedirs append   Applications Xcode app Contents Developer Platforms MacOSX platform Developer SDKs MacOSX sdk System Library Frameworks OpenAL framework Versions A Headers       242   extra_objects    System Library Frameworks OpenAL framework Versions A OpenAL      extra_objects    Applications Xcode app Contents Developer Platforms MacOSX platform Developer SDKs MacOSX sdk System Library Frameworks OpenAL framework Versions A OpenAL tbd                     fatal error   al h  file not found  include    1 error generated  error  command   usr bin gcc  failed exit code 1     pocketsphinx python deps sphinxbase src libsphinxad ad_openal c    include  include       include  include",
+        "objectID": "posts/PocketSphinx-install-errors",
+        "date": "2022-02-17T00:00:00.000Z"
+    },
+    {
         "title": "QDII 与 QDII 基金买卖",
         "uri": "posts/qdii",
         "content": "2021   10   31                                                   ODI                                   QFII   RQFII                                                                         QDII                                      QDII                                     QDII                                                                   REITs             FOF T 2             QDII      T 1            QDII      T 2                           QDII                             9 30 11 30 13 00 15 00                                                                                                                                                                                      2021   10   25     14 00                 QDII      10   26     4 00                   10   27                       10   28             T 1                                             10                                                                                     QDII                    1 QDII                          2                     3             QDII             8 10",

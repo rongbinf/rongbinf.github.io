@@ -4,9 +4,85 @@
         <link>https://fanrongbin.com/</link>
         <description>一个博客。</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>fanrongbin0201@gmail.com (Rongbin Fan)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (Rongbin Fan)</webMaster><lastBuildDate>Sat, 05 Feb 2022 00:00:00 &#43;0800</lastBuildDate>
+            <webMaster>fanrongbin0201@gmail.com (Rongbin Fan)</webMaster><lastBuildDate>Thu, 17 Feb 2022 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>在 Big Sur 安装 PocketSphinx 时出现的问题</title>
+    <link>https://fanrongbin.com/pocketsphinx-install-errors/</link>
+    <pubDate>Thu, 17 Feb 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>Rongbin Fan</name>
+    </author><guid>https://fanrongbin.com/pocketsphinx-install-errors/</guid><description><![CDATA[<h2 id="确认安装了swig">确认安装了<code>swig</code></h2>
+<p>首先确认是否安装了<code>swig</code>，否则运行<code>setup.py</code>报错：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">error: command &#39;swig&#39; failed: No such file or directory
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="修改-openal-的位置">修改 OpenAL 的位置</h2>
+<p>似乎对于 Catalina 以及后续版本，都需要在<code>setup.py</code>中修改<code>OpenAL</code>的位置：</p>
+<p>修改第 235 行：<code>sb_include_dirs.append('/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers')</code>为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sb_include_dirs.append(&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;)
+</code></pre></td></tr></table>
+</div>
+</div><p>修改第 242 行：<code>extra_objects=['/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL'],</code>为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">extra_objects=[&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL.tbd&#39;],
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="修改调用头文件的名字">修改调用头文件的名字</h2>
+<p>对于报错：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">fatal error: &#39;al.h&#39; file not found
+      #include &lt;al.h&gt;
+               ^~~~~~
+      1 error generated.
+error: command &#39;/usr/bin/gcc&#39; failed with exit code 1
+</code></pre></td></tr></table>
+</div>
+</div><p>需要对<code>/pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c</code>中的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">#include &lt;al.h&gt;
+#include &lt;alc.h&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>修改为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">#include &lt;OpenAL/al.h&gt;
+#include &lt;OpenAL/alc.h&gt;
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
     <title>Hybrid #1</title>
     <link>https://fanrongbin.com/hybrid-1/</link>
     <pubDate>Sat, 05 Feb 2022 00:00:00 &#43;0800</pubDate><author>
@@ -1175,250 +1251,6 @@ Program ended with <span class="nb">exit</span> code: <span class="m">0</span>
 </ol>
 
 <p>右上角显示连接网线的 icon 即实现有线回程。</p>
-]]></description>
-</item><item>
-    <title>树莓派实现开机自动播放 RTSP 流视频</title>
-    <link>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
-    <pubDate>Wed, 06 Jan 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>Rongbin Fan</name>
-    </author><guid>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid><description><![CDATA[<p>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。</p>
-<h2 id="获取摄像头-rtsp-流">获取摄像头 RTSP 流</h2>
-<ul>
-<li>对于海康威视和萤石摄像头，其 RTSP 流地址格式如下：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
-</code></pre></td></tr></table>
-</div>
-</div><p>具体参数（如视频编码）自行调整。</p>
-<ul>
-<li>对于 TP-LINK 摄像头，其 RTSP 流地址格式如下：</li>
-</ul>
-<p>主码流为：<code>rtsp://[username]:[password]@[ip]:[port]/stream1</code></p>
-<p>子码流将 <code>stream1</code> 替换为 <code>stream2</code> 即可。</p>
-<p>RTSP 端口 <code>port</code> 默认为 <code>554</code>，若为默认可不填写。</p>
-<h2 id="使用-vlc-播放">使用 VLC 播放</h2>
-<p>有两种方法：</p>
-<h3 id="1-使用命令">1. 使用命令</h3>
-<ul>
-<li>Run on the server:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc -vvv input_stream --sout <span class="s1">&#39;#rtp{dst=192.168.0.12,port=1234,sdp=rtsp://server.example.org:8080/test.sdp}&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>Run on the client(s):</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc rtsp://server.example.org:8080/test.sdp
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="2-创建-playlist-文件">2. 创建 playlist 文件</h3>
-<p>新建一个播放列表，或直接使用播放 URL 打开 RTSP 流视频，确认能够正常播放。</p>
-<p>将播放列表另存为文件。这里建议另存为 <code>.m3u</code> 格式，因为打开 <code>.xspf</code> 格式文件会弹窗提示你选择 execute 或 open。</p>
-<p>运行该 playlist 文件即可播放。</p>
-<h2 id="使用其他方式播放">使用其他方式播放</h2>
-<p>你也可以使用 omxplayer 或 mplayer 进行播放。</p>
-<h2 id="实现开机自启动">实现开机自启动</h2>
-<p>在 Linux 上有多种实现开机自启动的方法。我尝试向 <code>rc.local</code> 添加启动代码但未起作用。目前使用通过桌面启动的方法。</p>
-<p>在 <code>/home/pi/.config/</code> 下创建名为 <code>autostart</code> 的新文件夹。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> /home/pi/.config
-mkdir autostart
-</code></pre></td></tr></table>
-</div>
-</div><p>在 <code>autostart</code> 目录下创建一个后缀为 <code>.desktop</code> 的文件。文件名任意。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> autostart
-nano test.desktop
-</code></pre></td></tr></table>
-</div>
-</div><p>更改文件内容：</p>
-<ol>
-<li>若采用命令打开：</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
-Type=Application
-Exec=vlc rtsp://server.example.org:8080/test.sdp
-</code></pre></td></tr></table>
-</div>
-</div><ol start="2">
-<li>若采用 playlist 文件，则更改为文件路径：</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
-Type=Application
-Exec=vlc /home/pi/test.m3u
-</code></pre></td></tr></table>
-</div>
-</div><p>运行 <code>sudo reboot</code> 重启测试。</p>
-<ol start="3">
-<li>也可以在一个新的 shell 脚本中添加 vlc 命令，将 <code>Exec=</code> 后内容直接修改为 .sh 文件路径。如：</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
-Type=Application
-Exec=/home/pi/test.sh
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="使-vlc-默认全屏打开">使 VLC 默认全屏打开</h2>
-<h3 id="1-修改命令">1. 修改命令</h3>
-<p>在 RTSP 流地址或 playlist 路径前添加选项 <code>-f</code> 或 <code>--fullscreen</code>，如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc -f /home/pi/test.m3u
-</code></pre></td></tr></table>
-</div>
-</div><p>其他支持的选项：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 全屏幕视频输出 (默认关闭)
--f, --fullscreen, --no-fullscreen 
-# 总在最前 (默认关闭) 
---video-on-top, --no-video-on-top 
-# 开启壁纸模式 (默认关闭)
---video-wallpaper, --no-video-wallpaper 
-# 在视频上显示媒体标题 (默认开启)
---video-title-show, --no-video-title-show 
-# 显示视频标题 x 毫秒
---video-title-timeout &lt;整数 [-2147483648 .. 2147483647]&gt; 
-# 视频标题的位置
---video-title-position {0 (居中), 1 (左), 2 (右), 4 (上), 8 (下), 5 (左上), 6 (右上), 9 (左下), 10 (右下)}
-# 在 x 毫秒后隐藏光标和全屏控制器
---mouse-hide-timeout &lt;整数 [-2147483648 .. 2147483647]&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p>更多详见 <a href="https://wiki.videolan.org/Documentation:Documentation/" target="_blank" rel="noopener noreffer">VLC 帮助文档</a>。</p>
-<h3 id="2-在-gui-修改-preference">2. 在 GUI 修改 Preference</h3>
-<p>在 VLC Menu Bar &raquo; Tools &raquo; Preferences，进入 Video 栏，勾选 Fullscreen 即可。</p>
-<h2 id="使命令在后台加载">使命令在后台加载</h2>
-<p>在直接执行 <code>vlc rtsp://...</code> 命令时，遇到 Timestamp conversion failed。转而使用：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xdg-open /home/pi/test.m3u
-</code></pre></td></tr></table>
-</div>
-</div><p>直接打开播放列表文件。</p>
-<p>或者改用 mplayer，在 <code>mplayer rtsp://...</code> 后加入 <code>&lt; /dev/null &amp;</code> 或完整的 <code>&lt; /dev/null &gt; /dev/null 2&gt;1 &amp;</code>。</p>
-<h2 id="设置显示器常亮">设置显示器常亮</h2>
-<p>进入 <code>/etc/lightdm</code> 目录修改 <code>lightdm.conf</code> 文件：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo vi /etc/lightdm/lightdm.conf
-</code></pre></td></tr></table>
-</div>
-</div><p>找到 <code>[Seat:*]</code> 或 <code>[SeatDefaults]</code> 段下的 <code>xserver-command</code>，默认为 <code>-#xserver-command=X</code>，修改为：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xserver-command<span class="o">=</span>X -s <span class="m">0</span> -dpms
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="使用-unclutter-设置鼠标指针自动隐藏">使用 unclutter 设置鼠标指针自动隐藏</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install unclutter
-<span class="nb">echo</span> “@unclutter -idle <span class="m">1</span> -root” &gt;&gt; /etc/xdg/lxsession/LXDE/autostart
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="使用-xdotoolwwwsemicompletecomprojectsxdotool-改变窗口大小和位置">使用 <a href="www.semicomplete.com/projects/xdotool/" rel="">xdotool</a> 改变窗口大小和位置</h2>
-<p>首先安装 xdotool：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install xdotool
-</code></pre></td></tr></table>
-</div>
-</div><p>同时实现改变窗口大小和位置，如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xdotool search --name <span class="s2">&#34;VLC&#34;</span> windowsize <span class="m">800</span> <span class="m">600</span> windowmove <span class="m">0</span> <span class="m">0</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>解释：</p>
-<ul>
-<li><code>search --name [keyword]</code> ：将搜索名称中带有关键词的窗口</li>
-<li><code>windowsize 800 600</code>：改变窗口大小，<code>$WIDTH $HEIGHT</code></li>
-<li><code>windowmove 0 0</code>：改变窗口位置，<code>$X $Y</code>，具体视屏幕分辨率而定</li>
-</ul>
 ]]></description>
 </item></channel>
 </rss>
