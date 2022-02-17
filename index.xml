@@ -81,7 +81,12 @@ error: command &#39;/usr/bin/gcc&#39; failed with exit code 1
 #include &lt;OpenAL/alc.h&gt;
 </code></pre></td></tr></table>
 </div>
-</div>]]></description>
+</div><h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://github.com/bambocher/pocketsphinx-python/issues/28" target="_blank" rel="noopener noreffer">Trouble installing on osx &ldquo;fatal error: &lsquo;al.h&rsquo; file not found&rdquo; #28</a></li>
+<li><a href="https://github.com/bambocher/pocketsphinx-python/issues/67" target="_blank" rel="noopener noreffer">Trouble installing on Mac OS Big Sur 11.0.1 &ldquo;fatal error: &lsquo;al.h&rsquo; file not found&rdquo; #67</a></li>
+</ul>
+]]></description>
 </item><item>
     <title>Hybrid #1</title>
     <link>https://fanrongbin.com/hybrid-1/</link>

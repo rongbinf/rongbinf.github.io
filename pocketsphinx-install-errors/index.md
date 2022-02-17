@@ -51,4 +51,8 @@ error: command '/usr/bin/gcc' failed with exit code 1
 #include <OpenAL/alc.h>
 ```
 
+## 参考
+
+- [Trouble installing on osx "fatal error: 'al.h' file not found" #28](https://github.com/bambocher/pocketsphinx-python/issues/28)
+- [Trouble installing on Mac OS Big Sur 11.0.1 "fatal error: 'al.h' file not found" #67](https://github.com/bambocher/pocketsphinx-python/issues/67)
 
