@@ -5,7 +5,7 @@
 
 ![莎玛丽丹百货公司](https://s2.loli.net/2022/02/04/akr47qFYOsDcV9e.png "莎玛丽丹百货公司 La Samaritaine © Simón García | arqfoto")
 
-![The Optimism of Possibility](https://s2.loli.net/2022/02/04/8fn236JTYZXOm7y.png "© Phillip Reed")
+![The Optimism of Possibility](https://s2.loli.net/2022/02/04/8fn236JTYZXOm7y.png "The Optimism of Possibility © Phillip Reed")
 
 ## 摘录
 
@@ -48,40 +48,6 @@
 
 [原视频 →](https://youtu.be/TiO77Pdec78)
 
-## 更多
-
-### AI 在不久的将来能让一批程序员被「灵活」
-
-DeepMind 于近日[发布 AlphaCode](https://deepmind.com/blog/article/Competitive-programming-with-AlphaCode)，这个 AI 被投入面试程序员的全过程（读题和解题），在 Codeforces 的编程比赛中能达到前 54% 的水平。
-
-### AI 做了一些看上去很酷的早餐
-
-Janelle Shane 用一些早餐麦片的名字来训练 AI，这是他想到的：
-
-> **Ingredis Fiberwaste Cream Cheese Cheerios** - kids grab a box and put them in their mouths, making fun flavors taste even better !!! !!! !!! !!!
-> 
-> **Two Finger Bobops** - Unlike regular bobs and bastons that grow on their own, BBQ bobs, smitchers and hot bobs grow on trees.
-
-[看看](https://www.aiweirdness.com/new-breakfast-cereals-from-ai)还有没有你想吃的。
-
-### 桥水发布 2022 展望：市场低估了紧缩政策的力度
-
-桥水于近日发布[《*2022 Global Outlook: The Success and Excesses Resulting from MP3 Policies*》](https://www.bridgewater.com/research-and-insights/our-2022-global-outlook-the-success-and-excesses-resulting-from-mp3-policies)，表示市场认为通货膨胀会平稳恢复，而无需积极政策行动，但桥水预估这与实际存在冲突。
-
-当前（美国）通胀受消费者间「一方支出=另一方收入」、QE 带来的过剩流动性和金融资产泡沫的循环自行推升，而非市场所认为的会平稳恢复，投资者可能面临泡沫破裂资产价格迅速下跌的风险。加之 Powell 近日的鹰派发言，预期紧缩政策极有可能提前。
-
-### Meta/Facebook 公布 2021 年四季度财报：日活首次下降，展望营收不及预期
-
-Meta/Facebook 于 2 月 2 日周三发布的 [2021 Q4 财报](https://investor.fb.com/investor-news/press-release-details/2022/Meta-Reports-Fourth-Quarter-and-Full-Year-2021-Results/default.aspx)显示其日活用户数首次出现季度环比下降（Q4：1.929b，Q3：1.93b，减少约 50 万用户）、展望 2022 年 Q1 广告营收增长不及市场预期，截至当日收盘股价大跌约 26%，送走约 $200b 市值。
-
-Facebook 已经老了，同时我也并不觉得元宇宙能在近五年甚至十年间拯救它。
-
-### 纽约时报收购填字游戏 Wordle
-
-Wordle 是一款由 Josh Wardle 制作的在线填字游戏，玩家有六次输入单词的机会，每次都得出颜色指示某字母是否符合，进而猜出正确单词。 纽约时报在 1 月末宣布以数百万美元[收购该游戏](https://www.nytimes.com/2022/01/31/business/media/new-york-times-wordle.html)。
-
-[玩玩看](https://www.powerlanguage.co.uk/wordle)。
-
 ---
 
-Hybrid 是一个内容摘录计划，于每周六早间发送一份我最近读到或看到的精选内容，前三期处于探索完善阶段。Hybrid 使用 [Hedwig](https://h.hedwig.pub/) 发送邮件，于[博客](https://fanrongbin.com/tags/hybrid)同步更新。
+Hybrid 是一个内容摘录计划。

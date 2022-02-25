@@ -1,6 +1,8 @@
 # 半导体制作工序 & 常见自动化软件模块梳理
 
 
+[这篇图文](https://blog.robertelder.org/how-to-make-a-cpu/)能更好帮助理解。
+
 ## 半导体制作工序
 {{< mermaid >}}
 flowchart TD
