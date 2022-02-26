@@ -3,7 +3,7 @@
 
 > 注：本文译自 <cite lang="en">[Running productive design critiques](https://blog.intercom.com/running-productive-design-critiques/)</cite>，作者是 [Gustavs Cirults](http://twitter.com/gustavscirulis)。
 
-[![Slack-for-iOS-Upload-5-2.jpg](https://i.loli.net/2018/02/02/5a7434d291c36.jpg)](https://i.loli.net/2018/02/02/5a7434d291c36.jpg)
+![Slack-for-iOS-Upload-5-2.jpg](https://img.fanrongbin.com/critic-1.webp)
 
 **设计不分对错，只分适合与否。**
 
@@ -20,7 +20,7 @@
 
 在这方面，可以把问题的描述和提出的解决方案打印下来，贴在墙上供大家参考使用。这能让每个人都理清整个设计作品与问题的关系和解决的程序流程，并且提供针对性的观点。至此，你将永远与「你能滚动回上一张设计页面吗？」「不对，是另外一张」这些原型测试中可能出现的问题说再见。不过在我们需要讨论交互上的设计时，原型测试（interaction design）仍是一个不可或缺的环节。
 
-[![poster-design-critique.jpg](https://i.loli.net/2018/02/02/5a7434d5f3423.jpg)](https://i.loli.net/2018/02/02/5a7434d5f3423.jpg)
+![poster-design-critique.jpg](https://img.fanrongbin.com/critic-2.webp)
 
 ## Set the scene 做好开始前的准备
 
@@ -38,7 +38,7 @@
 
 在开始绘制 UI 细节前，制作一个关于解决方案运作程序的图表能够起到不错的作用，特别是在设计和优化一些互联产品（interconnected products）时（如 Intercom），用一张高层次的关系图，对设计的运作系统进行描述是必不可少的。
 
-[![System_Diagram_Example.png](https://i.loli.net/2018/02/02/5a7434d63cdb5.png)](https://i.loli.net/2018/02/02/5a7434d63cdb5.png)
+![System_Diagram_Example.png](https://img.fanrongbin.com/critic-3.webp)
 
 再继续，用打印的形式或通过原型向他人阐述，来展示你所提出的界面设计。
 
@@ -56,10 +56,10 @@
 
 取决于这次设计批评定下的目标，你或许能够提出具体的决策及决策理由，亦或者关于设计本身的想法可供消化吸收。但一定做好具体的后续工作，这是最重要的一点。我们在进行设计批评时，将讨论得到的成果写在 Slack channel #design-notes 上，确保没有将其遗忘，同时能够允许非设计小组内部成员的用户提出反馈。
 
-[![Slack-design-critique.png](https://i.loli.net/2018/02/02/5a7434d3422f0.png)](https://i.loli.net/2018/02/02/5a7434d3422f0.png)
+![Slack-design-critique.png](https://img.fanrongbin.com/critic-4.webp)
 
 定期进行有效的设计批评可以产生非常大的作用。有趣的想法一被提出，其他人就可以以这个想法为基进行延伸拓展，再与不同的各个延伸进行连接。单凭设计师一己之力（哪怕这个设计师有三头六臂），可无法创造这样卓越的效果。
 
-[![Screen-Shot-2016-10-17-at-12.16.45.png](https://i.loli.net/2018/02/02/5a7434d1cca91.png)](https://i.loli.net/2018/02/02/5a7434d1cca91.png)
+![Screen-Shot-2016-10-17-at-12.16.45.png](https://img.fanrongbin.com/critic-5.webp)
 
 为了简化这个过程，我们制作了一个 [Sketch 模板](https://marketing.intercomassets.com/assets/design-critique-concept_template.sketch)，在这里与你分享，现在就可以下载，并试着在下次展开设计批评时使用。如果该模板能够帮助到你，记得告诉我们！

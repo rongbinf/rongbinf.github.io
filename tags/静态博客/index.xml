@@ -482,11 +482,18 @@
 <p></p>
 <p>选择 Free Plan。</p>
 <p></p>
-<p>回到阿里云-万网，进入控制台，依次点击域名与网站（万网）→域名，点击域名右侧的「管理」进入域名控制台。点击右侧的「DNS 修改」，将默认 DNS 替换为：
-arnold.ns.cloudflare.com
-ruth.ns.cloudflare.com</p>
-<p>
-</p>
+<p>回到阿里云-万网，进入控制台，依次点击域名与网站（万网）→域名，点击域名右侧的「管理」进入域名控制台。点击右侧的「DNS 修改」，将默认 DNS 替换为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">	arnold.ns.cloudflare.com
+	ruth.ns.cloudflare.com
+</code></pre></td></tr></table>
+</div>
+</div><p></p>
 <p>等候约三到五分钟即可应用本次更改，你可以在 Cloudflare 查看应用情况。</p>
 <h1 id="参考文章">参考文章</h1>
 <ul>

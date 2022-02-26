@@ -4,7 +4,7 @@
 
 首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。
 
-![Prout's Neck, Breakers 1883 Winslow Homer](https://i.loli.net/2021/08/08/esLM3HJbgaqP9hG.jpg)
+![Prout's Neck, Breakers](https://img.fanrongbin.com/wh-1.webp)
 
 *Prout's Neck, Breakers*, 1883, Winslow Homer, Painting, watercolor on wove paper
 
@@ -14,7 +14,7 @@ Source: [The Art Institute of Chicago](https://www.artic.edu/artworks/16815/prou
 
 除了十分显然的深蓝、亮蓝叠加使用以塑造前后关系，还能看到他多利用了纸张本身的白色，例如下半部分近礁石的部分。这也是水彩常用的方法。整幅画也给我一种非常轻快的感觉，倒不是因为画面主体的海浪，而是它前侧用或大或小的色块柔和铺排开的、礁石上附着的细浪。
 
-![截屏2021-08-08 13.19.23](https://i.loli.net/2021/08/08/yK8OscQ5rJgxMGL.png)
+![Paul Morphy, the Chess Champion](https://img.fanrongbin.com/wh-2.webp)
 
 *Paul Morphy, the Chess Champion*, 1859, Winslow Homer, Print, wood engraving
 
@@ -24,7 +24,7 @@ Source: [Google Arts & Culture](https://artsandculture.google.com/asset/paul-mor
 
 温斯洛·霍默（Winslow Homer, 1836-1910）出生于波士顿，童年在剑桥长大，父母皆为新英格兰移民。父亲是典型的商人，而母亲有着画水彩的天赋异禀，顺理成章地成为霍默的“第一任老师”。19 岁高中毕业，父亲安排他去做广告平板印刷。就这样重复进行日常工作近两年后，他开始为一些杂志刊物制作插画，在当时那个年代也意味着就是木版画。霍默的线条感和对黑白分明的把握很好，不几笔就能把最鲜明的特点勾勒出来，如上图。
 
-![截屏2021-08-08 13.58.59](https://i.loli.net/2021/08/08/kvISqpHAtYTVric.png)
+![Mounted Bugler](https://img.fanrongbin.com/wh-3.webp)
 
 *Mounted Bugler*,1862, Winslow Homer, Graphite, brush and gray wash on off-white paper
 
@@ -32,7 +32,7 @@ Credit line: Gift of Charles Savage Homer, Jr.
 
 Source: [Google Arts & Culture](https://artsandculture.google.com/asset/mounted-bugler-winslow-homer-american-1836%E2%80%931910/FgF0ghbzo-z6dw)
 
-![截屏2021-08-08 14.01.39](https://i.loli.net/2021/08/08/9S6Dp5ijMkGaIfh.png)
+![Home, Sweet Home](https://img.fanrongbin.com/wh-4.webp)
 
 *Home, Sweet Home*, 1863, Winslow Homer, Painting, oil on canvas
 
@@ -42,7 +42,7 @@ Source: [Google Arts & Culture](https://artsandculture.google.com/asset/home-swe
 
 直到 1863 年他才正式进入国家设计学院（现国家学院博物馆和学校，National Academy Museum and School）学习绘画基础。美国内战期间，他被长期供图的一家报社送去前线，留下了许多战地场景与人物的插画手稿，除战争中的将士名人肖像，也有纷乱中的妇女儿童和留下的残迹。这一段时期以及之后的五到十年，也是霍默从单纯的插画师拓展成画家的时期，我们可以看见其绘画的个人风格已经渐趋成熟，例如选材的角度比起激烈、冲突的场景而言，更常描绘日常与闲暇，主题和所传达的态度也更为暧昧和难以捉摸。画面用色和明暗的对比十分优雅，线条的运用也更加果敢，构图更加简练。
 
-![截屏2021-08-08 14.45.02](https://i.loli.net/2021/08/08/kgXWJRGpVyKILfA.png)
+![Croquet Scene](https://img.fanrongbin.com/wh-5.webp)
 
 *Croquet Scene*, 1866, Winslow Homer, Painting, oil on canvas
 
@@ -50,7 +50,7 @@ Credit Line: The Art Institute of Chicago, Friends of American Art Collection; G
 
 Source: [Google Arts & Culture](https://artsandculture.google.com/asset/croquet-scene-winslow-homer-american-1836%E2%80%931910/xgGjRZZn3Qn5nA)
 
-![截屏2021-08-08 14.49.00](https://i.loli.net/2021/08/08/SKHday5eIGs1lEw.png)
+![Art-Students and Copyists in the Louvre Gallery, Paris](https://img.fanrongbin.com/wh-6.webp)
 
 *Art-Students and Copyists in the Louvre Gallery, Paris*, 1868, Winslow Homer, Print, wood engraving on wove paper
 
@@ -60,13 +60,13 @@ Image Credit Line: [Open Access Image from the Davison Art Center, Wesleyan Univ
 
 Source: [Google Arts & Culture](https://artsandculture.google.com/asset/art-students-and-copyists-in-the-louvre-gallery-paris-winslow-homer/qwFCQK-sxPsOGQ)
 
-![Study for Eagle Head, Manchester, Massachusetts - The Metropolitan Museum of Art](https://i.loli.net/2021/08/08/PqMCaYg2U6cAosW.jpg)
+![Study for Eagle Head, Manchester, Massachusetts](https://img.fanrongbin.com/wh-7.webp)
 
 *Study for Eagle Head, Manchester, Massachusetts*, 1869, Winslow Homer, Painting, oil on wood
 
 Source: [The Metropolitan Museum of Art](http://www.metmuseum.org/art/collection/search/11142)
 
-![DT517](https://i.loli.net/2021/08/08/AGrPu6TeoMcbVih.jpg)
+![Eagle Head, Manchester, Massachusetts (High Tide)](https://img.fanrongbin.com/wh-8.webp)
 
 *Eagle Head, Manchester, Massachusetts (High Tide)*, 1870, Winslow Homer, Painting, oil on canvas
 
@@ -80,7 +80,7 @@ Source: [The Metropolitan Museum of Art](https://www.metmuseum.org/art/collectio
 
 大都会博物馆的播客中，[有一期](https://itunesu.itunes.apple.com/feed/id430943000)（Author Elizabeth Strout Discusses Two Paintings by Winslow Homer）邀请到了普利策小说奖得主伊丽莎白·斯特劳特（Elizabeth Strout, 1956-）分享她在这幅画中所想象出的故事。
 
-![Winslow_Homer_-_The_Country_School](https://i.loli.net/2021/08/08/lNB4iUJVwjoTHSb.jpg)
+![The Country School](https://img.fanrongbin.com/wh-9.webp)
 
 *The Country School*, 1871, Winslow Homer, Painting, oil on canvas
 
@@ -90,7 +90,7 @@ Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Winslow_Home
 
 1875 年后他不再作商业插画，希望能凭绘制油画和水彩维持生计。他最有名的作品 *Breezing Up (A Fair Wind), 1873-1876* 亦在这期间绘成。
 
-![Winslow_Homer%2C_Breezing_Up_(A_Fair_Wind)%2C_1873-1876%2C_NGA_30228](https://upload.wikimedia.org/wikipedia/commons/a/a1/Winslow_Homer%2C_Breezing_Up_(A_Fair_Wind)%2C_1873-1876%2C_NGA_30228.jpg)
+![Breezing Up (A Fair Wind)](https://img.fanrongbin.com/wh-10.webp
 
 *Breezing Up (A Fair Wind)*, 1873-1876, Winslow Homer, Painting, oil on canvas
 
@@ -102,13 +102,13 @@ Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Winslow_Home
 >
 > *[American Paintings of the Nineteenth Century, Part I](https://www.nga.gov/content/dam/ngaweb/research/publications/pdfs/american-paintings-19th-century-part-1.pdf)*, pages 312-318, National Gallery of Art, In-gallery publication, free to download online
 
-![blackboard_1990.60.1](https://i.loli.net/2021/08/08/jdntMhrsqPueY6x.jpg)
+![Blackboard](https://img.fanrongbin.com/wh-11.webp)
 
 *Blackboard*, 1877, Winslow Homer, Painting, watercolor on wove paper
 
 Source: [National Gallery of Art](https://www.nga.gov/collection/art-object-page.71552.html)
 
-![SchoonerAtSunset](https://i.loli.net/2021/08/08/YvjebyTLEzwhSlF.jpg)
+![Schooner At Sunset](https://img.fanrongbin.com/wh-12.webp)
 
 *Schooner at Sunset*, 1880, Winslow Homer, Painting, watercolor on wove paper
 
@@ -116,7 +116,7 @@ Source: [Harvard Art Museum](https://hvrd.art/o/299942)
 
 1873 年夏之后他开始将水彩作为常用工具，笔触有的放矢，画面易读。有关注细节的如 *Blackboard, 1877*，衣着上的格子花纹、布面的褶皱、后背的绑带以及教师并不愉悦的神情。有非常印象派的如 *Schooner at Sunset, 1880*，落日与即将入夜的天空互相切开，水面上的波光与涟漪处理得精致。
 
-![](https://i.loli.net/2021/08/13/UIWdy9ZpRJc7CDa.png)
+![Two Figures by the Sea](https://img.fanrongbin.com/wh-13.webp)
 
 *Two Figures by the Sea*, 1882, Winslow Homer, Painting, oil on canvas
 
@@ -124,7 +124,7 @@ Source: [Google Arts & Culture](https://artsandculture.google.com/asset/two-figu
 
 1881-1882 年，霍默在英格兰东北部的一个海边小镇度过。他更多关注劳动人民个体身上的英雄主义。抛开过于宏大的集体叙事后，反而打开了更加广阔的天地。其画作变得更加沉静，思考也更加深邃。这样的风格一直延续到之后。过去常作为题材的衣着时尚女子，如今更多转向塑造无私无畏的妇女。1883 年他搬到缅因州海边，整个 1880 年代中期都把精力放在海边景象与人物的创作上，除油画和水彩，他还尝试制作蚀刻版画。（更多关于他的蚀刻版画信息[可见此](http://oldprintshop.com/artists/3931)）
 
-![1955.4](https://i.loli.net/2021/08/08/RbGj9XVm7DhFkao.jpg)
+![Undertow](https://img.fanrongbin.com/wh-14.webp)
 
 *Undertow*, 1886, Winslow Homer, Painting, oil on canvas
 
@@ -134,13 +134,13 @@ Source: [The Clark Art Institute](https://www.clarkart.edu/artpiece/detail/under
 
 一连串的海边主题绘画，评论家们称其为「带着画笔的隐士（a hermit with a brush）」，但商业上不为大众所服，画作售价未达预期。
 
-![File:Winslow Homer - A Garden in Nassau (1885).jpg](https://i.loli.net/2021/08/08/QOu5TtaFLPbo8Z7.jpg)
+![A Garden in Nassau](https://img.fanrongbin.com/wh-15.webp)
 
 *A Garden in Nassau*, 1885, Winslow Homes, Painting, watercolor on wove paper
 
 1884-1885 年的冬季，霍默在佛州、古巴和巴哈马群岛度过。受世纪杂志（Century Magazine）所托，完成了一系列的具有热带风情的水彩画。色彩更为明亮，所体现的情感也更显欢快。和他早年的作品相比，色彩在冷暖上更加分明，而不是一味的偏向于符合日光的暖，表达场景上也就有了更多语言。有人比喻道，他的这次旅程如同高更去往塔希提岛那般，给自己带来陌生与新奇。而在阿第伦达克山脉附近村庄的夏日之旅，也给他的绘画增添不少豁达与奔放。经此几行，他更像是找到了在冷静与轻快转换的滚轮开关。
 
-![FoxHunt](https://i.loli.net/2021/08/08/MECXfpHKx8PSVgU.jpg)
+![Fox Hunt](https://img.fanrongbin.com/wh-16.webp)
 
 *Fox Hunt*, 1893, Winslow Homer, Painting, oil on canvas
 
@@ -150,7 +150,7 @@ Source: [Pennsylvania Academy of the Fine Arts](https://www.pafa.org/museum/coll
 
 霍默的晚年依然热衷于创作海景画，毕竟，他可是这个领域的能者。能者多劳。
 
-![The Bather, Winslow Homer (American, Boston, Massachusetts 1836–1910 Prouts Neck, Maine), Watercolor and graphite on off-white wove paper, American ](https://i.loli.net/2021/08/08/IKky4TlAqwjQJOs.jpg)
+![The Bather](https://img.fanrongbin.com/wh-17.webp)
 
 *The Bather*, 1899, Winslow Homer, 1899, Painting, watercolor on wove paper
 
@@ -158,13 +158,13 @@ Source: [The Metropolitan Museum](https://www.metmuseum.org/art/collection/searc
 
 好的作品为什么能给人以震慑力？为什么能被人口耳相传、收藏至今？大都离不开对那些纯粹的、美好的事物进行追问。这种追问可以是现实主义的无限观察，可以是现代主义的打破重构，它可以是无数的一切，但它一定基于非常高的人文起点。平白展示也好，挖掘黑暗也罢，当创作想要去往「能使更多人都接受和同意」的路径时，就要自己权衡好该怎么去体现「美中不足」，就要在情趣和意味上，探讨如何才能做到先进而不造成疏离感。在这中间地带如鱼得水的霍默，无疑是成功的。
 
-![Taking on Wet Provisions (Schooner Marked Newport, K. W.), Winslow Homer (American, Boston, Massachusetts 1836–1910 Prouts Neck, Maine), Watercolor and graphite on off-white wove paper, American ](https://collectionapi.metmuseum.org/api/collection/v1/iiif/11143/49501/main-image)
+![Taking on Wet Provisions (Schooner Marked Newport, K. W.)](https://img.fanrongbin.com/wh-18.webp)
 
 *Taking on Wet Provisions (Schooner Marked Newport, K. W.)*, 1903, Winslow Homer, Painting, watercolor on wove paper
 
 Source: [The Metropolitan Museum](https://www.metmuseum.org/art/collection/search/11143)
 
-![SC27675](https://i.loli.net/2021/08/08/TgR4InYHfEol9Md.jpg)
+![Rocky Shore, Bermuda](https://img.fanrongbin.com/wh-19.webp)
 
 *Rocky Shore, Bermuda*, 1900, Winslow Homer, Painting, watercolor on wove paper
 

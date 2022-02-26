@@ -3,9 +3,9 @@
 
 ---
 
-![莎玛丽丹百货公司](https://s2.loli.net/2022/02/04/akr47qFYOsDcV9e.png "莎玛丽丹百货公司 La Samaritaine © Simón García | arqfoto")
+![莎玛丽丹百货公司](https://img.fanrongbin.com/n-2.webp "莎玛丽丹百货公司 La Samaritaine © Simón García | arqfoto")
 
-![The Optimism of Possibility](https://s2.loli.net/2022/02/04/8fn236JTYZXOm7y.png "The Optimism of Possibility © Phillip Reed")
+![The Optimism of Possibility](https://img.fanrongbin.com/n-3.webp "The Optimism of Possibility © Phillip Reed")
 
 ## 摘录
 
