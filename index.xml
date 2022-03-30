@@ -4,9 +4,21 @@
         <link>https://fanrongbin.com/</link>
         <description>一个博客。</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>fanrongbin0201@gmail.com (Rongbin Fan)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (Rongbin Fan)</webMaster><lastBuildDate>Thu, 17 Feb 2022 00:00:00 &#43;0000</lastBuildDate>
+            <webMaster>fanrongbin0201@gmail.com (Rongbin Fan)</webMaster><lastBuildDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Windows 11 的新字体：Segoe UI Variable</title>
+    <link>https://fanrongbin.com/segoe-ui-variable/</link>
+    <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>Rongbin Fan</name>
+    </author><guid>https://fanrongbin.com/segoe-ui-variable/</guid><description><![CDATA[<p>微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 <a href="https://blogs.windows.com/windows-insider/2021/05/06/announcing-windows-10-insider-preview-build-21376/" target="_blank" rel="noopener noreffer">发布</a>了 Segoe UI 的可变字体版本：Segoe UI Variable，<a href="https://docs.microsoft.com/en-us/windows/apps/design/signature-experiences/typography" target="_blank" rel="noopener noreffer">在 Windows 11 </a>正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。</p>
+<p></img></p>
+<p></img></p>
+<p>风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，<del>看起来也更像 Product Sans 了。</del></p>
+<p></img></p>
+<p>可以通过 Windows 的<a href="https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts" target="_blank" rel="noopener noreffer">官方文档</a>，或直接访问<a href="https://aka.ms/SegoeUIVariable" target="_blank" rel="noopener noreffer">此链接</a>下载 Segoe UI Variable。</p>
+]]></description>
+</item><item>
     <title>在 Big Sur 安装 PocketSphinx 时出现的问题</title>
     <link>https://fanrongbin.com/pocketsphinx-install-errors/</link>
     <pubDate>Thu, 17 Feb 2022 00:00:00 &#43;0000</pubDate><author>
@@ -1199,45 +1211,6 @@ Program ended with <span class="nb">exit</span> code: <span class="m">0</span>
 <p></p>
 <p><em>Rocky Shore, Bermuda</em>, 1900, Winslow Homer, Painting, watercolor on wove paper</p>
 <p>Source: <a href="https://collections.mfa.org/objects/5016" target="_blank" rel="noopener noreffer">Museum of Fine Arts Boston</a></p>
-]]></description>
-</item><item>
-    <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
-    <link>https://fanrongbin.com/network-resetting-2021/</link>
-    <pubDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>Rongbin Fan</name>
-    </author><guid>https://fanrongbin.com/network-resetting-2021/</guid><description><![CDATA[<p>原先的布置：</p>
-
-<p>之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。</p>
-<p>现在的布置：</p>
-
-<p>解决了几个痛点，记录一下：</p>
-<ul>
-<li>信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 + 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯</li>
-<li>速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。</li>
-<li>切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC+AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。</li>
-<li>丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。</li>
-</ul>
-<h2 id="电信网关拨号改桥接">电信网关拨号改桥接</h2>
-<p>所用网关型号为 HS8145C，通过<strong>超级管理员帐户</strong>进入后台，用户名为 <code>telecomadmin</code>。一说有通用密码 <code>nE7jA%5m</code>，我也是使用该密码进入的。</p>
-<p>如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 <code>http://192.168.1.1/backupsettings.conf</code>，下载 <code>backupsettings.conf</code>。搜索 <code>password</code> 获得经 base64 加密过的密码，可尝试使用在线工具解密，如 <a href="https://md5hashing.net/" target="_blank" rel="noopener noreffer">md5hashing</a>。</p>
-<p>进入菜单「网络」选项，在上网业务中将 <code>3_INTERNET_B_VID_41</code> 项连接方式改为<strong>桥接</strong>即可。</p>
-<p>相应地，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。</p>
-<h2 id="tp-link-易展有线回程">TP-LINK 易展有线回程</h2>
-<p>有几个需要注意的：</p>
-<ol>
-<li>易展路由器应在同一网段下，例如各自 IP 地址为 <code>192.168.2.1</code>、<code>192.168.2.2</code>。</li>
-<li>接好网线。</li>
-<li>先设置作为<strong>主路由</strong>的那台，例如我希望将 XDR5430 作为主路由，则它先接网线并上电配置。</li>
-</ol>
-<p>步骤如下：</p>
-<ol>
-<li>（如果之前使用无线回程，需要对所有易展路由器恢复出厂设置。）</li>
-<li>主路由上电，配置上网，关闭 DHCP。</li>
-<li>确认主路由是否正常上网。此时主路由可能提示 WAN 口未正常连接。但只要能上网就行。</li>
-<li>将其他易展路由器接网线上电，按易展按钮进行易展。</li>
-</ol>
-
-<p>右上角显示连接网线的 icon 即实现有线回程。</p>
 ]]></description>
 </item></channel>
 </rss>
