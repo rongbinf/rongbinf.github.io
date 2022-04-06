@@ -135,24 +135,40 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <main class="main">
-            <div class="container"><div class="page home"><div class="home-profile"><h2 id="sub" class="home-subtitle"><p>Are you willing to, able to,<br/>imagine an alternative reality?</p>
+            <div class="container"><div class="page home"><div class="home-profile"><h2 id="sub" class="home-subtitle"><div id="ltm"></div>
                 </h2><div class="home-links">
                  <p class="home-arena home-arena-link-eng">Are.na / Rongbin Fan / <a class="home-arena-link home-arena-link-eng" href="https://www.are.na/rongbin-fan/brackets-and-comma">brackets and comma [, ]</a></p>
                  <p class="home-arena">微澜图书馆</br><a class="home-arena-link" href="https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ">《他们是外卖员、快递员、家政工，但他们的孩子在城市找不到一张课桌 | 一席》</a></p>
                 </div>
+</script>
 <script type="text/javascript">
+        var currentWords = Math.floor(Math.random() * 3);
+        function changeWords() {
+            if(currentWords == 0){
+                document.getElementById("ltm").innerHTML="<p>Are you willing to, able to,<br/>imagine an alternative reality?</p>";
+            }else if(currentWords == 1){
+                document.getElementById("ltm").innerHTML="<p>What becomes thinkable?</p>";
+            }else if(currentWords == 2){
+                document.getElementById("ltm").innerHTML='<p>So wonder, when listening to the wind blows.</br>"Then walk in on someone."</br>In reality I chose to put everything in reverse.</p>';
+            }else if(currentWords == 3){
+                document.getElementById("ltm").innerHTML="<p>The last judgement comes at any time.</p>";
+            }
+        }
+
+        changeWords();
+
         var currentFont = Math.floor(Math.random() * 5);
         function changeFont() {
             if(currentFont == 0){
-             sub.style.fontFamily = "Palatino,Cochin,IowanOldStyle-Bold,Optima,Avenir,Helvetica Neue,Arial,sans-serif";
+             sub.style.fontFamily = "Palatino,Cochin,IowanOldStyle-Bold,Optima,'Franklin Gothic',Avenir,'Helvetica Neue',Arial,sans-serif";
             }else if(currentFont == 1){
-             sub.style.fontFamily = "Cochin,IowanOldStyle-Bold,Optima,Palatino,Avenir,Helvetica Neue,Arial,sans-erif";
+             sub.style.fontFamily = "Cochin,IowanOldStyle-Bold,Optima,Palatino,'Franklin Gothic',Avenir,'Helvetica Neue',Arial,sans-serif";
             }else if(currentFont == 2){
-             sub.style.fontFamily = "IowanOldStyle-Bold,Optima,Palatino,Cochin,Avenir,Helvetica Neue,Arial,sans-serif";
+             sub.style.fontFamily = "IowanOldStyle-Bold,Optima,Palatino,Cochin,'Franklin Gothic',Avenir,'Helvetica Neue',Arial,sans-serif";
             }else if(currentFont == 3){
-             sub.style.fontFamily = "Avenir,Helvetica Neue,Arial,sans-serif";
+             sub.style.fontFamily = "'Franklin Gothic',Avenir,'Helvetica Neue',Arial,sans-serif";
             }else if(currentFont == 4){
-             sub.style.fontFamily = "Optima,Palatino,Cochin,IowanOldStyle-Bold,Avenir,Helvetica Neue,Arial,sans-serif";
+             sub.style.fontFamily = "Optima,Palatino,Cochin,IowanOldStyle-Bold,'Franklin Gothic',Avenir,'Helvetica Neue',Arial,sans-serif";
             }
         }
         changeFont();
