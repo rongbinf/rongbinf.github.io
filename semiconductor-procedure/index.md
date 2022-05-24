@@ -1,9 +1,9 @@
-# 半导体制作工序 & 常见自动化软件模块梳理
+# 芯片制作工序 & 半导体常见自动化软件模块梳理
 
 
 [这篇图文](https://blog.robertelder.org/how-to-make-a-cpu/)能更好帮助理解。
 
-## 半导体制作工序
+## 芯片制作工序
 {{< mermaid >}}
 flowchart TD
 	subgraph 1.晶圆加工
@@ -45,7 +45,7 @@ flowchart TD
 
 参考自泛林集团科普文章：[上篇](https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&mid=2653071344&idx=1&sn=5afa34f0343fe651c352fb1db90e4078&chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b)、[中篇](https://mp.weixin.qq.com/s?src=11&timestamp=1643333829&ver=3585&signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&new=1)、[下篇](https://mp.weixin.qq.com/s?src=11&timestamp=1643333829&ver=3585&signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&new=1)。英文对照请见[文末](#半导体制作工序英文不完全对照)。你也可以[按此访问](https://www.tel.com/museum/exhibition/process/)东京威力科创制作的工序介绍。
 
-半导体制作工序可分为前、后两道。前道包括 `1.晶圆加工` ->` 7.测试`，后道包括`8.封装`及后期测试、其他组装、成品入库等。
+制作工序可分为前、后两道。前道包括 `1.晶圆加工` ->` 7.测试`，后道包括`8.封装`及后期测试、其他组装、成品入库等。
 
 常用英文名词：
 
