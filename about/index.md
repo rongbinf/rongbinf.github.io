@@ -9,11 +9,8 @@
 
 关于现在你所看到的这个博客，我想它会一直存在下去。这里大概会有一个学生的牢骚和他平时所关注的一些话题。生活的琐事和偶然冒出的想法，我都尽力写下来（但发不发出来的确是另一回事了，哈哈）。关注的话题因为多而杂，我也想借这个机会拓宽领域、去学习和探讨。而它和我的一个 Tiddlywiki 也构成存档，把互联网上支离破碎的我保存起来。
 
-{{< script >}}
-new ClipboardJS('.btn'); var clipboard = new ClipboardJS('.btn');
-{{< /script >}}
 
-非常欢迎你参与博文的讨论！除了直接在博文下方评论外，亦可[互通邮件](mailto:fanrongbin0201@gmail.com)。<button class="btn" data-clipboard-text="fanrongbin0201@gmail.com">复制邮箱地址</button>
+非常欢迎你参与博文的讨论！除了直接在博文下方评论外，亦可[互通邮件](mailto:fanrongbin0201@gmail.com)。
 
 ---
 

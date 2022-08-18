@@ -211,7 +211,7 @@ stateDiagram
 - [AGV]^(自动导引车)（Automated Guided Vehicle），常用在复杂路径。
 - [RGV]^(有轨导引车)（Rail Guided Vehicle），轨道运输，带机械臂。
 
-## 半导体制作工序：英文不完全对照
+## 芯片制作工序：英文不完全对照
 
 {{< mermaid >}}
 flowchart TD
