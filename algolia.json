@@ -29,19 +29,6 @@
         "comment": false
     },
     {
-        "title": "2020 年终：日期的变更，只能是期待有所改变的美好祝愿",
-        "uri": "posts/2020-the-end",
-        "content": "2020",
-        "objectID": "posts/2020-the-end",
-        "date": "2020-12-31T00:00:00.000Z",
-        "tags": [
-            "只言片语"
-        ],
-        "toc": {
-            "enable": false
-        }
-    },
-    {
         "title": "荒野之狼，之后",
         "uri": "posts/after-der-steppenwolf",
         "content": "",
