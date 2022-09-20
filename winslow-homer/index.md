@@ -90,7 +90,7 @@ Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Winslow_Home
 
 1875 年后他不再作商业插画，希望能凭绘制油画和水彩维持生计。他最有名的作品 *Breezing Up (A Fair Wind), 1873-1876* 亦在这期间绘成。
 
-![Breezing Up (A Fair Wind)](https://img.fanrongbin.com/wh-10.webp
+![Breezing Up (A Fair Wind)](https://img.fanrongbin.com/wh-10.webp)
 
 *Breezing Up (A Fair Wind)*, 1873-1876, Winslow Homer, Painting, oil on canvas
 
