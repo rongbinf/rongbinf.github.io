@@ -2,12 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://fanrongbin.com/jam-on-road/</loc><lastmod>2022-12-31T01:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://fanrongbin.com/posts/</loc><lastmod>2022-12-31T01:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://fanrongbin.com/</loc><lastmod>2022-12-31T01:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://fanrongbin.com/tags/</loc><lastmod>2022-12-31T01:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://fanrongbin.com/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/</loc><lastmod>2022-12-31T01:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://fanrongbin.com/tags/hybrid/</loc><lastmod>2022-09-04T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://fanrongbin.com/tags/hybrid/</loc><lastmod>2023-02-16T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://fanrongbin.com/hybrid-4/</loc><lastmod>2023-02-16T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://fanrongbin.com/posts/</loc><lastmod>2023-02-16T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://fanrongbin.com/</loc><lastmod>2023-02-16T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://fanrongbin.com/tags/</loc><lastmod>2023-02-16T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://fanrongbin.com/jam-on-road/</loc><lastmod>2022-12-31T01:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://fanrongbin.com/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/</loc><lastmod>2022-12-31T01:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://fanrongbin.com/hybrid-3/</loc><lastmod>2022-09-04T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://fanrongbin.com/hybrid-2/</loc><lastmod>2022-05-02T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://fanrongbin.com/segoe-ui-variable/</loc><lastmod>2022-03-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
