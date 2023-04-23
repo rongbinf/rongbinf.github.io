@@ -1,5 +1,12 @@
 # 电信网关拨号改桥接 + 软路由 + TP-LINK 易展 Mesh 有线回程
 
+
+{{< admonition type=tip title="更新" >}}
+
+在[这篇新博文](https://rongbin.fan/posts/network-resetting-2022.html)中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。
+
+{{< /admonition >}}
+
 原先的布置：
 
 <img src="https://i.loli.net/2021/01/07/SMAdbvcfqWgz65G.png" alt="Before" />

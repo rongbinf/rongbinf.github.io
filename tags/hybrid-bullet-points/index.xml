@@ -1,0 +1,187 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hybrid Bullet Points - 标签 - Rongbin&#39;s Blog</title>
+        <link>https://fanrongbin.com/tags/hybrid-bullet-points/</link>
+        <description>Hybrid Bullet Points - 标签 - Rongbin&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>fanrongbin0201@gmail.com (Rongbin Fan)</managingEditor>
+            <webMaster>fanrongbin0201@gmail.com (Rongbin Fan)</webMaster><lastBuildDate>Mon, 13 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/hybrid-bullet-points/" rel="self" type="application/rss+xml" /><item>
+    <title>Hybrid Bullet Points/SaaS (Software-as-a-Service)</title>
+    <link>https://fanrongbin.com/hybrid-saas/</link>
+    <pubDate>Mon, 13 Mar 2023 00:00:00 &#43;0000</pubDate><author>
+        <name>Rongbin Fan</name>
+    </author><guid>https://fanrongbin.com/hybrid-saas/</guid><description><![CDATA[<h2 id="怎么判定saas">怎么判定SaaS</h2>
+<ul>
+<li>产品/服务
+<ul>
+<li>开箱即用的应用程序</li>
+<li>云部署，技术栈重 web</li>
+</ul>
+</li>
+<li>商业模式
+<ul>
+<li>（增量）订阅制，而非一次性买断</li>
+<li>持续提供客服</li>
+</ul>
+</li>
+<li>公司角度
+<ul>
+<li>企业整体毛利率不低于 50%
+<ul>
+<li>传统软件（包括大型定制），毛利一般在 30%-40%</li>
+</ul>
+</li>
+<li>少交付，多产品
+<ul>
+<li>具体关注交付团队的规模、与客户签订的合同</li>
+<li>进一步考虑人工工时的成分，产品是否足够标准化</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关注是否存在行业特性（垂类 SaaS）
+<ul>
+<li>重私有化部署无可厚非，对数据安全非常看重的：医疗、金融、政府</li>
+</ul>
+</li>
+<li>关注客户规模与实际发生业务
+<ul>
+<li>偏向中小企业，但仍以私有化居多，也许只能叫“软件开发公司”</li>
+<li>打包卖解决方案居多，也许只能叫“业务咨询公司”</li>
+</ul>
+</li>
+</ul>
+<h2 id="saas商业化">SaaS商业化</h2>
+<blockquote>
+<p>The thing that surprises many investors and boards of directors about the SaaS model is that, even with perfect execution, an acceleration of growth will often be accompanied by a squeeze on profitability and cash flow.</p>
+<p>Ron Gill</p>
+</blockquote>
+<ul>
+<li>SaaS商业化的本质：标准化软件与规模增长
+<ul>
+<li>软件生意的本质：越来越低的边际成本，以体现高毛利</li>
+<li>标准化产品带来的标准化定价：对 volume 的要求</li>
+<li>是否符合逻辑且可持续：复购/留存是生命线，订阅制的具体设计、产品自身功能的厚度</li>
+</ul>
+</li>
+<li>成本的大头：对营销和渠道商的依赖</li>
+<li>垂类SaaS与行业强相关
+<ul>
+<li>关注行业自身周期性</li>
+<li>关注行业自身数字化程度和数字化转型需求</li>
+</ul>
+</li>
+<li>估值：亏损，但未来有正现金流，多用 PS
+<ul>
+<li>多高估：考虑企业数字化转型作为不可逆趋势、对传统软件行业的蚕食</li>
+<li>视需求对其具体营收作切分：SaaS、license、定制化等</li>
+</ul>
+</li>
+<li>在中国的现状和趋势
+<ul>
+<li>传统企业和传统行业使用情况依然一般：整体 10% 的渗透率（成熟赛道 40%-60%）</li>
+<li>垂类细分市场日趋饱和
+<ul>
+<li>是否能切入公司利益</li>
+<li>是否能切入终端使用者的需求痛点</li>
+<li>新机会更多位于赛道的交际处：切口更小，创造新需求</li>
+</ul>
+</li>
+<li>时机很重要
+<ul>
+<li>能否迅速抢占市场+用户养成习惯</li>
+<li>是否需要等待供应链/价值链效应</li>
+<li>是否是一项长期交易：愿不愿意赌、愿不愿意放弃既有成果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="重点指标">重点指标</h2>
+<ul>
+<li>LTV/CAC</li>
+<li>ARR, MRR, ARR/ACV</li>
+<li>Retention (Rate), DRR, NDR</li>
+<li>Churn (Rate), Customer Churn, Dollar Churn</li>
+</ul>
+]]></description>
+</item><item>
+    <title>Hybrid Bullet Points/小红书</title>
+    <link>https://fanrongbin.com/hybrid-xiaohongshu/</link>
+    <pubDate>Sat, 11 Mar 2023 00:00:00 &#43;0000</pubDate><author>
+        <name>Rongbin Fan</name>
+    </author><guid>https://fanrongbin.com/hybrid-xiaohongshu/</guid><description><![CDATA[<h2 id="产品关键词">产品关键词</h2>
+<h3 id="真实">真实</h3>
+<blockquote>
+<p>小红书 COO 柯南：「但其实我们不是虚拟世界，我们只是把人线下的生活，在线上呈现，但它依然是真实的。小红书社区里面发生的一切，其实反映的就是线下的真实场景。」</p>
+<p><a href="https://open.163.com/newview/movie/free?pid=SGT5IOBKC" target="_blank" rel="noopener noreffer">《小红书 COO 对谈学者刘擎》</a></p>
+</blockquote>
+<ul>
+<li>分享者/用户<strong>真实存活</strong>：UGC，内容由活人用户生产</li>
+<li>分享行为<strong>动机真实</strong>：分享欲、兴趣爱好、逐利、包装与炒作</li>
+<li>分享<strong>内容的真与实</strong>（authenticity）：可靠程度</li>
+<li>算法推荐标签真实：生活化内容与人群分类</li>
+</ul>
+<h3 id="工具性">工具性</h3>
+<ul>
+<li><strong>双列图文流</strong>：比 Instagram 具体，比抖音高效，用户仍然有一定掌控权（点击后阅读）</li>
+<li><strong>目的性使用搜索功能</strong>：更短的链路、对搜索引擎的替代、相对的一种「反抗」</li>
+<li><strong>持续正反馈</strong>：重内容；重用户体验/运营/生态维护（体量最大的是粉丝 500 以下的长尾博主）</li>
+</ul>
+<h3 id="中文网络世界">中文网络世界</h3>
+<ul>
+<li><strong>部分回应了中文网络世界的问题</strong>：缺乏即时性、缺乏透明度、缺乏可读性（加工解密）、信息多围绕「人」的特质性和复杂变化，以及聚合处的缺乏。但小红书不是 IM（微信），不太像是媒体（微博），不完全是搜索引擎（百度），用户也懂得在监管的灰色地带跳舞。</li>
+<li><strong>类似文化背景人群的解决方案提供、情感联结索求</strong>：华人，中文使用者</li>
+</ul>
+<h3 id="美面子消费主义与精英主义">美、面子、消费主义与精英主义</h3>
+<ul>
+<li><strong>美的内容</strong>：自形成社区壁垒（对于用户也对于竞品）
+<ul>
+<li>最大用户群决定社区氛围：人人都是姐妹</li>
+<li>任一垂类都有优质内容：产品本身极具潜力，但仍需关注公司战略</li>
+</ul>
+</li>
+<li><strong>账号就像面子</strong>：附加算法刻意营造熟人网络</li>
+<li><strong>消费主义与精英主义</strong></li>
+</ul>
+<h2 id="商业化与竞争">商业化与竞争</h2>
+<ul>
+<li>
+<p>营收 80% 来自广告：广告资源、抽佣</p>
+<ul>
+<li>素人便宜，低成本容易实现高声量</li>
+<li>用户本身天然对广告容忍度高（种草社区调性），但 Adload 已近天花板：约 10%-12%</li>
+<li>抽佣始终难做到切入与厂商/用户共同成长的增量</li>
+</ul>
+</li>
+<li>
+<p>营收 20% 来自电商：不好做却还得做（Instagram 没跑通、大众点评跑通了的路径，关注差异），核心是不断把蛋糕切进平台里</p>
+<ul>
+<li>已试图纳入下单支付环节（专业号、店铺，号店一体）</li>
+<li>但问题依然是社区原子化、小而美，重品牌（branding）（持续对比点评、抖音电商）</li>
+<li>依然需要更具纯粹的电商思维
+<ul>
+<li>自营方面是否考虑仓储物流和数据复用、预测（类唯品会、天猫国际）</li>
+<li>图文继续考虑内容付费抽佣/抽成（干货、课程、训练营，类知乎）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>小红书蒲公英</p>
+<ul>
+<li>数据复用也有一定新尝试，但维度或许放得不开而过于集中营销本身，切实贴近商家生产环节的宏观数据不多</li>
+</ul>
+</li>
+<li>
+<p>关注字节 Lemon8 的动向</p>
+<ul>
+<li>完全复制小红书，从界面到逻辑</li>
+<li>背靠字节的优秀本地化、地推、TikTok 联动</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Hybrid Bullet Points 以要点形式呈现与科技和商业有关的内容。</p>
+]]></description>
+</item></channel>
+</rss>

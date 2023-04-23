@@ -280,6 +280,28 @@
         "featuredImage": "https://img.fanrongbin.com/hybrid-4.webp"
     },
     {
+        "title": "Hybrid Bullet Points/SaaS (Software-as-a-Service)",
+        "uri": "posts/hybrid-saas",
+        "content": "SaaS                          web                                             50                     30  40                                                                    SaaS                                                                                                     SaaS      thing surprises investors boards directors SaaS model that  even perfect execution  acceleration growth will often accompanied squeeze profitability cash flow      Ron Gill SaaS                                                           volume                                                                SaaS                                                       PS                                              SaaS license                                     10            40  60                                                                                                                                       LTV CAC ARR  MRR  ARR ACV Retention  Rate   DRR  NDR Churn  Rate   Customer Churn  Dollar Churn",
+        "objectID": "posts/hybrid-saas",
+        "date": "2023-03-13T00:00:00.000Z",
+        "tags": [
+            "Hybrid",
+            "Hybrid Bullet Points"
+        ]
+    },
+    {
+        "title": "Hybrid Bullet Points/小红书",
+        "uri": "posts/hybrid-xiaohongshu",
+        "content": "COO                                                                                   COO                    UGC                                               authenticity                                       Instagram                                                                                                500                                                                                          IM                                                                                                                                                                                                              80                                                       Adload         10  12                            20               Instagram                                                                                 branding                                                                                                                                                         Lemon8                                  TikTok    Hybrid Bullet Points",
+        "objectID": "posts/hybrid-xiaohongshu",
+        "date": "2023-03-11T00:00:00.000Z",
+        "tags": [
+            "Hybrid",
+            "Hybrid Bullet Points"
+        ]
+    },
+    {
         "Title": "2022 年终：生活的日子里，化身躺倒在沥青路上的一滩果酱",
         "uri": "posts/jam-on-road",
         "content": "2022                                                                                                                                                                                                                                                                                                     FELIVAND Ties  The Comet Coming Hyper Dimensional Expansion Beam  Sabrina Claudio Based Feeling  Steve Lacy Gemini Rights  Brian Eno FOREVERANDEVERNOMORE  Rad Museum RAD  Night Swimmer Xia Ye  NewJeans New Jeans                                              2022   12   31",
@@ -318,7 +340,7 @@
     {
         "title": "电信网关拨号改桥接 + 软路由 + TP-LINK 易展 Mesh 有线回程",
         "uri": "posts/network-resetting-2021",
-        "content": "AC 68U                                                                           NAS                                                                  AC 68U                            XDR5430                         XDR1850           Wi Fi 5G                                                                                        300M                                         SSID                                                               AC AP AiMesh   Mesh          Mesh                IPTV                               Apple TV                                         HS8145C                    telecomadmin         nE7jA 5m                                               http   192 168 1 1 backupsettings conf    backupsettings conf    password     base64                      md5hashing                     3INTERNETBVID41                                                                  sha256     TP LINK                                    IP     192 168 2 1 192 168 2 2                           XDR5430                                                                       DHCP                        WAN                                                      icon",
+        "content": "IP     OpenVPN                                           AC 68U                                                                           NAS                                                                  AC 68U                            XDR5430                         XDR1850           Wi Fi 5G                                                                                        300M                                         SSID                                                               AC AP AiMesh   Mesh          Mesh                IPTV                               Apple TV                                         HS8145C                    telecomadmin         nE7jA 5m                                               http   192 168 1 1 backupsettings conf    backupsettings conf    password     base64                      md5hashing                     3INTERNETBVID41                                                                  sha256     TP LINK                                    IP     192 168 2 1 192 168 2 2                           XDR5430                                                                       DHCP                        WAN                                                      icon",
         "objectID": "posts/network-resetting-2021",
         "date": "2021-01-08T00:00:00.000Z",
         "tags": [
