@@ -55,11 +55,32 @@
     </script></head>
 
 <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) {document.body.setAttribute('theme', theme);}
-        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
-        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
-        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
-        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        function setTheme(theme) {
+            document.body.setAttribute('theme', theme);
+        }
+
+        function saveTheme(theme) {
+            window.localStorage && localStorage.setItem('theme', theme);
+        }
+
+        function getMeta(metaName) {
+            const metas = document.getElementsByTagName('meta');
+            for (let i = 0; i < metas.length; i++)
+                if (metas[i].getAttribute('name') === metaName) return metas[i];
+            return '';
+        }
+        if (window.localStorage && localStorage.getItem('theme')) {
+            let theme = localStorage.getItem('theme');
+            theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'));
+        } else {
+            if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto');
+            else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');
+        }
+        let metaColors = {
+            'light': '#f8f8f8',
+            'dark': '#252627',
+            'black': '#000000'
+        }
         getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
     </script>
     <div id="back-to-top"></div>
@@ -141,10 +162,10 @@
                 </br><del style="color: gray;">English Posts on Medium (planning)</del>
                 </br>📁 <a href="https://rongbin.fan/">Knowledge Base (building)</a></p>
                 <p class="home-email">📧 <a href="mailto:fanrongbin0201@gmail.com">Email to <strong>fanrongbin0201</strong>(at)<strong>gmail.com</strong></p>
-                 <p class="home-arena home-arena-link-eng">Are.na / Rongbin Fan / <a class="home-arena-link home-arena-link-eng" href="https://www.are.na/rongbin-fan/brackets-and-comma">brackets and comma [, ]</a></br>Instagram <a href="https://instagram.com/brackets_comma">@brackets_comma</a></p>
+                 <p class="home-arena home-arena-link-eng">Are.na / Rongbin Fan / <a class="home-arena-link home-arena-link-eng" href="https://www.are.na/rongbin-fan/brackets-and-comma">brackets and comma [, ]</a></br>Instagram <span class="home-insta"><a href="https://instagram.com/brackets_comma">@brackets_comma</a></span></p>
                 
                 
-                 <p class="home-arena">微澜图书馆</br><a class="home-weilan-link" href="https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ">《他们是外卖员、快递员、家政工，但他们的孩子在城市找不到一张课桌 | 一席》</a></p>
+                 <p class="home-arena">微澜图书馆</br><a href="http://www.sanzhi.org.cn/?page_id=3922/">官方网站</a> | <a class="home-weilan-link" href="https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ">一席演讲</a> | <a href="http://www.sanzhi.org.cn/">新公民计划</a></p>
                 </div>
             
 </script>
