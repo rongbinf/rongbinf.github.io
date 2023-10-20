@@ -2,348 +2,375 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=0">
-	<title>Playground</title>
-	<meta name="description" content="An expansion to isolate.">
-	<meta name="author" content="Hargow">
-	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-	<link rel="icon" type="image/png" href="img/playground.ico">
-	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Selekkt/skelet@3.3.0/css/skelet.min.css">
-	<script src="https://kit.fontawesome.com/42c31efce8.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
-	<style>
-		:root {
-			--fontSize: calc(100vw / 80);
-			--hHeading: 5vw;
-			--siteMarg: 5rem;
-			--fontFamily: Arial, "Arial Unicode MS", sans-serif;
-			--linkColor: #009ba0;
-			--linkHover: #000;
-			z-index: -2;
-		}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=0">
+    <title>Rongbin FAN</title>
+    <meta name="description" content="Thoughts and ideas.">
+    <meta name="author" content="Rongbin FAN">
 
-		/* p {
+    <meta property="og:title" content="Rongbin FAN" />
+    <meta property="og:description" content="Thoughts and ideas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fanrongbin.com" />
+    <meta property="og:image" content="https://fanrongbin.com/images/avatar.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://fanrongbin.com/images/avatar.webp" />
+    <meta name="twitter:title" content="Posts" />
+    <meta name="twitter:description" content="Thoughts and ideas." />
+
+
+    <meta name="application-name" content="Rongbin FAN">
+    <meta name="apple-mobile-web-app-title" content="Rongbin FAN">
+    <meta name="theme-color" content="#f8f8f8">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="google-site-verification" content="f9S1PcORQC1rTiGZYbp79oBJ-nNHN_CBQ8yGhW_rufs" />
+
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.svg">
+    <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Selekkt/skelet@3.3.0/css/skelet.min.css">
+    <script src="https://kit.fontawesome.com/42c31efce8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+    <style>
+        :root {
+            --fontSize: calc(100vw / 80);
+            --hHeading: 5vw;
+            --siteMarg: 5rem;
+            --fontFamily: Arial, "Arial Unicode MS", sans-serif;
+            --linkColor: #009ba0;
+            --linkHover: #000;
+            z-index: -2;
+        }
+
+        /* p {
 			font-weight: 200;
 		} */
 
-		.source {
-			font-size: 1.3rem;
-			color: #888;
-		}
+        .source {
+            font-size: 1.3rem;
+            color: #888;
+        }
 
-		.text-end {
-			font-size: 1.3rem;
-		}
+        .text-end {
+            font-size: 1.3rem;
+        }
 
-		a {
-			text-decoration: underline;
-		}
+        a {
+            text-decoration: underline;
+        }
 
-		a:hover {
-			color: #000;
-			text-decoration: line-through;
-		}
+        a:hover {
+            color: #000;
+            text-decoration: line-through;
+        }
 
-		em {
-			color: #888;
-		}
+        em {
+            color: #888;
+        }
 
-		#app {
-			padding: 2rem var(--siteMarg);
-			max-width: 1600px;
-			margin: 0 auto;
-			z-index: -1;
-		}
+        #app {
+            padding: 2rem var(--siteMarg);
+            max-width: 1600px;
+            margin: 0 auto;
+            z-index: -1;
+        }
 
-		.h1 {
-			font-size: var(--hHeading);
-			letter-spacing: 0
-		}
+        .h1 {
+            font-size: var(--hHeading);
+            letter-spacing: 0
+        }
 
-		.heavier {
-			font-weight: 600;
-		}
+        .heavier {
+            font-weight: 600;
+        }
 
-		.serif {
-			font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, cursive, serif;
-			;
-		}
+        .serif {
+            font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, cursive, serif;
+            ;
+        }
 
-		.space4 {
-			display: block;
-			width: 100%;
-			margin: 2vw auto;
-		}
+        .space4 {
+            display: block;
+            width: 100%;
+            margin: 2vw auto;
+        }
 
-		.box {
-			display: none;
-			position: absolute;
-			top: 25%;
-			left: 25%;
-			width: 50%;
-			height: 50%;
-			padding: 20px;
-			border: 5px solid #000;
-			background-color: rgba(255, 255, 255, 0.9);
-			z-index: 1002;
-			overflow: auto;
-		}
+        .box {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            padding: 20px;
+            border: 5px solid #000;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 1002;
+            overflow: auto;
+        }
 
-		a.close {
-			color: red;
-		}
+        a.close {
+            color: red;
+        }
 
-		a.info {
-			color: #000;
-			cursor: help;
-			font-weight: 800;
-			text-decoration: none;
-			border-bottom: 1.25px #525252 dashed;
-		}
+        a.info {
+            color: #000;
+            cursor: help;
+            font-weight: 800;
+            text-decoration: none;
+            border-bottom: 1.25px #525252 dashed;
+        }
 
-		a.info:hover {
-			border-bottom: none;
-			text-decoration: line-through;
-		}
+        a.info:hover {
+            border-bottom: none;
+            text-decoration: line-through;
+        }
 
-		#mailto {
-			display: none;
-			text-align: center;
-			font-size: 90%;
-			color: #000;
-			background-color: #fff;
-			border: 1px #000 dashed;
-			padding: 5%;
-		}
+        #mailto {
+            display: none;
+            text-align: center;
+            font-size: 90%;
+            color: #000;
+            background-color: #fff;
+            border: 1px #000 dashed;
+            padding: 5%;
+        }
 
-		#beijing {
-			display: none;
-			border: 1px #000 dashed;
-		}
+        #beijing {
+            display: none;
+            border: 1px #000 dashed;
+        }
 
-		#address {
-			display: none;
-			font-style: italic;
-			border: 1px #000 dashed;
-			padding: 5%;
-		}
+        #address {
+            display: none;
+            font-style: italic;
+            border: 1px #000 dashed;
+            padding: 5%;
+        }
 
-		#copied {
-			display: none;
-			background-color: #fff;
-			color: #565656;
-			font-size: 80%;
-		}
+        #copied {
+            display: none;
+            background-color: #fff;
+            color: #565656;
+            font-size: 80%;
+        }
 
-		#weilan1,
-		#weilan2 {
-			display: none;
-		}
+        #weilan1,
+        #weilan2 {
+            display: none;
+        }
 
-		.link {
-			text-decoration: none;
-			font-weight: 800;
-		}
+        .link {
+            text-decoration: none;
+            font-weight: 800;
+        }
 
-		.number,
-		.number:hover {
-			text-decoration: none;
-			font-weight: 800;
-			color: #000;
+        .number,
+        .number:hover {
+            text-decoration: none;
+            font-weight: 800;
+            color: #000;
 
-		}
+        }
 
-		@media (max-width: 1200px) {
-			:root {
-				--fontSize: 1.5rem;
-				--hHeading: 2.8rem;
-				--siteMarg: 2rem;
-			}
+        @media (max-width: 1200px) {
+            :root {
+                --fontSize: 1.5rem;
+                --hHeading: 2.8rem;
+                --siteMarg: 2rem;
+            }
 
-			x-flex>x-col {
-				max-width: 100%;
-			}
-		}
+            x-flex>x-col {
+                max-width: 100%;
+            }
+        }
 
-		::-webkit-scrollbar {
-			display: none;
-		}
-	</style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 
 <body data-mode="light">
-	<div id="app">
-		<main>
-			<x-grid columns="2">
-				<x-col span="2+1"><p class="source"><a class="info number" target="_blank" href="https://translate.google.com/?sl=auto&tl=zh-CN&text=%E8%8D%A3%E5%BD%AC&op=translate">How to pronounce my name?</a></p></x-col>
-			</x-grid>
+    <div id="app">
+        <main>
+            <x-grid columns="2">
+                <x-col span="2+1">
+                    <p class="source"><a class="info number" target="_blank"
+                            href="https://translate.google.com/?sl=auto&tl=zh-CN&text=%E8%8D%A3%E5%BD%AC&op=translate">How
+                            to pronounce my name?</a></p>
+                </x-col>
+            </x-grid>
 
-			<x-grid columns="1">
-				<x-col span="1">
-					<p><span class="serif heavier">Hi, My name's Rongbin.</span> 👋<br><span class="serif heavier">You can call me
-							Ron.</span></p>
-					<p class="serif">你好，我叫荣彬。</p>
-				</x-col>
-			</x-grid>
+            <x-grid columns="1">
+                <x-col span="1">
+                    <p><span class="serif heavier">Hi, My name's Rongbin.</span> 👋<br><span class="serif heavier">You
+                            can call me
+                            Ron.</span></p>
+                    <p class="serif">你好，我叫荣彬。</p>
+                </x-col>
+            </x-grid>
 
-			<span class="space4"></span>
+            <span class="space4"></span>
 
-			<x-grid columns="1">
-				<x-col span="1">
-					<p>I <em>he/him</em> currently live in <a class="info"
-							onclick="toggleDisplay('beijing')">Beijing</a> and I
-						study finance at the University of Internatioanl Business and Economics (UIBE). I also do some
-						graphic design and <a class="info" target="_blank"
-							href="https://www.are.na/rongbin-fan/brackets-and-comma"
-							style="color:rgb(75, 61, 103);">random projects <i
-								class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>.</p>
-					<p>If you'd like to connect, feel free to 📧 <a class="info" onclick="toggleDisplay('mailto')">email
-							me</a>, 📫 <a class="info" onclick="toggleDisplay('address')">send
-							me a postcard</a>, add me on <i class="fa-brands fa-linkedin" style="color: #0084d6;"></i>
-						<a class="info" target="_blank" href="https://linkedin.com/in/rongbin-fan">LinkedIn</a> or any
-						other platform. I speak Chinese <em>Mandarin, Cantonese,
-							Taiwanese/Southern Min</em>, English, Korean,
-						and I hope to learn more about you and 🌏 the world.
-					</p>
-				</x-col>
-			</x-grid>
+            <x-grid columns="1">
+                <x-col span="1">
+                    <p>I <em>he/him</em> currently live in <a class="info"
+                            onclick="toggleDisplay('beijing')">Beijing</a> and I
+                        study finance at the University of Internatioanl Business and Economics (UIBE). I also do some
+                        graphic design and <a class="info" target="_blank"
+                            href="https://www.are.na/rongbin-fan/brackets-and-comma"
+                            style="color:rgb(75, 61, 103);">random projects <i
+                                class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>.</p>
+                    <p>If you'd like to connect, feel free to 📧 <a class="info" onclick="toggleDisplay('mailto')">email
+                            me</a>, 📫 <a class="info" onclick="toggleDisplay('address')">send
+                            me a postcard</a>, add me on <i class="fa-brands fa-linkedin" style="color: #0084d6;"></i>
+                        <a class="info" target="_blank" href="https://linkedin.com/in/rongbin-fan">LinkedIn</a> or any
+                        other platform. I speak Chinese <em>Mandarin, Cantonese,
+                            Taiwanese/Southern Min</em>, English, Korean,
+                        and I hope to learn more about you and 🌏 the world.
+                    </p>
+                </x-col>
+            </x-grid>
 
-			<span class="space4"></span>
+            <span class="space4"></span>
 
-			<x-grid columns="2">
-				<x-col span="1">
-					<div id="beijing">
-						<!-- <p class="source" style="text-align: center;">↓ GOOGLE MAP ↓</p> -->
-						<div id="embed-map-canvas" style="height:80%;width:100%;"><iframe
-								style="height:80%;width:100%;border:0;" frameborder="0"
-								src="https://www.google.com/maps/embed/v1/place?q=University+of+International+Business+and+Economics+International+Communication+Center,+Chengxin+N+Rd,+Chaoyang,+Beijing,+China&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-						</div>
-					</div>
-					<div>
-						<p id="mailto"><a href="mailto:fanrongbin0201@gmail.com">mailto:</a> fanrongbin0201@gmail.com
-							<a class="btn" data-clipboard-text="fanrongbin0201@gmail.com"
-								onclick="document.getElementById('copied').style.display='block'">click to copy</a><span
-								id="copied">copied!</span>
-						</p>
-					</div>
-					<script>
-						var clipboard = new ClipboardJS('.btn');
+            <x-grid columns="2">
+                <x-col span="1">
+                    <div id="beijing">
+                        <!-- <p class="source" style="text-align: center;">↓ GOOGLE MAP ↓</p> -->
+                        <div id="embed-map-canvas" style="height:80%;width:100%;"><iframe
+                                style="height:80%;width:100%;border:0;" frameborder="0"
+                                src="https://www.google.com/maps/embed/v1/place?q=University+of+International+Business+and+Economics+International+Communication+Center,+Chengxin+N+Rd,+Chaoyang,+Beijing,+China&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <p id="mailto"><a href="mailto:fanrongbin0201@gmail.com">mailto:</a> fanrongbin0201@gmail.com
+                            <a class="btn" data-clipboard-text="fanrongbin0201@gmail.com"
+                                onclick="document.getElementById('copied').style.display='block'">click to copy</a><span
+                                id="copied">copied!</span>
+                        </p>
+                    </div>
+                    <script>
+                        var clipboard = new ClipboardJS('.btn');
 
-						clipboard.on('success', function (e) {
-							console.info('Action:', e.action);
-							console.info('Text:', e.text);
-							console.info('Trigger:', e.trigger);
+                        clipboard.on('success', function (e) {
+                            console.info('Action:', e.action);
+                            console.info('Text:', e.text);
+                            console.info('Trigger:', e.trigger);
 
-							e.clearSelection();
-						});
+                            e.clearSelection();
+                        });
 
-						clipboard.on('error', function (e) {
-							console.error('Action:', e.action);
-							console.error('Trigger:', e.trigger);
-						});
-					</script>
-					<div>
-						<p id="address" class="serif">Dui Wai Jing Mao, 10 Huixin East Street, <br>Chaoyang District,
-							<br>Beijing CHINA 100029</p>
-					</div>
-				</x-col>
-				<x-col span="2+1">
-					<p><span class="source">Blog</span><br><a class="link" target="_blank"
-							href="https://fanrongbin.com/posts">中文博客</a><br>
-						<a class="link" target="_blank" href="https://medium.com/@rongbin0201"><i
-								class="fa-brands fa-medium fa-sm"></i> English posts</a>
-					</p>
-					<p><span class="source" target="_blank" href="http://www.sanzhi.org.cn/?page_id=3922">微澜图书馆 Wei Lan
-							(Wave) Library <a class="info"
-								onclick="toggleDisplay('weilan1'); toggleDisplay('weilan2');">what?</a></span><br><a
-							class="link" href="http://www.sanzhi.org.cn/?page_id=3922/">官网</a><br><a class="link"
-							target="_blank" href="https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ">一席演讲</a></p>
-				</x-col>
-			</x-grid>
-			<script>
-				function toggleDisplay(id) {
-					const element = document.getElementById(id);
-					if (element.style.display === 'none' || element.style.display === '') {
-						element.style.display = 'block';
-					} else {
-						element.style.display = 'none';
-					}
-				}
-			</script>
-			<x-grid columns="2">
-				<x-col span="1" style="text-align: right;" id="weilan2">
-					<p class="source" style="color: #242424;"><span class="number"><sup>1</sup> </span>Source: National
-						Bureau of Statistics, 2021</p>
-					<p class="source" style="color: #242424;"><span class="number"><sup>2</sup> </span><em>Hukou</em>,
-						China’s household registration system, which divides population into two different statuses:
-						agricultural and non-agricultural residency statuses. Yet China provides a wide range of public
-						education, resources in cities, which means only city hukou holders could benefit from, are
-						exceedingly more than schools in rural.</p>
-				</x-col>
-				<x-col span="2+1" id="weilan1">
-					<p class="source" style="color: #242424;"><strong>Wei Lan (Wave) Library</strong> is a real,
-						non-profit project aimed at building libraries for <strong>floating children</strong> in China.
-						There are an estimated 292.51 million<span class="number"><sup>1</sup></span> rural migrant
-						workers in China’s cities as delivery motorbike-riders, laborers, doorkeepers and at other jobs
-						that urbanites avoid. The children of this floating population are called floating children. The
-						families, holding a rural <em>Hukou</em><span class="number"><sup>2</sup></span> and on a tight
-						budget, could only afford low-cost private schools which barely have good education resources,
-						even books. Though some of these schools do receive donations, the lack of teacher and librarian
-						hinders the daily operation of the school library. Here, volunteers from Wei Lan Library take
-						the responsibility by spending one or two days a week, sorting books, helping kids find the good
-						ones and maintaining a rather safe environment to study. And they step even further: conduct
-						both quantitative and qualitative research, reach out to publishing houses and enterprises about
-						possibilities to donate, work with press and media, speak out at forums and conferences and so
-						forth.</p>
-					<p class="source" style="color: #242424;">
-						<strong>微澜图书馆</strong>是在城市边缘地带为流动儿童服务，开设在民办打工子女学校内的小型公益图书馆。<strong>流动儿童</strong>是跟随务工父母居住在城市，却因没有当地户籍，接受义务教育的权利受到侵害的孩子。微澜图书馆服务的主要是流动儿童之中，父母从事较低收入工作、户籍地大部分在乡村的孩子。
-					</p>
-				</x-col>
-			</x-grid>
+                        clipboard.on('error', function (e) {
+                            console.error('Action:', e.action);
+                            console.error('Trigger:', e.trigger);
+                        });
+                    </script>
+                    <div>
+                        <p id="address" class="serif">Dui Wai Jing Mao, 10 Huixin East Street, <br>Chaoyang District,
+                            <br>Beijing CHINA 100029
+                        </p>
+                    </div>
+                </x-col>
+                <x-col span="2+1">
+                    <p><span class="source">Blog</span><br><a class="link" target="_blank"
+                            href="https://fanrongbin.com/posts">中文博客</a><br>
+                        <a class="link" target="_blank" href="https://medium.com/@rongbin0201"><i
+                                class="fa-brands fa-medium fa-sm"></i> English posts</a>
+                    </p>
+                    <p><span class="source" target="_blank" href="http://www.sanzhi.org.cn/?page_id=3922">微澜图书馆 Wei Lan
+                            (Wave) Library <a class="info"
+                                onclick="toggleDisplay('weilan1'); toggleDisplay('weilan2');">what?</a></span><br><a
+                            class="link" href="http://www.sanzhi.org.cn/?page_id=3922/">官网</a><br><a class="link"
+                            target="_blank" href="https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ">一席演讲</a></p>
+                </x-col>
+            </x-grid>
+            <script>
+                function toggleDisplay(id) {
+                    const element = document.getElementById(id);
+                    if (element.style.display === 'none' || element.style.display === '') {
+                        element.style.display = 'block';
+                    } else {
+                        element.style.display = 'none';
+                    }
+                }
+            </script>
+            <x-grid columns="2">
+                <x-col span="1" style="text-align: right;" id="weilan2">
+                    <p class="source" style="color: #242424;"><span class="number"><sup>1</sup> </span>Source: National
+                        Bureau of Statistics, 2021</p>
+                    <p class="source" style="color: #242424;"><span class="number"><sup>2</sup> </span><em>Hukou</em>,
+                        China’s household registration system, which divides population into two different statuses:
+                        agricultural and non-agricultural residency statuses. Yet China provides a wide range of public
+                        education, resources in cities, which means only city hukou holders could benefit from, are
+                        exceedingly more than schools in rural.</p>
+                </x-col>
+                <x-col span="2+1" id="weilan1">
+                    <p class="source" style="color: #242424;"><strong>Wei Lan (Wave) Library</strong> is a real,
+                        non-profit project aimed at building libraries for <strong>floating children</strong> in China.
+                        There are an estimated 292.51 million<span class="number"><sup>1</sup></span> rural migrant
+                        workers in China’s cities as delivery motorbike-riders, laborers, doorkeepers and at other jobs
+                        that urbanites avoid. The children of this floating population are called floating children. The
+                        families, holding a rural <em>Hukou</em><span class="number"><sup>2</sup></span> and on a tight
+                        budget, could only afford low-cost private schools which barely have good education resources,
+                        even books. Though some of these schools do receive donations, the lack of teacher and librarian
+                        hinders the daily operation of the school library. Here, volunteers from Wei Lan Library take
+                        the responsibility by spending one or two days a week, sorting books, helping kids find the good
+                        ones and maintaining a rather safe environment to study. And they step even further: conduct
+                        both quantitative and qualitative research, reach out to publishing houses and enterprises about
+                        possibilities to donate, work with press and media, speak out at forums and conferences and so
+                        forth.</p>
+                    <p class="source" style="color: #242424;">
+                        <strong>微澜图书馆</strong>是在城市边缘地带为流动儿童服务，开设在民办打工子女学校内的小型公益图书馆。<strong>流动儿童</strong>是跟随务工父母居住在城市，却因没有当地户籍，接受义务教育的权利受到侵害的孩子。微澜图书馆服务的主要是流动儿童之中，父母从事较低收入工作、户籍地大部分在乡村的孩子。
+                    </p>
+                </x-col>
+            </x-grid>
 
-		</main>
-		<footer class="text-end">
-			<x-grid columns="2">
-				<x-col span="1">
-					<p class="source"><a href="https://html.energy/">HTML Energy</a> is all around us and in this very
-						website.</p>
-				</x-col>
-			</x-grid>
-			Since 2002, Paused <a href="covid-19.html">2020</a>, Rebooting 2023.
-		</footer>
-	</div>
+        </main>
+        <footer class="text-end">
+            <x-grid columns="2">
+                <x-col span="1">
+                    <p class="source"><a href="https://html.energy/">HTML Energy</a> is all around us and in this very
+                        website.</p>
+                </x-col>
+            </x-grid>
+            Since 2002, Paused <a href="covid-19.html">2020</a>, Rebooting 2023.
+        </footer>
+    </div>
 </body>
 <script type="text/javascript">
-	document.documentElement.addEventListener(
-		"touchstart",
-		function (event) {
-			if (event.touches.length > 1) {
-				event.preventDefault();
-			}
-		},
-		false
-	);
+    document.documentElement.addEventListener(
+        "touchstart",
+        function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        },
+        false
+    );
 
-	var lastTouchEnd = 0;
-	document.documentElement.addEventListener(
-		"touchend",
-		function (event) {
-			var now = Date.now();
-			if (now - lastTouchEnd <= 300) {
-				event.preventDefault();
-			}
-			lastTouchEnd = now;
-		},
-		false
-	);
+    var lastTouchEnd = 0;
+    document.documentElement.addEventListener(
+        "touchend",
+        function (event) {
+            var now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        },
+        false
+    );
 
-	document.addEventListener("gesturestart", function (event) {
-		event.preventDefault();
-	});
+    document.addEventListener("gesturestart", function (event) {
+        event.preventDefault();
+    });
 </script>
 
 </html>
