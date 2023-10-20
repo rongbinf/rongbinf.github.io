@@ -20,7 +20,6 @@
     <meta name="twitter:title" content="Posts" />
     <meta name="twitter:description" content="Thoughts and ideas." />
 
-
     <meta name="application-name" content="Rongbin FAN">
     <meta name="apple-mobile-web-app-title" content="Rongbin FAN">
     <meta name="theme-color" content="#f8f8f8">
@@ -34,6 +33,11 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Selekkt/skelet@3.3.0/css/skelet.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/42c31efce8.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
     <style>
@@ -41,7 +45,7 @@
             --fontSize: calc(100vw / 80);
             --hHeading: 5vw;
             --siteMarg: 5rem;
-            --fontFamily: Arial, "Arial Unicode MS", sans-serif;
+            --fontFamily: "IBM Plex Sans", Aptos, "Helvetica Neue", Helvetica, Arial, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
             --linkColor: #009ba0;
             --linkHover: #000;
             z-index: -2;
@@ -90,14 +94,24 @@
         }
 
         .serif {
-            font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, cursive, serif;
+            font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", "EB Garamond", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, 楷体, cursive, serif;
             ;
+        }
+
+        .larger {
+            font-size: 125%;
         }
 
         .space4 {
             display: block;
             width: 100%;
             margin: 2vw auto;
+        }
+
+        .space5 {
+            display: block;
+            width: 100%;
+            margin: 4vw auto;
         }
 
         .box {
@@ -151,6 +165,7 @@
             font-style: italic;
             border: 1px #000 dashed;
             padding: 5%;
+            font-size: 1.5rem;
         }
 
         #copied {
@@ -201,18 +216,21 @@
         <main>
             <x-grid columns="2">
                 <x-col span="2+1">
-                    <p class="source"><a class="info number" target="_blank"
-                            href="https://translate.google.com/?sl=auto&tl=zh-CN&text=%E8%8D%A3%E5%BD%AC&op=translate">How
+                    <p class="source"><a class="info number" target="_blank" onclick="toggleDisplay('pronounce')">How
                             to pronounce my name?</a></p>
+                    <p class="source" id="pronounce" style="display: none;">It sounds like
+                        <strong><em>Robin</em></strong> but change the <em>o</em> to <em>ong</em>, like <em>long</em>
+                        without <em>l</em>.<br>And then plus <em>bin</em>.
+                    </p>
                 </x-col>
             </x-grid>
 
             <x-grid columns="1">
                 <x-col span="1">
-                    <p><span class="serif heavier">Hi, My name's Rongbin.</span> 👋<br><span class="serif heavier">You
+                    <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> 👋<br><span class="serif heavier">You
                             can call me
                             Ron.</span></p>
-                    <p class="serif">你好，我叫荣彬。</p>
+                    <p class="serif larger">你好，我叫荣彬。</p>
                 </x-col>
             </x-grid>
 
@@ -220,17 +238,16 @@
 
             <x-grid columns="1">
                 <x-col span="1">
-                    <p>I <em>he/him</em> currently live in <a class="info"
+                    <p>I <em>he/him</em> currently live in <img style="display: inline; margin-right: 5px;" src="https://www.beijing.gov.cn/favicon.ico"><a class="info"
                             onclick="toggleDisplay('beijing')">Beijing</a> and I
                         study finance at the University of Internatioanl Business and Economics (UIBE). I also do some
-                        graphic design and <a class="info" target="_blank"
-                            href="https://www.are.na/rongbin-fan/brackets-and-comma"
-                            style="color:rgb(75, 61, 103);">random projects <i
-                                class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>.</p>
+                        graphic design and <a target="_blank" href="https://www.are.na/rongbin-fan/brackets-and-comma"
+                            class="link" style="color: rgb(75, 61, 103);">random projects</a>.</p>
                     <p>If you'd like to connect, feel free to 📧 <a class="info" onclick="toggleDisplay('mailto')">email
                             me</a>, 📫 <a class="info" onclick="toggleDisplay('address')">send
                             me a postcard</a>, add me on <i class="fa-brands fa-linkedin" style="color: #0084d6;"></i>
-                        <a class="info" target="_blank" href="https://linkedin.com/in/rongbin-fan">LinkedIn</a> or any
+                        <a class="link" target="_blank" href="https://linkedin.com/in/rongbin-fan"
+                            style="color: #0084d6;">LinkedIn</a> or any
                         other platform. I speak Chinese <em>Mandarin, Cantonese,
                             Taiwanese/Southern Min</em>, English, Korean,
                         and I hope to learn more about you and 🌏 the world.
@@ -238,11 +255,12 @@
                 </x-col>
             </x-grid>
 
-            <span class="space4"></span>
+            <span class="space5"></span>
 
             <x-grid columns="2">
                 <x-col span="1">
                     <div id="beijing">
+                        <span class="source">Google Map:</span>
                         <!-- <p class="source" style="text-align: center;">↓ GOOGLE MAP ↓</p> -->
                         <div id="embed-map-canvas" style="height:80%;width:100%;"><iframe
                                 style="height:80%;width:100%;border:0;" frameborder="0"
@@ -280,15 +298,18 @@
                 </x-col>
                 <x-col span="2+1">
                     <p><span class="source">Blog</span><br><a class="link" target="_blank"
-                            href="https://fanrongbin.com/posts">中文博客</a><br>
-                        <a class="link" target="_blank" href="https://medium.com/@rongbin0201"><i
-                                class="fa-brands fa-medium fa-sm"></i> English posts</a>
+                            href="https://fanrongbin.com/posts">📜 中文博客</a><br>
+                        <a class="link" target="_blank" href="https://medium.com/@rongbin0201" style="color: #000;"><i
+                                class="fa-brands fa-medium fa-sm"></i><span style="margin-right: 10px;"></span>English
+                            posts</a>
                     </p>
                     <p><span class="source" target="_blank" href="http://www.sanzhi.org.cn/?page_id=3922">微澜图书馆 Wei Lan
                             (Wave) Library <a class="info"
                                 onclick="toggleDisplay('weilan1'); toggleDisplay('weilan2');">what?</a></span><br><a
-                            class="link" href="http://www.sanzhi.org.cn/?page_id=3922/">官网</a><br><a class="link"
-                            target="_blank" href="https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ">一席演讲</a></p>
+                            class="link" href="http://www.sanzhi.org.cn/?page_id=3922/" style="color: #0066ff;">🔗
+                            官网</a><br><a class="link" target="_blank"
+                            href="https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ" style="color:#c90000;">🧑‍🏫️
+                            一席演讲</a></p>
                 </x-col>
             </x-grid>
             <script>
