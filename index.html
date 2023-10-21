@@ -263,22 +263,32 @@
 <body data-mode="light">
 
     <script>
-        function toggleMode() {
+        // function toggleMode() {
+        //     const body = document.body;
+        //     if (body.getAttribute("data-mode") === "light") {
+        //         body.setAttribute("data-mode", "dark");
+        //     } else {
+        //         body.setAttribute("data-mode", "light");
+        //     }
+        // }
+
+        // Function to handle system color scheme changes
+        function handleSystemColorSchemeChange(event) {
             const body = document.body;
-            if (body.getAttribute("data-mode") === "light") {
+            if (event.matches) {
                 body.setAttribute("data-mode", "dark");
             } else {
                 body.setAttribute("data-mode", "light");
             }
         }
-    
+
         // Check system color scheme and set data-mode accordingly
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.setAttribute("data-mode", "dark");
-        } else {
-            document.body.setAttribute("data-mode", "light");
+        if (window.matchMedia) {
+            const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            systemColorScheme.addListener(handleSystemColorSchemeChange);
+            handleSystemColorSchemeChange(systemColorScheme);
         }
-    </script>    
+    </script>
 
     <div id="app">
         <main>
@@ -462,7 +472,8 @@
                         website.</p>
                 </x-col>
             </x-grid>
-            <a id="toggle-mode" onclick="toggleMode()">☀🌙</a> Since 2002, Paused <a target="_blank"
+            <!-- <a id="toggle-mode" onclick="toggleMode()">☀🌙</a> -->
+            Since 2002, Paused <a target="_blank"
                 href="https://dimsum.eu.org/covid-19.html">2020</a>, Rebooting 2023.
         </footer>
     </div>
