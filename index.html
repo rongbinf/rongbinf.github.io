@@ -53,38 +53,38 @@
             z-index: -2;
         }
 
-        /* @media (prefers-color-scheme: dark) {
+        @media (prefers-color-scheme: dark) {
             :root {
                 --linkHover: #fff;
             }
 
-            #medium {
+            body[data-mode="dark"] #medium {
                 color: #fff;
             }
 
-            #arena-link {
+            body[data-mode="dark"] #arena-link {
                 color: rgb(130, 86, 218);
             }
 
-            .black-svg-medium {
+            body[data-mode="dark"] .black-svg-medium {
                 background-color: #fff;
                 border-right: 1.5px #fff solid;
                 border-left: 1px #fff solid;
             }
 
-            .black-svg-arena {
+            body[data-mode="dark"] .black-svg-arena {
                 background-color: #fff;
             }
 
-            a.info {
+            body[data-mode="dark"] a.info {
                 color: #fff;
                 border-bottom: 1.25px #d9d9d9 dashed;
             }
 
-            .source {
+            body[data-mode="dark"] .source {
                 color: #d9d9d9;
             }
-        } */
+        }
 
         /* p {
 			font-weight: 200;
@@ -262,92 +262,23 @@
 
 <body data-mode="light">
 
-    <!-- Coded by GPT-3.5  -->
     <script>
-        // Function to update styles based on the current mode
-        function updateStyles(mode) {
-            if (mode === 'light') {
-                // Reset the styles for light mode (undo dark mode changes)
-                document.documentElement.style.removeProperty('--linkHover');
-                document.getElementById('medium').style.removeProperty('color');
-                document.getElementById('arena-link').style.removeProperty('color');
-                document.querySelectorAll('.black-svg-medium').forEach((element) => {
-                    element.style.removeProperty('background-color');
-                    element.style.removeProperty('border-right');
-                    element.style.removeProperty('border-left');
-                });
-                document.querySelectorAll('.black-svg-arena').forEach((element) => {
-                    element.style.removeProperty('background-color');
-                });
-                document.querySelectorAll('a.info').forEach((element) => {
-                    element.style.removeProperty('color');
-                    element.style.removeProperty('border-bottom');
-                });
-                document.querySelectorAll('.source').forEach((element) => {
-                    element.style.removeProperty('color');
-                });
-            } else if (mode === 'dark') {
-                // Update CSS styles for dark mode
-                document.documentElement.style.setProperty('--linkHover', '#fff');
-                document.getElementById('medium').style.color = '#fff';
-                document.getElementById('arena-link').style.color = 'rgb(130, 86, 218)';
-                document.querySelectorAll('.black-svg-medium').forEach((element) => {
-                    element.style.backgroundColor = '#fff';
-                    element.style.borderRight = '1.5px #fff solid';
-                    element.style.borderLeft = '1px #fff solid';
-                });
-                document.querySelectorAll('.black-svg-arena').forEach((element) => {
-                    element.style.backgroundColor = '#fff';
-                });
-                document.querySelectorAll('a.info').forEach((element) => {
-                    element.style.color = '#fff';
-                    element.style.borderBottom = '1.25px #d9d9d9 dashed';
-                });
-                document.querySelectorAll('.source').forEach((element) => {
-                    element.style.color = '#d9d9d9';
-                });
-            }
-        }
-
-        // Function to toggle the data-mode attribute
         function toggleMode() {
-            const currentMode = document.body.getAttribute('data-mode');
-            if (currentMode === 'light') {
-                document.body.setAttribute('data-mode', 'dark');
-                updateStyles('dark'); // Update styles for dark mode
+            const body = document.body;
+            if (body.getAttribute("data-mode") === "light") {
+                body.setAttribute("data-mode", "dark");
             } else {
-                document.body.setAttribute('data-mode', 'light');
-                updateStyles('light'); // Reset styles for light mode
+                body.setAttribute("data-mode", "light");
             }
         }
-
-        // Function to set the data-mode attribute based on system/browser color scheme
-        function setModeAttribute() {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.body.setAttribute('data-mode', 'dark');
-                updateStyles('dark'); // Update styles for dark mode
-            } else {
-                document.body.setAttribute('data-mode', 'light');
-                updateStyles('light'); // Reset styles for light mode
-            }
-        }
-
-        // Call the function to set the initial mode
-        setModeAttribute();
-
-        // Listen for changes in system/browser color mode and update the data-mode attribute
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (e.matches) {
-                document.body.setAttribute('data-mode', 'dark');
-                updateStyles('dark'); // Update styles for dark mode
-            } else {
-                document.body.setAttribute('data-mode', 'light');
-                updateStyles('light'); // Reset styles for light mode
-            }
-        });
-    </script>
     
-       
+        // Check system color scheme and set data-mode accordingly
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.setAttribute("data-mode", "dark");
+        } else {
+            document.body.setAttribute("data-mode", "light");
+        }
+    </script>    
 
     <div id="app">
         <main>
@@ -531,7 +462,8 @@
                         website.</p>
                 </x-col>
             </x-grid>
-            <a id="toggle-mode" onclick="toggleMode()">☀🌙</a> Since 2002, Paused <a target="_blank" href="https://dimsum.eu.org/covid-19.html">2020</a>, Rebooting 2023.
+            <a id="toggle-mode" onclick="toggleMode()">☀🌙</a> Since 2002, Paused <a target="_blank"
+                href="https://dimsum.eu.org/covid-19.html">2020</a>, Rebooting 2023.
         </footer>
     </div>
 </body>
