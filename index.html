@@ -53,6 +53,13 @@
             z-index: -2;
         }
 
+        #app {
+            padding: 2rem var(--siteMarg);
+            max-width: 1600px;
+            margin: 0 auto;
+            z-index: -1;
+        }
+
         @media (prefers-color-scheme: dark) {
             :root {
                 --linkHover: #fff;
@@ -91,10 +98,6 @@
             }
         }
 
-        /* p {
-			font-weight: 200;
-		} */
-
         .source {
             font-size: 1.3rem;
             color: #888;
@@ -113,61 +116,6 @@
             text-decoration: line-through;
         }
 
-        em {
-            color: #888;
-        }
-
-        #app {
-            padding: 2rem var(--siteMarg);
-            max-width: 1600px;
-            margin: 0 auto;
-            z-index: -1;
-        }
-
-        .h1 {
-            font-size: var(--hHeading);
-            letter-spacing: 0
-        }
-
-        .heavier {
-            font-weight: 600;
-        }
-
-        .serif {
-            font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", "EB Garamond", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, 楷体, cursive, serif;
-            ;
-        }
-
-        .larger {
-            font-size: 125%;
-        }
-
-        .space4 {
-            display: block;
-            width: 100%;
-            margin: 2vw auto;
-        }
-
-        .space5 {
-            display: block;
-            width: 100%;
-            margin: 4vw auto;
-        }
-
-        .box {
-            display: none;
-            position: absolute;
-            top: 25%;
-            left: 25%;
-            width: 50%;
-            height: 50%;
-            padding: 20px;
-            border: 5px solid #000;
-            background-color: rgba(255, 255, 255, 0.9);
-            z-index: 1002;
-            overflow: auto;
-        }
-
         a.close {
             color: red;
         }
@@ -182,6 +130,35 @@
         a.info:hover {
             border-bottom: none;
             text-decoration: line-through;
+        }
+
+        em {
+            color: #888;
+        }
+
+        .heavier {
+            font-weight: 600;
+        }
+
+        .larger {
+            font-size: 125%;
+        }
+
+        .serif {
+            font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", "EB Garamond", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, 楷体, cursive, serif;
+            ;
+        }
+
+        .space4 {
+            display: block;
+            width: 100%;
+            margin: 2vw auto;
+        }
+
+        .space5 {
+            display: block;
+            width: 100%;
+            margin: 4vw auto;
         }
 
         #mailto {
@@ -266,6 +243,7 @@
 
 <body data-mode="light">
 
+    <!-- color mode -->
     <script>
         // function toggleMode() {
         //     const body = document.body;
@@ -292,6 +270,24 @@
             systemColorScheme.addListener(handleSystemColorSchemeChange);
             handleSystemColorSchemeChange(systemColorScheme);
         }
+    </script>
+
+    <!-- clipboard.js -->
+    <script>
+        var clipboard = new ClipboardJS('.btn');
+
+        clipboard.on('success', function (e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+
+            e.clearSelection();
+        });
+
+        clipboard.on('error', function (e) {
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+        });
     </script>
 
     <div id="app">
@@ -381,22 +377,6 @@
                                 id="copied">copied!</span>
                         </p>
                     </div>
-                    <script>
-                        var clipboard = new ClipboardJS('.btn');
-
-                        clipboard.on('success', function (e) {
-                            console.info('Action:', e.action);
-                            console.info('Text:', e.text);
-                            console.info('Trigger:', e.trigger);
-
-                            e.clearSelection();
-                        });
-
-                        clipboard.on('error', function (e) {
-                            console.error('Action:', e.action);
-                            console.error('Trigger:', e.trigger);
-                        });
-                    </script>
                     <div>
                         <p id="address" class="serif">Dui Wai Jing Mao, 10 Huixin East Street, <br>Chaoyang District,
                             <br>Beijing CHINA 100029
@@ -427,16 +407,6 @@
                             一席演讲</a></p>
                 </x-col>
             </x-grid>
-            <script>
-                function toggleDisplay(id) {
-                    const element = document.getElementById(id);
-                    if (element.style.display === 'none' || element.style.display === '') {
-                        element.style.display = 'block';
-                    } else {
-                        element.style.display = 'none';
-                    }
-                }
-            </script>
             <x-grid columns="2">
                 <x-col span="1" style="text-align: right;" id="weilan2">
                     <p class="source"><span class="number"><sup>1</sup> </span>Source: National
@@ -477,11 +447,24 @@
                 </x-col>
             </x-grid>
             <!-- <a id="toggle-mode" onclick="toggleMode()">☀🌙</a> -->
-            Since 2002, Paused <a target="_blank"
-                href="https://dimsum.eu.org/covid-19.html">2020</a>, Rebooting 2023.
+            Since 2002, Paused <a target="_blank" href="https://dimsum.eu.org/covid-19.html">2020</a>, Rebooting 2023.
         </footer>
     </div>
 </body>
+
+<!-- toggle display -->
+<script>
+    function toggleDisplay(id) {
+        const element = document.getElementById(id);
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+<!-- disable viewport zooming on iOS -->
 <script type="text/javascript">
     document.documentElement.addEventListener(
         "touchstart",
