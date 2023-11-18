@@ -1,299 +1,43 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>家庭网络 - 标签 - Rongbin&#39;s Blog</title>
-        <link>https://fanrongbin.com/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/</link>
-        <description>家庭网络 - 标签 - Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>fanrongbin0201@gmail.com (Rongbin Fan)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (Rongbin Fan)</webMaster><lastBuildDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/" rel="self" type="application/rss+xml" /><item>
-    <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
-    <link>https://fanrongbin.com/network-resetting-2021/</link>
-    <pubDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>Rongbin Fan</name>
-    </author><guid>https://fanrongbin.com/network-resetting-2021/</guid><description><![CDATA[<div class="details admonition tip open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-lightbulb fa-fw"></i>更新<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">在<a href="https://rongbin.fan/posts/network-resetting-2022.html" target="_blank" rel="noopener noreffer">这篇新博文</a>中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。</div>
-        </div>
-    </div>
-<p>原先的布置：</p>
-
-<p>之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。</p>
-<p>现在的布置：</p>
-
-<p>解决了几个痛点，记录一下：</p>
-<ul>
-<li>信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 + 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯</li>
-<li>速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。</li>
-<li>切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC+AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。</li>
-<li>丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。</li>
-</ul>
-<h2 id="电信网关拨号改桥接">电信网关拨号改桥接</h2>
-<p>所用网关型号为 HS8145C，通过<strong>超级管理员帐户</strong>进入后台，用户名为 <code>telecomadmin</code>。一说有通用密码 <code>nE7jA%5m</code>，我也是使用该密码进入的。</p>
-<p>如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 <code>http://192.168.1.1/backupsettings.conf</code>，下载 <code>backupsettings.conf</code>。搜索 <code>password</code> 获得经 base64 加密过的密码，可尝试使用在线工具解密，如 <a href="https://md5hashing.net/" target="_blank" rel="noopener noreffer">md5hashing</a>。</p>
-<p>进入菜单「网络」选项，在上网业务中将 <code>3_INTERNET_B_VID_41</code> 项连接方式改为<strong>桥接</strong>即可。</p>
-<p>相应地，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。</p>
-<h2 id="tp-link-易展有线回程">TP-LINK 易展有线回程</h2>
-<p>有几个需要注意的：</p>
-<ol>
-<li>易展路由器应在同一网段下，例如各自 IP 地址为 <code>192.168.2.1</code>、<code>192.168.2.2</code>。</li>
-<li>接好网线。</li>
-<li>先设置作为<strong>主路由</strong>的那台，例如我希望将 XDR5430 作为主路由，则它先接网线并上电配置。</li>
-</ol>
-<p>步骤如下：</p>
-<ol>
-<li>（如果之前使用无线回程，需要对所有易展路由器恢复出厂设置。）</li>
-<li>主路由上电，配置上网，关闭 DHCP。</li>
-<li>确认主路由是否正常上网。此时主路由可能提示 WAN 口未正常连接。但只要能上网就行。</li>
-<li>将其他易展路由器接网线上电，按易展按钮进行易展。</li>
-</ol>
-
-<p>右上角显示连接网线的 icon 即实现有线回程。</p>
-]]></description>
-</item><item>
-    <title>树莓派实现开机自动播放 RTSP 流视频</title>
-    <link>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
-    <pubDate>Wed, 06 Jan 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>Rongbin Fan</name>
-    </author><guid>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid><description><![CDATA[<p>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。</p>
-<h2 id="获取摄像头-rtsp-流">获取摄像头 RTSP 流</h2>
-<ul>
-<li>对于海康威视和萤石摄像头，其 RTSP 流地址格式如下：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
-</code></pre></td></tr></table>
-</div>
-</div><p>具体参数（如视频编码）自行调整。</p>
-<ul>
-<li>对于 TP-LINK 摄像头，其 RTSP 流地址格式如下：</li>
-</ul>
-<p>主码流为：<code>rtsp://[username]:[password]@[ip]:[port]/stream1</code></p>
-<p>子码流将 <code>stream1</code> 替换为 <code>stream2</code> 即可。</p>
-<p>RTSP 端口 <code>port</code> 默认为 <code>554</code>，若为默认可不填写。</p>
-<h2 id="使用-vlc-播放">使用 VLC 播放</h2>
-<p>有两种方法：</p>
-<h3 id="1-使用命令">1. 使用命令</h3>
-<ul>
-<li>Run on the server:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc -vvv input_stream --sout <span class="s1">&#39;#rtp{dst=192.168.0.12,port=1234,sdp=rtsp://server.example.org:8080/test.sdp}&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>Run on the client(s):</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc rtsp://server.example.org:8080/test.sdp
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="2-创建-playlist-文件">2. 创建 playlist 文件</h3>
-<p>新建一个播放列表，或直接使用播放 URL 打开 RTSP 流视频，确认能够正常播放。</p>
-<p>将播放列表另存为文件。这里建议另存为 <code>.m3u</code> 格式，因为打开 <code>.xspf</code> 格式文件会弹窗提示你选择 execute 或 open。</p>
-<p>运行该 playlist 文件即可播放。</p>
-<h2 id="使用其他方式播放">使用其他方式播放</h2>
-<p>你也可以使用 omxplayer 或 mplayer 进行播放。</p>
-<h2 id="实现开机自启动">实现开机自启动</h2>
-<p>在 Linux 上有多种实现开机自启动的方法。我尝试向 <code>rc.local</code> 添加启动代码但未起作用。目前使用通过桌面启动的方法。</p>
-<p>在 <code>/home/pi/.config/</code> 下创建名为 <code>autostart</code> 的新文件夹。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> /home/pi/.config
-mkdir autostart
-</code></pre></td></tr></table>
-</div>
-</div><p>在 <code>autostart</code> 目录下创建一个后缀为 <code>.desktop</code> 的文件。文件名任意。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> autostart
-nano test.desktop
-</code></pre></td></tr></table>
-</div>
-</div><p>更改文件内容：</p>
-<ol>
-<li>若采用命令打开：</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
-Type=Application
-Exec=vlc rtsp://server.example.org:8080/test.sdp
-</code></pre></td></tr></table>
-</div>
-</div><ol start="2">
-<li>若采用 playlist 文件，则更改为文件路径：</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
-Type=Application
-Exec=vlc /home/pi/test.m3u
-</code></pre></td></tr></table>
-</div>
-</div><p>运行 <code>sudo reboot</code> 重启测试。</p>
-<ol start="3">
-<li>也可以在一个新的 shell 脚本中添加 vlc 命令，将 <code>Exec=</code> 后内容直接修改为 .sh 文件路径。如：</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Desktop Entry]
-Type=Application
-Exec=/home/pi/test.sh
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="使-vlc-默认全屏打开">使 VLC 默认全屏打开</h2>
-<h3 id="1-修改命令">1. 修改命令</h3>
-<p>在 RTSP 流地址或 playlist 路径前添加选项 <code>-f</code> 或 <code>--fullscreen</code>，如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vlc -f /home/pi/test.m3u
-</code></pre></td></tr></table>
-</div>
-</div><p>其他支持的选项：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 全屏幕视频输出 (默认关闭)
--f, --fullscreen, --no-fullscreen 
-# 总在最前 (默认关闭) 
---video-on-top, --no-video-on-top 
-# 开启壁纸模式 (默认关闭)
---video-wallpaper, --no-video-wallpaper 
-# 在视频上显示媒体标题 (默认开启)
---video-title-show, --no-video-title-show 
-# 显示视频标题 x 毫秒
---video-title-timeout &lt;整数 [-2147483648 .. 2147483647]&gt; 
-# 视频标题的位置
---video-title-position {0 (居中), 1 (左), 2 (右), 4 (上), 8 (下), 5 (左上), 6 (右上), 9 (左下), 10 (右下)}
-# 在 x 毫秒后隐藏光标和全屏控制器
---mouse-hide-timeout &lt;整数 [-2147483648 .. 2147483647]&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p>更多详见 <a href="https://wiki.videolan.org/Documentation:Documentation/" target="_blank" rel="noopener noreffer">VLC 帮助文档</a>。</p>
-<h3 id="2-在-gui-修改-preference">2. 在 GUI 修改 Preference</h3>
-<p>在 VLC Menu Bar &raquo; Tools &raquo; Preferences，进入 Video 栏，勾选 Fullscreen 即可。</p>
-<h2 id="使命令在后台加载">使命令在后台加载</h2>
-<p>在直接执行 <code>vlc rtsp://...</code> 命令时，遇到 Timestamp conversion failed。转而使用：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xdg-open /home/pi/test.m3u
-</code></pre></td></tr></table>
-</div>
-</div><p>直接打开播放列表文件。</p>
-<p>或者改用 mplayer，在 <code>mplayer rtsp://...</code> 后加入 <code>&lt; /dev/null &amp;</code> 或完整的 <code>&lt; /dev/null &gt; /dev/null 2&gt;1 &amp;</code>。</p>
-<h2 id="设置显示器常亮">设置显示器常亮</h2>
-<p>进入 <code>/etc/lightdm</code> 目录修改 <code>lightdm.conf</code> 文件：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo vi /etc/lightdm/lightdm.conf
-</code></pre></td></tr></table>
-</div>
-</div><p>找到 <code>[Seat:*]</code> 或 <code>[SeatDefaults]</code> 段下的 <code>xserver-command</code>，默认为 <code>-#xserver-command=X</code>，修改为：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xserver-command<span class="o">=</span>X -s <span class="m">0</span> -dpms
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="使用-unclutter-设置鼠标指针自动隐藏">使用 unclutter 设置鼠标指针自动隐藏</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install unclutter
-<span class="nb">echo</span> “@unclutter -idle <span class="m">1</span> -root” &gt;&gt; /etc/xdg/lxsession/LXDE/autostart
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="使用-xdotoolwwwsemicompletecomprojectsxdotool-改变窗口大小和位置">使用 <a href="www.semicomplete.com/projects/xdotool/" rel="">xdotool</a> 改变窗口大小和位置</h2>
-<p>首先安装 xdotool：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install xdotool
-</code></pre></td></tr></table>
-</div>
-</div><p>同时实现改变窗口大小和位置，如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">xdotool search --name <span class="s2">&#34;VLC&#34;</span> windowsize <span class="m">800</span> <span class="m">600</span> windowmove <span class="m">0</span> <span class="m">0</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>解释：</p>
-<ul>
-<li><code>search --name [keyword]</code> ：将搜索名称中带有关键词的窗口</li>
-<li><code>windowsize 800 600</code>：改变窗口大小，<code>$WIDTH $HEIGHT</code></li>
-<li><code>windowmove 0 0</code>：改变窗口位置，<code>$X $Y</code>，具体视屏幕分辨率而定</li>
-</ul>
-]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>家庭网络 on Rongbin&#39;s Blog</title>
+    <link>https://fanrongbin.com/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 家庭网络 on Rongbin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://fanrongbin.com/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
+      <link>https://fanrongbin.com/posts/network-resetting-2021/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/posts/network-resetting-2021/</guid>
+      <description>在这篇新博文中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。
+原先的布置：
+之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。
+现在的布置：
+解决了几个痛点，记录一下：
+信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 + 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯ 速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。 切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC+AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。 丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。 电信网关拨号改桥接 # 所用网关型号为 HS8145C，通过超级管理员帐户进入后台，用户名为 telecomadmin。一说有通用密码 nE7jA%5m，我也是使用该密码进入的。
+如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 http://192.168.1.1/backupsettings.conf，下载 backupsettings.conf。搜索 password 获得经 base64 加密过的密码，可尝试使用在线工具解密，如 md5hashing。
+进入菜单「网络」选项，在上网业务中将 3_INTERNET_B_VID_41 项连接方式改为桥接即可。
+相应地，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。
+TP-LINK 易展有线回程 # 有几个需要注意的：
+易展路由器应在同一网段下，例如各自 IP 地址为 192.168.2.1、192.168.2.2。 接好网线。 先设置作为主路由的那台，例如我希望将 XDR5430 作为主路由，则它先接网线并上电配置。 步骤如下：</description>
+    </item>
+    <item>
+      <title>树莓派实现开机自动播放 RTSP 流视频</title>
+      <link>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
+      <description>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。
+获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式如下： rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream 具体参数（如视频编码）自行调整。
+对于 TP-LINK 摄像头，其 RTSP 流地址格式如下： 主码流为：rtsp://[username]:[password]@[ip]:[port]/stream1
+子码流将 stream1 替换为 stream2 即可。
+RTSP 端口 port 默认为 554，若为默认可不填写。
+使用 VLC 播放 # 有两种方法：
+1. 使用命令 # Run on the server: vlc -vvv input_stream --sout &amp;#39;#rtp{dst=192.168.0.12,port=1234,sdp=rtsp://server.example.org:8080/test.sdp}&amp;#39; Run on the client(s): vlc rtsp://server.example.org:8080/test.sdp 2. 创建 playlist 文件 # 新建一个播放列表，或直接使用播放 URL 打开 RTSP 流视频，确认能够正常播放。
+将播放列表另存为文件。这里建议另存为 .m3u 格式，因为打开 .xspf 格式文件会弹窗提示你选择 execute 或 open。</description>
+    </item>
+  </channel>
 </rss>

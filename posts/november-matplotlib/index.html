@@ -1,307 +1,204 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh" class="han-init"><head>
+<title>使用 matplotlib 遇到的几个问题 - Rongbin&#39;s Blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description"
+    content="这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。
+import pandas as pd import matplotlib as plt 首先是解决字符串转日期型的问题。我希望将日期作为横轴，而且显示合理。
+使用 datetime。
+from datetime import datetime x = datetime.strptime(d, &#39;%Y-%m-%d&#39;).date() for d in example.date # example.date 是我的 example.csv 文件中日期对应列。 plt.plot(x,y) 更多时间处理参数，详见下方链接。
+自动格式化：
+plt.gcf().autofmt_xdate() datetime - Python 3 中文文档 python之时间、日期处理模块（datetime）- CSDN 我希望定位一个具体日期，并用竖线标识。 这里用到pandas把我希望的具体日期转为时间戳。
+plt.axvline(pd.Timestamp(&#39;2014-06-30&#39;), color=&#39;#000&#39;) matplotlib.pyplot.axvline pandas.Timestamp 我希望在一张图（单个文件）中同时展示多个图表，既可以用 subplot，也可以用 GridSpec。
+plt.subplot(211) plt.plot(time, totalb) plt.subplot(212) plt.plot(time, conb) 也可以：
+plt.GridSpec(2, 1, wspace=.25, hspace=.25) ax1 = plt.subplot(grid[0,0:1]) ax1. ">
+<link rel="canonical" href="https://fanrongbin.com/posts/november-matplotlib/" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noodp" />
-    <title class="pjax-title">使用 matplotlib 遇到的几个问题 - Rongbin&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="使用 matplotlib 遇到的几个问题" />
-<meta property="og:description" content="这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。 1 2 import pandas as pd import matplotlib as plt 首先是解决字符串转日期型的问题。我希望将日期作为横轴，而且显示合理。 使用 d" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://fanrongbin.com/posts/november-matplotlib/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-11-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-11-12T00:00:00+00:00" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用 matplotlib 遇到的几个问题"/>
-<meta name="twitter:description" content="这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。 1 2 import pandas as pd import matplotlib as plt 首先是解决字符串转日期型的问题。我希望将日期作为横轴，而且显示合理。 使用 d"/>
-<meta name="application-name" content="Rongbin&#39;s Blog">
-<meta name="apple-mobile-web-app-title" content="Rongbin&#39;s Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#ffffff"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff"><link rel="canonical" href="https://fanrongbin.com/posts/november-matplotlib/" /><link rel="prev" href="https://fanrongbin.com/posts/eclipse-indices-indexes/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
-    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
-    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "使用 matplotlib 遇到的几个问题",
-        "inLanguage": "zh-CN",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https:\/\/fanrongbin.com\/posts\/november-matplotlib\/"
-        },"genre": "posts","keywords": "Python","wordcount":  372 ,
-        "url": "https:\/\/fanrongbin.com\/posts\/november-matplotlib\/","datePublished": "2021-11-12T00:00:00+00:00","dateModified": "2021-11-12T00:00:00+00:00","publisher": {
-            "@type": "Organization",
-            "name": "作者"},"author": {
-                "@type": "Person",
-                "name": "作者"
-            },"description": ""
-    }
-    </script></head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) {document.body.setAttribute('theme', theme);}
-        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
-        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
-        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
-        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
-        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
-    </script>
-    <div id="back-to-top"></div>
-    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank">  <i class='fas fa-campground'></i></a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
-                        <option value="light">浅色</option>
-                        <option value="dark">深色</option>
-                        <option value="black">黑色</option>
-                        <option value="auto">跟随系统</option>
-                    </select>
-                </a></div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
-                        取消
-                    </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank"><i class='fas fa-campground'></i></a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
-                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
-                    <option value="light">浅色</option>
-                    <option value="dark">深色</option>
-                    <option value="black">黑色</option>
-                    <option value="auto">跟随系统</option>
-                </select>
-            </a></div>
-    </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-            <div class="container"><div class="toc" id="toc-auto">
-        <h2 class="toc-title">目录</h2>
-        <div class="toc-content" id="toc-content-auto"></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__fadeIn">使用 matplotlib 遇到的几个问题</h1><div class="post-meta">
-            <div class="post-meta-line">
-                </div>
-            <div class="post-meta-line">
-                    <i class="fa-fw"></i><time datetime="2021-11-12">2021-11-12</time>&nbsp;
-                <i class="fa-fw"></i>&nbsp;约 372 字&nbsp;
-                <i class="fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;
-            </div>
-        </div><div class="details toc" id="toc-static"  kept="">
-                <div class="details-summary toc-title">
-                    <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>首先是解决字符串转日期型的问题。<strong>我希望将日期作为横轴，而且显示合理。</strong></p>
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
+</noscript>
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte.min.css">
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte-options.min.css">
+
+<link rel="stylesheet" href="/css/hugo-tufte-override.css">
+
+
+
+<link rel="stylesheet" href="/han.min.css">
+
+</head>
+<body>
+
+
+<article id="main" class="han-init-context">
+  <section>
+<h1 class="content-title">使用 matplotlib 遇到的几个问题</h1><span class="content-meta">
+  <p class="date">12 Nov 2021</p>
+</span></section>
+
+  
+
+
+
+  <section><p>这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span></code></pre></div><p>首先是解决字符串转日期型的问题。<strong>我希望将日期作为横轴，而且显示合理。</strong></p>
 <p>使用 <code>datetime</code>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">example</span><span class="o">.</span><span class="n">date</span>
-
-<span class="c1"># example.date 是我的 example.csv 文件中日期对应列。</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>更多时间处理参数，详见下方链接。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">example</span><span class="o">.</span><span class="n">date</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># example.date 是我的 example.csv 文件中日期对应列。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span></code></pre></div><p>更多时间处理参数，详见下方链接。</p>
 <p>自动格式化：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li><a href="https://docs.python.org/zh-cn/3/library/datetime.html" target="_blank" rel="noopener noreffer">datetime - Python 3 中文文档</a></li>
-<li><a href="https://blog.csdn.net/gty931008/article/details/80254806" target="_blank" rel="noopener noreffer">python之时间、日期处理模块（datetime）- CSDN</a></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+</span></span></code></pre></div><ul>
+<li><a href="https://docs.python.org/zh-cn/3/library/datetime.html">datetime - Python 3 中文文档</a></li>
+<li><a href="https://blog.csdn.net/gty931008/article/details/80254806">python之时间、日期处理模块（datetime）- CSDN</a></li>
 </ul>
-<p>**我希望定位一个具体日期，并用竖线标识。**这里用到 <code>pandas</code> 把我希望的具体日期转为时间戳。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2014-06-30&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#000&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvline.html" target="_blank" rel="noopener noreffer">matplotlib.pyplot.axvline</a></li>
-<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html" target="_blank" rel="noopener noreffer">pandas.Timestamp</a></li>
+<p><strong>我希望定位一个具体日期，并用竖线标识。</strong> 这里用到<code>pandas</code>把我希望的具体日期转为时间戳。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2014-06-30&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#000&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvline.html">matplotlib.pyplot.axvline</a></li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html">pandas.Timestamp</a></li>
 </ul>
-<p><img
-        class="lazyload"
-        data-src="https://i.loli.net/2021/11/12/lfxb2TMN9ukKz6t.png"
-        data-srcset="https://i.loli.net/2021/11/12/lfxb2TMN9ukKz6t.png, https://i.loli.net/2021/11/12/lfxb2TMN9ukKz6t.png 1.5x, https://i.loli.net/2021/11/12/lfxb2TMN9ukKz6t.png 2x"
-        data-sizes="auto"
-        alt="https://i.loli.net/2021/11/12/lfxb2TMN9ukKz6t.png"
-        title="hicp"
-    /></p>
+<p><img src="https://i.loli.net/2021/11/12/lfxb2TMN9ukKz6t.png" alt="hicp"></p>
 <p><strong>我希望在一张图（单个文件）中同时展示多个图表</strong>，既可以用 <code>subplot</code>，也可以用 <code>GridSpec</code>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">totalb</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">totalb</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">conb</span><span class="p">)</span>
+</span></span></code></pre></div><p>也可以：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">GridSpec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">.25</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">.25</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">totalb</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">conb</span><span class="p">)</span>
+</span></span></code></pre></div><p>如何定义具体位置或查看更多实例，请见 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html?">matplotlib.pyplot.subplot</a> 和 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec">matplotlib.gridspec.GridSpec</a>。</p>
+<p><img src="https://i.loli.net/2021/11/12/DJGWkYgR4QjSLfI.png" alt="credit"></p>
+<p><img src="https://i.loli.net/2021/11/12/4hHlSIj7zRO3Cng.png" alt="rates"></p>
+<p>参考了实例 <a href="https://matplotlib.org/stable/gallery/subplots_axes_and_figures/axes_zoom_effect.html">Axes Zoom Effect</a>。</p>
+</section>
+  <section><footer class="page-footer">
+<hr />
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">conb</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>也可以：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">GridSpec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">.25</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">.25</span><span class="p">)</span>
-<span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">totalb</span><span class="p">)</span>
-
-<span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">conb</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>如何定义具体位置或查看更多实例，请见 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html?" target="_blank" rel="noopener noreffer">matplotlib.pyplot.subplot</a> 和 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec" target="_blank" rel="noopener noreffer">matplotlib.gridspec.GridSpec</a>。</p>
-<p><img
-        class="lazyload"
-        data-src="https://i.loli.net/2021/11/12/DJGWkYgR4QjSLfI.png"
-        data-srcset="https://i.loli.net/2021/11/12/DJGWkYgR4QjSLfI.png, https://i.loli.net/2021/11/12/DJGWkYgR4QjSLfI.png 1.5x, https://i.loli.net/2021/11/12/DJGWkYgR4QjSLfI.png 2x"
-        data-sizes="auto"
-        alt="https://i.loli.net/2021/11/12/DJGWkYgR4QjSLfI.png"
-        title="credit"
-    /></p>
-<p><img
-        class="lazyload"
-        data-src="https://i.loli.net/2021/11/12/4hHlSIj7zRO3Cng.png"
-        data-srcset="https://i.loli.net/2021/11/12/4hHlSIj7zRO3Cng.png, https://i.loli.net/2021/11/12/4hHlSIj7zRO3Cng.png 1.5x, https://i.loli.net/2021/11/12/4hHlSIj7zRO3Cng.png 2x"
-        data-sizes="auto"
-        alt="https://i.loli.net/2021/11/12/4hHlSIj7zRO3Cng.png"
-        title="rates"
-    /></p>
-<p>参考了实例 <a href="https://matplotlib.org/stable/gallery/subplots_axes_and_figures/axes_zoom_effect.html" target="_blank" rel="noopener noreffer">Axes Zoom Effect</a>。</p>
-<p>待持续补充。</p>
+<div class="previous-post" style="display:inline-block;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/posts/eclipse-indices-indexes/?ref=footer">« eclipse, indices / indexes 与股价指数</a>
+  
 </div>
 
-        <div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                
-            </div>
-            <div class="post-info-license"></div>
-        </div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="post-info-more">
-        <section class="post-tags"><a href="/tags/python/">Python</a></section>
-        <section>
-            
-        </section>
-    </div>
-
-    <div class="post-nav"><a href="/posts/eclipse-indices-indexes/" class="prev" rel="prev" title="eclipse, indices / indexes 与股价指数"><i class="fas fa-angle-left fa-fw"></i>eclipse, indices / indexes 与股价指数</a></div>
+<div class="next-post", style="display:inline-block;float:right;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/posts/cpp-copy-constructor/?ref=footer">C++ 中的拷贝构造函数：浅拷贝、深拷贝 »</a>
+  
 </div>
-<div id="comments"><div id="giscus"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://giscus.app/">giscus</a>.
-            </noscript></div></article></div>
-        </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><a href="https://gohugo.io/">Hugo</a> + <a href="https://github.com/HEIGE-PCloud/DoIt">DoIt</a> + <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></div><div class="footer-line"></div>
-        </div></footer></div>
 
-    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
-            <i class="fas fa-arrow-up fa-fw"></i>
-        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-            <i class="fas fa-comment fa-fw"></i>
-        </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+<ul class="page-footer-menu">
+  
+  
+  
+  
 
-<div class="pjax-assets"><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{"giscus":{"darkTheme":"dark_protanopia","dataCategory":"General","dataCategoryId":"DIC_kwDOGX4Up84B_22x","dataEmitMetadata":"0","dataMapping":"pathname","dataReactionsEnabled":"1","dataRepo":"rongbinf/rongbinf.github.io","dataRepoId":"R_kgDOGX4Upw","lightTheme":"light_protanopia"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"useExtendedSearch":false},"twemoji":true};</script><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
-    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-    <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</ul>
+
+
+<p>
+  Powered by <a href="https://gohugo.io">Hugo</a>,  
+  <a href="https://github.com/loikein/hugo-tufte">Tufte theme</a> and <a href="https://github.com/ethantw/Han">Han.css</a>.</br>Use <a href="https://hypothes.is/">Hypothesis</a> to highlight or comment.
+</br></br>2023 Rongbin FAN
+</p>
+
+
+
+
+</footer>
+</section>
+  <section><nav class="menu">
+    <ul>
+    
+        <li><a href="/posts"><i class='fas fa-book fa-lg'></i> 归档</a></li>
+    
+        <li><a href="/tags"><i class='fas fa-tags fa-lg'></i> 标签</a></li>
+    
+        <li><a href="/"><i class='fas fa-info-circle  fa-lg'></i> 关于</a></li>
+    
+    </ul>
+</nav>
+</section>
+</article>
+
+<script type="application/json" class="js-hypothesis-config">
+{
+"showHighlights": false
+}
+</script>
+<script async src="https://hypothes.is/embed.js"></script>
+
+
+
+
+
+
 </body>
+
+<script src="/han.min.js"></script>
 
 </html>

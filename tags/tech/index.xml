@@ -1,62 +1,50 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Tech - 标签 - Rongbin&#39;s Blog</title>
-        <link>https://fanrongbin.com/tags/tech/</link>
-        <description>Tech - 标签 - Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>fanrongbin0201@gmail.com (Rongbin Fan)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (Rongbin Fan)</webMaster><lastBuildDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fanrongbin.com/tags/tech/" rel="self" type="application/rss+xml" /><item>
-    <title>Windows 11 的新字体：Segoe UI Variable</title>
-    <link>https://fanrongbin.com/segoe-ui-variable/</link>
-    <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate><author>
-        <name>Rongbin Fan</name>
-    </author><guid>https://fanrongbin.com/segoe-ui-variable/</guid><description><![CDATA[<p>微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 <a href="https://blogs.windows.com/windows-insider/2021/05/06/announcing-windows-10-insider-preview-build-21376/" target="_blank" rel="noopener noreffer">发布</a>了 Segoe UI 的可变字体版本：Segoe UI Variable，<a href="https://docs.microsoft.com/en-us/windows/apps/design/signature-experiences/typography" target="_blank" rel="noopener noreffer">在 Windows 11 </a>正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。</p>
-<p></img></p>
-<p></img></p>
-<p>风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，<del>看起来也更像 Product Sans 了。</del></p>
-<p></img></p>
-<p>可以通过 Windows 的<a href="https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts" target="_blank" rel="noopener noreffer">官方文档</a>，或直接访问<a href="https://aka.ms/SegoeUIVariable" target="_blank" rel="noopener noreffer">此链接</a>下载 Segoe UI Variable。</p>
-]]></description>
-</item><item>
-    <title>来自 Apple 的流媒体推广工具</title>
-    <link>https://fanrongbin.com/apple-media-service-marketing/</link>
-    <pubDate>Sat, 04 Dec 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>Rongbin Fan</name>
-    </author><guid>https://fanrongbin.com/apple-media-service-marketing/</guid><description><![CDATA[<p>Apple 分别在今年 9 月、去年 11 月和去年 7 月发布了用于 iOS 应用、播客和 Apple Music 推广的工具，以帮助开发者迅速创建赏心悦目、符合 Apple 设计规范的推广用图和网页内嵌模块。现在还包括 Arcade、News 和 TV，已经是完全搭建起整个适用于 Apple 媒体服务的推广工具平台。你可以<a href="https://tools.applemediaservices.com/" target="_blank" rel="noopener noreffer">按此访问 Apple Services Marketing Tools</a>。</p>
-<p>和订阅制播客一并发布的还有 <a href="https://podcaster.apple.com/" target="_blank" rel="noopener noreffer">Apple Podcasts for Creators</a>，方便制作者查看收听数据等信息。</p>
-<p>这里给出几个嵌入实例：</p>
-<p>Apple Podcast：</p>
-<iframe src="https://embed.podcasts.apple.com/us/podcast/%E4%BB%8E%E8%8F%9C%E8%A1%97%E5%88%B0%E5%8E%A8%E6%88%BF-07%E6%88%90%E5%B9%B4%E4%BA%BA%E7%9A%84%E6%88%90%E7%98%BE%E7%89%A9%E8%B4%A8-%E8%8C%B6%E5%92%8C%E5%92%96%E5%95%A1/id1585465479?i=1000537928836&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
-<p>实际上会自动判断访问者所在地区。例如这是一个未在中国大陆上架的播客，显示内容不可用。</p>
-<iframe src="https://embed.podcasts.apple.com/us/podcast/fokcast-%E7%94%98%E7%A5%BA%E6%B5%81%E8%A1%8C-%E9%A6%99%E6%B8%AFpodcast/id1546976247?itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
-<p>Apple Music：</p>
-<iframe src="https://embed.music.apple.com/us/album/tellusboutyourself/1543102982?app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
-<p>Apple TV：</p>
-<iframe src="https://embed.tv.apple.com/us/show/snoopy-in-space-the-search-for-life/umc.cmc.12l86ri6vfjlimw2m8b8dzszs?itscg=30200&amp;itsct=tv_box_player" height="371px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; border-radius: 10px; background: transparent;"></iframe>
-<p>Apple Store 推广用图：</p>
-
-<p>挺好看的。</p>
-]]></description>
-</item><item>
-    <title>Engadget 简体中文版关闭</title>
-    <link>https://fanrongbin.com/engadget-cn-closed/</link>
-    <pubDate>Tue, 02 Nov 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>Rongbin Fan</name>
-    </author><guid>https://fanrongbin.com/engadget-cn-closed/</guid><description><![CDATA[<blockquote>
-<p>2021 年 11 月 1 日起，用户无法从中国大陆使用 Yahoo 的产品与服务。这并不影响 Yahoo 在全球其他地方的产品及服务。</p>
-<p>Yahoo 中国</p>
-</blockquote>
-<p>同时，Yahoo Weather（雅虎天气）宣布停止中国大陆服务，Engadget 简体中文版亦宣布停止更新。</p>
-<p></p>
-<p>Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，触角广泛，文字亦精炼扼要。记得最初是在 Flipboard 或者 Zaker 上偶然订阅了 Engadget 中文版，它是我所接触到的第一个科技资讯媒体。后来陆陆续续地还订阅了 The Verge、TechCrunch，还有 LiveSino、月光博客。它们构成我的很多回忆。中间编辑团队一度更换，希望了解更多的话，可见文末。</p>
-<p>现在的话，新资讯有赖于 Telegram 上的几个频道推送通知，产品测评的话看 YouTube 多一点（Dave2D、TESTV 等等），市场新闻、创投等也有比较集中的信源了。</p>
-<p>关于团队更换：</p>
-<ul>
-<li><a href="https://chinese.engadget.com/chinese-2011-06-27-new-engadget-chinese.html" target="_blank" rel="noopener noreffer">《歡迎來到全新的 Engadget 中文版》</a> - Richard Lai@Engadget</li>
-<li><a href="http://yblog.org/archive/index.php/aol_relocate_engadget_chinese_201106" target="_blank" rel="noopener noreffer">《Engadget 中文版與癮科技拆夥的可能內幕》</a>- 永遠的真田幸村</li>
-</ul>
-<p>祝新老成员未来都好。</p>
-<p>正式开站纪念博文存档：</p>
-<p></p>
-]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Rongbin&#39;s Blog</title>
+    <link>https://fanrongbin.com/tags/tech/</link>
+    <description>Recent content in Tech on Rongbin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 30 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://fanrongbin.com/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 11 的新字体：Segoe UI Variable</title>
+      <link>https://fanrongbin.com/posts/segoe-ui-variable/</link>
+      <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/posts/segoe-ui-variable/</guid>
+      <description>微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 发布了 Segoe UI 的可变字体版本：Segoe UI Variable，在 Windows 11 正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。
+风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，看起来也更像 Product Sans 了。
+可以通过 Windows 的官方文档，或直接访问此链接下载 Segoe UI Variable。</description>
+    </item>
+    <item>
+      <title>来自 Apple 的流媒体推广工具</title>
+      <link>https://fanrongbin.com/posts/apple-media-service-marketing/</link>
+      <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/posts/apple-media-service-marketing/</guid>
+      <description>Apple 分别在今年 9 月、去年 11 月和去年 7 月发布了用于 iOS 应用、播客和 Apple Music 推广的工具，以帮助开发者迅速创建赏心悦目、符合 Apple 设计规范的推广用图和网页内嵌模块。现在还包括 Arcade、News 和 TV，已经是完全搭建起整个适用于 Apple 媒体服务的推广工具平台。你可以按此访问 Apple Services Marketing Tools。
+和订阅制播客一并发布的还有 Apple Podcasts for Creators，方便制作者查看收听数据等信息。
+这里给出几个嵌入实例：
+Apple Podcast：
+实际上会自动判断访问者所在地区。例如这是一个未在中国大陆上架的播客，显示内容不可用。
+Apple Music：
+Apple TV：
+Apple Store 推广用图：
+挺好看的。</description>
+    </item>
+    <item>
+      <title>Engadget 简体中文版关闭</title>
+      <link>https://fanrongbin.com/posts/engadget-cn-closed/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/posts/engadget-cn-closed/</guid>
+      <description>2021 年 11 月 1 日起，用户无法从中国大陆使用 Yahoo 的产品与服务。这并不影响 Yahoo 在全球其他地方的产品及服务。
+Yahoo 中国
+同时，Yahoo Weather（雅虎天气）宣布停止中国大陆服务，Engadget 简体中文版亦宣布停止更新。
+Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，触角广泛，文字亦精炼扼要。记得最初是在 Flipboard 或者 Zaker 上偶然订阅了 Engadget 中文版，它是我所接触到的第一个科技资讯媒体。后来陆陆续续地还订阅了 The Verge、TechCrunch，还有 LiveSino、月光博客。它们构成我的很多回忆。中间编辑团队一度更换，希望了解更多的话，可见文末。
+现在的话，新资讯有赖于 Telegram 上的几个频道推送通知，产品测评的话看 YouTube 多一点（Dave2D、TESTV 等等），市场新闻、创投等也有比较集中的信源了。
+关于团队更换：
+《歡迎來到全新的 Engadget 中文版》 - Richard Lai@Engadget 《Engadget 中文版與癮科技拆夥的可能內幕》- 永遠的真田幸村 祝新老成员未来都好。
+正式开站纪念博文存档：</description>
+    </item>
+  </channel>
 </rss>

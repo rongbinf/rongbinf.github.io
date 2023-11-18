@@ -1,8 +1,11 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Categories - 分类 - Rongbin&#39;s Blog</title>
-        <link>https://fanrongbin.com/categories/</link>
-        <description>Categories - 分类 - Rongbin&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fanrongbin0201@gmail.com (FAN Rongbin)</managingEditor>
-            <webMaster>fanrongbin0201@gmail.com (FAN Rongbin)</webMaster><atom:link href="https://fanrongbin.com/categories/" rel="self" type="application/rss+xml" /></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Rongbin&#39;s Blog</title>
+    <link>https://fanrongbin.com/categories/</link>
+    <description>Recent content in Categories on Rongbin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <atom:link href="https://fanrongbin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
 </rss>

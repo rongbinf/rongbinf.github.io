@@ -1,220 +1,119 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh" class="han-init"><head>
+<title>在 Web 设计中使用系统 UI 默认字体 - Rongbin&#39;s Blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description"
+    content="内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。
+使用默认 UI 字体可以通过两种方式实现：
+非常用方法 # .caption { font: caption; } 不是很常见，即使 CSS 文档里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。
+使用这种方法会导致几个常见问题：
+在 iOS 设备和众多 Android 浏览器上无法返回正确的字体。 截止至 2015 年 12 月，仍无法在 Mac OS X 上的 Firefox 上支持 “smart” properties of San Francisco。（指能在 San Francisco Text 和 San Francisco Display 中根据实际情况（大于 20px）切换，并更改字间距。） 完全和系统相关控件一致，无法再自定义变更字体大小、粗细等。 常用方法 # html[lang^=&#34;en-&#34;] body { font-family: /* 1 */ -apple-system, BlinkMacSystemFont, /* 2 */ &#34;Segoe UI&#34;, &#34;Roboto&#34;, &#34;Oxygen&#34;, &#34;Ubuntu&#34;, &#34;Cantarell&#34;, &#34;Fira Sans&#34;, &#34;Droid Sans&#34;, /* 3 */ &#34;Helvetica Neue&#34;, sans-serif; } 以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题： ">
+<link rel="canonical" href="https://fanrongbin.com/posts/using-default-fonts-in-web-design/" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noodp" />
-    <title class="pjax-title">在 Web 设计中使用系统 UI 默认字体 - Rongbin&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="在 Web 设计中使用系统 UI 默认字体" />
-<meta property="og:description" content="内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://fanrongbin.com/posts/using-default-fonts-in-web-design/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2017-02-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2017-02-06T00:00:00+00:00" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Web 设计中使用系统 UI 默认字体"/>
-<meta name="twitter:description" content="内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一"/>
-<meta name="application-name" content="Rongbin&#39;s Blog">
-<meta name="apple-mobile-web-app-title" content="Rongbin&#39;s Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#ffffff"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff"><link rel="canonical" href="https://fanrongbin.com/posts/using-default-fonts-in-web-design/" /><link rel="prev" href="https://fanrongbin.com/posts/running-productive-design-critiques/" /><link rel="next" href="https://fanrongbin.com/posts/glimpse-of-fluent-design/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
-    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
-    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "在 Web 设计中使用系统 UI 默认字体",
-        "inLanguage": "zh-CN",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https:\/\/fanrongbin.com\/posts\/using-default-fonts-in-web-design\/"
-        },"genre": "posts","wordcount":  1308 ,
-        "url": "https:\/\/fanrongbin.com\/posts\/using-default-fonts-in-web-design\/","datePublished": "2017-02-06T00:00:00+00:00","dateModified": "2017-02-06T00:00:00+00:00","publisher": {
-            "@type": "Organization",
-            "name": "作者"},"author": {
-                "@type": "Person",
-                "name": "作者"
-            },"description": ""
-    }
-    </script></head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) {document.body.setAttribute('theme', theme);}
-        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
-        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
-        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
-        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
-        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
-    </script>
-    <div id="back-to-top"></div>
-    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank">  <i class='fas fa-campground'></i></a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
-                        <option value="light">浅色</option>
-                        <option value="dark">深色</option>
-                        <option value="black">黑色</option>
-                        <option value="auto">跟随系统</option>
-                    </select>
-                </a></div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
-                        取消
-                    </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank"><i class='fas fa-campground'></i></a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
-                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
-                    <option value="light">浅色</option>
-                    <option value="dark">深色</option>
-                    <option value="black">黑色</option>
-                    <option value="auto">跟随系统</option>
-                </select>
-            </a></div>
-    </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-            <div class="container"><div class="toc" id="toc-auto">
-        <h2 class="toc-title">目录</h2>
-        <div class="toc-content" id="toc-content-auto"></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__fadeIn">在 Web 设计中使用系统 UI 默认字体</h1><div class="post-meta">
-            <div class="post-meta-line">
-                </div>
-            <div class="post-meta-line">
-                    <i class="fa-fw"></i><time datetime="2017-02-06">2017-02-06</time>&nbsp;
-                <i class="fa-fw"></i>&nbsp;约 1308 字&nbsp;
-                <i class="fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;
-            </div>
-        </div><div class="details toc" id="toc-static"  kept="">
-                <div class="details-summary toc-title">
-                    <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#非常用方法">非常用方法</a></li>
-    <li><a href="#常用方法">常用方法</a>
-      <ul>
-        <li><a href="#细节">细节</a>
-          <ul>
-            <li><a href="#-1--macos">/* 1 */ macOS</a></li>
-            <li><a href="#-2--其他系统">/* 2 */ 其他系统</a></li>
-            <li><a href="#-3--备用字体">/* 3 */ 备用字体</a></li>
-          </ul>
-        </li>
-        <li><a href="#包括中文字体的解决方法">包括中文字体的解决方法</a>
-          <ul>
-            <li><a href="#细节-1">细节</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#关于苹方">关于「苹方」</a></li>
-    <li><a href="#参考文章">参考文章</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><p>内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。</p>
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
+</noscript>
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte.min.css">
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte-options.min.css">
+
+<link rel="stylesheet" href="/css/hugo-tufte-override.css">
+
+
+
+<link rel="stylesheet" href="/han.min.css">
+
+</head>
+<body>
+
+
+<article id="main" class="han-init-context">
+  <section>
+<h1 class="content-title">在 Web 设计中使用系统 UI 默认字体</h1><span class="content-meta">
+  <p class="date">06 Feb 2017</p>
+</span></section>
+
+  
+
+  <section><p>内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。</p>
 <p>使用默认 UI 字体可以通过两种方式实现：</p>
-<h2 id="非常用方法">非常用方法</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">caption</span> <span class="p">{</span>
-    <span class="k">font</span><span class="p">:</span> <span class="n">caption</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>不是很常见，即使 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font" target="_blank" rel="noopener noreffer">CSS 文档</a>里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。</p>
+<h2 id="非常用方法">
+非常用方法
+<a href="#%e9%9d%9e%e5%b8%b8%e7%94%a8%e6%96%b9%e6%b3%95" class="heading-anchor">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">caption</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font</span><span class="p">:</span> <span class="n">caption</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>不是很常见，即使 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">CSS 文档</a>里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。</p>
 <p>使用这种方法会导致几个常见问题：</p>
 <ul>
 <li>在 iOS 设备和众多 Android 浏览器上无法返回正确的字体。</li>
 <li>截止至 2015 年 12 月，仍无法在 Mac OS X 上的 Firefox 上支持 “smart” properties of San Francisco。（指能在 San Francisco Text 和 San Francisco Display 中根据实际情况（大于 20px）切换，并更改字间距。）</li>
 <li>完全和系统相关控件一致，无法再自定义变更字体大小、粗细等。</li>
 </ul>
-<h2 id="常用方法">常用方法</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;en-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="p">:</span>
-    <span class="c">/* 1 */</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span>
-    <span class="c">/* 2 */</span> <span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="s2">&#34;Roboto&#34;</span><span class="p">,</span> <span class="s2">&#34;Oxygen&#34;</span><span class="p">,</span> <span class="s2">&#34;Ubuntu&#34;</span><span class="p">,</span> <span class="s2">&#34;Cantarell&#34;</span><span class="p">,</span> <span class="s2">&#34;Fira Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="p">,</span>
-    <span class="c">/* 3 */</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题：</p>
+<h2 id="常用方法">
+常用方法
+<a href="#%e5%b8%b8%e7%94%a8%e6%96%b9%e6%b3%95" class="heading-anchor">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;en-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* 1 */</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* 2 */</span> <span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="s2">&#34;Roboto&#34;</span><span class="p">,</span> <span class="s2">&#34;Oxygen&#34;</span><span class="p">,</span> <span class="s2">&#34;Ubuntu&#34;</span><span class="p">,</span> <span class="s2">&#34;Cantarell&#34;</span><span class="p">,</span> <span class="s2">&#34;Fira Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* 3 */</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题：</p>
 <ul>
 <li>即使这几年不会有多大改变，但每次厂商换字体时都要重新修一遍。</li>
 <li>仅列出适用于大多数用户的字体。</li>
 <li>若用户所用系统有比默认 UI 字体排序更前的字体（例如一个 Android 开发者在 Windows 上安装了 Roboto），则声明的是排序更前的字体（显示 Segoe UI 而并非 Roboto）。</li>
 <li>命名冲突（例如 Oxygen）</li>
 </ul>
-<h3 id="细节">细节</h3>
-<h4 id="-1--macos">/* 1 */ macOS</h4>
+<h3 id="细节">
+细节
+<a href="#%e7%bb%86%e8%8a%82" class="heading-anchor">#</a>
+</h3>
+<h4 id="-1--macos">
+/* 1 */ macOS
+<a href="#-1--macos" class="heading-anchor">#</a>
+</h4>
 <ul>
 <li>-apple-system 在最新版本的 macOS 上使用 San Francisco，旧版本则使用 Helvetica Neue 或 Lucida Grande。支持 “smart” properties of San Francisco。</li>
 <li>BlinkMacSystemFont 用于 macOS 上的 Chrome。
 （San Francisco 在 macOS 上 Firefox 浏览器中的字间距比 Safari 和 Chrome 都更小。）</li>
 </ul>
-<h4 id="-2--其他系统">/* 2 */ 其他系统</h4>
+<h4 id="-2--其他系统">
+/* 2 */ 其他系统
+<a href="#-2--%e5%85%b6%e4%bb%96%e7%b3%bb%e7%bb%9f" class="heading-anchor">#</a>
+</h4>
 <ul>
 <li>Segoe UI 面向 Windows 及 Windows Phone/Windows 10 Mobile。</li>
 <li>Roboto 面向 Android 和较新版本的 Chrome OS。</li>
@@ -224,37 +123,31 @@
 <li>Fira Sans 面向 Firefox OS。</li>
 <li>Droid Sans 面向较旧版本的 Android。</li>
 </ul>
-<h4 id="-3--备用字体">/* 3 */ 备用字体</h4>
+<h4 id="-3--备用字体">
+/* 3 */ 备用字体
+<a href="#-3--%e5%a4%87%e7%94%a8%e5%ad%97%e4%bd%93" class="heading-anchor">#</a>
+</h4>
 <ul>
 <li>Helvetica Neue 因为这很经典（雾）。</li>
 <li>sans-serif 因为这很默认（大雾）。</li>
 </ul>
-<h3 id="包括中文字体的解决方法">包括中文字体的解决方法</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;zh-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="n">system</span><span class="p">,</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span><span class="s2">&#34;PingFang SC&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="s2">&#34;Microsoft YaHei UI&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Source Han Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;wenquanyi micro hei&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Hiragino Sans GB&#34;</span><span class="p">,</span> <span class="s2">&#34;Hiragino Sans GB W3&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Roboto&#34;</span><span class="p">,</span> <span class="s2">&#34;Oxygen&#34;</span><span class="p">,</span> <span class="s2">&#34;Ubuntu&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Cantarell&#34;</span><span class="p">,</span> <span class="s2">&#34;Fira Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="p">,</span> 
-<span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="细节-1">细节</h4>
+<h3 id="包括中文字体的解决方法">
+包括中文字体的解决方法
+<a href="#%e5%8c%85%e6%8b%ac%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95" class="heading-anchor">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;zh-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="n">system</span><span class="p">,</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span><span class="s2">&#34;PingFang SC&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="s2">&#34;Microsoft YaHei UI&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;Source Han Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;wenquanyi micro hei&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;Hiragino Sans GB&#34;</span><span class="p">,</span> <span class="s2">&#34;Hiragino Sans GB W3&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;Roboto&#34;</span><span class="p">,</span> <span class="s2">&#34;Oxygen&#34;</span><span class="p">,</span> <span class="s2">&#34;Ubuntu&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;Cantarell&#34;</span><span class="p">,</span> <span class="s2">&#34;Fira Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="细节-1">
+细节
+<a href="#%e7%bb%86%e8%8a%82-1" class="heading-anchor">#</a>
+</h4>
 <ul>
 <li>PingFang SC 即「苹方」，面向最新 macOS。</li>
 <li>Microsoft YaHei UI 即「微软雅黑」，面向较新版本 Windows。</li>
@@ -262,165 +155,154 @@
 <li>wenquanyi micro hei 即「文泉驛微米黑」，面向较旧版本 Android 和多数 Linux。</li>
 <li>Hiragino Sans GB (W3) 即「冬青黑体」，能够给网页浏览带来较好体验。</li>
 </ul>
-<h2 id="关于苹方">关于「苹方」</h2>
+<h2 id="关于苹方">
+关于「苹方」
+<a href="#%e5%85%b3%e4%ba%8e%e8%8b%b9%e6%96%b9" class="heading-anchor">#</a>
+</h2>
 <p>「苹方」有不同的字重可供选择，可以直接使用。（没有 Bold 我很服气）</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">some-element</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC ExtraLight&#34;</span><span class="p">;</span> <span class="c">/* 或者 &#34;PingFang SC Thin&#34; */</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Light&#34;</span><span class="p">;</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC&#34;</span><span class="p">;</span> <span class="c">/* 或者 &#34;PingFang SC Regular&#34; */</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Medium&#34;</span><span class="p">;</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Semibold&#34;</span><span class="p">;</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Heavy&#34;</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>或者预先定义好，使用 <code>&quot;PingFang-SC&quot;</code> 引用，浏览器根据 <code>font-weight</code> 去选择不同的变体。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">100</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Thin&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">300</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Light&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">400</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Regular&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">500</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Medium&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">700</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Semibold&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
-    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">800</span><span class="o">;</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Heavy&#34;</span><span class="o">);</span>
-<span class="p">}</span>
-
-<span class="nt">body</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="参考文章">参考文章</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">some-element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC ExtraLight&#34;</span><span class="p">;</span> <span class="c">/* 或者 &#34;PingFang SC Thin&#34; */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Light&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC&#34;</span><span class="p">;</span> <span class="c">/* 或者 &#34;PingFang SC Regular&#34; */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Medium&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Semibold&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC Heavy&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>或者预先定义好，使用 <code>&quot;PingFang-SC&quot;</code> 引用，浏览器根据 <code>font-weight</code> 去选择不同的变体。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">100</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Thin&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">300</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Light&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">400</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Regular&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">500</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Medium&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">700</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Semibold&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">800</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s2">&#34;PingFang SC Heavy&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="参考文章">
+参考文章
+<a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="heading-anchor">#</a>
+</h2>
 <ol>
-<li><cite lang="en"><a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/" target="_blank" rel="noopener noreffer">Using System UI Fonts In Web Design: A Quick Practical Guide</a></cite>, Marcin Wichary, 2015</li>
-<li><a href="https://csspod.com/using-the-system-font-in-web-content/" target="_blank" rel="noopener noreffer">在 Web 内容中使用系统字体</a>，minwe，2016</li>
+<li><cite lang="en"><a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">Using System UI Fonts In Web Design: A Quick Practical Guide</a></cite>, Marcin Wichary, 2015</li>
+<li><a href="https://csspod.com/using-the-system-font-in-web-content/">在 Web 内容中使用系统字体</a>，minwe，2016</li>
 </ol>
+</section>
+  <section><footer class="page-footer">
+<hr />
+
+<div class="previous-post" style="display:inline-block;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/posts/running-productive-design-critiques/?ref=footer">« 高效的设计批评是如何进行的</a>
+  
 </div>
 
-        <div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                
-            </div>
-            <div class="post-info-license"></div>
-        </div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="post-info-more">
-        <section class="post-tags"></section>
-        <section>
-            
-        </section>
-    </div>
-
-    <div class="post-nav"><a href="/posts/running-productive-design-critiques/" class="prev" rel="prev" title="高效的设计批评是如何进行的"><i class="fas fa-angle-left fa-fw"></i>高效的设计批评是如何进行的</a>
-            <a href="/posts/glimpse-of-fluent-design/" class="next" rel="next" title="初探 Fluent Design System">初探 Fluent Design System<i class="fas fa-angle-right fa-fw"></i></a></div>
+<div class="next-post", style="display:inline-block;float:right;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/posts/glimpse-of-fluent-design/?ref=footer">初探 Fluent Design System »</a>
+  
 </div>
-<div id="comments"><div id="giscus"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://giscus.app/">giscus</a>.
-            </noscript></div></article></div>
-        </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><a href="https://gohugo.io/">Hugo</a> + <a href="https://github.com/HEIGE-PCloud/DoIt">DoIt</a> + <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></div><div class="footer-line"></div>
-        </div></footer></div>
 
-    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
-            <i class="fas fa-arrow-up fa-fw"></i>
-        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-            <i class="fas fa-comment fa-fw"></i>
-        </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+<ul class="page-footer-menu">
+  
+  
+  
+  
 
-<div class="pjax-assets"><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{"giscus":{"darkTheme":"dark_protanopia","dataCategory":"General","dataCategoryId":"DIC_kwDOGX4Up84B_22x","dataEmitMetadata":"0","dataMapping":"pathname","dataReactionsEnabled":"1","dataRepo":"rongbinf/rongbinf.github.io","dataRepoId":"R_kgDOGX4Upw","lightTheme":"light_protanopia"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"useExtendedSearch":false},"twemoji":true};</script><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
-    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-    <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</ul>
+
+
+<p>
+  Powered by <a href="https://gohugo.io">Hugo</a>,  
+  <a href="https://github.com/loikein/hugo-tufte">Tufte theme</a> and <a href="https://github.com/ethantw/Han">Han.css</a>.</br>Use <a href="https://hypothes.is/">Hypothesis</a> to highlight or comment.
+</br></br>2023 Rongbin FAN
+</p>
+
+
+
+
+</footer>
+</section>
+  <section><nav class="menu">
+    <ul>
+    
+        <li><a href="/posts"><i class='fas fa-book fa-lg'></i> 归档</a></li>
+    
+        <li><a href="/tags"><i class='fas fa-tags fa-lg'></i> 标签</a></li>
+    
+        <li><a href="/"><i class='fas fa-info-circle  fa-lg'></i> 关于</a></li>
+    
+    </ul>
+</nav>
+</section>
+</article>
+
+<script type="application/json" class="js-hypothesis-config">
+{
+"showHighlights": false
+}
+</script>
+<script async src="https://hypothes.is/embed.js"></script>
+
+
+
+
+
+
 </body>
+
+<script src="/han.min.js"></script>
 
 </html>

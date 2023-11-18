@@ -1,146 +1,76 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh" class="han-init"><head>
+<title>简化，回归 - Rongbin&#39;s Blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description"
+    content="由于常年固定使用某些邮箱地址注册网络帐户，以及邮件订阅设置的混乱，导致我不得不腾出一个下午的时间清理这些邮件，而这些邮件大多是注册帐户时发来的验证、社交网络的提醒、过去订阅的博客资讯和提醒你时常回看的应用广告。于是我把现在已经不常用的、能合并或替代的各类帐号注销，一是方便管理，二是删除自己曾经留下的网络痕迹。
+进行邮件清理后，我试着对自己的信息源进行管理。我把自己获取信息的途径分为三种：信息聚合类应用、订阅邮件和 RSS 订阅源。信息聚合类应用包括 Medium 、微信订阅号和知乎专栏这种长文聚合、Quora 的问答、端传媒等新闻资讯应用。在这之中比较难管理的是微信订阅号。有部分作者有个人博客的，我都将其收进 Reeder 用 RSS 订阅的形式阅读，但部分只有个人公众号的作者，需要进一步对内容作出筛选。使用邮件订阅或 RSS 的形式阅读，最大的优点是即时离线存档，不仅便于日后阅读和搜索归档，也避免了一些敏感文章被封锁的风险。
+由此出发，其实最终需要花费心思的是对信息源的筛选和整合。如何最大限度地利用网络信息帮助自己成长？
+Leo Babauta 在他的著名博客 zen habits 中提到了一个很有趣的观点。他认为生活的简化是一种循环的模式：
+The Simplicity Cycle goes something like this (it’s a little different each time):
+Inspiration phase: You find something that sparks an interest, and you start exploring it (reading about a new topic, diving into learning a new subject, exploring a new activity or hobby, creating a new project or venture, etc. ">
+<link rel="canonical" href="https://fanrongbin.com/posts/come-back-home/" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noodp" />
-    <title class="pjax-title">简化，回归 - Rongbin&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="简化，回归" />
-<meta property="og:description" content="由于常年固定使用某些邮箱地址注册网络帐户，以及邮件订阅设置的混乱，导致我不得不腾出一个下午的时间清理这些邮件，而这些邮件大多是注册帐户时发来" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://fanrongbin.com/posts/come-back-home/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-08-28T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-08-28T00:00:00+00:00" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="简化，回归"/>
-<meta name="twitter:description" content="由于常年固定使用某些邮箱地址注册网络帐户，以及邮件订阅设置的混乱，导致我不得不腾出一个下午的时间清理这些邮件，而这些邮件大多是注册帐户时发来"/>
-<meta name="application-name" content="Rongbin&#39;s Blog">
-<meta name="apple-mobile-web-app-title" content="Rongbin&#39;s Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#ffffff"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff"><link rel="canonical" href="https://fanrongbin.com/posts/come-back-home/" /><link rel="prev" href="https://fanrongbin.com/posts/hexo-github-pages-cloudflare/" /><link rel="next" href="https://fanrongbin.com/posts/define-false-true/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
-    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
-    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "简化，回归",
-        "inLanguage": "zh-CN",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https:\/\/fanrongbin.com\/posts\/come-back-home\/"
-        },"genre": "posts","wordcount":  1384 ,
-        "url": "https:\/\/fanrongbin.com\/posts\/come-back-home\/","datePublished": "2018-08-28T00:00:00+00:00","dateModified": "2018-08-28T00:00:00+00:00","publisher": {
-            "@type": "Organization",
-            "name": "作者"},"author": {
-                "@type": "Person",
-                "name": "作者"
-            },"description": ""
-    }
-    </script></head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) {document.body.setAttribute('theme', theme);}
-        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
-        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
-        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
-        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
-        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
-    </script>
-    <div id="back-to-top"></div>
-    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank">  <i class='fas fa-campground'></i></a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
-                        <option value="light">浅色</option>
-                        <option value="dark">深色</option>
-                        <option value="black">黑色</option>
-                        <option value="auto">跟随系统</option>
-                    </select>
-                </a></div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Rongbin&#39;s Blog">Rongbin&#39;s Blog</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
-                        取消
-                    </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://thedyingstarlight.wordpress.com/" title="Brackets &amp; Comma" rel="noopener noreffer" target="_blank"><i class='fas fa-campground'></i></a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
-                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
-                    <option value="light">浅色</option>
-                    <option value="dark">深色</option>
-                    <option value="black">黑色</option>
-                    <option value="auto">跟随系统</option>
-                </select>
-            </a></div>
-    </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-            <div class="container"><div class="toc" id="toc-auto">
-        <h2 class="toc-title">目录</h2>
-        <div class="toc-content" id="toc-content-auto"></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__fadeIn">简化，回归</h1><div class="post-meta">
-            <div class="post-meta-line">
-                </div>
-            <div class="post-meta-line">
-                    <i class="fa-fw"></i><time datetime="2018-08-28">2018-08-28</time>&nbsp;
-                <i class="fa-fw"></i>&nbsp;约 1384 字&nbsp;
-                <i class="fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;
-            </div>
-        </div><div class="details toc" id="toc-static"  kept="">
-                <div class="details-summary toc-title">
-                    <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>由于常年固定使用某些邮箱地址注册网络帐户，以及邮件订阅设置的混乱，导致我不得不腾出一个下午的时间清理这些邮件，而这些邮件大多是注册帐户时发来的验证、社交网络的提醒、过去订阅的博客资讯和提醒你时常回看的应用广告。于是我把现在已经不常用的、能合并或替代的各类帐号注销，一是方便管理，二是删除自己曾经留下的网络痕迹。</p>
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
+</noscript>
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte.min.css">
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte-options.min.css">
+
+<link rel="stylesheet" href="/css/hugo-tufte-override.css">
+
+
+
+<link rel="stylesheet" href="/han.min.css">
+
+</head>
+<body>
+
+
+<article id="main" class="han-init-context">
+  <section>
+<h1 class="content-title">简化，回归</h1><span class="content-meta">
+  <p class="date">28 Aug 2018</p>
+</span></section>
+
+  
+
+
+
+  <section><p>由于常年固定使用某些邮箱地址注册网络帐户，以及邮件订阅设置的混乱，导致我不得不腾出一个下午的时间清理这些邮件，而这些邮件大多是注册帐户时发来的验证、社交网络的提醒、过去订阅的博客资讯和提醒你时常回看的应用广告。于是我把现在已经不常用的、能合并或替代的各类帐号注销，一是方便管理，二是删除自己曾经留下的网络痕迹。</p>
 <p>进行邮件清理后，我试着对自己的信息源进行管理。我把自己获取信息的途径分为三种：信息聚合类应用、订阅邮件和 RSS 订阅源。信息聚合类应用包括 Medium 、微信订阅号和知乎专栏这种长文聚合、Quora 的问答、端传媒等新闻资讯应用。在这之中比较难管理的是微信订阅号。有部分作者有个人博客的，我都将其收进 Reeder 用 RSS 订阅的形式阅读，但部分只有个人公众号的作者，需要进一步对内容作出筛选。使用邮件订阅或 RSS 的形式阅读，最大的优点是即时离线存档，不仅便于日后阅读和搜索归档，也避免了一些敏感文章被封锁的风险。</p>
 <p>由此出发，其实最终需要花费心思的是对信息源的筛选和整合。如何最大限度地利用网络信息帮助自己成长？</p>
-<p>Leo Babauta 在他的著名博客 <a href="https://zenhabits.net/cycle/" target="_blank" rel="noopener noreffer">zen habits</a> 中提到了一个很有趣的观点。他认为生活的简化是一种循环的模式：</p>
+<p>Leo Babauta 在他的著名博客 <a href="https://zenhabits.net/cycle/">zen habits</a> 中提到了一个很有趣的观点。他认为生活的简化是一种循环的模式：</p>
 <blockquote>
 <p>The Simplicity Cycle goes something like this (it’s a little different each time):</p>
 <ol>
@@ -153,51 +83,93 @@
 <p>它分成四个阶段：探索阶段、深入阶段、思考阶段和削减阶段。在前两个阶段，你大量的获取和收集感兴趣的信息，并且进行了一定的拓宽。例如在偶然一则热带风暴的新闻中，记者提到了风眼这个名词，由此你上网查找资料以了解这个天气的成因、结构等等。单个天气系统不足以满足好奇心，你转而寻找能够集合这类资讯和推送给你的信息源，久而久之，你可能就拥有了一定数量该领域的信息源。这两个阶段是你好奇心和能力拓展的主要阶段，但在前两个阶段我们做的工作可能会比较盲目，你可能不常会回看这些订阅关注的信息源，而这些信息源在之后也许会因为各种各样的原因停用，或是转为其他内容。为了让自己获取的信息更有价值、阅读更高效，我们要做的并非一开始就抑制自己收集信息的想法，而是收集之后再简化。就像 GTD 中 Inbox 的概念一样，在这里我们也需要一个无形的 Inbox 把它们收集起来。</p>
 <p>思考阶段则是你对获得的这些信息的分类筛选。这些信息我真的需要吗？我对这个真的感兴趣吗？例如你只是想知道热带风暴的成因和防灾的方法，而不想再去了解它是怎么被预报之类的，你很自然地开始了思考阶段并作出了判断——针对性的收集信息。并且开始削减阶段——削减之前收集到的不感兴趣的内容。</p>
 <p>上述模式，核心是给我们营造了「回归」的条件，也就是思考我们实际的需求是什么，回归到需求上来。任何事情都需要一个目的或需求以驱使我们行动，而回归需求给予我们动力，并且避免了不必要事情的干扰，最终达到趋于平静的一种状态。</p>
+</section>
+  <section><footer class="page-footer">
+<hr />
+
+<div class="previous-post" style="display:inline-block;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/posts/hexo-github-pages-cloudflare/?ref=footer">« Hexo + GitHub Pages + Cloudflare</a>
+  
 </div>
 
-        <div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                
-            </div>
-            <div class="post-info-license"></div>
-        </div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="post-info-more">
-        <section class="post-tags"></section>
-        <section>
-            
-        </section>
-    </div>
-
-    <div class="post-nav"><a href="/posts/hexo-github-pages-cloudflare/" class="prev" rel="prev" title="Hexo &#43; GitHub Pages &#43; Cloudflare"><i class="fas fa-angle-left fa-fw"></i>Hexo &#43; GitHub Pages &#43; Cloudflare</a>
-            <a href="/posts/define-false-true/" class="next" rel="next" title="define false true">define false true<i class="fas fa-angle-right fa-fw"></i></a></div>
+<div class="next-post", style="display:inline-block;float:right;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/posts/339/?ref=footer">白色的空间 »</a>
+  
 </div>
-<div id="comments"><div id="giscus"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://giscus.app/">giscus</a>.
-            </noscript></div></article></div>
-        </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><a href="https://gohugo.io/">Hugo</a> + <a href="https://github.com/HEIGE-PCloud/DoIt">DoIt</a> + <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></div><div class="footer-line"></div>
-        </div></footer></div>
 
-    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
-            <i class="fas fa-arrow-up fa-fw"></i>
-        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-            <i class="fas fa-comment fa-fw"></i>
-        </a>
-    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+<ul class="page-footer-menu">
+  
+  
+  
+  
 
-<div class="pjax-assets"><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":30},"comment":{"giscus":{"darkTheme":"dark_protanopia","dataCategory":"General","dataCategoryId":"DIC_kwDOGX4Up84B_22x","dataEmitMetadata":"0","dataMapping":"pathname","dataReactionsEnabled":"1","dataRepo":"rongbinf/rongbinf.github.io","dataRepoId":"R_kgDOGX4Upw","lightTheme":"light_protanopia"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"useExtendedSearch":false},"twemoji":true};</script><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
-    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-    <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</ul>
+
+
+<p>
+  Powered by <a href="https://gohugo.io">Hugo</a>,  
+  <a href="https://github.com/loikein/hugo-tufte">Tufte theme</a> and <a href="https://github.com/ethantw/Han">Han.css</a>.</br>Use <a href="https://hypothes.is/">Hypothesis</a> to highlight or comment.
+</br></br>2023 Rongbin FAN
+</p>
+
+
+
+
+</footer>
+</section>
+  <section><nav class="menu">
+    <ul>
+    
+        <li><a href="/posts"><i class='fas fa-book fa-lg'></i> 归档</a></li>
+    
+        <li><a href="/tags"><i class='fas fa-tags fa-lg'></i> 标签</a></li>
+    
+        <li><a href="/"><i class='fas fa-info-circle  fa-lg'></i> 关于</a></li>
+    
+    </ul>
+</nav>
+</section>
+</article>
+
+<script type="application/json" class="js-hypothesis-config">
+{
+"showHighlights": false
+}
+</script>
+<script async src="https://hypothes.is/embed.js"></script>
+
+
+
+
+
+
 </body>
+
+<script src="/han.min.js"></script>
 
 </html>
