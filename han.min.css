@@ -179,9 +179,9 @@ html {
     -webkit-font-smoothing: subpixel-antialiased
 }
 
-ol,ul {
+/* ol,ul {
     padding-left: 2em
-}
+} */
 
 blockquote,figure {
     margin-left: 2em;
