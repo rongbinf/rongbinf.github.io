@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description"
     content="家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。
-获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式为：rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream 具体参数（如视频编码）自行调整。
-对于 TP-LINK 摄像头，其 RTSP 流地址格式如下： 主码流为：rtsp://[username]:[password]@[ip]:[port]/stream1
+获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式为：
+rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
+具体参数（如视频编码）自行调整。
+对于 TP-LINK 摄像头，其 RTSP 流地址格式：
+主码流为：rtsp://[username]:[password]@[ip]:[port]/stream1
 子码流将 stream1 替换为 stream2 即可。
 RTSP 端口 port 默认为 554，若为默认可不填写。
 使用 VLC 播放 # 有两种方法：
@@ -55,6 +58,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 
 <link rel="stylesheet" href="/han.min.css">
 
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
 </head>
 <body>
 
@@ -74,13 +78,10 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 获取摄像头 RTSP 流
 <a href="#%e8%8e%b7%e5%8f%96%e6%91%84%e5%83%8f%e5%a4%b4-rtsp-%e6%b5%81" class="heading-anchor">#</a>
 </h2>
-<ul>
-<li>对于海康威视和萤石摄像头，其 RTSP 流地址格式为：<code>rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream</code></li>
-</ul>
+<p>对于海康威视和萤石摄像头，其 RTSP 流地址格式为：</p>
+<p><code>rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream</code></p>
 <p>具体参数（如视频编码）自行调整。</p>
-<ul>
-<li>对于 TP-LINK 摄像头，其 RTSP 流地址格式如下：</li>
-</ul>
+<p>对于 TP-LINK 摄像头，其 RTSP 流地址格式：</p>
 <p>主码流为：<code>rtsp://[username]:[password]@[ip]:[port]/stream1</code></p>
 <p>子码流将 <code>stream1</code> 替换为 <code>stream2</code> 即可。</p>
 <p>RTSP 端口 <code>port</code> 默认为 <code>554</code>，若为默认可不填写。</p>
@@ -221,6 +222,37 @@ Exec=/home/pi/test.sh
 </script>
 <script async src="https://hypothes.is/embed.js"></script>
 
+<details>
+  <summary class="comments"><a class="comments-arrow">→</a><h3 class="comments">Comments</h3></summary>
+<div id="waline"></div>
+</details>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline-phi-beige.vercel.app',
+
+      emoji: [
+        '//unpkg.com/@waline/emojis@1.2.0/weibo',
+        '//unpkg.com/@waline/emojis@1.2.0/tw-emoji',
+        '//unpkg.com/@waline/emojis@1.2.0/tieba',
+      ],
+
+      login: 'enable',
+      wordLimit: 0,
+      pageSize: 10,
+      uploadImage: false,
+      highlight: true,
+      mathTagSupport: false,
+      comment: false,
+      commentCount: false,
+      avatar: 'hide',
+
+    });
+  </script>
+
+
 
 
 
@@ -279,7 +311,7 @@ Exec=/home/pi/test.sh
 
 <p>
   Powered by <a href="https://gohugo.io">Hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">Tufte theme</a> and <a href="https://github.com/ethantw/Han">Han.css</a>.</br>Use <a href="https://hypothes.is/">Hypothesis</a> to highlight or comment.
+  <a href="https://github.com/loikein/hugo-tufte">Tufte theme</a> and <a href="https://github.com/ethantw/Han">Han.css</a>.</br>Use <a href="https://hypothes.is/">Hypothesis</a> to highlight.
 </br></br>2023 Rongbin FAN
 </p>
 

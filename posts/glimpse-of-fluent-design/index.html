@@ -54,6 +54,7 @@ Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户�
 
 <link rel="stylesheet" href="/han.min.css">
 
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
 </head>
 <body>
 
@@ -135,6 +136,37 @@ Scale (维)
 </script>
 <script async src="https://hypothes.is/embed.js"></script>
 
+<details>
+  <summary class="comments"><a class="comments-arrow">→</a><h3 class="comments">Comments</h3></summary>
+<div id="waline"></div>
+</details>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline-phi-beige.vercel.app',
+
+      emoji: [
+        '//unpkg.com/@waline/emojis@1.2.0/weibo',
+        '//unpkg.com/@waline/emojis@1.2.0/tw-emoji',
+        '//unpkg.com/@waline/emojis@1.2.0/tieba',
+      ],
+
+      login: 'enable',
+      wordLimit: 0,
+      pageSize: 10,
+      uploadImage: false,
+      highlight: true,
+      mathTagSupport: false,
+      comment: false,
+      commentCount: false,
+      avatar: 'hide',
+
+    });
+  </script>
+
+
 
 
 
@@ -193,7 +225,7 @@ Scale (维)
 
 <p>
   Powered by <a href="https://gohugo.io">Hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">Tufte theme</a> and <a href="https://github.com/ethantw/Han">Han.css</a>.</br>Use <a href="https://hypothes.is/">Hypothesis</a> to highlight or comment.
+  <a href="https://github.com/loikein/hugo-tufte">Tufte theme</a> and <a href="https://github.com/ethantw/Han">Han.css</a>.</br>Use <a href="https://hypothes.is/">Hypothesis</a> to highlight.
 </br></br>2023 Rongbin FAN
 </p>
 
