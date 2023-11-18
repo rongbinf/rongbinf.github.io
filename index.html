@@ -36,9 +36,7 @@
 
     <link rel="stylesheet" href="skelet.min.css">
 
-    <link
-        href="https://google-fonts.mirrors.sjtug.sjtu.edu.cn/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Color+Emoji&display=swap"
-        rel="stylesheet">
+    <link href="https://google-fonts.mirrors.sjtug.sjtu.edu.cn/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 
     <script src="/clipboard.min.js"></script>
 
@@ -258,7 +256,7 @@
             </x-grid>
 
             <span class="space4"></span>
-            
+
             <x-grid columns="1">
                 <x-col span="1">
                     <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> 👋<br><span
@@ -277,8 +275,8 @@
                     <p>I <em>he/him</em> currently live in <img style="display: inline; margin-right: 5px;"
                             src="https://www.beijing.gov.cn/favicon.ico"><a class="info"
                             onclick="toggleDisplay('beijing')">Beijing</a> and I
-                        study finance at the University of International Business and Economics (UIBE). I also do some <a target="_blank" href="https://fanrongbin.com/arena"
-                            class="link" id="arena-link">
+                        study finance at the University of International Business and Economics (UIBE). I also do some
+                        <a target="_blank" href="https://fanrongbin.com/arena" class="link" id="arena-link">
                             <svg class="black-svg-arena" style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px"
                                 width="150.38px" height="88.986px" viewBox="0 0 150.38 88.986"
@@ -327,11 +325,13 @@
                         </script>
                     </div>
                     <div>
-                        <p id="mailto"><a href="mailto:r_fan@outlook.com">mailto:</a><br><strong>r_fan@outlook.com</strong><br>
+                        <p id="mailto"><a
+                                href="mailto:r_fan@outlook.com">mailto:</a><br><strong>r_fan@outlook.com</strong><br>
                             <a class="btn" data-clipboard-text="r_fan@outlook.com"
                                 onclick="document.getElementById('copied').style.display='block'">click to copy</a><span
                                 id="copied">copied!</span>
-                        </br></br><span class="source" style="font-size: 0.99rem;">btw I still use my Gmail:</br>fanrongbin0201(at)gmail.com</span>
+                            </br></br><span class="source" style="font-size: 0.99rem;">btw I still use my
+                                Gmail:</br>fanrongbin0201(at)gmail.com</span>
                         </p>
                     </div>
                     <div>
@@ -341,10 +341,9 @@
                     </div>
                 </x-col>
                 <x-col span="2+1">
-                    <p><span class="source">Blog</span><br><a class="link" target="_blank"
-                            href="#">📜 中文博客</a> (under maintenance) <br>
-                        <a class="link" target="_blank" href="#" id="medium"><span
-                                class="black-svg-medium"><svg viewBox="0 0 1043.63 592.71" class="q r">
+                    <p><span class="source">Blog</span><br><a class="link" href="posts">📜 中文博客</a><br>
+                        <a class="link" target="_blank" href="#" id="medium"><span class="black-svg-medium"><svg
+                                    viewBox="0 0 1043.63 592.71" class="q r">
                                     <g data-name="Layer 2">
                                         <g data-name="Layer 1">
                                             <path
@@ -369,7 +368,7 @@
                     <p class="source"><span class="number"><sup>1</sup> </span>Source: National
                         Bureau of Statistics, 2021</p>
                     <p class="source"><span class="number"><sup>2</sup> </span><em>Hukou</em>,
-                        China’s household registration system, which divides population into two different statuses:
+                        China's household registration system, which divides population into two different statuses:
                         agricultural and non-agricultural residency statuses. Yet China provides a wide range of public
                         education, resources in cities, which means only city hukou holders could benefit from, are
                         exceedingly more than schools in rural.</p>
@@ -378,7 +377,7 @@
                     <p class="source"><strong>Wei Lan (Wave) Library</strong> is a real,
                         non-profit project aimed at building libraries for <strong>floating children</strong> in China.
                         There are an estimated 292.51 million<span class="number"><sup>1</sup></span> rural migrant
-                        workers in China’s cities as delivery motorbike-riders, laborers, doorkeepers and at other jobs
+                        workers in China's cities as delivery motorbike-riders, laborers, doorkeepers and at other jobs
                         that urbanites avoid. The children of this floating population are called floating children. The
                         families, holding a rural <em>Hukou</em><span class="number"><sup>2</sup></span> and on a tight
                         budget, could only afford low-cost private schools which barely have good education resources,
@@ -404,8 +403,7 @@
                 </x-col>
             </x-grid>
             
-            Since 2002, Paused <a target="_blank"
-                href="https://dimsum.eu.org/covid-19.html">2020</a>, Rebooting 2023.
+            Since 2002, Paused <a target="_blank" href="https://dimsum.eu.org/covid-19.html">2020</a>, Rebooting 2023.
         </footer>
     </div>
 </body>
@@ -470,31 +468,3 @@
 </script>
 
 
-<script type="text/javascript">
-    document.documentElement.addEventListener(
-        "touchstart",
-        function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        },
-        false
-    );
-
-    var lastTouchEnd = 0;
-    document.documentElement.addEventListener(
-        "touchend",
-        function (event) {
-            var now = Date.now();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        },
-        false
-    );
-
-    document.addEventListener("gesturestart", function (event) {
-        event.preventDefault();
-    });
-</script>
