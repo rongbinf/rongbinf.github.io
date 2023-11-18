@@ -16,6 +16,41 @@
       <description>SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine 摘录 # It took me a long time to figure out why founders don&amp;rsquo;t listen. At first I thought it was mere stubbornness. That&amp;rsquo;s part of the reason, but another and probably more important reason is that so much about startups is counterintuitive. And when you tell someone something counterintuitive, what it sounds to them is wrong. So the reason founders don&amp;rsquo;t listen to us is that they don&amp;rsquo;t believe us.</description>
     </item>
     <item>
+      <title>높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理</title>
+      <link>https://fanrongbin.com/posts/honorific-ko/</link>
+      <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/posts/honorific-ko/</guid>
+      <description>tl;dr 小结 # 说的是谁？：主体敬语法（对其人的尊敬 + 对其动作的尊敬） 句中是否涉及第三人/各种所属物？：客体敬语法 对谁说？：对听者的尊敬与否：相对敬语法 主语和听者之间谁更“大”？：压尊法 （主体如果是尊敬的人的所属事物：事物尊称） “该尊敬谁？”“什么场合？”等因人而异的话题，本文不做过多讨论。
+对句中主体/主语：주체(主體) 높임법 # 主要有三：
+谓词：添加“-(으)시-” 以及需要换用的情况，如：(잠을) 자다-&amp;gt;주무시다, 먹다-&amp;gt;드시다, 주다-&amp;gt;드리다, 있다-&amp;gt;계시다(be; be located[注意계시다只表示있다中“在”的意思，不表示“有”的意思，如： 선생님께서는 교실에 계시다.
+선생님은 따님이 있으시다.]{.aside}) 助词：主格助词께서（以及再附加“는”“도”等），与格助词께 人名/称呼：在之后添加“님” 对第三人/各种所属物：객체(客體) 높임법 # 对于第三人（即客体，此时他作为句子中的目的语(목적어)或副词语(부사어)） 所跟的谓词需要换用 例如：데리다-&amp;gt;모시다, 주다-&amp;gt;드리다, 뵈다(보이다)/만나다-&amp;gt;뵙다, 묻다-&amp;gt;여쭈다-&amp;gt;여쭙다（主要是这四个） 对于各种所属物 名词的换用 例如：밥-&amp;gt;진지, 집-&amp;gt;댁, 생일-&amp;gt;생신, 나이-&amp;gt;연세, 이름-&amp;gt;성함, 딸-&amp;gt;따님, 아들-&amp;gt;아드님 不过，在说话人身份高于客体时，可选择性使用：
+할아버지: 네 어머니를 데리고 시장에 가라.
+할아버지: 네 어머니를 모시고 시장에 가라. 对听者：상대(相對) 높임법 # 关注划分的两大层次：
+正式性（formality）：格式体、非格式体
+礼貌程度（politeness）：尊敬阶、卑阶 两张表讲完：[如果表格显示有误，可以在此查看png文件：1.높임등급 / 2.</description>
+    </item>
+    <item>
+      <title>家庭组网 2022</title>
+      <link>https://fanrongbin.com/posts/network-resetting-2023/</link>
+      <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/posts/network-resetting-2023/</guid>
+      <description> 网络布局没有变化 # 还是AC-68U拨号，并且直接接交换机给房间的网线接口。两个易展路由器负责Wi-Fi。
+关于光猫桥接、路由拨号和TP-LINK的易展功能，之前的一篇博文有介绍过，但因为目前博客在做调整，说不定那篇日后会删掉，一并重新在这里加进来：
+光猫桥接和路由拨号 # 运营商：电信 光猫型号：HS8145C 需要：超级管理员帐户 用户名telecomadmin 密码nE7jA%5m 根据型号不同，帐户密码存在差异，读者可自行搜索，或尝试获取base64加密后的密码，使用在线工具解密 对于 HS8145C，通过光猫管理员帐户（一般贴好在底面）登录后，访问192.168.1.1下的backupsettings.conf 搜索文件中password，使用工具解密 进入菜单“网络”选项，将“上网业务”3_INTERNET_B_VID_41连接方式改为“桥接”。 （如果不知道拨号上网的帐号密码，在网关后台一并记录，帐号明文，密码一般为 SHA256 加密。也可以咨询电信营业厅获取。） 以上为光猫部分。路由器部分设置拨号即可，一般是PPPoE方式，输入帐号密码，其他一切默认即可。此处省略。
+TP-LINK 易展有线回程 # 注意下面的步骤针对的是和我一样的布局，有上一级路由负责拨号和其他功能，只是希望通过TP-LINK的易展方案解决Wi-Fi信号问题。如果TP-LINK就是拨号的路由，接好WAN，其他易展路由接到主路由的LAN就行了。
+为了确保有线回程以达到更好的效果：
+（如果使用无线回程中，请恢复出厂设置） 主路由先接好电源，关闭 DHCP，接LAN（现在一般都是自动识别了） 再将其他易展路由器接好电源和LAN，（它们当前应该在同一个网段，例如都是192.168.2.*）按下其他易展路由器的易展按钮 等待路由器后台或手机App上的网络拓扑图，在路由器位置右上角显示网线接口icon代表完成。 建议在上一级路由将这些易展路由器的内网IP设置为静态/和mac地址绑定。 拿到公网IP了 # 无法获取公网IP的读者，建议可以考虑改路由器拨号后，通过NAS的IPv6地址访问。下文内容需要公网IP。
+在微信服务号直接跟客服说要开通之后，给填了工单，师傅打电话来确认，他那边后台操作，全程不到半小时，特别顺畅。
+于是就先不折腾IPv6了，直接折腾IPv4外部访问。方案有很多，之前因为没有公网IP，用的ZeroTier，速度一般。现在可以通过公网IP直接访问，但为了安全考虑，只开一个端口转发给VPN（OpenVPN），防火墙、登录规则、二步验证等都保持开启。同时，因为是动态IP，隔三差五就会改，找了自己一个不用的域名挂在Cloudflare，通过Cloudflare DDNS插件绑好API key，监测到路由器重新拨号时，对照IP映射是否一致，不一致则更新。
+群晖和华硕都自带DDNS和VPN Server服务（注意群晖的VPN Server可能要在官网下载后手动安装）。DDNS使用自带服务的话，方便的地方在于不需要再额外处理域名的问题，但因为使用https的话，自带服务是通过80端口访问Let&amp;rsquo;s Encrypt申请SSL，这个端口电信默认是封着的，一般也不会给开，SSL无法签发下来。其次，DSM6的用户 (1) (1)DSM 7的界面给的是下拉框并写明是“自动”，但DSM 6不是。 ，群晖DDNS不一定能够自动修改对应的IP。
+VPN Server的话看个人需求，在群晖或者路由器上部署都可以。只开放VPN端口的话，做不做https问题不大，但是如果还开放其他（例如WebDAV）端口，https是必要的。至于使用哪种VPN连接方式（例如PPTP、OpenVPN、IPSec等）一样看需求/设备是否支持。我的AC-68U（386.7_2）自带PPTP和OpenVPN。
+同时原先的ZeroTier仍保留，出问题的时候至少还可以通过ZeroTier回来修修补补。
+我的方案小结：
+外部访问NAS
+通过公网IP 申请公网IP 路由器设置端口转发：内网转公网 相当于直接暴露，被黑风险，可能不符合规定（相当于挂载web） 保留ZeroTier 对应终端装好ZeroTier，填入Network ID后在管理页面勾选对应设备即可 问题处理
+处理端口转发：只转发需要的端口 设置好OpenVPN服务，并只转发OpenVPN端口 注意设置端口（对外网）不要采用任何默认值（如5000、5001、1194等等） 处理动态IP（和SSL认证） 域名+路由器DDNS插件自动更新 先通过自行申请（使用了ZeroSSL）再开启Let&amp;rsquo;s Encrypt插件自动更新证书。 如果域名已有其他解析记录，注意ZeroSSL可能存在的CAA和CNAME冲突问题 其他安全问题自查 用户设置：禁用默认管理员帐户，新帐户密码强度等 登录设置：群晖NAS自带二步验证开启，设置密码错误封禁IP等 通知设置：群晖NAS邮件通知（SMTP） 其他：加上登录IP限制、硬件安全密钥等 </description>
+    </item>
+    <item>
       <title>2022 年终：生活的日子里，化身躺倒在沥青路上的一滩果酱</title>
       <link>https://fanrongbin.com/posts/jam-on-road/</link>
       <pubDate>Sat, 31 Dec 2022 01:00:00 +0800</pubDate>
@@ -37,14 +72,14 @@
       <link>https://fanrongbin.com/posts/hybrid-3/</link>
       <pubDate>Sun, 04 Sep 2022 00:00:00 +0800</pubDate>
       <guid>https://fanrongbin.com/posts/hybrid-3/</guid>
-      <description>摘录 # On sharing the magic of the creative process, w/ Serbest Salih, The Creative Independent # They see the world from different levels. It’s a very innocent perspective because it’s without editing—it is a free moment without any pressure. When they see any moment that inspires them, they capture it. Their work is about the celebration of childhood; about seeing the world through the eyes of children, not as adults.</description>
+      <description>NASA’s LRO Finds Lunar Pits Harbor Comfortable Temperatures © NASA/GSFC/Arizona State Univeristy © Felice Knol 摘录 # On sharing the magic of the creative process, w/ Serbest Salih, The Creative Independent # They see the world from different levels. It’s a very innocent perspective because it’s without editing—it is a free moment without any pressure. When they see any moment that inspires them, they capture it. Their work is about the celebration of childhood; about seeing the world through the eyes of children, not as adults.</description>
     </item>
     <item>
       <title>Hybrid #2</title>
       <link>https://fanrongbin.com/posts/hybrid-2/</link>
       <pubDate>Mon, 02 May 2022 00:00:00 +0800</pubDate>
       <guid>https://fanrongbin.com/posts/hybrid-2/</guid>
-      <description>摘录 # 周保松：公共生活的意義 # ⋯⋯第三，承接以上所言，公共生活總意味著我們與他人在一起。我們在一起討論，一起行動，一起感受，也在一起改變。我們雖然有不同的身分，卻總希望在公共生活中彼此尊重，沒有人會因為出身、階級、性別、信仰等差異而受到歧視。公共生活很重要的一點，是看到和承認他人與你是平等的存在，享有同樣的權利。我們因此要學會聆聽、容忍和尊重不同的觀點。 公共性總是和開放、多元、民主這些價值聯結在一起。
+      <description>Ilulissat Icefjord Center. © Dorte Mandrup Arkitekter Essaouira, Marokko, 2019 © Lea Verholen 摘录 # 周保松：公共生活的意義 # ⋯⋯第三，承接以上所言，公共生活總意味著我們與他人在一起。我們在一起討論，一起行動，一起感受，也在一起改變。我們雖然有不同的身分，卻總希望在公共生活中彼此尊重，沒有人會因為出身、階級、性別、信仰等差異而受到歧視。公共生活很重要的一點，是看到和承認他人與你是平等的存在，享有同樣的權利。我們因此要學會聆聽、容忍和尊重不同的觀點。 公共性總是和開放、多元、民主這些價值聯結在一起。
 以上三點，都是規範性的，反映我們對公共生活的期望，而不是說現實已經如此。我們正是見到現實的不理想，才特別提出這些面向，希望我們一起努力創造條件去實現這樣的公共生活。
 ⋯⋯公共生活是有力量的，當人與人走在一起，當人開始獨立思考，體制就會恐慌，因為他們知道自己那套東西早已經不起理性檢視。現在的社會控制，就是要將人趕回私人領域，把人變成耽於消費的經濟動物，從而令我們忽略、甚至忘記人同時也是社會存有和政治存有。
 原文 →
@@ -82,13 +117,13 @@ fatal error: &amp;#39;al.h&amp;#39; file not found #include &amp;lt;al.h&amp;gt;
       <link>https://fanrongbin.com/posts/hybrid-1/</link>
       <pubDate>Sat, 05 Feb 2022 00:00:00 +0800</pubDate>
       <guid>https://fanrongbin.com/posts/hybrid-1/</guid>
-      <description>摘录 # 林宏信：母語者心態 # 「母語者心態」是無法為他人帶來幫助的，然而這不容易避免，畢竟每個人都有這麼多差異，大家都可能是某方面的「母語者」，難以去理解他人所面臨到的困難。我想首先要察覺到自己與別人的不同，建立正確的認知，才能真正幫助到他人。
+      <description>莎玛丽丹百货公司 La Samaritaine © Simón García | arqfoto The Optimism of Possibility © Phillip Reed 摘录 # 林宏信：母語者心態 # 「母語者心態」是無法為他人帶來幫助的，然而這不容易避免，畢竟每個人都有這麼多差異，大家都可能是某方面的「母語者」，難以去理解他人所面臨到的困難。我想首先要察覺到自己與別人的不同，建立正確的認知，才能真正幫助到他人。
 自主、自然的学习往往需要前期有一定程度的投入，未起步的人即使对这些所谓的学习方式有所认知，也极大可能仍在原地踏步。每个人都可能在某个领域存在一定投入，是这个领域的「精通者」，或多或少在遇到来自新手的提问时感到有些疑惑，「为什么他就不能想到我所想到的呢？」，无法先站在对方的角度理解其全程经历的困难，这便是母语者心态了。除了察觉不同、建立认知外，我想还需要把对方的问题不断细化，才能一点一点重新来过。
 原文 →
 马华灵：身份自由主义的困境 # 身份政治的大麻烦是去公民政治。但是，公共自由主义并不排斥身份政治。这是因为身份自由主义一败涂地，表面上根源于身份政治，而实质上根源于去公民政治。如果美国自由派能够从身份政治走向公民政治，那么身份政治依旧可以从分裂的政治走向团结的政治。身份自由主义是排他性的（exclusive），它以自我为中心，只关心跟自己的身份息息相关的事务，而不关心跟自己的身份毫无干系的事务。但是，公共自由主义却是包容性的（inclusive），它不仅仅关心跟自己的身份息息相关的事务，而且还从自己的身份出发走向更广大的公民同胞。
 身份政治的一大弊病是其无穷无尽分裂的特性，走到最后人人视对方为异己、形同陌路，个人主义的实质决定其自身被终结的命运。从身份政治走向公民政治，亦正是从分裂走向团结，从诉诸运动转向诉诸选举。在冲突中进化，但最终只得在包容中收获。
 原文 →
-Paul Graham, What You&amp;rsquo;ll Wish You&amp;rsquo;d Known # The only real difference between adults and high school kids is that adults realize they need to get things done, and high school kids don&amp;rsquo;t. That realization hits most people around 23. But I&amp;rsquo;m letting you in on the secret early. So get to work. Maybe you can be the first generation whose greatest regret from high school isn&amp;rsquo;t how much time you wasted.</description>
+Paul Graham, What You&amp;rsquo;ll Wish You&amp;rsquo;d Known # The only real difference between adults and high school kids is that adults realize they need to get things done, and high school kids don&amp;rsquo;t. That realization hits most people around 23. But I&amp;rsquo;m letting you in on the secret early.</description>
     </item>
     <item>
       <title>糕点铺</title>
@@ -230,7 +265,7 @@ R 知道今天已经快要来了，所以昨天就打包好了行李，给保温
       <link>https://fanrongbin.com/posts/healthy-relationship/</link>
       <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/posts/healthy-relationship/</guid>
-      <description>同友人聊天，谈及河南暴雨，再到自疫情初至今仍层出不穷的呼救、求助，不约而同发问：「如果我或我身边的人也遇到这样的紧急事件，而依靠网络仍无法得到回应，该怎么办？」我有对城市生活多加警惕的意识吗？我知道发生山洪应该往哪里跑吗？我知道除了互联网之外的呼救途径吗？如果断水、断电、断网、断信号，该怎么办？
+      <description>聊天，谈到河南暴雨，再到自疫情初至今仍层出不穷的呼救、求助，和朋友不约而同发问：「如果我或我身边的人也遇到这样的紧急事件，而依靠网络仍无法得到回应，该怎么办？」我有对城市生活多加警惕的意识吗？我知道发生山洪应该往哪里跑吗？我知道除了互联网之外的呼救途径吗？如果断水、断电、断网、断信号，该怎么办？
 我们都不觉得这是杞人忧天，也不觉得活得自在豁达与多加警惕之间有任何冲突。只是觉得生命不能被肆意对待。尤其是在这不过一年间，见证了这么多生命的离开。
 一开始 Apple 发布 Memoji 时，我在猜，是不是以后就真靠这么一个会动的头把「我」替代了？未来在动物森友会世界里归农，在 Gather Town 或者 Online Town 里上班。甚至想过《黑镜》里骑动感单车赚点数的生活只需要再优化一下，例如不要那么单一、再有创造力一些，会不会也是能接受的选项？
 现在是惊醒了，要走一条反产业潮流的老路，不论如何要在真实世界里去建立健康的关系，这种关系除了是人与人之间的，更要包括和物件之间、和环境之间、和自己。
@@ -242,7 +277,7 @@ R 知道今天已经快要来了，所以昨天就打包好了行李，给保温
 前些天看到 NYT 上一篇文章，谈「为什么互联网上的人都那么糟」，简体中文互联网环境则更如是。除了庞大的基数，算法干预下再加一重 censor 与 business，以至于我们造成的争端比谁都多，进入沉思过程的少之又少，达成的结论更屈指可数。作者说他有时感觉被铺天盖地的新闻所淹没，我俨然像在极度正面与极度负面的两种情绪中溺亡了。
 如果觉得自己是个「布道者」，继续这么做下去也无妨。但如果带来的创伤更多，那还是别做了。只要人人都幻想，那一天到不到来，没什么关系。
 信源一简再简，关注「人」而少关注「事」。「关注事」的大把，挑一两个能把前因后果、来龙去脉讲清楚的已经很足够，部分评论作非自愿加餐。大力学习、深度学习能持续输出观点的人、能鞭辟入里又简明扼要讲话的人、友好型肯争论的异见持有者，如果这些人有些还在网上，那就接着看。有些在书里，就继续读。至于实在是 voluble，造成 vociferous 的，不看不就行了，别总以为少看点什么就会错过什么，错过的东西太多了，没看过没见识过的也太多了。记得第一次读《文学回忆录》，或者是第一次读《地理学与生活》，或者是第一次读《视差之见》，读得面红耳赤，读得「欲火焚身」。不要养成「每当做点什么，总要看评论/看眼色」的习惯。
-我还更多地去阅读 Newsletter，虽然不是那个「一期一会」，但这种「一期」看「一会」也让我对早起（以阅读和做点自己的事）有了更大的兴趣和信心。方便 Archive，可以复制粘贴，也可以直接在收件箱标签。有的作者还设置了读者信箱，多好，这都是人与人的关系。
+更多地去阅读 Newsletter，虽然不是那个「一期一会」，但这种「一期」看「一会」也让我对早起（以阅读和做点自己的事）有了更大的兴趣和信心。方便 Archive，可以复制粘贴，也可以直接在收件箱标签。有的作者还设置了读者信箱，多好，这都是人与人的关系。
 But I have more of a life than I once did. I have a wife, a busy career, aging parents and a large family. I have more physical mobility and, in turn, more interest in being active and out in the world.</description>
     </item>
     <item>
@@ -285,7 +320,7 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
       <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
       <description>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。
-获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式如下： rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream 具体参数（如视频编码）自行调整。
+获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式为：rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream 具体参数（如视频编码）自行调整。
 对于 TP-LINK 摄像头，其 RTSP 流地址格式如下： 主码流为：rtsp://[username]:[password]@[ip]:[port]/stream1
 子码流将 stream1 替换为 stream2 即可。
 RTSP 端口 port 默认为 554，若为默认可不填写。
@@ -377,17 +412,6 @@ var clipboard = new ClipboardJS(&amp;#39;.</description>
       <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/posts/an-ordinary-sunday-afternoon/</guid>
       <description>这一年发生了很多事情，改变了很多事情。具体的，很难记起，也难以叙述，像翻过通俗小说的书页，稀稀拉拉，有时会有兴致。 这一年是一个「暧昧的障碍」与「复杂的平缓」。和心智相抗衡的大半年，的的确确成为了我至今最为重要且深刻的一段日子。那种时有时无能够看清自己的机会，忽闪忽现的珍贵的情理反省，很「暧昧」，是「障碍」，是必须跨过、必须大步远离后再回头审视的障碍。它们也是复杂的，这一点我认为不需要在此赘述。它们是平缓的，成为暗流、暗涌，我仍然在波动中试着回归。 常说「新年新气象」，何以「新」？何以为「新」？不再立下那些期冀成为鼓励、最后大都忘记的目标与愿景，当真正开始反思日复一日、年复一年的新旧更迭于自己本身究竟意义何在，我只看到一条直行路。</description>
-    </item>
-    <item>
-      <title>define false true</title>
-      <link>https://fanrongbin.com/posts/define-false-true/</link>
-      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/define-false-true/</guid>
-      <description>今天因为一篇偶然的推送，收看了荣格分析师吕旭亚的一个演讲。她和我们分享了两个例子，也从自己学习时得到的思考中，告诉我们「抑郁，是生命的一场温柔提醒」。
-它提醒我们，生命如同河流，涌动着，流淌着，而抑郁就想生命之流遇到阻碍，需要我们的调试，需要我们的掌控。它告诉我们，此时的心境的确如同走入黑暗森林，在迫切地寻找出路，迫切地寻找解决方式。
-这些阻碍，此时，于我而言，的确如她所说的那样，从另一个甚至另一些被迫隐匿在我同一具身体里的其他自我中来。因为对他们的忽视，因为对现时最大自我的重视，因为对现时最大自我的失望和迫切，我不得不把这些自我放在一边，逐渐远离，淡化，忘记。
-因而此刻我意识到了和自己和解有多重要，去真正地把它们整合在一起，整合成一个丰富的我，一个多层次的我，一个属于我的我有多重要。因而我会试着从这里开始，真正地，追寻一种多个自我带来的，流动的生命的意义价值，去开展一种经过整合的人生。
-写到此。</description>
     </item>
     <item>
       <title>白色的空间</title>

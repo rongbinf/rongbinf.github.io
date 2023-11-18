@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description"
     content="家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。
-获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式如下： rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream 具体参数（如视频编码）自行调整。
+获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式为：rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream 具体参数（如视频编码）自行调整。
 对于 TP-LINK 摄像头，其 RTSP 流地址格式如下： 主码流为：rtsp://[username]:[password]@[ip]:[port]/stream1
 子码流将 stream1 替换为 stream2 即可。
 RTSP 端口 port 默认为 554，若为默认可不填写。
@@ -73,10 +73,9 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 <a href="#%e8%8e%b7%e5%8f%96%e6%91%84%e5%83%8f%e5%a4%b4-rtsp-%e6%b5%81" class="heading-anchor">#</a>
 </h2>
 <ul>
-<li>对于海康威视和萤石摄像头，其 RTSP 流地址格式如下：</li>
+<li>对于海康威视和萤石摄像头，其 RTSP 流地址格式为：<code>rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream</code></li>
 </ul>
-<pre tabindex="0"><code>rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
-</code></pre><p>具体参数（如视频编码）自行调整。</p>
+<p>具体参数（如视频编码）自行调整。</p>
 <ul>
 <li>对于 TP-LINK 摄像头，其 RTSP 流地址格式如下：</li>
 </ul>
