@@ -51,6 +51,18 @@ VPN Server的话看个人需求，在群晖或者路由器上部署都可以。�
 处理端口转发：只转发需要的端口 设置好OpenVPN服务，并只转发OpenVPN端口 注意设置端口（对外网）不要采用任何默认值（如5000、5001、1194等等） 处理动态IP（和SSL认证） 域名+路由器DDNS插件自动更新 先通过自行申请（使用了ZeroSSL）再开启Let&amp;rsquo;s Encrypt插件自动更新证书。 如果域名已有其他解析记录，注意ZeroSSL可能存在的CAA和CNAME冲突问题 其他安全问题自查 用户设置：禁用默认管理员帐户，新帐户密码强度等 登录设置：群晖NAS自带二步验证开启，设置密码错误封禁IP等 通知设置：群晖NAS邮件通知（SMTP） 其他：加上登录IP限制、硬件安全密钥等 </description>
     </item>
     <item>
+      <title>주다, 드리다, 주시다 &#43; 간접인용 명령문</title>
+      <link>https://fanrongbin.com/posts/give-ko/</link>
+      <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/posts/give-ko/</guid>
+      <description>tl;dr 小结 # 주다, 드리다, 주시다 # 在间接引语命令文（Quoted Imperative）中的变化 # 주다, 주시다, 드리다 # A가/는 B에게/한테 N을 주다 # A给B某物 平辈之间 그는 생일 선물로 친구에게 책을 줬다.
+A가/는 C께 N을 드리다 # A给C某物 C为需要尊敬的人（下同），如长辈或陌生人，对“给长辈”使用敬语：께, 주다 -&amp;gt; 드리다，类似“献上”“奉上” 저는 생일 선물로 선생님께 책을 드렸다.
+C께서 A에게/한테 N을 주시다 # C给A某物 对C“长辈给”使用敬语：주다 -&amp;gt; 주시다，类似“赐予” 선생님께서 생일 선물로 저에게 책을 주셨다.
+例：V아/어/여 주다/드리다 # 以“帮助”（돕다）为例：
+A为B做某事：
+A主动： A给予B帮助：A 도와 줄까? B接受A的给予：B 응, 도와 줘.</description>
+    </item>
+    <item>
       <title>2022 年终：生活的日子里，化身躺倒在沥青路上的一滩果酱</title>
       <link>https://fanrongbin.com/posts/jam-on-road/</link>
       <pubDate>Sat, 31 Dec 2022 01:00:00 +0800</pubDate>
