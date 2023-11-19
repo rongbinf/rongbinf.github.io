@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description"
-    content="「汉字标准格式」是一个集合了「语意样式标准化」「文字设计」「高级排版功能」等三大概念的网页排版框架，使用Sass及JavaScript构架而成。其专为汉字网页提供的美观而标准化的环境，不仅符合传统阅读习惯、更为萤幕阅读提供了既成标准，得以完整解决现今汉字网页设计的排版需求。
+    content="「汉字标准格式」 是一套支援各种印刷效果的 Sass &#43; JavaScript 排版框架 ，包含相邻文字装饰线跳脱 、汉ㄏㄢˋ字ㄗˋhànzì标ㄅㄧㄠ音ㄧㄣbiāoyīn 、着重号 、标点符号修正 、中文四大印刷体 、汉字－西文 mixed 间隙 、 「标点 『挤压』 与 『悬挂』 」 、章节边界调整……
 汉字标准格式
 首先要引入两个源文件：han.min.css与han.min.js，最简便的方式，可以通过CDN或直接下载后（访问两条代码中的对应链接，另存至本地）放入Hugo博客系统下的/static文件夹中。建议使用后者，以方便我们在本地调整样式上的冲突。
 这两种方式，都需要在HTML对应处汇入。为了让Hugo在生成页面时自动汇入，以我所使用的hugo-tufte主题为例：
@@ -72,7 +72,20 @@
   
 
   <section><blockquote>
-<p>「汉字标准格式」是一个集合了「<a href="https://hanzi.pro/manual/yangshi_biaozhunhua">语意样式标准化</a>」「<a href="https://hanzi.pro/manual/wenzisheji">文字设计</a>」「高级排版功能」等三大概念的网页排版框架，使用Sass及JavaScript构架而成。其专为汉字网页提供的美观而标准化的环境，不仅符合传统阅读习惯、更为萤幕阅读提供了既成标准，得以完整解决现今汉字网页设计的排版需求。</p>
+<p lang="zh-Hans"><h-char unicode="300c" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>「</h-inner></h-char>汉字标准格式<h-char unicode="300d" class="biaodian cjk bd-close bd-end"><h-inner>」</h-inner><h-cs hidden=""> </h-cs></h-char>是一套支援各种印刷效果的<!--
+--><h-hws hidden=""> </h-hws>Sass + JavaScript<h-hws hidden=""> </h-hws>排版框架<h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">，</h-char></h-cs></h-hangable>包含<!--
+--><u>相邻</u><u class="adjacent">文字装饰线</u><u class="adjacent">跳脱</u><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><h-ruby class="rightangle complex" rightangle="true"><h-ru class="rightangle complex" span="2" order="0" annotation="true"><h-ru zhuyin="true"><rb>汉</rb><h-zhuyin length="2" diao="ˋ"><h-yin>ㄏㄢ</h-yin><h-diao>ˋ</h-diao></h-zhuyin></h-ru><h-ru zhuyin="true"><rb>字</rb><h-zhuyin length="1" diao="ˋ"><h-yin>ㄗ</h-yin><h-diao>ˋ</h-diao></h-zhuyin></h-ru><rt rbspan="2">hànzì</rt></h-ru><h-ru class="rightangle complex" span="2" order="0" annotation="true"><h-ru zhuyin="true"><rb>标</rb><h-zhuyin length="3" diao=""><h-yin>ㄅㄧㄠ</h-yin><h-diao></h-diao></h-zhuyin></h-ru><h-ru zhuyin="true"><rb>音</rb><h-zhuyin length="2" diao=""><h-yin>ㄧㄣ</h-yin><h-diao></h-diao></h-zhuyin></h-ru><rt rbspan="2">biāoyīn</rt></h-ru></h-ruby><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><em style="-moz-text-emphasis: filled circle;
+    -webkit-text-emphasis: filled circle;
+    text-emphasis: filled circle;
+    -moz-text-emphasis-position: under;
+    -webkit-text-emphasis-position: under;
+    text-emphasis-position: under;
+    font-style: inherit;
+    border-bottom: 2px dotted;
+    padding-bottom: 0.05em;
+    border-bottom-width: -webkit-calc(0px);
+    padding-bottom: -webkit-calc(0px);">着重号</em><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><!--
+-->标点符号修正<h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><abbr title="黑、宋、楷、仿宋">中文四大印刷体</abbr><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable>汉字<h-char unicode="ff0d" class="biaodian cjk ">－</h-char>西文<h-hws hidden=""> </h-hws>mixed<h-hws hidden=""> </h-hws>间隙<h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><h-char-group class="biaodian cjk portion"><h-char unicode="300c" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>「</h-inner></h-char></h-char-group>标点<h-char unicode="300e" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>『</h-inner></h-char>挤压<h-char unicode="300f" class="biaodian cjk bd-close bd-end"><h-inner>』</h-inner><h-cs hidden=""> </h-cs></h-char>与<h-char unicode="300e" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>『</h-inner></h-char>悬挂<h-hangable><h-char unicode="300f" class="biaodian cjk bd-close bd-end"><h-inner>』</h-inner><h-cs hidden=""> </h-cs></h-char><h-char unicode="300d" class="biaodian cjk bd-close bd-end"><h-inner>」</h-inner><h-cs hidden=""> </h-cs></h-char><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable>章节边界调整<h-char unicode="2026" class="biaodian cjk bd-liga">……</h-char></p>
 <p><a href="https://hanzi.pro/manual/">汉字标准格式</a></p>
 </blockquote>
 <p>首先要引入两个源文件：<code>han.min.css</code>与<code>han.min.js</code>，最简便的方式，可以通过<a href="https://hanzi.pro/manual/anzhuang_yu_qiyong#cdn">CDN</a>或直接下载后（访问两条代码中的对应链接，另存至本地）放入Hugo博客系统下的<code>/static</code>文件夹中。建议使用后者，以方便我们在本地调整样式上的冲突。</p>

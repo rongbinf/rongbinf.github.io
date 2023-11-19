@@ -20,10 +20,10 @@
 点击菜单栏File，选择Create a new repository。 为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（config.toml所在的整个文件夹和子文件夹）复制进来。 复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。 2. 将新库和Github Pages仓库串起来 # 在username/username.github.io下是public文件夹内生成的静态网页（你一定记得的，在本地我们需要cd public），而我们希望通过添加或修改源仓库的.md来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。
 网页版，点击头像，进入Github个人的Settings：
 边栏最下方Developer Settings，
-选择Personal access tokens下的Tokens (classic) 点击右方Generate a new token (classic) 输入密码后进入设置，在Note框中填写方便识别的名字，如Deploy，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo，workflow
+选择Personal access tokens下的Tokens (classic) 点击右方Generate a new token (classic) 输入密码后进入设置，在Note框中填写方便识别的名字，如Deploy，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow
 点击生成后token即出现，注意它只会出现这唯一的一次，将其复制保存下来
 得到token后，进入源仓库的Settings：
-选择Secrets and variables下的Actions，在右侧选择New repository secret 在Name中填入PERSONAL_TOKEN 在Secret中填入刚才生成的token，点击Add secret保存 3. 设置好Github Actions # 接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始Configure即可：
+选择Secrets and variables下的Actions，在右侧选择New repository secret 在Name中填入PERSONAL_TOKEN 在Secret中填入刚才生成的token，点击Add secret保存 3. 设置好Github Actions # 接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：
 重命名.yml为方便识别的名字，如deploy.yml 修改编辑框内容如下： name: deploy # 这个 action 的名字 on: push: # 代表每次 push 都会 turn on action workflow_dispatch: # 代表我们也可以手动 turn on jobs: build: runs-on: ubuntu-latest steps: - name: checkout uses: actions/checkout@v2 with: submodules: true fetch-depth: 0 - name: setup uses: peaceiris/actions-hugo@v2.</description>
     </item>
     <item>
@@ -31,7 +31,7 @@
       <link>https://fanrongbin.com/posts/hugo-hanzi-pro/</link>
       <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/posts/hugo-hanzi-pro/</guid>
-      <description>「汉字标准格式」是一个集合了「语意样式标准化」「文字设计」「高级排版功能」等三大概念的网页排版框架，使用Sass及JavaScript构架而成。其专为汉字网页提供的美观而标准化的环境，不仅符合传统阅读习惯、更为萤幕阅读提供了既成标准，得以完整解决现今汉字网页设计的排版需求。
+      <description>「汉字标准格式」 是一套支援各种印刷效果的 Sass + JavaScript 排版框架 ，包含相邻文字装饰线跳脱 、汉ㄏㄢˋ字ㄗˋhànzì标ㄅㄧㄠ音ㄧㄣbiāoyīn 、着重号 、标点符号修正 、中文四大印刷体 、汉字－西文 mixed 间隙 、 「标点 『挤压』 与 『悬挂』 」 、章节边界调整……
 汉字标准格式
 首先要引入两个源文件：han.min.css与han.min.js，最简便的方式，可以通过CDN或直接下载后（访问两条代码中的对应链接，另存至本地）放入Hugo博客系统下的/static文件夹中。建议使用后者，以方便我们在本地调整样式上的冲突。
 这两种方式，都需要在HTML对应处汇入。为了让Hugo在生成页面时自动汇入，以我所使用的hugo-tufte主题为例：
