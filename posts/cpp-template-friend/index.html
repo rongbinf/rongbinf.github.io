@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description"
     content="在 C&#43;&#43; 中只能通过友元函数来重载流输入输出运算符 &lt;&lt; &gt;&gt;。由于搭配模板类的使用，编译器可能在对应编译友元函数时无法确定其为模版，需要事先声明。
-方法 1：提前声明并使用 &lt;&gt; 确认 # #include &lt;iostream&gt; using namespace std; //需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数 template &lt;class A&gt; class complex; template &lt;class A&gt; ostream &amp; operator &lt;&lt; (ostream &amp;newout, const complex&lt;A&gt; &amp;m); template &lt;class A&gt; class complex{ //以复数类为例 private: A real, image; public: complex(A a, A b):real(a),image(b){ } //在运算符 &lt;&lt; 后加入 &lt;&gt; 以帮助编译器进一步确定该友元函数为模板函数 friend ostream &amp; operator &lt;&lt; &lt;&gt;(ostream &amp;newout, const complex&lt;A&gt; &amp;m); }; template &lt;class A&gt; ostream &amp; operator &lt;&lt; (ostream &amp;newout, const complex&lt;A&gt; &amp;m){ newout&lt;&lt;&#34;(&#34;&lt;&lt;m. ">
+方法 1：提前声明并使用 &lt;&gt; 确认##include &lt;iostream&gt; using namespace std; //需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数 template &lt;class A&gt; class complex; template &lt;class A&gt; ostream &amp; operator &lt;&lt; (ostream &amp;newout, const complex&lt;A&gt; &amp;m); template &lt;class A&gt; class complex{ //以复数类为例 private: A real, image; public: complex(A a, A b):real(a),image(b){ } //在运算符 &lt;&lt; 后加入 &lt;&gt; 以帮助编译器进一步确定该友元函数为模板函数 friend ostream &amp; operator &lt;&lt; &lt;&gt;(ostream &amp;newout, const complex&lt;A&gt; &amp;m); }; template &lt;class A&gt; ostream &amp; operator &lt;&lt; (ostream &amp;newout, const complex&lt;A&gt; &amp;m){ newout&lt;&lt;&#34;(&#34;&lt;&lt;m. ">
 <link rel="canonical" href="https://fanrongbin.com/posts/cpp-template-friend/" />
 
 

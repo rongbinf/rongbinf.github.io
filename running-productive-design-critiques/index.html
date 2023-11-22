@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh" class="han-init"><head>
+<title>高效的设计批评是如何进行的 - Rongbin&#39;s Blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description"
+    content="注：本文译自 Running productive design critiques，作者是 Gustavs Cirults。
+设计不分对错，只分适合与否。
+要做到在正确的设计道路上持续产出，你需要做的是真正地去了解和探究目前需要处理的问题，并且通过某种渠道不断地获得用户反馈。获得用户反馈的渠道很多，例如使用聊天应用、发送邮件等等。但即使是设计师能够与用户进行直接对话，设计师也很容易会被自己本身的认知所限制，从而陷入设计的僵局。
+和自己的同事来一场设计批评（design critique），这能很好地帮助你获得设计的新视角。在这个过程中，设计师不仅可以对想法和理念进行再一次自我探讨，一些从未有思考的设计问题也会被引出。显而易见的是，人们常常会因为一些琐碎的、不重要的事情所分心，因此在设计批评的过程中，要做到针对问题本身及所在来提出不同观点。如果同事对你所提出的的解决方案存在疑问或者误解，这也未尝不是一次对设计进行反思和解决的机会。
+我们（指 Intercom 设计团队，下同）一直在对自己的设计进行批评，在本篇文章中，你将了解到我们是如何进行设计批评的。我们也有一套对此适用的 Sketch 模板，在这里与你一起分享。
+确定设计批评的目标 # 在展现设计案例前，确保每个人都清楚地了解问题本身与所在。 进行设计批评，将需要 1-5 人对问题提供不同视角（如设计师、工程师、服务支持代表等）。在开始设计批评前，确定批评的目标并对他人提供指引是至关重要的。你需要做些什么改进才能推动作品进步？需要哪种类型的、针对哪些问题的反馈呢？一场合理的设计批评，应由设计师自己进行领导和指引，帮助同事（或其他提供不同视角的角色）理解问题的复杂性，或正确的思维过程，并一起确定设计和批评的目标、目前需要解决的问题，以及可能需要的解决方案。
+在这方面，可以把问题的描述和提出的解决方案打印下来，贴在墙上供大家参考使用。这能让每个人都理清整个设计作品与问题的关系和解决的程序流程，并且提供针对性的观点。至此，你将永远与「你能滚动回上一张设计页面吗？」「不对，是另外一张」这些原型测试中可能出现的问题说再见。不过在我们需要讨论交互上的设计时，原型测试（interaction design）仍是一个不可或缺的环节。
+Set the scene 做好开始前的准备 # 在展现设计案例前，确保每个人都清楚地了解问题本身与所在，以及问题出现的前因后果。如果问题没有了解明白，对设计案例的批评也会出现偏颇，在过程中也很容易出现误解。因此，请针对性地给问题起一个名字，用较小的篇幅（最好是一段话）简洁明了、通俗易懂地描述问题。下面是一段示例：
+Inviting colleagues Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve seen that users who invite their colleagues tend to be more active and stick around longer.
+如果问题能够以可视化的方式呈现，通过绘制图表或者使用案例的 screenshots 是不错的选择。（我们用 Job Stories 了解用户的动机，也推荐你采用。） ">
+<link rel="canonical" href="https://fanrongbin.com/running-productive-design-critiques/" />
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
+</noscript>
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte.min.css">
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte-options.min.css">
+
+<link rel="stylesheet" href="/css/hugo-tufte-override.css">
+
+
+
+<link rel="stylesheet" href="/han.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+</head>
+<body>
+
+
+<article id="main" class="han-init-context">
+  <section>
+<h1 class="content-title">
+
+<span class="go-back"><a href="/posts" class="go-back">←</a></span>高效的设计批评是如何进行的</h1><span class="content-meta">
+  <p class="date">18 Dec 2016</p>
+</span></section>
+
+  
+
+  <section><blockquote>
+<p>注：本文译自 <cite lang="en"><a href="https://blog.intercom.com/running-productive-design-critiques/">Running productive design critiques</a></cite>，作者是 <a href="http://twitter.com/gustavscirulis">Gustavs Cirults</a>。</p>
+</blockquote>
+<p><img src="https://img.fanrongbin.com/critic-1.webp" alt="Slack-for-iOS-Upload-5-2.jpg"></p>
+<p><strong>设计不分对错，只分适合与否。</strong></p>
+<p>要做到在正确的设计道路上持续产出，你需要做的是真正地去了解和探究目前需要处理的问题，并且通过某种渠道不断地获得用户反馈。获得用户反馈的渠道很多，例如使用聊天应用、发送邮件等等。但即使是设计师能够与用户进行直接对话，设计师也很容易会被自己本身的认知所限制，从而陷入设计的僵局。</p>
+<p>和自己的同事来一场设计批评（design critique），这能很好地帮助你获得设计的新视角。在这个过程中，设计师不仅可以对想法和理念进行再一次自我探讨，一些从未有思考的设计问题也会被引出。显而易见的是，人们常常会因为一些琐碎的、不重要的事情所分心，因此在设计批评的过程中，要做到针对问题本身及所在来提出不同观点。如果同事对你所提出的的解决方案存在疑问或者误解，这也未尝不是一次对设计进行反思和解决的机会。</p>
+<p>我们（指 Intercom 设计团队，下同）一直在对自己的设计进行批评，在本篇文章中，你将了解到我们是如何进行设计批评的。我们也有一套对此适用的 Sketch 模板，在这里与你一起分享。</p>
+<h2 id="确定设计批评的目标">
+确定设计批评的目标
+<a href="#%e7%a1%ae%e5%ae%9a%e8%ae%be%e8%ae%a1%e6%89%b9%e8%af%84%e7%9a%84%e7%9b%ae%e6%a0%87" class="heading-anchor">#</a>
+</h2>
+<blockquote>
+<p>在展现设计案例前，确保每个人都清楚地了解问题本身与所在。
+进行设计批评，将需要 1-5 人对问题提供<a href="https://blog.intercom.com/unflattening-design/">不同视角</a>（如设计师、工程师、服务支持代表等）。在开始设计批评前，确定批评的目标并对他人提供指引是至关重要的。你需要做些什么改进才能推动作品进步？需要哪种类型的、针对哪些问题的反馈呢？一场合理的设计批评，应由设计师自己进行领导和指引，帮助同事（或其他提供不同视角的角色）理解问题的复杂性，或正确的思维过程，并一起确定设计和批评的目标、目前需要解决的问题，以及可能需要的解决方案。</p>
+</blockquote>
+<p>在这方面，可以把问题的描述和提出的解决方案打印下来，贴在墙上供大家参考使用。这能让每个人都理清整个设计作品与问题的关系和解决的程序流程，并且提供针对性的观点。至此，你将永远与「你能滚动回上一张设计页面吗？」「不对，是另外一张」这些原型测试中可能出现的问题说再见。不过在我们需要讨论交互上的设计时，原型测试（interaction design）仍是一个不可或缺的环节。</p>
+<p><img src="https://img.fanrongbin.com/critic-2.webp" alt="poster-design-critique.jpg"></p>
+<h2 id="set-the-scene-做好开始前的准备">
+Set the scene 做好开始前的准备
+<a href="#set-the-scene-%e5%81%9a%e5%a5%bd%e5%bc%80%e5%a7%8b%e5%89%8d%e7%9a%84%e5%87%86%e5%a4%87" class="heading-anchor">#</a>
+</h2>
+<p>在展现设计案例前，确保每个人都清楚地了解问题本身与所在，以及问题出现的前因后果。如果问题没有了解明白，对设计案例的批评也会出现偏颇，在过程中也很容易出现误解。因此，请针对性地给问题起一个名字，用较小的篇幅（最好是一段话）简洁明了、通俗易懂地描述问题。下面是一段示例：</p>
+<blockquote>
+<p><strong>Inviting colleagues</strong>
+Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve seen that users who invite their colleagues tend to be more active and stick around longer.</p>
+</blockquote>
+<p>如果问题能够以可视化的方式呈现，通过绘制图表或者使用案例的 screenshots 是不错的选择。（我们用 <a href="https://blog.intercom.io/using-job-stories-design-features-ui-ux/">Job Stories</a> 了解用户的动机，也推荐你采用。）</p>
+<h2 id="让批评人员团队参与进你的解决方案">
+让批评人员团队参与进你的解决方案
+<a href="#%e8%ae%a9%e6%89%b9%e8%af%84%e4%ba%ba%e5%91%98%e5%9b%a2%e9%98%9f%e5%8f%82%e4%b8%8e%e8%bf%9b%e4%bd%a0%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" class="heading-anchor">#</a>
+</h2>
+<p>当大家都以同种方式思考，并充分了解正在尝试解决的问题时，是时候提出你的解决方案了。在理想情况下，你可以给不同方案标上序号，这有助于人们对方案作出批评、同时了解方案间的异同及方案适合与否的原因。</p>
+<p>不仅仅问题需要 set the scene，所给的解决方案同样需要。针对性地给方案起一个名字，用较小的篇幅（最好是一段话）简洁明了、通俗易懂地描述方案，便于大家参考。</p>
+<p>在开始绘制 UI 细节前，制作一个关于解决方案运作程序的图表能够起到不错的作用，特别是在设计和优化一些互联产品（interconnected products）时（如 Intercom），用一张高层次的关系图，对设计的运作系统进行描述是必不可少的。</p>
+<p><img src="https://img.fanrongbin.com/critic-3.webp" alt="System_Diagram_Example.png"></p>
+<p>再继续，用打印的形式或通过原型向他人阐述，来展示你所提出的界面设计。</p>
+<p>最后，心狠手辣地分享你针对每个方案的看法，提出仍然需要解决的问题。（如果有）</p>
+<h2 id="进行有效讨论">
+进行有效讨论
+<a href="#%e8%bf%9b%e8%a1%8c%e6%9c%89%e6%95%88%e8%ae%a8%e8%ae%ba" class="heading-anchor">#</a>
+</h2>
+<p>在参与批评的人员都了解问题和你的解决方案时，开始进行有效讨论（productive discussions）。可以从你的看法说起，为什么这个方案能够脱颖而出？脱颖而出的依据是什么？对参与人员进行引导性解释说明，点到即可，最主要的还是收集他人的批评意见。肯定的是，讨论人员会有不同的意见，在其围绕某一方案进行争论、或者认为没有最佳方案时，认真聆听，思考如何能够进一步深入改善。</p>
+<p>要牢记的一点是，脑海中要保有这次设计批评最初的目的和目标。有时候你获得的反馈似乎并不是自己所需的：例如，你想获得有关特定交互的反馈，但人们会问：「为什么先做这个？」这是需要我们进行思考的问题，「我为什么要获得关于这个问题的反馈？」、「进行这次批评的目标是什么？」。始终明确自己的目的和目标（当然目的和目标本身要足够有效、确切），并在设计批评的过程中不断提醒自己。</p>
+<p>但如果你只是想弄明白某种系统的运作形式，但获得的反馈始终纠结于在这个系统上交互的一些细节，及时告知参与批评的人员「跑的有点儿偏」，在明白系统运作形式前开始掐交互细节，未免过早了。告知的同时，发挥作为设计批评发起人的作用，对批评（conversation）进行指导，引回先前所需他们提供反馈的批评主题。</p>
+<h2 id="批评从未结束">
+批评从未结束
+<a href="#%e6%89%b9%e8%af%84%e4%bb%8e%e6%9c%aa%e7%bb%93%e6%9d%9f" class="heading-anchor">#</a>
+</h2>
+<p>取决于这次设计批评定下的目标，你或许能够提出具体的决策及决策理由，亦或者关于设计本身的想法可供消化吸收。但一定做好具体的后续工作，这是最重要的一点。我们在进行设计批评时，将讨论得到的成果写在 Slack channel #design-notes 上，确保没有将其遗忘，同时能够允许非设计小组内部成员的用户提出反馈。</p>
+<p><img src="https://img.fanrongbin.com/critic-4.webp" alt="Slack-design-critique.png"></p>
+<p>定期进行有效的设计批评可以产生非常大的作用。有趣的想法一被提出，其他人就可以以这个想法为基进行延伸拓展，再与不同的各个延伸进行连接。单凭设计师一己之力（哪怕这个设计师有三头六臂），可无法创造这样卓越的效果。</p>
+<p><img src="https://img.fanrongbin.com/critic-5.webp" alt="Screen-Shot-2016-10-17-at-12.16.45.png"></p>
+<p>为了简化这个过程，我们制作了一个 <a href="https://marketing.intercomassets.com/assets/design-critique-concept_template.sketch">Sketch 模板</a>，在这里与你分享，现在就可以下载，并试着在下次展开设计批评时使用。如果该模板能够帮助到你，记得告诉我们！</p>
+</section>
+</article>
+
+
+<script async src="https://hypothes.is/embed.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script src="/han.min.js"></script>
+
+<section><footer class="page-footer">
+<hr />
+
+<div class="previous-post" style="display:inline-block;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/danshari/?ref=footer">« 在信息爆炸后的粉尘里「断舍离」</a>
+  
+</div>
+
+<div class="next-post", style="display:inline-block;float:right;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/using-default-fonts-in-web-design/?ref=footer">在 Web 设计中使用系统 UI 默认字体 »</a>
+  
+</div>
+
+<ul class="page-footer-menu">
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</ul>
+
+
+<p>
+  <a href="https://gohugo.io">hugo</a>,  
+  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
+</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="mailto:r_fan@outlook.com">Send me an email</a>.
+</p>
+<p style="margin-top:1.2rem;color:#555;">&copy; 2023 Rongbin FAN</p>
+
+
+
+
+</footer>
+</section>
+<section><nav class="menu">
+    <ul>
+    
+        <li><a href="/posts"><i class='fas fa-book fa-lg'></i> 归档</a></li>
+    
+        <li><a href="/tags"><i class='fas fa-tags fa-lg'></i> 标签</a></li>
+    
+        <li><a href="/"><i class='fas fa-info-circle  fa-lg'></i> 关于</a></li>
+    
+    </ul>
+</nav>
+</section>
+
+</html>

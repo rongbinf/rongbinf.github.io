@@ -10,9 +10,9 @@
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Github Actions 自动部署 Hugo</title>
-      <link>https://fanrongbin.com/posts/github-actions-deploy-hugo/</link>
+      <link>https://fanrongbin.com/github-actions-deploy-hugo/</link>
       <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/github-actions-deploy-hugo/</guid>
+      <guid>https://fanrongbin.com/github-actions-deploy-hugo/</guid>
       <description>回应痛点：
 写作所用的设备不带环境，没有Git，必须换回原来用的设备hugo生成网页并部署 只想好好写东西，不想再管我的终端/命令行 本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经push到了username/username.github.io这个仓库。
 1. 把源仓库传到一个新库 # 整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库clone下来，也可以通过上传单个.md文件到content/posts文件夹的手动push方式来自动部署，而这都不需要重新搭建Hugo环境。
@@ -28,9 +28,9 @@
     </item>
     <item>
       <title>在 Hugo 引入汉字标准格式</title>
-      <link>https://fanrongbin.com/posts/hugo-hanzi-pro/</link>
+      <link>https://fanrongbin.com/hugo-hanzi-pro/</link>
       <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/hugo-hanzi-pro/</guid>
+      <guid>https://fanrongbin.com/hugo-hanzi-pro/</guid>
       <description>「汉字标准格式」 是一套支援各种印刷效果的 Sass + JavaScript 排版框架 ，包含相邻文字装饰线跳脱 、汉ㄏㄢˋ字ㄗˋhànzì标ㄅㄧㄠ音ㄧㄣbiāoyīn 、着重号 、标点符号修正 、中文四大印刷体 、汉字－西文 mixed 间隙 、 「标点 『挤压』 与 『悬挂』 」 、章节边界调整……
 汉字标准格式
 首先要引入两个源文件：han.min.css与han.min.js，最简便的方式，可以通过CDN或直接下载后（访问两条代码中的对应链接，另存至本地）放入Hugo博客系统下的/static文件夹中。建议使用后者，以方便我们在本地调整样式上的冲突。
@@ -43,16 +43,16 @@
     </item>
     <item>
       <title>Hybrid #4</title>
-      <link>https://fanrongbin.com/posts/hybrid-4/</link>
+      <link>https://fanrongbin.com/hybrid-4/</link>
       <pubDate>Thu, 16 Feb 2023 00:00:00 +0800</pubDate>
-      <guid>https://fanrongbin.com/posts/hybrid-4/</guid>
+      <guid>https://fanrongbin.com/hybrid-4/</guid>
       <description>SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine 摘录 # It took me a long time to figure out why founders don&amp;rsquo;t listen. At first I thought it was mere stubbornness. That&amp;rsquo;s part of the reason, but another and probably more important reason is that so much about startups is counterintuitive. And when you tell someone something counterintuitive, what it sounds to them is wrong. So the reason founders don&amp;rsquo;t listen to us is that they don&amp;rsquo;t believe us.</description>
     </item>
     <item>
       <title>높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理</title>
-      <link>https://fanrongbin.com/posts/honorific-ko/</link>
+      <link>https://fanrongbin.com/honorific-ko/</link>
       <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/honorific-ko/</guid>
+      <guid>https://fanrongbin.com/honorific-ko/</guid>
       <description>tl;dr 小结 # 说的是谁？：主体敬语法（对其人的尊敬 + 对其动作的尊敬） 句中是否涉及第三人/各种所属物？：客体敬语法 对谁说？：对听者的尊敬与否：相对敬语法 主语和听者之间谁更“大”？：压尊法 （主体如果是尊敬的人的所属事物：事物尊称） “该尊敬谁？”“什么场合？”等因人而异的话题，本文不做过多讨论。
 对句中主体/主语：주체(主體) 높임법 # 主要有三：
 谓词：添加“-(으)시-” 以及需要换用的情况，如：(잠을) 자다-&amp;gt;주무시다, 먹다-&amp;gt;드시다, 주다-&amp;gt;드리다, 있다-&amp;gt;계시다(be; be located) 注意계시다只表示있다中“在”的意思，不表示“有”的意思，如： 선생님께서는 교실에 계시다. 선생님은 따님이 있으시다. 助词：主格助词께서（以及再附加“는”“도”等），与格助词께 人名/称呼：在之后添加“님” 对第三人/各种所属物：객체(客體) 높임법 # 对于第三人（即客体，此时他作为句子中的目的语(목적어)或副词语(부사어)） 所跟的谓词需要换用 例如：데리다-&amp;gt;모시다, 주다-&amp;gt;드리다, 뵈다(보이다)/만나다-&amp;gt;뵙다, 묻다-&amp;gt;여쭈다-&amp;gt;여쭙다（主要是这四个） 对于各种所属物 名词的换用 例如：밥-&amp;gt;진지, 집-&amp;gt;댁, 생일-&amp;gt;생신, 나이-&amp;gt;연세, 이름-&amp;gt;성함, 딸-&amp;gt;따님, 아들-&amp;gt;아드님 不过，在说话人身份高于客体时，可选择性使用：
@@ -63,9 +63,9 @@
     </item>
     <item>
       <title>家庭组网 2022</title>
-      <link>https://fanrongbin.com/posts/network-resetting-2023/</link>
+      <link>https://fanrongbin.com/network-resetting-2023/</link>
       <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/network-resetting-2023/</guid>
+      <guid>https://fanrongbin.com/network-resetting-2023/</guid>
       <description> 网络布局没有变化 # 还是AC-68U拨号，并且直接接交换机给房间的网线接口。两个易展路由器负责Wi-Fi。
 关于光猫桥接、路由拨号和TP-LINK的易展功能，之前的一篇博文有介绍过，但因为目前博客在做调整，说不定那篇日后会删掉，一并重新在这里加进来：
 光猫桥接和路由拨号 # 运营商：电信 光猫型号：HS8145C 需要：超级管理员帐户 用户名telecomadmin 密码nE7jA%5m 根据型号不同，帐户密码存在差异，读者可自行搜索，或尝试获取base64加密后的密码，使用在线工具解密 对于 HS8145C，通过光猫管理员帐户（一般贴好在底面）登录后，访问192.168.1.1下的backupsettings.conf 搜索文件中password，使用工具解密 进入菜单“网络”选项，将“上网业务”3_INTERNET_B_VID_41连接方式改为“桥接”。 （如果不知道拨号上网的帐号密码，在网关后台一并记录，帐号明文，密码一般为 SHA256 加密。也可以咨询电信营业厅获取。） 以上为光猫部分。路由器部分设置拨号即可，一般是PPPoE方式，输入帐号密码，其他一切默认即可。此处省略。
@@ -84,9 +84,9 @@ VPN Server的话看个人需求，在群晖或者路由器上部署都可以。�
     </item>
     <item>
       <title>주다, 드리다, 주시다 &#43; 간접인용 명령문</title>
-      <link>https://fanrongbin.com/posts/give-ko/</link>
+      <link>https://fanrongbin.com/give-ko/</link>
       <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/give-ko/</guid>
+      <guid>https://fanrongbin.com/give-ko/</guid>
       <description>tl;dr 小结 # 주다, 드리다, 주시다 # 在间接引语命令文（Quoted Imperative）中的变化 # 주다, 주시다, 드리다 # A가/는 B에게/한테 N을 주다 # A给B某物 平辈之间 그는 생일 선물로 친구에게 책을 줬다.
 A가/는 C께 N을 드리다 # A给C某物 C为需要尊敬的人（下同），如长辈或陌生人，对“给长辈”使用敬语：께, 주다 -&amp;gt; 드리다，类似“献上”“奉上” 저는 생일 선물로 선생님께 책을 드렸다.
 C께서 A에게/한테 N을 주시다 # C给A某物 对C“长辈给”使用敬语：주다 -&amp;gt; 주시다，类似“赐予” 선생님께서 생일 선물로 저에게 책을 주셨다.
@@ -96,9 +96,9 @@ A主动： A给予B帮助：A 도와 줄까? B接受A的给予：B 응, 도와 �
     </item>
     <item>
       <title>2022 年终：生活的日子里，化身躺倒在沥青路上的一滩果酱</title>
-      <link>https://fanrongbin.com/posts/jam-on-road/</link>
+      <link>https://fanrongbin.com/jam-on-road/</link>
       <pubDate>Sat, 31 Dec 2022 01:00:00 +0800</pubDate>
-      <guid>https://fanrongbin.com/posts/jam-on-road/</guid>
+      <guid>https://fanrongbin.com/jam-on-road/</guid>
       <description>这一年我新得到，也复习了许多的「告诫」，它们来自每一天、每个生活的日子。好像是四年前一个夏天下午，彭美问我们为什么总是急匆匆地，赶着下课、赶着体锻、赶着回宿舍、赶着回教室。
 「因为要生活啊。」
 那时比现在要懂得什么叫生活：一边洗衣服一边哼歌，一边吃饭一边跟朋友闲聊，或者在教室小阳台写日记，在自习的间隙看会儿闲书。生活特别简单。
@@ -113,16 +113,16 @@ A主动： A给予B帮助：A 도와 줄까? B接受A的给予：B 응, 도와 �
     </item>
     <item>
       <title>Hybrid #3</title>
-      <link>https://fanrongbin.com/posts/hybrid-3/</link>
+      <link>https://fanrongbin.com/hybrid-3/</link>
       <pubDate>Sun, 04 Sep 2022 00:00:00 +0800</pubDate>
-      <guid>https://fanrongbin.com/posts/hybrid-3/</guid>
+      <guid>https://fanrongbin.com/hybrid-3/</guid>
       <description>NASA’s LRO Finds Lunar Pits Harbor Comfortable Temperatures © NASA/GSFC/Arizona State Univeristy © Felice Knol 摘录 # On sharing the magic of the creative process, w/ Serbest Salih, The Creative Independent # They see the world from different levels. It’s a very innocent perspective because it’s without editing—it is a free moment without any pressure. When they see any moment that inspires them, they capture it. Their work is about the celebration of childhood; about seeing the world through the eyes of children, not as adults.</description>
     </item>
     <item>
       <title>Hybrid #2</title>
-      <link>https://fanrongbin.com/posts/hybrid-2/</link>
+      <link>https://fanrongbin.com/hybrid-2/</link>
       <pubDate>Mon, 02 May 2022 00:00:00 +0800</pubDate>
-      <guid>https://fanrongbin.com/posts/hybrid-2/</guid>
+      <guid>https://fanrongbin.com/hybrid-2/</guid>
       <description>Ilulissat Icefjord Center. © Dorte Mandrup Arkitekter Essaouira, Marokko, 2019 © Lea Verholen 摘录 # 周保松：公共生活的意義 # ⋯⋯第三，承接以上所言，公共生活總意味著我們與他人在一起。我們在一起討論，一起行動，一起感受，也在一起改變。我們雖然有不同的身分，卻總希望在公共生活中彼此尊重，沒有人會因為出身、階級、性別、信仰等差異而受到歧視。公共生活很重要的一點，是看到和承認他人與你是平等的存在，享有同樣的權利。我們因此要學會聆聽、容忍和尊重不同的觀點。 公共性總是和開放、多元、民主這些價值聯結在一起。
 以上三點，都是規範性的，反映我們對公共生活的期望，而不是說現實已經如此。我們正是見到現實的不理想，才特別提出這些面向，希望我們一起努力創造條件去實現這樣的公共生活。
 ⋯⋯公共生活是有力量的，當人與人走在一起，當人開始獨立思考，體制就會恐慌，因為他們知道自己那套東西早已經不起理性檢視。現在的社會控制，就是要將人趕回私人領域，把人變成耽於消費的經濟動物，從而令我們忽略、甚至忘記人同時也是社會存有和政治存有。
@@ -133,18 +133,18 @@ The Verge with Matt Mullenweg, How WordPress and Tumblr are keeping the internet
     </item>
     <item>
       <title>Windows 11 的新字体：Segoe UI Variable</title>
-      <link>https://fanrongbin.com/posts/segoe-ui-variable/</link>
+      <link>https://fanrongbin.com/segoe-ui-variable/</link>
       <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/segoe-ui-variable/</guid>
+      <guid>https://fanrongbin.com/segoe-ui-variable/</guid>
       <description>微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 发布了 Segoe UI 的可变字体版本：Segoe UI Variable，在 Windows 11 正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。
 风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，看起来也更像 Product Sans 了。
 可以通过 Windows 的官方文档，或直接访问此链接下载 Segoe UI Variable。</description>
     </item>
     <item>
       <title>在 Big Sur 安装 PocketSphinx 时出现的问题</title>
-      <link>https://fanrongbin.com/posts/pocketsphinx-install-errors/</link>
+      <link>https://fanrongbin.com/pocketsphinx-install-errors/</link>
       <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/pocketsphinx-install-errors/</guid>
+      <guid>https://fanrongbin.com/pocketsphinx-install-errors/</guid>
       <description>确认安装了swig # 首先确认是否安装了swig，否则运行setup.py报错：
 error: command &amp;#39;swig&amp;#39; failed: No such file or directory 修改 OpenAL 的位置 # 似乎对于 Catalina 以及后续版本，都需要在setup.py中修改OpenAL的位置：
 修改第 235 行：
@@ -158,9 +158,9 @@ fatal error: &amp;#39;al.h&amp;#39; file not found #include &amp;lt;al.h&amp;gt;
     </item>
     <item>
       <title>Hybrid #1</title>
-      <link>https://fanrongbin.com/posts/hybrid-1/</link>
+      <link>https://fanrongbin.com/hybrid-1/</link>
       <pubDate>Sat, 05 Feb 2022 00:00:00 +0800</pubDate>
-      <guid>https://fanrongbin.com/posts/hybrid-1/</guid>
+      <guid>https://fanrongbin.com/hybrid-1/</guid>
       <description>莎玛丽丹百货公司 La Samaritaine © Simón García | arqfoto The Optimism of Possibility © Phillip Reed 摘录 # 林宏信：母語者心態 # 「母語者心態」是無法為他人帶來幫助的，然而這不容易避免，畢竟每個人都有這麼多差異，大家都可能是某方面的「母語者」，難以去理解他人所面臨到的困難。我想首先要察覺到自己與別人的不同，建立正確的認知，才能真正幫助到他人。
 自主、自然的学习往往需要前期有一定程度的投入，未起步的人即使对这些所谓的学习方式有所认知，也极大可能仍在原地踏步。每个人都可能在某个领域存在一定投入，是这个领域的「精通者」，或多或少在遇到来自新手的提问时感到有些疑惑，「为什么他就不能想到我所想到的呢？」，无法先站在对方的角度理解其全程经历的困难，这便是母语者心态了。除了察觉不同、建立认知外，我想还需要把对方的问题不断细化，才能一点一点重新来过。
 原文 →
@@ -171,17 +171,17 @@ Paul Graham, What You&amp;rsquo;ll Wish You&amp;rsquo;d Known # The only real di
     </item>
     <item>
       <title>糕点铺</title>
-      <link>https://fanrongbin.com/posts/bakery/</link>
+      <link>https://fanrongbin.com/bakery/</link>
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/bakery/</guid>
+      <guid>https://fanrongbin.com/bakery/</guid>
       <description>实习，住在团结湖，附近有一家糕点铺，晚上下班总要路过它。门口常常排着不长不短的队，几乎每次我都会装作心不在焉地往亮堂堂的橱窗一瞥，看看今天是绿豆酥饼卖得好，还是有新面包出炉。暗地里，我也决定找个时间也去排排队，买一盒试试看。今天是这个月最后一天班，坐上公交，想象那条刚认识没多久的路，先过路口，拐弯，直行，再走到对面，就能到糕点铺了。刷卡下车后我抬起头走路，可劲儿往对面瞧，却怎么也看不到那面墨绿色的招牌，一时以为是自己搞混了。怀疑的脚步越来越近，才发现关了灯、拉了铁门，赖以辨认的人群四散。今天已经是廿六了，后天回家，节后总要再过来。「所以总有机会吧」，这么想着，埋头往别处走了。
 过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己再回来买酥饼的希望过分渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要「把握住机会」和「活在当下」的道理戒律，如此这般活，由着很多事情错过。</description>
     </item>
     <item>
       <title>芯片制作工序 &amp; 半导体常见自动化软件模块梳理</title>
-      <link>https://fanrongbin.com/posts/semiconductor-procedure/</link>
+      <link>https://fanrongbin.com/semiconductor-procedure/</link>
       <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/semiconductor-procedure/</guid>
+      <guid>https://fanrongbin.com/semiconductor-procedure/</guid>
       <description>这篇图文能更好帮助理解。
 芯片制作工序 # 参考自泛林集团科普文章：上篇、中篇、下篇。英文对照请见文末。你也可以按此访问东京威力科创制作的工序介绍。
 制作工序可分为前、后两道。前道包括 1.晶圆加工 → 7.测试，后道包括 8.封装 及后期测试、其他组装、成品入库等。
@@ -192,17 +192,17 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
     </item>
     <item>
       <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
-      <link>https://fanrongbin.com/posts/cpp-template-friend/</link>
+      <link>https://fanrongbin.com/cpp-template-friend/</link>
       <pubDate>Fri, 31 Dec 2021 22:48:59 +0800</pubDate>
-      <guid>https://fanrongbin.com/posts/cpp-template-friend/</guid>
+      <guid>https://fanrongbin.com/cpp-template-friend/</guid>
       <description>在 C++ 中只能通过友元函数来重载流输入输出运算符 &amp;lt;&amp;lt; &amp;gt;&amp;gt;。由于搭配模板类的使用，编译器可能在对应编译友元函数时无法确定其为模版，需要事先声明。
 方法 1：提前声明并使用 &amp;lt;&amp;gt; 确认 # #include &amp;lt;iostream&amp;gt; using namespace std; //需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数 template &amp;lt;class A&amp;gt; class complex; template &amp;lt;class A&amp;gt; ostream &amp;amp; operator &amp;lt;&amp;lt; (ostream &amp;amp;newout, const complex&amp;lt;A&amp;gt; &amp;amp;m); template &amp;lt;class A&amp;gt; class complex{ //以复数类为例 private: A real, image; public: complex(A a, A b):real(a),image(b){ } //在运算符 &amp;lt;&amp;lt; 后加入 &amp;lt;&amp;gt; 以帮助编译器进一步确定该友元函数为模板函数 friend ostream &amp;amp; operator &amp;lt;&amp;lt; &amp;lt;&amp;gt;(ostream &amp;amp;newout, const complex&amp;lt;A&amp;gt; &amp;amp;m); }; template &amp;lt;class A&amp;gt; ostream &amp;amp; operator &amp;lt;&amp;lt; (ostream &amp;amp;newout, const complex&amp;lt;A&amp;gt; &amp;amp;m){ newout&amp;lt;&amp;lt;&amp;#34;(&amp;#34;&amp;lt;&amp;lt;m.</description>
     </item>
     <item>
       <title>2021 年终：昨天一直是今天，就像今天一直是明天</title>
-      <link>https://fanrongbin.com/posts/yesterday-is-today-is-tomorrow/</link>
+      <link>https://fanrongbin.com/yesterday-is-today-is-tomorrow/</link>
       <pubDate>Fri, 31 Dec 2021 20:51:59 +0800</pubDate>
-      <guid>https://fanrongbin.com/posts/yesterday-is-today-is-tomorrow/</guid>
+      <guid>https://fanrongbin.com/yesterday-is-today-is-tomorrow/</guid>
       <description>我想了很久，因为两年过得像一年。翻了翻手机相册，还是放弃了理顺今年「所作所为」的念头，意义不大。明天开始的新一年，似乎也将和过去的十二个月，在巨大的混凝土运送车里保持匀速搅拌，作为一大团不至于凝固的泥巴。
 已经对新冠脱敏，指不论是日增或新变种的消息，或者突然的封校封城，在生理和心理上不为所动。其实也不仅是疫情，整体上对很多事物都看开了很多，离开了很多过去被动或主动设下的困境，或者说从源头开始避免。现在常是这样的状态，在不相调和时，我先选择离开，停止消耗，这样才能更好地拥抱自己。
 但这种改变的确是懦弱的、畏怯的，是不能也不值得美化的。总不是束手无策的，必须承认。
@@ -217,9 +217,9 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
     </item>
     <item>
       <title>来自 Apple 的流媒体推广工具</title>
-      <link>https://fanrongbin.com/posts/apple-media-service-marketing/</link>
+      <link>https://fanrongbin.com/apple-media-service-marketing/</link>
       <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/apple-media-service-marketing/</guid>
+      <guid>https://fanrongbin.com/apple-media-service-marketing/</guid>
       <description>Apple 分别在今年 9 月、去年 11 月和去年 7 月发布了用于 iOS 应用、播客和 Apple Music 推广的工具，以帮助开发者迅速创建赏心悦目、符合 Apple 设计规范的推广用图和网页内嵌模块。现在还包括 Arcade、News 和 TV，已经是完全搭建起整个适用于 Apple 媒体服务的推广工具平台。你可以按此访问 Apple Services Marketing Tools。
 和订阅制播客一并发布的还有 Apple Podcasts for Creators，方便制作者查看收听数据等信息。
 这里给出几个嵌入实例：
@@ -232,17 +232,17 @@ Apple Store 推广用图：
     </item>
     <item>
       <title>C&#43;&#43; 中的拷贝构造函数：浅拷贝、深拷贝</title>
-      <link>https://fanrongbin.com/posts/cpp-copy-constructor/</link>
+      <link>https://fanrongbin.com/cpp-copy-constructor/</link>
       <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/cpp-copy-constructor/</guid>
+      <guid>https://fanrongbin.com/cpp-copy-constructor/</guid>
       <description>什么时候会调用拷贝构造函数 # 一个对象以值传递的方式传入函数体 一个对象以值传递的方式从函数返回 一个对象通过另一个对象以进行初始化 默认拷贝构造函数：浅拷贝 # 即：将被拷贝对象的数据成员的值一一赋值给新创建的对象
 如果数据成员中有指针成员 浅拷贝只是增加了一个指针指向已经存在的内存 则新对象的指针所指向的地址与被拷贝对象的指针所指向的地址相同 则析构 delete 对象时会重复 delete 两次同一个内存空间而出错 实例 # class Rect{ private: int *p; // 一指针成员 public: Rect(){ // 构造函数，p 指向堆中分配的一内存 p = new int(100); // new 动态分配 } ~Rect(){ // 析构函数，释放动态分配的内存 if(p != NULL){ delete p; // delete 释放 p 所指向的内存 } } }; int main(){ Rect rect1; Rect rect2(rect1); // 拷贝 rect1 来构造 rect2 // 也即： Rect rect2 = rect1; // 浅拷贝，将成员的值进行拷贝 rect2.</description>
     </item>
     <item>
       <title>使用 matplotlib 遇到的几个问题</title>
-      <link>https://fanrongbin.com/posts/november-matplotlib/</link>
+      <link>https://fanrongbin.com/november-matplotlib/</link>
       <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/november-matplotlib/</guid>
+      <guid>https://fanrongbin.com/november-matplotlib/</guid>
       <description>这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。
 import pandas as pd import matplotlib as plt 首先是解决字符串转日期型的问题。我希望将日期作为横轴，而且显示合理。
 使用 datetime。
@@ -255,9 +255,9 @@ plt.GridSpec(2, 1, wspace=.25, hspace=.25) ax1 = plt.subplot(grid[0,0:1]) ax1.</
     </item>
     <item>
       <title>eclipse, indices / indexes 与股价指数</title>
-      <link>https://fanrongbin.com/posts/eclipse-indices-indexes/</link>
+      <link>https://fanrongbin.com/eclipse-indices-indexes/</link>
       <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/eclipse-indices-indexes/</guid>
+      <guid>https://fanrongbin.com/eclipse-indices-indexes/</guid>
       <description>北京时间今天早上的一则新闻：
 Nov 1 (Reuters) - Wall Street&amp;rsquo;s main indexes notched record closing highs on Monday as Tesla shares surged and the energy sector gained while investors looked ahead to a major Federal Reserve meeting later in the week.
 The Dow Jones Industrial Average (.DJI) eclipsed 36,000 points for the first time ever during intraday trading, ending just shy of that level.
@@ -268,9 +268,9 @@ to become greater in amount or level than something else:</description>
     </item>
     <item>
       <title>Engadget 简体中文版关闭</title>
-      <link>https://fanrongbin.com/posts/engadget-cn-closed/</link>
+      <link>https://fanrongbin.com/engadget-cn-closed/</link>
       <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/engadget-cn-closed/</guid>
+      <guid>https://fanrongbin.com/engadget-cn-closed/</guid>
       <description>2021 年 11 月 1 日起，用户无法从中国大陆使用 Yahoo 的产品与服务。这并不影响 Yahoo 在全球其他地方的产品及服务。
 Yahoo 中国
 同时，Yahoo Weather（雅虎天气）宣布停止中国大陆服务，Engadget 简体中文版亦宣布停止更新。
@@ -282,9 +282,9 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
     </item>
     <item>
       <title>QDII 与 QDII 基金买卖</title>
-      <link>https://fanrongbin.com/posts/qdii/</link>
+      <link>https://fanrongbin.com/qdii/</link>
       <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/qdii/</guid>
+      <guid>https://fanrongbin.com/qdii/</guid>
       <description>本文最后一次更新于 2021 年 10 月 31 日。在政策等方面可能有所变化，请知悉。
 现中国大陆境内向境外进行合法投资（除境外直接投资 ODI、陆股通）的三种形式：
 而境外向境内进行投资，可分直接投资和间接投资。QFII 和 RQFII 属于外资直接投资境内证券二级市场。其包括股息及买卖价差等在内的各种资本所得，经审核后可转换为外汇汇出。实际为对外资有限度地开放境内的证券市场。
@@ -301,9 +301,9 @@ QDII 基金，即从事境外证券市场的股票、债券等有价证券业务
     </item>
     <item>
       <title>中间地带</title>
-      <link>https://fanrongbin.com/posts/middle-zone/</link>
+      <link>https://fanrongbin.com/middle-zone/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0800</pubDate>
-      <guid>https://fanrongbin.com/posts/middle-zone/</guid>
+      <guid>https://fanrongbin.com/middle-zone/</guid>
       <description>有一块 R 总试图从中用手抠出贝壳来的空地，过去那上面总是留下许多干脆的血迹和笑嘻嘻的淤青。空地的周围，或者再把填成它的海沙化开一点，就成了一片永远的中间地带。
 那天明明是台风天，R 却说：「我要去散步。」于是他真的先从海边出发，踩上两脚的沙子，然后往那片空地走去。R 过去在这片中间地带上走过的路，大都单纯而寡淡，今天他走的这段路，还没一半，就让他的小腿有些发麻。
 R 又拐了一个弯，故意错过一个路口。
@@ -319,9 +319,9 @@ R 知道今天已经快要来了，所以昨天就打包好了行李，给保温
     </item>
     <item>
       <title>建立健康的关系</title>
-      <link>https://fanrongbin.com/posts/healthy-relationship/</link>
+      <link>https://fanrongbin.com/healthy-relationship/</link>
       <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/healthy-relationship/</guid>
+      <guid>https://fanrongbin.com/healthy-relationship/</guid>
       <description>聊天，谈到河南暴雨，再到自疫情初至今仍层出不穷的呼救、求助，和朋友不约而同发问：「如果我或我身边的人也遇到这样的紧急事件，而依靠网络仍无法得到回应，该怎么办？」我有对城市生活多加警惕的意识吗？我知道发生山洪应该往哪里跑吗？我知道除了互联网之外的呼救途径吗？如果断水、断电、断网、断信号，该怎么办？
 我们都不觉得这是杞人忧天，也不觉得活得自在豁达与多加警惕之间有任何冲突。只是觉得生命不能被肆意对待。尤其是在这不过一年间，见证了这么多生命的离开。
 一开始 Apple 发布 Memoji 时，我在猜，是不是以后就真靠这么一个会动的头把「我」替代了？未来在动物森友会世界里归农，在 Gather Town 或者 Online Town 里上班。甚至想过《黑镜》里骑动感单车赚点数的生活只需要再优化一下，例如不要那么单一、再有创造力一些，会不会也是能接受的选项？
@@ -339,9 +339,9 @@ But I have more of a life than I once did. I have a wife, a busy career, aging p
     </item>
     <item>
       <title>Winslow Homer 温斯洛·霍默</title>
-      <link>https://fanrongbin.com/posts/winslow-homer/</link>
+      <link>https://fanrongbin.com/winslow-homer/</link>
       <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/winslow-homer/</guid>
+      <guid>https://fanrongbin.com/winslow-homer/</guid>
       <description>发布于 Matters.news。
 首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。
 Prout&amp;rsquo;s Neck, Breakers, 1883, Winslow Homer, Painting, watercolor on wove paper
@@ -356,9 +356,9 @@ Mounted Bugler,1862, Winslow Homer, Graphite, brush and gray wash on off-white p
     </item>
     <item>
       <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
-      <link>https://fanrongbin.com/posts/network-resetting-2021/</link>
+      <link>https://fanrongbin.com/network-resetting-2021/</link>
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/network-resetting-2021/</guid>
+      <guid>https://fanrongbin.com/network-resetting-2021/</guid>
       <description>在这篇新博文中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。
 原先的布置：
 之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。
@@ -373,9 +373,9 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
     </item>
     <item>
       <title>树莓派实现开机自动播放 RTSP 流视频</title>
-      <link>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
+      <link>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
       <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
+      <guid>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
       <description>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。
 获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式为：
 rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
@@ -390,27 +390,27 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     </item>
     <item>
       <title>《社会学的邀请》阅读笔记</title>
-      <link>https://fanrongbin.com/posts/the-big-picture-reading-notes/</link>
+      <link>https://fanrongbin.com/the-big-picture-reading-notes/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/the-big-picture-reading-notes/</guid>
+      <guid>https://fanrongbin.com/the-big-picture-reading-notes/</guid>
       <description>社会学的视角 # 社会学是对个体与社会之间的关系以及差异性后果的系统研究 # 我们自己的抉择受到我们所处的社会地位和我们有时能控制有时则不能控制的资源的限制。我们通过我们所做出的抉择、我们所做的事情去创造社会。与此同时，我们又是社会的产物，为我们周围的人所塑造。 社会学说明的是群体如何发挥作用，以及如何利用这些能够控制群体发挥作用的规律去努力驾驭它们。
 布迪厄
 我们所处的地位决定我们是谁 # 世代 世代群体——「年龄同期群」：生在差不多同一时代而具有相近年龄，并因之而具有类似经历的一群人 历史事件与每代人的标志性事件 年龄与社会性别 其他人口学因素 生活方式簇：根据人们的消费偏好、群体成员身份、品味、价值观和态度划分类群 韦斯（Michael Weiss, 2020）运用聚类研究绘制出 62 个类群 社会生活的象征意义：作为标志的都市传闻 # 在传闻中、周围的一切事物和象征符号中，发现我们对社会性别、性，社会变迁等事物的态度 大众文化有助于我们了解自己和所生活的世界 权力、特权和地位 # 重视社会地位的意义 我们是基于自己的社会地位而继承了优势和劣势 社会学的想象力 # 个体与社会的平衡问题 # 米尔斯（C. Wright Mills, 1959）提出了「社会学的想象力」：理解社会如何对我们的生活施加影响 换言之，社会学的想象力是分析作为个体的我们与塑造我们生活的更大的社会和历史力量之间关系的意愿和能力 我们是在我们的社会结构与文化（我们的「历史」）中行动的 韦伯（Max Weber, 1920）：「生活机会」 个体可能获得的成就是以其所处的社会地位与其所能得到的资源为基础的。 处在相似地位的人们会做出相似的选择。他们拥有相似资源，面对相似的障碍与机会 物质或经济资源：资产和土地 社会资源：社会网络与声望 文化资源：观点、信念与价值 社会问题：私人难题与公共难题 # 基于个体与社会之间的区别，米尔斯指出，我们应该区分个体作为个人所面对的障碍（私人难题）与处于相似地位的个体所共同面对的障碍（公共问题，社会问题） 作者对社会学的定义：社会学是对个体与社会之间的关系以及差异性后果的系统研究 # 系统研究 两个核心问题：方法和立场 方法：定量法、定性法 立场：但也并非两分 「科学的社会学」：观察者置身于其研究对象之外或之上，观察行动被假定为被动的，不会对所分析的事物产生任何影响 「改革社会学」：社会学家必须积极主动；寻求去讲述他者、受排挤者及弱势者的故事，并与他们并肩战斗防抗不平等 个体 社会学的基本层面：个体分析 社会学的研究内容：现实的人类建构 社会学家既强调我们选择行动的能力（能动性，个体有选择和行动的自由），又强调我们不可能任意地选择（受所处地位限制） 我们通常都会遵循「阻力最小路径」原则，其含义是为他人所接受和期望的行动和信仰 我们根据所能获得资源的种类，在了解各种可能结果的基础上做出选择 社会 三个密切相关的要素：结构、文化、互动 结构：关系与社会网络模式 社会系统：个体参与的比自身更大的事物 结构就是描述这一社会系统的方式 总体结构的主要要素称为「制度」 最普遍的五种制度：经济、家庭、教育、政府、宗教 群体、子群体以及我们所占据的地位是嵌入制度中的 文化：人为建构的与身外世界的关系 物质文化：实材 认知文化：语言、思想、信仰、知识、观念 规范文化：行为的规则 互动：结构地位内部文化资源的交换 关系网络必须由互动以激活 结构与能动性是通过互动同时产生的 社会必须通过行动的个体才得以确立、具体化，并被带入生活 差异性的后果 社会学不仅描述，也分析资源是如何分配的，并根据它们为个体所创造的机会与障碍讨论分配的结果 社会权力的分析 资源的控制 社会学的呈现方式 # 宏观分析法（自上而下的视角） 创立早期 倾向于认为能站在社会的外部去解释社会的作用以及如何决定个体的行动 孔德、马克思、涂尔干 孔德（August Comte）：实证主义 我们可以通过对某些主张进行经验检验，并证明其起作用的因果关系：在调查研究的基础上系统地解释社会关系的目标 对社会稳定与社会变迁基本规律的认识，能让社会学家设计出一个「美好社会」 微观分析法（从下至上的视角） 个体的日常生活经验 「社会并无行动，是人们在行动」 科学社会学 学术合法性 在客观、科学观察中寻找「社会规律」 改革社会学 更关注描述、分析与纠正社会不平等 简·亚当斯（Jane Addams） 马蒂诺：对「道德」（即我们认为什么是适当的）和「行为方式」（即我们实际所做的）的观察与分析，应成为社会研究的中心问题。社会批评应作为社会学的核心 社会学作为一种工具 # 帮助我们理解日常生活 帮助我们做出更有根据的选择 帮助我们深入事物的本质 帮助我们澄清、检验，计划未来 寻求答案：社会学的研究 # 做研究 在观察、询问、参与对方生活、从他们自身的角度中理解他们的经历 研究方法 演绎法：始于特定理论或解释，通过收集资料验证 归纳法：始于社会生活的详细描述，试图发展出一套理论和一般模式来解释 科学研究循环（Wallace, 1971） -&amp;gt;理论-&amp;gt;假设-&amp;gt;收集资料-&amp;gt;经验概括（概化） 收集资料 定量资料 可衡量的数字常用来验证结论 定性资料 完全融入研究对象自己提供的生活经验资料中、融入研究对象中 人类学家称为：民族志法或「深描」 调查法：提问、回答 参与观察法：实地研究 访谈法 实验法 二手资料分析法 概化 资料的信度和效度 确保研究结果具有概括性 随机抽样 深度个案研究 接受公开评论和批评 经典案例 # 涂尔干：论自杀 # 基本理论：社会塑造个人 当时的正统观点：决定人的行为要么是神，要么是生理机能，要么是个人的思想和精神 基本假设：社会整合影响个人选择 社会关联度或融入社会的程度影响着社会机会对个人的开放或封闭程度 假设可操作化 自杀作为衡量个人选择的指标 「自杀与个人所处的社会群体的整合度呈反向变化」 宗教归属作为衡量社会整合度的主要指标 了解各宗教派别的归属程度，就能预测自杀的可能性 预设：罗马天主教社会整合度比新教高 对传统信仰的坚持 严格的权威等级体系 《圣经》的解释权与教派的分裂 资料搜集以验证假设 区分资料收集区域以进行比较 概化 评价资料的有效性 即是有具有对整个研究群体的代表性，而不是仅仅为符合所研究的情况 涂尔干受到的质疑：主要使用群体资料分析技术（用群体资料对个体行动下结论） 也采用了基于个体层面的资料分析 观点上升至理论高度 理论的进一步完善 「一个人跟他人的关联和融合越少，他们就越不考虑其行动对他人的影响。在更个人主义的社会背景下，社会力量的控制力较弱，其对个人行动的影响（或积极或消极）非常有限。」 「当我们除了自己而无其他目标的话，不可避免地，我们的一切努力皆归于无意义」 理论形成 社会是一个实体，它外在与个体的存在，并拥有无异于物质世界的真实力量 确立了社会与个体之间的联系 反思 现实生活中，大多数问题都是多种因素的复合 杜波依斯：关于种族的研究 # 鼓励社会学家去倾听自然情景下被研究者的声音 个人构建了他们自己的世界——个人用他们自己的方式去解释外部世界或理解它 《费城黑人》 美国城市黑人的观念和行动，受到它们所处社会结构地位的影响 三个概念：肤色界限、二重性、面纱 肤色界限（《黑人的灵魂》）：黑人与白人之间有明显的区分 缺乏共享的智力生活、思想和观念的直接交流、情感上的相互同情 这种隔离使得美国黑人不能充分获得有价值的公共资源。美国白人也同样受到这一限制 二重性：强势群体（白人）可以忽略民族差异性而弱势群体（黑人）无法做到这一点 必须带上别人的眼光来看待自己 相互矛盾的生活经历的产生 面纱：微妙和无形地将两者隔开 人们可以忘记甚至注意不到这一隔离的存在 认识：相比社会强势群体，较少获得社会资源的弱势群体拥有不同的观念、行为和机会 社会学的大观念（涂尔干） # 早期社会学家：把握工业革命带来的转型 汉堡的奇迹 人类相互依赖的机器复杂性和看似自然性 我们的相互依存，意味着我们不需要依赖我们自己对生存的领悟 涂尔干关于社会整合的观点（现代社会中的社会整合） # 集体意识：一个群体共享的一套观念、信仰和价值 「一个社会的普通成员所共有的全部信仰和情感，它形成了一个具有自己生命的固定体系」 劳动分工：生产的专门化程度 社会团结：社会各部分相互联系和稳定的程度 「传统社会以机械团结为特征」：社会的凝聚力基于稳定性或共同性 类似的人以固有的方式做同样的事 「现代社会以有机团结为特征」：基于差异性和相互依赖性 不同的人做不同的事，但仍能意识到彼此的依赖 集体意识的弱化与高度的劳动分工有直接关系：共同经验的缺乏 人很难形成一种统一的信念或共享的价值观 必须通过外在法律形式来强化秩序 更强烈的个人主义的形成 涂尔干：只有通过相互依靠，才能使现代世界的生活变为可能 传统社会中的社会整合——门诺人 # 门诺人衡量技术进步对于社会、家庭以及信仰的利益得失，衡量共同体与进步、共同体与竞争、共同体与个人的轻重关系，不是选择被动接受或断然拒绝 门诺人减少劳动分工 我们意识到了这些问题吗？ 什么是进步？如何对什么是进步作价值判断？技术是否降低了我们可能做出的任何个人选择的价值？我们意识到我们所做选择的后果了吗？ 当代社会中的个人主义和相互依赖性 # 讽刺：我们因极端劳动分工而不能自给自足，但我们却有一种强烈的独立愿望。我们比以前更需要对方，但我们却认为我们可以不需要对方。 「社会资本」：相互依赖的社会网络，共享如何采取行动和相互间的信任，以帮助我们达成共同的目标 普特南（Robert Putnan, 1995）：美国社会资本的总量在近几十年来有明显下降。公共生活的许多方面，人们的参与率都有所下降。 可能的原因 地理位置重要性的下降 我们与工作场所之间关系的变化：我们更经常选择个人事业上的进步，相对于家庭和共同体纽带 妇女更广泛地参加有偿劳动 注意：社会资本中的关键术语不是性别，而是时间。由于经济原因，我们在工作上花更多时间精力，而不是在家庭或共同体上。 普特南：「赛博巴尔干化」 ？ 贝拉和他的同事（Robert Bella eg.</description>
     </item>
     <item>
       <title>雪</title>
-      <link>https://fanrongbin.com/posts/snow-2/</link>
+      <link>https://fanrongbin.com/snow-2/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/snow-2/</guid>
+      <guid>https://fanrongbin.com/snow-2/</guid>
       <description>见玻璃门是水淋淋的，以为要为没带伞而苦恼一阵子。推开门，却是我到北京之后下的第一场能看见的雪。急忙把帽子带好，外套拉链拉上，收拾收拾仪容仪表。
 而后我就迎着风往学校走回，它们也顺理成章地拍打在我的额头、眼镜、口罩和衣服上，没有重量，但也没有温度。
 踩下去是碎的，噼里啪啦响。</description>
     </item>
     <item>
       <title>荒野之狼，之后</title>
-      <link>https://fanrongbin.com/posts/after-der-steppenwolf/</link>
+      <link>https://fanrongbin.com/after-der-steppenwolf/</link>
       <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/after-der-steppenwolf/</guid>
+      <guid>https://fanrongbin.com/after-der-steppenwolf/</guid>
       <description>之前已经粗读过《德米安》与《悉达多》，无不感受到黑塞作品里存在着这个典型的「帮助拯救自我」者的构建，以及女性角色的丰富与特定象征。
 之后袭来的是一股诡异而平淡的安静，并不是释然，也形成不了稍微严肃的思考。读罢三本书，一个要义：充分体验生活，然后成为生活本身。
 《德米安》展现了一个自幼便得益于贤者的自我塑造过程，一个寻觅的过程。《悉达多》展现一个先慧者的纯粹磨练与归于一整。《荒野之狼》展现一个普遍的艺术家形象，一个敏感细腻的知识分子形象，展现形象内在的矛盾与矛盾的激化与矛盾的重构、破解。
@@ -423,9 +423,9 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     </item>
     <item>
       <title>《学会提问——批判性思维指南》阅读笔记</title>
-      <link>https://fanrongbin.com/posts/learn-to-ask-reading-notes/</link>
+      <link>https://fanrongbin.com/learn-to-ask-reading-notes/</link>
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/learn-to-ask-reading-notes/</guid>
+      <guid>https://fanrongbin.com/learn-to-ask-reading-notes/</guid>
       <description>《学会提问——批判性思维指南（第七版）》（Asking The Right Questions: A Guide to Critical Thinking (Seventh Edition)）
 [美] M. Nell Browne. Stuart M. Keeley 著
 赵玉芳 向晋辉 等译
@@ -442,9 +442,9 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     </item>
     <item>
       <title>首先是不要忘记</title>
-      <link>https://fanrongbin.com/posts/first-of-all-dont-forget/</link>
+      <link>https://fanrongbin.com/first-of-all-dont-forget/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/first-of-all-dont-forget/</guid>
+      <guid>https://fanrongbin.com/first-of-all-dont-forget/</guid>
       <description>在床上坐下，挺起腰板直起背，「清理公众号列表」的念头忽的一闪，立即抓住，生怕又让它溜了过去，成为日后躺在 Inbox 里安稳过日子的「有空再做」。
 于是有意无意的发现自己还关注着初中一位语文老师的公众号，但上次发文已经是六年前了，一段不长不短的轨迹，我走完初高中，但他却在中途永久地被揉成零散的碎片，散落在它生活过的痕迹和仍存留着记忆的人们身上。
 高中的杂乱的确把我欢笑着度过的初中记忆冲淡了很多，而且我没有拼命留下什么记忆的习惯。如果记忆还准确的话，应该是在初三时很短暂地上了几周他的语文培优课。他不高的个子，风趣又真挚的讲课方式，踏实的内容，以及有条理的阐述。培优课很快结束了，但他却被我列进了心里那一撮神圣得不可替代的人里。不过，我想他是不大记得有这样一个皮肤很黑，上课总爱托着下巴的小同学曾经很刻苦地在他课上做笔记。
@@ -454,9 +454,9 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     </item>
     <item>
       <title>在使用 Clipboard.js 中学一点 JavaScript</title>
-      <link>https://fanrongbin.com/posts/clipboard-js-errors/</link>
+      <link>https://fanrongbin.com/clipboard-js-errors/</link>
       <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/clipboard-js-errors/</guid>
+      <guid>https://fanrongbin.com/clipboard-js-errors/</guid>
       <description>在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。 我的组合是：Bootstrap（CSS 框架）+ Clipboard.js
 第一次报错：Uncaught TypeError: Illegal constructor # new Clipboard(&amp;#39;.btn&amp;#39;); 一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：
 new ClipboardJS(&amp;#39;.btn&amp;#39;); 问题解决。一开始所参照的中文教程比较久远，语句更新为 ClipboardJS。
@@ -468,16 +468,16 @@ var clipboard = new ClipboardJS(&amp;#39;.</description>
     </item>
     <item>
       <title>在一个普通的周日下午</title>
-      <link>https://fanrongbin.com/posts/an-ordinary-sunday-afternoon/</link>
+      <link>https://fanrongbin.com/an-ordinary-sunday-afternoon/</link>
       <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/an-ordinary-sunday-afternoon/</guid>
+      <guid>https://fanrongbin.com/an-ordinary-sunday-afternoon/</guid>
       <description>这一年发生了很多事情，改变了很多事情。具体的，很难记起，也难以叙述，像翻过通俗小说的书页，稀稀拉拉，有时会有兴致。 这一年是一个「暧昧的障碍」与「复杂的平缓」。和心智相抗衡的大半年，的的确确成为了我至今最为重要且深刻的一段日子。那种时有时无能够看清自己的机会，忽闪忽现的珍贵的情理反省，很「暧昧」，是「障碍」，是必须跨过、必须大步远离后再回头审视的障碍。它们也是复杂的，这一点我认为不需要在此赘述。它们是平缓的，成为暗流、暗涌，我仍然在波动中试着回归。 常说「新年新气象」，何以「新」？何以为「新」？不再立下那些期冀成为鼓励、最后大都忘记的目标与愿景，当真正开始反思日复一日、年复一年的新旧更迭于自己本身究竟意义何在，我只看到一条直行路。</description>
     </item>
     <item>
       <title>白色的空间</title>
-      <link>https://fanrongbin.com/posts/339/</link>
+      <link>https://fanrongbin.com/339/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0800</pubDate>
-      <guid>https://fanrongbin.com/posts/339/</guid>
+      <guid>https://fanrongbin.com/339/</guid>
       <description>Q 进入了一个白色的空间，四周各自延展开，像是一片漫长的雪地。中间是两张椅子，Q 认为这的确是要求他坐下的意思。他开始等待应该要出现的另一张椅子的主人。
 第一个从未知的距离走进的是七岁时候的 Q。Q 一开始有些匪夷所思，后来才觉得这好像不太现实。因此，他笃定自己正在做梦，于是稍微松懈下来，比起初等待的那段时间里更自在一些。
 Q 已经忘记七岁时自己平日会做些什么。上次搬家的时候，他虽然在可以整个拿出来的绿色抽屉的底层发现了过去的日记本，但是他试着不去打开它，并且放在那里。
@@ -502,9 +502,9 @@ Q 没有回答。
     </item>
     <item>
       <title>简化，回归</title>
-      <link>https://fanrongbin.com/posts/come-back-home/</link>
+      <link>https://fanrongbin.com/come-back-home/</link>
       <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/come-back-home/</guid>
+      <guid>https://fanrongbin.com/come-back-home/</guid>
       <description>由于常年固定使用某些邮箱地址注册网络帐户，以及邮件订阅设置的混乱，导致我不得不腾出一个下午的时间清理这些邮件，而这些邮件大多是注册帐户时发来的验证、社交网络的提醒、过去订阅的博客资讯和提醒你时常回看的应用广告。于是我把现在已经不常用的、能合并或替代的各类帐号注销，一是方便管理，二是删除自己曾经留下的网络痕迹。
 进行邮件清理后，我试着对自己的信息源进行管理。我把自己获取信息的途径分为三种：信息聚合类应用、订阅邮件和 RSS 订阅源。信息聚合类应用包括 Medium 、微信订阅号和知乎专栏这种长文聚合、Quora 的问答、端传媒等新闻资讯应用。在这之中比较难管理的是微信订阅号。有部分作者有个人博客的，我都将其收进 Reeder 用 RSS 订阅的形式阅读，但部分只有个人公众号的作者，需要进一步对内容作出筛选。使用邮件订阅或 RSS 的形式阅读，最大的优点是即时离线存档，不仅便于日后阅读和搜索归档，也避免了一些敏感文章被封锁的风险。
 由此出发，其实最终需要花费心思的是对信息源的筛选和整合。如何最大限度地利用网络信息帮助自己成长？
@@ -514,9 +514,9 @@ Inspiration phase: You find something that sparks an interest, and you start exp
     </item>
     <item>
       <title>Hexo &#43; GitHub Pages &#43; Cloudflare</title>
-      <link>https://fanrongbin.com/posts/hexo-github-pages-cloudflare/</link>
+      <link>https://fanrongbin.com/hexo-github-pages-cloudflare/</link>
       <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/hexo-github-pages-cloudflare/</guid>
+      <guid>https://fanrongbin.com/hexo-github-pages-cloudflare/</guid>
       <description>系统环境配置 # 安装 Node.js # Node.js 是一种 JavaScript 的运行环境，点击此处以下载。
 如何安装 Node.js 详见此文章。注意：Linux 上安装 Node.js 需要安装 Python 2.6 或 2.7 ，不建议安装 Python 3.0 以上版本。
 安装 Git # Git 是一个开源的分布式版本控制系统，帮助你合并多次改动并记录下来。点击此处以下载。
@@ -526,9 +526,9 @@ $ cd &amp;lt;folder&amp;gt; # 将 &amp;lt;folder&amp;gt; 改为你希望安装 H
     </item>
     <item>
       <title>《如何学习》阅读笔记：可行的学习方法总结</title>
-      <link>https://fanrongbin.com/posts/how-we-learn-reading-notes/</link>
+      <link>https://fanrongbin.com/how-we-learn-reading-notes/</link>
       <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/how-we-learn-reading-notes/</guid>
+      <guid>https://fanrongbin.com/how-we-learn-reading-notes/</guid>
       <description>增强记忆 # 环境对学习的影响 # 学习的时候我们是什么感觉、在哪里学、在什么地方学等，以及人的情绪状况、专注程度、直觉感触等，都会对考试成绩产生影响。
 ……大脑处于适度亢奋状态也好，非亢奋状态也罢，其储存进去的单词数量是大致相同的：总之都装进去了。但是，再后来提取记忆信息的时候，大脑一定以不同的方式重组了这些信息。 （注：大脑对信息的重组详见「潜入意识的深海」一文）那把大脑里面的「提取钥匙」需在大脑处于与之前的状态相同时才会显得最清晰，无论是嗑了药还是清醒着。不过，一旦考卷上直接标出了「类别」提示，那把钥匙就显得多余了，因为已经有一把「外来钥匙」放在了眼前。
 ……「环境背景的变换大大提高了记忆力」
@@ -556,9 +556,9 @@ $ cd &amp;lt;folder&amp;gt; # 将 &amp;lt;folder&amp;gt; 改为你希望安装 H
     </item>
     <item>
       <title>初探 Fluent Design System</title>
-      <link>https://fanrongbin.com/posts/glimpse-of-fluent-design/</link>
+      <link>https://fanrongbin.com/glimpse-of-fluent-design/</link>
       <pubDate>Sun, 14 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/glimpse-of-fluent-design/</guid>
+      <guid>https://fanrongbin.com/glimpse-of-fluent-design/</guid>
       <description>微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。
 宣传视频 # 官方网页 （无法在以中文为界面语言的 Chrome 正常浏览）| 优酷 (来自 Livesino)
 Light (光) # 利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。
@@ -569,9 +569,9 @@ Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户�
     </item>
     <item>
       <title>在 Web 设计中使用系统 UI 默认字体</title>
-      <link>https://fanrongbin.com/posts/using-default-fonts-in-web-design/</link>
+      <link>https://fanrongbin.com/using-default-fonts-in-web-design/</link>
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/using-default-fonts-in-web-design/</guid>
+      <guid>https://fanrongbin.com/using-default-fonts-in-web-design/</guid>
       <description>内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。
 使用默认 UI 字体可以通过两种方式实现：
 非常用方法 # .caption { font: caption; } 不是很常见，即使 CSS 文档里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。
@@ -580,9 +580,9 @@ Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户�
     </item>
     <item>
       <title>高效的设计批评是如何进行的</title>
-      <link>https://fanrongbin.com/posts/running-productive-design-critiques/</link>
+      <link>https://fanrongbin.com/running-productive-design-critiques/</link>
       <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/running-productive-design-critiques/</guid>
+      <guid>https://fanrongbin.com/running-productive-design-critiques/</guid>
       <description>注：本文译自 Running productive design critiques，作者是 Gustavs Cirults。
 设计不分对错，只分适合与否。
 要做到在正确的设计道路上持续产出，你需要做的是真正地去了解和探究目前需要处理的问题，并且通过某种渠道不断地获得用户反馈。获得用户反馈的渠道很多，例如使用聊天应用、发送邮件等等。但即使是设计师能够与用户进行直接对话，设计师也很容易会被自己本身的认知所限制，从而陷入设计的僵局。
@@ -596,9 +596,9 @@ Inviting colleagues Only 5% of new sign ups invite their colleagues in the first
     </item>
     <item>
       <title>在信息爆炸后的粉尘里「断舍离」</title>
-      <link>https://fanrongbin.com/posts/danshari/</link>
+      <link>https://fanrongbin.com/danshari/</link>
       <pubDate>Sun, 20 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/danshari/</guid>
+      <guid>https://fanrongbin.com/danshari/</guid>
       <description>结束一周的住校生活，班主任从抽屉里拿出手机一一交还，长按锁屏键，开机，别忘了把振动模式打上，因为随之而来的是一条又一条不断叠加的推送消息。
 我开始想：我通过互联网获取的，真的就是我想获取的吗？
 信息每天都在爆炸，无时无刻都在爆炸，我们通过搜索引擎、新媒体和社交媒体以及种种不同类型的网站获取信息，同时也被这些网站的态度和舆论导向如同傀儡一般支配着，即使我们或许永远不能摆脱这样的获取和支配，至少它还留有些许空间给我们进行余下的整理。

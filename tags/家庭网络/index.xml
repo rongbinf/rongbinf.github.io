@@ -10,9 +10,9 @@
     <atom:link href="https://fanrongbin.com/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>家庭组网 2022</title>
-      <link>https://fanrongbin.com/posts/network-resetting-2023/</link>
+      <link>https://fanrongbin.com/network-resetting-2023/</link>
       <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/network-resetting-2023/</guid>
+      <guid>https://fanrongbin.com/network-resetting-2023/</guid>
       <description> 网络布局没有变化 # 还是AC-68U拨号，并且直接接交换机给房间的网线接口。两个易展路由器负责Wi-Fi。
 关于光猫桥接、路由拨号和TP-LINK的易展功能，之前的一篇博文有介绍过，但因为目前博客在做调整，说不定那篇日后会删掉，一并重新在这里加进来：
 光猫桥接和路由拨号 # 运营商：电信 光猫型号：HS8145C 需要：超级管理员帐户 用户名telecomadmin 密码nE7jA%5m 根据型号不同，帐户密码存在差异，读者可自行搜索，或尝试获取base64加密后的密码，使用在线工具解密 对于 HS8145C，通过光猫管理员帐户（一般贴好在底面）登录后，访问192.168.1.1下的backupsettings.conf 搜索文件中password，使用工具解密 进入菜单“网络”选项，将“上网业务”3_INTERNET_B_VID_41连接方式改为“桥接”。 （如果不知道拨号上网的帐号密码，在网关后台一并记录，帐号明文，密码一般为 SHA256 加密。也可以咨询电信营业厅获取。） 以上为光猫部分。路由器部分设置拨号即可，一般是PPPoE方式，输入帐号密码，其他一切默认即可。此处省略。
@@ -31,9 +31,9 @@ VPN Server的话看个人需求，在群晖或者路由器上部署都可以。�
     </item>
     <item>
       <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
-      <link>https://fanrongbin.com/posts/network-resetting-2021/</link>
+      <link>https://fanrongbin.com/network-resetting-2021/</link>
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/network-resetting-2021/</guid>
+      <guid>https://fanrongbin.com/network-resetting-2021/</guid>
       <description>在这篇新博文中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。
 原先的布置：
 之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。
@@ -48,9 +48,9 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
     </item>
     <item>
       <title>树莓派实现开机自动播放 RTSP 流视频</title>
-      <link>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
+      <link>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
       <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
+      <guid>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
       <description>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。
 获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式为：
 rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream

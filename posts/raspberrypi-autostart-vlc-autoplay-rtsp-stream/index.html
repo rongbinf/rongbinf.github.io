@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description"
     content="家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。
-获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式为：
+获取摄像头 RTSP 流#对于海康威视和萤石摄像头，其 RTSP 流地址格式为：
 rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
 具体参数（如视频编码）自行调整。
 对于 TP-LINK 摄像头，其 RTSP 流地址格式：
 主码流为：rtsp://[username]:[password]@[ip]:[port]/stream1
 子码流将 stream1 替换为 stream2 即可。
 RTSP 端口 port 默认为 554，若为默认可不填写。
-使用 VLC 播放 # 有两种方法：
-1. 使用命令 # Run on the server: vlc -vvv input_stream --sout &#39;#rtp{dst=192.168.0.12,port=1234,sdp=rtsp://server.example.org:8080/test.sdp}&#39; Run on the client(s): vlc rtsp://server.example.org:8080/test.sdp 2. 创建 playlist 文件 # 新建一个播放列表，或直接使用播放 URL 打开 RTSP 流视频，确认能够正常播放。
+使用 VLC 播放#有两种方法：
+1. 使用命令#Run on the server: vlc -vvv input_stream --sout &#39;#rtp{dst=192.168.0.12,port=1234,sdp=rtsp://server.example.org:8080/test.sdp}&#39; Run on the client(s): vlc rtsp://server.example.org:8080/test.sdp 2. 创建 playlist 文件#新建一个播放列表，或直接使用播放 URL 打开 RTSP 流视频，确认能够正常播放。
 将播放列表另存为文件。这里建议另存为 .m3u 格式，因为打开 .xspf 格式文件会弹窗提示你选择 execute 或 open。 ">
 <link rel="canonical" href="https://fanrongbin.com/posts/raspberrypi-autostart-vlc-autoplay-rtsp-stream/" />
 

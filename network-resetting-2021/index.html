@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh" class="han-init"><head>
+<title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程 - Rongbin&#39;s Blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description"
+    content="在这篇新博文中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。
+原先的布置：
+之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。
+现在的布置：
+解决了几个痛点，记录一下：
+信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 &#43; 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯ 速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。 切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC&#43;AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。 丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。 电信网关拨号改桥接 # 所用网关型号为 HS8145C，通过超级管理员帐户进入后台，用户名为 telecomadmin。一说有通用密码 nE7jA%5m，我也是使用该密码进入的。
+如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 http://192.168.1.1/backupsettings.conf，下载 backupsettings.conf。搜索 password 获得经 base64 加密过的密码，可尝试使用在线工具解密，如 md5hashing。
+进入菜单「网络」选项，在上网业务中将 3_INTERNET_B_VID_41 项连接方式改为桥接即可。
+相应地，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。
+TP-LINK 易展有线回程 # 有几个需要注意的：
+易展路由器应在同一网段下，例如各自 IP 地址为 192.168.2.1、192.168.2.2。 接好网线。 先设置作为主路由的那台，例如我希望将 XDR5430 作为主路由，则它先接网线并上电配置。 步骤如下： ">
+<link rel="canonical" href="https://fanrongbin.com/network-resetting-2021/" />
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
+</noscript>
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte.min.css">
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte-options.min.css">
+
+<link rel="stylesheet" href="/css/hugo-tufte-override.css">
+
+
+
+<link rel="stylesheet" href="/han.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+</head>
+<body>
+
+
+<article id="main" class="han-init-context">
+  <section>
+<h1 class="content-title">
+
+<span class="go-back"><a href="/posts" class="go-back">←</a></span>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</h1><span class="content-meta">
+  <p class="date">08 Jan 2021</p>
+</span></section>
+
+  
+
+  <section><p>在<a href="https://fanrongbin.com/posts/network-resetting-2023">这篇新博文</a>中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。</p>
+<p>原先的布置：</p>
+<img src="https://i.loli.net/2021/01/07/SMAdbvcfqWgz65G.png" alt="Before" />
+<p>之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。</p>
+<p>现在的布置：</p>
+<img src="https://i.loli.net/2021/01/07/qdF25vrUSmKID1n.png" alt="After" />
+<p>解决了几个痛点，记录一下：</p>
+<ul>
+<li>信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 + 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯</li>
+<li>速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。</li>
+<li>切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC+AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。</li>
+<li>丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。</li>
+</ul>
+<h2 id="电信网关拨号改桥接">
+电信网关拨号改桥接
+<a href="#%e7%94%b5%e4%bf%a1%e7%bd%91%e5%85%b3%e6%8b%a8%e5%8f%b7%e6%94%b9%e6%a1%a5%e6%8e%a5" class="heading-anchor">#</a>
+</h2>
+<p>所用网关型号为 HS8145C，通过<strong>超级管理员帐户</strong>进入后台，用户名为 <code>telecomadmin</code>。一说有通用密码 <code>nE7jA%5m</code>，我也是使用该密码进入的。</p>
+<p>如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 <code>http://192.168.1.1/backupsettings.conf</code>，下载 <code>backupsettings.conf</code>。搜索 <code>password</code> 获得经 base64 加密过的密码，可尝试使用在线工具解密，如 <a href="https://md5hashing.net/">md5hashing</a>。</p>
+<p>进入菜单「网络」选项，在上网业务中将 <code>3_INTERNET_B_VID_41</code> 项连接方式改为<strong>桥接</strong>即可。</p>
+<p>相应地，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。</p>
+<h2 id="tp-link-易展有线回程">
+TP-LINK 易展有线回程
+<a href="#tp-link-%e6%98%93%e5%b1%95%e6%9c%89%e7%ba%bf%e5%9b%9e%e7%a8%8b" class="heading-anchor">#</a>
+</h2>
+<p>有几个需要注意的：</p>
+<ol>
+<li>易展路由器应在同一网段下，例如各自 IP 地址为 <code>192.168.2.1</code>、<code>192.168.2.2</code>。</li>
+<li>接好网线。</li>
+<li>先设置作为<strong>主路由</strong>的那台，例如我希望将 XDR5430 作为主路由，则它先接网线并上电配置。</li>
+</ol>
+<p>步骤如下：</p>
+<ol>
+<li>（如果之前使用无线回程，需要对所有易展路由器恢复出厂设置。）</li>
+<li>主路由上电，配置上网，关闭 DHCP。</li>
+<li>确认主路由是否正常上网。此时主路由可能提示 WAN 口未正常连接。但只要能上网就行。</li>
+<li>将其他易展路由器接网线上电，按易展按钮进行易展。</li>
+</ol>
+<img src="https://i.loli.net/2021/01/08/kbE396iZHuDUpxv.jpg" alt="TP-LINK App 网络拓扑图" style="zoom: 33%;" />
+<p>右上角显示连接网线的 icon 即实现有线回程。</p>
+</section>
+</article>
+
+
+<script async src="https://hypothes.is/embed.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script src="/han.min.js"></script>
+
+<section><footer class="page-footer">
+<hr />
+
+<div class="previous-post" style="display:inline-block;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/?ref=footer">« 树莓派实现开机自动播放 RTSP 流视频</a>
+  
+</div>
+
+<div class="next-post", style="display:inline-block;float:right;">
+  
+  <a class="link-reverse" href="https://fanrongbin.com/winslow-homer/?ref=footer">Winslow Homer 温斯洛·霍默 »</a>
+  
+</div>
+
+<ul class="page-footer-menu">
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</ul>
+
+
+<p>
+  <a href="https://gohugo.io">hugo</a>,  
+  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
+</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="mailto:r_fan@outlook.com">Send me an email</a>.
+</p>
+<p style="margin-top:1.2rem;color:#555;">&copy; 2023 Rongbin FAN</p>
+
+
+
+
+</footer>
+</section>
+<section><nav class="menu">
+    <ul>
+    
+        <li><a href="/posts"><i class='fas fa-book fa-lg'></i> 归档</a></li>
+    
+        <li><a href="/tags"><i class='fas fa-tags fa-lg'></i> 标签</a></li>
+    
+        <li><a href="/"><i class='fas fa-info-circle  fa-lg'></i> 关于</a></li>
+    
+    </ul>
+</nav>
+</section>
+
+</html>
