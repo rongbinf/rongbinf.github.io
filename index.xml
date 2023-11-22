@@ -5,9 +5,21 @@
     <link>https://fanrongbin.com/</link>
     <description>Recent content on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Sat, 18 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <language>zh-Hans</language>
+    <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>斜交策略 Oblique Strategies</title>
+      <link>https://fanrongbin.com/oblique-strategies/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/oblique-strategies/</guid>
+      <description>被我们落下的想象力，以什么挽留他？
+Brian Eno和Peter Schmidt设计了超过一百个prompt，写在卡片上，来帮你打破寻找创意的障碍。这里有英文版本的完整列表。
+这组卡片叫Oblique Strategies，有人翻译成迂回策略或间接策略。我喜欢叫它「斜交策略」。因素分析中，你会遇到「正交旋转」与「斜交旋转」，激发创造力，就像从这些卡片中寻找能联动我们潜意识的相关因素。
+当创作的「工作」属性变强、时间压力变重时，Eno和Schmidt意识到这会让他们偏离思考和创作的本质。于是他们都写下一些要旨，帮助保持思维活跃，提醒自己不要忘记那些能从侧面推进的有趣方法，整合成了这组卡片。
+1980年初，Eno在接受Charles Amirkhanian采访时说道：
+The Oblique Strategies evolved from me being in a number of working situations when the panic of the situation - particularly in studios - tended to make me quickly forget that there were others ways of working and that there were tangential ways of attacking problems that were in many senses more interesting than the direct head-on approach. If you&amp;rsquo;re in a panic, you tend to take the head-on approach because it seems to be the one that&amp;rsquo;s going to yield the best results Of course, that often isn&amp;rsquo;t the case - it&amp;rsquo;s just the most obvious and - apparently - reliable method.</description>
+    </item>
     <item>
       <title>使用 Github Actions 自动部署 Hugo</title>
       <link>https://fanrongbin.com/github-actions-deploy-hugo/</link>
@@ -609,6 +621,14 @@ Inviting colleagues Only 5% of new sign ups invite their colleagues in the first
 当新的事物出现在我们面前时，我们总是想办法排斥。经过了这段「磨合期」，又像是热恋中的情侣一样久久不能分离。别人偶然间的一句话，让你和恋人果断分了手。最后又开始思考旁人是一家之言，即使不无道理，但却不一定需要去采纳。一来二去，终于明白自己是一个纠结的矛盾体，能做的只有一次又一次反思，提出新的解决方案，修修补补。
 信息已经在爆炸，只要不被粉尘淹没。
 我们所反对的碎片化阅读，指的是浮浅和无视语境的阅读。这和长短无关，和读者有没有整体性的视角有关。- 李如一</description>
+    </item>
+    <item>
+      <title>友链</title>
+      <link>https://fanrongbin.com/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/links/</guid>
+      <description>你找到了这个页面，欢迎与我交换友链！
+请发邮件。</description>
     </item>
   </channel>
 </rss>
