@@ -6,14 +6,12 @@
     <description>Recent content in JavaScript on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <managingEditor>r_fan@outlook.com (Rongbin FAN)</managingEditor>
-    <webMaster>r_fan@outlook.com (Rongbin FAN)</webMaster>
     <lastBuildDate>Thu, 06 Feb 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在使用 Clipboard.js 中学一点 JavaScript</title>
       <link>https://fanrongbin.com/clipboard-js-errors/</link>
-      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/clipboard-js-errors/</guid>
       <description>在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。 我的组合是：Bootstrap（CSS 框架）+ Clipboard.js
 第一次报错：Uncaught TypeError: Illegal constructor # new Clipboard(&amp;#39;.btn&amp;#39;); 一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：
