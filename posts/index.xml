@@ -6,14 +6,14 @@
     <description>Recent content in Posts on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <managingEditor>r_fan@outlook.com</managingEditor>
-    <webMaster>r_fan@outlook.com</webMaster>
+    <managingEditor>r_fan@outlook.com (Rongbin FAN)</managingEditor>
+    <webMaster>r_fan@outlook.com (Rongbin FAN)</webMaster>
     <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>斜交策略 Oblique Strategies</title>
       <link>https://fanrongbin.com/oblique-strategies/</link>
-      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/oblique-strategies/</guid>
       <description>被我们落下的想象力，以什么挽留他？
 Brian Eno和Peter Schmidt设计了超过一百个prompt，写在卡片上，来帮你打破寻找创意的障碍。这里有英文版本的完整列表。
@@ -25,7 +25,7 @@ The Oblique Strategies evolved from me being in a number of working situations w
     <item>
       <title>使用 Github Actions 自动部署 Hugo</title>
       <link>https://fanrongbin.com/github-actions-deploy-hugo/</link>
-      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/github-actions-deploy-hugo/</guid>
       <description>回应痛点：
 写作所用的设备不带环境，没有Git，必须换回原来用的设备hugo生成网页并部署 只想好好写东西，不想再管我的终端/命令行 本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经push到了username/username.github.io这个仓库。
@@ -43,7 +43,7 @@ The Oblique Strategies evolved from me being in a number of working situations w
     <item>
       <title>在 Hugo 引入汉字标准格式</title>
       <link>https://fanrongbin.com/hugo-hanzi-pro/</link>
-      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/hugo-hanzi-pro/</guid>
       <description>「汉字标准格式」 是一套支援各种印刷效果的 Sass + JavaScript 排版框架 ，包含相邻文字装饰线跳脱 、汉ㄏㄢˋ字ㄗˋhànzì标ㄅㄧㄠ音ㄧㄣbiāoyīn 、着重号 、标点符号修正 、中文四大印刷体 、汉字－西文 mixed 间隙 、 「标点 『挤压』 与 『悬挂』 」 、章节边界调整……
 汉字标准格式
@@ -58,14 +58,14 @@ The Oblique Strategies evolved from me being in a number of working situations w
     <item>
       <title>Hybrid #4</title>
       <link>https://fanrongbin.com/hybrid-4/</link>
-      <pubDate>Thu, 16 Feb 2023 00:00:00 +0800</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Thu, 16 Feb 2023 00:00:00 +0800</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/hybrid-4/</guid>
       <description>SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine 摘录 # It took me a long time to figure out why founders don&amp;rsquo;t listen. At first I thought it was mere stubbornness. That&amp;rsquo;s part of the reason, but another and probably more important reason is that so much about startups is counterintuitive. And when you tell someone something counterintuitive, what it sounds to them is wrong. So the reason founders don&amp;rsquo;t listen to us is that they don&amp;rsquo;t believe us.</description>
     </item>
     <item>
       <title>높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理</title>
       <link>https://fanrongbin.com/honorific-ko/</link>
-      <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/honorific-ko/</guid>
       <description>tl;dr 小结 # 说的是谁？：主体敬语法（对其人的尊敬 + 对其动作的尊敬） 句中是否涉及第三人/各种所属物？：客体敬语法 对谁说？：对听者的尊敬与否：相对敬语法 主语和听者之间谁更“大”？：压尊法 （主体如果是尊敬的人的所属事物：事物尊称） “该尊敬谁？”“什么场合？”等因人而异的话题，本文不做过多讨论。
 对句中主体/主语：주체(主體) 높임법 # 主要有三：
@@ -78,7 +78,7 @@ The Oblique Strategies evolved from me being in a number of working situations w
     <item>
       <title>家庭组网 2022</title>
       <link>https://fanrongbin.com/network-resetting-2023/</link>
-      <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/network-resetting-2023/</guid>
       <description> 网络布局没有变化 # 还是AC-68U拨号，并且直接接交换机给房间的网线接口。两个易展路由器负责Wi-Fi。
 关于光猫桥接、路由拨号和TP-LINK的易展功能，之前的一篇博文有介绍过，但因为目前博客在做调整，说不定那篇日后会删掉，一并重新在这里加进来：
@@ -99,7 +99,7 @@ VPN Server的话看个人需求，在群晖或者路由器上部署都可以。�
     <item>
       <title>주다, 드리다, 주시다 &#43; 간접인용 명령문</title>
       <link>https://fanrongbin.com/give-ko/</link>
-      <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/give-ko/</guid>
       <description>tl;dr 小结 # 주다, 드리다, 주시다 # 在间接引语命令文（Quoted Imperative）中的变化 # 주다, 주시다, 드리다 # A가/는 B에게/한테 N을 주다 # A给B某物 平辈之间 그는 생일 선물로 친구에게 책을 줬다.
 A가/는 C께 N을 드리다 # A给C某物 C为需要尊敬的人（下同），如长辈或陌生人，对“给长辈”使用敬语：께, 주다 -&amp;gt; 드리다，类似“献上”“奉上” 저는 생일 선물로 선생님께 책을 드렸다.
@@ -111,7 +111,7 @@ A主动： A给予B帮助：A 도와 줄까? B接受A的给予：B 응, 도와 �
     <item>
       <title>2022 年终：生活的日子里，化身躺倒在沥青路上的一滩果酱</title>
       <link>https://fanrongbin.com/jam-on-road/</link>
-      <pubDate>Sat, 31 Dec 2022 01:00:00 +0800</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sat, 31 Dec 2022 01:00:00 +0800</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/jam-on-road/</guid>
       <description>这一年我新得到，也复习了许多的「告诫」，它们来自每一天、每个生活的日子。好像是四年前一个夏天下午，彭美问我们为什么总是急匆匆地，赶着下课、赶着体锻、赶着回宿舍、赶着回教室。
 「因为要生活啊。」
@@ -128,14 +128,14 @@ A主动： A给予B帮助：A 도와 줄까? B接受A的给予：B 응, 도와 �
     <item>
       <title>Hybrid #3</title>
       <link>https://fanrongbin.com/hybrid-3/</link>
-      <pubDate>Sun, 04 Sep 2022 00:00:00 +0800</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sun, 04 Sep 2022 00:00:00 +0800</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/hybrid-3/</guid>
       <description>NASA’s LRO Finds Lunar Pits Harbor Comfortable Temperatures © NASA/GSFC/Arizona State Univeristy © Felice Knol 摘录 # On sharing the magic of the creative process, w/ Serbest Salih, The Creative Independent # They see the world from different levels. It’s a very innocent perspective because it’s without editing—it is a free moment without any pressure. When they see any moment that inspires them, they capture it. Their work is about the celebration of childhood; about seeing the world through the eyes of children, not as adults.</description>
     </item>
     <item>
       <title>Hybrid #2</title>
       <link>https://fanrongbin.com/hybrid-2/</link>
-      <pubDate>Mon, 02 May 2022 00:00:00 +0800</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0800</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/hybrid-2/</guid>
       <description>Ilulissat Icefjord Center. © Dorte Mandrup Arkitekter Essaouira, Marokko, 2019 © Lea Verholen 摘录 # 周保松：公共生活的意義 # ⋯⋯第三，承接以上所言，公共生活總意味著我們與他人在一起。我們在一起討論，一起行動，一起感受，也在一起改變。我們雖然有不同的身分，卻總希望在公共生活中彼此尊重，沒有人會因為出身、階級、性別、信仰等差異而受到歧視。公共生活很重要的一點，是看到和承認他人與你是平等的存在，享有同樣的權利。我們因此要學會聆聽、容忍和尊重不同的觀點。 公共性總是和開放、多元、民主這些價值聯結在一起。
 以上三點，都是規範性的，反映我們對公共生活的期望，而不是說現實已經如此。我們正是見到現實的不理想，才特別提出這些面向，希望我們一起努力創造條件去實現這樣的公共生活。
@@ -148,7 +148,7 @@ The Verge with Matt Mullenweg, How WordPress and Tumblr are keeping the internet
     <item>
       <title>Windows 11 的新字体：Segoe UI Variable</title>
       <link>https://fanrongbin.com/segoe-ui-variable/</link>
-      <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/segoe-ui-variable/</guid>
       <description>微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 发布了 Segoe UI 的可变字体版本：Segoe UI Variable，在 Windows 11 正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。
 风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，看起来也更像 Product Sans 了。
@@ -157,7 +157,7 @@ The Verge with Matt Mullenweg, How WordPress and Tumblr are keeping the internet
     <item>
       <title>在 Big Sur 安装 PocketSphinx 时出现的问题</title>
       <link>https://fanrongbin.com/pocketsphinx-install-errors/</link>
-      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/pocketsphinx-install-errors/</guid>
       <description>确认安装了swig # 首先确认是否安装了swig，否则运行setup.py报错：
 error: command &amp;#39;swig&amp;#39; failed: No such file or directory 修改 OpenAL 的位置 # 似乎对于 Catalina 以及后续版本，都需要在setup.py中修改OpenAL的位置：
@@ -173,7 +173,7 @@ fatal error: &amp;#39;al.h&amp;#39; file not found #include &amp;lt;al.h&amp;gt;
     <item>
       <title>Hybrid #1</title>
       <link>https://fanrongbin.com/hybrid-1/</link>
-      <pubDate>Sat, 05 Feb 2022 00:00:00 +0800</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0800</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/hybrid-1/</guid>
       <description>莎玛丽丹百货公司 La Samaritaine © Simón García | arqfoto The Optimism of Possibility © Phillip Reed 摘录 # 林宏信：母語者心態 # 「母語者心態」是無法為他人帶來幫助的，然而這不容易避免，畢竟每個人都有這麼多差異，大家都可能是某方面的「母語者」，難以去理解他人所面臨到的困難。我想首先要察覺到自己與別人的不同，建立正確的認知，才能真正幫助到他人。
 自主、自然的学习往往需要前期有一定程度的投入，未起步的人即使对这些所谓的学习方式有所认知，也极大可能仍在原地踏步。每个人都可能在某个领域存在一定投入，是这个领域的「精通者」，或多或少在遇到来自新手的提问时感到有些疑惑，「为什么他就不能想到我所想到的呢？」，无法先站在对方的角度理解其全程经历的困难，这便是母语者心态了。除了察觉不同、建立认知外，我想还需要把对方的问题不断细化，才能一点一点重新来过。
@@ -186,7 +186,7 @@ Paul Graham, What You&amp;rsquo;ll Wish You&amp;rsquo;d Known # The only real di
     <item>
       <title>糕点铺</title>
       <link>https://fanrongbin.com/bakery/</link>
-      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/bakery/</guid>
       <description>实习，住在团结湖，附近有一家糕点铺，晚上下班总要路过它。门口常常排着不长不短的队，几乎每次我都会装作心不在焉地往亮堂堂的橱窗一瞥，看看今天是绿豆酥饼卖得好，还是有新面包出炉。暗地里，我也决定找个时间也去排排队，买一盒试试看。今天是这个月最后一天班，坐上公交，想象那条刚认识没多久的路，先过路口，拐弯，直行，再走到对面，就能到糕点铺了。刷卡下车后我抬起头走路，可劲儿往对面瞧，却怎么也看不到那面墨绿色的招牌，一时以为是自己搞混了。怀疑的脚步越来越近，才发现关了灯、拉了铁门，赖以辨认的人群四散。今天已经是廿六了，后天回家，节后总要再过来。「所以总有机会吧」，这么想着，埋头往别处走了。
 过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己再回来买酥饼的希望过分渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要「把握住机会」和「活在当下」的道理戒律，如此这般活，由着很多事情错过。</description>
@@ -194,7 +194,7 @@ Paul Graham, What You&amp;rsquo;ll Wish You&amp;rsquo;d Known # The only real di
     <item>
       <title>芯片制作工序 &amp; 半导体常见自动化软件模块梳理</title>
       <link>https://fanrongbin.com/semiconductor-procedure/</link>
-      <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/semiconductor-procedure/</guid>
       <description>这篇图文能更好帮助理解。
 芯片制作工序 # 参考自泛林集团科普文章：上篇、中篇、下篇。英文对照请见文末。你也可以按此访问东京威力科创制作的工序介绍。
@@ -207,7 +207,7 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
     <item>
       <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
       <link>https://fanrongbin.com/cpp-template-friend/</link>
-      <pubDate>Fri, 31 Dec 2021 22:48:59 +0800</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 31 Dec 2021 22:48:59 +0800</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/cpp-template-friend/</guid>
       <description>在 C++ 中只能通过友元函数来重载流输入输出运算符 &amp;lt;&amp;lt; &amp;gt;&amp;gt;。由于搭配模板类的使用，编译器可能在对应编译友元函数时无法确定其为模版，需要事先声明。
 方法 1：提前声明并使用 &amp;lt;&amp;gt; 确认 # #include &amp;lt;iostream&amp;gt; using namespace std; //需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数 template &amp;lt;class A&amp;gt; class complex; template &amp;lt;class A&amp;gt; ostream &amp;amp; operator &amp;lt;&amp;lt; (ostream &amp;amp;newout, const complex&amp;lt;A&amp;gt; &amp;amp;m); template &amp;lt;class A&amp;gt; class complex{ //以复数类为例 private: A real, image; public: complex(A a, A b):real(a),image(b){ } //在运算符 &amp;lt;&amp;lt; 后加入 &amp;lt;&amp;gt; 以帮助编译器进一步确定该友元函数为模板函数 friend ostream &amp;amp; operator &amp;lt;&amp;lt; &amp;lt;&amp;gt;(ostream &amp;amp;newout, const complex&amp;lt;A&amp;gt; &amp;amp;m); }; template &amp;lt;class A&amp;gt; ostream &amp;amp; operator &amp;lt;&amp;lt; (ostream &amp;amp;newout, const complex&amp;lt;A&amp;gt; &amp;amp;m){ newout&amp;lt;&amp;lt;&amp;#34;(&amp;#34;&amp;lt;&amp;lt;m.</description>
@@ -215,7 +215,7 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
     <item>
       <title>2021 年终：昨天一直是今天，就像今天一直是明天</title>
       <link>https://fanrongbin.com/yesterday-is-today-is-tomorrow/</link>
-      <pubDate>Fri, 31 Dec 2021 20:51:59 +0800</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 31 Dec 2021 20:51:59 +0800</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/yesterday-is-today-is-tomorrow/</guid>
       <description>我想了很久，因为两年过得像一年。翻了翻手机相册，还是放弃了理顺今年「所作所为」的念头，意义不大。明天开始的新一年，似乎也将和过去的十二个月，在巨大的混凝土运送车里保持匀速搅拌，作为一大团不至于凝固的泥巴。
 已经对新冠脱敏，指不论是日增或新变种的消息，或者突然的封校封城，在生理和心理上不为所动。其实也不仅是疫情，整体上对很多事物都看开了很多，离开了很多过去被动或主动设下的困境，或者说从源头开始避免。现在常是这样的状态，在不相调和时，我先选择离开，停止消耗，这样才能更好地拥抱自己。
@@ -232,7 +232,7 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
     <item>
       <title>来自 Apple 的流媒体推广工具</title>
       <link>https://fanrongbin.com/apple-media-service-marketing/</link>
-      <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/apple-media-service-marketing/</guid>
       <description>Apple 分别在今年 9 月、去年 11 月和去年 7 月发布了用于 iOS 应用、播客和 Apple Music 推广的工具，以帮助开发者迅速创建赏心悦目、符合 Apple 设计规范的推广用图和网页内嵌模块。现在还包括 Arcade、News 和 TV，已经是完全搭建起整个适用于 Apple 媒体服务的推广工具平台。你可以按此访问 Apple Services Marketing Tools。
 和订阅制播客一并发布的还有 Apple Podcasts for Creators，方便制作者查看收听数据等信息。
@@ -247,7 +247,7 @@ Apple Store 推广用图：
     <item>
       <title>C&#43;&#43; 中的拷贝构造函数：浅拷贝、深拷贝</title>
       <link>https://fanrongbin.com/cpp-copy-constructor/</link>
-      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/cpp-copy-constructor/</guid>
       <description>什么时候会调用拷贝构造函数 # 一个对象以值传递的方式传入函数体 一个对象以值传递的方式从函数返回 一个对象通过另一个对象以进行初始化 默认拷贝构造函数：浅拷贝 # 即：将被拷贝对象的数据成员的值一一赋值给新创建的对象
 如果数据成员中有指针成员 浅拷贝只是增加了一个指针指向已经存在的内存 则新对象的指针所指向的地址与被拷贝对象的指针所指向的地址相同 则析构 delete 对象时会重复 delete 两次同一个内存空间而出错 实例 # class Rect{ private: int *p; // 一指针成员 public: Rect(){ // 构造函数，p 指向堆中分配的一内存 p = new int(100); // new 动态分配 } ~Rect(){ // 析构函数，释放动态分配的内存 if(p != NULL){ delete p; // delete 释放 p 所指向的内存 } } }; int main(){ Rect rect1; Rect rect2(rect1); // 拷贝 rect1 来构造 rect2 // 也即： Rect rect2 = rect1; // 浅拷贝，将成员的值进行拷贝 rect2.</description>
@@ -255,7 +255,7 @@ Apple Store 推广用图：
     <item>
       <title>使用 matplotlib 遇到的几个问题</title>
       <link>https://fanrongbin.com/november-matplotlib/</link>
-      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/november-matplotlib/</guid>
       <description>这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。
 import pandas as pd import matplotlib as plt 首先是解决字符串转日期型的问题。我希望将日期作为横轴，而且显示合理。
@@ -270,7 +270,7 @@ plt.GridSpec(2, 1, wspace=.25, hspace=.25) ax1 = plt.subplot(grid[0,0:1]) ax1.</
     <item>
       <title>eclipse, indices / indexes 与股价指数</title>
       <link>https://fanrongbin.com/eclipse-indices-indexes/</link>
-      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/eclipse-indices-indexes/</guid>
       <description>北京时间今天早上的一则新闻：
 Nov 1 (Reuters) - Wall Street&amp;rsquo;s main indexes notched record closing highs on Monday as Tesla shares surged and the energy sector gained while investors looked ahead to a major Federal Reserve meeting later in the week.
@@ -283,7 +283,7 @@ to become greater in amount or level than something else:</description>
     <item>
       <title>Engadget 简体中文版关闭</title>
       <link>https://fanrongbin.com/engadget-cn-closed/</link>
-      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/engadget-cn-closed/</guid>
       <description>2021 年 11 月 1 日起，用户无法从中国大陆使用 Yahoo 的产品与服务。这并不影响 Yahoo 在全球其他地方的产品及服务。
 Yahoo 中国
@@ -297,7 +297,7 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
     <item>
       <title>QDII 与 QDII 基金买卖</title>
       <link>https://fanrongbin.com/qdii/</link>
-      <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/qdii/</guid>
       <description>本文最后一次更新于 2021 年 10 月 31 日。在政策等方面可能有所变化，请知悉。
 现中国大陆境内向境外进行合法投资（除境外直接投资 ODI、陆股通）的三种形式：
@@ -316,7 +316,7 @@ QDII 基金，即从事境外证券市场的股票、债券等有价证券业务
     <item>
       <title>中间地带</title>
       <link>https://fanrongbin.com/middle-zone/</link>
-      <pubDate>Sun, 12 Sep 2021 00:00:00 +0800</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0800</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/middle-zone/</guid>
       <description>有一块 R 总试图从中用手抠出贝壳来的空地，过去那上面总是留下许多干脆的血迹和笑嘻嘻的淤青。空地的周围，或者再把填成它的海沙化开一点，就成了一片永远的中间地带。
 那天明明是台风天，R 却说：「我要去散步。」于是他真的先从海边出发，踩上两脚的沙子，然后往那片空地走去。R 过去在这片中间地带上走过的路，大都单纯而寡淡，今天他走的这段路，还没一半，就让他的小腿有些发麻。
@@ -334,7 +334,7 @@ R 知道今天已经快要来了，所以昨天就打包好了行李，给保温
     <item>
       <title>建立健康的关系</title>
       <link>https://fanrongbin.com/healthy-relationship/</link>
-      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/healthy-relationship/</guid>
       <description>聊天，谈到河南暴雨，再到自疫情初至今仍层出不穷的呼救、求助，和朋友不约而同发问：「如果我或我身边的人也遇到这样的紧急事件，而依靠网络仍无法得到回应，该怎么办？」我有对城市生活多加警惕的意识吗？我知道发生山洪应该往哪里跑吗？我知道除了互联网之外的呼救途径吗？如果断水、断电、断网、断信号，该怎么办？
 我们都不觉得这是杞人忧天，也不觉得活得自在豁达与多加警惕之间有任何冲突。只是觉得生命不能被肆意对待。尤其是在这不过一年间，见证了这么多生命的离开。
@@ -354,7 +354,7 @@ But I have more of a life than I once did. I have a wife, a busy career, aging p
     <item>
       <title>Winslow Homer 温斯洛·霍默</title>
       <link>https://fanrongbin.com/winslow-homer/</link>
-      <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/winslow-homer/</guid>
       <description>发布于 Matters.news。
 首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。
@@ -371,7 +371,7 @@ Mounted Bugler,1862, Winslow Homer, Graphite, brush and gray wash on off-white p
     <item>
       <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
       <link>https://fanrongbin.com/network-resetting-2021/</link>
-      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/network-resetting-2021/</guid>
       <description>在这篇新博文中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。
 原先的布置：
@@ -388,7 +388,7 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
     <item>
       <title>树莓派实现开机自动播放 RTSP 流视频</title>
       <link>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
-      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
       <description>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。
 获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式为：
@@ -405,7 +405,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     <item>
       <title>《社会学的邀请》阅读笔记</title>
       <link>https://fanrongbin.com/the-big-picture-reading-notes/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/the-big-picture-reading-notes/</guid>
       <description>社会学的视角 # 社会学是对个体与社会之间的关系以及差异性后果的系统研究 # 我们自己的抉择受到我们所处的社会地位和我们有时能控制有时则不能控制的资源的限制。我们通过我们所做出的抉择、我们所做的事情去创造社会。与此同时，我们又是社会的产物，为我们周围的人所塑造。 社会学说明的是群体如何发挥作用，以及如何利用这些能够控制群体发挥作用的规律去努力驾驭它们。
 布迪厄
@@ -414,7 +414,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     <item>
       <title>雪</title>
       <link>https://fanrongbin.com/snow-2/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/snow-2/</guid>
       <description>见玻璃门是水淋淋的，以为要为没带伞而苦恼一阵子。推开门，却是我到北京之后下的第一场能看见的雪。急忙把帽子带好，外套拉链拉上，收拾收拾仪容仪表。
 而后我就迎着风往学校走回，它们也顺理成章地拍打在我的额头、眼镜、口罩和衣服上，没有重量，但也没有温度。
@@ -423,7 +423,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     <item>
       <title>荒野之狼，之后</title>
       <link>https://fanrongbin.com/after-der-steppenwolf/</link>
-      <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/after-der-steppenwolf/</guid>
       <description>之前已经粗读过《德米安》与《悉达多》，无不感受到黑塞作品里存在着这个典型的「帮助拯救自我」者的构建，以及女性角色的丰富与特定象征。
 之后袭来的是一股诡异而平淡的安静，并不是释然，也形成不了稍微严肃的思考。读罢三本书，一个要义：充分体验生活，然后成为生活本身。
@@ -438,7 +438,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     <item>
       <title>《学会提问——批判性思维指南》阅读笔记</title>
       <link>https://fanrongbin.com/learn-to-ask-reading-notes/</link>
-      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/learn-to-ask-reading-notes/</guid>
       <description>《学会提问——批判性思维指南（第七版）》（Asking The Right Questions: A Guide to Critical Thinking (Seventh Edition)）
 [美] M. Nell Browne. Stuart M. Keeley 著
@@ -457,7 +457,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     <item>
       <title>首先是不要忘记</title>
       <link>https://fanrongbin.com/first-of-all-dont-forget/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/first-of-all-dont-forget/</guid>
       <description>在床上坐下，挺起腰板直起背，「清理公众号列表」的念头忽的一闪，立即抓住，生怕又让它溜了过去，成为日后躺在 Inbox 里安稳过日子的「有空再做」。
 于是有意无意的发现自己还关注着初中一位语文老师的公众号，但上次发文已经是六年前了，一段不长不短的轨迹，我走完初高中，但他却在中途永久地被揉成零散的碎片，散落在它生活过的痕迹和仍存留着记忆的人们身上。
@@ -469,7 +469,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     <item>
       <title>在使用 Clipboard.js 中学一点 JavaScript</title>
       <link>https://fanrongbin.com/clipboard-js-errors/</link>
-      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/clipboard-js-errors/</guid>
       <description>在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。 我的组合是：Bootstrap（CSS 框架）+ Clipboard.js
 第一次报错：Uncaught TypeError: Illegal constructor # new Clipboard(&amp;#39;.btn&amp;#39;); 一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：
@@ -483,14 +483,14 @@ var clipboard = new ClipboardJS(&amp;#39;.</description>
     <item>
       <title>在一个普通的周日下午</title>
       <link>https://fanrongbin.com/an-ordinary-sunday-afternoon/</link>
-      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/an-ordinary-sunday-afternoon/</guid>
       <description>这一年发生了很多事情，改变了很多事情。具体的，很难记起，也难以叙述，像翻过通俗小说的书页，稀稀拉拉，有时会有兴致。 这一年是一个「暧昧的障碍」与「复杂的平缓」。和心智相抗衡的大半年，的的确确成为了我至今最为重要且深刻的一段日子。那种时有时无能够看清自己的机会，忽闪忽现的珍贵的情理反省，很「暧昧」，是「障碍」，是必须跨过、必须大步远离后再回头审视的障碍。它们也是复杂的，这一点我认为不需要在此赘述。它们是平缓的，成为暗流、暗涌，我仍然在波动中试着回归。 常说「新年新气象」，何以「新」？何以为「新」？不再立下那些期冀成为鼓励、最后大都忘记的目标与愿景，当真正开始反思日复一日、年复一年的新旧更迭于自己本身究竟意义何在，我只看到一条直行路。</description>
     </item>
     <item>
       <title>白色的空间</title>
       <link>https://fanrongbin.com/339/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0800</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0800</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/339/</guid>
       <description>Q 进入了一个白色的空间，四周各自延展开，像是一片漫长的雪地。中间是两张椅子，Q 认为这的确是要求他坐下的意思。他开始等待应该要出现的另一张椅子的主人。
 第一个从未知的距离走进的是七岁时候的 Q。Q 一开始有些匪夷所思，后来才觉得这好像不太现实。因此，他笃定自己正在做梦，于是稍微松懈下来，比起初等待的那段时间里更自在一些。
@@ -517,7 +517,7 @@ Q 没有回答。
     <item>
       <title>简化，回归</title>
       <link>https://fanrongbin.com/come-back-home/</link>
-      <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/come-back-home/</guid>
       <description>由于常年固定使用某些邮箱地址注册网络帐户，以及邮件订阅设置的混乱，导致我不得不腾出一个下午的时间清理这些邮件，而这些邮件大多是注册帐户时发来的验证、社交网络的提醒、过去订阅的博客资讯和提醒你时常回看的应用广告。于是我把现在已经不常用的、能合并或替代的各类帐号注销，一是方便管理，二是删除自己曾经留下的网络痕迹。
 进行邮件清理后，我试着对自己的信息源进行管理。我把自己获取信息的途径分为三种：信息聚合类应用、订阅邮件和 RSS 订阅源。信息聚合类应用包括 Medium 、微信订阅号和知乎专栏这种长文聚合、Quora 的问答、端传媒等新闻资讯应用。在这之中比较难管理的是微信订阅号。有部分作者有个人博客的，我都将其收进 Reeder 用 RSS 订阅的形式阅读，但部分只有个人公众号的作者，需要进一步对内容作出筛选。使用邮件订阅或 RSS 的形式阅读，最大的优点是即时离线存档，不仅便于日后阅读和搜索归档，也避免了一些敏感文章被封锁的风险。
@@ -529,7 +529,7 @@ Inspiration phase: You find something that sparks an interest, and you start exp
     <item>
       <title>Hexo &#43; GitHub Pages &#43; Cloudflare</title>
       <link>https://fanrongbin.com/hexo-github-pages-cloudflare/</link>
-      <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/hexo-github-pages-cloudflare/</guid>
       <description>系统环境配置 # 安装 Node.js # Node.js 是一种 JavaScript 的运行环境，点击此处以下载。
 如何安装 Node.js 详见此文章。注意：Linux 上安装 Node.js 需要安装 Python 2.6 或 2.7 ，不建议安装 Python 3.0 以上版本。
@@ -541,7 +541,7 @@ $ cd &amp;lt;folder&amp;gt; # 将 &amp;lt;folder&amp;gt; 改为你希望安装 H
     <item>
       <title>《如何学习》阅读笔记：可行的学习方法总结</title>
       <link>https://fanrongbin.com/how-we-learn-reading-notes/</link>
-      <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/how-we-learn-reading-notes/</guid>
       <description>增强记忆 # 环境对学习的影响 # 学习的时候我们是什么感觉、在哪里学、在什么地方学等，以及人的情绪状况、专注程度、直觉感触等，都会对考试成绩产生影响。
 ……大脑处于适度亢奋状态也好，非亢奋状态也罢，其储存进去的单词数量是大致相同的：总之都装进去了。但是，再后来提取记忆信息的时候，大脑一定以不同的方式重组了这些信息。 （注：大脑对信息的重组详见「潜入意识的深海」一文）那把大脑里面的「提取钥匙」需在大脑处于与之前的状态相同时才会显得最清晰，无论是嗑了药还是清醒着。不过，一旦考卷上直接标出了「类别」提示，那把钥匙就显得多余了，因为已经有一把「外来钥匙」放在了眼前。
@@ -571,7 +571,7 @@ $ cd &amp;lt;folder&amp;gt; # 将 &amp;lt;folder&amp;gt; 改为你希望安装 H
     <item>
       <title>初探 Fluent Design System</title>
       <link>https://fanrongbin.com/glimpse-of-fluent-design/</link>
-      <pubDate>Sun, 14 May 2017 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sun, 14 May 2017 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/glimpse-of-fluent-design/</guid>
       <description>微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。
 宣传视频 # 官方网页 （无法在以中文为界面语言的 Chrome 正常浏览）| 优酷 (来自 Livesino)
@@ -584,7 +584,7 @@ Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户�
     <item>
       <title>在 Web 设计中使用系统 UI 默认字体</title>
       <link>https://fanrongbin.com/using-default-fonts-in-web-design/</link>
-      <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/using-default-fonts-in-web-design/</guid>
       <description>内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。
 使用默认 UI 字体可以通过两种方式实现：
@@ -595,7 +595,7 @@ Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户�
     <item>
       <title>高效的设计批评是如何进行的</title>
       <link>https://fanrongbin.com/running-productive-design-critiques/</link>
-      <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/running-productive-design-critiques/</guid>
       <description>注：本文译自 Running productive design critiques，作者是 Gustavs Cirults。
 设计不分对错，只分适合与否。
@@ -611,7 +611,7 @@ Inviting colleagues Only 5% of new sign ups invite their colleagues in the first
     <item>
       <title>在信息爆炸后的粉尘里「断舍离」</title>
       <link>https://fanrongbin.com/danshari/</link>
-      <pubDate>Sun, 20 Nov 2016 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
+      <pubDate>Sun, 20 Nov 2016 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/danshari/</guid>
       <description>结束一周的住校生活，班主任从抽屉里拿出手机一一交还，长按锁屏键，开机，别忘了把振动模式打上，因为随之而来的是一条又一条不断叠加的推送消息。
 我开始想：我通过互联网获取的，真的就是我想获取的吗？
