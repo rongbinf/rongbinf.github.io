@@ -154,7 +154,7 @@
 &lt;li&gt;You don&amp;rsquo;t have to be ashamed of using your own ideas&lt;/li&gt;
 &lt;li&gt;[blank white card]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;style&gt;ul{width:unset;max-width:85%;font-family:var(--sans);}&lt;/style&gt;</description>
+&lt;style&gt;ul{width:unset;max-width:85%;font-family:var(--sans);}&lt;/style&gt;<hr>按此<a href="https://fanrongbin.com/oblique-strategies/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>使用 Github Actions 自动部署 Hugo</title>
@@ -259,7 +259,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 指定将自动部署得到的 public 文件夹 push 上去&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;commit_message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ github.event.head_commit.message }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;若点击保存，则将自动完成第一次commit，注意提前备份原Github Pages仓库里的内容。（没备份也可以通过历史commit找到啦，哈哈）&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/github-actions-deploy-hugo/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>在 Hugo 引入汉字标准格式</title>
@@ -310,7 +310,7 @@
 &lt;p&gt;如果你只希望对于文章内容进行渲染，不影响菜单栏等，在&lt;code&gt;/layouts/_default/single.html&lt;/code&gt;中找到对应你文章内容部分的&lt;code&gt;label&lt;/code&gt;，如&lt;code&gt;&amp;lt;article id=&amp;quot;main&amp;quot;&amp;gt;&lt;/code&gt;，加入&lt;code&gt;class=&amp;quot;han-init-context&amp;quot;&lt;/code&gt;属性即可。&lt;/p&gt;
 &lt;p&gt;到此我们已完成两个文件的汇入和启动渲染，&lt;code&gt;hugo server&lt;/code&gt;查看，大部分情况下你会发现页面许多处的错乱，以及原&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;的强调样式变成了陌生的着重号等。同时，你也会惊讶地发现在中英文混排时，中英文之间自动加上了间距，且标点符号的显示有明显的优化。&lt;/p&gt;
 &lt;p&gt;接下来，你需要根据自身需要调整&lt;code&gt;han.min.css&lt;/code&gt;或override冲突的地方，这是我们最关键的工作。&lt;code&gt;css&lt;/code&gt;文件下载下来是没有缩进的，你可以通过一些工具标准化，看得会清楚一点。 一般来说，解决冲突最方便的方式是：哪里看不顺眼就&lt;strong&gt;注释&lt;/strong&gt;掉哪里。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/hugo-hanzi-pro/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>Hybrid #4</title>
@@ -428,7 +428,7 @@ SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/hybrid-4/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理</title>
@@ -577,7 +577,7 @@ Pak, Miok D. 2008. &lt;em&gt;Types of Clauses and Sentence End Particles in Kore
 &lt;li&gt;&lt;a href=&#34;https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&amp;amp;qna_seq=219029&amp;amp;pageIndex=1&#34;&gt;&amp;lsquo;할아버지, 아버지는 책을 읽고 있습니다/있으십니다&amp;rsquo; - 국립국어원&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://namu.wiki/w/%EC%82%AC%EB%AC%BC%EC%A1%B4%EC%B9%AD&#34;&gt;사물존칭 - 나무위키&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/honorific-ko/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>家庭组网 2022</title>
@@ -695,7 +695,7 @@ TP-LINK 易展有线回程
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/network-resetting-2023/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>주다, 드리다, 주시다 &#43; 간접인용 명령문</title>
@@ -916,7 +916,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/give-ko/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>2022 年终：生活的日子里，化身躺倒在沥青路上的一滩果酱</title>
@@ -936,7 +936,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;p class=&#34;right-date&#34; align=&#34;right&#34;&gt;2022 年 12 月 31 日&lt;/p&gt;
 &lt;hr&gt;
 &lt;iframe id=&#34;embedPlayer&#34; src=&#34;https://embed.music.apple.com/us/album/ties/1625027792?app=music&amp;amp;itsct=music_box_player&amp;amp;itscg=30200&amp;amp;ls=1&amp;amp;theme=auto&#34; height=&#34;450px&#34; frameborder=&#34;0&#34; sandbox=&#34;allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation&#34; allow=&#34;autoplay *; encrypted-media *; clipboard-write&#34; style=&#34;width: 100%;  overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);&#34;&gt;&lt;/iframe&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/jam-on-road/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>Hybrid #3</title>
@@ -1126,7 +1126,7 @@ An Interview with Venture Capitalist Bill Gurley, MBA ’93
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;p&gt;Hybrid 是一个内容摘录计划。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/hybrid-3/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>Hybrid #2</title>
@@ -1279,7 +1279,7 @@ Wesley Aptekar-Cassels, &lt;em&gt;A few things that could be poetry&lt;/em&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/econ105-scene.webp&#34; alt=&#34;Scene - EP&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Ambient EP &amp;ldquo;Scene&amp;rdquo; 已在 &lt;a href=&#34;https://econ105.bandcamp.com/album/scene&#34;&gt;Bandcamp&lt;/a&gt; 与 &lt;a href=&#34;https://soundcloud.com/econ105/sets/scene&#34;&gt;SoundCloud&lt;/a&gt; 上架。&lt;/p&gt;
-&lt;iframe style=&#34;border: 0; width: 100%; height: 120px;&#34; src=&#34;https://bandcamp.com/EmbeddedPlayer/album=1016704083/size=large/bgcol=ffffff/linkcol=63b2cc/tracklist=false/artwork=small/transparent=true/&#34; seamless&gt;&lt;a href=&#34;https://econ105.bandcamp.com/album/scene&#34;&gt;Scene by ECON105&lt;/a&gt;&lt;/iframe&gt;</description>
+&lt;iframe style=&#34;border: 0; width: 100%; height: 120px;&#34; src=&#34;https://bandcamp.com/EmbeddedPlayer/album=1016704083/size=large/bgcol=ffffff/linkcol=63b2cc/tracklist=false/artwork=small/transparent=true/&#34; seamless&gt;&lt;a href=&#34;https://econ105.bandcamp.com/album/scene&#34;&gt;Scene by ECON105&lt;/a&gt;&lt;/iframe&gt;<hr>按此<a href="https://fanrongbin.com/hybrid-2/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>Windows 11 的新字体：Segoe UI Variable</title>
@@ -1292,7 +1292,7 @@ Wesley Aptekar-Cassels, &lt;em&gt;A few things that could be poetry&lt;/em&gt;
 &lt;p&gt;风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，&lt;del&gt;看起来也更像 Product Sans 了。&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/segoe-ui-v-vdisplay-3.webp&#34; style=&#34;zoom:30%&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 &lt;p&gt;可以通过 Windows 的&lt;a href=&#34;https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts&#34;&gt;官方文档&lt;/a&gt;，或直接访问&lt;a href=&#34;https://aka.ms/SegoeUIVariable&#34;&gt;此链接&lt;/a&gt;下载 Segoe UI Variable。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/segoe-ui-variable/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>在 Big Sur 安装 PocketSphinx 时出现的问题</title>
@@ -1342,7 +1342,7 @@ Wesley Aptekar-Cassels, &lt;em&gt;A few things that could be poetry&lt;/em&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/bambocher/pocketsphinx-python/issues/28&#34;&gt;Trouble installing on osx &amp;ldquo;fatal error: &amp;lsquo;al.h&amp;rsquo; file not found&amp;rdquo; #28&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/bambocher/pocketsphinx-python/issues/67&#34;&gt;Trouble installing on Mac OS Big Sur 11.0.1 &amp;ldquo;fatal error: &amp;lsquo;al.h&amp;rsquo; file not found&amp;rdquo; #67&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/pocketsphinx-install-errors/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>Hybrid #1</title>
@@ -1453,7 +1453,7 @@ David Rand, &lt;em&gt;The Psychology of Misinformation&lt;/em&gt;
 &lt;p&gt;&lt;a href=&#34;https://youtu.be/TiO77Pdec78&#34;&gt;原视频 →&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Hybrid 是一个内容摘录计划。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/hybrid-1/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>糕点铺</title>
@@ -1462,7 +1462,7 @@ David Rand, &lt;em&gt;The Psychology of Misinformation&lt;/em&gt;
       <guid>https://fanrongbin.com/bakery/</guid>
       <description>&lt;p&gt;实习，住在团结湖，附近有一家糕点铺，晚上下班总要路过它。门口常常排着不长不短的队，几乎每次我都会装作心不在焉地往亮堂堂的橱窗一瞥，看看今天是绿豆酥饼卖得好，还是有新面包出炉。暗地里，我也决定找个时间也去排排队，买一盒试试看。今天是这个月最后一天班，坐上公交，想象那条刚认识没多久的路，先过路口，拐弯，直行，再走到对面，就能到糕点铺了。刷卡下车后我抬起头走路，可劲儿往对面瞧，却怎么也看不到那面墨绿色的招牌，一时以为是自己搞混了。怀疑的脚步越来越近，才发现关了灯、拉了铁门，赖以辨认的人群四散。今天已经是廿六了，后天回家，节后总要再过来。「所以总有机会吧」，这么想着，埋头往别处走了。&lt;/p&gt;
 &lt;p&gt;过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己再回来买酥饼的希望过分渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要「把握住机会」和「活在当下」的道理戒律，如此这般活，由着很多事情错过。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/bakery/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>芯片制作工序 &amp; 半导体常见自动化软件模块梳理</title>
@@ -1705,7 +1705,7 @@ flowchart TD
 	h1[Cut into die]--&gt;h2[Attached to the package substrate]--&gt;h3[Connected to inner leads]--&gt;h4[Sealed in an epoxy resin envelope]--&gt;h5[Test]
 	end
 	mm(&#34;(IC Design)&#34;)--&gt;a--&gt;b--&gt;c--&gt;d--&gt;e--&gt;f--&gt;g--&gt;h
-&lt;/pre&gt;</description>
+&lt;/pre&gt;<hr>按此<a href="https://fanrongbin.com/semiconductor-procedure/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
@@ -1810,7 +1810,7 @@ flowchart TD
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://isocpp.org/wiki/faq/templates#template-friends&#34;&gt;Why do I get linker errors when I use template friends? - Standard C++&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/cpp-template-friend/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>2021 年终：昨天一直是今天，就像今天一直是明天</title>
@@ -1835,7 +1835,7 @@ flowchart TD
 &lt;p&gt;什么是蹲下起身时眼前的洁白，什么是动物园的房间。不当一切真的命中注定，指认所有被构造的一切，要声称自己是罪人，在跌落旧关卡时搜集证据。这会是水的流动，这会是卡在鞋底细缝中风干的叶片碎末，这会是酸胀的小腿和脉冲。这就是真的，这就是假的，这一直是一场戏，我一直在剧院里走走停停。很多个分成好几段陆续死去，有些是谋杀，有些是自杀，有些出于意外，一个死了，另一个被迫接着出现，不是任何人的错，新的来了。草丛里经常种下过去拯救自己的毒药，送给兔子，他们就能帮忙消化成脚印，铺在路上，以至于再试图向前爬去时，手指所沾上的只是兔子的粪便、毒药的沉淀，膝盖磨出来的血就不会看得见，路看上去也不会太远。以至于又是一种曼妙的错觉，支撑这生死的流变。&lt;/p&gt;
 &lt;p class=&#34;right-date&#34; align=&#34;right&#34;&gt;2021 年 12 月 20 日&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/yesterday-is-today-is-tomorrow/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>来自 Apple 的流媒体推广工具</title>
@@ -1856,7 +1856,7 @@ flowchart TD
 &lt;p&gt;Apple Store 推广用图：&lt;/p&gt;
 &lt;img src=&#34;https://s2.loli.net/2021/12/04/Ity2fhpdbe5CznH.png&#34; alt=&#34;notionnotesdocstasks_1080x1080.png&#34; style=&#34;zoom: 33%;&#34;/&gt;
 &lt;p&gt;挺好看的。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/apple-media-service-marketing/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>C&#43;&#43; 中的拷贝构造函数：浅拷贝、深拷贝</title>
@@ -1999,7 +1999,7 @@ flowchart TD
 &lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/xunye_dream/article/details/77547438&#34;&gt;C语言中的位拷贝与值拷贝浅谈 - CSDN&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/lwbeyond/article/details/6202256&#34;&gt;C++拷贝构造函数详解 - CSDN&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/cpp-copy-constructor/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>使用 matplotlib 遇到的几个问题</title>
@@ -2048,7 +2048,7 @@ flowchart TD
 &lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/11/12/DJGWkYgR4QjSLfI.png&#34; alt=&#34;credit&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/11/12/4hHlSIj7zRO3Cng.png&#34; alt=&#34;rates&#34;&gt;&lt;/p&gt;
 &lt;p&gt;参考了实例 &lt;a href=&#34;https://matplotlib.org/stable/gallery/subplots_axes_and_figures/axes_zoom_effect.html&#34;&gt;Axes Zoom Effect&lt;/a&gt;。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/november-matplotlib/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>eclipse, indices / indexes 与股价指数</title>
@@ -2206,7 +2206,7 @@ indices 或 indexes?
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/eclipse-indices-indexes/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>Engadget 简体中文版关闭</title>
@@ -2229,7 +2229,7 @@ indices 或 indexes?
 &lt;p&gt;祝新老成员未来都好。&lt;/p&gt;
 &lt;p&gt;正式开站纪念博文存档：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/11/03/OQoZBPSAGimENcw.png&#34; alt=&#34;cn-engadget-05-10&#34;&gt;&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/engadget-cn-closed/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>QDII 与 QDII 基金买卖</title>
@@ -2307,7 +2307,7 @@ T+2 交易规则
 &lt;li&gt;情形 2：美股节假日休市，亦无法申购赎回。&lt;/li&gt;
 &lt;li&gt;情形 3：未开放二级市场交易的某 QDII 基金，从赎回到到账需约 8-10 个工作日。&lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/qdii/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>中间地带</title>
@@ -2327,7 +2327,7 @@ T+2 交易规则
 &lt;p&gt;今天到来后，他开始往那片空地走去。这条路已经变得再熟悉不过了。夏天他其实不常来，因为山路会变得泥泞。往往是秋天或者冬天，反正这里气温并不会很低，R 只需要关心路况。&lt;/p&gt;
 &lt;p&gt;到了空地之后，R 把行李放下，在靠近东边的一块碑上刻好名字，「只能等你没有出现的机会后，我才得以平静呼吸。」&lt;/p&gt;
 &lt;p&gt;在 R 刻完之后，今天就结束了。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/middle-zone/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>建立健康的关系</title>
@@ -2356,7 +2356,7 @@ T+2 交易规则
 &lt;blockquote&gt;
 &lt;p&gt;Update: 2021/08/28&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/healthy-relationship/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>Winslow Homer 温斯洛·霍默</title>
@@ -2452,7 +2452,7 @@ T+2 交易规则
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/wh-19.webp&#34; alt=&#34;Rocky Shore, Bermuda&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Rocky Shore, Bermuda&lt;/em&gt;, 1900, Winslow Homer, Painting, watercolor on wove paper&lt;/p&gt;
 &lt;p&gt;Source: &lt;a href=&#34;https://collections.mfa.org/objects/5016&#34;&gt;Museum of Fine Arts Boston&lt;/a&gt;&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/winslow-homer/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</title>
@@ -2499,7 +2499,7 @@ TP-LINK 易展有线回程
 &lt;/ol&gt;
 &lt;img src=&#34;https://i.loli.net/2021/01/08/kbE396iZHuDUpxv.jpg&#34; alt=&#34;TP-LINK App 网络拓扑图&#34; style=&#34;zoom: 33%;&#34; /&gt;
 &lt;p&gt;右上角显示连接网线的 icon 即实现有线回程。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/network-resetting-2021/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>树莓派实现开机自动播放 RTSP 流视频</title>
@@ -2645,7 +2645,7 @@ Exec=/home/pi/test.sh
 &lt;li&gt;&lt;code&gt;windowsize 800 600&lt;/code&gt;：改变窗口大小，&lt;code&gt;$WIDTH $HEIGHT&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;windowmove 0 0&lt;/code&gt;：改变窗口位置，&lt;code&gt;$X $Y&lt;/code&gt;，具体视屏幕分辨率而定&lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>《社会学的邀请》阅读笔记</title>
@@ -4154,7 +4154,7 @@ Exec=/home/pi/test.sh
 &lt;p&gt;To be continued&lt;/p&gt;
 &lt;p&gt;Last update: 2021-11-14&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/the-big-picture-reading-notes/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>雪</title>
@@ -4166,7 +4166,7 @@ Exec=/home/pi/test.sh
 &lt;p&gt;而后我就迎着风往学校走回，它们也顺理成章地拍打在我的额头、眼镜、口罩和衣服上，没有重量，但也没有温度。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/s-2.webp&#34; alt=&#34;alt Lights, dropping.&#34;&gt;&lt;/p&gt;
 &lt;p&gt;踩下去是碎的，噼里啪啦响。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/snow-2/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>荒野之狼，之后</title>
@@ -4182,7 +4182,7 @@ Exec=/home/pi/test.sh
 &lt;p&gt;现在可以给自己得出一个临时的结论作告慰了：那么就如黑塞教的那样，和自己身体里千千万万个自我和解，让他们在棋盘上重组再生。之于何时能抵达叔本华所述的境界，我想难以企及，也不必前去了。&lt;/p&gt;
 &lt;p&gt;即使好像我的内心还在抗拒：你应该叫我出世，就像你为之痴迷的中国哲学印度哲学一样，叫我出世去让自我平息。但这个结果还是完成了，即我明白了人的确是需要玩这样一个来回折腾的游戏。内心何时不再抗拒呢，大概慢慢经过这一天之后我就完成了对它的安抚，同时转而开始新一轮的等待与完善。而与印度哲学相关的，还是等读完刚从图书馆借走的一本研究和《玻璃球游戏》再像今天这样说些晦涩而空洞但对我本人很有开导和疏解作用的真话假话，好话废话。&lt;/p&gt;
 &lt;p&gt;写在最后：《荒野之狼》又译作《荒原狼》（可能这个译名更为人所知），我所阅读的版本为阙旭玲所译（图书馆唯一仅存，还很新）。译本好坏我无从比较，因为也只读过此版。若初次阅读，不妨试读此版本，还是十分流畅轻快的。或参照网上的比照进行选择。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/after-der-steppenwolf/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>《学会提问——批判性思维指南》阅读笔记</title>
@@ -5041,7 +5041,7 @@ Exec=/home/pi/test.sh
 &lt;li&gt;请求别人允许你指出推理中的任何不足。使用这种策略的想法会激励他人和你一起考察这个论证。&lt;/li&gt;
 &lt;li&gt;要让别人形成这样一个印象——你和他是合作者，你们的工作目标是相同的，都是为了提供结论的合理性。&lt;/li&gt;
 &lt;/ol&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/learn-to-ask-reading-notes/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>首先是不要忘记</title>
@@ -5054,7 +5054,7 @@ Exec=/home/pi/test.sh
 &lt;p&gt;当我得知他罹患白血病时是怎样的一番惊讶和伤感，现在也很模糊了，但此时我又在这之中的确触碰着他过去不过十分简单就留下的印痕。倘若我并未遇到这样一个偶然的巧合，选择回看这些已久的事物，我还会想起么？我又何以记住，又如此忘记？&lt;/p&gt;
 &lt;p&gt;这不得不又是一个我总爱提及的「信息过载」问题，不过这不是今天的重点。更想让自己明白的一个浅显的道理是，真正地去记住值得记住的事物，记住必须记住的事物，以一种时常回看、常常回想的方式记住。&lt;/p&gt;
 &lt;p&gt;我从来没有像此时一样如此害怕忘记，即使我一直很擅长忘记和被忘记。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/first-of-all-dont-forget/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>在使用 Clipboard.js 中学一点 JavaScript</title>
@@ -5153,7 +5153,7 @@ Exec=/home/pi/test.sh
 &lt;li&gt;&lt;a href=&#34;https://www.liaoxuefeng.com/wiki/1022910821149312/1023023555539648&#34;&gt;选择器 – 廖雪峰的官方网站&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/9394390/tooltip-is-not-a-function&#34;&gt;Stack Overflow 上关于 tooltip is not a function 的讨论&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/clipboard-js-errors/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>在一个普通的周日下午</title>
@@ -5161,7 +5161,7 @@ Exec=/home/pi/test.sh
       <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate><author>r_fan@outlook.com (Rongbin FAN)</author>
       <guid>https://fanrongbin.com/an-ordinary-sunday-afternoon/</guid>
       <description>&lt;p&gt;这一年发生了很多事情，改变了很多事情。具体的，很难记起，也难以叙述，像翻过通俗小说的书页，稀稀拉拉，有时会有兴致。 这一年是一个「暧昧的障碍」与「复杂的平缓」。和心智相抗衡的大半年，的的确确成为了我至今最为重要且深刻的一段日子。那种时有时无能够看清自己的机会，忽闪忽现的珍贵的情理反省，很「暧昧」，是「障碍」，是必须跨过、必须大步远离后再回头审视的障碍。它们也是复杂的，这一点我认为不需要在此赘述。它们是平缓的，成为暗流、暗涌，我仍然在波动中试着回归。 常说「新年新气象」，何以「新」？何以为「新」？不再立下那些期冀成为鼓励、最后大都忘记的目标与愿景，当真正开始反思日复一日、年复一年的新旧更迭于自己本身究竟意义何在，我只看到一条直行路。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/an-ordinary-sunday-afternoon/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>白色的空间</title>
@@ -5193,7 +5193,7 @@ Exec=/home/pi/test.sh
 &lt;p&gt;另一个 Q 说：「其实你没有什么选择。」&lt;/p&gt;
 &lt;p&gt;后来再也没有更多的访客了，Q 独自坐着，对面是一把空椅子。&lt;/p&gt;
 &lt;p&gt;Q 仍呆在白色的空间里，但是他开始看到这个空间的边界、棱角，看到反光的幕墙。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/339/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>简化，回归</title>
@@ -5216,7 +5216,7 @@ Exec=/home/pi/test.sh
 &lt;p&gt;它分成四个阶段：探索阶段、深入阶段、思考阶段和削减阶段。在前两个阶段，你大量的获取和收集感兴趣的信息，并且进行了一定的拓宽。例如在偶然一则热带风暴的新闻中，记者提到了风眼这个名词，由此你上网查找资料以了解这个天气的成因、结构等等。单个天气系统不足以满足好奇心，你转而寻找能够集合这类资讯和推送给你的信息源，久而久之，你可能就拥有了一定数量该领域的信息源。这两个阶段是你好奇心和能力拓展的主要阶段，但在前两个阶段我们做的工作可能会比较盲目，你可能不常会回看这些订阅关注的信息源，而这些信息源在之后也许会因为各种各样的原因停用，或是转为其他内容。为了让自己获取的信息更有价值、阅读更高效，我们要做的并非一开始就抑制自己收集信息的想法，而是收集之后再简化。就像 GTD 中 Inbox 的概念一样，在这里我们也需要一个无形的 Inbox 把它们收集起来。&lt;/p&gt;
 &lt;p&gt;思考阶段则是你对获得的这些信息的分类筛选。这些信息我真的需要吗？我对这个真的感兴趣吗？例如你只是想知道热带风暴的成因和防灾的方法，而不想再去了解它是怎么被预报之类的，你很自然地开始了思考阶段并作出了判断——针对性的收集信息。并且开始削减阶段——削减之前收集到的不感兴趣的内容。&lt;/p&gt;
 &lt;p&gt;上述模式，核心是给我们营造了「回归」的条件，也就是思考我们实际的需求是什么，回归到需求上来。任何事情都需要一个目的或需求以驱使我们行动，而回归需求给予我们动力，并且避免了不必要事情的干扰，最终达到趋于平静的一种状态。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/come-back-home/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>Hexo &#43; GitHub Pages &#43; Cloudflare</title>
@@ -5499,7 +5499,7 @@ Hexo 的文件结构
 &lt;li&gt;&lt;a href=&#34;http://jiji262.github.io/2016/04/15/2016-04-15-hexo-github-pages-blog/&#34;&gt;手把手教你使用 Hexo + Github Pages 搭建个人独立博客&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://poplite.xyz/post/2018/05/03/how-to-enable-https-for-custom-domain-on-github-pages.html&#34;&gt;Github Pages 开始为自定义域名提供 HTTPS 支持（附启用方法）&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/hexo-github-pages-cloudflare/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>《如何学习》阅读笔记：可行的学习方法总结</title>
@@ -5729,7 +5729,7 @@ Hexo 的文件结构
 &lt;blockquote&gt;
 &lt;p&gt;「在一些实验中我们发现，&lt;strong&gt;白天睡上一小时到一个半小时所得到的学习辅助效果，跟一整晚 8 小时的通宵睡眠几乎不相上下。&lt;/strong&gt;」&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/how-we-learn-reading-notes/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>初探 Fluent Design System</title>
@@ -5793,7 +5793,7 @@ Scale (维)
 &lt;p&gt;The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;之所以把 Scale 译作「维」，是因为这一点集中体现了 Fluent Design System 最终的作用——实现从零维到三维的，多种场景适用的设计规范，利用设备提供并拓展面向多维度的体验。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/glimpse-of-fluent-design/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>在 Web 设计中使用系统 UI 默认字体</title>
@@ -5952,7 +5952,7 @@ Scale (维)
 &lt;li&gt;&lt;cite lang=&#34;en&#34;&gt;&lt;a href=&#34;https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/&#34;&gt;Using System UI Fonts In Web Design: A Quick Practical Guide&lt;/a&gt;&lt;/cite&gt;, Marcin Wichary, 2015&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://csspod.com/using-the-system-font-in-web-content/&#34;&gt;在 Web 内容中使用系统字体&lt;/a&gt;，minwe，2016&lt;/li&gt;
 &lt;/ol&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/using-default-fonts-in-web-design/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>高效的设计批评是如何进行的</title>
@@ -6013,7 +6013,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;p&gt;定期进行有效的设计批评可以产生非常大的作用。有趣的想法一被提出，其他人就可以以这个想法为基进行延伸拓展，再与不同的各个延伸进行连接。单凭设计师一己之力（哪怕这个设计师有三头六臂），可无法创造这样卓越的效果。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/critic-5.webp&#34; alt=&#34;Screen-Shot-2016-10-17-at-12.16.45.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;为了简化这个过程，我们制作了一个 &lt;a href=&#34;https://marketing.intercomassets.com/assets/design-critique-concept_template.sketch&#34;&gt;Sketch 模板&lt;/a&gt;，在这里与你分享，现在就可以下载，并试着在下次展开设计批评时使用。如果该模板能够帮助到你，记得告诉我们！&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/running-productive-design-critiques/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>在信息爆炸后的粉尘里「断舍离」</title>
@@ -6044,7 +6044,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;blockquote&gt;
 &lt;p&gt;我们所反对的碎片化阅读，指的是浮浅和无视语境的阅读。这和长短无关，和读者有没有整体性的视角有关。- &lt;a href=&#34;https://blog.yitianshijie.net/2016/07/05/what-is-fragmented-reading/&#34;&gt;李如一&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/danshari/">访问原页面</a>。</p></description>
     </item>
     <item>
       <title>友链</title>
@@ -6054,7 +6054,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
       <description>&lt;style&gt;.date,.next-post,.previous-post{display:none!important;}&lt;/style&gt;
 &lt;p&gt;你找到了这个页面，欢迎与我交换友链！&lt;/p&gt;
 &lt;p&gt;请发邮件。&lt;/p&gt;
-</description>
+<hr>按此<a href="https://fanrongbin.com/links/">访问原页面</a>。</p></description>
     </item>
   </channel>
 </rss>
