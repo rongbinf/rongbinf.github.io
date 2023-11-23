@@ -6,12 +6,14 @@
     <description>Recent content in Python on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
+    <managingEditor>r_fan@outlook.com</managingEditor>
+    <webMaster>r_fan@outlook.com</webMaster>
     <lastBuildDate>Fri, 12 Nov 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 matplotlib 遇到的几个问题</title>
       <link>https://fanrongbin.com/november-matplotlib/</link>
-      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
       <guid>https://fanrongbin.com/november-matplotlib/</guid>
       <description>这周在用 matplotlib 画几张图。数据 csv 下载自 ECBStat 和 FRED。
 import pandas as pd import matplotlib as plt 首先是解决字符串转日期型的问题。我希望将日期作为横轴，而且显示合理。

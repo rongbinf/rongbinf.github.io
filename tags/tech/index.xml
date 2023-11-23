@@ -6,12 +6,14 @@
     <description>Recent content in Tech on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
+    <managingEditor>r_fan@outlook.com</managingEditor>
+    <webMaster>r_fan@outlook.com</webMaster>
     <lastBuildDate>Wed, 30 Mar 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows 11 的新字体：Segoe UI Variable</title>
       <link>https://fanrongbin.com/segoe-ui-variable/</link>
-      <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
       <guid>https://fanrongbin.com/segoe-ui-variable/</guid>
       <description>微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 发布了 Segoe UI 的可变字体版本：Segoe UI Variable，在 Windows 11 正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。
 风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，看起来也更像 Product Sans 了。
@@ -20,7 +22,7 @@
     <item>
       <title>来自 Apple 的流媒体推广工具</title>
       <link>https://fanrongbin.com/apple-media-service-marketing/</link>
-      <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
       <guid>https://fanrongbin.com/apple-media-service-marketing/</guid>
       <description>Apple 分别在今年 9 月、去年 11 月和去年 7 月发布了用于 iOS 应用、播客和 Apple Music 推广的工具，以帮助开发者迅速创建赏心悦目、符合 Apple 设计规范的推广用图和网页内嵌模块。现在还包括 Arcade、News 和 TV，已经是完全搭建起整个适用于 Apple 媒体服务的推广工具平台。你可以按此访问 Apple Services Marketing Tools。
 和订阅制播客一并发布的还有 Apple Podcasts for Creators，方便制作者查看收听数据等信息。
@@ -35,7 +37,7 @@ Apple Store 推广用图：
     <item>
       <title>Engadget 简体中文版关闭</title>
       <link>https://fanrongbin.com/engadget-cn-closed/</link>
-      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate><author>r_fan@outlook.com</author>
       <guid>https://fanrongbin.com/engadget-cn-closed/</guid>
       <description>2021 年 11 月 1 日起，用户无法从中国大陆使用 Yahoo 的产品与服务。这并不影响 Yahoo 在全球其他地方的产品及服务。
 Yahoo 中国

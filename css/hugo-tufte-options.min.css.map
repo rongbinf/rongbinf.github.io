@@ -6,8 +6,8 @@
 		"themes/hugo-tufte/assets/scss/hugo-tufte-options.scss"
 	],
 	"sourcesContent": [
-		"\nh2, h3 {\n    font-style: normal;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, sans-serif, \"Noto Emoji\";\n}\n\n\n\n"
+		"\n\n\n"
 	],
 	"names": [],
-	"mappings": "AACA,AAAA,EAAE,CAAE,EAAE,AAAC,CACH,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,8DAA8D,CAC9E"
+	"mappings": ""
 }
