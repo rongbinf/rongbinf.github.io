@@ -211,6 +211,36 @@ Pak, Miok D. 2008. <em>Types of Clauses and Sentence End Particles in Korean</em
 
 <script async src="https://hypothes.is/embed.js"></script>
 
+<script>
+  
+  function applyBreakAllClass() {
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    
+    if (screenWidth <= 960) {
+      
+      var codeElements = document.querySelectorAll('code');
+
+      
+      codeElements.forEach(function(element) {
+        
+        if (element.textContent.length > 10) {
+          
+          element.classList.add('break-all');
+        }
+      });
+    }
+  }
+
+  
+  applyBreakAllClass();
+
+  
+  window.addEventListener('resize', applyBreakAllClass);
+</script>
+
+
 
 
 

@@ -92,6 +92,36 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
 
 <script async src="https://hypothes.is/embed.js"></script>
 
+<script>
+  
+  function applyBreakAllClass() {
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    
+    if (screenWidth <= 960) {
+      
+      var codeElements = document.querySelectorAll('code');
+
+      
+      codeElements.forEach(function(element) {
+        
+        if (element.textContent.length > 10) {
+          
+          element.classList.add('break-all');
+        }
+      });
+    }
+  }
+
+  
+  applyBreakAllClass();
+
+  
+  window.addEventListener('resize', applyBreakAllClass);
+</script>
+
+
 
 
 
