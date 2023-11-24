@@ -69,9 +69,23 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
   <section>
 <h1 class="content-title">
 
-<span class="go-back"><a href="/posts" class="go-back">←</a></span>Engadget 简体中文版关闭</h1><span class="content-meta">
-  <p class="date">02 Nov 2021</p>
+<span title="Back to article list 回到文章归档页" class="go-back"><a href="/posts" class="go-back">←</a></span>Engadget 简体中文版关闭</h1><span class="content-meta">
+  <style>#changeFontLink{font-size: 1.6rem;font-family: var(--sans);}</style>
+  <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>02 Nov 2021</p>
 </span></section>
+
+<script>
+  function toggleFontFamily() {
+      var elements = document.querySelectorAll('body');
+      elements.forEach(function(el) {
+          if (el.style.fontFamily === 'var(--sans)') {
+              el.style.fontFamily = ''; 
+          } else {
+              el.style.fontFamily = 'var(--sans)';
+          }
+      });
+  }
+</script>
 
   
 
