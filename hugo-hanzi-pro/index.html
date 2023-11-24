@@ -86,6 +86,15 @@
           }
       });
 
+      var elements = document.querySelectorAll('blockquote');
+      elements.forEach(function(el) {
+          if (el.style.fontFamily) {
+              el.style.fontFamily = ''; 
+          } else {
+              el.style.fontFamily = 'var(--sans)';
+          }
+      });
+
       var strongElements = document.querySelectorAll('strong');
         strongElements.forEach(function(el) {
             if (el.style.top) {
@@ -199,7 +208,7 @@
 
 <div class="previous-post" style="display:inline-block;">
   
-  <a class="link-reverse" href="https://fanrongbin.com/hybrid-4/?ref=footer">« Hybrid #4</a>
+  <a class="link-reverse" href="https://fanrongbin.com/tufte-css/?ref=footer">« Tufte CSS</a>
   
 </div>
 

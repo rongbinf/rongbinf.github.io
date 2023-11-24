@@ -78,6 +78,15 @@
           }
       });
 
+      var elements = document.querySelectorAll('blockquote');
+      elements.forEach(function(el) {
+          if (el.style.fontFamily) {
+              el.style.fontFamily = ''; 
+          } else {
+              el.style.fontFamily = 'var(--sans)';
+          }
+      });
+
       var strongElements = document.querySelectorAll('strong');
         strongElements.forEach(function(el) {
             if (el.style.top) {
@@ -264,7 +273,7 @@ SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine
 
 <div class="next-post", style="display:inline-block;float:right;">
   
-  <a class="link-reverse" href="https://fanrongbin.com/hugo-hanzi-pro/?ref=footer">在 Hugo 引入汉字标准格式 »</a>
+  <a class="link-reverse" href="https://fanrongbin.com/tufte-css/?ref=footer">Tufte CSS »</a>
   
 </div>
 

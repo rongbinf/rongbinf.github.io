@@ -78,6 +78,15 @@
           }
       });
 
+      var elements = document.querySelectorAll('blockquote');
+      elements.forEach(function(el) {
+          if (el.style.fontFamily) {
+              el.style.fontFamily = ''; 
+          } else {
+              el.style.fontFamily = 'var(--sans)';
+          }
+      });
+
       var strongElements = document.querySelectorAll('strong');
         strongElements.forEach(function(el) {
             if (el.style.top) {

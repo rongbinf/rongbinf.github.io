@@ -78,6 +78,15 @@
           }
       });
 
+      var elements = document.querySelectorAll('blockquote');
+      elements.forEach(function(el) {
+          if (el.style.fontFamily) {
+              el.style.fontFamily = ''; 
+          } else {
+              el.style.fontFamily = 'var(--sans)';
+          }
+      });
+
       var strongElements = document.querySelectorAll('strong');
         strongElements.forEach(function(el) {
             if (el.style.top) {
@@ -201,7 +210,13 @@ Pak, Miok D. 2008. <em>Types of Clauses and Sentence End Particles in Korean</em
 <a href="#%ec%95%95%ec%a1%b4%eb%b2%95%e5%a3%93%e5%b0%8a%e6%b3%95" class="heading-anchor">#</a>
 </h2>
 <p>在听者身份高于主体时使用，即不再对句子里的主体使用敬语。</p>
-<p>目前，压尊法已经被废止[过往在韩国军队或是企业中，由于不熟悉上下级关系而未用、错用压尊法，以至于受恶意相向的情况非常多。韩国军队已在 2016 年废止使用压尊法，국립국어원出版的语言手册也列明其现代韩语只在家庭、师生关系中被使用，压尊法在社会上逐渐淡出。但，毕竟无法影响所有人，仍存在许多比较保守的军队单位、企业在使用。]{.aside}，现代韩语只在家庭、师生关系中使用。在职场中，一般只使用“一半”：<u>对谓词使用敬语，但对主体的<strong>助词</strong>不使用。</u>不过随着语言和社会的变迁，家庭中使用“一半”的情况也越来越多。</p>
+<p>目前，<span class="newthought">压尊法已经被废止</span>
+<label for="sidenote-1" class="margin-toggle sidenote-number">(1)</label>
+<input type="checkbox" id="sidenote-1" class="margin-toggle"/>
+<span class="sidenote">
+<span class="sidenote-number">(1)</span>过往在韩国军队或是企业中，由于不熟悉上下级关系而未用、错用压尊法，以至于受恶意相向的情况非常多。韩国军队已在 2016 年废止使用压尊法，국립국어원出版的语言手册也列明其现代韩语只在家庭、师生关系中被使用，压尊法在社会上逐渐淡出。但，毕竟无法影响所有人，仍存在许多比较保守的军队单位、企业在使用。
+</span>
+，现代韩语只在家庭、师生关系中使用。在职场中，一般只使用“一半”：<u>对谓词使用敬语，但对主体的<strong>助词</strong>不使用。</u>不过随着语言和社会的变迁，家庭中使用“一半”的情况也越来越多。</p>
 <blockquote>
 <ul>
 <li>사장님, 부장님 <u>오셨습니다</u>. (✅ 一半)</li>
