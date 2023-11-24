@@ -70,7 +70,7 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
 <h1 class="content-title">
 
 <span title="Back to article list 回到文章归档页" class="go-back"><a href="/posts" class="go-back">←</a></span>Engadget 简体中文版关闭</h1><span class="content-meta">
-  <style>#changeFontLink{font-size: 1.6rem;font-family: var(--sans);}</style>
+  <style>#changeFontLink{left:-2.85rem;font-size: 1.6rem;}</style>
   <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>02 Nov 2021</p>
 </span></section>
 
@@ -78,12 +78,22 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
   function toggleFontFamily() {
       var elements = document.querySelectorAll('body');
       elements.forEach(function(el) {
-          if (el.style.fontFamily === 'var(--sans)') {
+          if (el.style.fontFamily) {
               el.style.fontFamily = ''; 
           } else {
               el.style.fontFamily = 'var(--sans)';
           }
       });
+
+      var strongElements = document.querySelectorAll('strong');
+        strongElements.forEach(function(el) {
+            if (el.style.top) {
+                el.style.top = '';
+            } else {
+                el.style.top = '0';
+            }
+      });
+
   }
 </script>
 

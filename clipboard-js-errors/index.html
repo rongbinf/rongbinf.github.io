@@ -70,7 +70,7 @@ var clipboard = new ClipboardJS(&#39;. ">
 <h1 class="content-title">
 
 <span title="Back to article list 回到文章归档页" class="go-back"><a href="/posts" class="go-back">←</a></span>在使用 Clipboard.js 中学一点 JavaScript</h1><span class="content-meta">
-  <style>#changeFontLink{font-size: 1.6rem;font-family: var(--sans);}</style>
+  <style>#changeFontLink{left:-2.85rem;font-size: 1.6rem;}</style>
   <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>06 Feb 2020</p>
 </span></section>
 
@@ -78,12 +78,22 @@ var clipboard = new ClipboardJS(&#39;. ">
   function toggleFontFamily() {
       var elements = document.querySelectorAll('body');
       elements.forEach(function(el) {
-          if (el.style.fontFamily === 'var(--sans)') {
+          if (el.style.fontFamily) {
               el.style.fontFamily = ''; 
           } else {
               el.style.fontFamily = 'var(--sans)';
           }
       });
+
+      var strongElements = document.querySelectorAll('strong');
+        strongElements.forEach(function(el) {
+            if (el.style.top) {
+                el.style.top = '';
+            } else {
+                el.style.top = '0';
+            }
+      });
+
   }
 </script>
 
