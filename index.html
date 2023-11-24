@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta name="generator" content="Hugo 0.120.4">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -48,6 +50,7 @@
             --fontFamily: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Segoe UI Variable", "Segoe UI", Arial, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
             --linkColor: #009ba0;
             --linkHover: #000;
+            --buttonBg: var(--linkColor);
         }
 
         #app {
@@ -106,6 +109,7 @@
 
         a {
             text-decoration: none;
+            font-weight: 600;
         }
 
         a:hover {
@@ -120,7 +124,7 @@
         a.info {
             color: #000;
             cursor: help;
-            font-weight: 800;
+            font-weight: 600;
             border-bottom: 1.25px #525252 dashed;
         }
 
@@ -199,6 +203,27 @@
             display: none;
         }
 
+        .question {
+            font-size:1.2em;
+            margin-left: 1rem;
+        }
+
+        @media (max-width: 410px) {
+            .question {
+                margin-left: 3px;
+                position: absolute;
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .question {
+                margin-left: 9.5em;
+                position: relative;
+                font-size: 0.8em;
+            }
+        }
+
         .link {
             font-weight: 800;
         }
@@ -244,9 +269,9 @@
 
     <div id="app">
         <main>
-            <x-grid columns="2">
+            <x-grid columns="2" start animation=fadein ease=easeInOutCubic style="--delay: 1s;">
                 <x-col span="2+1">
-                    <p class="source"><a class="info number" target="_blank" onclick="toggleDisplay('pronounce')">How
+                    <p class="source"><a class="info number" target="_blank" onclick="toggleDisplay('pronounce')" style="user-select: none;">How
                             to pronounce my name?</a></p>
                     <p class="source" id="pronounce" style="display: none;">It sounds like
                         <strong><em>Robin</em></strong> but change the <em>o</em> to <em>ong</em>, like <em>long</em>
@@ -272,8 +297,7 @@
 
             <x-grid columns="1">
                 <x-col span="1">
-                    <p>I <em>he/him</em> currently live in <img style="display: inline; margin-right: 5px;"
-                            src="https://www.beijing.gov.cn/favicon.ico"><a class="info"
+                    <p>I <em>he/him</em> currently live in <a class="info"
                             onclick="toggleDisplay('beijing')">Beijing</a> and I
                         study finance at the University of International Business and Economics (UIBE). I also do some
                         <a target="_blank" href="https://fanrongbin.com/arena" class="link" id="arena-link">
@@ -340,27 +364,14 @@
                         </p>
                     </div>
                 </x-col>
-                <x-col span="2+1">
-                    <p><span class="source">Blog</span><br><a class="link" href="posts">📜 中文博客</a><br>
-                        <a class="link" target="_blank" href="#" id="medium"><span class="black-svg-medium"><svg
-                                    viewBox="0 0 1043.63 592.71" class="q r">
-                                    <g data-name="Layer 2">
-                                        <g data-name="Layer 1">
-                                            <path
-                                                d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </svg></span><span style="margin-right: 6px;"></span>English
-                            posts</a> (under maintenance)
+                <x-col span="2+1" start animation=fadein ease=easeInOutCubic style="--delay: 1s;">
+                    <p>
+                        
+                        <a class="button is-pill is-outline " href="posts">📜 中文博客</a>
+                        
                     </p>
-                    <p><span class="source" target="_blank" href="http://www.sanzhi.org.cn/?page_id=3922">微澜图书馆 Wei Lan
-                            (Wave) Library <a class="info"
-                                onclick="toggleDisplay('weilan1'); toggleDisplay('weilan2');">what?</a></span><br><a
-                            class="link" href="http://www.sanzhi.org.cn/?page_id=3922/" style="color: #0066ff;">🔗
-                            官网</a><br><a class="link" target="_blank"
-                            href="https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ" style="color:#c90000;">🧑‍🏫️
-                            一席演讲</a></p>
+                    
+                            <a class="button is-pill is-outline is-primary" href="http://www.sanzhi.org.cn/?page_id=3922/">📕 微澜图书馆</a><a class="button is-circle is-outline is-primary question" onclick="toggleDisplay('weilan1'); toggleDisplay('weilan2');">?</a></p>
                 </x-col>
             </x-grid>
             <x-grid columns="2">
@@ -395,7 +406,7 @@
             </x-grid>
 
         </main>
-        <footer class="text-end">
+        <footer class="text-end" start animation=fadein ease=easeInOutCubic style="--delay: 1s;">
             <x-grid columns="2">
                 <x-col span="1">
                     <p class="source"><a href="https://html.energy/">HTML Energy</a> is all around us and in this very
@@ -468,3 +479,5 @@
 </script>
 
 
+
+</html>
