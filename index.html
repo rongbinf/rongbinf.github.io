@@ -47,7 +47,7 @@
             --fontSize: calc(100vw / 80);
             --hHeading: 5vw;
             --siteMarg: 5rem;
-            --fontFamily: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Segoe UI Variable", "Segoe UI", Arial, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
+            --fontFamily: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Segoe UI Variable", "Segoe UI", Arial, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
             --linkColor: #009ba0;
             --linkHover: #000;
             --buttonBg: var(--linkColor);
@@ -109,7 +109,6 @@
 
         a {
             text-decoration: none;
-            font-weight: 600;
         }
 
         a:hover {
@@ -286,7 +285,7 @@
                 <x-col span="1">
                     <img alt="avatar" src="https://img.fanrongbin.com/image-modified.webp" class="avatar">
                     <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> 👋<br><span
-                            class="serif heavier">You
+                            class="serif">You
                             can call me
                             Ron.</span></p>
                     <p class="serif larger">你好，我叫荣彬。</p>
@@ -294,7 +293,7 @@
             </x-grid>
 
 
-            <x-grid columns="1">
+            <x-grid columns="1" start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.5s;">
                 <x-col span="1">
                     <p>I <em>he/him</em> currently live in <a class="info"
                             onclick="toggleDisplay('beijing')">Beijing</a> and I
@@ -363,7 +362,7 @@
                         </p>
                     </div>
                 </x-col>
-                <x-col span="2+1" start animation=fadein ease=easeInOutCubic style="--delay: 1s;">
+                <x-col span="2+1" start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.5s">
                     <p>
                         
                         <a class="button is-pill is-outline " href="posts">📜 中文博客</a>
@@ -405,15 +404,14 @@
             </x-grid>
 
         </main>
-        <footer class="text-end" start animation=fadein ease=easeInOutCubic style="--delay: 1s;">
+        <footer class="text-end" start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.5s;">
             <x-grid columns="2">
                 <x-col span="1">
-                    <p class="source"><a href="https://html.energy/">HTML Energy</a> is all around us and in this very
-                        website.</p>
+                    <p class="source"><a href="https://html.energy/" target="_blank">HTML Energy</a>, <a href="https://github.com/Selekkt/skelet" target="_blank">Skelet.css</a>, <a href="https://pages.github.com" target="_blank">Github Pages</a></p>
                 </x-col>
             </x-grid>
             
-            Since 2002, Paused <a target="_blank" href="https://dimsum.eu.org/covid-19.html">2020</a>, Rebooting 2023.
+            
         </footer>
     </div>
 </body>
