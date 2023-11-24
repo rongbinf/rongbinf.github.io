@@ -259,7 +259,27 @@ plt.GridSpec(2, 1, wspace=.25, hspace=.25) ax1 = plt.subplot(grid[0,0:1]) ax1. "
 
 
 </footer>
-</section>
+
+<script async>
+function checkBrowserAndApplyStyle() {
+    var userAgent = navigator.userAgent;
+    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
+    var isFirefox = userAgent.includes("Firefox");
+
+    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
+        addSelectionStyle();
+    }
+}
+
+function addSelectionStyle() {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
+    document.getElementsByTagName('head')[0].appendChild(style);
+}
+
+checkBrowserAndApplyStyle();
+</script></section>
 <section><nav class="menu">
     <ul>
     

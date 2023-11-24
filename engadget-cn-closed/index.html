@@ -232,7 +232,27 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
 
 
 </footer>
-</section>
+
+<script async>
+function checkBrowserAndApplyStyle() {
+    var userAgent = navigator.userAgent;
+    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
+    var isFirefox = userAgent.includes("Firefox");
+
+    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
+        addSelectionStyle();
+    }
+}
+
+function addSelectionStyle() {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
+    document.getElementsByTagName('head')[0].appendChild(style);
+}
+
+checkBrowserAndApplyStyle();
+</script></section>
 <section><nav class="menu">
     <ul>
     
