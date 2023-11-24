@@ -208,22 +208,6 @@
             margin-left: 1rem;
         }
 
-        @media (max-width: 410px) {
-            .question {
-                margin-left: 3px;
-                position: absolute;
-                font-size: 0.8em;
-            }
-        }
-
-        @media (max-width: 350px) {
-            .question {
-                margin-left: 9.5em;
-                position: relative;
-                font-size: 0.8em;
-            }
-        }
-
         .link {
             font-weight: 800;
         }
@@ -231,6 +215,13 @@
         .number {
             font-weight: 800;
             color: #000;
+        }
+
+        img.avatar {
+            max-width: 12rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            user-select: none;
         }
 
         img,
@@ -259,6 +250,22 @@
             }
         }
 
+        @media (max-width: 410px) {
+            .question {
+                margin-left: 3px;
+                position: absolute;
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .question {
+                margin-left: 9.5em;
+                position: relative;
+                font-size: 0.8em;
+            }
+        }
+
         ::-webkit-scrollbar {
             display: none;
         }
@@ -271,19 +278,13 @@
         <main>
             <x-grid columns="2" start animation=fadein ease=easeInOutCubic style="--delay: 1s;">
                 <x-col span="2+1">
-                    <p class="source"><a class="info number" target="_blank" onclick="toggleDisplay('pronounce')" style="user-select: none;">How
-                            to pronounce my name?</a></p>
-                    <p class="source" id="pronounce" style="display: none;">It sounds like
-                        <strong><em>Robin</em></strong> but change the <em>o</em> to <em>ong</em>, like <em>long</em>
-                        without <em>l</em>.<br>And then plus <em>bin</em>.
-                    </p>
+                    
                 </x-col>
             </x-grid>
 
-            <span class="space4"></span>
-
             <x-grid columns="1">
                 <x-col span="1">
+                    <img alt="avatar" src="https://img.fanrongbin.com/image-modified.webp" class="avatar">
                     <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> 👋<br><span
                             class="serif heavier">You
                             can call me
@@ -292,8 +293,6 @@
                 </x-col>
             </x-grid>
 
-            <span class="space5"></span>
-            <span class="space5"></span>
 
             <x-grid columns="1">
                 <x-col span="1">
