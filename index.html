@@ -283,7 +283,7 @@
 
             <x-grid columns="1">
                 <x-col span="1">
-                    <img loading="lazy" alt="avatar" src="https://img.fanrongbin.com/compressed-avatar.webp" class="avatar">
+                    <img alt="avatar" src="https://img.fanrongbin.com/compressed-avatar.webp" class="avatar">
                     <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> 👋<br><span
                             class="serif">You
                             can call me
@@ -293,7 +293,7 @@
             </x-grid>
 
 
-            <x-grid columns="1" start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.5s;">
+            <x-grid loading="lazy" columns="1" start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.5s;">
                 <x-col span="1">
                     <p>I <em>he/him</em> currently live in <a class="info"
                             onclick="toggleDisplay('beijing')">Beijing</a> and I
@@ -335,7 +335,7 @@
 
             <span class="space5"></span>
 
-            <x-grid columns="2">
+            <x-grid loading="lazy" columns="2">
                 <x-col span="1">
                     <div id="beijing">
                         <a class="weatherwidget-io" href="https://forecast7.com/en/39d92116d44/chaoyang/"
