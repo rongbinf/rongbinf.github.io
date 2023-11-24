@@ -271,12 +271,16 @@
 
         .button {
             transform: translateZ(0) scale(1);
-            transition: transform .2s;
+            transition: box-shadow .13s ease-in-out;
         }
 
         .button:hover {
             text-decoration: none;
-            transform: scale(1.05);
+             
+            border: 1px solid rgba(255, 255, 255, .25);
+            box-shadow: var(--buttonBg) 0px 0px 30px 0px, rgb(255 255 255 / 12%) 0px 0px 30px 0px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
         .wave {
@@ -284,7 +288,7 @@
              
             animation-duration: 2.5s;
              
-            animation-iteration-count: 3;
+            animation-iteration-count: 2;
              
             transform-origin: 70% 70%;
              
@@ -334,20 +338,17 @@
 
     <div id="app">
         <main>
-            <x-grid columns="2" start animation=fadein ease=easeInOutCubic style="--delay: 1s;">
-                <x-col span="2+1">
-                    
-                </x-col>
-            </x-grid>
+            
 
             <x-grid columns="1">
                 <x-col span="1">
-                    <img alt="avatar" src="https://img.fanrongbin.com/compressed-avatar.webp" class="avatar">
-                    <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> <span class="wave">👋</span><br><span
+                    <img alt="avatar" src="https://img.fanrongbin.com/compressed-avatar.webp" class="avatar" loading="lazy">
+                    <span start animation=fadein ease=easeInOutCubic
+                style="--delay: 0.1s; --duration: 0.1s;"><p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> <span class="wave">👋</span><br><span
                             class="serif">You
                             can call me
                             Ron.</span></p>
-                    <p class="serif larger">你好，我叫荣彬。</p>
+                    <p class="serif larger">你好，我叫荣彬。</p></span>
                 </x-col>
             </x-grid>
 
@@ -355,7 +356,7 @@
             <x-grid loading="lazy" columns="1" start animation=fadein-up ease=easeInOutCubic
                 style="--delay: 0.5s; --duration: 1s;">
                 <x-col span="1">
-                    <p>I <em>he/him</em> currently live in Beijing (GMT+8) and I
+                    <p>I <em>he/him</em> currently live in Beijing <em>(GMT+8)</em> and I
                         study finance at the University of International Business and Economics (UIBE). I also do some
                         <a target="_blank" href="https://fanrongbin.com/arena" class="link" id="arena-link">
                             <svg class="black-svg-arena" style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"
@@ -458,7 +459,7 @@
                 <x-col span="1">
                     <p class="source"><a href="https://html.energy/" target="_blank">HTML Energy</a>, <a
                             href="https://github.com/Selekkt/skelet" target="_blank">Skelet.css</a>, <a
-                            href="https://pages.github.com" target="_blank">Github Pages</a></br>(page last updated: Nov 2023)
+                            href="https://pages.github.com" target="_blank">Github Pages</a></br>Nov 2023
                     </p>
                 </x-col>
             </x-grid>
