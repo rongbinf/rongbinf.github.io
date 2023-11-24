@@ -23,9 +23,6 @@
     <loc>https://fanrongbin.com/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2023-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://fanrongbin.com/tufte-css/</loc>
-    <lastmod>2023-04-17T16:03:45+01:00</lastmod>
-  </url><url>
     <loc>https://fanrongbin.com/tags/hybrid/</loc>
     <lastmod>2023-02-16T00:00:00+08:00</lastmod>
   </url><url>
@@ -176,6 +173,8 @@
     <loc>https://fanrongbin.com/categories/</loc>
   </url><url>
     <loc>https://fanrongbin.com/series/</loc>
+  </url><url>
+    <loc>https://fanrongbin.com/tufte-css/</loc>
   </url><url>
     <loc>https://fanrongbin.com/links/</loc>
   </url>
