@@ -52,8 +52,6 @@
             --linkColor: #009ba0;
             --linkHover: #000;
             --buttonBg: var(--linkColor);
-            --box-shadow-light: rgb(136 191 176 / 27%) 6px 2px 16px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
-            --box-shadow-dark: rgb(136 191 176 / 15%) 6px 2px 30px 0px, rgb(255 255 255 / 10%) -6px -2px 30px 0px;
         }
 
         #app {
@@ -100,8 +98,8 @@
                 color: #fff;
             }
 
-            body[data-mode="dark"] #mailto {
-                box-shadow: var(--box-shadow-dark);
+            body[data-mode="dark"] .card {
+                background-color: rgb(159 159 159 / 45%);
             }
         }
 
@@ -170,11 +168,27 @@
 
         #mailto {
             display: none;
-            text-align: center;
-            font-size: 85%;
-            box-shadow: var(--box-shadow-light);
-            padding: 5%;
-            width: 90%;
+        }
+
+        .card {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            z-index: 100;
+            max-width: 300px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            padding: 35px;
+
+            border: 1px solid rgba(255, 255, 255, .25);
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.45);
+            box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.25);
+
+            backdrop-filter: blur(10px);
         }
 
          
@@ -198,7 +212,6 @@
             position: absolute;
             font-size: 0.7em;
         }
-
 
         .link {
             font-weight: 800;
@@ -382,8 +395,8 @@
             <x-grid loading="lazy" columns="2">
                 <x-col span="1">
                     
-                    <div>
-                        <p id="mailto"><a
+                    <div class="card" id="mailto">
+                        <p><a
                                 href="mailto:r_fan@outlook.com">mailto:</a><br><strong>r_fan@outlook.com</strong><br>
                             <a class="btn" data-clipboard-text="r_fan@outlook.com"
                                 onclick="document.getElementById('copied').style.display='block'">click to copy</a><span
