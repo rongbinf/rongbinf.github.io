@@ -44,6 +44,57 @@
     <script src="/clipboard.min.js"></script>
 
     <style>
+        @charset "UTF-8";
+
+        @font-face {
+            font-family: "et-book";
+            src: url("css/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+            src: url("css/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"),
+                url("css/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"),
+                url("css/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"),
+                url("css/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "et-book";
+            src: url("css/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+            src: url("css/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix")
+                    format("embedded-opentype"),
+                url("css/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff")
+                    format("woff"),
+                url("css/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf")
+                    format("truetype"),
+                url("css/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf")
+                    format("svg");
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "et-book";
+            src: url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+            src: url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"),
+                url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"),
+                url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"),
+                url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "et-book-roman-old-style";
+            src: url("css/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+            src: url("css/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix")
+                    format("embedded-opentype"),
+                url("css/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"),
+                url("css/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"),
+                url("css/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+
         :root {
             --fontSize: calc(100vw / 80);
             --hHeading: 5vw;
@@ -54,11 +105,16 @@
             --buttonBg: var(--linkColor);
         }
 
+        body {
+             
+        }
+
         #app {
-            padding: 2rem var(--siteMarg);
             max-width: 1600px;
             margin: 0 auto;
             z-index: -1;
+            padding: 5rem;
+            padding-left: 8rem;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -158,8 +214,7 @@
         }
 
         .serif {
-            font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", "EB Garamond", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, 楷体, cursive, serif;
-            ;
+            font-family: et-book, "Biaodian Pro Serif GB", "Numeral LF Serif", "EB Garamond", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, 楷体, cursive, serif;
         }
 
         .space4 {
@@ -323,7 +378,7 @@
 
     <div id="app">
         <main>
-
+            
             <x-grid columns="1">
                 <x-col span="1">
                     <img alt="avatar" src="https://img.fanrongbin.com/compressed-avatar.webp" class="avatar"
@@ -437,7 +492,7 @@
             </x-grid>
 
         </main>
-        <footer class="text-end" start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.5s;">
+        <footer class="text-end" start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.5s;margin-top:5rem">
             <x-grid columns="2">
                 <x-col span="1">
                     <p class="source"><a href="https://html.energy/" target="_blank">HTML Energy</a>, <a
