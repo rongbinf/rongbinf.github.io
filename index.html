@@ -138,6 +138,10 @@
             background-color: transparent;
             padding: 5px;
             text-decoration: none;
+            box-shadow: #c4c4c4 0px 0px 15px 0px, rgb(255 255 255 / 12%) 0px 0px 15px 0px;
+        }
+
+        a.hover:active, a.hover:focus {
             box-shadow: #c4c4c4 0px 0px 30px 0px, rgb(255 255 255 / 12%) 0px 0px 30px 0px;
         }
 
@@ -194,10 +198,9 @@
             transition: all 1s;
         }
 
-        #copied {
-            display: none;
-            color: #56565698;
-            font-size: 80%;
+        .card-button {
+            padding: 1rem;
+            font-size: 1.2rem;
         }
 
         .question {
@@ -258,9 +261,12 @@
             text-decoration: none;
              
             border: 1px solid rgba(255, 255, 255, .25);
-            box-shadow: var(--buttonBg) 0px 0px 30px 0px, rgb(255 255 255 / 12%) 0px 0px 30px 0px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            box-shadow: var(--buttonBg) 0px 0px 15px 0px, rgb(255 255 255 / 10%) 0px 0px 15px 0px;
+        }
+
+        .button:active {
+            border: 1px solid rgba(255, 255, 255, .5);
+            box-shadow: var(--buttonBg) 0px 0px 45px 0px, rgb(255 255 255 / 10%) 0px 0px 45px 0px;
         }
 
         .wave {
@@ -372,16 +378,15 @@
             <x-grid loading="lazy" columns="2">
                 <x-col span="1">
 
-                    <div class="card" id="mailto" start animation=fadein-up ease=easeInOutCubic
+                    <div class="card" id="mailto" data-toggleable="true" start animation=fadein-up ease=easeInOutCubic
                         style="--duration: 0.5s; display:none;">
-                        <p><a href="mailto:r_fan@outlook.com">mailto:</a><br><strong>r_fan@outlook.com</strong><br>
-                            <a class="btn" data-clipboard-text="r_fan@outlook.com"
-                                onclick="document.getElementById('copied').style.display='block'">click to copy</a><span
-                                id="copied" start animation="fade-in" ease="easeInOutCubic"
-                                style="--duration:0.5s;">copied!</span>
-                            </br></br><span class="source" style="font-size: 0.99rem;">btw I still use my
-                                Gmail:</br>fanrongbin0201(at)gmail.com</span>
+                        <p><strong class="larger">r_fan</br>@outlook.com</strong>
                         </p>
+                        <p><a class="button is-pill is-outline card-button" data-clipboard-text="r_fan@outlook.com"
+                                onclick="this.textContent='Copied!';">Copy</a></p>
+                                <p><a class="button is-pill is-outline card-button" href="mailto:r_fan@outlook.com">Open Mail App</a></p>
+                            <p><span class="source" style="font-size: 1rem;">btw I still use my
+                                Gmail:</br>fanrongbin0201(at)gmail.com</span></p>
                     </div>
 
                 </x-col>
@@ -395,7 +400,7 @@
 
                     <a class="button is-pill is-outline is-primary" href="http://www.sanzhi.org.cn/?page_id=3922/">📕
                         微澜图书馆</a><a class="button is-circle is-outline is-primary question"
-                        onclick="toggleAnimation('weilan2'); toggleAnimation('weilan1');">?</a></p>
+                        onclick="slideAnimation('weilan2'); slideAnimation('weilan1');">?</a></p>
                 </x-col>
             </x-grid>
             <x-grid columns="2" id="weilan">
@@ -508,7 +513,7 @@
 
 
 <script>
-    function toggleAnimation(elementId) {
+    function slideAnimation(elementId) {
         var animatedDiv = document.getElementById(elementId);
 
         
@@ -526,8 +531,43 @@
             }, 500); 
         }
     }
-
 </script>
+
+
+<script>
+    function toggleAnimation(elementId) {
+        var animatedDiv = document.getElementById(elementId);
+
+        if (animatedDiv.style.display === "none") {
+            animatedDiv.style.display = "block";
+            animatedDiv.setAttribute('animation', 'fadein-up');
+        } else {
+            closeAnimation(animatedDiv);
+        }
+    }
+
+    function closeAnimation(animatedDiv) {
+        animatedDiv.setAttribute('animation', 'fadeout-down');
+
+        setTimeout(function() {
+            animatedDiv.style.display = "none";
+        }, 500);
+    }
+
+    document.addEventListener('click', function(event) {
+        var toggleableDivs = document.querySelectorAll('[data-toggleable="true"]');
+
+        toggleableDivs.forEach(function(div) {
+            var triggerElement = document.querySelector('a[onclick^="toggleAnimation(\'' + div.id + '\')"]');
+
+            
+            if (div.style.display !== "none" && !div.contains(event.target) && (!triggerElement || !triggerElement.contains(event.target))) {
+                closeAnimation(div);
+            }
+        });
+    });
+</script>
+
 
 
 
