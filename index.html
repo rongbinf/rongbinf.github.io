@@ -221,11 +221,10 @@
             user-select: none;
         }
 
-        img,
         svg {
             max-width: 16px;
             display: inline;
-            padding-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         @media (max-width: 1200px) {
@@ -328,7 +327,7 @@
             <x-grid columns="1">
                 <x-col span="1">
                     <img alt="avatar" src="https://img.fanrongbin.com/compressed-avatar.webp" class="avatar"
-                        loading="lazy">
+                        loading="lazy" start animation="fade-in">
                     <span start animation=fadein ease=easeInOutCubic style="--delay: 0.1s; --duration: 0.1s;">
                         <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> <span
                                 class="wave">👋</span><br><span class="serif">You
@@ -339,9 +338,10 @@
                 </x-col>
             </x-grid>
 
+            <span class="space5"></span>
 
             <x-grid loading="lazy" columns="1" start animation=fadein-up ease=easeInOutCubic
-                style="--delay: 0.5s; --duration: 1s;">
+                style="--delay: 0.2s; --duration: 0.6s;">
                 <x-col span="1">
                     <p>I <em>he/him</em> currently live in Beijing and I
                         study finance at the University of International Business and Economics (UIBE). I also do some
@@ -390,7 +390,7 @@
                     </div>
 
                 </x-col>
-                <x-col span="2+1" start animation=fadein-up ease=easeInOutCubic style="--delay: 1s; --duration: 1s">
+                <x-col span="2+1" start animation=fadein-up ease=easeInOutCubic style="--delay: 0.2s; --duration: 0.6s">
                     <p>
 
                         <a class="button is-pill is-outline" href="posts">📜 中文博客</a>
