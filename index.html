@@ -182,7 +182,7 @@
         }
 
         .larger {
-            font-size: 125%;
+            font-size: 200%;
         }
 
         .serif {
@@ -198,7 +198,7 @@
         .space5 {
             display: block;
             width: 100%;
-            margin: 4vw auto;
+            margin: 3.5vw auto;
         }
 
         .card {
@@ -254,15 +254,46 @@
             margin-bottom: 3px;
         }
 
+        .center-button {
+            display: none;
+        }
+
         @media (max-width: 1200px) {
             :root {
                 --fontSize: 1.5rem;
                 --hHeading: 2.8rem;
                 --siteMarg: 2rem;
             }
-
             x-flex>x-col {
                 max-width: 100%;
+            }
+        }
+
+        @media (min-width: 950px) {
+            .introduction {
+                margin: 0 5% 0 0;
+            }
+            #mail-address p, a.card-button {
+                font-size: 1.6rem;
+            }
+            #app {
+                margin: 0 3rem;
+            }
+            .center-button {
+                display: block;
+                padding-right: 20rem;
+            }
+            .right-corner-button {
+                display: none;
+            }
+        }
+
+        @media (min-width: 650px) {
+            .introduction {
+                margin: 0 15% 0 0;
+            }
+            #mail-address p, a.card-button {
+                font-size: 1.4rem;
             }
         }
 
@@ -354,23 +385,23 @@
             <x-grid columns="1">
                 <x-col span="1">
                     <img alt="avatar" src="https://img.fanrongbin.com/compressed-avatar.webp" class="avatar"
-                        start animation=fadein ease=easeInOutCubic style="--delay:0s;--duration:0.5s;">
-                    <span start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.1s;">
+                        start animation=fadein ease=easeInOutCubic style="--delay:0s;--duration:0.3s;">
+                    <span start animation=fadein ease=easeInOutCubic style="--delay: 0.3s; --duration: 0.1s;">
                         <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> <span
                                 class="wave">👋</span><br><span class="serif">You
                                 can call me
                                 Ron.</span></p>
-                        <p class="serif larger">你好，我叫荣彬。</p>
+                        
                     </span>
                 </x-col>
             </x-grid>
 
             <span class="space5"></span>
 
-            <x-grid columns="1" start animation=fadein-up ease=easeInOutCubic
-                style="--delay: 0.2s; --duration: 0.6s;">
-                <x-col span="1">
-                    <p>I <em>he/him</em> currently live in Beijing and I
+            <x-grid loading="lazy" columns="1" start animation=fadein-up ease=easeInOutCubic
+                style="--delay: 0.4s; --duration: 0.6s;">
+                <x-col span="1" class="introduction">
+                    <p>I <em>he/him/his</em> currently live in Beijing, and I
                         study finance at the University of International Business and Economics (UIBE). I also do some
                         <a target="_blank" href="https://fanrongbin.com/arena" class="info hover">
                             <svg class="black-svg-arena" style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"
@@ -397,26 +428,35 @@
                         and I hope to learn more about you and the world.
                     </p>
                 </x-col>
+                <x-col class="center-button" span="2+1" start animation=fadein-up ease=easeInOutCubic style="--delay: 0.4s; --duration: 0.6s">
+                    <p>
+
+                        <a class="button is-pill is-outline" href="posts">📜 中文博客</a>
+
+                        
+                    </p>
+
+                    <a class="button is-pill is-outline is-primary" href="http://www.sanzhi.org.cn/?page_id=3922/">📕
+                        微澜图书馆</a><a class="button is-circle is-outline is-primary question"
+                        onclick="slideAnimation('weilan2'); slideAnimation('weilan1');">?</a></p>
+                </x-col>
             </x-grid>
 
             <span class="space5"></span>
 
-            <x-grid loading="lazy" columns="2">
-                <x-col span="1">
-
                     <div class="card" id="mailto" data-toggleable="true" start animation=fadein-up ease=easeInOutCubic
                         style="--duration: 0.5s; display:none;">
-                        <p><strong class="larger">r_fan</br>@outlook.com</strong>
+                        <p id="mail-address"><strong>r_fan</br>(at)outlook.com</strong>
                         </p>
-                        <p><a class="button is-pill is-outline card-button btn" data-clipboard-text="r_fan@outlook.com"
+                        <p><a class="button card-button is-pill is-outline btn" data-clipboard-text="r_fan@outlook.com"
                                 onclick="this.textContent='Copied!';">Copy</a></p>
-                                <p><a class="button is-pill is-outline card-button" href="mailto:r_fan@outlook.com">Open Mail App</a></p>
-                            <p><span class="source" style="font-size: 1rem;">btw I still use my
+                                <p><a class="button card-button is-pill is-outline" href="mailto:r_fan@outlook.com">Open Mail App</a></p>
+                            <p><span class="source" style="font-size: 1rem;">I still use my
                                 Gmail:</br>fanrongbin0201(at)gmail.com</span></p>
                     </div>
+            <x-grid loading="lazy" columns="2">
 
-                </x-col>
-                <x-col span="2+1" start animation=fadein-up ease=easeInOutCubic style="--delay: 0.8s; --duration: 0.6s">
+                <x-col class="right-corner-button" span="2+1" start animation=fadein-up ease=easeInOutCubic style="--delay: 0.4s; --duration: 0.6s">
                     <p>
 
                         <a class="button is-pill is-outline" href="posts">📜 中文博客</a>
@@ -465,7 +505,7 @@
         </main>
         <footer class="text-end" start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.5s;margin-top:5rem">
             <x-grid columns="2">
-                <x-col span="1">
+                <x-col span="2">
                     <p class="source"><a href="https://html.energy/" target="_blank">HTML Energy</a>, <a
                             href="https://github.com/Selekkt/skelet" target="_blank">Skelet.css</a>, <a
                             href="https://pages.github.com" target="_blank">Github Pages</a></br>Nov 2023
