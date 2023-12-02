@@ -85,8 +85,12 @@
         #app {
             max-width: 1600px;
             margin: 0 auto;
-            z-index: -1;
+            z-index: 100;
             padding: 4rem;
+        }
+
+        main {
+            z-index: 500;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -205,7 +209,7 @@
             position: absolute;
             bottom: 5%;
             left: 5%;
-            z-index: 100;
+            z-index: 10000;
             max-width: 300px;
             min-height: 200px;
             display: flex;
@@ -258,7 +262,7 @@
             display: none;
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1400px) {
             :root {
                 --fontSize: 1.5rem;
                 --hHeading: 2.8rem;
@@ -266,6 +270,12 @@
             }
             x-flex>x-col {
                 max-width: 100%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .source {
+                font-size: 1.4rem;
             }
         }
 
@@ -310,8 +320,10 @@
         }
 
         .button {
+            z-index: 500;
             transform: translateZ(0) scale(1);
             transition: box-shadow .13s ease-in-out;
+            background: #ffffff82;
         }
 
         .button:hover {
@@ -516,7 +528,88 @@
             
         </footer>
     </div>
+
+    <div class="blob-cont">
+        <div class="yellow blob"></div>
+        <div class="red blob"></div>
+        <div class="green blob"></div>
+      </div>
+    </div>
+
 </body>
+
+<style>
+     
+.blob-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -100;
+   
+}
+
+
+.blob {
+  border-radius: 100px;
+  filter: blur(60px);
+}
+
+.yellow {
+  background-color: #db81ff7a;
+  position: absolute;
+  top: 50px;
+  right: -100px;
+  height: 25%;
+  width: 20%;
+  
+  animation: red 8s infinite ease;
+}
+
+.green {
+  background-color: #1cc3b3b0;
+  position: absolute;
+  top: 80px;
+  right: -20px;
+  height: 25%;
+  width: 30%;
+  
+  animation: green 8s infinite ease;
+}
+
+.red {
+  background-color: #63cdfebf;
+  position: absolute;
+  right: 0;
+  top: 300px;
+  height: 30%;
+  width: 20%;
+  
+  animation: red 8s infinite linear;
+}
+
+@keyframes yellow {
+  0% {top: 20em; left: 10em; transform: scale(1);}
+  30% {top: 30em; left: 15em; transform: scale(1.2);}
+  60% {top: 100px; left: 200px; transform: scale(1.3);}
+  100% {top: 200px; left: 100px; transform: scale(1);}
+}
+
+@keyframes green {
+  0% {top: 8%; right: -20%; transform: scale(1.2);}
+  30% {top: 30%; right: -20%;transform: scale(1);}
+  60% {top: 20%; right: 10%;transform: scale(1);}
+  100% {top: 8%; right: -20%; transform: scale(1.2);}
+}
+
+@keyframes red {
+  0% {top: 25%; right: 0em; transform: scale(1);}
+  30% {top: 15%; right: 15%;transform: scale(1.4);}
+  60% {top: 25%; right: 10%;transform: scale(1);}
+  100% {top: 25%; right: 0em; transform: scale(1);}
+}
+</style>
+
 
 
 <script>
