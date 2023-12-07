@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.120.4">
+	<meta name="generator" content="Hugo 0.121.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=0">
 
@@ -38,9 +38,7 @@
     <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
 
     <link rel="stylesheet" href="skelet.min.css">
-
     
-
     <script src="clipboard.min.js"></script>
 
     <style>
@@ -76,10 +74,6 @@
             --linkColor: #009ba0;
             --linkHover: #000;
             --buttonBg: var(--linkColor);
-        }
-
-        body {
-             
         }
 
         #app {
@@ -345,10 +339,6 @@
             }
         }
 
-        ::-webkit-scrollbar {
-            display: none;
-        }
-
         .button {
             z-index: 500;
             transform: translateZ(0) scale(1);
@@ -415,6 +405,10 @@
                 transform: rotate(0.0deg)
             }
         }
+        
+        ::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
 
@@ -422,6 +416,7 @@
 <body data-mode="light">
 
     <div id="app">
+
         <main>
 
             <x-grid columns="1">
@@ -443,9 +438,7 @@
             <x-grid loading="lazy" columns="1" start animation=fadein-up ease=easeInOutCubic
                 style="--delay: 0.4s; --duration: 0.6s;">
                 <x-col span="1" class="introduction">
-                    <p>I <em>he/him/his</em> currently live in Beijing, and I
-                        study finance at the University of International Business and Economics (UIBE). I also do
-                        some<span style="white-space: nowrap;">
+                    <p>I <em>he/him/his</em> currently live in Beijing, and I study finance at the University of International Business and Economics (UIBE). I also do some<span style="white-space: nowrap;">
                             <a target="_blank" href="https://fanrongbin.com/arena" class="info hover">
                                 <svg class="black-svg-arena" style="margin-right: 5px;"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -457,8 +450,7 @@
                                 </svg>design</a></span>.
                     </p>
                     <p>Feel free to <a class="info hover" onclick="toggleAnimation('mailto')"
-                            style="border-bottom: 1.2px dashed;">📧 email
-                            me</a> or <a class="info hover" target="_blank"
+                            style="border-bottom: 1.2px dashed;">📧 email me</a> or <a class="info hover" target="_blank"
                             href="https://linkedin.com/in/rongbin-fan"><span style="white-space: nowrap;"><svg
                                     xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="64"
                                     height="64" viewBox="0 0 64 64">
@@ -476,17 +468,15 @@
                                     <path class="favicon-text"
                                         d="M52,35.76V52H44V37.81c0-4.31-2.73-6.11-5-6.11a5.82,5.82,0,0,0-6,6.21V52H25V25h7.53v3.79h.11c.8-1.64,4.44-4.37,9.13-4.37S52,27.59,52,35.76ZM16,11.3A4.7,4.7,0,1,0,20.7,16,4.69,4.69,0,0,0,16,11.3ZM12,52h8V25H12Z" />
                                 </svg>
-                                connect</a></span>. I speak Chinese <em>Mandarin, Cantonese,
-                            Taiwanese/Southern Min</em>, English, Korean,
-                        and I hope to learn more about you and the world.
+                                connect</a></span>. I speak Chinese <em>Mandarin, Cantonese, Taiwanese/Southern Min</em>, English, Korean, and I hope to learn more about you and the world.
                     </p>
                 </x-col>
+
+                
                 <x-col class="center-button" span="2+1" start animation=fadein-up ease=easeInOutCubic
                     style="--delay: 0.4s; --duration: 0.6s">
                     <p>
-
                         <a class="button is-pill is-outline" href="posts">📜 中文博客</a>
-
                         
                     </p>
 
@@ -498,25 +488,12 @@
 
             <span class="space5"></span>
 
-            <div class="card" id="mailto" data-toggleable="true" start animation=fadein-up ease=easeInOutCubic
-                style="--duration: 0.5s; display:none;">
-                <p id="mail-address"><strong>r_fan</br>(at)outlook.com</strong>
-                </p>
-                <p><a class="button card-button is-pill is-outline btn" data-clipboard-text="r_fan@outlook.com"
-                        onclick="this.textContent='✔ Copied!';" style="border:1px dashed;">📋 Copy</a></p>
-                <p><a class="button card-button is-pill is-outline" href="mailto:r_fan@outlook.com">📱 Open Mail App</a>
-                </p>
-                <p><span class="source" style="font-size: 1rem;">I still use my
-                        Gmail:</br>fanrongbin0201(at)gmail.com</span></p>
-            </div>
+            
             <x-grid loading="lazy" columns="2">
-
                 <x-col class="right-corner-button" span="2+1" start animation=fadein-up ease=easeInOutCubic
                     style="--delay: 0.4s; --duration: 0.6s">
                     <p>
-
                         <a class="button is-pill is-outline" href="posts">📜 中文博客</a>
-
                         
                     </p>
 
@@ -526,6 +503,7 @@
                             style="border: 1px dashed;">?</a></p>
                 </x-col>
             </x-grid>
+
             <x-grid columns="2" id="weilan">
                 <x-col span="1" id="weilan2" start animation=fadein-up ease=easeInOutCubic
                     style="--duration: 0.5s; display: none; text-align: right;">
@@ -559,7 +537,18 @@
                 </x-col>
             </x-grid>
 
+            <div class="card" id="mailto" data-toggleable="true" start animation=fadein-up ease=easeInOutCubic
+                style="--duration: 0.5s; display:none;">
+                <p id="mail-address"><strong>r_fan</br>(at)outlook.com</strong></p>
+                <p><a class="button card-button is-pill is-outline btn" data-clipboard-text="r_fan@outlook.com"
+                        onclick="this.textContent='✔ Copied!';" style="border:1px dashed;">📋 Copy</a></p>
+                <p><a class="button card-button is-pill is-outline" href="mailto:r_fan@outlook.com">📱 Open Mail App</a></p>
+                <p><span class="source" style="font-size: 1rem;">I still use my
+                        Gmail:</br>fanrongbin0201(at)gmail.com</span></p>
+            </div>
+
         </main>
+
         <footer class="text-end" start animation=fadein ease=easeInOutCubic
             style="--delay: 0.5s; --duration: 0.5s;margin-top:5rem">
             <x-grid columns="2">
@@ -573,6 +562,7 @@
             
             
         </footer>
+
     </div>
 
     <div class="blob-cont">
@@ -580,12 +570,11 @@
         <div class="blob blob2"></div>
         <div class="blob blob3"></div>
     </div>
-    </div>
 
 </body>
 
+
 <style>
-     
     .blob-cont {
         display: flex;
         flex-direction: column;
@@ -595,7 +584,6 @@
          
     }
 
-
     .blob {
         border-radius: 100px;
         filter: blur(90px);
@@ -604,7 +592,6 @@
     .blob1 {
         background-color: #d264fe1c;
         position: fixed;
-         
         height: 30%;
         width: 30%;
 
@@ -614,7 +601,6 @@
     .blob2 {
         background-color: #1cc3b31c;
         position: fixed;
-         
         height: 30%;
         width: 30%;
 
@@ -624,7 +610,6 @@
     .blob3 {
         background-color: #36bfff1c;
         position: fixed;
-         
         height: 30%;
         width: 30%;
 
