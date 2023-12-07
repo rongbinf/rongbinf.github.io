@@ -6371,15 +6371,5 @@ Epilogue
 &lt;p&gt;Many thanks go to Edward Tufte for leading the way with his work. It is only through his kind and careful editing that this project accomplishes what it does. All errors of implementation are of course mine.&lt;/p&gt;
 </description>
     </item>
-    <item>
-      <title>友链</title>
-      <link>https://fanrongbin.com/links/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/links/</guid>
-      <description>&lt;style&gt;.date,.next-post,.previous-post{display:none!important;}&lt;/style&gt;
-&lt;p&gt;你找到了这个页面，欢迎与我交换友链！&lt;/p&gt;
-&lt;p&gt;请发邮件。&lt;/p&gt;
-</description>
-    </item>
   </channel>
 </rss>
