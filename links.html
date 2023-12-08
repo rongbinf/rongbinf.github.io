@@ -413,17 +413,17 @@
                 style="--delay: 0.4s; --duration: 0.6s; max-width: 800px;">
                 <x-col span="1">
                     <div class="profile-grid">
-                        <div class="profile">
+                        <div class="profile" id="miang">
                             <div class="avatar"><img src="https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg"></div>
                             <span class="status"><p class="name serif">Miang</p><span class="online"></span></span>
                             <p><a class="button is-pill is-outline profile-button the-link" href="https://miang.bearblog.dev" target="_blank">Website</a></p>
                         </div>
-                        <div class="profile">
+                        <div class="profile" id="anzifan">
                             <div class="avatar"><img src="https://avatars.githubusercontent.com/u/38721913?v=4"></div>
                             <span class="status"><p class="name serif">An Zifan</p><span class="online"></span></span>
                             <p><a class="button is-pill is-outline profile-button the-link" href="https://www.anzifan.com" target="_blank">Website</a></p>
                         </div>
-                        <div class="profile">
+                        <div class="profile" id="placeholder">
                             <div class="avatar"></div>
                             <span class="status"><p class="name serif">Placeholder</p><span class="online"></span></span>
                             <p><a class="button is-pill is-outline profile-button the-link" href="https://localhost:1313/" target="_blank">Blog</a></p>
@@ -751,35 +751,27 @@
 </script>
 
 <!-- detect website status -->
-<!-- moved to cloudflare -->
-<!-- <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var links = document.querySelectorAll('a.the-link');
-
-    links.forEach(function(link) {
-        // Traverse up to find the parent container, then find the .online span within it
-        var parentContainer = link.closest('.profile');
-        if (parentContainer) {
-            var statusDot = parentContainer.querySelector('.online');
-            if (statusDot) {
-                statusDot.style.backgroundColor = '#bbb'; // Initially set to gray
-
-                // Check the link
-                var urlToCheck = link.getAttribute('href');
-                fetch(urlToCheck, { method: 'HEAD' })
-                    .then(function(response) {
-                        if (response.ok) {
-                            statusDot.style.backgroundColor = '#00df0b';
-                        } else {
-                            statusDot.style.backgroundColor = 'red';
-                        }
-                    })
-                    .catch(function(error) {
-                        statusDot.style.backgroundColor = 'red';
-                    });
-            }
-        }
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 向 Cloudflare Worker 发起请求获取状态
+        fetch('https://website-status.rongbin0201.workers.dev/')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(item => {
+                // 找到对应 URL 的链接元素
+                const link = document.querySelector(`a[href="${item.url}"]`);
+                if (link) {
+                    // 获取对应的 <span class="online"> 元素
+                    const onlineIndicator = link.closest('.profile').querySelector('.online');
+                    if (onlineIndicator) {
+                        // 根据状态设置背景颜色
+                        onlineIndicator.style.backgroundColor = item.status === 200 ? 'green' : 'red';
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Error:', error));
     });
-});
-</script> -->
+    </script>
+    
 </html>
