@@ -291,6 +291,23 @@
             font-weight: 800;
         }
 
+        .status {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .online {
+            height: 8px;
+            width: 8px;
+            background-color: #bbb;
+            border-radius: 9999px;
+            display: inline-block;
+            text-align: center;
+        }
+
         a.button.is-pill.is-outline.profile-button {
             color: #000000cc;
             --buttonBorderColor: #000000cc;
@@ -397,19 +414,19 @@
                 <x-col span="1">
                     <div class="profile-grid">
                         <div class="profile">
+                            <div class="avatar"><img src="https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg"></div>
+                            <span class="status"><p class="name serif">Miang</p><span class="online"></span></span>
+                            <p><a class="button is-pill is-outline profile-button the-link" href="https://miang.bearblog.dev" target="_blank">Website</a></p>
+                        </div>
+                        <div class="profile">
                             <div class="avatar"><img src="https://avatars.githubusercontent.com/u/38721913?v=4"></div>
-                            <p class="name serif">An Zifan</p>
-                            <p><a class="button is-pill is-outline profile-button">Blog</a></p>
+                            <span class="status"><p class="name serif">An Zifan</p><span class="online"></span></span>
+                            <p><a class="button is-pill is-outline profile-button the-link" href="https://www.anzifan.com" target="_blank">Website</a></p>
                         </div>
                         <div class="profile">
                             <div class="avatar"></div>
-                            <p class="name serif">Placeholder</p>
-                            <p><a class="button is-pill is-outline profile-button">Blog</a></p>
-                        </div>
-                        <div class="profile">
-                            <div class="avatar"></div>
-                            <p class="name serif">Placeholder</p>
-                            <p><a class="button is-pill is-outline profile-button">Blog</a></p>
+                            <span class="status"><p class="name serif">Placeholder</p><span class="online"></span></span>
+                            <p><a class="button is-pill is-outline profile-button the-link" href="https://localhost:1313/" target="_blank">Blog</a></p>
                         </div>
                     </div>
                 </x-col>
@@ -733,4 +750,36 @@
     }
 </script>
 
+<!-- detect website status -->
+<!-- moved to cloudflare -->
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('a.the-link');
+
+    links.forEach(function(link) {
+        // Traverse up to find the parent container, then find the .online span within it
+        var parentContainer = link.closest('.profile');
+        if (parentContainer) {
+            var statusDot = parentContainer.querySelector('.online');
+            if (statusDot) {
+                statusDot.style.backgroundColor = '#bbb'; // Initially set to gray
+
+                // Check the link
+                var urlToCheck = link.getAttribute('href');
+                fetch(urlToCheck, { method: 'HEAD' })
+                    .then(function(response) {
+                        if (response.ok) {
+                            statusDot.style.backgroundColor = '#00df0b';
+                        } else {
+                            statusDot.style.backgroundColor = 'red';
+                        }
+                    })
+                    .catch(function(error) {
+                        statusDot.style.backgroundColor = 'red';
+                    });
+            }
+        }
+    });
+});
+</script> -->
 </html>
