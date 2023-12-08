@@ -309,6 +309,20 @@
             text-align: center;
         }
 
+        .profile-tag {
+            padding: 5px;
+            font-size: 1.3rem;
+            /* font-weight: 400; */
+            border: none;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .profile-tag:hover {
+            opacity: unset;
+            cursor: default;
+        }
+
         a.button.is-pill.is-outline.profile-button {
             color: #000000cc;
             --buttonBorderColor: #000000cc;
@@ -417,17 +431,20 @@
                         <div class="profile" id="miang">
                             <div class="avatar"><img src="https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg"></div>
                             <span class="status"><p class="name serif">Miang</p><span class="online"></span></span>
+                            <button class="profile-tag" style="background: #ea4c89;">#anime</button>
                             <p><a class="button is-pill is-outline profile-button the-link" href="https://bgm.tv/anime/list/miang" target="_blank">Bangumi</a></p>
                         </div>
                         <div class="profile" id="anzifan">
                             <div class="avatar"><img src="https://avatars.githubusercontent.com/u/38721913?v=4"></div>
                             <span class="status"><p class="name serif">An Zifan</p><span class="online"></span></span>
+                            <button class="profile-tag" style="background: #ffe100; color: #000;">#front-end</button>
                             <p><a class="button is-pill is-outline profile-button the-link" href="https://www.anzifan.com" target="_blank">Website</a></p>
                         </div>
                         <div class="profile" id="placeholder">
                             <div class="avatar"></div>
                             <span class="status"><p class="name serif">Placeholder</p><span class="online"></span></span>
-                            <p><a class="button is-pill is-outline profile-button the-link" href="https://localhost:1313/" target="_blank">Blog</a></p>
+                            <button class="profile-tag" style="background: #7e7e7e;">#label</button>
+                            <p><a class="button is-pill is-outline profile-button the-link" target="_blank">Link</a></p>
                         </div>
                     </div>
                 </x-col>
@@ -694,64 +711,6 @@
         }
     }
 </script>
-
-<!-- weilan animation -->
-<script>
-    function slideAnimation(elementId) {
-        var animatedDiv = document.getElementById(elementId);
-
-        // Check if the div is currently visible
-        if (animatedDiv.style.display === "none") {
-            // Show the div and apply fadein animation
-            animatedDiv.style.display = "block";
-            animatedDiv.setAttribute('animation', 'fadein-up');
-        } else {
-            // Change animation to fadeout (if available in skelet.css)
-            animatedDiv.setAttribute('animation', 'fadeout-down');
-
-            // Hide the div after the animation duration
-            setTimeout(function () {
-                animatedDiv.style.display = "none";
-            }, 500); // Adjust to match the animation duration
-        }
-    }
-</script>
-
-<!-- card animation -->
-<script>
-    function toggleAnimation(elementId) {
-        var animatedDiv = document.getElementById(elementId);
-
-        if (animatedDiv.style.display === "none") {
-            animatedDiv.style.display = "block";
-            animatedDiv.setAttribute('animation', 'fadein-up');
-        } else {
-            closeAnimation(animatedDiv);
-        }
-    }
-
-    function closeAnimation(animatedDiv) {
-        animatedDiv.setAttribute('animation', 'fadeout-down');
-
-        setTimeout(function () {
-            animatedDiv.style.display = "none";
-        }, 500);
-    }
-
-    document.addEventListener('click', function (event) {
-        var toggleableDivs = document.querySelectorAll('[data-toggleable="true"]');
-
-        toggleableDivs.forEach(function (div) {
-            var triggerElement = document.querySelector('a[onclick^="toggleAnimation(\'' + div.id + '\')"]');
-
-            // Check if the click is outside the div and not on the trigger or its children
-            if (div.style.display !== "none" && !div.contains(event.target) && (!triggerElement || !triggerElement.contains(event.target))) {
-                closeAnimation(div);
-            }
-        });
-    });
-</script>
-
 
 <!-- disable viewport zooming on iOS -->
 <script>
