@@ -51,9 +51,9 @@
 
 
 
-<link rel="stylesheet" href="/han.min.css" type="text/css">
+<link rel="stylesheet" href="han.min.css" type="text/css">
 
-<link rel="stylesheet" href="/animate.min.css" type="text/css">
+<link rel="stylesheet" href="animate.min.css" type="text/css">
 
 
 
@@ -424,9 +424,9 @@ Epilogue
 </article>
 
 
-<script async src="https://hypothes.is/embed.js"></script>
+<script defer src="https://hypothes.is/embed.js"></script>
 
-<script>
+<script async>
   
   function applyBreakAllClass() {
     
@@ -455,7 +455,7 @@ Epilogue
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-<script>
+<script async>
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', function() {
       var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
@@ -569,7 +569,7 @@ Epilogue
 
 </footer>
 
-<script async>
+<script defer>
 function checkBrowserAndApplyStyle() {
     var userAgent = navigator.userAgent;
     var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);

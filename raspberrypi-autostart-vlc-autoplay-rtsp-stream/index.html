@@ -61,9 +61,9 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 
 
 
-<link rel="stylesheet" href="/han.min.css" type="text/css">
+<link rel="stylesheet" href="han.min.css" type="text/css">
 
-<link rel="stylesheet" href="/animate.min.css" type="text/css">
+<link rel="stylesheet" href="animate.min.css" type="text/css">
 
 
 
@@ -259,9 +259,9 @@ Exec=/home/pi/test.sh
 </article>
 
 
-<script async src="https://hypothes.is/embed.js"></script>
+<script defer src="https://hypothes.is/embed.js"></script>
 
-<script>
+<script async>
   
   function applyBreakAllClass() {
     
@@ -290,7 +290,7 @@ Exec=/home/pi/test.sh
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-<script>
+<script async>
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', function() {
       var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
@@ -376,7 +376,7 @@ Exec=/home/pi/test.sh
 
 </footer>
 
-<script async>
+<script defer>
 function checkBrowserAndApplyStyle() {
     var userAgent = navigator.userAgent;
     var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);

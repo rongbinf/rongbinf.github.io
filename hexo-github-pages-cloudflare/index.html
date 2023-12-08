@@ -56,9 +56,9 @@ $ cd &lt;folder&gt; # 将 &lt;folder&gt; 改为你希望安装 Hexo 的路径 $ 
 
 
 
-<link rel="stylesheet" href="/han.min.css" type="text/css">
+<link rel="stylesheet" href="han.min.css" type="text/css">
 
-<link rel="stylesheet" href="/animate.min.css" type="text/css">
+<link rel="stylesheet" href="animate.min.css" type="text/css">
 
 
 
@@ -391,9 +391,9 @@ Hexo 的文件结构
 </article>
 
 
-<script async src="https://hypothes.is/embed.js"></script>
+<script defer src="https://hypothes.is/embed.js"></script>
 
-<script>
+<script async>
   
   function applyBreakAllClass() {
     
@@ -422,7 +422,7 @@ Hexo 的文件结构
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-<script>
+<script async>
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', function() {
       var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
@@ -508,7 +508,7 @@ Hexo 的文件结构
 
 </footer>
 
-<script async>
+<script defer>
 function checkBrowserAndApplyStyle() {
     var userAgent = navigator.userAgent;
     var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);

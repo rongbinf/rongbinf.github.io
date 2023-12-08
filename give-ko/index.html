@@ -51,9 +51,9 @@
 
 
 
-<link rel="stylesheet" href="/han.min.css" type="text/css">
+<link rel="stylesheet" href="han.min.css" type="text/css">
 
-<link rel="stylesheet" href="/animate.min.css" type="text/css">
+<link rel="stylesheet" href="animate.min.css" type="text/css">
 
 
 
@@ -324,9 +324,9 @@ C께서 A에게/한테 N을 <u>주시다</u>
 </article>
 
 
-<script async src="https://hypothes.is/embed.js"></script>
+<script defer src="https://hypothes.is/embed.js"></script>
 
-<script>
+<script async>
   
   function applyBreakAllClass() {
     
@@ -355,7 +355,7 @@ C께서 A에게/한테 N을 <u>주시다</u>
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-<script>
+<script async>
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', function() {
       var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
@@ -441,7 +441,7 @@ C께서 A에게/한테 N을 <u>주시다</u>
 
 </footer>
 
-<script async>
+<script defer>
 function checkBrowserAndApplyStyle() {
     var userAgent = navigator.userAgent;
     var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);

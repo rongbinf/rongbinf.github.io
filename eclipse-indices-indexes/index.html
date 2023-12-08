@@ -57,9 +57,9 @@ to become greater in amount or level than something else: ">
 
 
 
-<link rel="stylesheet" href="/han.min.css" type="text/css">
+<link rel="stylesheet" href="han.min.css" type="text/css">
 
-<link rel="stylesheet" href="/animate.min.css" type="text/css">
+<link rel="stylesheet" href="animate.min.css" type="text/css">
 
 
 
@@ -267,9 +267,9 @@ indices 或 indexes?
 </article>
 
 
-<script async src="https://hypothes.is/embed.js"></script>
+<script defer src="https://hypothes.is/embed.js"></script>
 
-<script>
+<script async>
   
   function applyBreakAllClass() {
     
@@ -298,7 +298,7 @@ indices 或 indexes?
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-<script>
+<script async>
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', function() {
       var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
@@ -384,7 +384,7 @@ indices 或 indexes?
 
 </footer>
 
-<script async>
+<script defer>
 function checkBrowserAndApplyStyle() {
     var userAgent = navigator.userAgent;
     var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);

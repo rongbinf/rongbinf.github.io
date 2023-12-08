@@ -58,9 +58,9 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
 
 
 
-<link rel="stylesheet" href="/han.min.css" type="text/css">
+<link rel="stylesheet" href="han.min.css" type="text/css">
 
-<link rel="stylesheet" href="/animate.min.css" type="text/css">
+<link rel="stylesheet" href="animate.min.css" type="text/css">
 
 
 
@@ -133,9 +133,9 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
 </article>
 
 
-<script async src="https://hypothes.is/embed.js"></script>
+<script defer src="https://hypothes.is/embed.js"></script>
 
-<script>
+<script async>
   
   function applyBreakAllClass() {
     
@@ -164,7 +164,7 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-<script>
+<script async>
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', function() {
       var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
@@ -250,7 +250,7 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
 
 </footer>
 
-<script async>
+<script defer>
 function checkBrowserAndApplyStyle() {
     var userAgent = navigator.userAgent;
     var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
