@@ -323,6 +323,10 @@
             cursor: default;
         }
 
+        .the-link {
+            display: none;
+        }
+
         a.button.is-pill.is-outline.profile-button {
             color: #000000cc;
             font-size: 1.44rem;
@@ -445,7 +449,7 @@
                             <div class="avatar"></div>
                             <span class="status"><p class="name serif">Placeholder</p><span class="online"></span></span>
                             <button class="profile-tag" style="background: #7e7e7e;">#label</button>
-                            <p><a class="button is-pill is-outline profile-button the-link" target="_blank">Link</a></p>
+                            <p><a class="button is-pill is-outline profile-button the-link" href="http://none.none" target="_blank">Link</a></p>
                         </div>
                     </div>
                 </x-col>
@@ -737,26 +741,42 @@
 
 <!-- detect website status -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // 向 Cloudflare Worker 发起请求获取状态
-        fetch('https://website-status.fanrongbin.com/')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(item => {
-                // 找到对应 URL 的链接元素
-                const link = document.querySelector(`a[href="${item.url}"]`);
-                if (link) {
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('https://website-status.fanrongbin.com/')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(item => {
+            // 找到对应 URL 的链接元素
+            const link = document.querySelector(`a[href="${item.url}"]`);
+            if (link) {
+                const profile = link.closest('.profile');
+                if (profile) {
                     // 获取对应的 <span class="online"> 元素
-                    const onlineIndicator = link.closest('.profile').querySelector('.online');
+                    const onlineIndicator = profile.querySelector('.online');
                     if (onlineIndicator) {
                         // 根据状态设置背景颜色
                         onlineIndicator.style.backgroundColor = item.status === 200 ? '#00df07' : 'red';
                     }
+
+                    // 找到对应的 .the-link 按钮
+                    const theLinkButton = profile.querySelector('.the-link');
+                    if (theLinkButton) {
+                        // 如果状态是 200 (在线)，显示原始链接
+                        if (item.status === 200) {
+                            theLinkButton.style.display = 'block';
+                        } else {
+                            // 如果不是 200 (离线)，更改文本为 "Offline" 并移除 href
+                            theLinkButton.textContent = 'Offline';
+                            theLinkButton.removeAttribute('href');
+                            theLinkButton.style.display = 'block';
+                        }
+                    }
                 }
-            });
-        })
-        .catch(error => console.error('Error:', error));
-    });
+            }
+        });
+    })
+    .catch(error => console.error('Error:', error));
+});
 </script>
 
     
