@@ -68,7 +68,7 @@ Mounted Bugler,1862, Winslow Homer, Graphite, brush and gray wash on off-white p
 
 </head>
 <body>
-
+<div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
   <section>
@@ -239,6 +239,18 @@ Mounted Bugler,1862, Winslow Homer, Graphite, brush and gray wash on off-white p
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+  </script>
 
 
 

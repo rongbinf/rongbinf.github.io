@@ -68,7 +68,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 
 </head>
 <body>
-
+<div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
   <section>
@@ -287,6 +287,18 @@ Exec=/home/pi/test.sh
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+  </script>
 
 
 

@@ -67,7 +67,7 @@ fatal error: &#39;al.h&#39; file not found #include &lt;al.h&gt; ^~~~~~ 1 error 
 
 </head>
 <body>
-
+<div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
   <section>
@@ -190,6 +190,18 @@ fatal error: &#39;al.h&#39; file not found #include &lt;al.h&gt; ^~~~~~ 1 error 
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+  </script>
 
 
 

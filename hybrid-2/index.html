@@ -64,7 +64,7 @@ The Verge with Matt Mullenweg, How WordPress and Tumblr are keeping the internet
 
 </head>
 <body>
-
+<div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
   <section>
@@ -290,6 +290,18 @@ Wesley Aptekar-Cassels, <em>A few things that could be poetry</em>
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+  </script>
 
 
 

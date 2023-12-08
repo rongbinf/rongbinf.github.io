@@ -70,7 +70,7 @@ QDII 基金，即从事境外证券市场的股票、债券等有价证券业务
 
 </head>
 <body>
-
+<div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
   <section>
@@ -221,6 +221,18 @@ T+2 交易规则
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+  </script>
 
 
 

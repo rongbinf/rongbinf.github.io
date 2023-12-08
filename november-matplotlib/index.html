@@ -66,7 +66,7 @@ plt.GridSpec(2, 1, wspace=.25, hspace=.25) ax1 = plt.subplot(grid[0,0:1]) ax1. "
 
 </head>
 <body>
-
+<div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
   <section>
@@ -188,6 +188,18 @@ plt.GridSpec(2, 1, wspace=.25, hspace=.25) ax1 = plt.subplot(grid[0,0:1]) ax1. "
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+  </script>
 
 
 
