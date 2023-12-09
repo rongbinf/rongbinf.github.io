@@ -247,9 +247,9 @@
         }
 
         img.avatar {
-            max-width: 12rem;
-            margin-top: 2rem;
-            margin-bottom: 3rem;
+            max-width: 20rem;
+             
+             
             user-select: none;
         }
 
@@ -421,8 +421,11 @@
 
             <x-grid columns="1">
                 <x-col span="1">
-                    <img alt="avatar" src="https://img.fanrongbin.com/compressed-avatar.webp" class="avatar" start
+                    <picture class="avatar" start
                         animation=fadein ease=easeInOutCubic style="--delay:0s;--duration:0.3s;">
+                      <source srcset="https://img.fanrongbin.com/sketch-white.webp" media="(prefers-color-scheme:dark)">
+                      <img class="avatar" alt="avatar" src="https://img.fanrongbin.com/sketch-black.webp">
+                    </picture>
                     <span start animation=fadein ease=easeInOutCubic style="--delay: 0.3s; --duration: 0.1s;">
                         <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> <span
                                 class="wave">👋</span><br><span class="serif">You
@@ -565,11 +568,7 @@
 
     </div>
 
-    <div class="blob-cont">
-        <div class="blob blob1"></div>
-        <div class="blob blob2"></div>
-        <div class="blob blob3"></div>
-    </div>
+    
 
 </body>
 
