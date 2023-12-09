@@ -240,6 +240,10 @@
             user-select: none;
         }
 
+        .brand-head {
+            max-width: 20rem;
+        }
+
         svg {
             max-width: 16px;
             display: inline;
@@ -424,7 +428,11 @@
 
             <x-grid columns="1">
                 <x-col span="1">
-                        <p class="larger"><span class="serif heavier">Guestbook</span></p>
+                    <picture class="brand-head">
+                      <source srcset="https://img.fanrongbin.com/guestbook-white.webp" media="(prefers-color-scheme:dark)">
+                      <img class="brand-head" alt="Rongbin's Blog" src="https://img.fanrongbin.com/guestbook.webp">
+                    </picture>
+                        <!-- <p class="larger"><span class="serif heavier">Guestbook</span></p> -->
                 </x-col>
             </x-grid>
 
@@ -552,7 +560,7 @@
         height: 30%;
         width: 30%;
 
-        animation: move1 10s infinite ease;
+        animation: move1 6s infinite ease;
     }
 
     .blob2 {
@@ -561,7 +569,7 @@
         height: 30%;
         width: 30%;
 
-        animation: move2 10s infinite ease;
+        animation: move2 6s infinite ease;
     }
 
     .blob3 {
@@ -570,13 +578,13 @@
         height: 30%;
         width: 30%;
 
-        animation: move3 10s infinite linear;
+        animation: move3 6s infinite linear;
     }
 
     @keyframes move1 {
         0% {
             background-color: #d264fe1c;
-            bottom: 10%;
+            bottom: 5%;
             left: 10%;
             transform: scale(1);
         }
@@ -597,7 +605,7 @@
 
         100% {
             background-color: #d264fe1c;
-            bottom: 10%;
+            bottom: 5%;
             left: 10%;
             transform: scale(1);
         }
@@ -606,28 +614,28 @@
     @keyframes move2 {
         0% {
             background-color: #1cc3b21c;
-            bottom: 8%;
+            bottom: 4%;
             left: 2%;
             transform: scale(1.2);
         }
 
         30% {
             background-color: #1cc3b382;
-            bottom: 30%;
+            bottom: 20%;
             left: 10%;
             transform: scale(1);
         }
 
         60% {
             background-color: #1cc3b39a;
-            bottom: 20%;
+            bottom: 15%;
             left: 15%;
             transform: scale(1);
         }
 
         100% {
             background-color: #1cc3b21c;
-            bottom: 8%;
+            bottom: 4%;
             left: 2%;
             transform: scale(1.2);
         }
@@ -650,7 +658,7 @@
 
         60% {
             background-color: #36bfff9a;
-            bottom: 20%;
+            bottom: 15%;
             left: 10%;
             transform: scale(1);
         }
