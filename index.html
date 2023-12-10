@@ -435,11 +435,13 @@
 
             <x-grid columns="1">
                 <x-col span="1">
-                    <picture class="avatar">
-                      <source srcset="https://img.fanrongbin.com/dithered-white.webp" media="(prefers-color-scheme:dark)">
-                      <img class="avatar" alt="avatar" src="https://img.fanrongbin.com/dithered-black.webp" start
-                        animation=fadein ease=easeInOutCubic style="--delay:0s;--duration:0.3s;width:320px;height: 320px;">
-                    </picture>
+                    <div style="height: 20rem; z-index: 1;position: sticky;">
+                        <picture class="avatar">
+                          <source srcset="https://img.fanrongbin.com/dithered-white.webp" media="(prefers-color-scheme:dark)">
+                          <img class="avatar" alt="avatar" src="https://img.fanrongbin.com/dithered-black.webp" start
+                            animation=fadein ease=easeInOutCubic style="--delay:0s;--duration:0.3s;width:320px;height: 320px;z-index: 2;">
+                        </picture>
+                    </div>
                     <span start animation=fadein ease=easeInOutCubic style="--delay: 0.5s; --duration: 0.1s;">
                         <p class="larger"><span class="serif heavier">Hi, my name's Rongbin.</span> <span
                                 class="wave">👋</span><br><span class="serif">You
@@ -454,7 +456,8 @@
 
             <x-grid loading="lazy" columns="1" start animation=fadein-up ease=easeInOutCubic
                 style="--delay: 0.6s; --duration: 0.6s;">
-                <x-col span="1" class="introduction">
+                <x-col span="1">
+                    <div class="introduction">
                     <p>I <em>he/him/his</em> currently live in Beijing, and I study finance at the University of International Business and Economics (UIBE). I also do some<span style="white-space: nowrap;">
                             <a target="_blank" href="https://www.are.na/rongbin-fan/brackets-and-comma" class="info hover">
                                 <svg class="black-svg-arena" style="margin-right: 5px;"
@@ -487,6 +490,7 @@
                                 </svg>
                                 connect</a><span class="external">↗</span></span>. I speak Chinese <em>Mandarin, Cantonese, Taiwanese/Southern Min</em>, English, Korean, and I hope to learn more about you and the world.
                     </p>
+                </div>
                 </x-col>
 
                 
