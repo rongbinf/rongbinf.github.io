@@ -489,24 +489,24 @@
             <x-grid columns="1" loading="lazy" style="padding-top: 3.5vh;" start animation=fadein-up ease=easeInOutCubic
             style="--delay: 0.4s; --duration: 0.6s">
                 <x-col span="1">
-                    <div class="profile" style="max-width: 850px;">
-                    <script src="https://giscus.app/client.js"
-                        data-repo="rongbinf/giscus-comment"
-                        data-repo-id="R_kgDOK3UYzw"
-                        data-category="Announcements"
-                        data-category-id="DIC_kwDOK3UYz84Cbl2R"
-                        data-mapping="title"
-                        data-strict="0"
-                        data-reactions-enabled="0"
-                        data-emit-metadata="0"
-                        data-input-position="top"
-                        data-theme="preferred_color_scheme"
-                        data-lang="en"
-                        data-loading="lazy"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-                </div>
+                    <div class="profile" id="giscus" style="max-width: 850px;">
+                        <script src="https://giscus.app/client.js"
+                            data-repo="rongbinf/giscus-comment"
+                            data-repo-id="R_kgDOK3UYzw"
+                            data-category="Announcements"
+                            data-category-id="DIC_kwDOK3UYz84Cbl2R"
+                            data-mapping="title"
+                            data-strict="0"
+                            data-reactions-enabled="0"
+                            data-emit-metadata="0"
+                            data-input-position="top"
+                            data-theme="preferred_color_scheme"
+                            data-lang="en"
+                            data-loading="lazy"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                    </div>
                 </x-col>
             </x-grid>
 
@@ -779,7 +779,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         // 设置动画
                         theLinkButton.style.opacity = '0';
                         theLinkButton.style.visibility = 'hidden';
-                        theLinkButton.style.transition = 'all .3s ease-in-out';
+                        theLinkButton.style.transition = 'all .2s ease-in-out';
 
                         // 状态处理
                         if (item.status === 200) {
@@ -801,6 +801,5 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Error:', error));
 });
 </script>
-
     
 </html>
