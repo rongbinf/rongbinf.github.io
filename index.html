@@ -77,6 +77,7 @@
             --linkColor: #009ba0;
             --linkHover: #000;
             --buttonBg: var(--linkColor);
+            --yellow: #ff7800;
         }
 
         #app {
@@ -235,13 +236,14 @@
 
         .card-button {
             padding: 1rem;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
 
         .question {
             margin-left: 3px;
             position: absolute;
             font-size: 0.7em;
+            font-weight: 200;
         }
 
         .number {
@@ -252,7 +254,7 @@
         .external {
             top: -0.5rem;
             position: relative;
-            font-family: var(--sans);
+            font-family: -apple-system, BlinkMacSystemFont, calibri, sans-serif;
             font-weight: 400;
             font-size: 0.8em;
             padding-left: 2px;
@@ -315,11 +317,6 @@
                 margin: 0 5% 0 0;
             }
 
-            #mail-address p,
-            a.card-button {
-                font-size: 1.6rem;
-            }
-
             #app {
                 margin: 0 3rem;
             }
@@ -337,11 +334,6 @@
         @media (min-width: 650px) {
             .introduction {
                 margin: 0 15% 0 0;
-            }
-
-            #mail-address p,
-            a.card-button {
-                font-size: 1.4rem;
             }
         }
 
@@ -560,14 +552,24 @@
 
             <div class="card" id="mailto" data-toggleable="true" start animation=fadein-up ease=easeInOutCubic
                 style="--duration: 0.5s; display:none;">
-                <p id="mail-address"><strong>r_fan (at) outlook.com</strong></p>
-                <p><a class="button card-button is-pill is-outline btn" data-clipboard-text="r_fan@outlook.com"
+                <p id="mail-address" class="larger" style="font-family: monospace;"><strong>r_fan</strong></br>(at) outlook.com</p>
+                <div>
+                <p style="margin-bottom: 5px;">
+                    <a class="button card-button is-pill is-outline btn" data-clipboard-text="r_fan@outlook.com"
                         onclick="this.textContent='✔ Copied!';" style="border:1px dashed;">📋 Copy Email</a>
-                <a class="button card-button is-pill is-outline btn" href="pubkey.asc" target="_blank" style="margin-left: 2px;">🔑 PGP Key<span class="external">↗</span></a></p>
-                <p><a class="button is-outline btn" onclick="this.textContent='Fingerprint copied!';" style="font-family: monospace; font-size: 1rem; border: 1px dashed; border-radius: 20px; text-align: center;" data-clipboard-text="7963 9D20 6C75 4B34 5691 5DFB 9786 7DC4 9034 2318">7963 9D20 6C75 4B34 5691</br>5DFB 9786 7DC4 9034 2318</a><sup style="color:#888;top:-1.5rem;padding-left: 5px;font-family: monospace;font-size:0.8rem;">Fingerprint</sup></p>
-                <p><a class="button card-button is-pill is-outline" href="mailto:r_fan@outlook.com">📱 Open Mail App<span class="external">↗</span></a></p>
+                <a class="button card-button is-pill is-outline is-yellow btn" href="pubkey.asc" target="_blank" style="margin-left: 2px;">PGP Key<span class="external">🔑</span></a>
+                </p>
+                <p style="margin-top:0;">
+                    <a class="button card-button is-pill is-outline" href="mailto:r_fan@outlook.com" style="font-size: 1rem;border-radius: 20px;padding: 13px;text-align: left;">Mail</br>App<span class="external">📱</span></a>
+                    <a class="button is-outline is-yellow btn" onclick="this.textContent='✔ Fingerprint Copied!';" style="font-family: monospace; font-size: 1rem; border: 1px dashed; border-radius: 20px; text-align: center; margin-left: 2px;" 
+                    data-clipboard-text="7963 9D20 6C75 4B34 5691 5DFB 9786 7DC4 9034 2318">7963 9D20 6C75 4B34 5691</br>5DFB 9786 7DC4 9034 2318</a>
+                    
+                </p>
+                </div>
                 <p><span class="source" style="font-size: 1rem;">I still use my
-                        Gmail, but no PGP key support:</br>fanrongbin0201 (at) gmail.com</span></p>
+                        Gmail,</br>fanrongbin0201 (at) gmail.com</span>
+                        
+                    </p>
             </div>
 
         </main>
