@@ -38,9 +38,12 @@
 
     <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
 
-    <link rel="stylesheet" href="skelet.min.css">
+    <link rel="stylesheet" href="/skelet.min.css">
     
-    <script src="clipboard.min.js"></script>
+    <script src="/clipboard.min.js"></script>
+
+    <link rel="preload" fetchpriority="high" as="image" href="/dithered-white.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="/dithered-black.webp" type="image/webp">
 
     <style>
         @charset "UTF-8";
@@ -234,7 +237,7 @@
             margin-left: 3px;
             position: absolute;
             font-size: 0.7em;
-            font-weight: 200;
+            font-weight: 400;
         }
 
         .number {
