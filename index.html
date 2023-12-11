@@ -57,17 +57,7 @@
             unicode-range: U+0048, U+0069, U+002C, U+006D, U+0079, U+006E, U+0061, U+0065, U+0027, U+0073, U+0052, U+006F, U+0067, U+0062, U+0069, U+002E, U+0059, U+0075, U+0063, U+006C, U+0020;
         }
 
-        @font-face {
-            font-family: "et-book";
-            src: url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
-            src: url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"),
-                url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"),
-                url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"),
-                url("css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
-            font-weight: bold;
-            font-style: normal;
-            unicode-range: U+0048, U+0069, U+002C, U+006D, U+0079, U+006E, U+0061, U+0065, U+0027, U+0073, U+0052, U+006F, U+0067, U+0062, U+0069, U+002E, U+0059, U+0075, U+0063, U+006C, U+0020;
-        }
+         
 
         :root {
             --fontSize: calc(100vw / 80);
@@ -429,8 +419,8 @@
                 <x-col span="1">
                     <div style="height: 20rem; z-index: 1;position: sticky;">
                         <picture class="avatar">
-                          <source srcset="https://img.fanrongbin.com/dithered-white.webp" media="(prefers-color-scheme:dark)">
-                          <img class="avatar" alt="avatar" src="https://img.fanrongbin.com/dithered-black.webp" start
+                          <source srcset="dithered-white.webp" media="(prefers-color-scheme:dark)">
+                          <img class="avatar" alt="avatar" src="dithered-black.webp" start
                             animation=fadein ease=easeInOutCubic style="--delay:0s;--duration:0.3s;width:320px;height: 320px;z-index: 2;">
                         </picture>
                     </div>
