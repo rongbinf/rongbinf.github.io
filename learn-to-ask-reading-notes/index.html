@@ -70,7 +70,30 @@
 <div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
-  <section>
+  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<div id="contents-toc" class="no-select">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#第1章-提出正确问题的益处">第1章 提出正确问题的益处</a></li>
+    <li><a href="#第2章-什么是论题-什么是结论">第2章 什么是论题 什么是结论</a></li>
+    <li><a href="#第3章-理由是什么">第3章 理由是什么</a></li>
+    <li><a href="#第4章-哪些词句有歧义">第4章 哪些词句有歧义</a></li>
+    <li><a href="#第5章-什么是价值观冲突-什么是价值观假设">第5章 什么是价值观冲突 什么是价值观假设</a></li>
+    <li><a href="#第6章-什么是描述性假设">第6章 什么是描述性假设</a></li>
+    <li><a href="#第7章-推理中存在谬误吗">第7章 推理中存在谬误吗？</a></li>
+    <li><a href="#第8章-这些证据的可信度有多大i直觉个人经验证人的证词权威的意见">第8章 这些证据的可信度有多大（I）：直觉、个人经验、证人的证词、权威的意见</a></li>
+    <li><a href="#第9章-这些证据的可信度有多大ii个人观察科学研究案例类比">第9章 这些证据的可信度有多大（II）：个人观察、科学研究、案例、类比</a></li>
+    <li><a href="#第10章-你发现干扰性原因了吗">第10章 你发现干扰性原因了吗</a></li>
+    <li><a href="#第11章-统计数据是否具有欺骗性">第11章 统计数据是否具有欺骗性</a></li>
+    <li><a href="#第12章-哪些重要信息被遗漏了">第12章 哪些重要信息被遗漏了</a></li>
+    <li><a href="#第13章-什么结论可能是合理的">第13章 什么结论可能是合理的</a></li>
+    <li><a href="#第14章-练习和复习均引自原文">第14章 练习和复习（均引自原文）</a></li>
+    <li><a href="#后记">后记</a></li>
+  </ul>
+</nav>
+</div>
+<section>
 <h1 class="content-title">
 
 <span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>《学会提问——批判性思维指南》阅读笔记</h1><span class="content-meta no-select">
@@ -78,37 +101,155 @@
   <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>28 Aug 2020</p>
 </span></section>
 
-<script async>
-  function toggleFontFamily() {
-      var elements = document.querySelectorAll('body');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var elements = document.querySelectorAll('blockquote');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var strongElements = document.querySelectorAll('strong');
+<script defer>
+    function toggleFontFamily() {
+        var elements = document.querySelectorAll('body, blockquote');
+        elements.forEach(function(el) {
+            if (el.style.fontFamily) {
+                el.style.fontFamily = ''; 
+            } else {
+                el.style.fontFamily = 'var(--sans)';
+            }
+        });
+  
+        var strongElements = document.querySelectorAll('strong');
         strongElements.forEach(function(el) {
             if (el.style.top) {
                 el.style.top = '';
             } else {
                 el.style.top = '0';
             }
-      });
-
-  }
+        });
+  
+        var hCharElements = document.querySelectorAll('h-char');
+        hCharElements.forEach(function(el) {
+            if (el.style.lineHeight) {
+                el.style.lineHeight = '';
+            } else {
+                el.style.lineHeight = 'unset';
+            }
+        });
+    }
 </script>
+
+<script defer>
+    function toggleContents() {
+        var toc = document.getElementById('contents-toc');
+        var style = window.getComputedStyle(toc);
+    
+        if (style.display === 'none') {
+            toc.style.display = 'block';
+        } else {
+            toc.style.display = 'none';
+        }
+    }
+</script>
+
+
+
+<script>
+    
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+    
+        
+        const toggleTOC = () => {
+            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+    
+            
+            if (tocContainer.style.display === 'block') {
+                initializeTOCFeatures();
+            }
+        };
+    
+        
+        const initializeTOCFeatures = () => {
+            
+            const highlightAppropriateHeader = () => {
+                let highlighted = false;
+                let lastPassedHeader = null;
+    
+                headers.forEach(header => {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+                    const bounding = header.getBoundingClientRect();
+    
+                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                        link.classList.add('toc-highlight');
+                        highlighted = true;
+                    } else {
+                        link.classList.remove('toc-highlight');
+                    }
+    
+                    if (bounding.top < 0) {
+                        lastPassedHeader = header;
+                    }
+                });
+    
+                if (!highlighted && lastPassedHeader) {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
+                    link.classList.add('toc-highlight');
+                }
+            };
+    
+            
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+    
+            
+            if (!tocContainer.dataset.initialized) {
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+    
+            
+            document.addEventListener('click', (event) => {
+                if (window.getComputedStyle(tocContainer).display !== 'none') {
+                    tocContainer.style.display = 'none';
+                }
+            });
+    
+            
+            tocContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        };
+    
+        
+        if (headers.length > 1) {
+            contentsFixedDiv.style.display = 'block';
+            
+            
+            contentsFixedDiv.addEventListener('click', (event) => {
+                toggleTOC();
+                event.stopPropagation();
+            });
+        }
+    });
+</script>    
+
 
   
 

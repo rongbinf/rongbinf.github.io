@@ -2635,11 +2635,11 @@ Exec=/home/pi/test.sh
 &lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install unclutter
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; “@unclutter -idle &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -root” &amp;gt;&amp;gt; /etc/xdg/lxsession/LXDE/autostart
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用-xdotoolwwwsemicompletecomprojectsxdotool-改变窗口大小和位置&#34;&gt;
-使用 &lt;a href=&#34;www.semicomplete.com/projects/xdotool/&#34;&gt;xdotool&lt;/a&gt; 改变窗口大小和位置
-&lt;a href=&#34;#%e4%bd%bf%e7%94%a8-xdotoolwwwsemicompletecomprojectsxdotool-%e6%94%b9%e5%8f%98%e7%aa%97%e5%8f%a3%e5%a4%a7%e5%b0%8f%e5%92%8c%e4%bd%8d%e7%bd%ae&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用-xdotool-改变窗口大小和位置&#34;&gt;
+使用 xdotool 改变窗口大小和位置
+&lt;a href=&#34;#%e4%bd%bf%e7%94%a8-xdotool-%e6%94%b9%e5%8f%98%e7%aa%97%e5%8f%a3%e5%a4%a7%e5%b0%8f%e5%92%8c%e4%bd%8d%e7%bd%ae&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;首先安装 xdotool：&lt;/p&gt;
+&lt;p&gt;首先安装 &lt;a href=&#34;www.semicomplete.com/projects/xdotool/&#34;&gt;xdotool&lt;/a&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install xdotool
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;同时实现改变窗口大小和位置，如：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xdotool search --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;VLC&amp;#34;&lt;/span&gt; windowsize &lt;span class=&#34;m&#34;&gt;800&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; windowmove &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;

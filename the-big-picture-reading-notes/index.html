@@ -60,7 +60,83 @@
 <div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
-  <section>
+  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<div id="contents-toc" class="no-select">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#社会学的视角">社会学的视角</a>
+      <ul>
+        <li><a href="#社会学是对个体与社会之间的关系以及差异性后果的系统研究">社会学是对个体与社会之间的关系以及差异性后果的系统研究</a></li>
+        <li><a href="#我们所处的地位决定我们是谁">我们所处的地位决定我们是谁</a></li>
+        <li><a href="#社会生活的象征意义作为标志的都市传闻">社会生活的象征意义：作为标志的都市传闻</a></li>
+        <li><a href="#权力特权和地位">权力、特权和地位</a></li>
+      </ul>
+    </li>
+    <li><a href="#社会学的想象力">社会学的想象力</a>
+      <ul>
+        <li><a href="#个体与社会的平衡问题">个体与社会的平衡问题</a></li>
+        <li><a href="#社会问题私人难题与公共难题">社会问题：私人难题与公共难题</a></li>
+        <li><a href="#作者对社会学的定义社会学是对个体与社会之间的关系以及差异性后果的系统研究">作者对社会学的定义：社会学是对个体与社会之间的关系以及差异性后果的系统研究</a></li>
+        <li><a href="#社会学的呈现方式">社会学的呈现方式</a></li>
+        <li><a href="#社会学作为一种工具">社会学作为一种工具</a></li>
+      </ul>
+    </li>
+    <li><a href="#寻求答案社会学的研究">寻求答案：社会学的研究</a>
+      <ul>
+        <li><a href="#经典案例">经典案例</a></li>
+      </ul>
+    </li>
+    <li><a href="#社会学的大观念涂尔干">社会学的大观念（涂尔干）</a>
+      <ul>
+        <li><a href="#涂尔干关于社会整合的观点现代社会中的社会整合">涂尔干关于社会整合的观点（现代社会中的社会整合）</a></li>
+        <li><a href="#传统社会中的社会整合门诺人">传统社会中的社会整合——门诺人</a></li>
+        <li><a href="#当代社会中的个人主义和相互依赖性">当代社会中的个人主义和相互依赖性</a></li>
+        <li><a href="#美好社会">美好社会</a></li>
+      </ul>
+    </li>
+    <li><a href="#生产与革新马克思">生产与革新（马克思）</a>
+      <ul>
+        <li><a href="#马克思的五个预设">马克思的五个预设</a></li>
+        <li><a href="#革命与美好社会">革命与美好社会</a></li>
+        <li><a href="#变革经济学">变革经济学</a></li>
+      </ul>
+    </li>
+    <li><a href="#权力权威与社会控制韦伯">权力、权威与社会控制（韦伯）</a>
+      <ul>
+        <li><a href="#韦伯与观念的重要性">韦伯，与观念的重要性</a></li>
+        <li><a href="#权力的来源">权力的来源</a></li>
+        <li><a href="#观念权力和行动">观念、权力和行动</a></li>
+      </ul>
+    </li>
+    <li><a href="#自我与社会现实的社会建构视角转向个人和认知">自我与社会：现实的社会建构（视角转向个人和认知）</a>
+      <ul>
+        <li><a href="#建构文化">建构文化</a></li>
+        <li><a href="#建构自我">建构自我</a></li>
+        <li><a href="#建构社会">建构社会</a></li>
+        <li><a href="#规划我们的世界">规划我们的世界</a></li>
+        <li><a href="#理解我们的选择结构和选择">理解我们的选择：结构和选择</a></li>
+      </ul>
+    </li>
+    <li><a href="#后现代生活是的含义">后现代生活：「是」的含义</a>
+      <ul>
+        <li><a href="#故事叙事和元叙事">故事：叙事和元叙事</a></li>
+        <li><a href="#图像现实认识和超现实">图像：现实、认识和超现实</a></li>
+        <li><a href="#选择消费现实">选择：消费现实</a></li>
+        <li><a href="#网络小世界">网络：小世界</a></li>
+        <li><a href="#跨界交叉的边界">跨界：交叉的边界</a></li>
+      </ul>
+    </li>
+    <li><a href="#我们生活的世界">我们生活的世界</a>
+      <ul>
+        <li><a href="#家庭联结纽带">家庭：联结纽带</a></li>
+        <li><a href="#家庭的功能">家庭的功能</a></li>
+        <li><a href="#社会结构和家庭选择">社会结构和家庭选择</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<section>
 <h1 class="content-title">
 
 <span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>《社会学的邀请》阅读笔记</h1><span class="content-meta no-select">
@@ -68,37 +144,155 @@
   <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>01 Jan 2021</p>
 </span></section>
 
-<script async>
-  function toggleFontFamily() {
-      var elements = document.querySelectorAll('body');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var elements = document.querySelectorAll('blockquote');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var strongElements = document.querySelectorAll('strong');
+<script defer>
+    function toggleFontFamily() {
+        var elements = document.querySelectorAll('body, blockquote');
+        elements.forEach(function(el) {
+            if (el.style.fontFamily) {
+                el.style.fontFamily = ''; 
+            } else {
+                el.style.fontFamily = 'var(--sans)';
+            }
+        });
+  
+        var strongElements = document.querySelectorAll('strong');
         strongElements.forEach(function(el) {
             if (el.style.top) {
                 el.style.top = '';
             } else {
                 el.style.top = '0';
             }
-      });
-
-  }
+        });
+  
+        var hCharElements = document.querySelectorAll('h-char');
+        hCharElements.forEach(function(el) {
+            if (el.style.lineHeight) {
+                el.style.lineHeight = '';
+            } else {
+                el.style.lineHeight = 'unset';
+            }
+        });
+    }
 </script>
+
+<script defer>
+    function toggleContents() {
+        var toc = document.getElementById('contents-toc');
+        var style = window.getComputedStyle(toc);
+    
+        if (style.display === 'none') {
+            toc.style.display = 'block';
+        } else {
+            toc.style.display = 'none';
+        }
+    }
+</script>
+
+
+
+<script>
+    
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+    
+        
+        const toggleTOC = () => {
+            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+    
+            
+            if (tocContainer.style.display === 'block') {
+                initializeTOCFeatures();
+            }
+        };
+    
+        
+        const initializeTOCFeatures = () => {
+            
+            const highlightAppropriateHeader = () => {
+                let highlighted = false;
+                let lastPassedHeader = null;
+    
+                headers.forEach(header => {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+                    const bounding = header.getBoundingClientRect();
+    
+                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                        link.classList.add('toc-highlight');
+                        highlighted = true;
+                    } else {
+                        link.classList.remove('toc-highlight');
+                    }
+    
+                    if (bounding.top < 0) {
+                        lastPassedHeader = header;
+                    }
+                });
+    
+                if (!highlighted && lastPassedHeader) {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
+                    link.classList.add('toc-highlight');
+                }
+            };
+    
+            
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+    
+            
+            if (!tocContainer.dataset.initialized) {
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+    
+            
+            document.addEventListener('click', (event) => {
+                if (window.getComputedStyle(tocContainer).display !== 'none') {
+                    tocContainer.style.display = 'none';
+                }
+            });
+    
+            
+            tocContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        };
+    
+        
+        if (headers.length > 1) {
+            contentsFixedDiv.style.display = 'block';
+            
+            
+            contentsFixedDiv.addEventListener('click', (event) => {
+                toggleTOC();
+                event.stopPropagation();
+            });
+        }
+    });
+</script>    
+
 
   
 

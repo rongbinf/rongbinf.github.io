@@ -64,7 +64,29 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
 <div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
-  <section>
+  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<div id="contents-toc" class="no-select">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#芯片制作工序">芯片制作工序</a></li>
+    <li><a href="#半导体行业常用工业软件">半导体行业常用工业软件</a>
+      <ul>
+        <li><a href="#计划管理决策层">计划管理/决策层</a></li>
+        <li><a href="#计算机集成制造层">计算机集成制造层</a></li>
+        <li><a href="#一般控制层">一般控制层</a></li>
+        <li><a href="#现场设备层机台">现场设备层：机台</a></li>
+        <li><a href="#市场主要厂商">市场主要厂商</a></li>
+      </ul>
+    </li>
+    <li><a href="#mes车间的头子">MES：「车间的头子」</a></li>
+    <li><a href="#eap搜集信息传达指令">EAP：搜集信息、传达指令</a></li>
+    <li><a href="#apc管控过程提升良率">APC：管控过程、提升良率</a></li>
+    <li><a href="#关于-amhs">关于 AMHS</a></li>
+    <li><a href="#芯片制作工序英文不完全对照">芯片制作工序：英文不完全对照</a></li>
+  </ul>
+</nav>
+</div>
+<section>
 <h1 class="content-title">
 
 <span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>芯片制作工序 &amp; 半导体常见自动化软件模块梳理</h1><span class="content-meta no-select">
@@ -72,37 +94,155 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
   <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>27 Jan 2022</p>
 </span></section>
 
-<script async>
-  function toggleFontFamily() {
-      var elements = document.querySelectorAll('body');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var elements = document.querySelectorAll('blockquote');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var strongElements = document.querySelectorAll('strong');
+<script defer>
+    function toggleFontFamily() {
+        var elements = document.querySelectorAll('body, blockquote');
+        elements.forEach(function(el) {
+            if (el.style.fontFamily) {
+                el.style.fontFamily = ''; 
+            } else {
+                el.style.fontFamily = 'var(--sans)';
+            }
+        });
+  
+        var strongElements = document.querySelectorAll('strong');
         strongElements.forEach(function(el) {
             if (el.style.top) {
                 el.style.top = '';
             } else {
                 el.style.top = '0';
             }
-      });
-
-  }
+        });
+  
+        var hCharElements = document.querySelectorAll('h-char');
+        hCharElements.forEach(function(el) {
+            if (el.style.lineHeight) {
+                el.style.lineHeight = '';
+            } else {
+                el.style.lineHeight = 'unset';
+            }
+        });
+    }
 </script>
+
+<script defer>
+    function toggleContents() {
+        var toc = document.getElementById('contents-toc');
+        var style = window.getComputedStyle(toc);
+    
+        if (style.display === 'none') {
+            toc.style.display = 'block';
+        } else {
+            toc.style.display = 'none';
+        }
+    }
+</script>
+
+
+
+<script>
+    
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+    
+        
+        const toggleTOC = () => {
+            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+    
+            
+            if (tocContainer.style.display === 'block') {
+                initializeTOCFeatures();
+            }
+        };
+    
+        
+        const initializeTOCFeatures = () => {
+            
+            const highlightAppropriateHeader = () => {
+                let highlighted = false;
+                let lastPassedHeader = null;
+    
+                headers.forEach(header => {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+                    const bounding = header.getBoundingClientRect();
+    
+                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                        link.classList.add('toc-highlight');
+                        highlighted = true;
+                    } else {
+                        link.classList.remove('toc-highlight');
+                    }
+    
+                    if (bounding.top < 0) {
+                        lastPassedHeader = header;
+                    }
+                });
+    
+                if (!highlighted && lastPassedHeader) {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
+                    link.classList.add('toc-highlight');
+                }
+            };
+    
+            
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+    
+            
+            if (!tocContainer.dataset.initialized) {
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+    
+            
+            document.addEventListener('click', (event) => {
+                if (window.getComputedStyle(tocContainer).display !== 'none') {
+                    tocContainer.style.display = 'none';
+                }
+            });
+    
+            
+            tocContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        };
+    
+        
+        if (headers.length > 1) {
+            contentsFixedDiv.style.display = 'block';
+            
+            
+            contentsFixedDiv.addEventListener('click', (event) => {
+                toggleTOC();
+                event.stopPropagation();
+            });
+        }
+    });
+</script>    
+
 
   
 

@@ -68,7 +68,33 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 <div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
-  <section>
+  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<div id="contents-toc" class="no-select">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#获取摄像头-rtsp-流">获取摄像头 RTSP 流</a></li>
+    <li><a href="#使用-vlc-播放">使用 VLC 播放</a>
+      <ul>
+        <li><a href="#1-使用命令">1. 使用命令</a></li>
+        <li><a href="#2-创建-playlist-文件">2. 创建 playlist 文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#使用其他方式播放">使用其他方式播放</a></li>
+    <li><a href="#实现开机自启动">实现开机自启动</a></li>
+    <li><a href="#使-vlc-默认全屏打开">使 VLC 默认全屏打开</a>
+      <ul>
+        <li><a href="#1-修改命令">1. 修改命令</a></li>
+        <li><a href="#2-在-gui-修改-preference">2. 在 GUI 修改 Preference</a></li>
+      </ul>
+    </li>
+    <li><a href="#使命令在后台加载">使命令在后台加载</a></li>
+    <li><a href="#设置显示器常亮">设置显示器常亮</a></li>
+    <li><a href="#使用-unclutter-设置鼠标指针自动隐藏">使用 unclutter 设置鼠标指针自动隐藏</a></li>
+    <li><a href="#使用-xdotool-改变窗口大小和位置">使用 xdotool 改变窗口大小和位置</a></li>
+  </ul>
+</nav>
+</div>
+<section>
 <h1 class="content-title">
 
 <span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>树莓派实现开机自动播放 RTSP 流视频</h1><span class="content-meta no-select">
@@ -76,37 +102,155 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
   <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>06 Jan 2021</p>
 </span></section>
 
-<script async>
-  function toggleFontFamily() {
-      var elements = document.querySelectorAll('body');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var elements = document.querySelectorAll('blockquote');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var strongElements = document.querySelectorAll('strong');
+<script defer>
+    function toggleFontFamily() {
+        var elements = document.querySelectorAll('body, blockquote');
+        elements.forEach(function(el) {
+            if (el.style.fontFamily) {
+                el.style.fontFamily = ''; 
+            } else {
+                el.style.fontFamily = 'var(--sans)';
+            }
+        });
+  
+        var strongElements = document.querySelectorAll('strong');
         strongElements.forEach(function(el) {
             if (el.style.top) {
                 el.style.top = '';
             } else {
                 el.style.top = '0';
             }
-      });
-
-  }
+        });
+  
+        var hCharElements = document.querySelectorAll('h-char');
+        hCharElements.forEach(function(el) {
+            if (el.style.lineHeight) {
+                el.style.lineHeight = '';
+            } else {
+                el.style.lineHeight = 'unset';
+            }
+        });
+    }
 </script>
+
+<script defer>
+    function toggleContents() {
+        var toc = document.getElementById('contents-toc');
+        var style = window.getComputedStyle(toc);
+    
+        if (style.display === 'none') {
+            toc.style.display = 'block';
+        } else {
+            toc.style.display = 'none';
+        }
+    }
+</script>
+
+
+
+<script>
+    
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+    
+        
+        const toggleTOC = () => {
+            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+    
+            
+            if (tocContainer.style.display === 'block') {
+                initializeTOCFeatures();
+            }
+        };
+    
+        
+        const initializeTOCFeatures = () => {
+            
+            const highlightAppropriateHeader = () => {
+                let highlighted = false;
+                let lastPassedHeader = null;
+    
+                headers.forEach(header => {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+                    const bounding = header.getBoundingClientRect();
+    
+                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                        link.classList.add('toc-highlight');
+                        highlighted = true;
+                    } else {
+                        link.classList.remove('toc-highlight');
+                    }
+    
+                    if (bounding.top < 0) {
+                        lastPassedHeader = header;
+                    }
+                });
+    
+                if (!highlighted && lastPassedHeader) {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
+                    link.classList.add('toc-highlight');
+                }
+            };
+    
+            
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+    
+            
+            if (!tocContainer.dataset.initialized) {
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+    
+            
+            document.addEventListener('click', (event) => {
+                if (window.getComputedStyle(tocContainer).display !== 'none') {
+                    tocContainer.style.display = 'none';
+                }
+            });
+    
+            
+            tocContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        };
+    
+        
+        if (headers.length > 1) {
+            contentsFixedDiv.style.display = 'block';
+            
+            
+            contentsFixedDiv.addEventListener('click', (event) => {
+                toggleTOC();
+                event.stopPropagation();
+            });
+        }
+    });
+</script>    
+
 
   
 
@@ -235,11 +379,11 @@ Exec=/home/pi/test.sh
 </h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get install unclutter
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> “@unclutter -idle <span class="m">1</span> -root” &gt;&gt; /etc/xdg/lxsession/LXDE/autostart
-</span></span></code></pre></div><h2 id="使用-xdotoolwwwsemicompletecomprojectsxdotool-改变窗口大小和位置">
-使用 <a href="www.semicomplete.com/projects/xdotool/">xdotool</a> 改变窗口大小和位置
-<a href="#%e4%bd%bf%e7%94%a8-xdotoolwwwsemicompletecomprojectsxdotool-%e6%94%b9%e5%8f%98%e7%aa%97%e5%8f%a3%e5%a4%a7%e5%b0%8f%e5%92%8c%e4%bd%8d%e7%bd%ae" class="heading-anchor">#</a>
+</span></span></code></pre></div><h2 id="使用-xdotool-改变窗口大小和位置">
+使用 xdotool 改变窗口大小和位置
+<a href="#%e4%bd%bf%e7%94%a8-xdotool-%e6%94%b9%e5%8f%98%e7%aa%97%e5%8f%a3%e5%a4%a7%e5%b0%8f%e5%92%8c%e4%bd%8d%e7%bd%ae" class="heading-anchor">#</a>
 </h2>
-<p>首先安装 xdotool：</p>
+<p>首先安装 <a href="www.semicomplete.com/projects/xdotool/">xdotool</a>：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get install xdotool
 </span></span></code></pre></div><p>同时实现改变窗口大小和位置，如：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">xdotool search --name <span class="s2">&#34;VLC&#34;</span> windowsize <span class="m">800</span> <span class="m">600</span> windowmove <span class="m">0</span> <span class="m">0</span>

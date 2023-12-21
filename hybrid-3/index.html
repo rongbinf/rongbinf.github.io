@@ -58,7 +58,25 @@
 <div class="top-scroll-bar"></div>
 
 <article id="main" class="han-init-context">
-  <section>
+  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<div id="contents-toc" class="no-select">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#摘录">摘录</a>
+      <ul>
+        <li><a href="#on-sharing-the-magic-of-the-creative-process-w-serbest-salih--the-creative-independent">On sharing the magic of the creative process, w/ Serbest Salih,  The Creative Independent</a></li>
+        <li><a href="#quoted-from-a-psalm-for-the-wild-built-by-becky-chambers-how-websites-die-by-wesley">Quoted from <em>A Psalm for the Wild-Built</em> by Becky Chambers, <em>How Websites Die</em> by Wesley</a></li>
+        <li><a href="#interview-vitalik-buterin-creator-of-ethereum-noahpinion">Interview: Vitalik Buterin, creator of Ethereum, Noahpinion</a></li>
+        <li><a href="#an-interview-with-venture-capitalist-bill-gurley-mba-93">An Interview with Venture Capitalist Bill Gurley, MBA ’93</a></li>
+        <li><a href="#白板报两只眼睛看到的-cmkids-大地艺术">白板报：两只眼睛看到的 CMkids 大地艺术</a></li>
+        <li><a href="#陈先发稀粥颂">陈先发：稀粥颂</a></li>
+      </ul>
+    </li>
+    <li><a href="#随感">随感</a></li>
+  </ul>
+</nav>
+</div>
+<section>
 <h1 class="content-title">
 
 <span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>Hybrid #3</h1><span class="content-meta no-select">
@@ -66,37 +84,155 @@
   <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>04 Sep 2022</p>
 </span></section>
 
-<script async>
-  function toggleFontFamily() {
-      var elements = document.querySelectorAll('body');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var elements = document.querySelectorAll('blockquote');
-      elements.forEach(function(el) {
-          if (el.style.fontFamily) {
-              el.style.fontFamily = ''; 
-          } else {
-              el.style.fontFamily = 'var(--sans)';
-          }
-      });
-
-      var strongElements = document.querySelectorAll('strong');
+<script defer>
+    function toggleFontFamily() {
+        var elements = document.querySelectorAll('body, blockquote');
+        elements.forEach(function(el) {
+            if (el.style.fontFamily) {
+                el.style.fontFamily = ''; 
+            } else {
+                el.style.fontFamily = 'var(--sans)';
+            }
+        });
+  
+        var strongElements = document.querySelectorAll('strong');
         strongElements.forEach(function(el) {
             if (el.style.top) {
                 el.style.top = '';
             } else {
                 el.style.top = '0';
             }
-      });
-
-  }
+        });
+  
+        var hCharElements = document.querySelectorAll('h-char');
+        hCharElements.forEach(function(el) {
+            if (el.style.lineHeight) {
+                el.style.lineHeight = '';
+            } else {
+                el.style.lineHeight = 'unset';
+            }
+        });
+    }
 </script>
+
+<script defer>
+    function toggleContents() {
+        var toc = document.getElementById('contents-toc');
+        var style = window.getComputedStyle(toc);
+    
+        if (style.display === 'none') {
+            toc.style.display = 'block';
+        } else {
+            toc.style.display = 'none';
+        }
+    }
+</script>
+
+
+
+<script>
+    
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+    
+        
+        const toggleTOC = () => {
+            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+    
+            
+            if (tocContainer.style.display === 'block') {
+                initializeTOCFeatures();
+            }
+        };
+    
+        
+        const initializeTOCFeatures = () => {
+            
+            const highlightAppropriateHeader = () => {
+                let highlighted = false;
+                let lastPassedHeader = null;
+    
+                headers.forEach(header => {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+                    const bounding = header.getBoundingClientRect();
+    
+                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                        link.classList.add('toc-highlight');
+                        highlighted = true;
+                    } else {
+                        link.classList.remove('toc-highlight');
+                    }
+    
+                    if (bounding.top < 0) {
+                        lastPassedHeader = header;
+                    }
+                });
+    
+                if (!highlighted && lastPassedHeader) {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
+                    link.classList.add('toc-highlight');
+                }
+            };
+    
+            
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+    
+            
+            if (!tocContainer.dataset.initialized) {
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+    
+            
+            document.addEventListener('click', (event) => {
+                if (window.getComputedStyle(tocContainer).display !== 'none') {
+                    tocContainer.style.display = 'none';
+                }
+            });
+    
+            
+            tocContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        };
+    
+        
+        if (headers.length > 1) {
+            contentsFixedDiv.style.display = 'block';
+            
+            
+            contentsFixedDiv.addEventListener('click', (event) => {
+                toggleTOC();
+                event.stopPropagation();
+            });
+        }
+    });
+</script>    
+
 
   
 
