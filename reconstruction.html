@@ -38,6 +38,9 @@
     <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
 
     <script src="/clipboard.min.js"></script>
+
+    <link rel="preload" fetchpriority="high" as="image" href="/dithered-white-10kb.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+    <link rel="preload" fetchpriority="high" as="image" href="/dithered-black-10kb.webp" type="image/webp" media="(prefers-color-scheme: light)">
 </head>
 
 <style>
@@ -63,7 +66,7 @@
   }
 
   body {
-    font-size: 18px;
+    font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
     line-height: 1.4;
     color: var(--textcolor);
@@ -614,7 +617,7 @@
 
   .name {
     font-size: 1.4rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 
   .footer {
@@ -641,13 +644,13 @@
 <body>
 
   <header>
-    <h1>
+    <h1 id="back-home">
       <a href="#home">Rongbin FAN</a>
     </h1>
     <nav>
       <a href="#hello">Hello</a>
-      <a href="/posts">Blog</a>
-      <a href="/links.html">Guestbook</a>
+      <a href="/posts">中文博客</a>
+      <a href="/links">Guestbook</a>
       <a href="https://www.are.na/rongbin-fan/brackets-and-comma" target="_blank">Are.na</a>
     </nav>
   </header>
@@ -655,47 +658,57 @@
   <main>
 
     <section id="home">
-
-        <p class="serif name">
-            <strong>Hi, my name's Rongbin.</strong><br>You can call me Ron.
-        </p>
+        <div style="display: inline-flex; align-items: flex-end; margin-bottom: 2rem;">
+            <picture class="avatar">
+                <source srcset="dithered-white-10kb.webp" media="(prefers-color-scheme:dark)">
+                <img class="avatar" alt="avatar" src="dithered-black-10kb.webp" width="120px" height="120px" style="padding-bottom: 10px">
+            </picture>
+            <div style="flex-direction: column;">
+                <p class="serif name"><strong>Hi, my name's Rongbin.</strong><br>You can call me Ron.</p>
+            </div>
+        </div>
 
         <p>
             I <em class="opacity-6">he/him/his</em> currently live in Beijing, and I study finance at the University of International Business and Economics (UIBE). I'll be graduating in 2024.
         </p>
 
         <p>
-            Professionally I envision to help businesses and individuals with business strategy.
+            Professionally I envision to craft strategies for businesses and individuals.
         </p>
 
         <p>
             I also work freelance as a <a href="https://www.are.na/rongbin-fan/brackets-and-comma" target="_blank">designer</a>, mostly graphics, printings, visual identities, and products. Big fan of ambient music, tech gadgets, new technologies, and productivity tools. 
         </p>
 
-        <p>
-            <em>I believe internet should bring us equality/equity.</em>
-        </p>
-
-        <p>
-            Feel 200% free to reach me via methods listed on <a href="#hello">my hello page</a>. The fastest will always be email.
+        <p style="margin-top: 2rem;">
+            Feel 200% free to reach me via methods listed on <a href="#hello" style="white-space: nowrap;">my hello page</a>. Email will be the fastest.
         </p>
 
         <p>
             I speak Chinese <span class="opacity-6"><em>Mandarin, Cantonese, Haklau Min</em></span>, English, Korean. Hope to learn more about you and the world. 🌍
         </p>
 
-        <p>
-            I would like to introduce a non-government organisation to you: <a href="#weilan">Wei Lan Library</a> (Wave Library).
-
-        <p>
-            Thanks <a href="https://john-doe.neocities.org/#home" target="_blank">John Doe</a> for this wonderful template. You can <a href="/index.html" download="index_template_from_rongbin.html">download</a> this single <code>html</code> file to build your own webpage.<label for="although">although...</label>
-            <input type="checkbox" id="although"><small>It might get unpractical for more than a handful of pages, but it comes in handy if all you need is a simple
-                website. <a href="#why-is-having-your-own-website-important">Why is having your own website important?</a></small>
+        <p style="margin-top: 2rem;">
+            <em>I believe internet should bring us equality/equity.</em>
         </p>
 
-        <p class="footer opacity-6">
-            Hosted on <a href="https://pages.github.com">Github Pages</a><br>
-            Last updated: Dec 2023 | <a href="/nov-2023.html">Old Version</a>
+        <p>
+            And I would like to introduce a non-government organisation to you: <a href="#weilan" style="white-space: nowrap;">Wei Lan Library</a> (Wave Library).
+        </p>
+
+
+        <div class="footer opacity-6">
+            <p>
+                Thanks <a href="https://john-doe.neocities.org/#home" target="_blank">John Doe</a> for this wonderful template. You can download this <a href="/index.html" download="index_template.html"><code>html</code></a> file to build your own webpage.<label for="although">although...</label>
+                <input type="checkbox" id="although"><small>It might get unpractical for more than a handful of pages, but it comes in handy if all you need is a simple
+                website. <a href="#why-is-having-your-own-website-important">Why is having your own website important?</a></small>
+            </p>
+            <p>
+                    Hosted on <a href="https://pages.github.com">Github</a> and <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a>. HTML gives me <a href="https://html.energy" target="_blank">energy</a>. <a href="https://512kb.club" target="_blank">512kb.club</a>, <a href="https://1mb.club" target="_blank">1mb.club</a>.
+            </p>
+            <p>
+            Last updated: Dec 2023 | <a href="/nov-2023.html">Previous Version</a>
+            </p>
         </p>
 
     </section>
@@ -746,7 +759,7 @@
     <section id="hello">
 
       <p>
-        Email will be the fastest way: 📧
+        Email will be the fastest:
         <ul>
             <li><a href="mailto:rongbin.fan@outlook.com"><strong>mailto: rongbin.fan (at) outlook.com</strong></a>
                 <ul><li><a class="btn eazy-button opacity-6" data-clipboard-text="rongbin.fan@outlook.com" onclick="this.textContent='email copied!';">copy</a><a class="eazy-button opacity-6" href="/pubkey.asc" target="_blank">PGP key</a><a class="btn eazy-button opacity-6" data-clipboard-text="DC73 DCEC A3DC 9F3D 33F2 4BAC 8A89 772F CE34 82D8" onclick="this.textContent='fingerprint copied!';">copy fingerprint</a></li></ul>
@@ -761,11 +774,11 @@
       </p>
 
       <p>
-        Direct messages are easy to start with: ☕
+        Direct messages are easy to start with:
         <ul>
             <li><a href="https://t.me/rongbin" target="_blank">Telegram</a> @rongbin</li>
             <li><a href="https://matrix.to/#/@rongbin:matrix.org" target="_blank">Matrix.org</a> @rongbin</li>
-            <li>Discord @rongbin</li>
+            <li><a href="https://discord.com/users/rongbin" target="_blank">Discord</a> @rongbin</li>
         </ul>
       </p>
 
@@ -775,22 +788,22 @@
       </p>
 
       <p>
-        To send <em>encrypted</em> messages 🔒, use PGP key<label for="pgp">What is that?</label>
+        To send <em>encrypted</em> messages, use PGP key<label for="pgp">What is that?</label>
         <input type="checkbox" id="pgp"><small>
             <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" target="_blank">Pretty Good Privacy</a> (PGP) is an encryption system used for both sending encrypted emails and encrypting sensitive files. You encrypt your message using <em>my public key</em> and send the message to me, and then I decrpyt your message using <em>my private key</em>.
         </small> or DM me via Telegram or Matrix. <span class="opacity-6">(end-to-end encryption supported)</span>
       </p>
 
       <p>
-        If you have an independent site as well, I'm glad to have you on <a href="/links.html">my guestbook</a>. 📕 I'll go and visit you from time to time ;-)
+        If you have an independent site as well, I'm glad to have you on <a href="/links.html">my guestbook</a>. I'll go and visit you from time to time ;-)
       </p>
 
       <p>
-        You can <a href="https://ron.joinperch.com/ama" target="_blank">ask me questions</a> anonymously. 👤
+        You can <a href="https://ron.joinperch.com/ama" target="_blank">ask me questions</a> anonymously.
       </p>
 
       <p>
-        I've been listening to these <a href="https://dimsum.eu.org/music.html" target="_blank">music</a>. 🎵
+        I've been listening to these <a href="https://dimsum.eu.org/music.html" target="_blank">music</a>.
       </p>
 
     </section>
