@@ -1,13 +1,19 @@
-<svg id="组_1" data-name="组 1" xmlns="http://www.w3.org/2000/svg" width="1036" height="867" viewBox="0 0 1036 867">
+<svg id="fav" data-name="fav" xmlns="http://www.w3.org/2000/svg" width="1036" height="867" viewBox="0 0 1036 867">
   <defs>
     <style>
+      @media (prefers-color-scheme: dark) {
+        .cls-1, .cls-2, .cls-3 {
+          fill: #fff;
+        }
+      }
+
       .cls-1 {
         font-size: 951.125px;
       }
 
       .cls-1, .cls-2, .cls-3 {
         text-anchor: middle;
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", Arial, sans-serif;
         font-weight: 700;
       }
 
