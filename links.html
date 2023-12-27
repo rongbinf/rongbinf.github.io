@@ -31,7 +31,7 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  
+
   <link rel="icon" ref="/favicon.svg">
   <link rel="mask-icon" href=”/favicon.svg” color="#000">
 
@@ -40,9 +40,9 @@
   <script src="/clipboard.min.js"></script>
   <script src="/fetch.umd.min.js"></script>
 
-  <link rel="preload" fetchpriority="high" as="image" href="/dithered-white-10kb.webp" type="image/webp"
+  <link rel="preload" fetchpriority="high" as="image" href="/dithered-guestbook-white.webp" type="image/webp"
     media="(prefers-color-scheme: dark)">
-  <link rel="preload" fetchpriority="high" as="image" href="/dithered-black-10kb.webp" type="image/webp"
+  <link rel="preload" fetchpriority="high" as="image" href="/dithered-guestbook.webp" type="image/webp"
     media="(prefers-color-scheme: light)">
 </head>
 
@@ -878,11 +878,23 @@
           Leave a comment:
         </p>
         <div id="giscus" style="max-width: 85ch;">
-          <script src="https://giscus.app/client.js" data-repo="rongbinf/giscus-comment" data-repo-id="R_kgDOK3UYzw"
-            data-category="Announcements" data-category-id="DIC_kwDOK3UYz84Cbl2R" data-mapping="title" data-strict="0"
-            data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top"
-            data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
-            </script>
+          <script id="giscus-script"
+                  src="https://giscus.app/client.js"
+                  data-repo="rongbinf/giscus-comment"
+                  data-repo-id="R_kgDOK3UYzw"
+                  data-category="Announcements"
+                  data-category-id="DIC_kwDOK3UYz84Cbl2R"
+                  data-mapping="title"
+                  data-strict="0"
+                  data-reactions-enabled="0"
+                  data-emit-metadata="0"
+                  data-input-position="top"
+                  data-theme="https://fanrongbin.com/giscus.css"
+                  data-lang="en"
+                  data-loading="lazy"
+                  crossorigin="anonymous"
+                  async>
+          </script>        
         </div>
       </div>
 
