@@ -12,7 +12,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.f1276415ad2160a9b6b7c76d7685d1d0d01bdd999a5eabd832079cb9cec61c4c.css" integrity="sha256-8SdkFa0hYKm2t8dtdoXR0NAb3ZmaXqvYMgecuc7GHEw=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.447f464ae6a513f491999a696318d45ab2667623c3be0bcad6df0ebafec4afe8.css" integrity="sha256-RH9GSualE/SRmZppYxjUWrJmdiPDvgvK1t8Ouv7Er&#43;g=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -106,7 +106,7 @@
   window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-<script async>
+<script defer>
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', function() {
       var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
@@ -147,6 +147,7 @@
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
     
+        if (contentsFixedDiv) {
         
         const toggleTOC = () => {
             const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
@@ -219,6 +220,7 @@
                 event.stopPropagation();
             });
         }
+    }
     });
 </script>    
 
