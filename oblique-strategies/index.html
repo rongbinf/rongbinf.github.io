@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init"><head>
-<title>斜交策略 Oblique Strategies - Rongbin&#39;s Blog</title>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <title>斜交策略 Oblique Strategies - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="被我们落下的想象力，以什么挽留他？
 Brian Eno和Peter Schmidt设计了超过一百个prompt，写在卡片上，来帮你打破寻找创意的障碍。这里有英文版本的完整列表。
@@ -14,56 +15,32 @@ The Oblique Strategies evolved from me being in a number of working situations w
 
 
 
-  
 
 
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" media="print" onload="this.media='all'" />
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
-</noscript>
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/hugo-tufte.min.css">
-
-
-
-
-
-
+      <link rel="stylesheet" href="/css/main.min.893d84d10b8a92caf7703f9114c1ac728a503e7812a07ef5113859ff75671c79.css" integrity="sha256-iT2E0QuKksr3cD&#43;RFMGscopQPngSoH71EThZ/3VnHHk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
-
-
-
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 
 
 </head>
 <body>
-<div class="top-scroll-bar"></div>
+  <header class="navbar">
+    <h1><a href="/">Rongbin FAN</a></h1>
 
-<article id="main" class="han-init-context">
-  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<nav>
+    <a href="/#hello">Hello</a>
+    <a href="/posts" style="font-weight: bold;">Blog</a>
+    <a href="/links">Guestbook</a>
+</nav>
+  </header>
+  <main class="han-init-context">
+    
+
+  <div class="top-scroll-bar"></div>
+<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -71,167 +48,15 @@ The Oblique Strategies evolved from me being in a number of working situations w
   </ul>
 </nav>
 </div>
-<section>
-<h1 class="content-title">
 
-<span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>斜交策略 Oblique Strategies</h1><span class="content-meta no-select">
-  <style>#changeFontLink{left:-2.85rem;font-size: 1.6rem;}</style>
-  <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>22 Nov 2023</p>
-</span></section>
+  <div id="single-header">
+    <h1 class="content-h1">斜交策略 Oblique Strategies</h1>
+    
+    
+    <p class="content-time"><time datetime="2023-11-22T00:00:00&#43;00:00">November 22, 2023</time></p>
+  </div>
 
-<script defer>
-    function toggleFontFamily() {
-        var elements = document.querySelectorAll('body, blockquote');
-        elements.forEach(function(el) {
-            if (el.style.fontFamily) {
-                el.style.fontFamily = ''; 
-            } else {
-                el.style.fontFamily = 'var(--sans)';
-            }
-        });
-  
-        var strongElements = document.querySelectorAll('strong');
-        strongElements.forEach(function(el) {
-            if (el.style.top) {
-                el.style.top = '';
-            } else {
-                el.style.top = '0';
-            }
-        });
-  
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-</script>
-
-<script defer>
-    function toggleContents() {
-        var toc = document.getElementById('contents-toc');
-        var style = window.getComputedStyle(toc);
-    
-        if (style.display === 'none') {
-            toc.style.display = 'block';
-        } else {
-            toc.style.display = 'none';
-        }
-    }
-</script>
-
-
-
-<script>
-    
-    function throttle(func, limit) {
-        let lastFunc;
-        let lastRan;
-        return function() {
-            const context = this;
-            const args = arguments;
-            if (!lastRan) {
-                func.apply(context, args);
-                lastRan = Date.now();
-            } else {
-                clearTimeout(lastFunc);
-                lastFunc = setTimeout(function() {
-                    if ((Date.now() - lastRan) >= limit) {
-                        func.apply(context, args);
-                        lastRan = Date.now();
-                    }
-                }, limit - (Date.now() - lastRan));
-            }
-        }
-    }
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
-        const contentsFixedDiv = document.getElementById('contents-fixed');
-        const tocContainer = document.getElementById('contents-toc');
-    
-        
-        const toggleTOC = () => {
-            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-            tocContainer.style.display = isDisplayed ? 'none' : 'block';
-    
-            
-            if (tocContainer.style.display === 'block') {
-                initializeTOCFeatures();
-            }
-        };
-    
-        
-        const initializeTOCFeatures = () => {
-            
-            const highlightAppropriateHeader = () => {
-                let highlighted = false;
-                let lastPassedHeader = null;
-    
-                headers.forEach(header => {
-                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
-                    const bounding = header.getBoundingClientRect();
-    
-                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
-                        link.classList.add('toc-highlight');
-                        highlighted = true;
-                    } else {
-                        link.classList.remove('toc-highlight');
-                    }
-    
-                    if (bounding.top < 0) {
-                        lastPassedHeader = header;
-                    }
-                });
-    
-                if (!highlighted && lastPassedHeader) {
-                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
-                    link.classList.add('toc-highlight');
-                }
-            };
-    
-            
-            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
-    
-            
-            if (!tocContainer.dataset.initialized) {
-                window.addEventListener('scroll', throttledHighlight);
-                tocContainer.dataset.initialized = 'true';
-            }
-    
-            
-            document.addEventListener('click', (event) => {
-                if (window.getComputedStyle(tocContainer).display !== 'none') {
-                    tocContainer.style.display = 'none';
-                }
-            });
-    
-            
-            tocContainer.addEventListener('click', (event) => {
-                event.stopPropagation();
-            });
-        };
-    
-        
-        if (headers.length > 1) {
-            contentsFixedDiv.style.display = 'block';
-            
-            
-            contentsFixedDiv.addEventListener('click', (event) => {
-                toggleTOC();
-                event.stopPropagation();
-            });
-        }
-    });
-</script>    
-
-
-  
-
-  <section><p>被我们落下的想象力，以什么挽留他？</p>
+  <p>被我们落下的想象力，以什么挽留他？</p>
 <p>Brian Eno和Peter Schmidt设计了超过一百个prompt，写在卡片上，来帮你打破寻找创意的障碍。这里有英文版本的<a href="https://matt-rickard.com/list-of-all-oblique-strategies">完整列表</a>。</p>
 <p>这组卡片叫Oblique Strategies，有人翻译成迂回策略或间接策略。我喜欢叫它“斜交策略”。因素分析中，你会遇到“正交旋转”与“斜交旋转”，激发创造力，就像从这些卡片中寻找能联动我们潜意识的相关因素。</p>
 <p>当创作的<strong>工作</strong>属性变强、时间压力变重时，Eno和Schmidt意识到这会让他们偏离思考和创作的本质。于是他们都写下一些要旨，帮助保持思维活跃，提醒自己不要忘记那些能从侧面推进的有趣方法，整合成了这组卡片。</p>
@@ -247,10 +72,7 @@ The Oblique Strategies evolved from me being in a number of working situations w
 </blockquote>
 <p>观察我们日常的创作，他们背后大多衍生于：回顾（智力追随直觉）、识别、公式。这些卡片可以作为一组，也可以随机抽出一张来使用。不论卡片上的prompt是否完全适合，既然我们有所判断，ideas本身就能得到自我确证。</p>
 <p>（参考自 <a href="http://www.rtqe.net/ObliqueStrategies/OSintro.html"><em>A Primer on Oblique Strategizing</em></a> by Gregory Taylor 1997）</p>
-<h2 id="卡片列表">
-卡片列表
-<a href="#%e5%8d%a1%e7%89%87%e5%88%97%e8%a1%a8" class="heading-anchor">#</a>
-</h2>
+<h2 id="卡片列表">卡片列表</h2>
 <ul>
 <li>Abandon normal instruments</li>
 <li>Accept advice</li>
@@ -370,11 +192,34 @@ The Oblique Strategies evolved from me being in a number of working situations w
 <li>You don&rsquo;t have to be ashamed of using your own ideas</li>
 <li>[blank white card]</li>
 </ul>
-<style>ul{width:unset;max-width:85%;font-family:var(--sans);}</style></section>
-</article>
+<style>ul{width:unset;max-width:85%;font-family:var(--sans);}</style>
+
+  <div class="footer-nav">
+
+  <div class="previous-post" style="display:inline-block;">
+    
+    <a class="no-external" href="https://fanrongbin.com/github-actions-deploy-hugo/"><span class="arrow">←</span> 使用 Github Actions 自动部署 Hugo</a>
+    
+  </div>
+  
+  
 
 
-<script defer src="https://hypothes.is/embed.js"></script>
+
+  <div class="next-post" style="display:inline-block;float:right;">
+    
+  </div>
+
+  </div>
+
+  </main>
+  <footer class="opacity-6">
+    <p><a href="https://gohugo.io/" target="_blank">Hugo</a>, <a href="https://github.com/ethantw/Han" target="_blank">Han</a>
+<br>You can select texts to hightlight using <a href="https://hypothes.is/" target="_blank">Hypothesis</a>.</p>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+  </footer>
+</body>
+<script src="/han.min.js"></script>
 
 <script defer>
   
@@ -418,131 +263,108 @@ The Oblique Strategies evolved from me being in a number of working situations w
   });
 </script>
 
-
-
-
-
-
-
-
-
-
-</body>
-
-<script src="/han.min.js"></script>
-
-
-<script defer>
-    window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
+<script>
+    
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
             }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+    
+        
+        const toggleTOC = () => {
+            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+    
+            
+            if (tocContainer.style.display === 'block') {
+                initializeTOCFeatures();
             }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
-        });
-    }
-</script>
-
-<section><footer class="page-footer">
-<hr />
-
-<div class="previous-post" style="display:inline-block;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/github-actions-deploy-hugo/?ref=footer">« 使用 Github Actions 自动部署 Hugo</a>
-  
-</div>
-
-<div class="next-post", style="display:inline-block;float:right;">
-  
-</div>
-
-<ul class="page-footer-menu">
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</ul>
-
-
-<p>
-  <a href="https://gohugo.io">hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
-</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="/links.html">Leave a comment</a> or <a href="mailto:rongbin.fan@outlook.com">email me</a>.
-</p>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> &copy; 2023 Rongbin FAN</p>
-
-
-
-
-</footer>
-
-<script defer>
-function checkBrowserAndApplyStyle() {
-    var userAgent = navigator.userAgent;
-    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
-    var isFirefox = userAgent.includes("Firefox");
-
-    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
-        addSelectionStyle();
-    }
-}
-
-function addSelectionStyle() {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
-    document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-checkBrowserAndApplyStyle();
-</script></section>
-<section><nav class="menu">
-    <ul>
+        };
     
-        <li><a href="/posts">归档</a></li>
+        
+        const initializeTOCFeatures = () => {
+            
+            const highlightAppropriateHeader = () => {
+                let highlighted = false;
+                let lastPassedHeader = null;
     
-        <li><a href="/tags">标签</a></li>
+                headers.forEach(header => {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+                    const bounding = header.getBoundingClientRect();
     
-        <li><a href="/">关于</a></li>
+                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                        link.classList.add('toc-highlight');
+                        highlighted = true;
+                    } else {
+                        link.classList.remove('toc-highlight');
+                    }
     
-        <li><a href="/links.html">留言板</a></li>
+                    if (bounding.top < 0) {
+                        lastPassedHeader = header;
+                    }
+                });
     
-    </ul>
-</nav>
-</section>
+                if (!highlighted && lastPassedHeader) {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
+                    link.classList.add('toc-highlight');
+                }
+            };
+    
+            
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+    
+            
+            if (!tocContainer.dataset.initialized) {
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+    
+            
+            document.addEventListener('click', (event) => {
+                if (window.getComputedStyle(tocContainer).display !== 'none') {
+                    tocContainer.style.display = 'none';
+                }
+            });
+    
+            
+            tocContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        };
+    
+        
+        if (headers.length > 1) {
+            contentsFixedDiv.style.display = 'block';
+            
+            
+            contentsFixedDiv.addEventListener('click', (event) => {
+                toggleTOC();
+                event.stopPropagation();
+            });
+        }
+    });
+</script>    
+
 
 </html>

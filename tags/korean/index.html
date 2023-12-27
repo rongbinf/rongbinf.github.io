@@ -1,224 +1,202 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init"><head>
-<title>Korean - Rongbin&#39;s Blog</title>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <title>Korean - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content=" ">
 <link rel="canonical" href="https://fanrongbin.com/tags/korean/" />
 
 
 
-  <link rel="alternate" type="application/rss+xml" href="https://fanrongbin.com/tags/korean/index.xml" title="Rongbin's Blog">
 
 
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" media="print" onload="this.media='all'" />
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
-</noscript>
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/hugo-tufte.min.css">
-
-
-
-
-
-
+      <link rel="stylesheet" href="/css/main.min.893d84d10b8a92caf7703f9114c1ac728a503e7812a07ef5113859ff75671c79.css" integrity="sha256-iT2E0QuKksr3cD&#43;RFMGscopQPngSoH71EThZ/3VnHHk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 
-
-
-
+<link rel="alternate" type="application/rss+xml" href="https://fanrongbin.com/tags/korean/index.xml" title="Rongbin's Blog">
 
 </head>
 <body>
-<div class="top-scroll-bar"></div>
+  <header class="navbar">
+    <h1><a href="/">Rongbin FAN</a></h1>
 
-
-<div id="layout" class="pure-g">
-<article class="pure-u-1">
-
-<header class="brand">
-<picture class="brand-head">
-  <source srcset="/dithered-blog-head-white.webp" media="(prefers-color-scheme:dark)">
-  <img class="brand-head" alt="Rongbin's Blog" src="/dithered-blog-head.webp">
-</picture>
-
-
-
-
-</header>
-
-
-
-<section class="list-page">
-
-  <ul>
-  <li class="year animate__animated animate__fadeInUp animate__faster">2023</li>
-  
+<nav>
+    <a href="/#hello">Hello</a>
+    <a href="/posts" style="font-weight: bold;">Blog</a>
+    <a href="/links">Guestbook</a>
+</nav>
+  </header>
+  <main class="han-init-context">
     
-    <ul>
-    
-      
-      <ul class="animate__animated animate__fadeInUp animate__faster">
-      <li>
-        <span class="list-date">17 Jan</span></br>
-        <a class="list-title" href="/honorific-ko/">높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理</a>
-      </li>
-      </ul>
-      
-    </li>
-    </ul>
-    
-  </ul>
-  
-</section>
-</article>
-</div>
+<h2>Korean</h2>
 
 
+<p class="list-date">17 Jan 2023</p>
+<p class="list-title"><a href="/honorific-ko/">높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理</a></p>
+
+<p class="list-date">12 Jan 2023</p>
+<p class="list-title"><a href="/give-ko/">주다, 드리다, 주시다 &#43; 간접인용 명령문</a></p>
 
 
-
-
+  </main>
+  <footer class="opacity-6">
+    <p><a href="https://gohugo.io/" target="_blank">Hugo</a>, <a href="https://github.com/ethantw/Han" target="_blank">Han</a>
+<br>You can select texts to hightlight using <a href="https://hypothes.is/" target="_blank">Hypothesis</a>.</p>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+  </footer>
 </body>
-
 <script src="/han.min.js"></script>
 
-
 <script defer>
-    window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
-        });
+  
+  function applyBreakAllClass() {
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    
+    if (screenWidth <= 960) {
+      
+      var codeElements = document.querySelectorAll('code');
+
+      
+      codeElements.forEach(function(element) {
+        
+        if (element.textContent.length > 10) {
+          
+          element.classList.add('break-all');
+        }
+      });
     }
+  }
+
+  
+  applyBreakAllClass();
+
+  
+  window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-<section><footer class="page-footer">
-<hr />
+<script async>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+</script>
 
-<div class="previous-post" style="display:inline-block;">
-  
-</div>
-
-<div class="next-post", style="display:inline-block;float:right;">
-  
-</div>
-
-<ul class="page-footer-menu">
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</ul>
-
-
-<p>
-  <a href="https://gohugo.io">hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
-</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="/links.html">Leave a comment</a> or <a href="mailto:rongbin.fan@outlook.com">email me</a>.
-</p>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> &copy; 2023 Rongbin FAN</p>
-
-
-
-
-</footer>
-
-<script defer>
-function checkBrowserAndApplyStyle() {
-    var userAgent = navigator.userAgent;
-    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
-    var isFirefox = userAgent.includes("Firefox");
-
-    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
-        addSelectionStyle();
+<script>
+    
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
     }
-}
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+    
+        
+        const toggleTOC = () => {
+            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+    
+            
+            if (tocContainer.style.display === 'block') {
+                initializeTOCFeatures();
+            }
+        };
+    
+        
+        const initializeTOCFeatures = () => {
+            
+            const highlightAppropriateHeader = () => {
+                let highlighted = false;
+                let lastPassedHeader = null;
+    
+                headers.forEach(header => {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+                    const bounding = header.getBoundingClientRect();
+    
+                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                        link.classList.add('toc-highlight');
+                        highlighted = true;
+                    } else {
+                        link.classList.remove('toc-highlight');
+                    }
+    
+                    if (bounding.top < 0) {
+                        lastPassedHeader = header;
+                    }
+                });
+    
+                if (!highlighted && lastPassedHeader) {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
+                    link.classList.add('toc-highlight');
+                }
+            };
+    
+            
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+    
+            
+            if (!tocContainer.dataset.initialized) {
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+    
+            
+            document.addEventListener('click', (event) => {
+                if (window.getComputedStyle(tocContainer).display !== 'none') {
+                    tocContainer.style.display = 'none';
+                }
+            });
+    
+            
+            tocContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        };
+    
+        
+        if (headers.length > 1) {
+            contentsFixedDiv.style.display = 'block';
+            
+            
+            contentsFixedDiv.addEventListener('click', (event) => {
+                toggleTOC();
+                event.stopPropagation();
+            });
+        }
+    });
+</script>    
 
-function addSelectionStyle() {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
-    document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-checkBrowserAndApplyStyle();
-</script></section>
-<section><nav class="menu">
-    <ul>
-    
-        <li><a href="/posts">归档</a></li>
-    
-        <li><a href="/tags">标签</a></li>
-    
-        <li><a href="/">关于</a></li>
-    
-        <li><a href="/links.html">留言板</a></li>
-    
-    </ul>
-</nav>
-</section>
 
 </html>

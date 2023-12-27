@@ -1,64 +1,41 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init"><head>
-<title>家庭组网 2022 - Rongbin&#39;s Blog</title>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <title>家庭组网 2022 - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="对网络布局的再梳理，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考 ">
 <link rel="canonical" href="https://fanrongbin.com/network-resetting-2023/" />
 
 
 
-  
 
 
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" media="print" onload="this.media='all'" />
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
-</noscript>
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/hugo-tufte.min.css">
-
-
-
-
-
-
+      <link rel="stylesheet" href="/css/main.min.893d84d10b8a92caf7703f9114c1ac728a503e7812a07ef5113859ff75671c79.css" integrity="sha256-iT2E0QuKksr3cD&#43;RFMGscopQPngSoH71EThZ/3VnHHk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
-
-
-
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 
 
 </head>
 <body>
-<div class="top-scroll-bar"></div>
+  <header class="navbar">
+    <h1><a href="/">Rongbin FAN</a></h1>
 
-<article id="main" class="han-init-context">
-  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<nav>
+    <a href="/#hello">Hello</a>
+    <a href="/posts" style="font-weight: bold;">Blog</a>
+    <a href="/links">Guestbook</a>
+</nav>
+  </header>
+  <main class="han-init-context">
+    
+
+  <div class="top-scroll-bar"></div>
+<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -72,59 +49,191 @@
   </ul>
 </nav>
 </div>
-<section>
-<h1 class="content-title">
 
-<span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>家庭组网 2022</h1><p class="subtitle">光猫桥接、路由拨号、外部访问</p><span class="content-meta no-select">
-  <style>#changeFontLink{left:-2.85rem;font-size: 1.6rem;}</style>
-  <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>17 Jan 2023</p>
-</span></section>
-
-<script defer>
-    function toggleFontFamily() {
-        var elements = document.querySelectorAll('body, blockquote');
-        elements.forEach(function(el) {
-            if (el.style.fontFamily) {
-                el.style.fontFamily = ''; 
-            } else {
-                el.style.fontFamily = 'var(--sans)';
-            }
-        });
-  
-        var strongElements = document.querySelectorAll('strong');
-        strongElements.forEach(function(el) {
-            if (el.style.top) {
-                el.style.top = '';
-            } else {
-                el.style.top = '0';
-            }
-        });
-  
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-</script>
-
-<script defer>
-    function toggleContents() {
-        var toc = document.getElementById('contents-toc');
-        var style = window.getComputedStyle(toc);
+  <div id="single-header">
+    <h1 class="content-h1">家庭组网 2022</h1>
     
-        if (style.display === 'none') {
-            toc.style.display = 'block';
-        } else {
-            toc.style.display = 'none';
+    
+    <p class="content-time"><time datetime="2023-01-17T00:00:00&#43;00:00">January 17, 2023</time></p>
+  </div>
+
+  <h2 id="网络布局没有变化">网络布局没有变化</h2>
+<p><img src="https://img.fanrongbin.com/network-resetting-2022-1.jpg" alt=""></p>
+<p>还是AC-68U拨号，并且直接接交换机给房间的网线接口。两个易展路由器负责Wi-Fi。</p>
+<p>关于光猫桥接、路由拨号和TP-LINK的易展功能，之前的一篇博文有介绍过，但因为目前博客在做调整，说不定那篇日后会删掉，一并重新在这里加进来：</p>
+<h3 id="光猫桥接和路由拨号">光猫桥接和路由拨号</h3>
+<ul>
+<li>运营商：电信</li>
+<li>光猫型号：HS8145C</li>
+<li>需要：超级管理员帐户
+<ul>
+<li>用户名<code>telecomadmin</code></li>
+<li>密码<code>nE7jA%5m</code></li>
+<li>根据型号不同，帐户密码存在差异，读者可自行搜索，或尝试获取<code>base64</code>加密后的密码，使用在线工具解密
+<ul>
+<li>对于 HS8145C，通过光猫管理员帐户（一般贴好在底面）登录后，访问<code>192.168.1.1</code>下的<code>backupsettings.conf</code></li>
+<li>搜索文件中<code>password</code>，使用工具解密</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>进入菜单“网络”选项，将“上网业务”<code>3_INTERNET_B_VID_41</code>连接方式改为“桥接”。</li>
+<li>（如果不知道拨号上网的帐号密码，在网关后台一并记录，帐号明文，密码一般为 SHA256 加密。也可以咨询电信营业厅获取。）</li>
+</ul>
+<p>以上为光猫部分。路由器部分设置拨号即可，一般是PPPoE方式，输入帐号密码，其他一切默认即可。此处省略。</p>
+<h3 id="tp-link-易展有线回程">TP-LINK 易展有线回程</h3>
+<p>注意下面的步骤针对的是和我一样的布局，有上一级路由负责拨号和其他功能，只是希望通过TP-LINK的易展方案解决Wi-Fi信号问题。如果TP-LINK就是拨号的路由，接好WAN，其他易展路由接到主路由的LAN就行了。</p>
+<p>为了确保有线回程以达到更好的效果：</p>
+<ol>
+<li>（如果使用无线回程中，请恢复出厂设置）</li>
+<li><strong>主路由先</strong>接好电源，<strong>关闭 DHCP</strong>，接LAN（现在一般都是自动识别了）</li>
+<li>再将其他易展路由器接好电源和LAN，（它们当前应该在同一个网段，例如都是<code>192.168.2.*</code>）按下其他易展路由器的易展按钮</li>
+<li>等待路由器后台或手机App上的网络拓扑图，在路由器位置右上角显示网线接口icon代表完成。</li>
+<li>建议在上一级路由将这些易展路由器的内网IP设置为静态/和mac地址绑定。</li>
+</ol>
+<h2 id="拿到公网ip了">拿到公网IP了</h2>
+<p>无法获取公网IP的读者，建议可以考虑改路由器拨号后，通过NAS的IPv6地址访问。下文内容需要公网IP。</p>
+<p>在微信服务号直接跟客服说要开通之后，给填了工单，师傅打电话来确认，他那边后台操作，全程不到半小时，特别顺畅。</p>
+<p>于是就先不折腾IPv6了，直接折腾IPv4外部访问。方案有很多，之前因为没有公网IP，用的ZeroTier，速度一般。现在可以通过公网IP直接访问，但为了安全考虑，只开一个端口转发给VPN（OpenVPN），防火墙、登录规则、二步验证等都保持开启。同时，因为是动态IP，隔三差五就会改，找了自己一个不用的域名挂在Cloudflare，通过Cloudflare DDNS插件绑好API key，监测到路由器重新拨号时，对照IP映射是否一致，不一致则更新。</p>
+<p>群晖和华硕都自带DDNS和VPN Server服务（注意群晖的VPN Server可能要在官网下载后手动安装）。DDNS使用自带服务的话，方便的地方在于不需要再额外处理域名的问题，但因为使用https的话，自带服务是通过80端口访问<span lang="en">Let&rsquo;s Encrypt</span>申请SSL，这个端口电信默认是封着的，一般也不会给开，SSL无法签发下来。其次，<span class="newthought">DSM6的用户</span>
+<label for="sidenote-1" class="margin-toggle sidenote-number">(1)</label>
+<input type="checkbox" id="sidenote-1" class="margin-toggle"/>
+<span class="sidenote">
+<span class="sidenote-number">(1)</span><em>DSM 7的界面给的是下拉框并写明是“自动”，但DSM 6不是。</em>
+</span>
+，群晖DDNS不一定能够自动修改对应的IP。</p>
+<p>VPN Server的话看个人需求，在群晖或者路由器上部署都可以。只开放VPN端口的话，做不做https问题不大，但是如果还开放其他（例如WebDAV）端口，https是必要的。至于使用哪种VPN连接方式（例如PPTP、OpenVPN、IPSec等）一样看需求/设备是否支持。我的AC-68U（386.7_2）自带PPTP和OpenVPN。</p>
+<p>同时原先的ZeroTier仍保留，出问题的时候至少还可以通过ZeroTier回来修修补补。</p>
+<p>我的方案小结：</p>
+<ul>
+<li>
+<p>外部访问NAS</p>
+<ul>
+<li>通过公网IP
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 申请公网IP</li>
+<li><input checked="" disabled="" type="checkbox"> 路由器设置端口转发：内网转公网
+<ul>
+<li>相当于直接暴露，被黑风险，可能不符合规定（相当于挂载web）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>保留ZeroTier
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 对应终端装好ZeroTier，填入<code>Network ID</code>后在管理页面勾选对应设备即可</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>问题处理</p>
+<ul>
+<li>处理端口转发：只转发需要的端口
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 设置好OpenVPN服务，并只转发OpenVPN端口</li>
+<li><input checked="" disabled="" type="checkbox"> 注意设置端口（对外网）不要采用任何默认值（如5000、5001、1194等等）</li>
+</ul>
+</li>
+<li>处理动态IP（和SSL认证）
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 域名+路由器DDNS插件自动更新</li>
+<li><input disabled="" type="checkbox"> 先通过自行申请（使用了ZeroSSL）再开启<span lang="en">Let&rsquo;s Encrypt</span>插件自动更新证书。
+<ul>
+<li>如果域名已有其他解析记录，注意ZeroSSL可能存在的CAA和CNAME冲突问题</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其他安全问题自查
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 用户设置：禁用默认管理员帐户，新帐户密码强度等</li>
+<li><input checked="" disabled="" type="checkbox"> 登录设置：群晖NAS自带二步验证开启，设置密码错误封禁IP等</li>
+<li><input checked="" disabled="" type="checkbox"> 通知设置：群晖NAS邮件通知（SMTP）</li>
+<li><input checked="" disabled="" type="checkbox"> 其他：加上登录IP限制、硬件安全密钥等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+  <div class="footer-nav">
+
+  <div class="previous-post" style="display:inline-block;">
+    
+    <a class="no-external" href="https://fanrongbin.com/give-ko/"><span class="arrow">←</span> 주다, 드리다, 주시다 + 간접인용 명령문</a>
+    
+  </div>
+  
+  
+
+
+  <div class="Tags">
+    <ul style="list-style-type: none;">
+      <li class="label">TAGS</li>
+        <li><a href="/tags/home-network/">home-network</a></li>
+    </ul>
+  </div>
+
+  <div class="next-post" style="display:inline-block;float:right;">
+    
+    <a class="no-external" href="https://fanrongbin.com/honorific-ko/">높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理 <span class="arrow">→</span></a>
+    
+  </div>
+
+  </div>
+
+  </main>
+  <footer class="opacity-6">
+    <p><a href="https://gohugo.io/" target="_blank">Hugo</a>, <a href="https://github.com/ethantw/Han" target="_blank">Han</a>
+<br>You can select texts to hightlight using <a href="https://hypothes.is/" target="_blank">Hypothesis</a>.</p>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+  </footer>
+</body>
+<script src="/han.min.js"></script>
+
+<script defer>
+  
+  function applyBreakAllClass() {
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    
+    if (screenWidth <= 960) {
+      
+      var codeElements = document.querySelectorAll('code');
+
+      
+      codeElements.forEach(function(element) {
+        
+        if (element.textContent.length > 10) {
+          
+          element.classList.add('break-all');
         }
+      });
     }
+  }
+
+  
+  applyBreakAllClass();
+
+  
+  window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-
+<script async>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+</script>
 
 <script>
     
@@ -150,7 +259,7 @@
     }
     
     document.addEventListener('DOMContentLoaded', () => {
-        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
     
@@ -229,295 +338,5 @@
     });
 </script>    
 
-
-  
-
-  <section><h2 id="网络布局没有变化">
-网络布局没有变化
-<a href="#%e7%bd%91%e7%bb%9c%e5%b8%83%e5%b1%80%e6%b2%a1%e6%9c%89%e5%8f%98%e5%8c%96" class="heading-anchor">#</a>
-</h2>
-<p><img src="https://img.fanrongbin.com/network-resetting-2022-1.jpg" alt=""></p>
-<p>还是AC-68U拨号，并且直接接交换机给房间的网线接口。两个易展路由器负责Wi-Fi。</p>
-<p>关于光猫桥接、路由拨号和TP-LINK的易展功能，之前的一篇博文有介绍过，但因为目前博客在做调整，说不定那篇日后会删掉，一并重新在这里加进来：</p>
-<h3 id="光猫桥接和路由拨号">
-光猫桥接和路由拨号
-<a href="#%e5%85%89%e7%8c%ab%e6%a1%a5%e6%8e%a5%e5%92%8c%e8%b7%af%e7%94%b1%e6%8b%a8%e5%8f%b7" class="heading-anchor">#</a>
-</h3>
-<ul>
-<li>运营商：电信</li>
-<li>光猫型号：HS8145C</li>
-<li>需要：超级管理员帐户
-<ul>
-<li>用户名<code>telecomadmin</code></li>
-<li>密码<code>nE7jA%5m</code></li>
-<li>根据型号不同，帐户密码存在差异，读者可自行搜索，或尝试获取<code>base64</code>加密后的密码，使用在线工具解密
-<ul>
-<li>对于 HS8145C，通过光猫管理员帐户（一般贴好在底面）登录后，访问<code>192.168.1.1</code>下的<code>backupsettings.conf</code></li>
-<li>搜索文件中<code>password</code>，使用工具解密</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>进入菜单“网络”选项，将“上网业务”<code>3_INTERNET_B_VID_41</code>连接方式改为“桥接”。</li>
-<li>（如果不知道拨号上网的帐号密码，在网关后台一并记录，帐号明文，密码一般为 SHA256 加密。也可以咨询电信营业厅获取。）</li>
-</ul>
-<p>以上为光猫部分。路由器部分设置拨号即可，一般是PPPoE方式，输入帐号密码，其他一切默认即可。此处省略。</p>
-<h3 id="tp-link-易展有线回程">
-TP-LINK 易展有线回程
-<a href="#tp-link-%e6%98%93%e5%b1%95%e6%9c%89%e7%ba%bf%e5%9b%9e%e7%a8%8b" class="heading-anchor">#</a>
-</h3>
-<p>注意下面的步骤针对的是和我一样的布局，有上一级路由负责拨号和其他功能，只是希望通过TP-LINK的易展方案解决Wi-Fi信号问题。如果TP-LINK就是拨号的路由，接好WAN，其他易展路由接到主路由的LAN就行了。</p>
-<p>为了确保有线回程以达到更好的效果：</p>
-<ol>
-<li>（如果使用无线回程中，请恢复出厂设置）</li>
-<li><strong>主路由先</strong>接好电源，<strong>关闭 DHCP</strong>，接LAN（现在一般都是自动识别了）</li>
-<li>再将其他易展路由器接好电源和LAN，（它们当前应该在同一个网段，例如都是<code>192.168.2.*</code>）按下其他易展路由器的易展按钮</li>
-<li>等待路由器后台或手机App上的网络拓扑图，在路由器位置右上角显示网线接口icon代表完成。</li>
-<li>建议在上一级路由将这些易展路由器的内网IP设置为静态/和mac地址绑定。</li>
-</ol>
-<h2 id="拿到公网ip了">
-拿到公网IP了
-<a href="#%e6%8b%bf%e5%88%b0%e5%85%ac%e7%bd%91ip%e4%ba%86" class="heading-anchor">#</a>
-</h2>
-<p>无法获取公网IP的读者，建议可以考虑改路由器拨号后，通过NAS的IPv6地址访问。下文内容需要公网IP。</p>
-<p>在微信服务号直接跟客服说要开通之后，给填了工单，师傅打电话来确认，他那边后台操作，全程不到半小时，特别顺畅。</p>
-<p>于是就先不折腾IPv6了，直接折腾IPv4外部访问。方案有很多，之前因为没有公网IP，用的ZeroTier，速度一般。现在可以通过公网IP直接访问，但为了安全考虑，只开一个端口转发给VPN（OpenVPN），防火墙、登录规则、二步验证等都保持开启。同时，因为是动态IP，隔三差五就会改，找了自己一个不用的域名挂在Cloudflare，通过Cloudflare DDNS插件绑好API key，监测到路由器重新拨号时，对照IP映射是否一致，不一致则更新。</p>
-<p>群晖和华硕都自带DDNS和VPN Server服务（注意群晖的VPN Server可能要在官网下载后手动安装）。DDNS使用自带服务的话，方便的地方在于不需要再额外处理域名的问题，但因为使用https的话，自带服务是通过80端口访问<span lang="en">Let&rsquo;s Encrypt</span>申请SSL，这个端口电信默认是封着的，一般也不会给开，SSL无法签发下来。其次，<span class="newthought">DSM6的用户</span>
-<label for="sidenote-1" class="margin-toggle sidenote-number">(1)</label>
-<input type="checkbox" id="sidenote-1" class="margin-toggle"/>
-<span class="sidenote">
-<span class="sidenote-number">(1)</span><em>DSM 7的界面给的是下拉框并写明是“自动”，但DSM 6不是。</em>
-</span>
-，群晖DDNS不一定能够自动修改对应的IP。</p>
-<p>VPN Server的话看个人需求，在群晖或者路由器上部署都可以。只开放VPN端口的话，做不做https问题不大，但是如果还开放其他（例如WebDAV）端口，https是必要的。至于使用哪种VPN连接方式（例如PPTP、OpenVPN、IPSec等）一样看需求/设备是否支持。我的AC-68U（386.7_2）自带PPTP和OpenVPN。</p>
-<p>同时原先的ZeroTier仍保留，出问题的时候至少还可以通过ZeroTier回来修修补补。</p>
-<p>我的方案小结：</p>
-<ul>
-<li>
-<p>外部访问NAS</p>
-<ul>
-<li>通过公网IP
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 申请公网IP</li>
-<li><input checked="" disabled="" type="checkbox"> 路由器设置端口转发：内网转公网
-<ul>
-<li>相当于直接暴露，被黑风险，可能不符合规定（相当于挂载web）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>保留ZeroTier
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 对应终端装好ZeroTier，填入<code>Network ID</code>后在管理页面勾选对应设备即可</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>问题处理</p>
-<ul>
-<li>处理端口转发：只转发需要的端口
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 设置好OpenVPN服务，并只转发OpenVPN端口</li>
-<li><input checked="" disabled="" type="checkbox"> 注意设置端口（对外网）不要采用任何默认值（如5000、5001、1194等等）</li>
-</ul>
-</li>
-<li>处理动态IP（和SSL认证）
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 域名+路由器DDNS插件自动更新</li>
-<li><input disabled="" type="checkbox"> 先通过自行申请（使用了ZeroSSL）再开启<span lang="en">Let&rsquo;s Encrypt</span>插件自动更新证书。
-<ul>
-<li>如果域名已有其他解析记录，注意ZeroSSL可能存在的CAA和CNAME冲突问题</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>其他安全问题自查
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 用户设置：禁用默认管理员帐户，新帐户密码强度等</li>
-<li><input checked="" disabled="" type="checkbox"> 登录设置：群晖NAS自带二步验证开启，设置密码错误封禁IP等</li>
-<li><input checked="" disabled="" type="checkbox"> 通知设置：群晖NAS邮件通知（SMTP）</li>
-<li><input checked="" disabled="" type="checkbox"> 其他：加上登录IP限制、硬件安全密钥等</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</section>
-</article>
-
-
-<script defer src="https://hypothes.is/embed.js"></script>
-
-<script defer>
-  
-  function applyBreakAllClass() {
-    
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    
-    if (screenWidth <= 960) {
-      
-      var codeElements = document.querySelectorAll('code');
-
-      
-      codeElements.forEach(function(element) {
-        
-        if (element.textContent.length > 10) {
-          
-          element.classList.add('break-all');
-        }
-      });
-    }
-  }
-
-  
-  applyBreakAllClass();
-
-  
-  window.addEventListener('resize', applyBreakAllClass);
-</script>
-
-<script async>
-  document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener('scroll', function() {
-      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      var topScrollBar = document.querySelector('.top-scroll-bar');
-      if (topScrollBar) {
-        topScrollBar.style.width = scrollPercent + '%';
-        topScrollBar.style.display = 'block';
-      }
-    });
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-</body>
-
-<script src="/han.min.js"></script>
-
-
-<script defer>
-    window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
-        });
-    }
-</script>
-
-<section><footer class="page-footer">
-<hr />
-
-<div class="previous-post" style="display:inline-block;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/give-ko/?ref=footer">« 주다, 드리다, 주시다 + 간접인용 명령문</a>
-  
-</div>
-
-<div class="next-post", style="display:inline-block;float:right;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/honorific-ko/?ref=footer">높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理 »</a>
-  
-</div>
-
-<ul class="page-footer-menu">
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</ul>
-
-
-<p>
-  <a href="https://gohugo.io">hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
-</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="/links.html">Leave a comment</a> or <a href="mailto:rongbin.fan@outlook.com">email me</a>.
-</p>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> &copy; 2023 Rongbin FAN</p>
-
-
-
-
-</footer>
-
-<script defer>
-function checkBrowserAndApplyStyle() {
-    var userAgent = navigator.userAgent;
-    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
-    var isFirefox = userAgent.includes("Firefox");
-
-    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
-        addSelectionStyle();
-    }
-}
-
-function addSelectionStyle() {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
-    document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-checkBrowserAndApplyStyle();
-</script></section>
-<section><nav class="menu">
-    <ul>
-    
-        <li><a href="/posts">归档</a></li>
-    
-        <li><a href="/tags">标签</a></li>
-    
-        <li><a href="/">关于</a></li>
-    
-        <li><a href="/links.html">留言板</a></li>
-    
-    </ul>
-</nav>
-</section>
 
 </html>

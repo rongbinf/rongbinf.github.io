@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init"><head>
-<title>Winslow Homer 温斯洛·霍默 - Rongbin&#39;s Blog</title>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <title>Winslow Homer 温斯洛·霍默 - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="发布于 Matters.news。
 首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。
@@ -19,222 +20,44 @@ Mounted Bugler,1862, Winslow Homer, Graphite, brush and gray wash on off-white p
 
 
 
-  
 
 
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" media="print" onload="this.media='all'" />
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
-</noscript>
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/hugo-tufte.min.css">
-
-
-
-
-
-
+      <link rel="stylesheet" href="/css/main.min.893d84d10b8a92caf7703f9114c1ac728a503e7812a07ef5113859ff75671c79.css" integrity="sha256-iT2E0QuKksr3cD&#43;RFMGscopQPngSoH71EThZ/3VnHHk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
-
-
-
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 
 
 </head>
 <body>
-<div class="top-scroll-bar"></div>
+  <header class="navbar">
+    <h1><a href="/">Rongbin FAN</a></h1>
 
-<article id="main" class="han-init-context">
-  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<nav>
+    <a href="/#hello">Hello</a>
+    <a href="/posts" style="font-weight: bold;">Blog</a>
+    <a href="/links">Guestbook</a>
+</nav>
+  </header>
+  <main class="han-init-context">
+    
+
+  <div class="top-scroll-bar"></div>
+<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents"></nav>
 </div>
-<section>
-<h1 class="content-title">
 
-<span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>Winslow Homer 温斯洛·霍默</h1><span class="content-meta no-select">
-  <style>#changeFontLink{left:-2.85rem;font-size: 1.6rem;}</style>
-  <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>08 Aug 2021</p>
-</span></section>
+  <div id="single-header">
+    <h1 class="content-h1">Winslow Homer 温斯洛·霍默</h1>
+    
+    
+    <p class="content-time"><time datetime="2021-08-08T00:00:00&#43;00:00">August 8, 2021</time></p>
+  </div>
 
-<script defer>
-    function toggleFontFamily() {
-        var elements = document.querySelectorAll('body, blockquote');
-        elements.forEach(function(el) {
-            if (el.style.fontFamily) {
-                el.style.fontFamily = ''; 
-            } else {
-                el.style.fontFamily = 'var(--sans)';
-            }
-        });
-  
-        var strongElements = document.querySelectorAll('strong');
-        strongElements.forEach(function(el) {
-            if (el.style.top) {
-                el.style.top = '';
-            } else {
-                el.style.top = '0';
-            }
-        });
-  
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-</script>
-
-<script defer>
-    function toggleContents() {
-        var toc = document.getElementById('contents-toc');
-        var style = window.getComputedStyle(toc);
-    
-        if (style.display === 'none') {
-            toc.style.display = 'block';
-        } else {
-            toc.style.display = 'none';
-        }
-    }
-</script>
-
-
-
-<script>
-    
-    function throttle(func, limit) {
-        let lastFunc;
-        let lastRan;
-        return function() {
-            const context = this;
-            const args = arguments;
-            if (!lastRan) {
-                func.apply(context, args);
-                lastRan = Date.now();
-            } else {
-                clearTimeout(lastFunc);
-                lastFunc = setTimeout(function() {
-                    if ((Date.now() - lastRan) >= limit) {
-                        func.apply(context, args);
-                        lastRan = Date.now();
-                    }
-                }, limit - (Date.now() - lastRan));
-            }
-        }
-    }
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
-        const contentsFixedDiv = document.getElementById('contents-fixed');
-        const tocContainer = document.getElementById('contents-toc');
-    
-        
-        const toggleTOC = () => {
-            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-            tocContainer.style.display = isDisplayed ? 'none' : 'block';
-    
-            
-            if (tocContainer.style.display === 'block') {
-                initializeTOCFeatures();
-            }
-        };
-    
-        
-        const initializeTOCFeatures = () => {
-            
-            const highlightAppropriateHeader = () => {
-                let highlighted = false;
-                let lastPassedHeader = null;
-    
-                headers.forEach(header => {
-                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
-                    const bounding = header.getBoundingClientRect();
-    
-                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
-                        link.classList.add('toc-highlight');
-                        highlighted = true;
-                    } else {
-                        link.classList.remove('toc-highlight');
-                    }
-    
-                    if (bounding.top < 0) {
-                        lastPassedHeader = header;
-                    }
-                });
-    
-                if (!highlighted && lastPassedHeader) {
-                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
-                    link.classList.add('toc-highlight');
-                }
-            };
-    
-            
-            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
-    
-            
-            if (!tocContainer.dataset.initialized) {
-                window.addEventListener('scroll', throttledHighlight);
-                tocContainer.dataset.initialized = 'true';
-            }
-    
-            
-            document.addEventListener('click', (event) => {
-                if (window.getComputedStyle(tocContainer).display !== 'none') {
-                    tocContainer.style.display = 'none';
-                }
-            });
-    
-            
-            tocContainer.addEventListener('click', (event) => {
-                event.stopPropagation();
-            });
-        };
-    
-        
-        if (headers.length > 1) {
-            contentsFixedDiv.style.display = 'block';
-            
-            
-            contentsFixedDiv.addEventListener('click', (event) => {
-                toggleTOC();
-                event.stopPropagation();
-            });
-        }
-    });
-</script>    
-
-
-  
-
-
-
-  <section><blockquote>
+  <blockquote>
 <p>发布于 <a href="https://matters.news/@laefan/%E7%9C%8B%E7%95%AB-winslow-homer-%E6%BA%AB%E6%96%AF%E6%B4%9B-%E9%9C%8D%E9%BB%98-bafyreifjxdssns3s6xkf6t7lgk6jaxjrpxg4semolhembefe4o3mi2n4ja">Matters.news</a>。</p>
 </blockquote>
 <p>首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。</p>
@@ -323,11 +146,36 @@ Mounted Bugler,1862, Winslow Homer, Graphite, brush and gray wash on off-white p
 <p><img src="https://img.fanrongbin.com/wh-19.webp" alt="Rocky Shore, Bermuda"></p>
 <p><em>Rocky Shore, Bermuda</em>, 1900, Winslow Homer, Painting, watercolor on wove paper</p>
 <p>Source: <a href="https://collections.mfa.org/objects/5016">Museum of Fine Arts Boston</a></p>
-</section>
-</article>
 
 
-<script defer src="https://hypothes.is/embed.js"></script>
+  <div class="footer-nav">
+
+  <div class="previous-post" style="display:inline-block;">
+    
+    <a class="no-external" href="https://fanrongbin.com/network-resetting-2021/"><span class="arrow">←</span> 电信网关拨号改桥接 + 软路由 + TP-LINK 易展 Mesh 有线回程</a>
+    
+  </div>
+  
+  
+
+
+
+  <div class="next-post" style="display:inline-block;float:right;">
+    
+    <a class="no-external" href="https://fanrongbin.com/healthy-relationship/">建立健康的关系 <span class="arrow">→</span></a>
+    
+  </div>
+
+  </div>
+
+  </main>
+  <footer class="opacity-6">
+    <p><a href="https://gohugo.io/" target="_blank">Hugo</a>, <a href="https://github.com/ethantw/Han" target="_blank">Han</a>
+<br>You can select texts to hightlight using <a href="https://hypothes.is/" target="_blank">Hypothesis</a>.</p>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+  </footer>
+</body>
+<script src="/han.min.js"></script>
 
 <script defer>
   
@@ -371,133 +219,108 @@ Mounted Bugler,1862, Winslow Homer, Graphite, brush and gray wash on off-white p
   });
 </script>
 
-
-
-
-
-
-
-
-
-
-</body>
-
-<script src="/han.min.js"></script>
-
-
-<script defer>
-    window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
+<script>
+    
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
             }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+    
+        
+        const toggleTOC = () => {
+            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+    
+            
+            if (tocContainer.style.display === 'block') {
+                initializeTOCFeatures();
             }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
-        });
-    }
-</script>
-
-<section><footer class="page-footer">
-<hr />
-
-<div class="previous-post" style="display:inline-block;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/network-resetting-2021/?ref=footer">« 电信网关拨号改桥接 + 软路由 + TP-LINK 易展 Mesh 有线回程</a>
-  
-</div>
-
-<div class="next-post", style="display:inline-block;float:right;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/healthy-relationship/?ref=footer">建立健康的关系 »</a>
-  
-</div>
-
-<ul class="page-footer-menu">
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</ul>
-
-
-<p>
-  <a href="https://gohugo.io">hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
-</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="/links.html">Leave a comment</a> or <a href="mailto:rongbin.fan@outlook.com">email me</a>.
-</p>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> &copy; 2023 Rongbin FAN</p>
-
-
-
-
-</footer>
-
-<script defer>
-function checkBrowserAndApplyStyle() {
-    var userAgent = navigator.userAgent;
-    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
-    var isFirefox = userAgent.includes("Firefox");
-
-    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
-        addSelectionStyle();
-    }
-}
-
-function addSelectionStyle() {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
-    document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-checkBrowserAndApplyStyle();
-</script></section>
-<section><nav class="menu">
-    <ul>
+        };
     
-        <li><a href="/posts">归档</a></li>
+        
+        const initializeTOCFeatures = () => {
+            
+            const highlightAppropriateHeader = () => {
+                let highlighted = false;
+                let lastPassedHeader = null;
     
-        <li><a href="/tags">标签</a></li>
+                headers.forEach(header => {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+                    const bounding = header.getBoundingClientRect();
     
-        <li><a href="/">关于</a></li>
+                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                        link.classList.add('toc-highlight');
+                        highlighted = true;
+                    } else {
+                        link.classList.remove('toc-highlight');
+                    }
     
-        <li><a href="/links.html">留言板</a></li>
+                    if (bounding.top < 0) {
+                        lastPassedHeader = header;
+                    }
+                });
     
-    </ul>
-</nav>
-</section>
+                if (!highlighted && lastPassedHeader) {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
+                    link.classList.add('toc-highlight');
+                }
+            };
+    
+            
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+    
+            
+            if (!tocContainer.dataset.initialized) {
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+    
+            
+            document.addEventListener('click', (event) => {
+                if (window.getComputedStyle(tocContainer).display !== 'none') {
+                    tocContainer.style.display = 'none';
+                }
+            });
+    
+            
+            tocContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        };
+    
+        
+        if (headers.length > 1) {
+            contentsFixedDiv.style.display = 'block';
+            
+            
+            contentsFixedDiv.addEventListener('click', (event) => {
+                toggleTOC();
+                event.stopPropagation();
+            });
+        }
+    });
+</script>    
+
 
 </html>

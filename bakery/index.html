@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init"><head>
-<title>糕点铺 - Rongbin&#39;s Blog</title>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <title>糕点铺 - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="实习，住在团结湖，附近有一家糕点铺，晚上下班总要路过它。门口常常排着不长不短的队，几乎每次我都会装作心不在焉地往亮堂堂的橱窗一瞥，看看今天是绿豆酥饼卖得好，还是有新面包出炉。暗地里，我也决定找个时间也去排排队，买一盒试试看。今天是这个月最后一天班，坐上公交，想象那条刚认识没多久的路，先过路口，拐弯，直行，再走到对面，就能到糕点铺了。刷卡下车后我抬起头走路，可劲儿往对面瞧，却怎么也看不到那面墨绿色的招牌，一时以为是自己搞混了。怀疑的脚步越来越近，才发现关了灯、拉了铁门，赖以辨认的人群四散。今天已经是廿六了，后天回家，节后总要再过来。「所以总有机会吧」，这么想着，埋头往别处走了。
 过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己再回来买酥饼的希望过分渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要「把握住机会」和「活在当下」的道理戒律，如此这般活，由着很多事情错过。 ">
@@ -10,112 +11,123 @@
 
 
 
-  
 
 
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" media="print" onload="this.media='all'" />
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
-</noscript>
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/hugo-tufte.min.css">
-
-
-
-
-
-
+      <link rel="stylesheet" href="/css/main.min.893d84d10b8a92caf7703f9114c1ac728a503e7812a07ef5113859ff75671c79.css" integrity="sha256-iT2E0QuKksr3cD&#43;RFMGscopQPngSoH71EThZ/3VnHHk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
-
-
-
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 
 
 </head>
 <body>
-<div class="top-scroll-bar"></div>
+  <header class="navbar">
+    <h1><a href="/">Rongbin FAN</a></h1>
 
-<article id="main" class="han-init-context">
-  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<nav>
+    <a href="/#hello">Hello</a>
+    <a href="/posts" style="font-weight: bold;">Blog</a>
+    <a href="/links">Guestbook</a>
+</nav>
+  </header>
+  <main class="han-init-context">
+    
+
+  <div class="top-scroll-bar"></div>
+<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents"></nav>
 </div>
-<section>
-<h1 class="content-title">
 
-<span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>糕点铺</h1><span class="content-meta no-select">
-  <style>#changeFontLink{left:-2.85rem;font-size: 1.6rem;}</style>
-  <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>28 Jan 2022</p>
-</span></section>
-
-<script defer>
-    function toggleFontFamily() {
-        var elements = document.querySelectorAll('body, blockquote');
-        elements.forEach(function(el) {
-            if (el.style.fontFamily) {
-                el.style.fontFamily = ''; 
-            } else {
-                el.style.fontFamily = 'var(--sans)';
-            }
-        });
-  
-        var strongElements = document.querySelectorAll('strong');
-        strongElements.forEach(function(el) {
-            if (el.style.top) {
-                el.style.top = '';
-            } else {
-                el.style.top = '0';
-            }
-        });
-  
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-</script>
-
-<script defer>
-    function toggleContents() {
-        var toc = document.getElementById('contents-toc');
-        var style = window.getComputedStyle(toc);
+  <div id="single-header">
+    <h1 class="content-h1">糕点铺</h1>
     
-        if (style.display === 'none') {
-            toc.style.display = 'block';
-        } else {
-            toc.style.display = 'none';
+    
+    <p class="content-time"><time datetime="2022-01-28T00:00:00&#43;00:00">January 28, 2022</time></p>
+  </div>
+
+  <p>实习，住在团结湖，附近有一家糕点铺，晚上下班总要路过它。门口常常排着不长不短的队，几乎每次我都会装作心不在焉地往亮堂堂的橱窗一瞥，看看今天是绿豆酥饼卖得好，还是有新面包出炉。暗地里，我也决定找个时间也去排排队，买一盒试试看。今天是这个月最后一天班，坐上公交，想象那条刚认识没多久的路，先过路口，拐弯，直行，再走到对面，就能到糕点铺了。刷卡下车后我抬起头走路，可劲儿往对面瞧，却怎么也看不到那面墨绿色的招牌，一时以为是自己搞混了。怀疑的脚步越来越近，才发现关了灯、拉了铁门，赖以辨认的人群四散。今天已经是廿六了，后天回家，节后总要再过来。「所以总有机会吧」，这么想着，埋头往别处走了。</p>
+<p>过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己再回来买酥饼的希望过分渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要「把握住机会」和「活在当下」的道理戒律，如此这般活，由着很多事情错过。</p>
+
+
+  <div class="footer-nav">
+
+  <div class="previous-post" style="display:inline-block;">
+    
+    <a class="no-external" href="https://fanrongbin.com/semiconductor-procedure/"><span class="arrow">←</span> 芯片制作工序 &amp; 半导体常见自动化软件模块梳理</a>
+    
+  </div>
+  
+  
+
+
+  <div class="Tags">
+    <ul style="list-style-type: none;">
+      <li class="label">TAGS</li>
+        <li><a href="/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/">只言片语</a></li>
+    </ul>
+  </div>
+
+  <div class="next-post" style="display:inline-block;float:right;">
+    
+    <a class="no-external" href="https://fanrongbin.com/hybrid-1/">Hybrid #1 <span class="arrow">→</span></a>
+    
+  </div>
+
+  </div>
+
+  </main>
+  <footer class="opacity-6">
+    <p><a href="https://gohugo.io/" target="_blank">Hugo</a>, <a href="https://github.com/ethantw/Han" target="_blank">Han</a>
+<br>You can select texts to hightlight using <a href="https://hypothes.is/" target="_blank">Hypothesis</a>.</p>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+  </footer>
+</body>
+<script src="/han.min.js"></script>
+
+<script defer>
+  
+  function applyBreakAllClass() {
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    
+    if (screenWidth <= 960) {
+      
+      var codeElements = document.querySelectorAll('code');
+
+      
+      codeElements.forEach(function(element) {
+        
+        if (element.textContent.length > 10) {
+          
+          element.classList.add('break-all');
         }
+      });
     }
+  }
+
+  
+  applyBreakAllClass();
+
+  
+  window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-
+<script async>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+</script>
 
 <script>
     
@@ -141,7 +153,7 @@
     }
     
     document.addEventListener('DOMContentLoaded', () => {
-        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
     
@@ -220,186 +232,5 @@
     });
 </script>    
 
-
-  
-
-  <section><p>实习，住在团结湖，附近有一家糕点铺，晚上下班总要路过它。门口常常排着不长不短的队，几乎每次我都会装作心不在焉地往亮堂堂的橱窗一瞥，看看今天是绿豆酥饼卖得好，还是有新面包出炉。暗地里，我也决定找个时间也去排排队，买一盒试试看。今天是这个月最后一天班，坐上公交，想象那条刚认识没多久的路，先过路口，拐弯，直行，再走到对面，就能到糕点铺了。刷卡下车后我抬起头走路，可劲儿往对面瞧，却怎么也看不到那面墨绿色的招牌，一时以为是自己搞混了。怀疑的脚步越来越近，才发现关了灯、拉了铁门，赖以辨认的人群四散。今天已经是廿六了，后天回家，节后总要再过来。「所以总有机会吧」，这么想着，埋头往别处走了。</p>
-<p>过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己再回来买酥饼的希望过分渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要「把握住机会」和「活在当下」的道理戒律，如此这般活，由着很多事情错过。</p>
-</section>
-</article>
-
-
-<script defer src="https://hypothes.is/embed.js"></script>
-
-<script defer>
-  
-  function applyBreakAllClass() {
-    
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    
-    if (screenWidth <= 960) {
-      
-      var codeElements = document.querySelectorAll('code');
-
-      
-      codeElements.forEach(function(element) {
-        
-        if (element.textContent.length > 10) {
-          
-          element.classList.add('break-all');
-        }
-      });
-    }
-  }
-
-  
-  applyBreakAllClass();
-
-  
-  window.addEventListener('resize', applyBreakAllClass);
-</script>
-
-<script async>
-  document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener('scroll', function() {
-      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      var topScrollBar = document.querySelector('.top-scroll-bar');
-      if (topScrollBar) {
-        topScrollBar.style.width = scrollPercent + '%';
-        topScrollBar.style.display = 'block';
-      }
-    });
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-</body>
-
-<script src="/han.min.js"></script>
-
-
-<script defer>
-    window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
-        });
-    }
-</script>
-
-<section><footer class="page-footer">
-<hr />
-
-<div class="previous-post" style="display:inline-block;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/semiconductor-procedure/?ref=footer">« 芯片制作工序 &amp; 半导体常见自动化软件模块梳理</a>
-  
-</div>
-
-<div class="next-post", style="display:inline-block;float:right;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/hybrid-1/?ref=footer">Hybrid #1 »</a>
-  
-</div>
-
-<ul class="page-footer-menu">
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</ul>
-
-
-<p>
-  <a href="https://gohugo.io">hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
-</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="/links.html">Leave a comment</a> or <a href="mailto:rongbin.fan@outlook.com">email me</a>.
-</p>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> &copy; 2023 Rongbin FAN</p>
-
-
-
-
-</footer>
-
-<script defer>
-function checkBrowserAndApplyStyle() {
-    var userAgent = navigator.userAgent;
-    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
-    var isFirefox = userAgent.includes("Firefox");
-
-    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
-        addSelectionStyle();
-    }
-}
-
-function addSelectionStyle() {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
-    document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-checkBrowserAndApplyStyle();
-</script></section>
-<section><nav class="menu">
-    <ul>
-    
-        <li><a href="/posts">归档</a></li>
-    
-        <li><a href="/tags">标签</a></li>
-    
-        <li><a href="/">关于</a></li>
-    
-        <li><a href="/links.html">留言板</a></li>
-    
-    </ul>
-</nav>
-</section>
 
 </html>

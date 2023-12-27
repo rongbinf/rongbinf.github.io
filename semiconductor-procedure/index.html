@@ -1,70 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init"><head>
-<title>芯片制作工序 &amp; 半导体常见自动化软件模块梳理 - Rongbin&#39;s Blog</title>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <title>芯片制作工序 &amp; 半导体常见自动化软件模块梳理 - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="这篇图文能更好帮助理解。
-芯片制作工序 # 参考自泛林集团科普文章：上篇、中篇、下篇。英文对照请见文末。你也可以按此访问东京威力科创制作的工序介绍。
+芯片制作工序 参考自泛林集团科普文章：上篇、中篇、下篇。英文对照请见文末。你也可以按此访问东京威力科创制作的工序介绍。
 制作工序可分为前、后两道。前道包括 1.晶圆加工 → 7.测试，后道包括 8.封装 及后期测试、其他组装、成品入库等。
 常用英文名词：
 wafer：晶圆，硅晶片。分有 6、8、12 吋。 die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。 cell：比 die 更小的单位，如 IO 单元、电源管理单元。 cassette：晶盒。用来装 wafer。 FOUP（Front Opening Unified Pod）：前开晶片（统一）传送盒。一般用于厂内运输 wafer。 FOSB（Front Opening Shipping Box）：前开晶片运输盒。一般用于厂间成品或半成品运输。 lot：批次。 recipe：制程配方。 equipment：机台，加工线上的所有设备。 fab（Semiconductor Fabrication Plant）：半导体制造厂。 WAT（Wafer Acceptance Test）：晶圆允收测试 UAT（User Acceptance Test）：用户允收测试 CP Yield（Circuit Probe Yield）：晶圆测试良率 RFP/RP（Request for Proposal）：需求建议书 半导体行业有几种常见商业模式：
-Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多个环节。如台积电。 IDM：包括 IC 设计、晶圆制造、封装测试等多个环节。如三星。 Fabless：只负责 IC 设计和销售，其他环节外包。如联发科。 半导体行业常用工业软件 # 对于半导体厂内自动化系统常用工业软件，一般可分为四个层级：
-计划管理/决策层 # ERP企业资源计划（Enterprise Resource Planning） SCM供应链管理（Supply Chain Management） PLM产品生命周期管理（Product Lifecycle Management） WMS仓储管理系统（Warehouse Management System） OA办公自动化、CRM消费者关系管理、APS先进计划和排程（Advanced Planning and Scheduling）等 计算机集成制造层 # CIM计算机集成制造（Computer Integrated Manufacturing） ">
+Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多个环节。如台积电。 IDM：包括 IC 设计、晶圆制造、封装测试等多个环节。如三星。 Fabless：只负责 IC 设计和销售，其他环节外包。如联发科。 半导体行业常用工业软件 对于半导体厂内自动化系统常用工业软件，一般可分为四个层级：
+计划管理/决策层 ERP企业资源计划（Enterprise Resource Planning） SCM供应链管理（Supply Chain Management） PLM产品生命周期管理（Product Lifecycle Management） WMS仓储管理系统（Warehouse Management System） OA办公自动化、CRM消费者关系管理、APS先进计划和排程（Advanced Planning and Scheduling）等 计算机集成制造层 CIM计算机集成制造（Computer Integrated Manufacturing） ">
 <link rel="canonical" href="https://fanrongbin.com/semiconductor-procedure/" />
 
 
 
-  
 
 
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" media="print" onload="this.media='all'" />
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
-</noscript>
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/hugo-tufte.min.css">
-
-
-
-
-
-
+      <link rel="stylesheet" href="/css/main.min.893d84d10b8a92caf7703f9114c1ac728a503e7812a07ef5113859ff75671c79.css" integrity="sha256-iT2E0QuKksr3cD&#43;RFMGscopQPngSoH71EThZ/3VnHHk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
-
-
-
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 
 
 </head>
 <body>
-<div class="top-scroll-bar"></div>
+  <header class="navbar">
+    <h1><a href="/">Rongbin FAN</a></h1>
 
-<article id="main" class="han-init-context">
-  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<nav>
+    <a href="/#hello">Hello</a>
+    <a href="/posts" style="font-weight: bold;">Blog</a>
+    <a href="/links">Guestbook</a>
+</nav>
+  </header>
+  <main class="han-init-context">
+    
+
+  <div class="top-scroll-bar"></div>
+<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -86,59 +63,286 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
   </ul>
 </nav>
 </div>
-<section>
-<h1 class="content-title">
 
-<span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>芯片制作工序 &amp; 半导体常见自动化软件模块梳理</h1><span class="content-meta no-select">
-  <style>#changeFontLink{left:-2.85rem;font-size: 1.6rem;}</style>
-  <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>27 Jan 2022</p>
-</span></section>
-
-<script defer>
-    function toggleFontFamily() {
-        var elements = document.querySelectorAll('body, blockquote');
-        elements.forEach(function(el) {
-            if (el.style.fontFamily) {
-                el.style.fontFamily = ''; 
-            } else {
-                el.style.fontFamily = 'var(--sans)';
-            }
-        });
-  
-        var strongElements = document.querySelectorAll('strong');
-        strongElements.forEach(function(el) {
-            if (el.style.top) {
-                el.style.top = '';
-            } else {
-                el.style.top = '0';
-            }
-        });
-  
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-</script>
-
-<script defer>
-    function toggleContents() {
-        var toc = document.getElementById('contents-toc');
-        var style = window.getComputedStyle(toc);
+  <div id="single-header">
+    <h1 class="content-h1">芯片制作工序 &amp; 半导体常见自动化软件模块梳理</h1>
     
-        if (style.display === 'none') {
-            toc.style.display = 'block';
-        } else {
-            toc.style.display = 'none';
+    
+    <p class="content-time"><time datetime="2022-01-27T00:00:00&#43;00:00">January 27, 2022</time></p>
+  </div>
+
+  <p><a href="https://blog.robertelder.org/how-to-make-a-cpu/">这篇图文</a>能更好帮助理解。</p>
+<h2 id="芯片制作工序">芯片制作工序</h2>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+<style>@media screen and (min-width: 1080px){ ol, ul, dl {width: 60%;}}</style>
+<p><img src="https://img.fanrongbin.com/pako_eNp9VVtPG1cQ_iurfWqlsBW4NBGq8hKnUqRGpSJKH7w8rO0FW7INctaqqiiSQ3xZO2ASbCjGFzDEYGixTdpg1xf8Z3bOOfvEX-gcH9uBiPZp58zMmW9mzjezL2XPileX5-SlwMqvHp8WNqRnTjWkGi8i7uWwtuqTphWSv4RiAtIH0Kpyk6ZNu1TZzrbt3Pn37vBDMBP0uEs239FOg.svg" alt=""></p>
+<p>参考自泛林集团科普文章：<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&amp;mid=2653071344&amp;idx=1&amp;sn=5afa34f0343fe651c352fb1db90e4078&amp;chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b">上篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&amp;new=1">中篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&amp;new=1">下篇</a>。英文对照请见<a href="#%E8%8A%AF%E7%89%87%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%BA%8F%E8%8B%B1%E6%96%87%E4%B8%8D%E5%AE%8C%E5%85%A8%E5%AF%B9%E7%85%A7">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/">按此访问</a>东京威力科创制作的工序介绍。</p>
+<p>制作工序可分为前、后两道。前道包括 1.晶圆加工 → 7.测试，后道包括 8.封装 及后期测试、其他组装、成品入库等。</p>
+<p>常用英文名词：</p>
+<ul>
+<li>wafer：晶圆，硅晶片。分有 6、8、12 吋。</li>
+<li>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</li>
+<li>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</li>
+<li>cassette：晶盒。用来装 wafer。
+<ul>
+<li>FOUP（Front Opening Unified Pod）：前开晶片（统一）传送盒。一般用于厂内运输 wafer。</li>
+<li>FOSB（Front Opening Shipping Box）：前开晶片运输盒。一般用于厂间成品或半成品运输。</li>
+</ul>
+</li>
+<li>lot：批次。</li>
+<li>recipe：制程配方。</li>
+<li>equipment：机台，加工线上的所有设备。</li>
+<li>fab（Semiconductor Fabrication Plant）：半导体制造厂。</li>
+<li>WAT（Wafer Acceptance Test）：晶圆允收测试</li>
+<li>UAT（User Acceptance Test）：用户允收测试</li>
+<li>CP Yield（Circuit Probe Yield）：晶圆测试良率</li>
+<li>RFP/RP（Request for Proposal）：需求建议书</li>
+</ul>
+<p>半导体行业有几种常见商业模式：</p>
+<ul>
+<li>Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多个环节。如台积电。</li>
+<li>IDM：包括 IC 设计、晶圆制造、封装测试等多个环节。如三星。</li>
+<li>Fabless：只负责 IC 设计和销售，其他环节外包。如联发科。</li>
+</ul>
+<h2 id="半导体行业常用工业软件">半导体行业常用工业软件</h2>
+<p>对于半导体厂内<em>自动化系统</em>常用工业软件，一般可分为四个层级：</p>
+<h3 id="计划管理决策层">计划管理/决策层</h3>
+<ul>
+<li><ruby>ERP<rt>企业资源计划</rt></rudy>（Enterprise Resource Planning）</li>
+<li><ruby>SCM<rt>供应链管理</rt></ruby>（Supply Chain Management）</li>
+<li><ruby>PLM<rt>产品生命周期管理</rt></ruby>（Product Lifecycle Management）</li>
+<li><ruby>WMS<rt>仓储管理系统</rt></ruby>（Warehouse Management System）</li>
+<li><ruby>OA<rt>办公自动化</rt></ruby>、<ruby>CRM<rt>消费者关系管理</rt></ruby>、<ruby>APS<rt>先进计划和排程</rt></ruby>（Advanced Planning and Scheduling）等</li>
+</ul>
+<h3 id="计算机集成制造层">计算机集成制造层</h3>
+<p><ruby>CIM<rt>计算机集成制造</rt></ruby>（Computer Integrated Manufacturing）</p>
+<ul>
+<li>制造管理和监测</li>
+<li>制造执行
+<ul>
+<li><ruby>MES<rt>制造执行系统</rt></ruby>（Manufacturing Execution System）</li>
+<li><ruby>RTD<rt>实时派工系统</rt></ruby>（Real-time Dispatch）</li>
+<li><ruby>SPC<rt>统计制程控制</rt></ruby>（Statistical Process Control）</li>
+</ul>
+</li>
+</ul>
+<h3 id="一般控制层">一般控制层</h3>
+<ul>
+<li>自动化系统
+<ul>
+<li><ruby>EAP<rt>设备自动化程序</rt></ruby>（Equipment Automatic Programme)</li>
+</ul>
+</li>
+<li><ruby>EES<rt>设备工程系统</rt></ruby>（Equipment Engineer System）
+<ul>
+<li><ruby>APC<rt>先进过程控制</rt></ruby>（Advanced Process Control）
+<ul>
+<li>一般会认定其包含 <ruby>R2R<rt>批次控制</rt></ruby>（Run-to-Run）、FDC、<ruby>OEE<rt>整体设备效率</rt></ruby>（Overall Equipment Efficiency），但包含关系和范围没有明显界定</li>
+</ul>
+</li>
+<li><ruby>FDC<rt>故障侦测与分类</rt></ruby>（Fault Detection and Classification）</li>
+<li><ruby>PMS<rt>预防保养系统</rt></ruby>（Preventive Maintenance System）</li>
+<li><ruby>YMS<rt>良率管理系统</rt></ruby>（Yield Management System）</li>
+<li><ruby>TMS<rt>运输管理系统</rt></ruby>（Transportation Management System）</li>
+<li><ruby>RMS<rt>Recipe/配方管理系统</rt></ruby>（Recipe Management System）</li>
+<li>与 <ruby>AMHS<rt>自动物料搬送系统/天车</rt></ruby>（Automatic Material Handling System）的配合</li>
+</ul>
+</li>
+</ul>
+<h3 id="现场设备层机台">现场设备层：机台</h3>
+<ul>
+<li><ruby>PLC<rt>可编程逻辑控制器</rt></ruby>（Programmable Logic Controller）</li>
+<li>其他 censor 等</li>
+</ul>
+<hr>
+<p>CIM 主体包括 <strong>MES</strong> 和 <strong>EAP</strong>。MES 负责车间生产管理和调度执行，实时监控生产过程并响应状态变化。EAP 对接 MES 和机台设备，负责信息传输、数据搜集、流程控制和异常捕捉。因而 APC、FDC、 PMS 等系统通常都围绕 EAP 运作。</p>
+<p>EAP 与 MES 等其他系统间通讯采用 Tibco RV 协议、与机台设备间通讯采用 SECS/GEM 等等协议。</p>
+<pre class="mermaid">
+classDiagram
+	class 计划层{
+		 ERP/SCM/PLM
+		 OA/CRM/APS/...
+	}
+	class CIM{
+		MES/RTD/SPC...
+	}
+	class 一般控制层{
+		EAP
+		EES/APC/FDC...
+	}
+	计划层 <--> CIM
+	CIM <--> 一般控制层 : SECS/GEM
+</pre>
+<h3 id="市场主要厂商">市场主要厂商</h3>
+<p>前道 CIM：</p>
+<ul>
+<li>IBM（SiView）</li>
+<li>应用材料（Applied Materials）（FAB300）</li>
+</ul>
+<p>MES：</p>
+<ul>
+<li>西门子（Siemens）</li>
+<li>霍尼韦尔（Honeywell Forge）</li>
+<li>艾默生（Emerson）</li>
+<li>罗克韦尔（Rockwell Automation）</li>
+<li>达索（Dassault）</li>
+<li>ABB Ability</li>
+</ul>
+<p>YMS 多独立厂家，如 Synopsys（Synopsys Odyssey）。</p>
+<p>后道封装：</p>
+<ul>
+<li>西门子（CAMSTAR、SIMATIC IT）</li>
+</ul>
+<h2 id="mes车间的头子">MES：「车间的头子」</h2>
+<p>MES 上接计划层（如 ERP），下接一般控制层（如 EAP 或 <ruby>SCADA<rt>监控与资料收集系统</rt></ruby>），主要面向在现场一线操作的车间管理人员。实际上是多个模块集中呈现的平台，针对整个工厂，对稳定性要求较高。实际解决方案包括：</p>
+<ul>
+<li>计划排程管理</li>
+<li><ruby>PRP<rt>生产工艺流程</rt></ruby>（Process Plan）：对生产的流程进行四层抽象（从单个 <ruby>operation<rt>操作</rt></ruby>) 到连接成 <ruby>stage<rt>步骤</rt></ruby>)，再连接为一个大的 <ruby>layer<rt>层</rt></ruby>，最后成为一条完整的 <ruby>route<rt>路径</rt></ruby>）</li>
+<li><ruby>WIP<rt>制品管理模块</rt></ruby>)（Wafer in Process）：创建批次、查询批次、报废批次等批次相关的处理</li>
+<li>设备管理</li>
+<li>数据管理</li>
+<li>报表管理</li>
+<li><ruby>GUI<rt>图形界面设计</rt></ruby>：包括面向生产线操作员和面向工艺工程师等不同界面</li>
+</ul>
+<h2 id="eap搜集信息传达指令">EAP：搜集信息、传达指令</h2>
+<p>EAP 上接 MES，下接机台设备。MES 所管理的各项数据都来自 EAP。EAP 先搜集所有生产数据和机台状态数据，再经由特定通讯协议传送到 MES 数据库，MES 再借由数据分析监控设备和生产流程。其同时也是整个 CIM 中其他模块的数据源。</p>
+<p>例如生产状态的变化：由 EAP <strong>告知</strong> MES 一批货物状态的变化，MES <strong>改变</strong>这批货物的状态。</p>
+<pre class="mermaid">
+stateDiagram
+	s1: 计划(planned)
+	s2: 激活(activated)
+	s3: 等待处理(waiting)
+	s4: 结束(completed)
+	s5: 派工(dispatch)
+	s6: 正在加工(processing)
+	s7: 加工完成(finish)
+	[*]-->s1
+	s1-->s2:分配输送盒
+	s2-->s3
+	s3-->s2:解除等待
+	s2-->s5
+	s5-->s2:解除派工
+	s5-->s6:移入加工
+	s6-->s5:取消移入
+	s6-->s7
+	s7-->s3
+	s3-->s7
+	s7-->s4
+	s2-->s4
+	s3-->s5
+</pre>
+<p>对比单纯进行数据采集和一定图形界面化呈现的 SCADA，EAP 能配合其他模块达到生产自动化的要求、作为管理平台、融合 <ruby>BI<rt>商业智能</rt></ruby>（business intelligence）分析。</p>
+<h2 id="apc管控过程提升良率">APC：管控过程、提升良率</h2>
+<p>半导体量产中，由于投资规模庞大，良率哪怕能做到 1% 的提升，都能带来非常可观的收益增加。APC 就是一种提升良率或产能的综合解决方案。一般包括 R2R、FDC、OEE。在制程执行时，期间存在各种影响因素导致量产出的晶圆存在差异，需要通过实时监控影响因素变化的参数来提升良率或产能，而这依赖于 APC 对数据的搜集，包括 <ruby>DCU<rt>数据收集单元</rt></ruby>（Data Collection Unit）主动收集的资料以及对其他系统（如 MES、PMS 等）资料的运用。</p>
+<p>有关 APC 的更多信息，可<a href="http://franktsao.blogspot.com/2009/10/apc.html">按此访问</a>鼎捷软件曹永诚所撰导论（2005 年 6 月，Blogspot 链接）。</p>
+<h2 id="关于-amhs">关于 AMHS</h2>
+<p>12 吋厂线的 RTD 多与 AMHS 搭配使用以达到更高程度的自动化，通常还与 <ruby>MCS<rt>物料控制系统</rt></ruby>（Material Control System） 一起运作。RTD 针对制程情况给出派货建议，未配备 AMHS 的工厂一般通过人工运输，配备 AMHS 则可以相互通讯以自动运输。AMHS 中各种器械有序灵活的运作，能让人直观感受到工业制造具备的魅力。一般包括：</p>
+<ul>
+<li><ruby>OHT<rt>空中行走式/高架搬运系统</rt></ruby>（Overhead Hoist Transfer），多用在加工区间内（Intra-bay），也可用于不同区间之间（Inter-bay）或覆盖全厂（factory wide）的运输。</li>
+<li><ruby>OHS<rt>空中行走式/高架搬运车</rt></ruby>（Overhead Shuttle），常用于不同仓储设备间（也称 Inter-bay Transport System）。</li>
+<li><ruby>AGV<rt>自动导引车</rt></ruby>（Automated Guided Vehicle），常用在复杂路径。</li>
+<li><ruby>RGV<rt>有轨导引车</rt></ruby>（Rail Guided Vehicle），轨道运输，带机械臂。</li>
+</ul>
+<h2 id="芯片制作工序英文不完全对照">芯片制作工序：英文不完全对照</h2>
+<pre class="mermaid">
+flowchart TD
+	subgraph a[1.Wafer Processing]
+	a1[Cast]-->a2[Slice]-->a3[Polish the surface]
+	end
+	subgraph b[2.Exposed to oxygen]
+	b1[Clean]-->b2[Exposed to oxygen<br>at high temperatures<br>to create a layer of silicon oxide]-->b3[Layer Thickness Test]
+	end
+	subgraph c[3.Lithography]
+	c1[Apply a UV-sensitive photoresist on the surface]-->c2[Irradiate the UV light to transfer the pattern onto the photoresist]-->c3[Remove unexposed area]
+	end
+	subgraph d[4.Etching and Removing]
+	d1[To etch films of unmasked area and remove the photoresist]
+	end
+	subgraph e[5.Film Depositing]
+	e1[using CVD or PVD]
+	end
+	subgraph f[6.Interconnect Formation]
+	f1[To form wiring layers]
+	end
+	subgraph g[7.Wafer Testing]
+	g1[EDS]
+	end
+	subgraph h[8.Assembly and Testing]
+	h1[Cut into die]-->h2[Attached to the package substrate]-->h3[Connected to inner leads]-->h4[Sealed in an epoxy resin envelope]-->h5[Test]
+	end
+	mm("(IC Design)")-->a-->b-->c-->d-->e-->f-->g-->h
+</pre>
+
+  <div class="footer-nav">
+
+  <div class="previous-post" style="display:inline-block;">
+    
+    <a class="no-external" href="https://fanrongbin.com/cpp-template-friend/"><span class="arrow">←</span> C++ 模版类重载流输入输出运算符</a>
+    
+  </div>
+  
+  
+
+
+
+  <div class="next-post" style="display:inline-block;float:right;">
+    
+    <a class="no-external" href="https://fanrongbin.com/bakery/">糕点铺 <span class="arrow">→</span></a>
+    
+  </div>
+
+  </div>
+
+  </main>
+  <footer class="opacity-6">
+    <p><a href="https://gohugo.io/" target="_blank">Hugo</a>, <a href="https://github.com/ethantw/Han" target="_blank">Han</a>
+<br>You can select texts to hightlight using <a href="https://hypothes.is/" target="_blank">Hypothesis</a>.</p>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+  </footer>
+</body>
+<script src="/han.min.js"></script>
+
+<script defer>
+  
+  function applyBreakAllClass() {
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    
+    if (screenWidth <= 960) {
+      
+      var codeElements = document.querySelectorAll('code');
+
+      
+      codeElements.forEach(function(element) {
+        
+        if (element.textContent.length > 10) {
+          
+          element.classList.add('break-all');
         }
+      });
     }
+  }
+
+  
+  applyBreakAllClass();
+
+  
+  window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-
+<script async>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+</script>
 
 <script>
     
@@ -164,7 +368,7 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
     }
     
     document.addEventListener('DOMContentLoaded', () => {
-        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
     
@@ -243,420 +447,5 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
     });
 </script>    
 
-
-  
-
-  <section><p><a href="https://blog.robertelder.org/how-to-make-a-cpu/">这篇图文</a>能更好帮助理解。</p>
-<h2 id="芯片制作工序">
-芯片制作工序
-<a href="#%e8%8a%af%e7%89%87%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f" class="heading-anchor">#</a>
-</h2>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-<style>@media screen and (min-width: 1080px){ ol, ul, dl {width: 60%;}}</style>
-<p><img src="https://img.fanrongbin.com/pako_eNp9VVtPG1cQ_iurfWqlsBW4NBGq8hKnUqRGpSJKH7w8rO0FW7INctaqqiiSQ3xZO2ASbCjGFzDEYGixTdpg1xf8Z3bOOfvEX-gcH9uBiPZp58zMmW9mzjezL2XPileX5-SlwMqvHp8WNqRnTjWkGi8i7uWwtuqTphWSv4RiAtIH0Kpyk6ZNu1TZzrbt3Pn37vBDMBP0uEs239FOg.svg" alt=""></p>
-<p>参考自泛林集团科普文章：<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&amp;mid=2653071344&amp;idx=1&amp;sn=5afa34f0343fe651c352fb1db90e4078&amp;chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b">上篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&amp;new=1">中篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&amp;new=1">下篇</a>。英文对照请见<a href="#%E8%8A%AF%E7%89%87%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%BA%8F%E8%8B%B1%E6%96%87%E4%B8%8D%E5%AE%8C%E5%85%A8%E5%AF%B9%E7%85%A7">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/">按此访问</a>东京威力科创制作的工序介绍。</p>
-<p>制作工序可分为前、后两道。前道包括 1.晶圆加工 → 7.测试，后道包括 8.封装 及后期测试、其他组装、成品入库等。</p>
-<p>常用英文名词：</p>
-<ul>
-<li>wafer：晶圆，硅晶片。分有 6、8、12 吋。</li>
-<li>die：裸晶。wafer 上的小单位颗粒。合格的 die 在第八步封装时被切走为成品颗粒。</li>
-<li>cell：比 die 更小的单位，如 IO 单元、电源管理单元。</li>
-<li>cassette：晶盒。用来装 wafer。
-<ul>
-<li>FOUP（Front Opening Unified Pod）：前开晶片（统一）传送盒。一般用于厂内运输 wafer。</li>
-<li>FOSB（Front Opening Shipping Box）：前开晶片运输盒。一般用于厂间成品或半成品运输。</li>
-</ul>
-</li>
-<li>lot：批次。</li>
-<li>recipe：制程配方。</li>
-<li>equipment：机台，加工线上的所有设备。</li>
-<li>fab（Semiconductor Fabrication Plant）：半导体制造厂。</li>
-<li>WAT（Wafer Acceptance Test）：晶圆允收测试</li>
-<li>UAT（User Acceptance Test）：用户允收测试</li>
-<li>CP Yield（Circuit Probe Yield）：晶圆测试良率</li>
-<li>RFP/RP（Request for Proposal）：需求建议书</li>
-</ul>
-<p>半导体行业有几种常见商业模式：</p>
-<ul>
-<li>Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多个环节。如台积电。</li>
-<li>IDM：包括 IC 设计、晶圆制造、封装测试等多个环节。如三星。</li>
-<li>Fabless：只负责 IC 设计和销售，其他环节外包。如联发科。</li>
-</ul>
-<h2 id="半导体行业常用工业软件">
-半导体行业常用工业软件
-<a href="#%e5%8d%8a%e5%af%bc%e4%bd%93%e8%a1%8c%e4%b8%9a%e5%b8%b8%e7%94%a8%e5%b7%a5%e4%b8%9a%e8%bd%af%e4%bb%b6" class="heading-anchor">#</a>
-</h2>
-<p>对于半导体厂内<em>自动化系统</em>常用工业软件，一般可分为四个层级：</p>
-<h3 id="计划管理决策层">
-计划管理/决策层
-<a href="#%e8%ae%a1%e5%88%92%e7%ae%a1%e7%90%86%e5%86%b3%e7%ad%96%e5%b1%82" class="heading-anchor">#</a>
-</h3>
-<ul>
-<li><ruby>ERP<rt>企业资源计划</rt></rudy>（Enterprise Resource Planning）</li>
-<li><ruby>SCM<rt>供应链管理</rt></ruby>（Supply Chain Management）</li>
-<li><ruby>PLM<rt>产品生命周期管理</rt></ruby>（Product Lifecycle Management）</li>
-<li><ruby>WMS<rt>仓储管理系统</rt></ruby>（Warehouse Management System）</li>
-<li><ruby>OA<rt>办公自动化</rt></ruby>、<ruby>CRM<rt>消费者关系管理</rt></ruby>、<ruby>APS<rt>先进计划和排程</rt></ruby>（Advanced Planning and Scheduling）等</li>
-</ul>
-<h3 id="计算机集成制造层">
-计算机集成制造层
-<a href="#%e8%ae%a1%e7%ae%97%e6%9c%ba%e9%9b%86%e6%88%90%e5%88%b6%e9%80%a0%e5%b1%82" class="heading-anchor">#</a>
-</h3>
-<p><ruby>CIM<rt>计算机集成制造</rt></ruby>（Computer Integrated Manufacturing）</p>
-<ul>
-<li>制造管理和监测</li>
-<li>制造执行
-<ul>
-<li><ruby>MES<rt>制造执行系统</rt></ruby>（Manufacturing Execution System）</li>
-<li><ruby>RTD<rt>实时派工系统</rt></ruby>（Real-time Dispatch）</li>
-<li><ruby>SPC<rt>统计制程控制</rt></ruby>（Statistical Process Control）</li>
-</ul>
-</li>
-</ul>
-<h3 id="一般控制层">
-一般控制层
-<a href="#%e4%b8%80%e8%88%ac%e6%8e%a7%e5%88%b6%e5%b1%82" class="heading-anchor">#</a>
-</h3>
-<ul>
-<li>自动化系统
-<ul>
-<li><ruby>EAP<rt>设备自动化程序</rt></ruby>（Equipment Automatic Programme)</li>
-</ul>
-</li>
-<li><ruby>EES<rt>设备工程系统</rt></ruby>（Equipment Engineer System）
-<ul>
-<li><ruby>APC<rt>先进过程控制</rt></ruby>（Advanced Process Control）
-<ul>
-<li>一般会认定其包含 <ruby>R2R<rt>批次控制</rt></ruby>（Run-to-Run）、FDC、<ruby>OEE<rt>整体设备效率</rt></ruby>（Overall Equipment Efficiency），但包含关系和范围没有明显界定</li>
-</ul>
-</li>
-<li><ruby>FDC<rt>故障侦测与分类</rt></ruby>（Fault Detection and Classification）</li>
-<li><ruby>PMS<rt>预防保养系统</rt></ruby>（Preventive Maintenance System）</li>
-<li><ruby>YMS<rt>良率管理系统</rt></ruby>（Yield Management System）</li>
-<li><ruby>TMS<rt>运输管理系统</rt></ruby>（Transportation Management System）</li>
-<li><ruby>RMS<rt>Recipe/配方管理系统</rt></ruby>（Recipe Management System）</li>
-<li>与 <ruby>AMHS<rt>自动物料搬送系统/天车</rt></ruby>（Automatic Material Handling System）的配合</li>
-</ul>
-</li>
-</ul>
-<h3 id="现场设备层机台">
-现场设备层：机台
-<a href="#%e7%8e%b0%e5%9c%ba%e8%ae%be%e5%a4%87%e5%b1%82%e6%9c%ba%e5%8f%b0" class="heading-anchor">#</a>
-</h3>
-<ul>
-<li><ruby>PLC<rt>可编程逻辑控制器</rt></ruby>（Programmable Logic Controller）</li>
-<li>其他 censor 等</li>
-</ul>
-<hr>
-<p>CIM 主体包括 <strong>MES</strong> 和 <strong>EAP</strong>。MES 负责车间生产管理和调度执行，实时监控生产过程并响应状态变化。EAP 对接 MES 和机台设备，负责信息传输、数据搜集、流程控制和异常捕捉。因而 APC、FDC、 PMS 等系统通常都围绕 EAP 运作。</p>
-<p>EAP 与 MES 等其他系统间通讯采用 Tibco RV 协议、与机台设备间通讯采用 SECS/GEM 等等协议。</p>
-<pre class="mermaid">
-classDiagram
-	class 计划层{
-		 ERP/SCM/PLM
-		 OA/CRM/APS/...
-	}
-	class CIM{
-		MES/RTD/SPC...
-	}
-	class 一般控制层{
-		EAP
-		EES/APC/FDC...
-	}
-	计划层 <--> CIM
-	CIM <--> 一般控制层 : SECS/GEM
-</pre>
-<h3 id="市场主要厂商">
-市场主要厂商
-<a href="#%e5%b8%82%e5%9c%ba%e4%b8%bb%e8%a6%81%e5%8e%82%e5%95%86" class="heading-anchor">#</a>
-</h3>
-<p>前道 CIM：</p>
-<ul>
-<li>IBM（SiView）</li>
-<li>应用材料（Applied Materials）（FAB300）</li>
-</ul>
-<p>MES：</p>
-<ul>
-<li>西门子（Siemens）</li>
-<li>霍尼韦尔（Honeywell Forge）</li>
-<li>艾默生（Emerson）</li>
-<li>罗克韦尔（Rockwell Automation）</li>
-<li>达索（Dassault）</li>
-<li>ABB Ability</li>
-</ul>
-<p>YMS 多独立厂家，如 Synopsys（Synopsys Odyssey）。</p>
-<p>后道封装：</p>
-<ul>
-<li>西门子（CAMSTAR、SIMATIC IT）</li>
-</ul>
-<h2 id="mes车间的头子">
-MES：「车间的头子」
-<a href="#mes%e8%bd%a6%e9%97%b4%e7%9a%84%e5%a4%b4%e5%ad%90" class="heading-anchor">#</a>
-</h2>
-<p>MES 上接计划层（如 ERP），下接一般控制层（如 EAP 或 <ruby>SCADA<rt>监控与资料收集系统</rt></ruby>），主要面向在现场一线操作的车间管理人员。实际上是多个模块集中呈现的平台，针对整个工厂，对稳定性要求较高。实际解决方案包括：</p>
-<ul>
-<li>计划排程管理</li>
-<li><ruby>PRP<rt>生产工艺流程</rt></ruby>（Process Plan）：对生产的流程进行四层抽象（从单个 <ruby>operation<rt>操作</rt></ruby>) 到连接成 <ruby>stage<rt>步骤</rt></ruby>)，再连接为一个大的 <ruby>layer<rt>层</rt></ruby>，最后成为一条完整的 <ruby>route<rt>路径</rt></ruby>）</li>
-<li><ruby>WIP<rt>制品管理模块</rt></ruby>)（Wafer in Process）：创建批次、查询批次、报废批次等批次相关的处理</li>
-<li>设备管理</li>
-<li>数据管理</li>
-<li>报表管理</li>
-<li><ruby>GUI<rt>图形界面设计</rt></ruby>：包括面向生产线操作员和面向工艺工程师等不同界面</li>
-</ul>
-<h2 id="eap搜集信息传达指令">
-EAP：搜集信息、传达指令
-<a href="#eap%e6%90%9c%e9%9b%86%e4%bf%a1%e6%81%af%e4%bc%a0%e8%be%be%e6%8c%87%e4%bb%a4" class="heading-anchor">#</a>
-</h2>
-<p>EAP 上接 MES，下接机台设备。MES 所管理的各项数据都来自 EAP。EAP 先搜集所有生产数据和机台状态数据，再经由特定通讯协议传送到 MES 数据库，MES 再借由数据分析监控设备和生产流程。其同时也是整个 CIM 中其他模块的数据源。</p>
-<p>例如生产状态的变化：由 EAP <strong>告知</strong> MES 一批货物状态的变化，MES <strong>改变</strong>这批货物的状态。</p>
-<pre class="mermaid">
-stateDiagram
-	s1: 计划(planned)
-	s2: 激活(activated)
-	s3: 等待处理(waiting)
-	s4: 结束(completed)
-	s5: 派工(dispatch)
-	s6: 正在加工(processing)
-	s7: 加工完成(finish)
-	[*]-->s1
-	s1-->s2:分配输送盒
-	s2-->s3
-	s3-->s2:解除等待
-	s2-->s5
-	s5-->s2:解除派工
-	s5-->s6:移入加工
-	s6-->s5:取消移入
-	s6-->s7
-	s7-->s3
-	s3-->s7
-	s7-->s4
-	s2-->s4
-	s3-->s5
-</pre>
-<p>对比单纯进行数据采集和一定图形界面化呈现的 SCADA，EAP 能配合其他模块达到生产自动化的要求、作为管理平台、融合 <ruby>BI<rt>商业智能</rt></ruby>（business intelligence）分析。</p>
-<h2 id="apc管控过程提升良率">
-APC：管控过程、提升良率
-<a href="#apc%e7%ae%a1%e6%8e%a7%e8%bf%87%e7%a8%8b%e6%8f%90%e5%8d%87%e8%89%af%e7%8e%87" class="heading-anchor">#</a>
-</h2>
-<p>半导体量产中，由于投资规模庞大，良率哪怕能做到 1% 的提升，都能带来非常可观的收益增加。APC 就是一种提升良率或产能的综合解决方案。一般包括 R2R、FDC、OEE。在制程执行时，期间存在各种影响因素导致量产出的晶圆存在差异，需要通过实时监控影响因素变化的参数来提升良率或产能，而这依赖于 APC 对数据的搜集，包括 <ruby>DCU<rt>数据收集单元</rt></ruby>（Data Collection Unit）主动收集的资料以及对其他系统（如 MES、PMS 等）资料的运用。</p>
-<p>有关 APC 的更多信息，可<a href="http://franktsao.blogspot.com/2009/10/apc.html">按此访问</a>鼎捷软件曹永诚所撰导论（2005 年 6 月，Blogspot 链接）。</p>
-<h2 id="关于-amhs">
-关于 AMHS
-<a href="#%e5%85%b3%e4%ba%8e-amhs" class="heading-anchor">#</a>
-</h2>
-<p>12 吋厂线的 RTD 多与 AMHS 搭配使用以达到更高程度的自动化，通常还与 <ruby>MCS<rt>物料控制系统</rt></ruby>（Material Control System） 一起运作。RTD 针对制程情况给出派货建议，未配备 AMHS 的工厂一般通过人工运输，配备 AMHS 则可以相互通讯以自动运输。AMHS 中各种器械有序灵活的运作，能让人直观感受到工业制造具备的魅力。一般包括：</p>
-<ul>
-<li><ruby>OHT<rt>空中行走式/高架搬运系统</rt></ruby>（Overhead Hoist Transfer），多用在加工区间内（Intra-bay），也可用于不同区间之间（Inter-bay）或覆盖全厂（factory wide）的运输。</li>
-<li><ruby>OHS<rt>空中行走式/高架搬运车</rt></ruby>（Overhead Shuttle），常用于不同仓储设备间（也称 Inter-bay Transport System）。</li>
-<li><ruby>AGV<rt>自动导引车</rt></ruby>（Automated Guided Vehicle），常用在复杂路径。</li>
-<li><ruby>RGV<rt>有轨导引车</rt></ruby>（Rail Guided Vehicle），轨道运输，带机械臂。</li>
-</ul>
-<h2 id="芯片制作工序英文不完全对照">
-芯片制作工序：英文不完全对照
-<a href="#%e8%8a%af%e7%89%87%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f%e8%8b%b1%e6%96%87%e4%b8%8d%e5%ae%8c%e5%85%a8%e5%af%b9%e7%85%a7" class="heading-anchor">#</a>
-</h2>
-<pre class="mermaid">
-flowchart TD
-	subgraph a[1.Wafer Processing]
-	a1[Cast]-->a2[Slice]-->a3[Polish the surface]
-	end
-	subgraph b[2.Exposed to oxygen]
-	b1[Clean]-->b2[Exposed to oxygen<br>at high temperatures<br>to create a layer of silicon oxide]-->b3[Layer Thickness Test]
-	end
-	subgraph c[3.Lithography]
-	c1[Apply a UV-sensitive photoresist on the surface]-->c2[Irradiate the UV light to transfer the pattern onto the photoresist]-->c3[Remove unexposed area]
-	end
-	subgraph d[4.Etching and Removing]
-	d1[To etch films of unmasked area and remove the photoresist]
-	end
-	subgraph e[5.Film Depositing]
-	e1[using CVD or PVD]
-	end
-	subgraph f[6.Interconnect Formation]
-	f1[To form wiring layers]
-	end
-	subgraph g[7.Wafer Testing]
-	g1[EDS]
-	end
-	subgraph h[8.Assembly and Testing]
-	h1[Cut into die]-->h2[Attached to the package substrate]-->h3[Connected to inner leads]-->h4[Sealed in an epoxy resin envelope]-->h5[Test]
-	end
-	mm("(IC Design)")-->a-->b-->c-->d-->e-->f-->g-->h
-</pre></section>
-</article>
-
-
-<script defer src="https://hypothes.is/embed.js"></script>
-
-<script defer>
-  
-  function applyBreakAllClass() {
-    
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    
-    if (screenWidth <= 960) {
-      
-      var codeElements = document.querySelectorAll('code');
-
-      
-      codeElements.forEach(function(element) {
-        
-        if (element.textContent.length > 10) {
-          
-          element.classList.add('break-all');
-        }
-      });
-    }
-  }
-
-  
-  applyBreakAllClass();
-
-  
-  window.addEventListener('resize', applyBreakAllClass);
-</script>
-
-<script async>
-  document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener('scroll', function() {
-      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      var topScrollBar = document.querySelector('.top-scroll-bar');
-      if (topScrollBar) {
-        topScrollBar.style.width = scrollPercent + '%';
-        topScrollBar.style.display = 'block';
-      }
-    });
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-</body>
-
-<script src="/han.min.js"></script>
-
-
-<script defer>
-    window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
-        });
-    }
-</script>
-
-<section><footer class="page-footer">
-<hr />
-
-<div class="previous-post" style="display:inline-block;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/cpp-template-friend/?ref=footer">« C++ 模版类重载流输入输出运算符</a>
-  
-</div>
-
-<div class="next-post", style="display:inline-block;float:right;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/bakery/?ref=footer">糕点铺 »</a>
-  
-</div>
-
-<ul class="page-footer-menu">
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</ul>
-
-
-<p>
-  <a href="https://gohugo.io">hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
-</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="/links.html">Leave a comment</a> or <a href="mailto:rongbin.fan@outlook.com">email me</a>.
-</p>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> &copy; 2023 Rongbin FAN</p>
-
-
-
-
-</footer>
-
-<script defer>
-function checkBrowserAndApplyStyle() {
-    var userAgent = navigator.userAgent;
-    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
-    var isFirefox = userAgent.includes("Firefox");
-
-    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
-        addSelectionStyle();
-    }
-}
-
-function addSelectionStyle() {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
-    document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-checkBrowserAndApplyStyle();
-</script></section>
-<section><nav class="menu">
-    <ul>
-    
-        <li><a href="/posts">归档</a></li>
-    
-        <li><a href="/tags">标签</a></li>
-    
-        <li><a href="/">关于</a></li>
-    
-        <li><a href="/links.html">留言板</a></li>
-    
-    </ul>
-</nav>
-</section>
 
 </html>

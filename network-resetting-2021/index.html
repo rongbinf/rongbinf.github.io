@@ -1,74 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init"><head>
-<title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程 - Rongbin&#39;s Blog</title>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <title>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程 - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="在这篇新博文中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。
 原先的布置：
 之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。
 现在的布置：
 解决了几个痛点，记录一下：
-信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 &#43; 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯ 速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。 切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC&#43;AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。 丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。 电信网关拨号改桥接 # 所用网关型号为 HS8145C，通过超级管理员帐户进入后台，用户名为 telecomadmin。一说有通用密码 nE7jA%5m，我也是使用该密码进入的。
+信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 &#43; 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯ 速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。 切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC&#43;AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。 丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。 电信网关拨号改桥接 所用网关型号为 HS8145C，通过超级管理员帐户进入后台，用户名为 telecomadmin。一说有通用密码 nE7jA%5m，我也是使用该密码进入的。
 如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 http://192.168.1.1/backupsettings.conf，下载 backupsettings.conf。搜索 password 获得经 base64 加密过的密码，可尝试使用在线工具解密，如 md5hashing。
 进入菜单「网络」选项，在上网业务中将 3_INTERNET_B_VID_41 项连接方式改为桥接即可。
 相应地，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。
-TP-LINK 易展有线回程 # 有几个需要注意的：
+TP-LINK 易展有线回程 有几个需要注意的：
 易展路由器应在同一网段下，例如各自 IP 地址为 192.168.2.1、192.168.2.2。 接好网线。 先设置作为主路由的那台，例如我希望将 XDR5430 作为主路由，则它先接网线并上电配置。 步骤如下： ">
 <link rel="canonical" href="https://fanrongbin.com/network-resetting-2021/" />
 
 
 
-  
 
 
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" media="print" onload="this.media='all'" />
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
-</noscript>
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/hugo-tufte.min.css">
-
-
-
-
-
-
+      <link rel="stylesheet" href="/css/main.min.893d84d10b8a92caf7703f9114c1ac728a503e7812a07ef5113859ff75671c79.css" integrity="sha256-iT2E0QuKksr3cD&#43;RFMGscopQPngSoH71EThZ/3VnHHk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
-
-
-
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 
 
 </head>
 <body>
-<div class="top-scroll-bar"></div>
+  <header class="navbar">
+    <h1><a href="/">Rongbin FAN</a></h1>
 
-<article id="main" class="han-init-context">
-  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<nav>
+    <a href="/#hello">Hello</a>
+    <a href="/posts" style="font-weight: bold;">Blog</a>
+    <a href="/links">Guestbook</a>
+</nav>
+  </header>
+  <main class="han-init-context">
+    
+
+  <div class="top-scroll-bar"></div>
+<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -77,59 +54,126 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
   </ul>
 </nav>
 </div>
-<section>
-<h1 class="content-title">
 
-<span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</h1><span class="content-meta no-select">
-  <style>#changeFontLink{left:-2.85rem;font-size: 1.6rem;}</style>
-  <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>08 Jan 2021</p>
-</span></section>
-
-<script defer>
-    function toggleFontFamily() {
-        var elements = document.querySelectorAll('body, blockquote');
-        elements.forEach(function(el) {
-            if (el.style.fontFamily) {
-                el.style.fontFamily = ''; 
-            } else {
-                el.style.fontFamily = 'var(--sans)';
-            }
-        });
-  
-        var strongElements = document.querySelectorAll('strong');
-        strongElements.forEach(function(el) {
-            if (el.style.top) {
-                el.style.top = '';
-            } else {
-                el.style.top = '0';
-            }
-        });
-  
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-</script>
-
-<script defer>
-    function toggleContents() {
-        var toc = document.getElementById('contents-toc');
-        var style = window.getComputedStyle(toc);
+  <div id="single-header">
+    <h1 class="content-h1">电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</h1>
     
-        if (style.display === 'none') {
-            toc.style.display = 'block';
-        } else {
-            toc.style.display = 'none';
+    
+    <p class="content-time"><time datetime="2021-01-08T00:00:00&#43;00:00">January 8, 2021</time></p>
+  </div>
+
+  <p>在<a href="https://fanrongbin.com/posts/network-resetting-2023">这篇新博文</a>中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。</p>
+<p>原先的布置：</p>
+<img src="https://i.loli.net/2021/01/07/SMAdbvcfqWgz65G.png" alt="Before" />
+<p>之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。</p>
+<p>现在的布置：</p>
+<img src="https://i.loli.net/2021/01/07/qdF25vrUSmKID1n.png" alt="After" />
+<p>解决了几个痛点，记录一下：</p>
+<ul>
+<li>信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 + 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯</li>
+<li>速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。</li>
+<li>切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC+AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。</li>
+<li>丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。</li>
+</ul>
+<h2 id="电信网关拨号改桥接">电信网关拨号改桥接</h2>
+<p>所用网关型号为 HS8145C，通过<strong>超级管理员帐户</strong>进入后台，用户名为 <code>telecomadmin</code>。一说有通用密码 <code>nE7jA%5m</code>，我也是使用该密码进入的。</p>
+<p>如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 <code>http://192.168.1.1/backupsettings.conf</code>，下载 <code>backupsettings.conf</code>。搜索 <code>password</code> 获得经 base64 加密过的密码，可尝试使用在线工具解密，如 <a href="https://md5hashing.net/">md5hashing</a>。</p>
+<p>进入菜单「网络」选项，在上网业务中将 <code>3_INTERNET_B_VID_41</code> 项连接方式改为<strong>桥接</strong>即可。</p>
+<p>相应地，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。</p>
+<h2 id="tp-link-易展有线回程">TP-LINK 易展有线回程</h2>
+<p>有几个需要注意的：</p>
+<ol>
+<li>易展路由器应在同一网段下，例如各自 IP 地址为 <code>192.168.2.1</code>、<code>192.168.2.2</code>。</li>
+<li>接好网线。</li>
+<li>先设置作为<strong>主路由</strong>的那台，例如我希望将 XDR5430 作为主路由，则它先接网线并上电配置。</li>
+</ol>
+<p>步骤如下：</p>
+<ol>
+<li>（如果之前使用无线回程，需要对所有易展路由器恢复出厂设置。）</li>
+<li>主路由上电，配置上网，关闭 DHCP。</li>
+<li>确认主路由是否正常上网。此时主路由可能提示 WAN 口未正常连接。但只要能上网就行。</li>
+<li>将其他易展路由器接网线上电，按易展按钮进行易展。</li>
+</ol>
+<img src="https://i.loli.net/2021/01/08/kbE396iZHuDUpxv.jpg" alt="TP-LINK App 网络拓扑图" style="zoom: 33%;" />
+<p>右上角显示连接网线的 icon 即实现有线回程。</p>
+
+
+  <div class="footer-nav">
+
+  <div class="previous-post" style="display:inline-block;">
+    
+    <a class="no-external" href="https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/"><span class="arrow">←</span> 树莓派实现开机自动播放 RTSP 流视频</a>
+    
+  </div>
+  
+  
+
+
+  <div class="Tags">
+    <ul style="list-style-type: none;">
+      <li class="label">TAGS</li>
+        <li><a href="/tags/home-network/">home-network</a></li>
+    </ul>
+  </div>
+
+  <div class="next-post" style="display:inline-block;float:right;">
+    
+    <a class="no-external" href="https://fanrongbin.com/winslow-homer/">Winslow Homer 温斯洛·霍默 <span class="arrow">→</span></a>
+    
+  </div>
+
+  </div>
+
+  </main>
+  <footer class="opacity-6">
+    <p><a href="https://gohugo.io/" target="_blank">Hugo</a>, <a href="https://github.com/ethantw/Han" target="_blank">Han</a>
+<br>You can select texts to hightlight using <a href="https://hypothes.is/" target="_blank">Hypothesis</a>.</p>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+  </footer>
+</body>
+<script src="/han.min.js"></script>
+
+<script defer>
+  
+  function applyBreakAllClass() {
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    
+    if (screenWidth <= 960) {
+      
+      var codeElements = document.querySelectorAll('code');
+
+      
+      codeElements.forEach(function(element) {
+        
+        if (element.textContent.length > 10) {
+          
+          element.classList.add('break-all');
         }
+      });
     }
+  }
+
+  
+  applyBreakAllClass();
+
+  
+  window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-
+<script async>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+</script>
 
 <script>
     
@@ -155,7 +199,7 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
     }
     
     document.addEventListener('DOMContentLoaded', () => {
-        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
     
@@ -234,224 +278,5 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
     });
 </script>    
 
-
-  
-
-  <section><p>在<a href="https://fanrongbin.com/posts/network-resetting-2023">这篇新博文</a>中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。</p>
-<p>原先的布置：</p>
-<img src="https://i.loli.net/2021/01/07/SMAdbvcfqWgz65G.png" alt="Before" />
-<p>之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。</p>
-<p>现在的布置：</p>
-<img src="https://i.loli.net/2021/01/07/qdF25vrUSmKID1n.png" alt="After" />
-<p>解决了几个痛点，记录一下：</p>
-<ul>
-<li>信号：将电信网关设置为桥接模式，将 AC-68U 作为软路由，仅用于拨号和实现一些技巧功能。主路由换为 XDR5430 并置于全屋中心位置天花板处，客厅电视柜再接一个 XDR1850 有线回程。实现全屋 Wi-Fi 5G 信号满格覆盖。这里还是要夸一下电工当初装修时给电视柜留了三条网线 + 巧妙设计了走廊的天花板，虽然上的网线是五类但也接满了八条线⋯⋯嗯⋯⋯</li>
-<li>速度：改用千兆交换机，目前套餐内 300M 宽带下行能接近跑满。两台路由进行有线回程。</li>
-<li>切换：使用网件的信号扩展器，虽然将 SSID 和密码改成与主路由一致后，一些相对「聪明」的设备会花个五六秒切换，但有时它们的脑子也像那些比较笨的设备一样不灵光。在比较了 AC+AP、AiMesh 和 Mesh 三种方案后选择了 Mesh。</li>
-<li>丑陋：发现电信套餐内包含了 IPTV 业务，直接舍弃了广东广电庞大笨重的网关和机顶盒。再加上通过 Apple TV 访问的一些直播流，可以覆盖家人的频道需求。</li>
-</ul>
-<h2 id="电信网关拨号改桥接">
-电信网关拨号改桥接
-<a href="#%e7%94%b5%e4%bf%a1%e7%bd%91%e5%85%b3%e6%8b%a8%e5%8f%b7%e6%94%b9%e6%a1%a5%e6%8e%a5" class="heading-anchor">#</a>
-</h2>
-<p>所用网关型号为 HS8145C，通过<strong>超级管理员帐户</strong>进入后台，用户名为 <code>telecomadmin</code>。一说有通用密码 <code>nE7jA%5m</code>，我也是使用该密码进入的。</p>
-<p>如果上述帐户密码不适用，则用光猫背面所注明的帐户登录。登录后进入 <code>http://192.168.1.1/backupsettings.conf</code>，下载 <code>backupsettings.conf</code>。搜索 <code>password</code> 获得经 base64 加密过的密码，可尝试使用在线工具解密，如 <a href="https://md5hashing.net/">md5hashing</a>。</p>
-<p>进入菜单「网络」选项，在上网业务中将 <code>3_INTERNET_B_VID_41</code> 项连接方式改为<strong>桥接</strong>即可。</p>
-<p>相应地，需要在主路由设置拨号上网。帐号密码详询电信营业厅，也可以在电信网关后台看到明文的帐号，密码经过 sha256 加密。</p>
-<h2 id="tp-link-易展有线回程">
-TP-LINK 易展有线回程
-<a href="#tp-link-%e6%98%93%e5%b1%95%e6%9c%89%e7%ba%bf%e5%9b%9e%e7%a8%8b" class="heading-anchor">#</a>
-</h2>
-<p>有几个需要注意的：</p>
-<ol>
-<li>易展路由器应在同一网段下，例如各自 IP 地址为 <code>192.168.2.1</code>、<code>192.168.2.2</code>。</li>
-<li>接好网线。</li>
-<li>先设置作为<strong>主路由</strong>的那台，例如我希望将 XDR5430 作为主路由，则它先接网线并上电配置。</li>
-</ol>
-<p>步骤如下：</p>
-<ol>
-<li>（如果之前使用无线回程，需要对所有易展路由器恢复出厂设置。）</li>
-<li>主路由上电，配置上网，关闭 DHCP。</li>
-<li>确认主路由是否正常上网。此时主路由可能提示 WAN 口未正常连接。但只要能上网就行。</li>
-<li>将其他易展路由器接网线上电，按易展按钮进行易展。</li>
-</ol>
-<img src="https://i.loli.net/2021/01/08/kbE396iZHuDUpxv.jpg" alt="TP-LINK App 网络拓扑图" style="zoom: 33%;" />
-<p>右上角显示连接网线的 icon 即实现有线回程。</p>
-</section>
-</article>
-
-
-<script defer src="https://hypothes.is/embed.js"></script>
-
-<script defer>
-  
-  function applyBreakAllClass() {
-    
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    
-    if (screenWidth <= 960) {
-      
-      var codeElements = document.querySelectorAll('code');
-
-      
-      codeElements.forEach(function(element) {
-        
-        if (element.textContent.length > 10) {
-          
-          element.classList.add('break-all');
-        }
-      });
-    }
-  }
-
-  
-  applyBreakAllClass();
-
-  
-  window.addEventListener('resize', applyBreakAllClass);
-</script>
-
-<script async>
-  document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener('scroll', function() {
-      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      var topScrollBar = document.querySelector('.top-scroll-bar');
-      if (topScrollBar) {
-        topScrollBar.style.width = scrollPercent + '%';
-        topScrollBar.style.display = 'block';
-      }
-    });
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-</body>
-
-<script src="/han.min.js"></script>
-
-
-<script defer>
-    window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
-        });
-    }
-</script>
-
-<section><footer class="page-footer">
-<hr />
-
-<div class="previous-post" style="display:inline-block;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/?ref=footer">« 树莓派实现开机自动播放 RTSP 流视频</a>
-  
-</div>
-
-<div class="next-post", style="display:inline-block;float:right;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/winslow-homer/?ref=footer">Winslow Homer 温斯洛·霍默 »</a>
-  
-</div>
-
-<ul class="page-footer-menu">
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</ul>
-
-
-<p>
-  <a href="https://gohugo.io">hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
-</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="/links.html">Leave a comment</a> or <a href="mailto:rongbin.fan@outlook.com">email me</a>.
-</p>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> &copy; 2023 Rongbin FAN</p>
-
-
-
-
-</footer>
-
-<script defer>
-function checkBrowserAndApplyStyle() {
-    var userAgent = navigator.userAgent;
-    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
-    var isFirefox = userAgent.includes("Firefox");
-
-    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
-        addSelectionStyle();
-    }
-}
-
-function addSelectionStyle() {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
-    document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-checkBrowserAndApplyStyle();
-</script></section>
-<section><nav class="menu">
-    <ul>
-    
-        <li><a href="/posts">归档</a></li>
-    
-        <li><a href="/tags">标签</a></li>
-    
-        <li><a href="/">关于</a></li>
-    
-        <li><a href="/links.html">留言板</a></li>
-    
-    </ul>
-</nav>
-</section>
 
 </html>

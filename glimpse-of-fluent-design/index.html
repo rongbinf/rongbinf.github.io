@@ -1,70 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init"><head>
-<title>初探 Fluent Design System - Rongbin&#39;s Blog</title>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <title>初探 Fluent Design System - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。
-宣传视频 # 官方网页 （无法在以中文为界面语言的 Chrome 正常浏览）| 优酷 (来自 Livesino)
-Light (光) # 利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。
+宣传视频 官方网页 （无法在以中文为界面语言的 Chrome 正常浏览）| 优酷 (来自 Livesino)
+Light (光) 利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。
 Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.
 引用部分是微软官方的定义。
 光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。
-Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。 ">
+Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。 ">
 <link rel="canonical" href="https://fanrongbin.com/glimpse-of-fluent-design/" />
 
 
 
-  
 
 
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" media="print" onload="this.media='all'" />
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
-</noscript>
-
-
-
-
-
-
-<link rel="stylesheet" href="/css/hugo-tufte.min.css">
-
-
-
-
-
-
+      <link rel="stylesheet" href="/css/main.min.893d84d10b8a92caf7703f9114c1ac728a503e7812a07ef5113859ff75671c79.css" integrity="sha256-iT2E0QuKksr3cD&#43;RFMGscopQPngSoH71EThZ/3VnHHk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
-
-
-
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
 
 
 
 </head>
 <body>
-<div class="top-scroll-bar"></div>
+  <header class="navbar">
+    <h1><a href="/">Rongbin FAN</a></h1>
 
-<article id="main" class="han-init-context">
-  <a onclick="toggleContents()"><div id="contents-fixed" class="no-select">contents</div></a>
+<nav>
+    <a href="/#hello">Hello</a>
+    <a href="/posts" style="font-weight: bold;">Blog</a>
+    <a href="/links">Guestbook</a>
+</nav>
+  </header>
+  <main class="han-init-context">
+    
+
+  <div class="top-scroll-bar"></div>
+<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -77,59 +54,125 @@ Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户�
   </ul>
 </nav>
 </div>
-<section>
-<h1 class="content-title">
 
-<span title="Back to article list 回到文章归档页" class="go-back no-select" onselectstart = "return false"><a href="/posts" class="go-back no-select">←</a></span>初探 Fluent Design System</h1><span class="content-meta no-select">
-  <style>#changeFontLink{left:-2.85rem;font-size: 1.6rem;}</style>
-  <p class="date"><a title="Serif <-> Sans Font 衬线/无衬线字体" class="go-back no-select" onselectstart = "return false" id="changeFontLink" onclick="toggleFontFamily()">Aa</a>14 May 2017</p>
-</span></section>
-
-<script defer>
-    function toggleFontFamily() {
-        var elements = document.querySelectorAll('body, blockquote');
-        elements.forEach(function(el) {
-            if (el.style.fontFamily) {
-                el.style.fontFamily = ''; 
-            } else {
-                el.style.fontFamily = 'var(--sans)';
-            }
-        });
-  
-        var strongElements = document.querySelectorAll('strong');
-        strongElements.forEach(function(el) {
-            if (el.style.top) {
-                el.style.top = '';
-            } else {
-                el.style.top = '0';
-            }
-        });
-  
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-</script>
-
-<script defer>
-    function toggleContents() {
-        var toc = document.getElementById('contents-toc');
-        var style = window.getComputedStyle(toc);
+  <div id="single-header">
+    <h1 class="content-h1">初探 Fluent Design System</h1>
     
-        if (style.display === 'none') {
-            toc.style.display = 'block';
-        } else {
-            toc.style.display = 'none';
+    
+    <p class="content-time"><time datetime="2017-05-14T00:00:00&#43;00:00">May 14, 2017</time></p>
+  </div>
+
+  <p>微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。</p>
+<p><img src="https://img.fanrongbin.com/m-1.webp" alt="microsoft-fluent-design-elements.png"></p>
+<h2 id="宣传视频">宣传视频</h2>
+<p><a href="http://fluent.microsoft.com">官方网页</a> （无法在以中文为界面语言的 Chrome 正常浏览）| <a href="http://v.youku.com/v_show/id_XMjc1ODYzMjcwMA==.html">优酷</a> (来自 Livesino)</p>
+<h2 id="light-光">Light (光)</h2>
+<p><img src="https://img.fanrongbin.com/m-2.webp" alt="2040_VRG0158.jpg" title="via The Verge"></p>
+<p>利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。</p>
+<blockquote>
+<p>Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.</p>
+</blockquote>
+<p>引用部分是微软官方的定义。</p>
+<p>光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。</p>
+<h2 id="depth-深">Depth (深)</h2>
+<p>Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。</p>
+<p><img src="https://img.fanrongbin.com/m-3.webp" alt="whatismaterial_3d_elevation1-1024x647.png" title="via Android Developers"></p>
+<p>不同高度下(Z 值)的阴影。</p>
+<p>Fluent Design System 的出现就是为了打破原有仅适用于平面的设计语言 (Metro UI)，引入三维空间的设计理念便于在今后发展 VR/AR/MR，实现统一可操作的设计规范。</p>
+<blockquote>
+<p>Think about the frame that contains your information. Now break it apart, and reinvent how things relate to each other within a more layered, physical environment. This is how we’ll keep people in their flow – by giving them more space.</p>
+</blockquote>
+<p>打破原有二维框架，在层次区分度更高的物理环境（三维空间）中重新思考事物中的联系。</p>
+<h2 id="motion-动">Motion (动)</h2>
+<p><img src="https://img.fanrongbin.com/m-4.webp" alt="2040_VRG0159.jpg" title="via The Verge"></p>
+<blockquote>
+<p>Think of motion design like a movie. Seamless transitions keep you focused on the story, and bring experiences to life. We can invite that feeling into our designs, leading people from one task to the next with cinematic ease.</p>
+</blockquote>
+<p>微软认为，动效的作用在于带给用户如同观看电影般的沉浸感，做到无缝过渡、由虚转实，使用户轻松、愉快地完成多项任务。在我看来，动效一词需要分真假。「真动效」无限接近生活，能够唤起用户对物理环境下该操作引起动效的感知，因此也可叫「拟物动效」。「假动效」即对二维动画进行空间上的拓展，主要作用是提示用户完成了某一操作，并且能通过细节优化给予愉悦感。</p>
+<h2 id="material-材">Material (材)</h2>
+<p><img src="https://img.fanrongbin.com/m-5.webp" alt="2040_VRG0160.jpg" title="via The Verge"></p>
+<blockquote>
+<p>The things that surround us in the real world are sensory and invigorating. They bend, stretch, bounce, shatter, and glide. Those material qualities translate to digital environments, making people want to reach out and touch our designs.</p>
+</blockquote>
+<p>真实世界中存在着「感知」和「活力」。在数字环境中运用恰当的材料，带给用户想去触碰的想法，增加了操作的可能性，是和 Light 一样体现着以自然为设计基础的理念。</p>
+<h2 id="scale-维">Scale (维)</h2>
+<p><img src="https://img.fanrongbin.com/m-6.webp" alt="2040_VRG0161.jpg" title="via The Verge"></p>
+<blockquote>
+<p>The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.</p>
+</blockquote>
+<p>之所以把 Scale 译作「维」，是因为这一点集中体现了 Fluent Design System 最终的作用——实现从零维到三维的，多种场景适用的设计规范，利用设备提供并拓展面向多维度的体验。</p>
+
+
+  <div class="footer-nav">
+
+  <div class="previous-post" style="display:inline-block;">
+    
+    <a class="no-external" href="https://fanrongbin.com/using-default-fonts-in-web-design/"><span class="arrow">←</span> 在 Web 设计中使用系统 UI 默认字体</a>
+    
+  </div>
+  
+  
+
+
+
+  <div class="next-post" style="display:inline-block;float:right;">
+    
+    <a class="no-external" href="https://fanrongbin.com/hexo-github-pages-cloudflare/">Hexo + GitHub Pages + Cloudflare <span class="arrow">→</span></a>
+    
+  </div>
+
+  </div>
+
+  </main>
+  <footer class="opacity-6">
+    <p><a href="https://gohugo.io/" target="_blank">Hugo</a>, <a href="https://github.com/ethantw/Han" target="_blank">Han</a>
+<br>You can select texts to hightlight using <a href="https://hypothes.is/" target="_blank">Hypothesis</a>.</p>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+  </footer>
+</body>
+<script src="/han.min.js"></script>
+
+<script defer>
+  
+  function applyBreakAllClass() {
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    
+    if (screenWidth <= 960) {
+      
+      var codeElements = document.querySelectorAll('code');
+
+      
+      codeElements.forEach(function(element) {
+        
+        if (element.textContent.length > 10) {
+          
+          element.classList.add('break-all');
         }
+      });
     }
+  }
+
+  
+  applyBreakAllClass();
+
+  
+  window.addEventListener('resize', applyBreakAllClass);
 </script>
 
-
+<script async>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', function() {
+      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      var topScrollBar = document.querySelector('.top-scroll-bar');
+      if (topScrollBar) {
+        topScrollBar.style.width = scrollPercent + '%';
+        topScrollBar.style.display = 'block';
+      }
+    });
+  });
+</script>
 
 <script>
     
@@ -155,7 +198,7 @@ Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户�
     }
     
     document.addEventListener('DOMContentLoaded', () => {
-        const headers = document.querySelectorAll('section h2, section h3, section h4, section h5, section h6');
+        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
     
@@ -234,241 +277,5 @@ Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户�
     });
 </script>    
 
-
-  
-
-  <section><p>微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。</p>
-<p><img src="https://img.fanrongbin.com/m-1.webp" alt="microsoft-fluent-design-elements.png"></p>
-<h2 id="宣传视频">
-宣传视频
-<a href="#%e5%ae%a3%e4%bc%a0%e8%a7%86%e9%a2%91" class="heading-anchor">#</a>
-</h2>
-<p><a href="http://fluent.microsoft.com">官方网页</a> （无法在以中文为界面语言的 Chrome 正常浏览）| <a href="http://v.youku.com/v_show/id_XMjc1ODYzMjcwMA==.html">优酷</a> (来自 Livesino)</p>
-<h2 id="light-光">
-Light (光)
-<a href="#light-%e5%85%89" class="heading-anchor">#</a>
-</h2>
-<p><img src="https://img.fanrongbin.com/m-2.webp" alt="2040_VRG0158.jpg" title="via The Verge"></p>
-<p>利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。</p>
-<blockquote>
-<p>Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.</p>
-</blockquote>
-<p>引用部分是微软官方的定义。</p>
-<p>光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。</p>
-<h2 id="depth-深">
-Depth (深)
-<a href="#depth-%e6%b7%b1" class="heading-anchor">#</a>
-</h2>
-<p>Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。</p>
-<p><img src="https://img.fanrongbin.com/m-3.webp" alt="whatismaterial_3d_elevation1-1024x647.png" title="via Android Developers"></p>
-<p>不同高度下(Z 值)的阴影。</p>
-<p>Fluent Design System 的出现就是为了打破原有仅适用于平面的设计语言 (Metro UI)，引入三维空间的设计理念便于在今后发展 VR/AR/MR，实现统一可操作的设计规范。</p>
-<blockquote>
-<p>Think about the frame that contains your information. Now break it apart, and reinvent how things relate to each other within a more layered, physical environment. This is how we’ll keep people in their flow – by giving them more space.</p>
-</blockquote>
-<p>打破原有二维框架，在层次区分度更高的物理环境（三维空间）中重新思考事物中的联系。</p>
-<h2 id="motion-动">
-Motion (动)
-<a href="#motion-%e5%8a%a8" class="heading-anchor">#</a>
-</h2>
-<p><img src="https://img.fanrongbin.com/m-4.webp" alt="2040_VRG0159.jpg" title="via The Verge"></p>
-<blockquote>
-<p>Think of motion design like a movie. Seamless transitions keep you focused on the story, and bring experiences to life. We can invite that feeling into our designs, leading people from one task to the next with cinematic ease.</p>
-</blockquote>
-<p>微软认为，动效的作用在于带给用户如同观看电影般的沉浸感，做到无缝过渡、由虚转实，使用户轻松、愉快地完成多项任务。在我看来，动效一词需要分真假。「真动效」无限接近生活，能够唤起用户对物理环境下该操作引起动效的感知，因此也可叫「拟物动效」。「假动效」即对二维动画进行空间上的拓展，主要作用是提示用户完成了某一操作，并且能通过细节优化给予愉悦感。</p>
-<h2 id="material-材">
-Material (材)
-<a href="#material-%e6%9d%90" class="heading-anchor">#</a>
-</h2>
-<p><img src="https://img.fanrongbin.com/m-5.webp" alt="2040_VRG0160.jpg" title="via The Verge"></p>
-<blockquote>
-<p>The things that surround us in the real world are sensory and invigorating. They bend, stretch, bounce, shatter, and glide. Those material qualities translate to digital environments, making people want to reach out and touch our designs.</p>
-</blockquote>
-<p>真实世界中存在着「感知」和「活力」。在数字环境中运用恰当的材料，带给用户想去触碰的想法，增加了操作的可能性，是和 Light 一样体现着以自然为设计基础的理念。</p>
-<h2 id="scale-维">
-Scale (维)
-<a href="#scale-%e7%bb%b4" class="heading-anchor">#</a>
-</h2>
-<p><img src="https://img.fanrongbin.com/m-6.webp" alt="2040_VRG0161.jpg" title="via The Verge"></p>
-<blockquote>
-<p>The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.</p>
-</blockquote>
-<p>之所以把 Scale 译作「维」，是因为这一点集中体现了 Fluent Design System 最终的作用——实现从零维到三维的，多种场景适用的设计规范，利用设备提供并拓展面向多维度的体验。</p>
-</section>
-</article>
-
-
-<script defer src="https://hypothes.is/embed.js"></script>
-
-<script defer>
-  
-  function applyBreakAllClass() {
-    
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    
-    if (screenWidth <= 960) {
-      
-      var codeElements = document.querySelectorAll('code');
-
-      
-      codeElements.forEach(function(element) {
-        
-        if (element.textContent.length > 10) {
-          
-          element.classList.add('break-all');
-        }
-      });
-    }
-  }
-
-  
-  applyBreakAllClass();
-
-  
-  window.addEventListener('resize', applyBreakAllClass);
-</script>
-
-<script async>
-  document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener('scroll', function() {
-      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      var topScrollBar = document.querySelector('.top-scroll-bar');
-      if (topScrollBar) {
-        topScrollBar.style.width = scrollPercent + '%';
-        topScrollBar.style.display = 'block';
-      }
-    });
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-</body>
-
-<script src="/han.min.js"></script>
-
-
-<script defer>
-    window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
-        });
-    }
-</script>
-
-<section><footer class="page-footer">
-<hr />
-
-<div class="previous-post" style="display:inline-block;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/using-default-fonts-in-web-design/?ref=footer">« 在 Web 设计中使用系统 UI 默认字体</a>
-  
-</div>
-
-<div class="next-post", style="display:inline-block;float:right;">
-  
-  <a class="link-reverse" href="https://fanrongbin.com/how-we-learn-reading-notes/?ref=footer">《如何学习》阅读笔记：可行的学习方法总结 »</a>
-  
-</div>
-
-<ul class="page-footer-menu">
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</ul>
-
-
-<p>
-  <a href="https://gohugo.io">hugo</a>,  
-  <a href="https://github.com/loikein/hugo-tufte">hugo-tufte</a>, <a href="https://github.com/ethantw/Han">Han</a>, and <a href="https://pages.github.com">Github Pages</a>.
-</br>You can select texts to hightlight using <a href="https://hypothes.is/">Hypothesis</a>.</br>Questions? <a href="/links.html">Leave a comment</a> or <a href="mailto:rongbin.fan@outlook.com">email me</a>.
-</p>
-<p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> &copy; 2023 Rongbin FAN</p>
-
-
-
-
-</footer>
-
-<script defer>
-function checkBrowserAndApplyStyle() {
-    var userAgent = navigator.userAgent;
-    var chromeVersionMatch = userAgent.match(/Chrome\/(\d+)/);
-    var isFirefox = userAgent.includes("Firefox");
-
-    if ((chromeVersionMatch && parseInt(chromeVersionMatch[1]) < 110) || isFirefox) {
-        addSelectionStyle();
-    }
-}
-
-function addSelectionStyle() {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = `::selection { background-color: #bbbbbb50; } ::-moz-selection { background-color: #bbbbbb50; }`;
-    document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-checkBrowserAndApplyStyle();
-</script></section>
-<section><nav class="menu">
-    <ul>
-    
-        <li><a href="/posts">归档</a></li>
-    
-        <li><a href="/tags">标签</a></li>
-    
-        <li><a href="/">关于</a></li>
-    
-        <li><a href="/links.html">留言板</a></li>
-    
-    </ul>
-</nav>
-</section>
 
 </html>
