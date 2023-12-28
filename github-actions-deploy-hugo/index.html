@@ -19,11 +19,14 @@
 重命名.yml为方便识别的名字，如deploy.yml 修改编辑框内容如下： name: deploy # 这个 action 的名字 on: push: # 代表每次 push 都会 turn on action workflow_dispatch: # 代表我们也可以手动 turn on jobs: build: runs-on: ubuntu-latest steps: - name: checkout uses: actions/checkout@v2 with: submodules: true fetch-depth: 0 - name: setup uses: peaceiris/actions-hugo@v2. ">
 <link rel="canonical" href="https://fanrongbin.com/github-actions-deploy-hugo/" />
 
+<link rel="me" href="mailto:fanrongbin0201@gmail.com">
 
 
 
 
-      <link rel="stylesheet" href="/css/main.min.6ddc3fde9df655f4589d0327106820f9dfa8d53c91f588b29a16369edf20c19b.css" integrity="sha256-bdw/3p32VfRYnQMnEGgg&#43;d&#43;o1TyR9YiymhY2nt8gwZs=" crossorigin="anonymous">
+
+
+      <link rel="stylesheet" href="/css/main.min.ad067227baba51865e6cf964b87660e7bbf76af9c6ad08772a61dfbd30492d67.css" integrity="sha256-rQZyJ7q6UYZebPlkuHZg57v3avnGrQh3KmHfvTBJLWc=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -34,7 +37,7 @@
 </head>
 <body>
   <header class="navbar">
-    <h1><a href="/">Rongbin FAN</a></h1>
+    <span class="header-name"><a href="/">Rongbin FAN</a></span>
 
 <nav>
     <a href="/#hello">Hello</a>
