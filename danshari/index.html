@@ -21,7 +21,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.ef6e20b150ec51318d4dc673f37f4c811c3ae4896c4c8c0c2079680993a3d1cb.css" integrity="sha256-724gsVDsUTGNTcZz839MgRw65IlsTIwMIHloCZOj0cs=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.6ddc3fde9df655f4589d0327106820f9dfa8d53c91f588b29a16369edf20c19b.css" integrity="sha256-bdw/3p32VfRYnQMnEGgg&#43;d&#43;o1TyR9YiymhY2nt8gwZs=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -44,7 +44,7 @@
     
 
   <div class="top-scroll-bar"></div>
-<div class="addn">
+<div class="addn visible">
 <div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
 <div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
 </div>
@@ -123,38 +123,68 @@
 </body>
 <script src="/han.min.js"></script>
 
-<script defer>
-    if (document.querySelector('.han-init-context')) {
-        document.getElementById('show-hypo').style.display = 'flex';
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (document.querySelector('.han-init-context')) {
+            document.getElementById('show-hypo').style.display = 'flex';
+        }
+
+        applyBreakAllClass();
+
+        handleScrollEvents();
+    });
+
+    window.addEventListener('scroll', throttle(handleScrollEvents, 250), false);
+
+    window.addEventListener('resize', applyBreakAllClass);
+
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function () {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function () {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
     }
 
     function showHypo() {
-    var existingScript = document.getElementById('hypothes-script');
-    var button = document.querySelector('#show-hypo a');
+        var existingScript = document.getElementById('hypothes-script');
+        var button = document.querySelector('#show-hypo a');
 
-    if (!existingScript) {
-        button.textContent = 'Loading';
+        if (!existingScript) {
+            button.textContent = 'Loading';
 
-        var script = document.createElement('script');
-        script.id = 'hypothes-script';
-        script.src = 'https://hypothes.is/embed.js';
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
 
-        script.onload = () => {
-            button.textContent = 'Hypothes.is';
-        };
+            script.onload = () => {
+                button.textContent = 'Hypothes.is';
+            };
 
-        script.onerror = () => {
-            button.style.color = 'red';
-            button.textContent = 'Failed';
-        };
+            script.onerror = () => {
+                button.style.color = 'red';
+                button.textContent = 'Failed';
+            };
 
-        document.body.appendChild(script);
-    } else {
-        toggleHypothesisElementsVisibility();
-        button.style.color = 'initial';
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+            button.style.color = 'initial';
+        }
     }
-}
-
 
     function toggleHypothesisElementsVisibility() {
         const elementsToToggle = [
@@ -165,7 +195,7 @@
             'hypothesis-highlight-cluster-toolbar'
         ];
 
-        elementsToToggle.forEach(function(element) {
+        elementsToToggle.forEach(function (element) {
             var el = document.querySelector(element);
             if (el) {
                 if (el.style.display === 'none') {
@@ -176,152 +206,123 @@
             }
         });
     }
-</script>
 
-<script defer>
-  
-  function applyBreakAllClass() {
-    
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    function applyBreakAllClass() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-    
-    if (screenWidth <= 960) {
-      
-      var codeElements = document.querySelectorAll('code');
+        if (screenWidth <= 960) {
+            var codeElements = document.querySelectorAll('code');
 
-      
-      codeElements.forEach(function(element) {
-        
-        if (element.textContent.length > 10) {
-          
-          element.classList.add('break-all');
+            codeElements.forEach(function (element) {
+                if (element.textContent.length > 10) {
+                    element.classList.add('break-all');
+                }
+            });
         }
-      });
     }
-  }
 
-  
-  applyBreakAllClass();
+    function handleScrollEvents() {
+        var lastScrollTop = 0;
+        var addnDiv = document.querySelector('.addn');
+        var topScrollBar = document.querySelector('.top-scroll-bar');
 
-  
-  window.addEventListener('resize', applyBreakAllClass);
-</script>
+        window.addEventListener('scroll', function () {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-<script defer>
-  document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener('scroll', function() {
-      var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      var topScrollBar = document.querySelector('.top-scroll-bar');
-      if (topScrollBar) {
-        topScrollBar.style.width = scrollPercent + '%';
-        topScrollBar.style.display = 'block';
-      }
-    });
-  });
-</script>
-
-<script>
-    
-    function throttle(func, limit) {
-        let lastFunc;
-        let lastRan;
-        return function() {
-            const context = this;
-            const args = arguments;
-            if (!lastRan) {
-                func.apply(context, args);
-                lastRan = Date.now();
-            } else {
-                clearTimeout(lastFunc);
-                lastFunc = setTimeout(function() {
-                    if ((Date.now() - lastRan) >= limit) {
-                        func.apply(context, args);
-                        lastRan = Date.now();
-                    }
-                }, limit - (Date.now() - lastRan));
+            if (topScrollBar) {
+                var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                topScrollBar.style.width = scrollPercent + '%';
+                topScrollBar.style.display = 'block';
             }
-        }
+
+            if (addnDiv) {
+                if (currentScroll > lastScrollTop && currentScroll > 50) {
+                    addnDiv.classList.remove('visible');
+                } else {
+                    addnDiv.classList.add('visible');
+                }
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
     }
-    
-    document.addEventListener('DOMContentLoaded', () => {
+
+
+    function initializeTOCFeatures() {
         const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
-    
+
         if (contentsFixedDiv) {
-        
-        const toggleTOC = () => {
-            const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-            tocContainer.style.display = isDisplayed ? 'none' : 'flex';
-    
-            
-            if (tocContainer.style.display === 'flex') {
-                initializeTOCFeatures();
-            }
-        };
-    
-        
-        const initializeTOCFeatures = () => {
-            
+            const toggleTOC = () => {
+                const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+                tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+
+                if (tocContainer.style.display === 'flex') {
+                    initializeTOCFeatures();
+                }
+            };
+
             const highlightAppropriateHeader = () => {
                 let highlighted = false;
                 let lastPassedHeader = null;
-    
+
                 headers.forEach(header => {
                     const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
                     const bounding = header.getBoundingClientRect();
-    
+
                     if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
                         link.classList.add('toc-highlight');
                         highlighted = true;
                     } else {
                         link.classList.remove('toc-highlight');
                     }
-    
+
                     if (bounding.top < 0) {
                         lastPassedHeader = header;
                     }
                 });
-    
+
                 if (!highlighted && lastPassedHeader) {
                     const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
                     link.classList.add('toc-highlight');
                 }
             };
-    
-            
+
             const throttledHighlight = throttle(highlightAppropriateHeader, 250);
-    
-            
+
             if (!tocContainer.dataset.initialized) {
                 window.addEventListener('scroll', throttledHighlight);
                 tocContainer.dataset.initialized = 'true';
             }
-    
-            
+
             document.addEventListener('click', (event) => {
                 if (window.getComputedStyle(tocContainer).display !== 'none') {
                     tocContainer.style.display = 'none';
                 }
             });
-    
-            
+
             tocContainer.addEventListener('click', (event) => {
                 event.stopPropagation();
             });
-        };
-    
-        
-        if (headers.length > 1) {
-            contentsFixedDiv.style.display = 'flex';
-            
-            
-            contentsFixedDiv.addEventListener('click', (event) => {
-                toggleTOC();
-                event.stopPropagation();
-            });
+
+            if (headers.length > 1) {
+                contentsFixedDiv.style.display = 'flex';
+                contentsFixedDiv.addEventListener('click', (event) => {
+                    toggleTOC();
+                    event.stopPropagation();
+                });
+            }
         }
     }
-    });
 </script>
+
+
+
+
+
+
+
+
+
 </html>
