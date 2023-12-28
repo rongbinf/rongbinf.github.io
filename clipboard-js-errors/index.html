@@ -6,20 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。 我的组合是：Bootstrap（CSS 框架）&#43; Clipboard.js
-第一次报错：Uncaught TypeError: Illegal constructor new Clipboard(&#39;.btn&#39;); 一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：
+第一次报错：Uncaught TypeError: Illegal constructor # new Clipboard(&#39;.btn&#39;); 一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：
 new ClipboardJS(&#39;.btn&#39;); 问题解决。一开始所参照的中文教程比较久远，语句更新为 ClipboardJS。
-第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null var clipboard = new ClipboardJS(&#39;.btn&#39;); 该语句是为了使用 DOM 选择器。
-为什么在这里要使用 DOM 选择器(DOM SELECTOR) 为了在页面上快速找到引号内（在此为.btn）元素，然后进行下一步。报错原因：调用 JavaScript 时，DOM 选择器还没有渲染完。反映为在使用 DOM 选择器时，没找到或没找完该元素。在我的页面中，因为一开始把&lt;script&gt;&lt;/script&gt;都放在&lt;head&gt;标签之内，所以在&lt;body&gt;没渲染之前就加载了 DOM 选择器，当然什么都找不到了。
+第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null # var clipboard = new ClipboardJS(&#39;.btn&#39;); 该语句是为了使用 DOM 选择器。
+为什么在这里要使用 DOM 选择器(DOM SELECTOR) # 为了在页面上快速找到引号内（在此为.btn）元素，然后进行下一步。报错原因：调用 JavaScript 时，DOM 选择器还没有渲染完。反映为在使用 DOM 选择器时，没找到或没找完该元素。在我的页面中，因为一开始把&lt;script&gt;&lt;/script&gt;都放在&lt;head&gt;标签之内，所以在&lt;body&gt;没渲染之前就加载了 DOM 选择器，当然什么都找不到了。
 问题解决：把该段 JS 放到到本来调用 Clipboard.js 那一段之后。
-第三次报错：.tooltip() is not a function 在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：
-var clipboard = new ClipboardJS(&#39;.btn&#39;); clipboard. ">
+第三次报错：.tooltip() is not a function # 在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：
+var clipboard = new ClipboardJS(&#39;. ">
 <link rel="canonical" href="https://fanrongbin.com/clipboard-js-errors/" />
 
 
 
 
 
-      <link rel="stylesheet" href="/css/main.min.1018fb313d8d5b60d9677c6aa69f44199a8df2608aab13b6e1137998abe7cf1e.css" integrity="sha256-EBj7MT2NW2DZZ3xqpp9EGZqN8mCKqxO24RN5mKvnzx4=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.6b89d997d608e8b2511eaa5c3508c6a6c823cb406ffe8320c3de5efe0ab7ccaf.css" integrity="sha256-a4nZl9YI6LJRHqpcNQjGpsgjy0Bv/oMgw95e/gq3zK8=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -42,7 +42,10 @@ var clipboard = new ClipboardJS(&#39;.btn&#39;); clipboard. ">
     
 
   <div class="top-scroll-bar"></div>
-<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
+<div class="addn">
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
+</div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -67,18 +70,30 @@ var clipboard = new ClipboardJS(&#39;.btn&#39;); clipboard. ">
 
   <p>在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。
 我的组合是：Bootstrap（CSS 框架）+ Clipboard.js</p>
-<h2 id="第一次报错uncaught-typeerror-illegal-constructor">第一次报错：Uncaught TypeError: Illegal constructor</h2>
+<h2 id="第一次报错uncaught-typeerror-illegal-constructor">
+第一次报错：Uncaught TypeError: Illegal constructor
+<a href="#%e7%ac%ac%e4%b8%80%e6%ac%a1%e6%8a%a5%e9%94%99uncaught-typeerror-illegal-constructor" class="heading-anchor">#</a>
+</h2>
 <pre tabindex="0"><code>new Clipboard(&#39;.btn&#39;);
 </code></pre><p>一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：</p>
 <pre tabindex="0"><code>new ClipboardJS(&#39;.btn&#39;);
 </code></pre><p>问题解决。一开始所参照的中文教程比较久远，语句更新为 <code>ClipboardJS</code>。</p>
-<h2 id="第二次报错uncaught-typeerror-cannot-read-property-addeventlistener-of-null">第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null</h2>
+<h2 id="第二次报错uncaught-typeerror-cannot-read-property-addeventlistener-of-null">
+第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null
+<a href="#%e7%ac%ac%e4%ba%8c%e6%ac%a1%e6%8a%a5%e9%94%99uncaught-typeerror-cannot-read-property-addeventlistener-of-null" class="heading-anchor">#</a>
+</h2>
 <pre tabindex="0"><code>var clipboard = new ClipboardJS(&#39;.btn&#39;);
 </code></pre><p>该语句是为了使用 DOM 选择器。</p>
-<h3 id="为什么在这里要使用-dom-选择器dom-selector">为什么在这里要使用 DOM 选择器(DOM SELECTOR)</h3>
+<h3 id="为什么在这里要使用-dom-选择器dom-selector">
+为什么在这里要使用 DOM 选择器(DOM SELECTOR)
+<a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%9c%a8%e8%bf%99%e9%87%8c%e8%a6%81%e4%bd%bf%e7%94%a8-dom-%e9%80%89%e6%8b%a9%e5%99%a8dom-selector" class="heading-anchor">#</a>
+</h3>
 <p>为了在页面上快速找到引号内（在此为<code>.btn</code>）元素，然后进行下一步。报错原因：调用 JavaScript 时，DOM 选择器还没有渲染完。反映为在使用 DOM 选择器时，没找到或没找完该元素。在我的页面中，因为一开始把<code>&lt;script&gt;&lt;/script&gt;</code>都放在<code>&lt;head&gt;</code>标签之内，所以在<code>&lt;body&gt;</code>没渲染之前就加载了 DOM 选择器，当然什么都找不到了。</p>
 <p>问题解决：把该段 JS 放到到本来调用 Clipboard.js 那一段之后。</p>
-<h2 id="第三次报错tooltip-is-not-a-function">第三次报错：.tooltip() is not a function</h2>
+<h2 id="第三次报错tooltip-is-not-a-function">
+第三次报错：.tooltip() is not a function
+<a href="#%e7%ac%ac%e4%b8%89%e6%ac%a1%e6%8a%a5%e9%94%99tooltip-is-not-a-function" class="heading-anchor">#</a>
+</h2>
 <p>在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">clipboard</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ClipboardJS</span><span class="p">(</span><span class="s1">&#39;.btn&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"> 
@@ -129,12 +144,18 @@ var clipboard = new ClipboardJS(&#39;.btn&#39;); clipboard. ">
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></div><p>在对应的按钮加入标签即可。但报错找不到 tooltip 的函数。应该还是加载问题。
 问题解决：Tooltip.js 依赖 jQuery，需要先调用 jQuery 再调用 tooltip.js（也就是 bootstrap.min.js），在<code>&lt;head&gt;</code>内将调用 jquery.js 一行置于 bootstrap.min.js 之前。</p>
-<h2 id="到底学了什么">到底学了什么？</h2>
+<h2 id="到底学了什么">
+到底学了什么？
+<a href="#%e5%88%b0%e5%ba%95%e5%ad%a6%e4%ba%86%e4%bb%80%e4%b9%88" class="heading-anchor">#</a>
+</h2>
 <ol>
 <li>注意渲染顺序。</li>
 <li>注意版本更新。</li>
 </ol>
-<h2 id="参考">参考</h2>
+<h2 id="参考">
+参考
+<a href="#%e5%8f%82%e8%80%83" class="heading-anchor">#</a>
+</h2>
 <ul>
 <li><a href="https://www.liaoxuefeng.com/wiki/1022910821149312/1023023555539648">选择器 – 廖雪峰的官方网站</a></li>
 <li><a href="https://stackoverflow.com/questions/9394390/tooltip-is-not-a-function">Stack Overflow 上关于 tooltip is not a function 的讨论</a></li>
@@ -176,7 +197,45 @@ var clipboard = new ClipboardJS(&#39;.btn&#39;); clipboard. ">
 </body>
 <script src="/han.min.js"></script>
 
-<script defer src="https://hypothes.is/embed.js"></script>
+<script defer>
+    if (document.querySelector('.han-init-context')) {
+        document.getElementById('show-hypo').style.display = 'flex';
+    }
+
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+
+        if (!existingScript) {
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function(element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
 
 <script defer>
   
@@ -252,10 +311,10 @@ var clipboard = new ClipboardJS(&#39;.btn&#39;); clipboard. ">
         
         const toggleTOC = () => {
             const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+            tocContainer.style.display = isDisplayed ? 'none' : 'flex';
     
             
-            if (tocContainer.style.display === 'block') {
+            if (tocContainer.style.display === 'flex') {
                 initializeTOCFeatures();
             }
         };
@@ -313,7 +372,7 @@ var clipboard = new ClipboardJS(&#39;.btn&#39;); clipboard. ">
     
         
         if (headers.length > 1) {
-            contentsFixedDiv.style.display = 'block';
+            contentsFixedDiv.style.display = 'flex';
             
             
             contentsFixedDiv.addEventListener('click', (event) => {
@@ -323,7 +382,5 @@ var clipboard = new ClipboardJS(&#39;.btn&#39;); clipboard. ">
         }
     }
     });
-</script>    
-
-
+</script>
 </html>

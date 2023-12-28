@@ -5,14 +5,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
-    content="SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine 摘录 It took me a long time to figure out why founders don&rsquo;t listen. At first I thought it was mere stubbornness. That&rsquo;s part of the reason, but another and probably more important reason is that so much about startups is counterintuitive. And when you tell someone something counterintuitive, what it sounds to them is wrong. So the reason founders don&rsquo;t listen to us is that they don&rsquo;t believe us. ">
+    content="SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine 摘录 # It took me a long time to figure out why founders don&rsquo;t listen. At first I thought it was mere stubbornness. That&rsquo;s part of the reason, but another and probably more important reason is that so much about startups is counterintuitive. And when you tell someone something counterintuitive, what it sounds to them is wrong. So the reason founders don&rsquo;t listen to us is that they don&rsquo;t believe us. ">
 <link rel="canonical" href="https://fanrongbin.com/hybrid-4/" />
 
 
 
 
 
-      <link rel="stylesheet" href="/css/main.min.1018fb313d8d5b60d9677c6aa69f44199a8df2608aab13b6e1137998abe7cf1e.css" integrity="sha256-EBj7MT2NW2DZZ3xqpp9EGZqN8mCKqxO24RN5mKvnzx4=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.6b89d997d608e8b2511eaa5c3508c6a6c823cb406ffe8320c3de5efe0ab7ccaf.css" integrity="sha256-a4nZl9YI6LJRHqpcNQjGpsgjy0Bv/oMgw95e/gq3zK8=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -35,7 +35,10 @@
     
 
   <div class="top-scroll-bar"></div>
-<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
+<div class="addn">
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
+</div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -55,7 +58,10 @@
 <div style="align:middle;">
 <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:100% !important;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/raven/1652665077?i=1652665088&l=en"></iframe>
 </div>
-<h2 id="摘录">摘录</h2>
+<h2 id="摘录">
+摘录
+<a href="#%e6%91%98%e5%bd%95" class="heading-anchor">#</a>
+</h2>
 <blockquote>
 <p>It took me a long time to figure out why founders don&rsquo;t listen. At first I thought it was mere stubbornness. That&rsquo;s part of the reason, but another and probably more important reason is that so much about startups is <a href="http://www.paulgraham.com/before.html">counterintuitive</a>. And when you tell someone something counterintuitive, what it sounds to them is wrong. So the reason founders don&rsquo;t listen to us is that they don&rsquo;t <em>believe</em> us. At least not till experience teaches them otherwise.</p>
 </blockquote>
@@ -118,7 +124,10 @@
 <p>So I’m worried about the future of our public goods. I’m worried that the online space will fragment and degrade horizontal communities, but will never manage to fully replace them either. We need to find some way to get along with the human beings who live within physical proximity to us, even as we continue to spend much of our time online. Vertical communities must make their peace with horizontal communities…somehow.</p>
 </blockquote>
 <p><a href="https://noahpinion.substack.com/p/vertical-communities">Vertical communities - by Noah Smith - Noahpinion</a></p>
-<h2 id="其他">其他</h2>
+<h2 id="其他">
+其他
+<a href="#%e5%85%b6%e4%bb%96" class="heading-anchor">#</a>
+</h2>
 <ul>
 <li><a href="https://readwise.io/">Readwise</a> and <a href="https://readwise.io/read">Reader</a></li>
 <li><a href="https://www.snipd.com/">Snipd - Unlock the Knowledge in Podcasts</a></li>
@@ -167,7 +176,45 @@
 </body>
 <script src="/han.min.js"></script>
 
-<script defer src="https://hypothes.is/embed.js"></script>
+<script defer>
+    if (document.querySelector('.han-init-context')) {
+        document.getElementById('show-hypo').style.display = 'flex';
+    }
+
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+
+        if (!existingScript) {
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function(element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
 
 <script defer>
   
@@ -243,10 +290,10 @@
         
         const toggleTOC = () => {
             const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+            tocContainer.style.display = isDisplayed ? 'none' : 'flex';
     
             
-            if (tocContainer.style.display === 'block') {
+            if (tocContainer.style.display === 'flex') {
                 initializeTOCFeatures();
             }
         };
@@ -304,7 +351,7 @@
     
         
         if (headers.length > 1) {
-            contentsFixedDiv.style.display = 'block';
+            contentsFixedDiv.style.display = 'flex';
             
             
             contentsFixedDiv.addEventListener('click', (event) => {
@@ -314,7 +361,5 @@
         }
     }
     });
-</script>    
-
-
+</script>
 </html>

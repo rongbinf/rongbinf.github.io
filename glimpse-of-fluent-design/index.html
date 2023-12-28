@@ -6,19 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。
-宣传视频 官方网页 （无法在以中文为界面语言的 Chrome 正常浏览）| 优酷 (来自 Livesino)
-Light (光) 利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。
+宣传视频 # 官方网页 （无法在以中文为界面语言的 Chrome 正常浏览）| 优酷 (来自 Livesino)
+Light (光) # 利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。
 Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.
 引用部分是微软官方的定义。
 光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。
-Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。 ">
+Depth (深) # Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。 ">
 <link rel="canonical" href="https://fanrongbin.com/glimpse-of-fluent-design/" />
 
 
 
 
 
-      <link rel="stylesheet" href="/css/main.min.1018fb313d8d5b60d9677c6aa69f44199a8df2608aab13b6e1137998abe7cf1e.css" integrity="sha256-EBj7MT2NW2DZZ3xqpp9EGZqN8mCKqxO24RN5mKvnzx4=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.6b89d997d608e8b2511eaa5c3508c6a6c823cb406ffe8320c3de5efe0ab7ccaf.css" integrity="sha256-a4nZl9YI6LJRHqpcNQjGpsgjy0Bv/oMgw95e/gq3zK8=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -41,7 +41,10 @@ Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了
     
 
   <div class="top-scroll-bar"></div>
-<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
+<div class="addn">
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
+</div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -63,9 +66,15 @@ Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了
 
   <p>微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。</p>
 <p><img src="https://img.fanrongbin.com/m-1.webp" alt="microsoft-fluent-design-elements.png"></p>
-<h2 id="宣传视频">宣传视频</h2>
+<h2 id="宣传视频">
+宣传视频
+<a href="#%e5%ae%a3%e4%bc%a0%e8%a7%86%e9%a2%91" class="heading-anchor">#</a>
+</h2>
 <p><a href="http://fluent.microsoft.com">官方网页</a> （无法在以中文为界面语言的 Chrome 正常浏览）| <a href="http://v.youku.com/v_show/id_XMjc1ODYzMjcwMA==.html">优酷</a> (来自 Livesino)</p>
-<h2 id="light-光">Light (光)</h2>
+<h2 id="light-光">
+Light (光)
+<a href="#light-%e5%85%89" class="heading-anchor">#</a>
+</h2>
 <p><img src="https://img.fanrongbin.com/m-2.webp" alt="2040_VRG0158.jpg" title="via The Verge"></p>
 <p>利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。</p>
 <blockquote>
@@ -73,7 +82,10 @@ Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了
 </blockquote>
 <p>引用部分是微软官方的定义。</p>
 <p>光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。</p>
-<h2 id="depth-深">Depth (深)</h2>
+<h2 id="depth-深">
+Depth (深)
+<a href="#depth-%e6%b7%b1" class="heading-anchor">#</a>
+</h2>
 <p>Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。</p>
 <p><img src="https://img.fanrongbin.com/m-3.webp" alt="whatismaterial_3d_elevation1-1024x647.png" title="via Android Developers"></p>
 <p>不同高度下(Z 值)的阴影。</p>
@@ -82,19 +94,28 @@ Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了
 <p>Think about the frame that contains your information. Now break it apart, and reinvent how things relate to each other within a more layered, physical environment. This is how we’ll keep people in their flow – by giving them more space.</p>
 </blockquote>
 <p>打破原有二维框架，在层次区分度更高的物理环境（三维空间）中重新思考事物中的联系。</p>
-<h2 id="motion-动">Motion (动)</h2>
+<h2 id="motion-动">
+Motion (动)
+<a href="#motion-%e5%8a%a8" class="heading-anchor">#</a>
+</h2>
 <p><img src="https://img.fanrongbin.com/m-4.webp" alt="2040_VRG0159.jpg" title="via The Verge"></p>
 <blockquote>
 <p>Think of motion design like a movie. Seamless transitions keep you focused on the story, and bring experiences to life. We can invite that feeling into our designs, leading people from one task to the next with cinematic ease.</p>
 </blockquote>
 <p>微软认为，动效的作用在于带给用户如同观看电影般的沉浸感，做到无缝过渡、由虚转实，使用户轻松、愉快地完成多项任务。在我看来，动效一词需要分真假。「真动效」无限接近生活，能够唤起用户对物理环境下该操作引起动效的感知，因此也可叫「拟物动效」。「假动效」即对二维动画进行空间上的拓展，主要作用是提示用户完成了某一操作，并且能通过细节优化给予愉悦感。</p>
-<h2 id="material-材">Material (材)</h2>
+<h2 id="material-材">
+Material (材)
+<a href="#material-%e6%9d%90" class="heading-anchor">#</a>
+</h2>
 <p><img src="https://img.fanrongbin.com/m-5.webp" alt="2040_VRG0160.jpg" title="via The Verge"></p>
 <blockquote>
 <p>The things that surround us in the real world are sensory and invigorating. They bend, stretch, bounce, shatter, and glide. Those material qualities translate to digital environments, making people want to reach out and touch our designs.</p>
 </blockquote>
 <p>真实世界中存在着「感知」和「活力」。在数字环境中运用恰当的材料，带给用户想去触碰的想法，增加了操作的可能性，是和 Light 一样体现着以自然为设计基础的理念。</p>
-<h2 id="scale-维">Scale (维)</h2>
+<h2 id="scale-维">
+Scale (维)
+<a href="#scale-%e7%bb%b4" class="heading-anchor">#</a>
+</h2>
 <p><img src="https://img.fanrongbin.com/m-6.webp" alt="2040_VRG0161.jpg" title="via The Verge"></p>
 <blockquote>
 <p>The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.</p>
@@ -131,7 +152,45 @@ Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了
 </body>
 <script src="/han.min.js"></script>
 
-<script defer src="https://hypothes.is/embed.js"></script>
+<script defer>
+    if (document.querySelector('.han-init-context')) {
+        document.getElementById('show-hypo').style.display = 'flex';
+    }
+
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+
+        if (!existingScript) {
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function(element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
 
 <script defer>
   
@@ -207,10 +266,10 @@ Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了
         
         const toggleTOC = () => {
             const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+            tocContainer.style.display = isDisplayed ? 'none' : 'flex';
     
             
-            if (tocContainer.style.display === 'block') {
+            if (tocContainer.style.display === 'flex') {
                 initializeTOCFeatures();
             }
         };
@@ -268,7 +327,7 @@ Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了
     
         
         if (headers.length > 1) {
-            contentsFixedDiv.style.display = 'block';
+            contentsFixedDiv.style.display = 'flex';
             
             
             contentsFixedDiv.addEventListener('click', (event) => {
@@ -278,7 +337,5 @@ Depth (深) Material Design 为 UI 元素引入高度。高度将帮助用户了
         }
     }
     });
-</script>    
-
-
+</script>
 </html>

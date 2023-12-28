@@ -9,9 +9,9 @@
 汉字标准格式
 首先要引入两个源文件：han.min.css与han.min.js，最简便的方式，可以通过CDN或直接下载后（访问两条代码中的对应链接，另存至本地）放入Hugo博客系统下的/static文件夹中。建议使用后者，以方便我们在本地调整样式上的冲突。
 这两种方式，都需要在HTML对应处汇入。为了让Hugo在生成页面时自动汇入，以我所使用的hugo-tufte主题为例：
-1. 添加han.min.css 修改/themes/hugo-tufte主题文件夹内的/layouts/partials/header.includes.html（核心即找到/layouts中哪个.html对应&lt;head&gt;的生成），在末尾对应加入：
-&lt;link rel=&#34;stylesheet&#34; media=&#34;all&#34; href=&#34;//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css&#34;&gt; &lt;!-- 如果使用 CDN，直接复制官网给出的那条 link rel... --&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;/han.min.css&#34;&gt; &lt;!-- 如果为本地汇入 --&gt; 2. 添加han.min.js 在/layouts/_default/baseof.html中&lt;/body&gt;到&lt;/html&gt;的中间，对应加入：
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.js&#34;&gt;&lt;/script&gt; &lt;!-- 如果使用 CDN，直接复制官网给出的那条 link rel... --&gt; &lt;script src=&#34;/han.min.js&#34;&gt;&lt;/script&gt; &lt;!-- 如果为本地汇入 --&gt; 3. 启动脚本渲染 如果你只希望对于文章内容进行渲染，不影响菜单栏等，在/layouts/_default/single.html中找到对应你文章内容部分的label，如&lt;article id=&quot;main&quot;&gt;，加入class=&quot;han-init-context&quot;属性即可。
+1. 添加han.min.css # 修改/themes/hugo-tufte主题文件夹内的/layouts/partials/header.includes.html（核心即找到/layouts中哪个.html对应&lt;head&gt;的生成），在末尾对应加入：
+&lt;link rel=&#34;stylesheet&#34; media=&#34;all&#34; href=&#34;//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css&#34;&gt; &lt;!-- 如果使用 CDN，直接复制官网给出的那条 link rel... --&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;/han.min.css&#34;&gt; &lt;!-- 如果为本地汇入 --&gt; 2. 添加han.min.js # 在/layouts/_default/baseof.html中&lt;/body&gt;到&lt;/html&gt;的中间，对应加入：
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.js&#34;&gt;&lt;/script&gt; &lt;!-- 如果使用 CDN，直接复制官网给出的那条 link rel... --&gt; &lt;script src=&#34;/han.min.js&#34;&gt;&lt;/script&gt; &lt;!-- 如果为本地汇入 --&gt; 3. 启动脚本渲染 # 如果你只希望对于文章内容进行渲染，不影响菜单栏等，在/layouts/_default/single.html中找到对应你文章内容部分的label，如&lt;article id=&quot;main&quot;&gt;，加入class=&quot;han-init-context&quot;属性即可。
 到此我们已完成两个文件的汇入和启动渲染，hugo server查看，大部分情况下你会发现页面许多处的错乱，以及原&lt;em&gt;的强调样式变成了陌生的着重号等。同时，你也会惊讶地发现在中英文混排时，中英文之间自动加上了间距，且标点符号的显示有明显的优化。
 接下来，你需要根据自身需要调整han.min.css或override冲突的地方，这是我们最关键的工作。css文件下载下来是没有缩进的，你可以通过一些工具标准化，看得会清楚一点。 一般来说，解决冲突最方便的方式是：哪里看不顺眼就注释掉哪里。 ">
 <link rel="canonical" href="https://fanrongbin.com/hugo-hanzi-pro/" />
@@ -20,7 +20,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.1018fb313d8d5b60d9677c6aa69f44199a8df2608aab13b6e1137998abe7cf1e.css" integrity="sha256-EBj7MT2NW2DZZ3xqpp9EGZqN8mCKqxO24RN5mKvnzx4=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.6b89d997d608e8b2511eaa5c3508c6a6c823cb406ffe8320c3de5efe0ab7ccaf.css" integrity="sha256-a4nZl9YI6LJRHqpcNQjGpsgjy0Bv/oMgw95e/gq3zK8=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -43,7 +43,10 @@
     
 
   <div class="top-scroll-bar"></div>
-<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
+<div class="addn">
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
+</div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -79,19 +82,28 @@
 </blockquote>
 <p>首先要引入两个源文件：<code>han.min.css</code>与<code>han.min.js</code>，最简便的方式，可以通过<a href="https://hanzi.pro/manual/anzhuang_yu_qiyong#cdn">CDN</a>或直接下载后（访问两条代码中的对应链接，另存至本地）放入Hugo博客系统下的<code>/static</code>文件夹中。建议使用后者，以方便我们在本地调整样式上的冲突。</p>
 <p>这两种方式，都需要在HTML对应处汇入。为了让Hugo在生成页面时自动汇入，以我所使用的<code>hugo-tufte</code>主题为例：</p>
-<h2 id="1-添加hanmincss">1. 添加<code>han.min.css</code></h2>
+<h2 id="1-添加hanmincss">
+1. 添加<code>han.min.css</code>
+<a href="#1-%e6%b7%bb%e5%8a%a0hanmincss" class="heading-anchor">#</a>
+</h2>
 <p>修改<code>/themes/hugo-tufte</code>主题文件夹内的<code>/layouts/partials/header.includes.html</code>（核心即找到<code>/layouts</code>中哪个<code>.html</code>对应<code>&lt;head&gt;</code>的生成），在末尾对应加入：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">media</span><span class="o">=</span><span class="s">&#34;all&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 如果使用 CDN，直接复制官网给出的那条 link rel... --&gt;</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/han.min.css&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 如果为本地汇入 --&gt;</span>
-</span></span></code></pre></div><h2 id="2-添加hanminjs">2. 添加<code>han.min.js</code></h2>
+</span></span></code></pre></div><h2 id="2-添加hanminjs">
+2. 添加<code>han.min.js</code>
+<a href="#2-%e6%b7%bb%e5%8a%a0hanminjs" class="heading-anchor">#</a>
+</h2>
 <p>在<code>/layouts/_default/baseof.html</code>中<code>&lt;/body&gt;</code>到<code>&lt;/html&gt;</code>的中间，对应加入：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 如果使用 CDN，直接复制官网给出的那条 link rel... --&gt;</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/han.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 如果为本地汇入 --&gt;</span>
-</span></span></code></pre></div><h2 id="3-启动脚本渲染">3. 启动脚本渲染</h2>
+</span></span></code></pre></div><h2 id="3-启动脚本渲染">
+3. 启动脚本渲染
+<a href="#3-%e5%90%af%e5%8a%a8%e8%84%9a%e6%9c%ac%e6%b8%b2%e6%9f%93" class="heading-anchor">#</a>
+</h2>
 <p>如果你只希望对于文章内容进行渲染，不影响菜单栏等，在<code>/layouts/_default/single.html</code>中找到对应你文章内容部分的<code>label</code>，如<code>&lt;article id=&quot;main&quot;&gt;</code>，加入<code>class=&quot;han-init-context&quot;</code>属性即可。</p>
 <p>到此我们已完成两个文件的汇入和启动渲染，<code>hugo server</code>查看，大部分情况下你会发现页面许多处的错乱，以及原<code>&lt;em&gt;</code>的强调样式变成了陌生的着重号等。同时，你也会惊讶地发现在中英文混排时，中英文之间自动加上了间距，且标点符号的显示有明显的优化。</p>
 <p>接下来，你需要根据自身需要调整<code>han.min.css</code>或override冲突的地方，这是我们最关键的工作。<code>css</code>文件下载下来是没有缩进的，你可以通过一些工具标准化，看得会清楚一点。 一般来说，解决冲突最方便的方式是：哪里看不顺眼就<strong>注释</strong>掉哪里。</p>
@@ -132,7 +144,45 @@
 </body>
 <script src="/han.min.js"></script>
 
-<script defer src="https://hypothes.is/embed.js"></script>
+<script defer>
+    if (document.querySelector('.han-init-context')) {
+        document.getElementById('show-hypo').style.display = 'flex';
+    }
+
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+
+        if (!existingScript) {
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function(element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
 
 <script defer>
   
@@ -208,10 +258,10 @@
         
         const toggleTOC = () => {
             const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+            tocContainer.style.display = isDisplayed ? 'none' : 'flex';
     
             
-            if (tocContainer.style.display === 'block') {
+            if (tocContainer.style.display === 'flex') {
                 initializeTOCFeatures();
             }
         };
@@ -269,7 +319,7 @@
     
         
         if (headers.length > 1) {
-            contentsFixedDiv.style.display = 'block';
+            contentsFixedDiv.style.display = 'flex';
             
             
             contentsFixedDiv.addEventListener('click', (event) => {
@@ -279,7 +329,5 @@
         }
     }
     });
-</script>    
-
-
+</script>
 </html>

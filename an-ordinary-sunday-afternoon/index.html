@@ -12,7 +12,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.1018fb313d8d5b60d9677c6aa69f44199a8df2608aab13b6e1137998abe7cf1e.css" integrity="sha256-EBj7MT2NW2DZZ3xqpp9EGZqN8mCKqxO24RN5mKvnzx4=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.6b89d997d608e8b2511eaa5c3508c6a6c823cb406ffe8320c3de5efe0ab7ccaf.css" integrity="sha256-a4nZl9YI6LJRHqpcNQjGpsgjy0Bv/oMgw95e/gq3zK8=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -35,7 +35,10 @@
     
 
   <div class="top-scroll-bar"></div>
-<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
+<div class="addn">
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
+</div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents"></nav>
 </div>
@@ -84,7 +87,45 @@
 </body>
 <script src="/han.min.js"></script>
 
-<script defer src="https://hypothes.is/embed.js"></script>
+<script defer>
+    if (document.querySelector('.han-init-context')) {
+        document.getElementById('show-hypo').style.display = 'flex';
+    }
+
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+
+        if (!existingScript) {
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function(element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
 
 <script defer>
   
@@ -160,10 +201,10 @@
         
         const toggleTOC = () => {
             const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+            tocContainer.style.display = isDisplayed ? 'none' : 'flex';
     
             
-            if (tocContainer.style.display === 'block') {
+            if (tocContainer.style.display === 'flex') {
                 initializeTOCFeatures();
             }
         };
@@ -221,7 +262,7 @@
     
         
         if (headers.length > 1) {
-            contentsFixedDiv.style.display = 'block';
+            contentsFixedDiv.style.display = 'flex';
             
             
             contentsFixedDiv.addEventListener('click', (event) => {
@@ -231,7 +272,5 @@
         }
     }
     });
-</script>    
-
-
+</script>
 </html>

@@ -7,16 +7,16 @@
 <meta name="description"
     content="内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。
 使用默认 UI 字体可以通过两种方式实现：
-非常用方法 .caption { font: caption; } 不是很常见，即使 CSS 文档里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。
+非常用方法 # .caption { font: caption; } 不是很常见，即使 CSS 文档里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。
 使用这种方法会导致几个常见问题：
-在 iOS 设备和众多 Android 浏览器上无法返回正确的字体。 截止至 2015 年 12 月，仍无法在 Mac OS X 上的 Firefox 上支持 “smart” properties of San Francisco。（指能在 San Francisco Text 和 San Francisco Display 中根据实际情况（大于 20px）切换，并更改字间距。） 完全和系统相关控件一致，无法再自定义变更字体大小、粗细等。 常用方法 html[lang^=&#34;en-&#34;] body { font-family: /* 1 */ -apple-system, BlinkMacSystemFont, /* 2 */ &#34;Segoe UI&#34;, &#34;Roboto&#34;, &#34;Oxygen&#34;, &#34;Ubuntu&#34;, &#34;Cantarell&#34;, &#34;Fira Sans&#34;, &#34;Droid Sans&#34;, /* 3 */ &#34;Helvetica Neue&#34;, sans-serif; } 以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题： ">
+在 iOS 设备和众多 Android 浏览器上无法返回正确的字体。 截止至 2015 年 12 月，仍无法在 Mac OS X 上的 Firefox 上支持 “smart” properties of San Francisco。（指能在 San Francisco Text 和 San Francisco Display 中根据实际情况（大于 20px）切换，并更改字间距。） 完全和系统相关控件一致，无法再自定义变更字体大小、粗细等。 常用方法 # html[lang^=&#34;en-&#34;] body { font-family: /* 1 */ -apple-system, BlinkMacSystemFont, /* 2 */ &#34;Segoe UI&#34;, &#34;Roboto&#34;, &#34;Oxygen&#34;, &#34;Ubuntu&#34;, &#34;Cantarell&#34;, &#34;Fira Sans&#34;, &#34;Droid Sans&#34;, /* 3 */ &#34;Helvetica Neue&#34;, sans-serif; } 以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题： ">
 <link rel="canonical" href="https://fanrongbin.com/using-default-fonts-in-web-design/" />
 
 
 
 
 
-      <link rel="stylesheet" href="/css/main.min.1018fb313d8d5b60d9677c6aa69f44199a8df2608aab13b6e1137998abe7cf1e.css" integrity="sha256-EBj7MT2NW2DZZ3xqpp9EGZqN8mCKqxO24RN5mKvnzx4=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.6b89d997d608e8b2511eaa5c3508c6a6c823cb406ffe8320c3de5efe0ab7ccaf.css" integrity="sha256-a4nZl9YI6LJRHqpcNQjGpsgjy0Bv/oMgw95e/gq3zK8=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -39,7 +39,10 @@
     
 
   <div class="top-scroll-bar"></div>
-<a onclick="toggleContents()" style="color:var(--textColor)"><div id="contents-fixed" class="no-select">contents</div></a>
+<div class="addn">
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
+</div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
   <ul>
@@ -64,7 +67,10 @@
 
   <p>内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。</p>
 <p>使用默认 UI 字体可以通过两种方式实现：</p>
-<h2 id="非常用方法">非常用方法</h2>
+<h2 id="非常用方法">
+非常用方法
+<a href="#%e9%9d%9e%e5%b8%b8%e7%94%a8%e6%96%b9%e6%b3%95" class="heading-anchor">#</a>
+</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">caption</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">font</span><span class="p">:</span> <span class="n">caption</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -75,7 +81,10 @@
 <li>截止至 2015 年 12 月，仍无法在 Mac OS X 上的 Firefox 上支持 “smart” properties of San Francisco。（指能在 San Francisco Text 和 San Francisco Display 中根据实际情况（大于 20px）切换，并更改字间距。）</li>
 <li>完全和系统相关控件一致，无法再自定义变更字体大小、粗细等。</li>
 </ul>
-<h2 id="常用方法">常用方法</h2>
+<h2 id="常用方法">
+常用方法
+<a href="#%e5%b8%b8%e7%94%a8%e6%96%b9%e6%b3%95" class="heading-anchor">#</a>
+</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;en-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="c">/* 1 */</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span>
@@ -89,14 +98,23 @@
 <li>若用户所用系统有比默认 UI 字体排序更前的字体（例如一个 Android 开发者在 Windows 上安装了 Roboto），则声明的是排序更前的字体（显示 Segoe UI 而并非 Roboto）。</li>
 <li>命名冲突（例如 Oxygen）</li>
 </ul>
-<h3 id="细节">细节</h3>
-<h4 id="-1--macos">/* 1 */ macOS</h4>
+<h3 id="细节">
+细节
+<a href="#%e7%bb%86%e8%8a%82" class="heading-anchor">#</a>
+</h3>
+<h4 id="-1--macos">
+/* 1 */ macOS
+<a href="#-1--macos" class="heading-anchor">#</a>
+</h4>
 <ul>
 <li>-apple-system 在最新版本的 macOS 上使用 San Francisco，旧版本则使用 Helvetica Neue 或 Lucida Grande。支持 “smart” properties of San Francisco。</li>
 <li>BlinkMacSystemFont 用于 macOS 上的 Chrome。
 （San Francisco 在 macOS 上 Firefox 浏览器中的字间距比 Safari 和 Chrome 都更小。）</li>
 </ul>
-<h4 id="-2--其他系统">/* 2 */ 其他系统</h4>
+<h4 id="-2--其他系统">
+/* 2 */ 其他系统
+<a href="#-2--%e5%85%b6%e4%bb%96%e7%b3%bb%e7%bb%9f" class="heading-anchor">#</a>
+</h4>
 <ul>
 <li>Segoe UI 面向 Windows 及 Windows Phone/Windows 10 Mobile。</li>
 <li>Roboto 面向 Android 和较新版本的 Chrome OS。</li>
@@ -106,12 +124,18 @@
 <li>Fira Sans 面向 Firefox OS。</li>
 <li>Droid Sans 面向较旧版本的 Android。</li>
 </ul>
-<h4 id="-3--备用字体">/* 3 */ 备用字体</h4>
+<h4 id="-3--备用字体">
+/* 3 */ 备用字体
+<a href="#-3--%e5%a4%87%e7%94%a8%e5%ad%97%e4%bd%93" class="heading-anchor">#</a>
+</h4>
 <ul>
 <li>Helvetica Neue 因为这很经典（雾）。</li>
 <li>sans-serif 因为这很默认（大雾）。</li>
 </ul>
-<h3 id="包括中文字体的解决方法">包括中文字体的解决方法</h3>
+<h3 id="包括中文字体的解决方法">
+包括中文字体的解决方法
+<a href="#%e5%8c%85%e6%8b%ac%e4%b8%ad%e6%96%87%e5%ad%97%e4%bd%93%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95" class="heading-anchor">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">html</span><span class="o">[</span><span class="nt">lang</span><span class="o">^=</span><span class="s2">&#34;zh-&#34;</span><span class="o">]</span> <span class="nt">body</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="n">system</span><span class="p">,</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span><span class="s2">&#34;PingFang SC&#34;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span> <span class="s2">&#34;Microsoft YaHei UI&#34;</span><span class="p">,</span> 
@@ -121,7 +145,10 @@
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;Cantarell&#34;</span><span class="p">,</span> <span class="s2">&#34;Fira Sans&#34;</span><span class="p">,</span> <span class="s2">&#34;Droid Sans&#34;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h4 id="细节-1">细节</h4>
+</span></span></code></pre></div><h4 id="细节-1">
+细节
+<a href="#%e7%bb%86%e8%8a%82-1" class="heading-anchor">#</a>
+</h4>
 <ul>
 <li>PingFang SC 即「苹方」，面向最新 macOS。</li>
 <li>Microsoft YaHei UI 即「微软雅黑」，面向较新版本 Windows。</li>
@@ -129,7 +156,10 @@
 <li>wenquanyi micro hei 即「文泉驛微米黑」，面向较旧版本 Android 和多数 Linux。</li>
 <li>Hiragino Sans GB (W3) 即「冬青黑体」，能够给网页浏览带来较好体验。</li>
 </ul>
-<h2 id="关于苹方">关于「苹方」</h2>
+<h2 id="关于苹方">
+关于「苹方」
+<a href="#%e5%85%b3%e4%ba%8e%e8%8b%b9%e6%96%b9" class="heading-anchor">#</a>
+</h2>
 <p>「苹方」有不同的字重可供选择，可以直接使用。（没有 Bold 我很服气）</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">some-element</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang SC ExtraLight&#34;</span><span class="p">;</span> <span class="c">/* 或者 &#34;PingFang SC Thin&#34; */</span>
@@ -179,7 +209,10 @@
 </span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;PingFang-SC&#34;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h2 id="参考文章">参考文章</h2>
+</span></span></code></pre></div><h2 id="参考文章">
+参考文章
+<a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="heading-anchor">#</a>
+</h2>
 <ol>
 <li><cite lang="en"><a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">Using System UI Fonts In Web Design: A Quick Practical Guide</a></cite>, Marcin Wichary, 2015</li>
 <li><a href="https://csspod.com/using-the-system-font-in-web-content/">在 Web 内容中使用系统字体</a>，minwe，2016</li>
@@ -215,7 +248,45 @@
 </body>
 <script src="/han.min.js"></script>
 
-<script defer src="https://hypothes.is/embed.js"></script>
+<script defer>
+    if (document.querySelector('.han-init-context')) {
+        document.getElementById('show-hypo').style.display = 'flex';
+    }
+
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+
+        if (!existingScript) {
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function(element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
 
 <script defer>
   
@@ -291,10 +362,10 @@
         
         const toggleTOC = () => {
             const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-            tocContainer.style.display = isDisplayed ? 'none' : 'block';
+            tocContainer.style.display = isDisplayed ? 'none' : 'flex';
     
             
-            if (tocContainer.style.display === 'block') {
+            if (tocContainer.style.display === 'flex') {
                 initializeTOCFeatures();
             }
         };
@@ -352,7 +423,7 @@
     
         
         if (headers.length > 1) {
-            contentsFixedDiv.style.display = 'block';
+            contentsFixedDiv.style.display = 'flex';
             
             
             contentsFixedDiv.addEventListener('click', (event) => {
@@ -362,7 +433,5 @@
         }
     }
     });
-</script>    
-
-
+</script>
 </html>
