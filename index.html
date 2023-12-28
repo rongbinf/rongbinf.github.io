@@ -703,7 +703,7 @@
       <a href="#home">Rongbin FAN</a>
     </h1>
     <nav>
-      <a href="#hello">Hello</a>
+      <a id="nav-hello" href="#hello">Hello</a>
       <a href="/posts">Blog</a>
       <a href="/links">Guestbook</a>
       
@@ -1033,21 +1033,47 @@
 
 </body>
 
-
 <script>
-  var clipboard = new ClipboardJS('.btn');
+  document.addEventListener('DOMContentLoaded', function () {
+      function updateLinkStyleBasedOnHash() {
+          var link = document.getElementById('nav-hello');
+          if (window.location.hash === '#hello') {
+              link.style.fontWeight = 'bold';
 
-  clipboard.on('success', function (e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    console.info('Trigger:', e.trigger);
+              loadClipboardScript();
+          } else {
+              link.style.fontWeight = 'normal';
+          }
+      }
 
-    e.clearSelection();
-  });
+      function loadClipboardScript() {
+          if (!document.getElementById('clipboard-script')) {
+              var script = document.createElement('script');
+              script.id = 'clipboard-script';
+              script.src = '/clipboard.min.js';
+              document.body.appendChild(script);
 
-  clipboard.on('error', function (e) {
-    console.error('Action:', e.action);
-    console.error('Trigger:', e.trigger);
+              script.onload = function() {
+                  var clipboard = new ClipboardJS('.btn');
+
+                  clipboard.on('success', function (e) {
+                      console.info('Action:', e.action);
+                      console.info('Text:', e.text);
+                      console.info('Trigger:', e.trigger);
+
+                      e.clearSelection();
+                  });
+
+                  clipboard.on('error', function (e) {
+                      console.error('Action:', e.action);
+                      console.error('Trigger:', e.trigger);
+                  });
+              };
+          }
+      }
+
+      updateLinkStyleBasedOnHash();
+      window.addEventListener('hashchange', updateLinkStyleBasedOnHash);
   });
 </script>
 
