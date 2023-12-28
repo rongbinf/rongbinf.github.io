@@ -142,17 +142,32 @@ plt.GridSpec(2, 1, wspace=.25, hspace=.25) ax1 = plt.subplot(grid[0,0:1]) ax1. "
     }
 
     function showHypo() {
-        var existingScript = document.getElementById('hypothes-script');
+    var existingScript = document.getElementById('hypothes-script');
+    var button = document.querySelector('#show-hypo a');
 
-        if (!existingScript) {
-            var script = document.createElement('script');
-            script.id = 'hypothes-script';
-            script.src = 'https://hypothes.is/embed.js';
-            document.body.appendChild(script);
-        } else {
-            toggleHypothesisElementsVisibility();
-        }
+    if (!existingScript) {
+        button.textContent = 'Loading';
+
+        var script = document.createElement('script');
+        script.id = 'hypothes-script';
+        script.src = 'https://hypothes.is/embed.js';
+
+        script.onload = () => {
+            button.textContent = 'Hypothes.is';
+        };
+
+        script.onerror = () => {
+            button.style.color = 'red';
+            button.textContent = 'Failed';
+        };
+
+        document.body.appendChild(script);
+    } else {
+        toggleHypothesisElementsVisibility();
+        button.style.color = 'initial';
     }
+}
+
 
     function toggleHypothesisElementsVisibility() {
         const elementsToToggle = [
