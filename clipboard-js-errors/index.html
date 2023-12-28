@@ -206,6 +206,8 @@ var clipboard = new ClipboardJS(&#39;. ">
         applyBreakAllClass();
 
         handleScrollEvents();
+
+        initializeTOCFeatures();
     });
 
     window.addEventListener('scroll', throttle(handleScrollEvents, 250), false);

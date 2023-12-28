@@ -153,6 +153,8 @@
         applyBreakAllClass();
 
         handleScrollEvents();
+
+        initializeTOCFeatures();
     });
 
     window.addEventListener('scroll', throttle(handleScrollEvents, 250), false);

@@ -409,6 +409,8 @@ Hexo 的文件结构
         applyBreakAllClass();
 
         handleScrollEvents();
+
+        initializeTOCFeatures();
     });
 
     window.addEventListener('scroll', throttle(handleScrollEvents, 250), false);
