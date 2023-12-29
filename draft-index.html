@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.121.1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -61,11 +60,11 @@
     padding: 0;
     box-sizing: border-box;
 
-     
+    /* Color scheme */
 
     --textcolor: #121212;
     --bgcolor: #fff;
-    --highlight: #009ba0;
+    --highlight: #006ec5;
 
   }
 
@@ -73,7 +72,7 @@
     * {
       --textcolor: #dadada;
       --bgcolor: #141414;
-      --highlight: #009ba0;
+      --highlight: #006ec5;
     }
   }
 
@@ -120,16 +119,16 @@
     background: var(--bgcolor);
     position: relative;
     max-width: 64em;
-     
+    /* remove this for a full-width layout */
     margin: 0 auto;
-     
+    /* centers the layout */
   }
 
-   
+  /* ------- Sections ------- */
 
   section {
     padding: calc(6em + 5vw) 5vw 8vw 5vw;
-     
+    /* ! Everything below is needed ! */
     display: none;
     position: absolute;
     top: 0;
@@ -139,16 +138,16 @@
   }
 
   section:target {
-     
+    /* Show section */
     display: block;
   }
 
   section#home {
-     
+    /* Show #home by default */
     display: block;
   }
 
-   
+  /* ------- Header ------- */
 
   header {
     padding: 5vw 5vw 0 5vw;
@@ -162,7 +161,7 @@
   header h1 {
     font-size: 1em;
     flex: 1;
-     
+    /* pushes nav to the right */
     white-space: nowrap;
     padding: 0 5vw .5em 0;
   }
@@ -171,7 +170,7 @@
     margin-right: 1.5vw;
   }
 
-   
+  /* ------- General ------- */
 
   a {
     text-decoration: none;
@@ -200,7 +199,7 @@
   ol,
   article {
     max-width: 60ch;
-     
+    /* Limit line-length to 60 characters */
     margin-bottom: 1em;
   }
 
@@ -293,7 +292,7 @@
 
   pre,
   textarea {
-     
+    /* for code samples */
     font-size: .9em;
     color: inherit;
     line-height: inherit;
@@ -309,7 +308,7 @@
     box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .2), inset -1px -1px 0 rgba(0, 0, 0, .04);
   }
 
-   
+  /* Inline footnotes */
 
   label {
     cursor: pointer;
@@ -342,7 +341,7 @@
     ;
   }
 
-   
+  /* Figures */
 
   figure {
     margin: 2em 0 1.5em 0;
@@ -354,12 +353,12 @@
     opacity: .7;
   }
 
-   
+  /* Responsive video embeds */
 
   figure.video {
     position: relative;
     padding-bottom: 56.25%;
-     
+    /* 16:9 */
     height: 0;
     overflow: hidden;
   }
@@ -374,20 +373,20 @@
     height: 100%;
     border: 0;
     visibility: hidden;
-     
+    /* so loading="lazy" should work? */
   }
 
   section:target iframe {
     visibility: visible;
   }
 
-   
+  /* External links */
 
   a[href*="//"]:after {
     font-weight: 300;
     font-size: .85em;
     content: "\2197";
-     
+    /* top right arrow: â†— */
     color: var(--textcolor);
     opacity: .4;
   }
@@ -397,14 +396,14 @@
     opacity: 1;
   }
 
-   
+  /* File links */
 
   a:before {
     font-size: .7em;
     margin-right: .4em;
   }
 
-   
+  /* Add more filetypes here if you want */
 
   a[href$=".pdf"]:before {
     content: "PDF";
@@ -433,7 +432,7 @@
     content: "IMG";
   }
 
-   
+  /* ------- News ------- */
 
   article+article {
     margin-top: 4.5em;
@@ -451,13 +450,13 @@
     opacity: .7;
   }
 
-   
+  /* ------- Images Grid ------- */
 
   .grid {
     display: grid;
     grid-gap: 5vmin;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-     
+    /* 150px = minimum image size */
     grid-auto-flow: dense;
     padding: 2em 0;
   }
@@ -471,7 +470,7 @@
     transform: scale(.975);
   }
 
-   
+  /* For a square ratio */
   .grid a:before {
     content: "";
     display: block;
@@ -486,7 +485,7 @@
     object-fit: contain;
   }
 
-   
+  /* ------- Slideshow ------- */
 
   .slides {
     position: fixed;
@@ -510,7 +509,7 @@
 
   .slides figure img {
     max-height: 88vh;
-     
+    /* Adjust if needed */
   }
 
   .slides figure.cover {
@@ -526,7 +525,7 @@
     object-fit: cover;
   }
 
-   
+  /* ------- Lightbox ------- */
 
   .lightbox {
     display: none;
@@ -553,7 +552,7 @@
   }
 
   .lightbox:target:before {
-     
+    /* Loading spinner */
     content: "";
     height: 2em;
     width: 2em;
@@ -578,7 +577,7 @@
   }
 
   .lightbox:target:after {
-     
+    /* Ã— to close */
     content: "\00D7";
     position: fixed;
     font-size: 2em;
@@ -589,7 +588,7 @@
     z-index: 4;
   }
 
-   
+  /* ------- Smaller screens ------- */
 
   @media only screen and (max-width: 680px) {
     body {
@@ -602,10 +601,10 @@
       width: 100%;
     }
 
-     
+    /* Fix for older webkit versions */
   }
 
-   
+  /* ------- Print ------- */
 
   @media print {
 
@@ -621,7 +620,7 @@
       break-inside: avoid;
     }
 
-     
+    /* Inline footnotes */
 
     label+input+small {
       display: inline;
@@ -635,7 +634,7 @@
       content: "]";
     }
 
-     
+    /* Slides */
 
     .slides,
     .slides figure {
@@ -656,7 +655,7 @@
 
   }
 
-   
+  /* ------- Additional Custom CSS ------- */
 
   .serif {
     font-family: et-book, "Biaodian Pro Serif GB", "Numeral LF Serif", "EB Garamond", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, 楷体, cursive, serif;
@@ -667,7 +666,12 @@
     margin-bottom: 2rem;
   }
 
-   
+  /* .navbar {
+    position: sticky;
+    background-color: #fff0;
+    backdrop-filter: blur(28px);
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+  } */
 
   .footer {
     font-size: 0.8rem;
@@ -694,6 +698,19 @@
     position: relative;
     top: -0.35em;
   }
+
+  .home-sections {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .home-weilan {
+    line-height: 2;
+    text-align: center;
+    margin: 3em auto;
+  }
 </style>
 
 <body>
@@ -706,61 +723,61 @@
       <a id="nav-hello" href="#hello">Hello</a>
       <a href="/posts">Blog</a>
       <a href="/links">Guestbook</a>
-      
+      <!-- <a href="https://www.are.na/rongbin-fan/brackets-and-comma" target="_blank">Are.na</a> -->
     </nav>
   </header>
 
   <main>
 
     <section id="home">
-      <div style="display: inline-flex; align-items: flex-end; margin-bottom: 2rem;">
-        <picture>
-          <source srcset="dithered-white-10kb.webp" media="(prefers-color-scheme:dark)">
-          <img alt="avatar" src="dithered-black-10kb.webp" width="120px" height="120px" style="padding-bottom: 10px">
-        </picture>
-        <div style="flex-direction: column;">
-          <p class="serif name"><strong>Hi, I'm Rongbin.</strong> 👋<br>You can call me Ron.</p>
+
+      <div class="home-intro">
+
+        <p class="serif name">Hi, I'm Rongbin.</p>
+
+        <p>I help organisations and individuals with:</p>
+
+      </div>
+
+      <div class="home-sections">
+        <div class="biz">
+          <h2>Business</h2>
+          <p>Smart approach.</p>
+          <ul>
+            <li>Strategy</li>
+            <li>Investment Suggestion</li>
+            <li>General Consulting</li>
+          </ul>
+        </div>
+        <div class="product">
+          <h2>Product</h2>
+          <p>Know what users want.</p>
+          <ul>
+            <li>Prototype</li>
+            <li>PRD</li>
+            <li>UI / UX</li>
+          </ul>
+        </div>
+        <div class="design">
+          <h2>Design</h2>
+          <p>Tell your stories visually.</p>
+          <ul>
+            <li>Visual Identity</li>
+            <li>Prints</li>
+            <li>Web</li>
+          </ul>
         </div>
       </div>
 
-      <p>
-        I <em class="opacity-6">he/him/his</em> currently live in Beijing, and I study finance at the University of
-        International Business and Economics (UIBE). I'll be graduating in 2024.
-      </p>
-
-      <p>
-        Professionally I envision to craft strategies for businesses and individuals.
-      </p>
-
-      <p>
-        I also work freelance as a <a href="https://www.are.na/rongbin-fan/brackets-and-comma"
-          target="_blank">designer</a>, mostly graphics, printings, visual identities, and products. Big fan of ambient
-        music, tech gadgets, new technologies, and productivity tools.
-      </p>
-
-      <p style="margin-top: 2rem;">
-        Feel 200% free to reach me via methods listed on <a href="#hello" style="white-space: nowrap;">my hello
-          page</a>. Email will be the fastest.
-      </p>
-
-      <p>
-        I speak Chinese <span class="opacity-6"><em>Mandarin, Cantonese, Haklau Min</em></span>, English, Korean. Hope
-        to learn more about you and the world. 🌍
-      </p>
-
-      <p style="margin-top: 2rem;">
-        <em>I believe internet should bring us equality/equity.</em>
-      </p>
-
-      <p>
-        And I would like to introduce a non-government organisation to you: <a href="#weilan"
-          style="white-space: nowrap;">Wei Lan Library</a> (Wave Library).
-      </p>
-
+      <div class="home-weilan">
+        I believe internet should bring us equality/equity.<br>And I believe in small actions. <em class="opacity-6">What is Wei Lan Library (Wave Library)?</em><br>
+        Are you willing to, able to, imagine an alternative reality?
+      </div>
 
       <div class="footer opacity-6">
         <p>
-          <a href="#colophon">Colophon</a> | Last updated: Dec 2023 | <a href="/nov-2023.html">Previous Version</a>
+          <a href="#colophon">Colophon</a> | Last updated: Dec 2023 
+          <!-- | <a href="/nov-2023.html">Previous Version</a> -->
         </p>
         </p>
       </div>
@@ -825,7 +842,7 @@
     <section id="hello">
 
       <p class="serif name">
-        Hello!
+        Hi, I'm Rongbin.
       </p>
 
       <p>
@@ -1092,7 +1109,7 @@
   });
 </script>
 
-
+<!-- disable viewport zooming on iOS -->
 <script defer>
   window.onload = function () {
     document.addEventListener('touchstart', function (event) {
