@@ -2,7 +2,7 @@
     --sans: "Franklin Gothic", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
     --serif: Georgia, "Minion Pro", Palatino, "Adobe Garamond Pro", "Times New Roman", serif;
     --mono: monospace;
-    --arrow: Calibri, sans-serif;
+    --arrow: Calibri, Avenir, Helvetica, Arial, sans-serif;
     --bg-color: #fff;
     --link-color: #0026ff;
     --text-color: #000;
@@ -95,6 +95,21 @@ em {
     position: fixed;
 }
 
+.back {
+    grid-column: 1;
+    grid-row: 2;
+    background: var(--link-color);
+    color: #fff;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.back:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    opacity: 1;
+}
+
 .heading {
     grid-column: 2 / span 6;
     padding: 2ch 2ch 5vw 2ch;
@@ -132,7 +147,7 @@ em {
     border-top: 1px solid;
 }
 
-.nav:hover, .list:hover, .button-list-button:hover {
+.list:hover, .button-list-button:hover {
     color: #fff;
     background: var(--link-color);
 }
@@ -189,6 +204,10 @@ em {
     }
     .text {
         grid-column: 2 / span 6;
+    }
+    .back {
+        grid-column: 1 / span 6;
+        padding-left: 2ch;
     }
     .nav {
         position: relative;
