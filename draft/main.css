@@ -135,7 +135,6 @@ em {
 .nav:hover, .list:hover, .button-list-button:hover {
     color: #fff;
     background: var(--link-color);
-    opacity: 1;
 }
 
 .button-list {
