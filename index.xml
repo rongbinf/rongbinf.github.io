@@ -9,6 +9,275 @@
     <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Guestbook</title>
+      <link>https://fanrongbin.com/guestbook/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/guestbook/</guid>
+      <description>
+
+&lt;style&gt;
+	main { grid-column: 2/-1; }
+	.color { display:none; }
+	img {margin:unset;}
+	.guestbook-comment {
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+	}
+	.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0,1fr));
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+
+  .profile {
+    /* backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-blend-mode: exclusion;
+    background: rgba(255, 255, 255, 0.35); */
+    padding: 2rem;
+    /* box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.1); */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+  }
+
+  .profile:hover {
+    box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.25);
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+  }
+
+  .avatar {
+    overflow: hidden;
+    border-radius: 9999px;
+    box-shadow: 0 0 10px 1px rgb(170 170 170 / 25%);
+    background: #bcbcbc8a;
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-8831 {
+    transform: rotate(-20deg);
+    background-repeat: space;
+  }
+
+  .name-tag {
+    margin-top: 1rem;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .online {
+    height: 8px;
+    width: 8px;
+    background-color: #bbb;
+    border-radius: 9999px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .profile-tag {
+    padding: 2px;
+    border: none;
+    color: white;
+    margin-bottom: 0.5em;
+    font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+    font-size: .8rem;
+  }
+
+  .the-link {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+	@media (max-width: 1200px) {
+		.profile-grid {
+    	grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+  }
+	@media (max-width: 1000px) {
+		main {grid-column:1/-1;}
+	}
+
+  @media only screen and (max-width: 830px) {
+    .profile-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 1.5rem;
+      grid-column-gap: 1.5rem;
+    }
+
+    .profile {
+      padding: 1.5rem;
+    }
+    
+    .avatar {
+      width: 7rem;
+      height: 7rem;
+    }
+    
+    .name {
+      font-size: 1.5rem;
+    }
+    
+    .profile-tag {
+      font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 630px) {
+    .profile-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 1rem;
+      grid-column-gap: 1rem;
+    }
+
+    .profile {
+      padding: 1rem;
+    }
+  }
+&lt;/style&gt;
+
+
+
+      &lt;div class=&#34;profile-grid&#34;&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;miang&#34;&gt;
+          &lt;div class=&#34;avatar&#34;&gt;&lt;img src=&#34;https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;Miang&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #ea4c89;&#34;&gt;#anime&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://bgm.tv/anime/list/miang&#34;
+              target=&#34;_blank&#34;&gt;Bangumi&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;anzifan&#34;&gt;
+          &lt;div class=&#34;avatar&#34;&gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/38721913?v=4&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;An Zifan&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #ffe100; color: #000;&#34;&gt;#front-end&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://www.anzifan.com&#34;
+              target=&#34;_blank&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;zhheo&#34;&gt;
+          &lt;div class=&#34;avatar&#34;&gt;&lt;img src=&#34;https://bu.dusays.com/2022/12/28/63ac2812183aa.png&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;张洪Heo&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #3797ff;&#34;&gt;#tech&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://blog.zhheo.com/&#34;
+              target=&#34;_blank&#34;&gt;Blog&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;foreverlikethis&#34;&gt;
+          &lt;div class=&#34;avatar avatar-8831&#34; style=&#34;background-image: url(https://img.fanrongbin.com/foreverliketh.is.png);&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;foreverliketh.is&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #aa42ff;&#34;&gt;#creative&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://foreverliketh.is/&#34;
+              target=&#34;_blank&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;placeholder&#34;&gt;
+          &lt;div class=&#34;avatar&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;Your site&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #7e7e7e;&#34;&gt;#label&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;http://none.none&#34;
+              target=&#34;_blank&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div class=&#34;guestbook-comment&#34;&gt;
+        &lt;p&gt;
+          Leave a comment:
+        &lt;/p&gt;
+        &lt;div id=&#34;giscus&#34;&gt;
+          &lt;script id=&#34;giscus-script&#34;
+                  src=&#34;https://giscus.app/client.js&#34;
+                  data-repo=&#34;rongbinf/giscus-comment&#34;
+                  data-repo-id=&#34;R_kgDOK3UYzw&#34;
+                  data-category=&#34;Announcements&#34;
+                  data-category-id=&#34;DIC_kwDOK3UYz84Cbl2R&#34;
+                  data-mapping=&#34;title&#34;
+                  data-strict=&#34;0&#34;
+                  data-reactions-enabled=&#34;0&#34;
+                  data-emit-metadata=&#34;0&#34;
+                  data-input-position=&#34;top&#34;
+                  data-theme=&#34;https://fanrongbin.com/giscus.css&#34;
+                  data-lang=&#34;en&#34;
+                  data-loading=&#34;lazy&#34;
+                  crossorigin=&#34;anonymous&#34;
+                  async&gt;
+          &lt;/script&gt;        
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;!-- detect website status --&gt;
+&lt;script defer&gt;
+  document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+    fetch(&#39;https://website-status.fanrongbin.com&#39;)
+      .then(response =&gt; response.json())
+      .then(data =&gt; {
+        data.forEach(item =&gt; {
+          // 找到对应 URL 的链接元素
+          const link = document.querySelector(`a[href=&#34;${item.url}&#34;]`);
+          if (link) {
+            const profile = link.closest(&#39;.profile&#39;);
+            if (profile) {
+              // 获取对应的 &lt;span class=&#34;online&#34;&gt; 元素
+              const onlineIndicator = profile.querySelector(&#39;.online&#39;);
+              if (onlineIndicator) {
+                // 根据状态设置背景颜色
+                onlineIndicator.style.backgroundColor = item.status === 200 ? &#39;#00df07&#39; : &#39;red&#39;;
+              }
+
+              // 找到对应的 .the-link 按钮
+              const theLinkButton = profile.querySelector(&#39;.the-link&#39;);
+              if (theLinkButton) {
+                // 设置动画
+                theLinkButton.style.opacity = &#39;0&#39;;
+                theLinkButton.style.visibility = &#39;hidden&#39;;
+                theLinkButton.style.transition = &#39;all .2s ease-in-out&#39;;
+    
+                // 状态处理
+                if (item.status === 200) {
+                  // 显示按钮
+                  theLinkButton.style.opacity = &#39;1&#39;;
+                  theLinkButton.style.visibility = &#39;visible&#39;;
+                } else {
+                  // 显示 &#34;Offline&#34; 并隐藏链接
+                  theLinkButton.textContent = &#39;Offline&#39;;
+                  theLinkButton.removeAttribute(&#39;href&#39;);
+                  theLinkButton.style.opacity = &#39;0.5&#39;;
+                  theLinkButton.style.visibility = &#39;visible&#39;;
+                }
+              }
+            }
+          }
+        });
+      })
+      .catch(error =&gt; console.error(&#39;Error:&#39;, error));
+  });
+&lt;/script&gt;
+
+</description>
+    </item>
+    <item>
       <title>斜交策略 Oblique Strategies</title>
       <link>https://fanrongbin.com/oblique-strategies/</link>
       <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
@@ -3424,14 +3693,6 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;blockquote&gt;
 &lt;p&gt;我们所反对的碎片化阅读，指的是浮浅和无视语境的阅读。这和长短无关，和读者有没有整体性的视角有关。- &lt;a href=&#34;https://blog.yitianshijie.net/2016/07/05/what-is-fragmented-reading/&#34;&gt;李如一&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-    </item>
-    <item>
-      <title>Guestbook</title>
-      <link>https://fanrongbin.com/guestbook/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/guestbook/</guid>
-      <description>&lt;p&gt;test&lt;/p&gt;
 </description>
     </item>
   </channel>
