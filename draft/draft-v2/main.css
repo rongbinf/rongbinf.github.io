@@ -74,7 +74,7 @@ div>a:hover {
     color: #fff;
 }
 
-a[href*="//"]:after {
+/*a[href*="//"]:after {
     font-weight: 300;
     font-size: 80%;
     padding-left: 3px;
@@ -83,7 +83,7 @@ a[href*="//"]:after {
     font-family: var(--arrow);
     position: relative;
     top: -0.7ch;
-}
+}*/
 
 em {
     font-family: var(--serif);
@@ -166,6 +166,52 @@ em {
 
 .block-button-link {
     padding: 2ch;
+}
+
+/* form  */
+
+input, textarea {
+  line-height: 1.5;
+  border: 1px solid var(--text-color);
+  border-radius: 0;
+  padding: 1vw;
+}
+
+input:hover, textarea:hover {
+  outline: 5px solid var(--text-color);
+}
+
+input:focus, input:focus-visible, input:focus-within,
+textarea:focus, textarea:focus-visible, textarea:focus-within {
+  border: 0;
+  outline: 5px solid var(--link-color);
+}
+
+.form-label {
+  margin-bottom: 2ch;
+  display: flex;
+  flex-direction: column;
+  line-height: 3;
+}
+
+.button {
+  align-items: center;
+  margin-top: 5ch;
+}
+
+.button-input {
+  width: 45%;
+  background: var(--text-color);
+  color: var(--bg-color);
+  outline: none;
+  border: none;
+}
+
+.button-input:hover, .button-input:active, .button-input:focus {
+  background: var(--link-color);
+  color: #fff;
+  outline: none;
+  border: none;
 }
 
 /* responsive */
