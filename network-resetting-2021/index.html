@@ -23,7 +23,7 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
 
 
 
-      <link rel="stylesheet" href="/css/main.min.ad067227baba51865e6cf964b87660e7bbf76af9c6ad08772a61dfbd30492d67.css" integrity="sha256-rQZyJ7q6UYZebPlkuHZg57v3avnGrQh3KmHfvTBJLWc=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.59902fcc83bfcbd782caa7fa2e34b90e6b26c2374b954e674381de6f2a0b7ab3.css" integrity="sha256-WZAvzIO/y9eCyqf6LjS5DmsmwjdLlU5nQ4HebyoLerM=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -32,23 +32,22 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
 
 
 </head>
-<body>
-  <header class="navbar">
-    <span class="header-name"><a href="/">Rongbin FAN</a></span>
+<body class="han-init-context">
+  <section class="navbar">
+    <span class="header-name"><a href="/" class="header-link">Rongbin FAN</a> / <a href="/posts" class="header-link">Blog</a>
+<br><a href="/links.html" class="header-link header-guestbook">◩ Guestbook</a>
+</span>
 
-<nav>
-    <a href="/#hello">Hello</a>
-    <a href="/posts" style="font-weight: bold;">Blog</a>
-    <a href="/links">Guestbook</a>
-</nav>
-  </header>
-  <main class="han-init-context">
+
+  </section>
     
+
+<section class="content-header">
 
   <div class="top-scroll-bar"></div>
 <div class="addn visible">
-<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
-<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
 </div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
@@ -62,10 +61,19 @@ TP-LINK 易展有线回程 # 有几个需要注意的：
   <div id="single-header">
     <h1 class="content-h1">电信网关拨号改桥接 &#43; 软路由 &#43; TP-LINK 易展 Mesh 有线回程</h1>
     
-    <p class="content-time"><time datetime="2021-01-08T00:00:00&#43;00:00">January 8, 2021</time></p>
+    
+      <p class="content-time"><time datetime="2021-01-08T00:00:00&#43;00:00">08 January 2021</time></p>
+    
   </div>
 
-  <p>在<a href="https://fanrongbin.com/posts/network-resetting-2023">这篇新博文</a>中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。</p>
+</section>
+
+
+    <div class="color"></div>
+  <main>
+    
+
+<p>在<a href="https://fanrongbin.com/posts/network-resetting-2023">这篇新博文</a>中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。</p>
 <p>原先的布置：</p>
 <img src="https://i.loli.net/2021/01/07/SMAdbvcfqWgz65G.png" alt="Before" />
 <p>之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。</p>
@@ -107,14 +115,19 @@ TP-LINK 易展有线回程
 <p>右上角显示连接网线的 icon 即实现有线回程。</p>
 
 
-  <div class="footer-nav">
+
+  </main>
+  
+    
+
+<div class="footer-nav">
 
   <div class="previous-post" style="display:inline-block;">
     
     <a class="no-external" href="https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/"><span class="arrow">←</span> 树莓派实现开机自动播放 RTSP 流视频</a>
     
   </div>
-  
+
   
 
 
@@ -127,15 +140,17 @@ TP-LINK 易展有线回程
 
   <div class="next-post" style="display:inline-block;float:right;">
     
-    <a class="no-external" href="https://fanrongbin.com/winslow-homer/">Winslow Homer 温斯洛·霍默 <span class="arrow">→</span></a>
+    <a class="no-external" href="https://fanrongbin.com/winslow-homer/">Winslow Homer 温斯洛·霍默 <span
+        class="arrow">→</span></a>
     
   </div>
 
-  </div>
+</div>
 
-  </main>
+
+  
   <footer class="opacity-6">
-    <p><a href="/#colophon">Colophon</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+    <p><a href="/#colophon">Colophon</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p><p>© Rongbin FAN</p>
   </footer>
 </body>
 <script src="/han.min.js"></script>

@@ -20,7 +20,7 @@ var clipboard = new ClipboardJS(&#39;. ">
 
 
 
-      <link rel="stylesheet" href="/css/main.min.ad067227baba51865e6cf964b87660e7bbf76af9c6ad08772a61dfbd30492d67.css" integrity="sha256-rQZyJ7q6UYZebPlkuHZg57v3avnGrQh3KmHfvTBJLWc=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.59902fcc83bfcbd782caa7fa2e34b90e6b26c2374b954e674381de6f2a0b7ab3.css" integrity="sha256-WZAvzIO/y9eCyqf6LjS5DmsmwjdLlU5nQ4HebyoLerM=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -29,23 +29,22 @@ var clipboard = new ClipboardJS(&#39;. ">
 
 
 </head>
-<body>
-  <header class="navbar">
-    <span class="header-name"><a href="/">Rongbin FAN</a></span>
+<body class="han-init-context">
+  <section class="navbar">
+    <span class="header-name"><a href="/" class="header-link">Rongbin FAN</a> / <a href="/posts" class="header-link">Blog</a>
+<br><a href="/links.html" class="header-link header-guestbook">◩ Guestbook</a>
+</span>
 
-<nav>
-    <a href="/#hello">Hello</a>
-    <a href="/posts" style="font-weight: bold;">Blog</a>
-    <a href="/links">Guestbook</a>
-</nav>
-  </header>
-  <main class="han-init-context">
+
+  </section>
     
+
+<section class="content-header">
 
   <div class="top-scroll-bar"></div>
 <div class="addn visible">
-<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
-<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
 </div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
@@ -66,10 +65,19 @@ var clipboard = new ClipboardJS(&#39;. ">
   <div id="single-header">
     <h1 class="content-h1">在使用 Clipboard.js 中学一点 JavaScript</h1>
     
-    <p class="content-time"><time datetime="2020-02-06T00:00:00&#43;00:00">February 6, 2020</time></p>
+    
+      <p class="content-time"><time datetime="2020-02-06T00:00:00&#43;00:00">06 February 2020</time></p>
+    
   </div>
 
-  <p>在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。
+</section>
+
+
+    <div class="color"></div>
+  <main>
+    
+
+<p>在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。
 我的组合是：Bootstrap（CSS 框架）+ Clipboard.js</p>
 <h2 id="第一次报错uncaught-typeerror-illegal-constructor">
 第一次报错：Uncaught TypeError: Illegal constructor
@@ -163,14 +171,19 @@ var clipboard = new ClipboardJS(&#39;. ">
 </ul>
 
 
-  <div class="footer-nav">
+
+  </main>
+  
+    
+
+<div class="footer-nav">
 
   <div class="previous-post" style="display:inline-block;">
     
     <a class="no-external" href="https://fanrongbin.com/an-ordinary-sunday-afternoon/"><span class="arrow">←</span> 在一个普通的周日下午</a>
     
   </div>
-  
+
   
 
 
@@ -183,15 +196,17 @@ var clipboard = new ClipboardJS(&#39;. ">
 
   <div class="next-post" style="display:inline-block;float:right;">
     
-    <a class="no-external" href="https://fanrongbin.com/first-of-all-dont-forget/">首先是不要忘记 <span class="arrow">→</span></a>
+    <a class="no-external" href="https://fanrongbin.com/first-of-all-dont-forget/">首先是不要忘记 <span
+        class="arrow">→</span></a>
     
   </div>
 
-  </div>
+</div>
 
-  </main>
+
+  
   <footer class="opacity-6">
-    <p><a href="/#colophon">Colophon</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+    <p><a href="/#colophon">Colophon</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p><p>© Rongbin FAN</p>
   </footer>
 </body>
 <script src="/han.min.js"></script>

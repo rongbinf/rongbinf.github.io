@@ -23,7 +23,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 
 
 
-      <link rel="stylesheet" href="/css/main.min.ad067227baba51865e6cf964b87660e7bbf76af9c6ad08772a61dfbd30492d67.css" integrity="sha256-rQZyJ7q6UYZebPlkuHZg57v3avnGrQh3KmHfvTBJLWc=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.59902fcc83bfcbd782caa7fa2e34b90e6b26c2374b954e674381de6f2a0b7ab3.css" integrity="sha256-WZAvzIO/y9eCyqf6LjS5DmsmwjdLlU5nQ4HebyoLerM=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -32,23 +32,22 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 
 
 </head>
-<body>
-  <header class="navbar">
-    <span class="header-name"><a href="/">Rongbin FAN</a></span>
+<body class="han-init-context">
+  <section class="navbar">
+    <span class="header-name"><a href="/" class="header-link">Rongbin FAN</a> / <a href="/posts" class="header-link">Blog</a>
+<br><a href="/links.html" class="header-link header-guestbook">◩ Guestbook</a>
+</span>
 
-<nav>
-    <a href="/#hello">Hello</a>
-    <a href="/posts" style="font-weight: bold;">Blog</a>
-    <a href="/links">Guestbook</a>
-</nav>
-  </header>
-  <main class="han-init-context">
+
+  </section>
     
+
+<section class="content-header">
 
   <div class="top-scroll-bar"></div>
 <div class="addn visible">
-<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Hypothes.is</a></div>
-<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--bgColor);background:var(--textColor);text-decoration:none;border:none;">Contents</a></div>
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
 </div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
@@ -79,10 +78,19 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
   <div id="single-header">
     <h1 class="content-h1">树莓派实现开机自动播放 RTSP 流视频</h1>
     
-    <p class="content-time"><time datetime="2021-01-06T00:00:00&#43;00:00">January 6, 2021</time></p>
+    
+      <p class="content-time"><time datetime="2021-01-06T00:00:00&#43;00:00">06 January 2021</time></p>
+    
   </div>
 
-  <p>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。</p>
+</section>
+
+
+    <div class="color"></div>
+  <main>
+    
+
+<p>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。</p>
 <h2 id="获取摄像头-rtsp-流">
 获取摄像头 RTSP 流
 <a href="#%e8%8e%b7%e5%8f%96%e6%91%84%e5%83%8f%e5%a4%b4-rtsp-%e6%b5%81" class="heading-anchor">#</a>
@@ -223,14 +231,19 @@ Exec=/home/pi/test.sh
 </ul>
 
 
-  <div class="footer-nav">
+
+  </main>
+  
+    
+
+<div class="footer-nav">
 
   <div class="previous-post" style="display:inline-block;">
     
     <a class="no-external" href="https://fanrongbin.com/snow-2/"><span class="arrow">←</span> 雪</a>
     
   </div>
-  
+
   
 
 
@@ -243,15 +256,17 @@ Exec=/home/pi/test.sh
 
   <div class="next-post" style="display:inline-block;float:right;">
     
-    <a class="no-external" href="https://fanrongbin.com/network-resetting-2021/">电信网关拨号改桥接 + 软路由 + TP-LINK 易展 Mesh 有线回程 <span class="arrow">→</span></a>
+    <a class="no-external" href="https://fanrongbin.com/network-resetting-2021/">电信网关拨号改桥接 + 软路由 + TP-LINK 易展 Mesh 有线回程 <span
+        class="arrow">→</span></a>
     
   </div>
 
-  </div>
+</div>
 
-  </main>
+
+  
   <footer class="opacity-6">
-    <p><a href="/#colophon">Colophon</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> © 2023 Rongbin FAN</p>
+    <p><a href="/#colophon">Colophon</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p><p>© Rongbin FAN</p>
   </footer>
 </body>
 <script src="/han.min.js"></script>

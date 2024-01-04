@@ -1,5 +1,5 @@
 * {
-    --sans: "Franklin Gothic", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    --sans: "Franklin Gothic Book", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
     --serif: Georgia, "Minion Pro", Palatino, "Adobe Garamond Pro", "Times New Roman", serif;
     --mono: monospace;
     --arrow: Calibri, Avenir, Helvetica, Arial, sans-serif;
@@ -115,6 +115,11 @@ em {
     padding: 2ch 2ch 5vw 2ch;
 }
 
+.name-heading {
+    background: #c9c9c9;
+    color: #000;
+}
+
 .highlight-heading {
     background: var(--text-color);
     color: var(--bg-color);
@@ -133,6 +138,10 @@ em {
 
 .text {
     grid-column: 4 / span 6;
+}
+
+.home-nav {
+    grid-column: 2 / span 2;
 }
 
 .detail-text {
