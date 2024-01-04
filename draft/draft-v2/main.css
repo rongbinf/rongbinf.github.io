@@ -13,7 +13,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--sans);
-    transition: all .2s cubic-bezier(0.33, 1, 0.68, 1);
+    transition: all .1s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 ::selection {
@@ -74,7 +74,7 @@ div>a:hover {
     color: #fff;
 }
 
-/*a[href*="//"]:after {
+div>a[href*="//"]:after, p>a[href*="//"]:after {
     font-weight: 300;
     font-size: 80%;
     padding-left: 3px;
@@ -83,7 +83,7 @@ div>a:hover {
     font-family: var(--arrow);
     position: relative;
     top: -0.7ch;
-}*/
+}
 
 em {
     font-family: var(--serif);
@@ -223,6 +223,11 @@ textarea:focus, textarea:focus-visible, textarea:focus-within {
     .footer,
     .color {
         grid-column: 1 / span 6;
+    }
+
+    input, textarea {
+        line-height: 3;
+        padding: 2vw;
     }
 }
 
