@@ -290,6 +290,10 @@ textarea:focus, textarea:focus-visible, textarea:focus-within {
         line-height: 3;
         padding: 2vw;
     }
+
+    .footer {
+        padding: 2ch;
+    }
 }
 
 @media (min-width: 1600px) {
