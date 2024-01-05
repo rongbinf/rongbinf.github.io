@@ -200,7 +200,7 @@ em {
     display: none;
 }
 
-@keyframes shimmerAnimation {
+@keyframes shimmer {
     0% {
         background-position: 100%;
     }
@@ -212,9 +212,9 @@ em {
 
 .placeholder {
     background: linear-gradient(to right, #f0f0f0 0%, #ffffff 40%, #f0f0f0 80%);
-    background-size: 100% 100%;
+    background-size: 200% 200%;
     color: transparent;
-    animation: shimmerAnimation 2s infinite linear;
+    animation: shimmer 2s infinite linear;
 }
 
 .h3-blog-title.placeholder,
