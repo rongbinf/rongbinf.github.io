@@ -4,7 +4,7 @@
     --sans: "Helvetica Neue", Helvetica, Arial, Verdana, -apple-system, BlinkMacSystemFont, Avenir, "Segoe UI Variable", "Segoe UI", "Han Heiti GB", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji";
     --arrow: Calibri, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
     --mono: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
-    
+
     --bg-color: #fff;
     --link-color: #0026ff;
     --text-color: #000;
@@ -119,6 +119,8 @@ em {
     justify-content: space-between;
     /* align-items: center; */
     cursor: help;
+    position: relative;
+    bottom: 0;
 }
 
 .footer:hover {
