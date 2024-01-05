@@ -3560,7 +3560,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 	}
   }
 	@media (max-width: 1000px) {
-		main {grid-column:1/-1;}
+		main, .guestbook-comment {grid-column:1/-1;}
 	}
 
   @media only screen and (max-width: 830px) {
