@@ -9,272 +9,23 @@
     <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Guestbook</title>
-      <link>https://fanrongbin.com/links/</link>
+      <title>Colophon</title>
+      <link>https://fanrongbin.com/colophon/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://fanrongbin.com/links/</guid>
-      <description>
-
-&lt;style&gt;
-	main { grid-column: 2/-1; }
-	.color { display:none; }
-	img {margin:unset;}
-	.guestbook-comment {
-		display: grid;
-		grid-template-columns: repeat(2,1fr);
-	}
-	.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0,1fr));
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-  }
-
-  .profile {
-    /* backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-blend-mode: exclusion;
-    background: rgba(255, 255, 255, 0.35); */
-    padding: 2rem;
-    /* box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.1); */
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
-    transition: box-shadow .2s, -webkit-box-shadow .2s;
-  }
-
-  .profile:hover {
-    box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.25);
-    transition: box-shadow .2s, -webkit-box-shadow .2s;
-  }
-
-  .avatar {
-    overflow: hidden;
-    border-radius: 9999px;
-    box-shadow: 0 0 10px 1px rgb(170 170 170 / 25%);
-    background: #bcbcbc8a;
-    width: 100px;
-    height: 100px;
-  }
-
-  .avatar-8831 {
-    transform: rotate(-20deg);
-    background-repeat: space;
-  }
-
-  .name-tag {
-    margin-top: 1rem;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-
-  .status {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .online {
-    height: 8px;
-    width: 8px;
-    background-color: #bbb;
-    border-radius: 9999px;
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .profile-tag {
-    padding: 2px;
-    border: none;
-    color: white;
-    margin-bottom: 0.5em;
-    font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
-    font-size: .8rem;
-  }
-
-  .the-link {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-	@media (max-width: 1200px) {
-		.profile-grid {
-    	grid-template-columns: repeat(4, minmax(0,1fr));
-    }
-  }
-	@media (max-width: 1000px) {
-		main {grid-column:1/-1;}
-	}
-
-  @media only screen and (max-width: 830px) {
-    .profile-grid {
-      grid-template-columns: repeat(3, 1fr);
-      grid-row-gap: 1.5rem;
-      grid-column-gap: 1.5rem;
-    }
-
-    .profile {
-      padding: 1.5rem;
-    }
-    
-    .avatar {
-      width: 7rem;
-      height: 7rem;
-    }
-    
-    .name {
-      font-size: 1.5rem;
-    }
-    
-    .profile-tag {
-      font-size: 1rem;
-    }
-  }
-
-  @media only screen and (max-width: 630px) {
-    .profile-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-row-gap: 1rem;
-      grid-column-gap: 1rem;
-    }
-
-    .profile {
-      padding: 1rem;
-    }
-  }
-&lt;/style&gt;
-
-
-
-      &lt;div class=&#34;profile-grid&#34;&gt;
-        &lt;div class=&#34;profile&#34; id=&#34;miang&#34;&gt;
-          &lt;div class=&#34;avatar&#34;&gt;&lt;img src=&#34;https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg&#34;&gt;&lt;/div&gt;
-          &lt;span class=&#34;status&#34;&gt;
-            &lt;p class=&#34;name-tag&#34;&gt;Miang&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
-          &lt;/span&gt;
-          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #ea4c89;&#34;&gt;#anime&lt;/button&gt;
-          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://bgm.tv/anime/list/miang&#34;
-              target=&#34;_blank&#34;&gt;Bangumi&lt;/a&gt;&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;profile&#34; id=&#34;anzifan&#34;&gt;
-          &lt;div class=&#34;avatar&#34;&gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/38721913?v=4&#34;&gt;&lt;/div&gt;
-          &lt;span class=&#34;status&#34;&gt;
-            &lt;p class=&#34;name-tag&#34;&gt;An Zifan&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
-          &lt;/span&gt;
-          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #ffe100; color: #000;&#34;&gt;#front-end&lt;/button&gt;
-          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://www.anzifan.com&#34;
-              target=&#34;_blank&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;profile&#34; id=&#34;zhheo&#34;&gt;
-          &lt;div class=&#34;avatar&#34;&gt;&lt;img src=&#34;https://bu.dusays.com/2022/12/28/63ac2812183aa.png&#34;&gt;&lt;/div&gt;
-          &lt;span class=&#34;status&#34;&gt;
-            &lt;p class=&#34;name-tag&#34;&gt;张洪Heo&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
-          &lt;/span&gt;
-          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #3797ff;&#34;&gt;#tech&lt;/button&gt;
-          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://blog.zhheo.com/&#34;
-              target=&#34;_blank&#34;&gt;Blog&lt;/a&gt;&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;profile&#34; id=&#34;foreverlikethis&#34;&gt;
-          &lt;div class=&#34;avatar avatar-8831&#34; style=&#34;background-image: url(https://img.fanrongbin.com/foreverliketh.is.png);&#34;&gt;&lt;/div&gt;
-          &lt;span class=&#34;status&#34;&gt;
-            &lt;p class=&#34;name-tag&#34;&gt;foreverliketh.is&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
-          &lt;/span&gt;
-          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #aa42ff;&#34;&gt;#creative&lt;/button&gt;
-          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://foreverliketh.is/&#34;
-              target=&#34;_blank&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;profile&#34; id=&#34;placeholder&#34;&gt;
-          &lt;div class=&#34;avatar&#34;&gt;&lt;/div&gt;
-          &lt;span class=&#34;status&#34;&gt;
-            &lt;p class=&#34;name-tag&#34;&gt;Your site&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
-          &lt;/span&gt;
-          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #7e7e7e;&#34;&gt;#label&lt;/button&gt;
-          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;http://none.none&#34;
-              target=&#34;_blank&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      
-      &lt;div class=&#34;guestbook-comment&#34;&gt;
-        &lt;p&gt;
-          Leave a comment:
-        &lt;/p&gt;
-        &lt;div id=&#34;giscus&#34;&gt;
-          &lt;script id=&#34;giscus-script&#34;
-                  src=&#34;https://giscus.app/client.js&#34;
-                  data-repo=&#34;rongbinf/giscus-comment&#34;
-                  data-repo-id=&#34;R_kgDOK3UYzw&#34;
-                  data-category=&#34;Announcements&#34;
-                  data-category-id=&#34;DIC_kwDOK3UYz84Cbl2R&#34;
-                  data-mapping=&#34;title&#34;
-                  data-strict=&#34;0&#34;
-                  data-reactions-enabled=&#34;0&#34;
-                  data-emit-metadata=&#34;0&#34;
-                  data-input-position=&#34;top&#34;
-                  data-theme=&#34;https://fanrongbin.com/giscus.css&#34;
-                  data-lang=&#34;en&#34;
-                  data-loading=&#34;lazy&#34;
-                  crossorigin=&#34;anonymous&#34;
-                  async&gt;
-          &lt;/script&gt;        
-        &lt;/div&gt;
-      &lt;/div&gt;
-      
-      &lt;!-- detect website status --&gt;
-&lt;script defer&gt;
-  document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
-    fetch(&#39;https://website-status.fanrongbin.com&#39;)
-      .then(response =&gt; response.json())
-      .then(data =&gt; {
-        data.forEach(item =&gt; {
-          // 找到对应 URL 的链接元素
-          const link = document.querySelector(`a[href=&#34;${item.url}&#34;]`);
-          if (link) {
-            const profile = link.closest(&#39;.profile&#39;);
-            if (profile) {
-              // 获取对应的 &lt;span class=&#34;online&#34;&gt; 元素
-              const onlineIndicator = profile.querySelector(&#39;.online&#39;);
-              if (onlineIndicator) {
-                // 根据状态设置背景颜色
-                onlineIndicator.style.backgroundColor = item.status === 200 ? &#39;#00df07&#39; : &#39;red&#39;;
-              }
-
-              // 找到对应的 .the-link 按钮
-              const theLinkButton = profile.querySelector(&#39;.the-link&#39;);
-              if (theLinkButton) {
-                // 设置动画
-                theLinkButton.style.opacity = &#39;0&#39;;
-                theLinkButton.style.visibility = &#39;hidden&#39;;
-                theLinkButton.style.transition = &#39;all .2s ease-in-out&#39;;
-    
-                // 状态处理
-                if (item.status === 200) {
-                  // 显示按钮
-                  theLinkButton.style.opacity = &#39;1&#39;;
-                  theLinkButton.style.visibility = &#39;visible&#39;;
-                } else {
-                  // 显示 &#34;Offline&#34; 并隐藏链接
-                  theLinkButton.textContent = &#39;Offline&#39;;
-                  theLinkButton.removeAttribute(&#39;href&#39;);
-                  theLinkButton.style.opacity = &#39;0.5&#39;;
-                  theLinkButton.style.visibility = &#39;visible&#39;;
-                }
-              }
-            }
-          }
-        });
-      })
-      .catch(error =&gt; console.error(&#39;Error:&#39;, error));
-  });
-&lt;/script&gt;
-
+      <guid>https://fanrongbin.com/colophon/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Homepage&lt;/strong&gt;: Pure HTML, CSS, and JavaScript.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Blog:&lt;/strong&gt; &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, typography framework &lt;a href=&#34;https://github.com/ethantw/Han&#34;&gt;Han&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Host:&lt;/strong&gt; &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github&lt;/a&gt;, automatically deployed by &lt;a href=&#34;https://pages.cloudflare.com/&#34;&gt;Cloudflare Pages&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Font:&lt;/strong&gt; Mostly Helvetica Neue, Helvetica, Arial.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;et-book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Numeral LF Serif&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Songti GB&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif KR&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Batang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Palatino&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino Linotype&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino LT STD&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Book Antiqua&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--kai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;et-book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Numeral LF Serif&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Palatino&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino Linotype&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino LT STD&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Book Antiqua&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Times New Roman&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Kaiti GB&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;STKaiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Kaiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Kaiti SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Kai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FZKaiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif KR&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Batang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;cursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--sans&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Helvetica Neue&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Helvetica&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Verdana&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apple-system&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BlinkMacSystemFont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Avenir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Segoe UI Variable&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Segoe UI&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Heiti GB&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Heiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Hei&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;STHeiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;sans-serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--arrow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Calibri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Route 159&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apple-system&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BlinkMacSystemFont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Helvetica Neue&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Helvetica&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;system-ui&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Arial Unicode MS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;sans-serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Color Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This site is one of the &lt;a href=&#34;https://512kb.club/&#34;&gt;512kb.club&lt;/a&gt; and &lt;a href=&#34;https://1mb.club/&#34;&gt;1mb.club&lt;/a&gt; members.&lt;/p&gt;
 </description>
     </item>
     <item>
@@ -752,12 +503,12 @@ tl;dr 小结
 &lt;p&gt;两张表讲完：[如果表格显示有误，可以在此查看&lt;code&gt;png&lt;/code&gt;文件：&lt;a href=&#34;https://img.fanrongbin.com/honorific-ko-1.png&#34;&gt;1.높임등급&lt;/a&gt; / &lt;a href=&#34;https://img.fanrongbin.com/honorific-ko-2.png&#34;&gt;2.종결어미&lt;/a&gt; / &lt;a href=&#34;https://img.fanrongbin.com/honorific-ko-3.png&#34;&gt;3.종결어미:하다&lt;/a&gt;]&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/honorific-ko-1.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/honorific-ko-2.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;对应的英文(Pak 2008)&lt;label for=&#34;marginnote-1&#34; class=&#34;margin-toggle marginnote-ind&#34;&gt;&lt;/label&gt;
-&lt;input type=&#34;checkbox&#34; id=&#34;marginnote-1&#34; class=&#34;margin-toggle&#34;/&gt;
-&lt;span class=&#34;marginnote&#34;&gt;
-Pak, Miok D. 2008. &lt;em&gt;Types of Clauses and Sentence End Particles in Korean&lt;/em&gt;. Korean Linguistics 14 (1): 113–56. &lt;a href=&#34;https://doi.org/10.1075/kl.14.06mdp&#34;&gt;https://doi.org/10.1075/kl.14.06mdp&lt;/a&gt;.
-&lt;/span&gt;
-：&lt;/p&gt;
+&lt;p&gt;对应的英文如下(Pak 2008)：&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;Pak, Miok D. 2008. &lt;em&gt;Types of Clauses and Sentence End Particles in Korean&lt;/em&gt;. Korean Linguistics 14 (1): 113–56. &lt;a href=&#34;https://doi.org/10.1075/kl.14.06mdp&#34;&gt;https://doi.org/10.1075/kl.14.06mdp&lt;/a&gt;.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;합쇼체(하십시오체)：formal style&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;하오체：semiformal style&lt;br&gt;&lt;/li&gt;
@@ -786,12 +537,12 @@ Pak, Miok D. 2008. &lt;em&gt;Types of Clauses and Sentence End Particles in Kore
 &lt;/h2&gt;
 &lt;p&gt;在听者身份高于主体时使用，即不再对句子里的主体使用敬语。&lt;/p&gt;
 &lt;p&gt;目前，&lt;span class=&#34;newthought&#34;&gt;压尊法已经被废止&lt;/span&gt;
-&lt;label for=&#34;sidenote-1&#34; class=&#34;margin-toggle sidenote-number&#34;&gt;(1)&lt;/label&gt;
-&lt;input type=&#34;checkbox&#34; id=&#34;sidenote-1&#34; class=&#34;margin-toggle&#34;/&gt;
-&lt;span class=&#34;sidenote&#34;&gt;
-&lt;span class=&#34;sidenote-number&#34;&gt;(1)&lt;/span&gt;过往在韩国军队或是企业中，由于不熟悉上下级关系而未用、错用压尊法，以至于受恶意相向的情况非常多。韩国军队已在 2016 年废止使用压尊法，국립국어원出版的语言手册也列明其现代韩语只在家庭、师生关系中被使用，压尊法在社会上逐渐淡出。但，毕竟无法影响所有人，仍存在许多比较保守的军队单位、企业在使用。
-&lt;/span&gt;
-，现代韩语只在家庭、师生关系中使用。在职场中，一般只使用“一半”：&lt;u&gt;对谓词使用敬语，但对主体的&lt;strong&gt;助词&lt;/strong&gt;不使用。&lt;/u&gt;不过随着语言和社会的变迁，家庭中使用“一半”的情况也越来越多。&lt;/p&gt;
+&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;过往在韩国军队或是企业中，由于不熟悉上下级关系而未用、错用压尊法，以至于受恶意相向的情况非常多。韩国军队已在 2016 年废止使用压尊法，국립국어원出版的语言手册也列明其现代韩语只在家庭、师生关系中被使用，压尊法在社会上逐渐淡出。但，毕竟无法影响所有人，仍存在许多比较保守的军队单位、企业在使用。&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;，现代韩语只在家庭、师生关系中使用。在职场中，一般只使用“一半”：&lt;u&gt;对谓词使用敬语，但对主体的&lt;strong&gt;助词&lt;/strong&gt;不使用。&lt;/u&gt;不过随着语言和社会的变迁，家庭中使用“一半”的情况也越来越多。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;사장님, 부장님 &lt;u&gt;오셨습니다&lt;/u&gt;. (✅ 一半)&lt;/li&gt;
@@ -882,12 +633,12 @@ TP-LINK 易展有线回程
 &lt;p&gt;在微信服务号直接跟客服说要开通之后，给填了工单，师傅打电话来确认，他那边后台操作，全程不到半小时，特别顺畅。&lt;/p&gt;
 &lt;p&gt;于是就先不折腾IPv6了，直接折腾IPv4外部访问。方案有很多，之前因为没有公网IP，用的ZeroTier，速度一般。现在可以通过公网IP直接访问，但为了安全考虑，只开一个端口转发给VPN（OpenVPN），防火墙、登录规则、二步验证等都保持开启。同时，因为是动态IP，隔三差五就会改，找了自己一个不用的域名挂在Cloudflare，通过Cloudflare DDNS插件绑好API key，监测到路由器重新拨号时，对照IP映射是否一致，不一致则更新。&lt;/p&gt;
 &lt;p&gt;群晖和华硕都自带DDNS和VPN Server服务（注意群晖的VPN Server可能要在官网下载后手动安装）。DDNS使用自带服务的话，方便的地方在于不需要再额外处理域名的问题，但因为使用https的话，自带服务是通过80端口访问&lt;span lang=&#34;en&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/span&gt;申请SSL，这个端口电信默认是封着的，一般也不会给开，SSL无法签发下来。其次，&lt;span class=&#34;newthought&#34;&gt;DSM6的用户&lt;/span&gt;
-&lt;label for=&#34;sidenote-1&#34; class=&#34;margin-toggle sidenote-number&#34;&gt;(1)&lt;/label&gt;
-&lt;input type=&#34;checkbox&#34; id=&#34;sidenote-1&#34; class=&#34;margin-toggle&#34;/&gt;
-&lt;span class=&#34;sidenote&#34;&gt;
-&lt;span class=&#34;sidenote-number&#34;&gt;(1)&lt;/span&gt;&lt;em&gt;DSM 7的界面给的是下拉框并写明是“自动”，但DSM 6不是。&lt;/em&gt;
-&lt;/span&gt;
-，群晖DDNS不一定能够自动修改对应的IP。&lt;/p&gt;
+&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;&lt;em&gt;DSM 7的界面给的是下拉框并写明是“自动”，但DSM 6不是。&lt;/em&gt;&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;，群晖DDNS不一定能够自动修改对应的IP。&lt;/p&gt;
 &lt;p&gt;VPN Server的话看个人需求，在群晖或者路由器上部署都可以。只开放VPN端口的话，做不做https问题不大，但是如果还开放其他（例如WebDAV）端口，https是必要的。至于使用哪种VPN连接方式（例如PPTP、OpenVPN、IPSec等）一样看需求/设备是否支持。我的AC-68U（386.7_2）自带PPTP和OpenVPN。&lt;/p&gt;
 &lt;p&gt;同时原先的ZeroTier仍保留，出问题的时候至少还可以通过ZeroTier回来修修补补。&lt;/p&gt;
 &lt;p&gt;我的方案小结：&lt;/p&gt;
@@ -1099,7 +850,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 为什么 주다 -&amp;gt; 달다？
 &lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88-%ec%a3%bc%eb%8b%a4---%eb%8b%ac%eb%8b%a4&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;首先，根据국립국어원的定义&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;：&lt;/p&gt;
+&lt;p&gt;首先，根据국립국어원的定义[^h]：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;dl&gt;
 &lt;dt&gt;주다, 달다&lt;/dt&gt;
@@ -1107,14 +858,24 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;/dl&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;都表示“给”的意思，但“给别人”用“주다”，&lt;strong&gt;“给自己”用“달다”&lt;/strong&gt;。即先确定“到底给谁？”&lt;/p&gt;
-&lt;p&gt;其次，“달다”属于不完全动词(불완전 동사)，&lt;strong&gt;只有&lt;/strong&gt;在해라체与하라체&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;的命令形（명령형）中活用，&lt;strong&gt;其他情况都使用“주다”&lt;/strong&gt;。即再“根据句形，是否要换？”&lt;/p&gt;
+&lt;p&gt;其次，“달다”属于不完全动词(불완전 동사)，&lt;strong&gt;只有&lt;/strong&gt;在해라체与하라체&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;“하라체”不属于相对敬语法六种体（包括“하소서체”与否）/七种体，是没有抬高或放低等尊敬意味的一种单独设置，常用在新闻杂志。以되다为例，活用成“되라”属于하라체，而“돼라”属于해라체。&lt;br&gt;국립국어원 在 &lt;a href=&#34;https://twitter.com/urimal365/status/480882944601370625&#34;&gt;Twitter&lt;/a&gt;: &amp;ldquo;@jithoven11 ‘하라체’는 상대편이 특정 개인이 아닐 때 낮춤과 높임이 중화된 느낌을 주는 종결형으로, 주로 광고문, 연설문 따위의 문장에 씁니다(붉은 물결이 되라). ‘해라체’는 상대편을 아주 낮추는 종결형입니다(제발 인간이 돼라). #표현&amp;rdquo;&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;的命令形（명령형）中活用，&lt;strong&gt;其他情况都使用“주다”&lt;/strong&gt;。即再“根据句形，是否要换？”&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;해라체 명령법: 아/어/여라
 &lt;ul&gt;
 &lt;li&gt;그 볼펜 좀 집어 다오. pick up and give me the ballpoint
 &lt;ul&gt;
-&lt;li&gt;달다 -&amp;gt; 다오&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;달다 -&amp;gt; 다오&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;实际上，现在年轻人也大多不再使用“다오”，而使用“주라”“줘라”，这是一个语用现象，感兴趣的读者可以阅读：김경혜. (2015). &lt;a href=&#34;https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002026840&#34;&gt;명령형 ‘주라’의 사용 확장에 대하여&lt;/a&gt;. 한국학연구, 38, 309-331.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1131,7 +892,12 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;使用주다：&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;使用주다：&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;&lt;a href=&#34;https://sgsg.hankyung.com/article/2020103066721&#34;&gt;[홍성호 기자의 열려라! 우리말] &amp;lsquo;달다&amp;rsquo; 자리 넘보는 &amp;lsquo;주다&amp;rsquo;&lt;/a&gt;&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;합쇼체(하십시오체): ~ 집어 주십시오.&lt;br&gt;
 하오체: ~ 집어 주오.&lt;br&gt;
@@ -1146,23 +912,6 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;a href=&#34;#%ec%b0%b8%ea%b3%a0&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Kim, S., Curtis, E., &amp;amp; Cho, H. (2018). &lt;em&gt;Korean Grammar: The Complete Guide to Speaking Korean Naturally&lt;/em&gt;. Tuttle Publishing.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://sgsg.hankyung.com/article/2020103066721&#34;&gt;[홍성호 기자의 열려라! 우리말] &amp;lsquo;달다&amp;rsquo; 자리 넘보는 &amp;lsquo;주다&amp;rsquo;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;“하라체”不属于相对敬语法六种体（包括“하소서체”与否）/七种体，是没有抬高或放低等尊敬意味的一种单独设置，常用在新闻杂志。以되다为例，活用成“되라”属于하라체，而“돼라”属于해라체。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;국립국어원 在 &lt;a href=&#34;https://twitter.com/urimal365/status/480882944601370625&#34;&gt;Twitter&lt;/a&gt;: &amp;ldquo;@jithoven11 ‘하라체’는 상대편이 특정 개인이 아닐 때 낮춤과 높임이 중화된 느낌을 주는 종결형으로, 주로 광고문, 연설문 따위의 문장에 씁니다(붉은 물결이 되라). ‘해라체’는 상대편을 아주 낮추는 종결형입니다(제발 인간이 돼라). #표현&amp;rdquo;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;实际上，现在年轻人也大多不再使用“다오”，而使用“주라”“줘라”，这是一个语用现象，感兴趣的读者可以阅读：김경혜. (2015). &lt;a href=&#34;https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002026840&#34;&gt;명령형 ‘주라’의 사용 확장에 대하여&lt;/a&gt;. 한국학연구, 38, 309-331.。&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
 </description>
     </item>
     <item>
@@ -1722,7 +1471,6 @@ David Rand, &lt;em&gt;The Psychology of Misinformation&lt;/em&gt;
 &lt;a href=&#34;#%e8%8a%af%e7%89%87%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js&#34;&gt;&lt;/script&gt;
-&lt;style&gt;@media screen and (min-width: 1080px){ ol, ul, dl {width: 60%;}}&lt;/style&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/pako_eNp9VVtPG1cQ_iurfWqlsBW4NBGq8hKnUqRGpSJKH7w8rO0FW7INctaqqiiSQ3xZO2ASbCjGFzDEYGixTdpg1xf8Z3bOOfvEX-gcH9uBiPZp58zMmW9mzjezL2XPileX5-SlwMqvHp8WNqRnTjWkGi8i7uWwtuqTphWSv4RiAtIH0Kpyk6ZNu1TZzrbt3Pn37vBDMBP0uEs239FOg.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;参考自泛林集团科普文章：&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&amp;amp;mid=2653071344&amp;amp;idx=1&amp;amp;sn=5afa34f0343fe651c352fb1db90e4078&amp;amp;chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b&#34;&gt;上篇&lt;/a&gt;、&lt;a href=&#34;https://mp.weixin.qq.com/s?src=11&amp;amp;timestamp=1643333829&amp;amp;ver=3585&amp;amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&amp;amp;new=1&#34;&gt;中篇&lt;/a&gt;、&lt;a href=&#34;https://mp.weixin.qq.com/s?src=11&amp;amp;timestamp=1643333829&amp;amp;ver=3585&amp;amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&amp;amp;new=1&#34;&gt;下篇&lt;/a&gt;。英文对照请见&lt;a href=&#34;#%E8%8A%AF%E7%89%87%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%BA%8F%E8%8B%B1%E6%96%87%E4%B8%8D%E5%AE%8C%E5%85%A8%E5%AF%B9%E7%85%A7&#34;&gt;文末&lt;/a&gt;。你也可以&lt;a href=&#34;https://www.tel.com/museum/exhibition/process/&#34;&gt;按此访问&lt;/a&gt;东京威力科创制作的工序介绍。&lt;/p&gt;
 &lt;p&gt;制作工序可分为前、后两道。前道包括 1.晶圆加工 → 7.测试，后道包括 8.封装 及后期测试、其他组装、成品入库等。&lt;/p&gt;
@@ -1820,7 +1568,8 @@ David Rand, &lt;em&gt;The Psychology of Misinformation&lt;/em&gt;
 &lt;hr&gt;
 &lt;p&gt;CIM 主体包括 &lt;strong&gt;MES&lt;/strong&gt; 和 &lt;strong&gt;EAP&lt;/strong&gt;。MES 负责车间生产管理和调度执行，实时监控生产过程并响应状态变化。EAP 对接 MES 和机台设备，负责信息传输、数据搜集、流程控制和异常捕捉。因而 APC、FDC、 PMS 等系统通常都围绕 EAP 运作。&lt;/p&gt;
 &lt;p&gt;EAP 与 MES 等其他系统间通讯采用 Tibco RV 协议、与机台设备间通讯采用 SECS/GEM 等等协议。&lt;/p&gt;
-&lt;pre class=&#34;mermaid&#34;&gt;
+&lt;div style=&#34;display:none&#34;&gt;
+&lt;!--&lt;pre class=&#34;mermaid&#34;&gt;
 classDiagram
 	class 计划层{
 		 ERP/SCM/PLM
@@ -1835,7 +1584,11 @@ classDiagram
 	}
 	计划层 &lt;--&gt; CIM
 	CIM &lt;--&gt; 一般控制层 : SECS/GEM
-&lt;/pre&gt;
+&lt;/pre&gt; --&gt;
+&lt;/div&gt;
+&lt;div style=&#34;max-width:40%&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/mermaid-diagram-2024-01-05-191529.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;市场主要厂商&#34;&gt;
 市场主要厂商
 &lt;a href=&#34;#%e5%b8%82%e5%9c%ba%e4%b8%bb%e8%a6%81%e5%8e%82%e5%95%86&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -1879,30 +1632,35 @@ EAP：搜集信息、传达指令
 &lt;/h2&gt;
 &lt;p&gt;EAP 上接 MES，下接机台设备。MES 所管理的各项数据都来自 EAP。EAP 先搜集所有生产数据和机台状态数据，再经由特定通讯协议传送到 MES 数据库，MES 再借由数据分析监控设备和生产流程。其同时也是整个 CIM 中其他模块的数据源。&lt;/p&gt;
 &lt;p&gt;例如生产状态的变化：由 EAP &lt;strong&gt;告知&lt;/strong&gt; MES 一批货物状态的变化，MES &lt;strong&gt;改变&lt;/strong&gt;这批货物的状态。&lt;/p&gt;
-&lt;pre class=&#34;mermaid&#34;&gt;
-stateDiagram
-	s1: 计划(planned)
-	s2: 激活(activated)
-	s3: 等待处理(waiting)
-	s4: 结束(completed)
-	s5: 派工(dispatch)
-	s6: 正在加工(processing)
-	s7: 加工完成(finish)
-	[*]--&gt;s1
-	s1--&gt;s2:分配输送盒
-	s2--&gt;s3
-	s3--&gt;s2:解除等待
-	s2--&gt;s5
-	s5--&gt;s2:解除派工
-	s5--&gt;s6:移入加工
-	s6--&gt;s5:取消移入
-	s6--&gt;s7
-	s7--&gt;s3
-	s3--&gt;s7
-	s7--&gt;s4
-	s2--&gt;s4
-	s3--&gt;s5
-&lt;/pre&gt;
+&lt;div style=&#34;display:none&#34;&gt;
+    &lt;pre class=&#34;mermaid&#34;&gt;
+    stateDiagram
+        s1: 计划(planned)
+        s2: 激活(activated)
+        s3: 等待处理(waiting)
+        s4: 结束(completed)
+        s5: 派工(dispatch)
+        s6: 正在加工(processing)
+        s7: 加工完成(finish)
+        [*]--&gt;s1
+        s1--&gt;s2:分配输送盒
+        s2--&gt;s3
+        s3--&gt;s2:解除等待
+        s2--&gt;s5
+        s5--&gt;s2:解除派工
+        s5--&gt;s6:移入加工
+        s6--&gt;s5:取消移入
+        s6--&gt;s7
+        s7--&gt;s3
+        s3--&gt;s7
+        s7--&gt;s4
+        s2--&gt;s4
+        s3--&gt;s5
+    &lt;/pre&gt;
+&lt;/div&gt;
+&lt;div style=&#34;max-width:60%&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/mermaid-diagram-2024-01-05-191658.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;对比单纯进行数据采集和一定图形界面化呈现的 SCADA，EAP 能配合其他模块达到生产自动化的要求、作为管理平台、融合 &lt;ruby&gt;BI&lt;rt&gt;商业智能&lt;/rt&gt;&lt;/ruby&gt;（business intelligence）分析。&lt;/p&gt;
 &lt;h2 id=&#34;apc管控过程提升良率&#34;&gt;
 APC：管控过程、提升良率
@@ -1925,34 +1683,38 @@ APC：管控过程、提升良率
 芯片制作工序：英文不完全对照
 &lt;a href=&#34;#%e8%8a%af%e7%89%87%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f%e8%8b%b1%e6%96%87%e4%b8%8d%e5%ae%8c%e5%85%a8%e5%af%b9%e7%85%a7&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;pre class=&#34;mermaid&#34;&gt;
-flowchart TD
-	subgraph a[1.Wafer Processing]
-	a1[Cast]--&gt;a2[Slice]--&gt;a3[Polish the surface]
-	end
-	subgraph b[2.Exposed to oxygen]
-	b1[Clean]--&gt;b2[Exposed to oxygen&lt;br&gt;at high temperatures&lt;br&gt;to create a layer of silicon oxide]--&gt;b3[Layer Thickness Test]
-	end
-	subgraph c[3.Lithography]
-	c1[Apply a UV-sensitive photoresist on the surface]--&gt;c2[Irradiate the UV light to transfer the pattern onto the photoresist]--&gt;c3[Remove unexposed area]
-	end
-	subgraph d[4.Etching and Removing]
-	d1[To etch films of unmasked area and remove the photoresist]
-	end
-	subgraph e[5.Film Depositing]
-	e1[using CVD or PVD]
-	end
-	subgraph f[6.Interconnect Formation]
-	f1[To form wiring layers]
-	end
-	subgraph g[7.Wafer Testing]
-	g1[EDS]
-	end
-	subgraph h[8.Assembly and Testing]
-	h1[Cut into die]--&gt;h2[Attached to the package substrate]--&gt;h3[Connected to inner leads]--&gt;h4[Sealed in an epoxy resin envelope]--&gt;h5[Test]
-	end
-	mm(&#34;(IC Design)&#34;)--&gt;a--&gt;b--&gt;c--&gt;d--&gt;e--&gt;f--&gt;g--&gt;h
-&lt;/pre&gt;</description>
+&lt;div style=&#34;display:none&#34;&gt;
+    &lt;pre class=&#34;mermaid&#34;&gt;
+    flowchart TD
+        subgraph a[1.Wafer Processing]
+        a1[Cast]--&gt;a2[Slice]--&gt;a3[Polish the surface]
+        end
+        subgraph b[2.Exposed to oxygen]
+        b1[Clean]--&gt;b2[Exposed to oxygen&lt;br&gt;at high temperatures&lt;br&gt;to create a layer of silicon oxide]--&gt;b3[Layer Thickness Test]
+        end
+        subgraph c[3.Lithography]
+        c1[Apply a UV-sensitive photoresist on the surface]--&gt;c2[Irradiate the UV light to transfer the pattern onto the photoresist]--&gt;c3[Remove unexposed area]
+        end
+        subgraph d[4.Etching and Removing]
+        d1[To etch films of unmasked area and remove the photoresist]
+        end
+        subgraph e[5.Film Depositing]
+        e1[using CVD or PVD]
+        end
+        subgraph f[6.Interconnect Formation]
+        f1[To form wiring layers]
+        end
+        subgraph g[7.Wafer Testing]
+        g1[EDS]
+        end
+        subgraph h[8.Assembly and Testing]
+        h1[Cut into die]--&gt;h2[Attached to the package substrate]--&gt;h3[Connected to inner leads]--&gt;h4[Sealed in an epoxy resin envelope]--&gt;h5[Test]
+        end
+        mm(&#34;(IC Design)&#34;)--&gt;a--&gt;b--&gt;c--&gt;d--&gt;e--&gt;f--&gt;g--&gt;h
+    &lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/mermaid-diagram-2024-01-05-191742.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
     </item>
     <item>
       <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
@@ -3693,6 +3455,320 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;blockquote&gt;
 &lt;p&gt;我们所反对的碎片化阅读，指的是浮浅和无视语境的阅读。这和长短无关，和读者有没有整体性的视角有关。- &lt;a href=&#34;https://blog.yitianshijie.net/2016/07/05/what-is-fragmented-reading/&#34;&gt;李如一&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+</description>
+    </item>
+    <item>
+      <title>Guestbook</title>
+      <link>https://fanrongbin.com/links/</link>
+      <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/links/</guid>
+      <description>
+
+&lt;style&gt;
+	main { grid-column: 2/-1; }
+	.color { display:none; }
+	img {margin:unset;}
+	.guestbook-comment {
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+	}
+	.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0,1fr));
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+
+  .profile {
+    /* backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-blend-mode: exclusion;
+    background: rgba(255, 255, 255, 0.35); */
+    padding: 2rem;
+    /* box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.1); */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+  }
+
+  .profile:hover {
+    box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.25);
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+  }
+
+  .avatar {
+    overflow: hidden;
+    border-radius: 9999px;
+    box-shadow: 0 0 10px 1px rgb(170 170 170 / 25%);
+    background: #bcbcbc8a;
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-8831 {
+    transform: rotate(-20deg);
+    background-repeat: space;
+  }
+
+  .name-tag {
+    margin-top: 1rem;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .online {
+    height: 8px;
+    width: 8px;
+    background-color: #bbb;
+    border-radius: 9999px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .profile-tag {
+    padding: 2px;
+    border: none;
+    color: white;
+    margin-bottom: 0.5em;
+    font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+    font-size: .8rem;
+  }
+
+  .the-link {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+	@media (max-width: 1200px) {
+		.profile-grid {
+		grid-template-columns: repeat(4, minmax(0,1fr));
+	}
+  }
+	@media (max-width: 1000px) {
+		main {grid-column:1/-1;}
+	}
+
+  @media only screen and (max-width: 830px) {
+    .profile-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 1.5rem;
+      grid-column-gap: 1.5rem;
+    }
+
+    .profile {
+      padding: 1.5rem;
+    }
+    
+    .avatar {
+      width: 7rem;
+      height: 7rem;
+    }
+    
+    .name {
+      font-size: 1.5rem;
+    }
+    
+    .profile-tag {
+      font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 630px) {
+    .profile-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 1rem;
+      grid-column-gap: 1rem;
+    }
+
+    .profile {
+      padding: 1rem;
+    }
+  }
+&lt;/style&gt;
+
+
+
+      &lt;div class=&#34;profile-grid&#34;&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;miang&#34;&gt;
+          &lt;div class=&#34;avatar&#34;&gt;&lt;img src=&#34;https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;Miang&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #ea4c89;&#34;&gt;#anime&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://bgm.tv/anime/list/miang&#34;
+              target=&#34;_blank&#34;&gt;Bangumi&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;anzifan&#34;&gt;
+          &lt;div class=&#34;avatar&#34;&gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/38721913?v=4&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;An Zifan&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #ffe100; color: #000;&#34;&gt;#front-end&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://www.anzifan.com&#34;
+              target=&#34;_blank&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;zhheo&#34;&gt;
+          &lt;div class=&#34;avatar&#34;&gt;&lt;img src=&#34;https://bu.dusays.com/2022/12/28/63ac2812183aa.png&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;张洪Heo&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #3797ff;&#34;&gt;#tech&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://blog.zhheo.com/&#34;
+              target=&#34;_blank&#34;&gt;Blog&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;foreverlikethis&#34;&gt;
+          &lt;div class=&#34;avatar avatar-8831&#34; style=&#34;background-image: url(https://img.fanrongbin.com/foreverliketh.is.png);&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;foreverliketh.is&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #aa42ff;&#34;&gt;#creative&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;https://foreverliketh.is/&#34;
+              target=&#34;_blank&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;profile&#34; id=&#34;placeholder&#34;&gt;
+          &lt;div class=&#34;avatar&#34;&gt;&lt;/div&gt;
+          &lt;span class=&#34;status&#34;&gt;
+            &lt;p class=&#34;name-tag&#34;&gt;Your site&lt;/p&gt;&lt;span class=&#34;online&#34;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+          &lt;button class=&#34;profile-tag&#34; style=&#34;background: #7e7e7e;&#34;&gt;#label&lt;/button&gt;
+          &lt;p&gt;&lt;a class=&#34;button is-pill is-outline profile-button the-link&#34; href=&#34;http://none.none&#34;
+              target=&#34;_blank&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div class=&#34;guestbook-comment&#34;&gt;
+        &lt;p&gt;
+          Leave a comment:
+        &lt;/p&gt;
+        &lt;div id=&#34;giscus&#34;&gt;
+          &lt;script id=&#34;giscus-script&#34;
+                  src=&#34;https://giscus.app/client.js&#34;
+                  data-repo=&#34;rongbinf/giscus-comment&#34;
+                  data-repo-id=&#34;R_kgDOK3UYzw&#34;
+                  data-category=&#34;Announcements&#34;
+                  data-category-id=&#34;DIC_kwDOK3UYz84Cbl2R&#34;
+                  data-mapping=&#34;title&#34;
+                  data-strict=&#34;0&#34;
+                  data-reactions-enabled=&#34;0&#34;
+                  data-emit-metadata=&#34;0&#34;
+                  data-input-position=&#34;top&#34;
+                  data-theme=&#34;https://fanrongbin.com/giscus.css&#34;
+                  data-lang=&#34;en&#34;
+                  data-loading=&#34;lazy&#34;
+                  crossorigin=&#34;anonymous&#34;
+                  async&gt;
+          &lt;/script&gt;        
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;!-- detect website status --&gt;
+&lt;script defer&gt;
+  document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+    fetch(&#39;https://website-status.fanrongbin.com&#39;)
+      .then(response =&gt; response.json())
+      .then(data =&gt; {
+        data.forEach(item =&gt; {
+          // 找到对应 URL 的链接元素
+          const link = document.querySelector(`a[href=&#34;${item.url}&#34;]`);
+          if (link) {
+            const profile = link.closest(&#39;.profile&#39;);
+            if (profile) {
+              // 获取对应的 &lt;span class=&#34;online&#34;&gt; 元素
+              const onlineIndicator = profile.querySelector(&#39;.online&#39;);
+              if (onlineIndicator) {
+                // 根据状态设置背景颜色
+                onlineIndicator.style.backgroundColor = item.status === 200 ? &#39;#00df07&#39; : &#39;red&#39;;
+              }
+
+              // 找到对应的 .the-link 按钮
+              const theLinkButton = profile.querySelector(&#39;.the-link&#39;);
+              if (theLinkButton) {
+                // 设置动画
+                theLinkButton.style.opacity = &#39;0&#39;;
+                theLinkButton.style.visibility = &#39;hidden&#39;;
+                theLinkButton.style.transition = &#39;all .2s ease-in-out&#39;;
+    
+                // 状态处理
+                if (item.status === 200) {
+                  // 显示按钮
+                  theLinkButton.style.opacity = &#39;1&#39;;
+                  theLinkButton.style.visibility = &#39;visible&#39;;
+                } else {
+                  // 显示 &#34;Offline&#34; 并隐藏链接
+                  theLinkButton.textContent = &#39;Offline&#39;;
+                  theLinkButton.removeAttribute(&#39;href&#39;);
+                  theLinkButton.style.opacity = &#39;0.5&#39;;
+                  theLinkButton.style.visibility = &#39;visible&#39;;
+                }
+              }
+            }
+          }
+        });
+      })
+      .catch(error =&gt; console.error(&#39;Error:&#39;, error));
+  });
+&lt;/script&gt;
+
+</description>
+    </item>
+    <item>
+      <title>Wei Lan Library</title>
+      <link>https://fanrongbin.com/wei-lan/</link>
+      <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/wei-lan/</guid>
+      <description>&lt;h2 id=&#34;whats-the-background&#34;&gt;
+What&amp;rsquo;s the background?
+&lt;a href=&#34;#whats-the-background&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;There are an estimated 292.51 million rural migrant workers &lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;Source: National Bureau of Statistics, 2021&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt; in China&amp;rsquo;s cities as delivery motorbike-riders, laborers, doorkeepers and at other jobs that urbanites avoid.&lt;/li&gt;
+&lt;li&gt;The children of this floating population are called floating children.&lt;/li&gt;
+&lt;li&gt;The families, holding a rural &lt;em&gt;Hukou&lt;/em&gt; &lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;&lt;em&gt;Hukou&lt;/em&gt;, China&amp;rsquo;s household registration system, which divides population into two different statuses: agricultural and non-agricultural residency statuses. Yet China provides a wide range of public education, resources in cities, which means only city hukou holders could benefit from, are exceedingly more than schools in rural.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt; and on a tight budget, could only afford low-cost private schools which barely have good education resources, even books.&lt;/li&gt;
+&lt;li&gt;The organisation is aimed at helping these children.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how&#34;&gt;
+How?
+&lt;a href=&#34;#how&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Though some of these schools do receive donations, the lack of teacher and librarian hinders the daily operation of the school library.&lt;/li&gt;
+&lt;li&gt;Here, volunteers from Wei Lan Library take the responsibility by spending one or two days a week, sorting books, helping kids find good ones and maintaining a rather safe environment to study.&lt;/li&gt;
+&lt;li&gt;And they step even further: conduct both quantitative and qualitative research, reach out to publishing houses and enterprises about possibilities to donate, work with press and media, speak out at forums and conferences and so forth.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;im-interested-in-it-can-i-help&#34;&gt;
+I&amp;rsquo;m interested in it! Can I help?
+&lt;a href=&#34;#im-interested-in-it-can-i-help&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Yes! If you are based in China, you are very welcome to be a volunteer on-site to help with the daily operation - this is the key and the heart of the project.&lt;/li&gt;
+&lt;li&gt;If you&amp;rsquo;d like to support with public communication, promotion, information disclosure, or anything you can think of and willing to, you can always find a place here.&lt;/li&gt;
+&lt;li&gt;Read more about the project on its &lt;a href=&#34;https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ&#34;&gt;official WeChat account&lt;/a&gt; and &lt;a href=&#34;http://www.sanzhi.org.cn/?page_id=3922&#34;&gt;official website&lt;/a&gt; (Simplified Chinese). Drop me a message if you don&amp;rsquo;t speak Chinese, and I&amp;rsquo;m more than happy to help you with learning more about Wei Lan and also the recruitment process.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
   </channel>

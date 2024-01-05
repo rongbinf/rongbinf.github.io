@@ -13,7 +13,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.0dd8fb1ec1123ebea1f4dee6db8dbfb8d553f6725001a6aeba5c4930e63f70d5.css" integrity="sha256-Ddj7HsESPr6h9N7m242/uNVT9nJQAaauulxJMOY/cNU=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.31f1d5df46d8094e016de9ee09ffebefc4ea5c565416b459e38b027fda5df864.css" integrity="sha256-MfHV30bYCU4BbenuCf/r78TqXFZUFrRZ44sCf9pd&#43;GQ=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -62,6 +62,13 @@
   </div>
 
 </section>
+
+<style>
+  div.color {
+    background: linear-gradient(var(--textcolor) 0,transparent 25%);
+    opacity: .5;
+  }
+</style>
 
 
     <div class="color"></div>
@@ -119,12 +126,12 @@ TP-LINK 易展有线回程
 <p>在微信服务号直接跟客服说要开通之后，给填了工单，师傅打电话来确认，他那边后台操作，全程不到半小时，特别顺畅。</p>
 <p>于是就先不折腾IPv6了，直接折腾IPv4外部访问。方案有很多，之前因为没有公网IP，用的ZeroTier，速度一般。现在可以通过公网IP直接访问，但为了安全考虑，只开一个端口转发给VPN（OpenVPN），防火墙、登录规则、二步验证等都保持开启。同时，因为是动态IP，隔三差五就会改，找了自己一个不用的域名挂在Cloudflare，通过Cloudflare DDNS插件绑好API key，监测到路由器重新拨号时，对照IP映射是否一致，不一致则更新。</p>
 <p>群晖和华硕都自带DDNS和VPN Server服务（注意群晖的VPN Server可能要在官网下载后手动安装）。DDNS使用自带服务的话，方便的地方在于不需要再额外处理域名的问题，但因为使用https的话，自带服务是通过80端口访问<span lang="en">Let&rsquo;s Encrypt</span>申请SSL，这个端口电信默认是封着的，一般也不会给开，SSL无法签发下来。其次，<span class="newthought">DSM6的用户</span>
-<label for="sidenote-1" class="margin-toggle sidenote-number">(1)</label>
-<input type="checkbox" id="sidenote-1" class="margin-toggle"/>
-<span class="sidenote">
-<span class="sidenote-number">(1)</span><em>DSM 7的界面给的是下拉框并写明是“自动”，但DSM 6不是。</em>
-</span>
-，群晖DDNS不一定能够自动修改对应的IP。</p>
+<span class="sidenote-number">
+    <span class="sidenote-box">
+        <small class="sidenote"><em>DSM 7的界面给的是下拉框并写明是“自动”，但DSM 6不是。</em></small>
+        <span class="sidenote-line"></span>
+    </span>
+</span>，群晖DDNS不一定能够自动修改对应的IP。</p>
 <p>VPN Server的话看个人需求，在群晖或者路由器上部署都可以。只开放VPN端口的话，做不做https问题不大，但是如果还开放其他（例如WebDAV）端口，https是必要的。至于使用哪种VPN连接方式（例如PPTP、OpenVPN、IPSec等）一样看需求/设备是否支持。我的AC-68U（386.7_2）自带PPTP和OpenVPN。</p>
 <p>同时原先的ZeroTier仍保留，出问题的时候至少还可以通过ZeroTier回来修修补补。</p>
 <p>我的方案小结：</p>
@@ -223,7 +230,7 @@ TP-LINK 易展有线回程
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        if (document.querySelector('.han-init-context')) {
+        if (document.querySelector('.content-header')) {
             document.getElementById('show-hypo').style.display = 'flex';
         }
 
@@ -349,7 +356,7 @@ TP-LINK 易展有线回程
 
 
     function initializeTOCFeatures() {
-        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+        const headers = document.querySelectorAll('h2, h3');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
 
@@ -418,11 +425,103 @@ TP-LINK 易展有线回程
 </script>
 
 
+<script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
+            var jQueryScript = document.createElement('script');
+            jQueryScript.src = '/jquery-3.6.0.min.js';
+            document.head.appendChild(jQueryScript);
 
+            var sidenoteLines = document.querySelectorAll('.sidenote-line');
+            sidenoteLines.forEach(function (line) {
+                line.style.display = 'none';
+            });
 
+            var styleElement = document.createElement('style');
+            styleElement.innerHTML = `
+                .jsplumb-line {
+                    opacity: 0.4;
+                    z-index: -1;
+                }
+                li>span>.sidenote-box {
+                    margin-left: -150%;
+                }
+            `;
+            document.body.appendChild(styleElement);
 
+            jQueryScript.onload = function () {
+                var jsPlumbScript = document.createElement('script');
+                jsPlumbScript.src = '/jsplumb.min.js';
+                document.head.appendChild(jsPlumbScript);
 
+                var jsPlumbCSS = document.createElement('link');
+                jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
+                jsPlumbCSS.rel = 'stylesheet';
+                document.head.appendChild(jsPlumbCSS);
 
+                jsPlumbScript.onload = function () {
+
+                    jQuery(document).ready(function () {
+                        jsPlumb.importDefaults({
+                            ConnectionsDetachable: false,
+                            ReattachConnections: false,
+                            Endpoint: "Blank", 
+                            Connector: ["Straight"], 
+                            PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 } 
+                        });
+
+                        function createConnections() {
+                            jsPlumb.deleteEveryEndpoint(); 
+
+                            jQuery('.sidenote-number').each(function () {
+                                var sidenoteNumber = jQuery(this);
+                                var sidenote = sidenoteNumber.find('.sidenote');
+
+                                if (sidenote.length) {
+                                    jsPlumb.connect({
+                                        source: sidenoteNumber[0], 
+                                        target: sidenote[0], 
+                                        anchors: ["Center", "RightMiddle"], 
+                                        cssClass: "jsplumb-line" 
+                                    });
+                                }
+                            });
+                        }
+
+                        createConnections();
+
+                        var resizeObserver = new ResizeObserver(function () {
+                            createConnections(); 
+                        });
+                        resizeObserver.observe(document.body);
+
+                    });
+                };
+            };
+        }
+    });
+</script>
+
+<script defer>
+    window.onload = function () {
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    }
+</script>
 
 
 </html>

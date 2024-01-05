@@ -13,7 +13,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.0dd8fb1ec1123ebea1f4dee6db8dbfb8d553f6725001a6aeba5c4930e63f70d5.css" integrity="sha256-Ddj7HsESPr6h9N7m242/uNVT9nJQAaauulxJMOY/cNU=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.31f1d5df46d8094e016de9ee09ffebefc4ea5c565416b459e38b027fda5df864.css" integrity="sha256-MfHV30bYCU4BbenuCf/r78TqXFZUFrRZ44sCf9pd&#43;GQ=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -101,7 +101,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        if (document.querySelector('.han-init-context')) {
+        if (document.querySelector('.content-header')) {
             document.getElementById('show-hypo').style.display = 'flex';
         }
 
@@ -227,7 +227,7 @@
 
 
     function initializeTOCFeatures() {
-        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+        const headers = document.querySelectorAll('h2, h3');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
 
@@ -296,11 +296,103 @@
 </script>
 
 
+<script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
+            var jQueryScript = document.createElement('script');
+            jQueryScript.src = '/jquery-3.6.0.min.js';
+            document.head.appendChild(jQueryScript);
 
+            var sidenoteLines = document.querySelectorAll('.sidenote-line');
+            sidenoteLines.forEach(function (line) {
+                line.style.display = 'none';
+            });
 
+            var styleElement = document.createElement('style');
+            styleElement.innerHTML = `
+                .jsplumb-line {
+                    opacity: 0.4;
+                    z-index: -1;
+                }
+                li>span>.sidenote-box {
+                    margin-left: -150%;
+                }
+            `;
+            document.body.appendChild(styleElement);
 
+            jQueryScript.onload = function () {
+                var jsPlumbScript = document.createElement('script');
+                jsPlumbScript.src = '/jsplumb.min.js';
+                document.head.appendChild(jsPlumbScript);
 
+                var jsPlumbCSS = document.createElement('link');
+                jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
+                jsPlumbCSS.rel = 'stylesheet';
+                document.head.appendChild(jsPlumbCSS);
 
+                jsPlumbScript.onload = function () {
+
+                    jQuery(document).ready(function () {
+                        jsPlumb.importDefaults({
+                            ConnectionsDetachable: false,
+                            ReattachConnections: false,
+                            Endpoint: "Blank", 
+                            Connector: ["Straight"], 
+                            PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 } 
+                        });
+
+                        function createConnections() {
+                            jsPlumb.deleteEveryEndpoint(); 
+
+                            jQuery('.sidenote-number').each(function () {
+                                var sidenoteNumber = jQuery(this);
+                                var sidenote = sidenoteNumber.find('.sidenote');
+
+                                if (sidenote.length) {
+                                    jsPlumb.connect({
+                                        source: sidenoteNumber[0], 
+                                        target: sidenote[0], 
+                                        anchors: ["Center", "RightMiddle"], 
+                                        cssClass: "jsplumb-line" 
+                                    });
+                                }
+                            });
+                        }
+
+                        createConnections();
+
+                        var resizeObserver = new ResizeObserver(function () {
+                            createConnections(); 
+                        });
+                        resizeObserver.observe(document.body);
+
+                    });
+                };
+            };
+        }
+    });
+</script>
+
+<script defer>
+    window.onload = function () {
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    }
+</script>
 
 
 </html>

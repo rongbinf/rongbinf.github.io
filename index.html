@@ -12,7 +12,7 @@
   <meta name="author" content="Rongbin FAN">
 
   <meta property="og:title" content="Rongbin FAN" />
-  <meta property="og:description" content="Thoughts and ideas." />
+  <meta property="og:description" content="Are you willing to, able to, imagine an alternative reality?" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://fanrongbin.com" />
   <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
@@ -38,12 +38,8 @@
 
   <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
 
+  <link rel="stylesheet" href="main.css">
   <script src="/clipboard.min.js"></script>
-
-  <link rel="preload" fetchpriority="high" as="image" href="/dithered-white-10kb.webp" type="image/webp"
-    media="(prefers-color-scheme: dark)">
-  <link rel="preload" fetchpriority="high" as="image" href="/dithered-black-10kb.webp" type="image/webp"
-    media="(prefers-color-scheme: light)">
 
   <script type="application/ld+json">
     {
@@ -55,1064 +51,121 @@
   </script>
 </head>
 
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-     
-
-    --textcolor: #121212;
-    --bgcolor: #fff;
-    --highlight: #009ba0;
-
-  }
-
-  @media (prefers-color-scheme: dark) {
-    * {
-      --textcolor: #dadada;
-      --bgcolor: #141414;
-      --highlight: #009ba0;
-    }
-  }
-
-  @font-face {
-    font-family: 'Route 159';
-    font-style: normal;
-    font-display: swap;
-    src: url(/font/route159/Route159-Regular.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-  @font-face {
-    font-family: 'Route 159';
-    font-style: normal;
-    font-weight: bold;
-    font-display: swap;
-    src: url(/font/route159/Route159-Bold.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-  @font-face {
-    font-family: 'Route 159';
-    font-style: italic;
-    font-display: swap;
-    src: url(/font/route159/Route159-Italic.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-  @font-face {
-    font-family: 'Route 159';
-    font-style: italic;
-    font-weight: bold;
-    font-display: swap;
-    src: url(/font/route159/Route159-BoldItalic.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-
-  body {
-    font-size: 16px;
-    font-family: "Route 159", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
-    line-height: 1.4;
-    color: var(--textcolor);
-    background: var(--bgcolor);
-    position: relative;
-    max-width: 64em;
-     
-    margin: 0 auto;
-     
-  }
-
-   
-
-  section {
-    padding: calc(6em + 5vw) 5vw 8vw 5vw;
-     
-    display: none;
-    position: absolute;
-    top: 0;
-    min-height: 100vh;
-    width: 100%;
-    background: var(--bgcolor);
-  }
-
-  section:target {
-     
-    display: block;
-  }
-
-  section#home {
-     
-    display: block;
-  }
-
-   
-
-  header {
-    padding: 5vw 5vw 0 5vw;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-  }
-
-  header h1 {
-    font-size: 1em;
-    flex: 1;
-     
-    white-space: nowrap;
-    padding: 0 5vw .5em 0;
-  }
-
-  nav a:not(:last-of-type) {
-    margin-right: 1.5vw;
-  }
-
-   
-
-  a {
-    text-decoration: none;
-    color: var(--highlight);
-  }
-
-  a:hover {
-    border-bottom: 1px solid;
-  }
-
-  section h1 {
-    font-size: 1em;
-    margin: 0 0 1em 0;
-  }
-
-  h2,
-  h3,
-  h4 {
-    font-size: 1em;
-    font-weight: 600;
-    margin: 1.6em 0 .6em 0;
-  }
-
-  p,
-  ul,
-  ol,
-  article {
-    max-width: 60ch;
-     
-    margin-bottom: 1em;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-  ul li::marker {
-    content: "\2022   ";
-  }
-
-  li {
-    margin-bottom: .2em;
-  }
-
-  ul,
-  ol {
-    padding-left: 2ch;
-  }
-
-  b,
-  strong {
-    font-weight: 600;
-  }
-
-  small {
-    font-size: .85em;
-    opacity: 0.6;
-  }
-
-  small:hover {
-    opacity: 1;
-  }
-
-  hr {
-    height: 1px;
-    border: 0;
-    background: currentColor;
-    opacity: .1;
-    margin: 1.2em 0;
-  }
-
-  abbr {
-    text-decoration: none;
-  }
-
-  abbr[title]:hover {
-    opacity: .7;
-    cursor: help;
-  }
-
-  blockquote {
-    padding-left: 2ch;
-    opacity: .7;
-    margin-bottom: .6em;
-    position: relative;
-  }
-
-  blockquote:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: .3em;
-    bottom: .3em;
-    background: currentColor;
-    width: 1px;
-    opacity: .2;
-  }
-
-  img,
-  svg,
-  video,
-  audio {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    fill: currentColor;
-  }
-
-  code,
-  textarea {
-    font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
-    font-size: 1em;
-    opacity: .7;
-  }
-
-  a code {
-    opacity: 1;
-  }
-
-  pre,
-  textarea {
-     
-    font-size: .9em;
-    color: inherit;
-    line-height: inherit;
-    padding: .6em .9em;
-    margin: .8em 0 1em 0;
-    position: relative;
-    display: block;
-    width: 100%;
-    white-space: pre;
-    border: 0;
-    border-radius: 4px;
-    background: rgba(255, 255, 100, .075);
-    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .2), inset -1px -1px 0 rgba(0, 0, 0, .04);
-  }
-
-   
-
-  label {
-    cursor: pointer;
-    vertical-align: super;
-    line-height: 1;
-    font-size: .75em;
-    padding-left: .1em;
-  }
-
-  label:hover {
-    color: var(--highlight);
-  }
-
-  label:before {
-    content: "[";
-  }
-
-  label:after {
-    content: "]";
-  }
-
-  label+input,
-  label+input+small {
-    display: none;
-  }
-
-  input:checked+small {
-    display: block;
-    padding: .8em 0 1em 2.5vw;
-    ;
-  }
-
-   
-
-  figure {
-    margin: 2em 0 1.5em 0;
-  }
-
-  figure figcaption {
-    margin: 0.8em 0 0 0;
-    font-size: .85em;
-    opacity: .7;
-  }
-
-   
-
-  figure.video {
-    position: relative;
-    padding-bottom: 56.25%;
-     
-    height: 0;
-    overflow: hidden;
-  }
-
-  figure.video iframe,
-  figure.video object,
-  figure.video embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    visibility: hidden;
-     
-  }
-
-  section:target iframe {
-    visibility: visible;
-  }
-
-   
-
-  a[href*="//"]:after {
-    font-weight: 300;
-    font-size: .85em;
-    content: "\2197";
-     
-    color: var(--textcolor);
-    opacity: .4;
-  }
-
-  a[href*="//"]:hover:after {
-    color: var(--highlight);
-    opacity: 1;
-  }
-
-   
-
-  a:before {
-    font-size: .7em;
-    margin-right: .4em;
-  }
-
-   
-
-  a[href$=".pdf"]:before {
-    content: "PDF";
-  }
-
-  a[href$=".txt"]:before {
-    content: "TXT";
-  }
-
-  a[href$=".mp3"]:before {
-    content: "MP3";
-  }
-
-  a[href$=".zip"]:before {
-    content: "ZIP";
-  }
-
-  a[href$=".rar"]:before {
-    content: "RAR";
-  }
-
-  a[href$=".jpeg"]:before,
-  a[href$=".jpg"]:before,
-  a[href$=".gif"]:before,
-  a[href$=".png"]:before {
-    content: "IMG";
-  }
-
-   
-
-  article+article {
-    margin-top: 4.5em;
-  }
-
-  article h2 {
-    font-weight: 700;
-    margin: 0 0 1em 0;
-  }
-
-  article time {
-    margin-left: .6em;
-    font-size: .8em;
-    font-weight: 400;
-    opacity: .7;
-  }
-
-   
-
-  .grid {
-    display: grid;
-    grid-gap: 5vmin;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-     
-    grid-auto-flow: dense;
-    padding: 2em 0;
-  }
-
-  .grid a {
-    position: relative;
-    border: 0;
-  }
-
-  .grid a:hover {
-    transform: scale(.975);
-  }
-
-   
-  .grid a:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
-  }
-
-  .grid a img {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-   
-
-  .slides {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-  }
-
-  .slides figure {
-    height: 100vh;
-    padding: 0 5vw;
-    margin: 0;
-    display: grid;
-    place-items: center;
-    align-content: center;
-    scroll-snap-align: center;
-  }
-
-  .slides figure img {
-    max-height: 88vh;
-     
-  }
-
-  .slides figure.cover {
-    padding: 0;
-  }
-
-  .slides figure.cover img {
-    max-height: none;
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-  }
-
-   
-
-  .lightbox {
-    display: none;
-    color: var(--textcolor);
-  }
-
-  .lightbox:target {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    align-content: center;
-    background: var(--bgcolor);
-    border: 0;
-    z-index: 3;
-  }
-
-  .lightbox img {
-    max-height: 100vh;
-    z-index: 4;
-  }
-
-  .lightbox:target:before {
-     
-    content: "";
-    height: 2em;
-    width: 2em;
-    animation: spin .8s infinite linear;
-    border: 1px solid;
-    border-right-color: transparent;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    transform: translateX(-50%);
-    opacity: .25;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  .lightbox:target:after {
-     
-    content: "\00D7";
-    position: fixed;
-    font-size: 2em;
-    font-weight: 200;
-    line-height: 0;
-    top: .75em;
-    right: .5em;
-    z-index: 4;
-  }
-
-   
-
-  @media only screen and (max-width: 680px) {
-    body {
-      font-size: 15px;
-    }
-  }
-
-  @media only screen and (max-width: 540px) {
-    nav {
-      width: 100%;
-    }
-
-     
-  }
-
-   
-
-  @media print {
-
-    nav,
-    .lightbox:target:after {
-      display: none;
-    }
-
-    article,
-    figure,
-    img {
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-
-     
-
-    label+input+small {
-      display: inline;
-    }
-
-    label+input+small:before {
-      content: "[";
-    }
-
-    label+input+small:after {
-      content: "]";
-    }
-
-     
-
-    .slides,
-    .slides figure {
-      position: relative;
-      height: auto;
-      padding: 0;
-    }
-
-    .slides figure img,
-    .slides figure.cover img {
-      max-height: auto;
-      position: relative;
-      z-index: 1;
-      width: auto;
-      height: 100vh;
-      object-fit: contain;
-    }
-
-  }
-
-   
-
-  .serif {
-    font-family: et-book, "Biaodian Pro Serif GB", "Numeral LF Serif", "EB Garamond", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, 楷体, cursive, serif;
-  }
-
-  .name {
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
-  }
-
-   
-
-  .footer {
-    font-size: 0.8rem;
-    padding-top: 2rem;
-    line-height: 1.5;
-  }
-
-  .eazy-button {
-    margin: 0 5px;
-    font-size: 1rem;
-  }
-
-  .opacity-6 {
-    opacity: 0.6;
-  }
-
-  .opacity-6:hover {
-    opacity: 1;
-  }
-
-  a[href*="//"]:after { 
-    font-family: Calibri, "Route 159", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
-    font-size: 0.7em;
-    position: relative;
-    top: -0.35em;
-  }
-</style>
-
 <body>
 
-  <header class="navbar">
-    <h1 id="back-home">
-      <a href="#home">Rongbin FAN</a>
-    </h1>
-    <nav>
-      <a id="nav-hello" href="#hello">Hello</a>
-      <a href="/posts">Blog</a>
-      <a href="/links">Guestbook</a>
-      
-    </nav>
-  </header>
+    <main class="main">
 
-  <main>
+        <section class="heading heading-name">
+            <h1>Rongbin FAN</h1>
+        </section>
 
-    <section id="home">
-      <div style="display: inline-flex; align-items: flex-end; margin-bottom: 2rem;">
-        <picture>
-          <source srcset="dithered-white-10kb.webp" media="(prefers-color-scheme:dark)">
-          <img alt="avatar" src="dithered-black-10kb.webp" width="120px" height="120px" style="padding-bottom: 10px">
-        </picture>
-        <div style="flex-direction: column;">
-          <p class="serif name"><strong>Hi, I'm Rongbin.</strong> 👋<br>You can call me Ron.</p>
-        </div>
-      </div>
+        <section class="heading heading-general">
+            <h1 class="intro">Based in Beijing currently.<br><strong>I craft business strategies, products, visual identities and more.</strong></h1>
+        </section>
 
-      <p>
-        I <em class="opacity-6">he/him/his</em> currently live in Beijing, and I study finance at the University of
-        International Business and Economics (UIBE). I'll be graduating in 2024.
-      </p>
+        <section class="color">
+            
+        </section>
 
-      <p>
-        Professionally I envision to craft strategies for businesses and individuals.
-      </p>
+        <section class="context">
+            <a href="/posts"><div class="block block-link">
+                <h2>Blog posts</h2>
+            </div></a>
 
-      <p>
-        I also work freelance as a <a href="https://www.are.na/rongbin-fan/brackets-and-comma"
-          target="_blank">designer</a>, mostly graphics, printings, visual identities, and products. Big fan of ambient
-        music, tech gadgets, new technologies, and productivity tools.
-      </p>
+            <a href=""><div id="post-1" class="block blog-title">
+                <h3 class="h3-blog-title placeholder">Placeholder</h3>
+                <p class="blog-date placeholder">Placeholder</p>
+            </div></a>
 
-      <p style="margin-top: 2rem;">
-        Feel 200% free to reach me via methods listed on <a href="#hello" style="white-space: nowrap;">my hello
-          page</a>. Email will be the fastest.
-      </p>
+            <a href=""><div id="post-2" class="block blog-title">
+                <h3 class="h3-blog-title placeholder">Placeholder</h3>
+                <p class="blog-date placeholder">Placeholder</p>
+            </div></a>
 
-      <p>
-        I speak Chinese <span class="opacity-6"><em>Mandarin, Cantonese, Haklau Min</em></span>, English, Korean. Hope
-        to learn more about you and the world. 🌍
-      </p>
+            <a href=""><div id="post-3" class="block blog-title">
+                <h3 class="h3-blog-title placeholder">Placeholder</h3>
+                <p class="blog-date placeholder">Placeholder</p>
+            </div></a>
 
-      <p style="margin-top: 2rem;">
-        <em>I believe internet should bring us equality/equity.</em>
-      </p>
+            <a href="work"><div class="block block-link">
+                <h2>Work with me</h2>
+            </div></a>
 
-      <p>
-        And I would like to introduce a non-government organisation to you: <a href="#weilan"
-          style="white-space: nowrap;">Wei Lan Library</a> (Wave Library).
-      </p>
+            <a href="contact"><div class="block block-link">
+                <h2>Contact</h2>
+            </div></a>
+
+            <a href="/request"><div class="block block-link">
+                <h2>Request a copy of my CV / Résumé or Portfolio?</h2>
+            </div></a>
+
+        </section>
 
 
-      <div class="footer opacity-6">
-        <p>
-          <a href="#colophon">Colophon</a> | Last updated: Dec 2023 | <a href="/nov-2023.html">Previous Version</a>
-        </p>
-        <script src="https://xandra.cc/safonts/webring.js"></script>
-        <ring-900 site="https://fanrongbin.com/"></ring-900>
-      </div>
+        <section id="footer" class="footer" style="margin-bottom:0;padding-top:2ch;padding-bottom: 0;">
+            <p style="font-style: italic; font-weight: bold;">⨹ Are you willing to, able to, imagine an alternative reality?</p>
+            <p>© 2049</p>
+        </section>
+        <style>*{--g1v5x3-background-color:var(--bg-color);--g1v5x3-text-color:var(--text-color);--g1v5x3-title-color:var(--text-color);--g1v5x3-link-color:var(--link-color);--g1v5x3-padding:0;}</style>
+        <script async src="https://xandra.cc/safonts/webring.js"></script>
 
-    </section>
-
-    <section id="weilan">
-
-      <p class="serif name">
-        <strong>Wei Lan (Wave) Library</strong> is a real, non-government, non-profit organisation aimed at building
-        libraries for <strong>floating children</strong> in China.
-      </p>
-
-      <ul>
-        <li><strong>What's the background?</strong></li>
-        <ul>
-          <li>There are an estimated 292.51 million<label for="fn1">1</label>
-            <input type="checkbox" id="fn1"><small>Source: National
-              Bureau of Statistics, 2021</small> rural migrant
-            workers in China's cities as delivery motorbike-riders, laborers, doorkeepers and at other jobs
-            that urbanites avoid.
-          </li>
-          <li>The children of this floating population are called floating children. </li>
-          <li>The families, holding a rural <em>Hukou</em><label for="fn2">2</label>
-            <input type="checkbox" id="fn2"><small><em>Hukou</em>,
-              China's household registration system, which divides population into two different statuses:
-              agricultural and non-agricultural residency statuses. Yet China provides a wide range of public
-              education, resources in cities, which means only city hukou holders could benefit from, are
-              exceedingly more than schools in rural.</small> and on a tight
-            budget, could only afford low-cost private schools which barely have good education resources,
-            even books.
-          </li>
-          <li>The organisation is aimed at helping these children.</li>
-        </ul>
-        <li><strong>How?</strong></li>
-        <ul>
-          <li>Though some of these schools do receive donations, the lack of teacher and librarian
-            hinders the daily operation of the school library.</li>
-          <li>Here, volunteers from Wei Lan Library take the responsibility by spending one or two days a week, sorting
-            books, helping kids find good ones and maintaining a rather safe environment to study.
-          <li>And they step even further: conduct both quantitative and qualitative research, reach out to publishing
-            houses and enterprises about possibilities to donate, work with press and media, speak out at forums and
-            conferences and so forth.</li>
-        </ul>
-        <li><strong>I'm interested in it! Can I be of help?</strong></li>
-        <ul>
-          <li>Yes! If you are based in China, you are very welcome to be a volunteer on-site to help with the daily
-            operation - this is the key and the heart of the project.</li>
-          <li>If you'd like to support with public communication, promotion, information disclosure, or anything you can
-            think of and willing to, you can always find a place here.</li>
-          <li>Read more about the project on its <a href="https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ"
-              target="_blank">official WeChat account</a> and <a href="http://www.sanzhi.org.cn/?page_id=3922"
-              target="_blank">official website</a> <span class="opacity-6">(Simplified Chinese)</span>. Drop me a
-            message if you don't speak Chinese, and I'm more than happy to help you with learning more about Wei Lan and
-            also the recruitment process.</li>
-        </ul>
-      </ul>
-
-
-    </section>
-
-    <section id="hello">
-
-      <p class="serif name">
-        Hello!
-      </p>
-
-      <p>
-        Email will be the fastest:
-      <ul>
-        <li><a href="mailto:rongbin.fan@outlook.com" rel="me"><strong>mailto: rongbin.fan (at) outlook.com</strong></a>
-          <ul>
-            <li><a class="btn eazy-button opacity-6" data-clipboard-text="rongbin.fan@outlook.com"
-                onclick="this.textContent='email copied!';">copy</a><a class="eazy-button opacity-6" href="/pubkey.asc"
-                target="_blank">PGP key</a><a class="btn eazy-button opacity-6"
-                data-clipboard-text="DC73 DCEC A3DC 9F3D 33F2 4BAC 8A89 772F CE34 82D8"
-                onclick="this.textContent='fingerprint copied!';">copy fingerprint</a></li>
-          </ul>
-        </li>
-        <li><a href="mailto:fanrongbin0201@gmail.com" rel="me">mailto: fanrongbin0201 (at) gmail.com</a>
-          <ul>
-            <li><a class="btn eazy-button opacity-6" data-clipboard-text="fanrongbin0201@gmail.com"
-                onclick="this.textContent='email copied!';">copy</a><a class="eazy-button opacity-6"
-                href="/pubkey-gmail.asc" target="_blank">PGP key</a><a class="btn eazy-button opacity-6"
-                data-clipboard-text="B1B6 76A6 8315 4549 9A92 75C5 482B 5931 599E 1CF9"
-                onclick="this.textContent='fingerprint copied!';">copy fingerprint</a></li>
-          </ul>
-        </li>
-        <li><a href="mailto:202041104@uibe.edu.cn">mailto: 202041104 (at) uibe.edu.cn</a>
-          <ul>
-            <li><a class="btn eazy-button opacity-6" data-clipboard-text="202041104@uibe.edu.cn"
-                onclick="this.textContent='email copied!';">copy</a></li>
-          </ul>
-        </li>
-      </ul>
-      </p>
-
-      <p>
-        Direct messages are easy to start with:
-      <ul>
-        <li><a href="https://t.me/rongbin" target="_blank" rel="me">Telegram</a> @rongbin</li>
-        <li><a href="https://matrix.to/#/@rongbin:matrix.org" target="_blank" rel="me">Matrix.org</a> @rongbin</li>
-        <li><a href="https://discord.com/users/rongbin" target="_blank" rel="me">Discord</a> @rongbin</li>
-      </ul>
-      </p>
-
-      <p>
-        You can also connect me on LinkedIn <a href="https://linkedin.com/in/rongbin-fan" rel="me">/in/rongbin-fan</a>
-        </ul>
-      </p>
-
-      <p>
-        To send <em>encrypted</em> messages, use PGP key<label for="pgp">What is that?</label>
-        <input type="checkbox" id="pgp"><small>
-          <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" target="_blank">Pretty Good Privacy</a> (PGP) is
-          an encryption system used for both sending encrypted emails and encrypting sensitive files. You encrypt your
-          message using <em>my public key</em> and send the message to me, and then I decrpyt your message using <em>my
-            private key</em>.
-        </small> or DM me via Telegram or Matrix. <span class="opacity-6">(end-to-end encryption supported)</span>
-      </p>
-
-      <p>
-        If you have an independent site as well, I'm glad to have you on <a href="/links.html">my guestbook</a>. I'll go
-        and visit you from time to time ;-)
-      </p>
-
-      <p>
-        You can <a href="https://ron.joinperch.com/ama" target="_blank">ask me questions</a> anonymously.
-      </p>
-
-      <p>
-        I've been listening to these <a href="https://dimsum.eu.org/music.html" target="_blank">music</a>.
-      </p>
-
-      <p>
-        Best,<br>Ron
-      </p>
-
-    </section>
-
-    <section id="why-is-having-your-own-website-important">
-
-      <p class="name serif">
-        Why is having your own website important?
-      </p>
-
-      <ol>
-        <li><strong>Platforms are losing their credibility.</strong><br>Your accounts can be easily suspended and even
-          deleted. A personal website offers a stable, independent platform, safeguarding your digital presence against
-          these uncertainties.</li>
-        <li><strong>Your thoughts and ideas are precious to the world.</strong><br>If you don't take the full control
-          (and also the
-          "property") of them, they'll be vanished like dust. A personal website ensures that your intellectual
-          contributions are permanently accessible and under your control.</li>
-        <li><strong>You can be eternal (sounds creepy but still) by having a website.</strong><br>Simply back it up on
-          archive.org (let's assume this platform can last forever), or place your site on a device (e.g. a Raspberry
-          Pi), save some money, and ask a bank or any institute
-          that can keep the device on and online. This provide a form of digital immortality for future creatures to
-          study our naive minds.
-      </ol>
-
-    </section>
-
-    <section id="colophon">
-
-      <p class="name serif">Colophon</p>
-
-      <p>
-        <strong>Homepage</strong>: This page is built on this wonderful <a href="https://john-doe.neocities.org/#home" target="_blank">John Doe Template</a>. Download <a href="/index.html" download="index_template.html">my <code>html</code> file</a> to see how everything is written.
-        <label for="although">Although...</label>
-        <input type="checkbox" id="although"><small>Although it might get unpractical for more than a handful of
-          pages, it
-          comes in handy if all you need is a simple
-          website. <a href="#why-is-having-your-own-website-important">Why is having your own website
-            important?</a></small>
-      </p>
-
-      <p>
-        <strong>Blog:</strong> <a href="https://gohugo.io/" target="_blank">Hugo</a>, typography framework <a href="https://github.com/ethantw/Han" target="_blank">Han</a>. 
-      </p>
-
-      <p>
-        <strong>Host:</strong> This site is hosted on <a href="https://pages.github.com/" target="_blank">Github</a>, automatically deployed by <a href="https://pages.cloudflare.com/" target="_blank">Cloudflare Pages</a>.
-      </p>
-
-      <p>
-        <strong>Font:</strong> <a href="https://dotcolon.net/font/route159/" target="_blank">Route 159</a> as the main display font.
-      </p>
-
-      <p>
-        This site is one of the <a href="https://512kb.club/" target="_blank">512kb.club</a> and <a href="https://1mb.club/" target="_blank">1mb.club</a> members.
-      </p>
-
-      <p>
-        <a href="#what-i-use">What else do I use?</a>
-      </p>
-    </section>
-
-    <section id="what-i-use">
-
-      <p class="name serif">What I use (and recommend)</p>
-
-      <ul>
-        <li><strong>Software / Service:</strong></li>
-        <ul>
-          <li>Writing: Typora</li>
-          <ul>
-            <li>One of the best desktop Markdown editors, cheaper than iA Writer, one-time charges.</li>
-          </ul>
-          <li>Reading: NetNewsWire</li>
-          <ul>
-            <li>Old-fashioned RSS subscription list just makes a lot more sense.</li>
-          </ul>
-          <li>Taking notes / Wiki: Logseq / Obsidian + Cloud + Local Backup</li>
-          <ul>
-            <li>Best way to leave platforms like Notion, take full control of your file and what you gonna put in it.
-            </li>
-          </ul>
-          <li>Mail & Calendar: Thunderbird on Windows, Calendars by Readdle on iOS</li>
-          <ul>
-            <li>Thunderbird is open-source and much lighter than Outlook. Supports iCloud via plugins.</li>
-            <li>Calendars by Readdle has a wonderful monthly view and supports dragging event blocks among days.</li>
-          </ul>
-        </ul>
-        <li><strong>Hardware:</strong></li>
-        <ul>
-          <li>ThinkPad P1 Gen 5</li>
-          <ul>
-            <li>A workstation that'll need to be plugged in all time (only 2~3 hours battery life). Must install
-              TPFanControl if you consider using it in the library. The keyboard is good. Generally okay but not recommend.</li>
-          </ul>
-          <li>MacBook Pro (15-inch, 2017)</li>
-          <ul>
-            <li>Water damage x1 and got repaired by putting in a rice container for a night (don't do that, just go to
-              any store, tear it down and dry it off immediately) and the magic hand of a local shop owner's son;
-              battery dead x1 (and my PCB burnt, cost me ~USD$120 to replace the board). Still functioning well, so
-              durable.</li>
-          </ul>
-          <li>iPhone 13, 256G</li>
-          <ul>
-            <li>Buy a 512G or 1T one if you 1) have 15k+ photos and don't want to subscribe iCloud, 2) <em>can't get rid
-                of WeChat
-              </em>.</li>
-          </ul>
-          <li>iPad mini (6th gen) with Apple Pencil (2nd gen)</li>
-          <ul>
-            <li>Best device to read (anything), and watch (anything).</li>
-          </ul>
-          <li>Apple Watch Series 5</li>
-          <ul>
-            <li>The feature I use everyday is actually the <em>Haptics</em> (vibration) to wake me up or set a timer
-              silently.</li>
-          </ul>
-          <li>AirPods Pro (2nd gen)</li>
-          <ul>
-            <li>A good pair of earphones for commuting.</li>
-          </ul>
-          <li>HP DHH-3113</li>
-          <ul>
-            <li>A good pair of wired earphones with two mics, very good for online meetings.</li>
-          </ul>
-          <li>DOIO KB16B-02</li>
-          <ul>
-            <li>There are a bunch of similar devices out there, such as the fancy Stream Deck. As long as you can have
-              about 5~10 additional keys to customise I think they're all the same (functionally).</li>
-          </ul>
-          <li>Magic Keyboard (1st gen, Korean layout)</li>
-          <ul>
-            <li>A quality and durable one speaking of chattering and noise, got it secondhand ~USD$20. But you gotta
-              bear with charging batteries. It actually helped me speed up learning to type Korean.</li>
-          </ul>
-        </ul>
-        <li><strong>Daily life:</strong></li>
-        <ul>
-          <li>Thermos JNL-352 ALB (350mL)</li>
-          <ul>
-            <li>Classic.</li>
-          </ul>
-        </ul>
-      </ul>
-
-    </section>
-
-  </main>
-
+    </main>
 </body>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-      function updateLinkStyleBasedOnHash() {
-          var link = document.getElementById('nav-hello');
-          if (window.location.hash === '#hello') {
-              link.style.fontWeight = 'bold';
-
-              loadClipboardScript();
-          } else {
-              link.style.fontWeight = 'normal';
-          }
-      }
-
-      function loadClipboardScript() {
-          if (!document.getElementById('clipboard-script')) {
-              var script = document.createElement('script');
-              script.id = 'clipboard-script';
-              script.src = '/clipboard.min.js';
-              document.body.appendChild(script);
-
-              script.onload = function() {
-                  var clipboard = new ClipboardJS('.btn');
-
-                  clipboard.on('success', function (e) {
-                      console.info('Action:', e.action);
-                      console.info('Text:', e.text);
-                      console.info('Trigger:', e.trigger);
-
-                      e.clearSelection();
-                  });
-
-                  clipboard.on('error', function (e) {
-                      console.error('Action:', e.action);
-                      console.error('Trigger:', e.trigger);
-                  });
-              };
-          }
-      }
-
-      updateLinkStyleBasedOnHash();
-      window.addEventListener('hashchange', updateLinkStyleBasedOnHash);
-  });
-</script>
-
+    function updatePosts(data) {
+      data.forEach((post, index) => {
+        const postDiv = document.getElementById(`post-${index + 1}`);
+        if (postDiv) {
+          const titleElement = postDiv.querySelector('.h3-blog-title');
+          const dateElement = postDiv.querySelector('.blog-date');
+          
+          titleElement.textContent = post.title;
+          titleElement.classList.remove('placeholder');
+          dateElement.textContent = post.date;
+          dateElement.classList.remove('placeholder');
+          
+          postDiv.parentNode.href = post.url;
+        }
+      });
+    }
+  
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('https://post-fetch.fanrongbin.com')
+        .then(response => response.json())
+        .then(data => updatePosts(data))
+        .catch(error => console.error('Error fetching posts:', error));
+    });
+  </script>
 
 <script defer>
-  window.onload = function () {
-    document.addEventListener('touchstart', function (event) {
-      if (event.touches.length > 1) {
-        event.preventDefault();
-      }
-    });
-    var lastTouchEnd = 0;
-    document.addEventListener('touchend', function (event) {
-      var now = (new Date()).getTime();
-      if (now - lastTouchEnd <= 300) {
-        event.preventDefault();
-      }
-      lastTouchEnd = now;
-    }, false);
-    document.addEventListener('gesturestart', function (event) {
-      event.preventDefault();
-    });
-  }
+document.addEventListener('DOMContentLoaded', function() {
+    const footerSection = document.getElementById('footer');
+    let isOriginalContent = true;
+
+    const originalContent = footerSection.innerHTML;
+    const newContent = `
+        <p>⨺ <a href="/wei-lan">Wei Lan Library</a></p>
+        <p><a href="/colophon">Colophon</a></p>
+        <ring-900 site="https://fanrongbin.com/"></ring-900>
+    `;
+
+    if (footerSection) {
+        footerSection.addEventListener('click', function(event) {
+            if (!event.target.closest('a')) {
+                if (isOriginalContent) {
+                    footerSection.innerHTML = newContent;
+                } else {
+                    footerSection.innerHTML = originalContent;
+                }
+                isOriginalContent = !isOriginalContent;
+            }
+        });
+    }
+});
+
 </script>
+  
+  
 
 </html>

@@ -13,7 +13,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.0dd8fb1ec1123ebea1f4dee6db8dbfb8d553f6725001a6aeba5c4930e63f70d5.css" integrity="sha256-Ddj7HsESPr6h9N7m242/uNVT9nJQAaauulxJMOY/cNU=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.31f1d5df46d8094e016de9ee09ffebefc4ea5c565416b459e38b027fda5df864.css" integrity="sha256-MfHV30bYCU4BbenuCf/r78TqXFZUFrRZ44sCf9pd&#43;GQ=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -65,6 +65,13 @@
   </div>
 
 </section>
+
+<style>
+  div.color {
+    background: linear-gradient(var(--textcolor) 0,transparent 25%);
+    opacity: .5;
+  }
+</style>
 
 
     <div class="color"></div>
@@ -147,12 +154,12 @@ tl;dr 小结
 <p>两张表讲完：[如果表格显示有误，可以在此查看<code>png</code>文件：<a href="https://img.fanrongbin.com/honorific-ko-1.png">1.높임등급</a> / <a href="https://img.fanrongbin.com/honorific-ko-2.png">2.종결어미</a> / <a href="https://img.fanrongbin.com/honorific-ko-3.png">3.종결어미:하다</a>]</p>
 <p><img src="https://img.fanrongbin.com/honorific-ko-1.svg" alt=""></p>
 <p><img src="https://img.fanrongbin.com/honorific-ko-2.svg" alt=""></p>
-<p>对应的英文(Pak 2008)<label for="marginnote-1" class="margin-toggle marginnote-ind"></label>
-<input type="checkbox" id="marginnote-1" class="margin-toggle"/>
-<span class="marginnote">
-Pak, Miok D. 2008. <em>Types of Clauses and Sentence End Particles in Korean</em>. Korean Linguistics 14 (1): 113–56. <a href="https://doi.org/10.1075/kl.14.06mdp">https://doi.org/10.1075/kl.14.06mdp</a>.
-</span>
-：</p>
+<p>对应的英文如下(Pak 2008)：<span class="sidenote-number">
+    <span class="sidenote-box">
+        <small class="sidenote">Pak, Miok D. 2008. <em>Types of Clauses and Sentence End Particles in Korean</em>. Korean Linguistics 14 (1): 113–56. <a href="https://doi.org/10.1075/kl.14.06mdp">https://doi.org/10.1075/kl.14.06mdp</a>.</small>
+        <span class="sidenote-line"></span>
+    </span>
+</span></p>
 <ul>
 <li>합쇼체(하십시오체)：formal style<br></li>
 <li>하오체：semiformal style<br></li>
@@ -181,12 +188,12 @@ Pak, Miok D. 2008. <em>Types of Clauses and Sentence End Particles in Korean</em
 </h2>
 <p>在听者身份高于主体时使用，即不再对句子里的主体使用敬语。</p>
 <p>目前，<span class="newthought">压尊法已经被废止</span>
-<label for="sidenote-1" class="margin-toggle sidenote-number">(1)</label>
-<input type="checkbox" id="sidenote-1" class="margin-toggle"/>
-<span class="sidenote">
-<span class="sidenote-number">(1)</span>过往在韩国军队或是企业中，由于不熟悉上下级关系而未用、错用压尊法，以至于受恶意相向的情况非常多。韩国军队已在 2016 年废止使用压尊法，국립국어원出版的语言手册也列明其现代韩语只在家庭、师生关系中被使用，压尊法在社会上逐渐淡出。但，毕竟无法影响所有人，仍存在许多比较保守的军队单位、企业在使用。
-</span>
-，现代韩语只在家庭、师生关系中使用。在职场中，一般只使用“一半”：<u>对谓词使用敬语，但对主体的<strong>助词</strong>不使用。</u>不过随着语言和社会的变迁，家庭中使用“一半”的情况也越来越多。</p>
+<span class="sidenote-number">
+    <span class="sidenote-box">
+        <small class="sidenote">过往在韩国军队或是企业中，由于不熟悉上下级关系而未用、错用压尊法，以至于受恶意相向的情况非常多。韩国军队已在 2016 年废止使用压尊法，국립국어원出版的语言手册也列明其现代韩语只在家庭、师生关系中被使用，压尊法在社会上逐渐淡出。但，毕竟无法影响所有人，仍存在许多比较保守的军队单位、企业在使用。</small>
+        <span class="sidenote-line"></span>
+    </span>
+</span>，现代韩语只在家庭、师生关系中使用。在职场中，一般只使用“一半”：<u>对谓词使用敬语，但对主体的<strong>助词</strong>不使用。</u>不过随着语言和社会的变迁，家庭中使用“一半”的情况也越来越多。</p>
 <blockquote>
 <ul>
 <li>사장님, 부장님 <u>오셨습니다</u>. (✅ 一半)</li>
@@ -263,7 +270,7 @@ Pak, Miok D. 2008. <em>Types of Clauses and Sentence End Particles in Korean</em
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        if (document.querySelector('.han-init-context')) {
+        if (document.querySelector('.content-header')) {
             document.getElementById('show-hypo').style.display = 'flex';
         }
 
@@ -389,7 +396,7 @@ Pak, Miok D. 2008. <em>Types of Clauses and Sentence End Particles in Korean</em
 
 
     function initializeTOCFeatures() {
-        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+        const headers = document.querySelectorAll('h2, h3');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
 
@@ -458,11 +465,103 @@ Pak, Miok D. 2008. <em>Types of Clauses and Sentence End Particles in Korean</em
 </script>
 
 
+<script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
+            var jQueryScript = document.createElement('script');
+            jQueryScript.src = '/jquery-3.6.0.min.js';
+            document.head.appendChild(jQueryScript);
 
+            var sidenoteLines = document.querySelectorAll('.sidenote-line');
+            sidenoteLines.forEach(function (line) {
+                line.style.display = 'none';
+            });
 
+            var styleElement = document.createElement('style');
+            styleElement.innerHTML = `
+                .jsplumb-line {
+                    opacity: 0.4;
+                    z-index: -1;
+                }
+                li>span>.sidenote-box {
+                    margin-left: -150%;
+                }
+            `;
+            document.body.appendChild(styleElement);
 
+            jQueryScript.onload = function () {
+                var jsPlumbScript = document.createElement('script');
+                jsPlumbScript.src = '/jsplumb.min.js';
+                document.head.appendChild(jsPlumbScript);
 
+                var jsPlumbCSS = document.createElement('link');
+                jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
+                jsPlumbCSS.rel = 'stylesheet';
+                document.head.appendChild(jsPlumbCSS);
 
+                jsPlumbScript.onload = function () {
+
+                    jQuery(document).ready(function () {
+                        jsPlumb.importDefaults({
+                            ConnectionsDetachable: false,
+                            ReattachConnections: false,
+                            Endpoint: "Blank", 
+                            Connector: ["Straight"], 
+                            PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 } 
+                        });
+
+                        function createConnections() {
+                            jsPlumb.deleteEveryEndpoint(); 
+
+                            jQuery('.sidenote-number').each(function () {
+                                var sidenoteNumber = jQuery(this);
+                                var sidenote = sidenoteNumber.find('.sidenote');
+
+                                if (sidenote.length) {
+                                    jsPlumb.connect({
+                                        source: sidenoteNumber[0], 
+                                        target: sidenote[0], 
+                                        anchors: ["Center", "RightMiddle"], 
+                                        cssClass: "jsplumb-line" 
+                                    });
+                                }
+                            });
+                        }
+
+                        createConnections();
+
+                        var resizeObserver = new ResizeObserver(function () {
+                            createConnections(); 
+                        });
+                        resizeObserver.observe(document.body);
+
+                    });
+                };
+            };
+        }
+    });
+</script>
+
+<script defer>
+    window.onload = function () {
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    }
+</script>
 
 
 </html>

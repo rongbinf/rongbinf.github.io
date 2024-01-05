@@ -19,7 +19,7 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
 
 
 
-      <link rel="stylesheet" href="/css/main.min.0dd8fb1ec1123ebea1f4dee6db8dbfb8d553f6725001a6aeba5c4930e63f70d5.css" integrity="sha256-Ddj7HsESPr6h9N7m242/uNVT9nJQAaauulxJMOY/cNU=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.31f1d5df46d8094e016de9ee09ffebefc4ea5c565416b459e38b027fda5df864.css" integrity="sha256-MfHV30bYCU4BbenuCf/r78TqXFZUFrRZ44sCf9pd&#43;GQ=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -77,6 +77,13 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
 
 </section>
 
+<style>
+  div.color {
+    background: linear-gradient(var(--textcolor) 0,transparent 25%);
+    opacity: .5;
+  }
+</style>
+
 
     <div class="color"></div>
   <main>
@@ -88,7 +95,6 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
 <a href="#%e8%8a%af%e7%89%87%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f" class="heading-anchor">#</a>
 </h2>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
-<style>@media screen and (min-width: 1080px){ ol, ul, dl {width: 60%;}}</style>
 <p><img src="https://img.fanrongbin.com/pako_eNp9VVtPG1cQ_iurfWqlsBW4NBGq8hKnUqRGpSJKH7w8rO0FW7INctaqqiiSQ3xZO2ASbCjGFzDEYGixTdpg1xf8Z3bOOfvEX-gcH9uBiPZp58zMmW9mzjezL2XPileX5-SlwMqvHp8WNqRnTjWkGi8i7uWwtuqTphWSv4RiAtIH0Kpyk6ZNu1TZzrbt3Pn37vBDMBP0uEs239FOg.svg" alt=""></p>
 <p>参考自泛林集团科普文章：<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjc5MzEyMA==&amp;mid=2653071344&amp;idx=1&amp;sn=5afa34f0343fe651c352fb1db90e4078&amp;chksm=81130c3fb66485295c95b0ebc4e5809c476ec251c6744f70ab90a44ca5a541c49441ccf3ba7b">上篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sDeMcxJTa97kEv4PTwKJHS8sKsbm7TCcVpKdw5j-GkNlI6B8zB3SOQudBhCx*Q*bikIKvrrxLbecGT*jbEQgSM1&amp;new=1">中篇</a>、<a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1643333829&amp;ver=3585&amp;signature=6IlC6FZHoNgcGlFXYQmK00U0kkordqNzxXlGsuIi0sBk7gTvrMy2efEIgPI-nvRVI4eGDu1UKmkBgwpES6RWt2*uv5-F6UX4qWh*0OTkISc77QkceIHU7l0o6yuay4gx&amp;new=1">下篇</a>。英文对照请见<a href="#%E8%8A%AF%E7%89%87%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%BA%8F%E8%8B%B1%E6%96%87%E4%B8%8D%E5%AE%8C%E5%85%A8%E5%AF%B9%E7%85%A7">文末</a>。你也可以<a href="https://www.tel.com/museum/exhibition/process/">按此访问</a>东京威力科创制作的工序介绍。</p>
 <p>制作工序可分为前、后两道。前道包括 1.晶圆加工 → 7.测试，后道包括 8.封装 及后期测试、其他组装、成品入库等。</p>
@@ -186,7 +192,8 @@ Foundry：晶圆代工，负责晶圆制造、封装或测试中的一个或多�
 <hr>
 <p>CIM 主体包括 <strong>MES</strong> 和 <strong>EAP</strong>。MES 负责车间生产管理和调度执行，实时监控生产过程并响应状态变化。EAP 对接 MES 和机台设备，负责信息传输、数据搜集、流程控制和异常捕捉。因而 APC、FDC、 PMS 等系统通常都围绕 EAP 运作。</p>
 <p>EAP 与 MES 等其他系统间通讯采用 Tibco RV 协议、与机台设备间通讯采用 SECS/GEM 等等协议。</p>
-<pre class="mermaid">
+<div style="display:none">
+<!--<pre class="mermaid">
 classDiagram
 	class 计划层{
 		 ERP/SCM/PLM
@@ -201,7 +208,11 @@ classDiagram
 	}
 	计划层 <--> CIM
 	CIM <--> 一般控制层 : SECS/GEM
-</pre>
+</pre> -->
+</div>
+<div style="max-width:40%">
+<p><img src="https://img.fanrongbin.com/mermaid-diagram-2024-01-05-191529.svg" alt=""></p>
+</div>
 <h3 id="市场主要厂商">
 市场主要厂商
 <a href="#%e5%b8%82%e5%9c%ba%e4%b8%bb%e8%a6%81%e5%8e%82%e5%95%86" class="heading-anchor">#</a>
@@ -245,30 +256,35 @@ EAP：搜集信息、传达指令
 </h2>
 <p>EAP 上接 MES，下接机台设备。MES 所管理的各项数据都来自 EAP。EAP 先搜集所有生产数据和机台状态数据，再经由特定通讯协议传送到 MES 数据库，MES 再借由数据分析监控设备和生产流程。其同时也是整个 CIM 中其他模块的数据源。</p>
 <p>例如生产状态的变化：由 EAP <strong>告知</strong> MES 一批货物状态的变化，MES <strong>改变</strong>这批货物的状态。</p>
-<pre class="mermaid">
-stateDiagram
-	s1: 计划(planned)
-	s2: 激活(activated)
-	s3: 等待处理(waiting)
-	s4: 结束(completed)
-	s5: 派工(dispatch)
-	s6: 正在加工(processing)
-	s7: 加工完成(finish)
-	[*]-->s1
-	s1-->s2:分配输送盒
-	s2-->s3
-	s3-->s2:解除等待
-	s2-->s5
-	s5-->s2:解除派工
-	s5-->s6:移入加工
-	s6-->s5:取消移入
-	s6-->s7
-	s7-->s3
-	s3-->s7
-	s7-->s4
-	s2-->s4
-	s3-->s5
-</pre>
+<div style="display:none">
+    <pre class="mermaid">
+    stateDiagram
+        s1: 计划(planned)
+        s2: 激活(activated)
+        s3: 等待处理(waiting)
+        s4: 结束(completed)
+        s5: 派工(dispatch)
+        s6: 正在加工(processing)
+        s7: 加工完成(finish)
+        [*]-->s1
+        s1-->s2:分配输送盒
+        s2-->s3
+        s3-->s2:解除等待
+        s2-->s5
+        s5-->s2:解除派工
+        s5-->s6:移入加工
+        s6-->s5:取消移入
+        s6-->s7
+        s7-->s3
+        s3-->s7
+        s7-->s4
+        s2-->s4
+        s3-->s5
+    </pre>
+</div>
+<div style="max-width:60%">
+<p><img src="https://img.fanrongbin.com/mermaid-diagram-2024-01-05-191658.svg" alt=""></p>
+</div>
 <p>对比单纯进行数据采集和一定图形界面化呈现的 SCADA，EAP 能配合其他模块达到生产自动化的要求、作为管理平台、融合 <ruby>BI<rt>商业智能</rt></ruby>（business intelligence）分析。</p>
 <h2 id="apc管控过程提升良率">
 APC：管控过程、提升良率
@@ -291,34 +307,38 @@ APC：管控过程、提升良率
 芯片制作工序：英文不完全对照
 <a href="#%e8%8a%af%e7%89%87%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%ba%8f%e8%8b%b1%e6%96%87%e4%b8%8d%e5%ae%8c%e5%85%a8%e5%af%b9%e7%85%a7" class="heading-anchor">#</a>
 </h2>
-<pre class="mermaid">
-flowchart TD
-	subgraph a[1.Wafer Processing]
-	a1[Cast]-->a2[Slice]-->a3[Polish the surface]
-	end
-	subgraph b[2.Exposed to oxygen]
-	b1[Clean]-->b2[Exposed to oxygen<br>at high temperatures<br>to create a layer of silicon oxide]-->b3[Layer Thickness Test]
-	end
-	subgraph c[3.Lithography]
-	c1[Apply a UV-sensitive photoresist on the surface]-->c2[Irradiate the UV light to transfer the pattern onto the photoresist]-->c3[Remove unexposed area]
-	end
-	subgraph d[4.Etching and Removing]
-	d1[To etch films of unmasked area and remove the photoresist]
-	end
-	subgraph e[5.Film Depositing]
-	e1[using CVD or PVD]
-	end
-	subgraph f[6.Interconnect Formation]
-	f1[To form wiring layers]
-	end
-	subgraph g[7.Wafer Testing]
-	g1[EDS]
-	end
-	subgraph h[8.Assembly and Testing]
-	h1[Cut into die]-->h2[Attached to the package substrate]-->h3[Connected to inner leads]-->h4[Sealed in an epoxy resin envelope]-->h5[Test]
-	end
-	mm("(IC Design)")-->a-->b-->c-->d-->e-->f-->g-->h
-</pre>
+<div style="display:none">
+    <pre class="mermaid">
+    flowchart TD
+        subgraph a[1.Wafer Processing]
+        a1[Cast]-->a2[Slice]-->a3[Polish the surface]
+        end
+        subgraph b[2.Exposed to oxygen]
+        b1[Clean]-->b2[Exposed to oxygen<br>at high temperatures<br>to create a layer of silicon oxide]-->b3[Layer Thickness Test]
+        end
+        subgraph c[3.Lithography]
+        c1[Apply a UV-sensitive photoresist on the surface]-->c2[Irradiate the UV light to transfer the pattern onto the photoresist]-->c3[Remove unexposed area]
+        end
+        subgraph d[4.Etching and Removing]
+        d1[To etch films of unmasked area and remove the photoresist]
+        end
+        subgraph e[5.Film Depositing]
+        e1[using CVD or PVD]
+        end
+        subgraph f[6.Interconnect Formation]
+        f1[To form wiring layers]
+        end
+        subgraph g[7.Wafer Testing]
+        g1[EDS]
+        end
+        subgraph h[8.Assembly and Testing]
+        h1[Cut into die]-->h2[Attached to the package substrate]-->h3[Connected to inner leads]-->h4[Sealed in an epoxy resin envelope]-->h5[Test]
+        end
+        mm("(IC Design)")-->a-->b-->c-->d-->e-->f-->g-->h
+    </pre>
+</div>
+<p><img src="https://img.fanrongbin.com/mermaid-diagram-2024-01-05-191742.svg" alt=""></p>
+
 
 
   </main>
@@ -356,7 +376,7 @@ flowchart TD
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        if (document.querySelector('.han-init-context')) {
+        if (document.querySelector('.content-header')) {
             document.getElementById('show-hypo').style.display = 'flex';
         }
 
@@ -482,7 +502,7 @@ flowchart TD
 
 
     function initializeTOCFeatures() {
-        const headers = document.querySelectorAll('h2, h3, h4, h5, h6');
+        const headers = document.querySelectorAll('h2, h3');
         const contentsFixedDiv = document.getElementById('contents-fixed');
         const tocContainer = document.getElementById('contents-toc');
 
@@ -551,11 +571,103 @@ flowchart TD
 </script>
 
 
+<script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
+            var jQueryScript = document.createElement('script');
+            jQueryScript.src = '/jquery-3.6.0.min.js';
+            document.head.appendChild(jQueryScript);
 
+            var sidenoteLines = document.querySelectorAll('.sidenote-line');
+            sidenoteLines.forEach(function (line) {
+                line.style.display = 'none';
+            });
 
+            var styleElement = document.createElement('style');
+            styleElement.innerHTML = `
+                .jsplumb-line {
+                    opacity: 0.4;
+                    z-index: -1;
+                }
+                li>span>.sidenote-box {
+                    margin-left: -150%;
+                }
+            `;
+            document.body.appendChild(styleElement);
 
+            jQueryScript.onload = function () {
+                var jsPlumbScript = document.createElement('script');
+                jsPlumbScript.src = '/jsplumb.min.js';
+                document.head.appendChild(jsPlumbScript);
 
+                var jsPlumbCSS = document.createElement('link');
+                jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
+                jsPlumbCSS.rel = 'stylesheet';
+                document.head.appendChild(jsPlumbCSS);
 
+                jsPlumbScript.onload = function () {
+
+                    jQuery(document).ready(function () {
+                        jsPlumb.importDefaults({
+                            ConnectionsDetachable: false,
+                            ReattachConnections: false,
+                            Endpoint: "Blank", 
+                            Connector: ["Straight"], 
+                            PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 } 
+                        });
+
+                        function createConnections() {
+                            jsPlumb.deleteEveryEndpoint(); 
+
+                            jQuery('.sidenote-number').each(function () {
+                                var sidenoteNumber = jQuery(this);
+                                var sidenote = sidenoteNumber.find('.sidenote');
+
+                                if (sidenote.length) {
+                                    jsPlumb.connect({
+                                        source: sidenoteNumber[0], 
+                                        target: sidenote[0], 
+                                        anchors: ["Center", "RightMiddle"], 
+                                        cssClass: "jsplumb-line" 
+                                    });
+                                }
+                            });
+                        }
+
+                        createConnections();
+
+                        var resizeObserver = new ResizeObserver(function () {
+                            createConnections(); 
+                        });
+                        resizeObserver.observe(document.body);
+
+                    });
+                };
+            };
+        }
+    });
+</script>
+
+<script defer>
+    window.onload = function () {
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    }
+</script>
 
 
 </html>

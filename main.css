@@ -13,7 +13,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--sans);
-    transition: all .1s cubic-bezier(0.33, 1, 0.68, 1);
+    transition: all .2s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 ::selection {
@@ -63,13 +63,15 @@ a:visited {
 }
 
 p>a,
-div>a {
+div>a,
+strong>a {
     border-bottom: 2px solid var(--link-color);
     padding: 1px;
 }
 
 p>a:hover,
-div>a:hover {
+div>a:hover,
+strong>a:hover {
     background: var(--link-color);
     color: #fff;
 }
@@ -109,10 +111,16 @@ em {
 
 .footer {
     grid-column: 2 / span 4;
-    padding-top: 5vw;
+    /* padding-top: 5vw; */
     opacity: 0.5;
     display: flex;
     justify-content: space-between;
+    /* align-items: center; */
+    cursor: help;
+}
+
+.footer:hover {
+    opacity: 1;
 }
 
 /* styling */
@@ -167,6 +175,59 @@ em {
 .block-button-link {
     padding: 2ch;
 }
+
+.h3-blog-title {
+    margin: 1ch 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-inline-start: 2rem;
+}
+
+.blog-date {
+    margin: 0 0 2ch;
+    padding: 0;
+    line-height: 0;
+    font-size: .8em;
+    opacity: .5;
+    margin-inline-start: 2rem;
+}
+
+.work-content {
+    display: none;
+}
+
+@keyframes shimmerAnimation {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: -100%;
+    }
+}
+
+.placeholder {
+    background: linear-gradient(to right, #f0f0f0 0%, #ffffff 40%, #f0f0f0 80%);
+    background-size: 100% 100%;
+    color: transparent;
+    animation: shimmerAnimation 2s infinite linear;
+}
+
+.h3-blog-title.placeholder,
+.blog-date.placeholder {
+    /* height: 1.2em; */
+    width: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+    .placeholder {
+        background: linear-gradient(to right, #161616 0%, #313131 40%, #161616 80%);
+        background-size: 100% 100%;
+        color: transparent;
+        animation: shimmerAnimation 2s infinite linear;
+    }
+}
+  
 
 /* form  */
 
