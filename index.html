@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script defer>
 function changeBackgroundColor() {
     var section = document.querySelector('.color');
-    var colors = ['var(--color-block-bg-color)', 'var(--link-color)', 'var(--text-color)', '#09ff00', '#ff4e8a', '#eeeeee'];
+    var colors = ['var(--color-block-bg-color)', 'var(--link-color)', 'var(--text-color)', '#eeeeee'];
     var randomColor = colors[Math.floor(Math.random() * colors.length)];
     section.style.background = randomColor;
 }
