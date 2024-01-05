@@ -167,26 +167,16 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script defer>
-    var intervalId;
-
-    function changeBackgroundColor() {
-        if (window.matchMedia("(min-width: 1000px)").matches) {
-            var section = document.querySelector('.color');
-            var colors = ['var(--color-block-bg-color)', 'var(--link-color)', 'var(--text-color)', '#eeeeee'];
-            var randomColor = colors[Math.floor(Math.random() * colors.length)];
-            section.style.background = randomColor;
-        }
+function changeBackgroundColor() {
+    var section = document.querySelector('.color');
+    if (section.clientHeight !== 0) {
+        var colors = ['var(--color-block-bg-color)', 'var(--link-color)', 'var(--text-color)', '#eeeeee'];
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        section.style.background = randomColor;
     }
+}
 
-    function setupInterval() {
-        clearInterval(intervalId);
-        if (window.matchMedia("(min-width: 1000px)").matches) {
-            intervalId = setInterval(changeBackgroundColor, 4500);
-        }
-    }
-
-    window.onload = setupInterval;
-    window.onresize = setupInterval;
+setInterval(changeBackgroundColor, 4500);
 </script>
 
 
