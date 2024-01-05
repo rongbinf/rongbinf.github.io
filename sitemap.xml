@@ -2,12 +2,12 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://fanrongbin.com/colophon/</loc><lastmod>2024-01-01T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/</loc><lastmod>2024-01-05T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/tags/static-blog/</loc><lastmod>2024-01-05T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/tags/</loc><lastmod>2024-01-05T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/blog-theme-changed/</loc><lastmod>2024-01-05T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/posts/</loc><lastmod>2023-11-22T00:00:00&#43;00:00</lastmod></url><url>
-            <loc>https://fanrongbin.com/</loc><lastmod>2023-11-22T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/oblique-strategies/</loc><lastmod>2023-11-22T00:00:00&#43;00:00</lastmod></url><url>
-            <loc>https://fanrongbin.com/tags/static-blog/</loc><lastmod>2023-11-18T00:00:00&#43;00:00</lastmod></url><url>
-            <loc>https://fanrongbin.com/tags/</loc><lastmod>2023-11-18T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/github-actions-deploy-hugo/</loc><lastmod>2023-11-18T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/hugo-hanzi-pro/</loc><lastmod>2023-11-18T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/tags/hybrid/</loc><lastmod>2023-02-16T00:00:00&#43;08:00</lastmod></url><url>
@@ -55,6 +55,7 @@
             <loc>https://fanrongbin.com/using-default-fonts-in-web-design/</loc><lastmod>2017-02-06T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/running-productive-design-critiques/</loc><lastmod>2016-12-18T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/danshari/</loc><lastmod>2016-11-20T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/colophon/</loc><lastmod>2002-01-01T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/wei-lan/</loc><lastmod>2002-01-01T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/categories/</loc></url><url>
             <loc>https://fanrongbin.com/series/</loc></url></urlset>
