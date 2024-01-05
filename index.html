@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.121.1">
+	<meta name="generator" content="Hugo 0.121.2">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -165,7 +165,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 </script>
-  
-  
+
+<script defer>
+function changeBackgroundColor() {
+    var section = document.querySelector('.color');
+    var colors = ['var(--color-block-bg-color)', 'var(--link-color)', 'var(--text-color)', '#09ff00', '#ff4e8a', '#eeeeee'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    section.style.background = randomColor;
+}
+
+setInterval(changeBackgroundColor, 4500);
+</script>
+
+
+<script defer>
+    window.onload = function () {
+      document.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      });
+      var lastTouchEnd = 0;
+      document.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
+      document.addEventListener('gesturestart', function (event) {
+        event.preventDefault();
+      });
+    }
+  </script>
 
 </html>
