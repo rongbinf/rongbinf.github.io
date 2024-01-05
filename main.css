@@ -158,7 +158,7 @@ em {
     padding-bottom: 3vh;
 }
 
-.block-link:hover {
+.block-link:hover, .block-link:active, .block-link:focus {
     background: var(--link-color);
     color: #fff;
 }
