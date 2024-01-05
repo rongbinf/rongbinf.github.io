@@ -162,12 +162,12 @@ em {
     padding-bottom: 3vh;
 }
 
-.block-link:hover, .block-link:active, .block-link:focus {
+.block-link:hover, .block-link:active, .block-link:focus, .block-link:focus-visible {
     background: var(--link-color);
     color: #fff;
 }
 
-.blog-title:hover {
+.blog-title:hover, .blog-title:active, .blog-title:focus, .blog-title:focus-visible {
     outline: 5px solid var(--text-color);
 }
 
