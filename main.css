@@ -1,8 +1,10 @@
 * {
-    --sans: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-    --serif: Georgia, "Minion Pro", Palatino, "Adobe Garamond Pro", "Times New Roman", serif;
-    --mono: monospace;
-    --arrow: Calibri, Avenir, Helvetica, Arial, sans-serif;
+    --serif: Georgia, et-book, "Numeral LF Serif", "Han Songti GB", "Noto Serif SC", "Noto Serif KR", Batang, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif, "Noto Emoji";
+    --kai: Georgia, et-book, "Numeral LF Serif", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, "Times New Roman", "Han Kaiti GB", STKaiti, Kaiti, "Kaiti SC", Kai, FZKaiti, "Noto Serif SC", "Noto Serif KR", Batang, cursive, serif, "Noto Emoji";
+    --sans: "Helvetica Neue", Helvetica, Arial, Verdana, -apple-system, BlinkMacSystemFont, Avenir, "Segoe UI Variable", "Segoe UI", "Han Heiti GB", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji";
+    --arrow: Calibri, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
+    --mono: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+    
     --bg-color: #fff;
     --link-color: #0026ff;
     --text-color: #000;
