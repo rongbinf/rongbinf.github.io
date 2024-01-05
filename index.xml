@@ -3554,13 +3554,16 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
     visibility: hidden;
   }
 
-	@media (max-width: 1200px) {
-		.profile-grid {
-		grid-template-columns: repeat(4, minmax(0,1fr));
-	}
+	@media (min-width: 1200px) {
+		main {grid-column:2/6;}
   }
+  
+  	@media (max-width: 1400px) {
+  	.profile-grid {grid-template-columns: repeat(4, minmax(0,1fr));}
+  	}
+  
 	@media (max-width: 1000px) {
-		main, .guestbook-comment {grid-column:1/-1;}
+		main, #giscus {grid-column:1/-1;}
 	}
 
   @media only screen and (max-width: 830px) {
