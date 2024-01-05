@@ -9,7 +9,7 @@
     <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>更换了博客主题</title>
+      <title>更换了博客主题 Blog Theme Changed</title>
       <link>https://fanrongbin.com/blog-theme-changed/</link>
       <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/blog-theme-changed/</guid>
@@ -21,6 +21,16 @@
     &lt;/span&gt;
 &lt;/span&gt;，页面大于等于三处旁注时，会调用&lt;a href=&#34;https://github.com/jsplumb/jsplumb&#34;&gt;jsPlumb&lt;/a&gt;，例如&lt;a href=&#34;https://fanrongbin.com/give-ko/#%e4%b8%ba%e4%bb%80%e4%b9%88-%ec%a3%bc%eb%8b%a4---%eb%8b%ac%eb%8b%a4&#34;&gt;这篇博文&lt;/a&gt;（请通过桌面端访问）。&lt;/p&gt;
 &lt;p&gt;首页从依赖于Dolt的&lt;code&gt;index.html&lt;/code&gt;，换到&lt;a href=&#34;https://web.archive.org/web/20231021154310/https://fanrongbin.com/&#34;&gt;第一版&lt;/a&gt;，使用&lt;a href=&#34;https://github.com/Selekkt/skelet&#34;&gt;Skelet.min.css&lt;/a&gt;框架。然后是&lt;a href=&#34;https://web.archive.org/web/20231222082517/http://fanrongbin.com/&#34;&gt;第二版&lt;/a&gt;，加上了头像和动画。最后是&lt;a href=&#34;https://web.archive.org/web/20240105125446/https://fanrongbin.com/&#34;&gt;目前的这一版&lt;/a&gt;，依靠&lt;code&gt;display: grid&lt;/code&gt;布局。&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;lang-en&#34; lang=&#34;en&#34;&gt;&lt;p&gt;I started adjusting my homepage and the blog theme bit by bit started from the end of 2023. First off, I swapped out the &lt;a href=&#34;https://github.com/HEIGE-PCloud/DoIt&#34;&gt;Dolt&lt;/a&gt; theme, which I&amp;rsquo;d been using for quite a long time, for &lt;a href=&#34;https://github.com/loikein/hugo-tufte&#34;&gt;hugo-tufte&lt;/a&gt; to provide better reading experience. To make everything look more uniform with my &amp;ldquo;hand-written&amp;rdquo; homepage, I ended up creating my own theme. It’s still nameless (&lt;code&gt;exampleTheme&lt;/code&gt;, lol), and I’m not really planning to share it publicly.&lt;/p&gt;
+&lt;p&gt;I added some JavaScript extras here and there too, like buttons for &lt;a href=&#34;https://web.hypothes.is/&#34;&gt;Hypothes.is&lt;/a&gt; and for the table of contents, and functions like breaking up long inline code, showing a reading progress bar at the top, updating online status on the &lt;a href=&#34;https://chat.openai.com/links&#34;&gt;Guestbook page&lt;/a&gt;, and pulling new articles for the homepage (using Cloudflare Workers). Also, I gave a new look to the side notes &lt;span class=&#34;sidenote-number&#34;&gt;
+&lt;span class=&#34;sidenote-box&#34;&gt;
+&lt;small class=&#34;sidenote&#34;&gt;Kinda like this (there’s a neat line on desktop).&lt;/small&gt;
+&lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;/span&gt; If a page has three or more side notes, it triggers &lt;a href=&#34;https://github.com/jsplumb/jsplumb&#34;&gt;jsPlumb&lt;/a&gt; – check it out on &lt;a href=&#34;https://fanrongbin.com/give-ko/#%E4%B8%BA%E4%BB%80%E4%B9%88-%EC%A3%BC%EB%8B%A4---%EB%8B%AC%EB%8B%A4&#34;&gt;this blog post&lt;/a&gt; (still displayed on desktop).&lt;/p&gt;
+&lt;p&gt;For the homepage, I moved from the Dolt-based &lt;code&gt;index.html&lt;/code&gt; to the &lt;a href=&#34;https://web.archive.org/web/20231021154310/https://fanrongbin.com/&#34;&gt;first version&lt;/a&gt; using the &lt;a href=&#34;https://github.com/Selekkt/skelet&#34;&gt;Skelet.min.css&lt;/a&gt; framework. Then came the &lt;a href=&#34;https://web.archive.org/web/20231222082517/http://fanrongbin.com/&#34;&gt;second version&lt;/a&gt; with an avatar and some animations. And now the &lt;a href=&#34;https://web.archive.org/web/20240105125446/https://fanrongbin.com/&#34;&gt;latest version&lt;/a&gt;  simply uses &lt;code&gt;display: grid&lt;/code&gt; to layout.&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     <item>
