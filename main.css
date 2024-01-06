@@ -89,6 +89,10 @@ div>a[href*="//"]:after, p>a[href*="//"]:after {
     top: -0.7ch;
 }
 
+div.indie-webring>a::after {
+    content: none;
+}
+
 em {
     font-family: var(--serif);
 }

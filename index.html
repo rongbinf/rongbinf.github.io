@@ -60,9 +60,7 @@
         <div class="adr">
             <span class="locality">Beijing</span>
         </div>
-        <div><span class="category">human</span>, <span class="category">blog</span>, <span
-                class="category">tech</span>, <span class="category">product</span>, <span
-                class="category">design</span>, <span class="category">business</span></div>
+        <div class="note">Are you willing to, able to, imagine an alternative reality?</div>
     </div>
 
     <link href="https://github.com/rongbinf" rel="me">
@@ -141,20 +139,11 @@
         </section>
 
 
-        <section id="footer" class="footer" style="margin-bottom:0;padding-top:2ch;padding-bottom: 0;">
+        <section id="footer" class="footer" style="margin-bottom:0;padding-top:2ch;padding-bottom:2ch;">
             <p style="font-style: italic; font-weight: bold;">⨹ Are you willing to, able to, imagine an alternative
                 reality?</p>
             <p>© 2049</p>
         </section>
-        <style>
-            * {
-                --g1v5x3-background-color: var(--bg-color);
-                --g1v5x3-text-color: var(--text-color);
-                --g1v5x3-title-color: var(--text-color);
-                --g1v5x3-link-color: var(--link-color);
-                --g1v5x3-padding: 0;
-            }
-        </style>
         <script async src="https://xandra.cc/safonts/webring.js"></script>
 
     </main>
@@ -193,9 +182,21 @@
 
         const originalContent = footerSection.innerHTML;
         const newContent = `
+        <div class="footer-link">
         <p>⨺ <a href="/wei-lan">Wei Lan Library</a></p>
         <p><a href="/colophon">Colophon</a></p>
-        <ring-900 site="https://fanrongbin.com/"></ring-900>
+        </div>
+        <div class="footer-link">
+            <div class="indie-webring">
+            <a href="https://xn--sr8hvo.ws/previous">←</a>
+            An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍
+            <a href="https://xn--sr8hvo.ws/next">→</a>
+            </div>
+            <ring-900 site="https://fanrongbin.com/"></ring-900>
+        </div>
+        <style>.footer{flex-direction:column;}.footer-link{display:flex;justify-content: space-between;}
+            *{--g1v5x3-background-color: var(--bg-color);--g1v5x3-text-color: var(--text-color);--g1v5x3-title-color: var(--text-color);--g1v5x3-link-color: var(--link-color);--g1v5x3-padding: 0;}
+        </style>
     `;
 
         if (footerSection) {
