@@ -9,7 +9,7 @@
     <lastBuildDate>Sat, 06 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/tags/static-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>引入 Webmention 连接 Mastodon &#43; Github Actions 自动化</title>
+      <title>用 Webmention 连接 Mastodon 并通过 Github Actions 拉取更新</title>
       <link>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</link>
       <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</guid>
