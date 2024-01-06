@@ -7,9 +7,9 @@
 <meta name="description"
     content=" 什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
 你在自己的网站上传了一篇文章 这篇文章被我在自己的网站里引用 Webmention服务确认了我的引用，并推送给你 你可以通过API、Atom Feed等方式取得通知 Webmention服务可以借助webmention.io或自行挂载，这里给出使用webmention.io的步骤：
-1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，为了使用它，需要先设置IndieAuth。你需要在网站对自己的帐号说明为rel=&quot;me&quot;，例如：
+1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，所以需要先设置IndieAuth。在index.html中，对自己的帐号说明为rel=&quot;me&quot;，例如：
 &lt;a rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt;Send me an email&lt;/a&gt; 或者以隐藏的方式在&lt;head&gt;说明：
-&lt;link rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt; 这样一来，在使用IndieAuth登录的地方，会采用你说明的方式，例如通过向邮箱发送邮件，或跳转Github登录。
+&lt;link rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt; 这样一来，采用IndieAuth登录的地方，会通过这些方式验证你的身份，例如通过向邮箱发送邮件，或跳转Github登录。
 2. 使用 webmention.io 挂载 # 在webmention.io登录后，你会看到一个Settings-Setup页面，其中给出了需要你在&lt;head&gt;加入的tag：
 &lt;link rel=&#34;webmention&#34; href=&#34;https://webmention.io/your_domain/webmention&#34; /&gt; 这条tag说明你的页面能够接受别人的提及，你可以通过webmention.rocks测试能否接收到。
 你可以通过webmention.io提供的Mentions Feed，在其他人提及时获得通知。
@@ -22,9 +22,9 @@ Leave your comment by webmentioning this post.  ">
 <meta property="og:title" content="在 Hugo 引入 Webmention 并借助 Bridgy 连接 Mastodon - Rongbin&#39;s Blog" />
 <meta property="og:description" content=" 什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
 你在自己的网站上传了一篇文章 这篇文章被我在自己的网站里引用 Webmention服务确认了我的引用，并推送给你 你可以通过API、Atom Feed等方式取得通知 Webmention服务可以借助webmention.io或自行挂载，这里给出使用webmention.io的步骤：
-1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，为了使用它，需要先设置IndieAuth。你需要在网站对自己的帐号说明为rel=&quot;me&quot;，例如：
+1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，所以需要先设置IndieAuth。在index.html中，对自己的帐号说明为rel=&quot;me&quot;，例如：
 &lt;a rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt;Send me an email&lt;/a&gt; 或者以隐藏的方式在&lt;head&gt;说明：
-&lt;link rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt; 这样一来，在使用IndieAuth登录的地方，会采用你说明的方式，例如通过向邮箱发送邮件，或跳转Github登录。
+&lt;link rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt; 这样一来，采用IndieAuth登录的地方，会通过这些方式验证你的身份，例如通过向邮箱发送邮件，或跳转Github登录。
 2. 使用 webmention.io 挂载 # 在webmention.io登录后，你会看到一个Settings-Setup页面，其中给出了需要你在&lt;head&gt;加入的tag：
 &lt;link rel=&#34;webmention&#34; href=&#34;https://webmention.io/your_domain/webmention&#34; /&gt; 这条tag说明你的页面能够接受别人的提及，你可以通过webmention.rocks测试能否接收到。
 你可以通过webmention.io提供的Mentions Feed，在其他人提及时获得通知。
@@ -41,9 +41,9 @@ Leave your comment by webmentioning this post.  " />
 <meta name="twitter:title" content="在 Hugo 引入 Webmention 并借助 Bridgy 连接 Mastodon - Rongbin&#39;s Blog" />
 <meta name="twitter:description" content=" 什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
 你在自己的网站上传了一篇文章 这篇文章被我在自己的网站里引用 Webmention服务确认了我的引用，并推送给你 你可以通过API、Atom Feed等方式取得通知 Webmention服务可以借助webmention.io或自行挂载，这里给出使用webmention.io的步骤：
-1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，为了使用它，需要先设置IndieAuth。你需要在网站对自己的帐号说明为rel=&quot;me&quot;，例如：
+1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，所以需要先设置IndieAuth。在index.html中，对自己的帐号说明为rel=&quot;me&quot;，例如：
 &lt;a rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt;Send me an email&lt;/a&gt; 或者以隐藏的方式在&lt;head&gt;说明：
-&lt;link rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt; 这样一来，在使用IndieAuth登录的地方，会采用你说明的方式，例如通过向邮箱发送邮件，或跳转Github登录。
+&lt;link rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt; 这样一来，采用IndieAuth登录的地方，会通过这些方式验证你的身份，例如通过向邮箱发送邮件，或跳转Github登录。
 2. 使用 webmention.io 挂载 # 在webmention.io登录后，你会看到一个Settings-Setup页面，其中给出了需要你在&lt;head&gt;加入的tag：
 &lt;link rel=&#34;webmention&#34; href=&#34;https://webmention.io/your_domain/webmention&#34; /&gt; 这条tag说明你的页面能够接受别人的提及，你可以通过webmention.rocks测试能否接收到。
 你可以通过webmention.io提供的Mentions Feed，在其他人提及时获得通知。
@@ -141,11 +141,11 @@ Leave your comment by webmentioning this post.  " />
 1. 标识你的身份
 <a href="#1-%e6%a0%87%e8%af%86%e4%bd%a0%e7%9a%84%e8%ba%ab%e4%bb%bd" class="heading-anchor">#</a>
 </h2>
-<p>Webmention.io使用<a href="https://indieweb.org/IndieAuth">IndieAuth</a>进行登录，为了使用它，需要先设置IndieAuth。你需要在网站对自己的帐号说明为<code>rel=&quot;me&quot;</code>，例如：</p>
+<p>Webmention.io使用<a href="https://indieweb.org/IndieAuth">IndieAuth</a>进行登录，所以需要先设置IndieAuth。在<code>index.html</code>中，对自己的帐号说明为<code>rel=&quot;me&quot;</code>，例如：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;me&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:your_email@email.com&#34;</span><span class="p">&gt;</span>Send me an email<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>或者以隐藏的方式在<code>&lt;head&gt;</code>说明：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;me&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:your_email@email.com&#34;</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>这样一来，在使用IndieAuth登录的地方，会采用你说明的方式，例如通过向邮箱发送邮件，或跳转Github登录。</p>
+</span></span></code></pre></div><p>这样一来，采用IndieAuth登录的地方，会通过这些方式验证你的身份，例如通过向邮箱发送邮件，或跳转Github登录。</p>
 <h2 id="2-使用-webmentionio-挂载">
 2. 使用 webmention.io 挂载
 <a href="#2-%e4%bd%bf%e7%94%a8-webmentionio-%e6%8c%82%e8%bd%bd" class="heading-anchor">#</a>
