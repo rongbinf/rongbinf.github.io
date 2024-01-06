@@ -21,13 +21,13 @@
 &lt;ol&gt;
 &lt;li&gt;你在自己的网站上传了一篇文章&lt;/li&gt;
 &lt;li&gt;这篇文章被我在自己的网站里引用&lt;/li&gt;
-&lt;li&gt;Webmention服务确认了我的引用，并推送给你&lt;/li&gt;
+&lt;li&gt;Webmention服务确认了我的引用&lt;/li&gt;
 &lt;li&gt;你可以通过API、Atom Feed等方式取得通知&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Webmention服务可以借助&lt;a href=&#34;https://webmention.io/&#34;&gt;webmention.io&lt;/a&gt;或自行挂载，这里给出使用webmention.io的步骤：&lt;/p&gt;
-&lt;h2 id=&#34;1-标识你的身份&#34;&gt;
-1. 标识你的身份
-&lt;a href=&#34;#1-%e6%a0%87%e8%af%86%e4%bd%a0%e7%9a%84%e8%ba%ab%e4%bb%bd&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;p&gt;Webmention可以借助&lt;a href=&#34;https://webmention.io/&#34;&gt;webmention.io&lt;/a&gt;服务或自行挂载，这里给出使用webmention.io的步骤：&lt;/p&gt;
+&lt;h2 id=&#34;1-用indieauth标识你的身份&#34;&gt;
+1. 用IndieAuth标识你的身份
+&lt;a href=&#34;#1-%e7%94%a8indieauth%e6%a0%87%e8%af%86%e4%bd%a0%e7%9a%84%e8%ba%ab%e4%bb%bd&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Webmention.io使用&lt;a href=&#34;https://indieweb.org/IndieAuth&#34;&gt;IndieAuth&lt;/a&gt;进行登录，所以需要先设置IndieAuth。在&lt;code&gt;index.html&lt;/code&gt;中，对自己的帐号说明为&lt;code&gt;rel=&amp;quot;me&amp;quot;&lt;/code&gt;，例如：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;me&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;mailto:your_email@email.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Send me an email&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
