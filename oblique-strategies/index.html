@@ -509,13 +509,14 @@ The Oblique Strategies evolved from me being in a number of working situations w
 
 <script defer>
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('.e-content a[href*="//"]');
+    const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
 
     links.forEach(function(link) {
         link.setAttribute('target', '_blank');
     });
 });
 </script>
+
 
 <script defer>
     document.addEventListener("DOMContentLoaded", function () {

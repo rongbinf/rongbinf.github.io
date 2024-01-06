@@ -636,13 +636,14 @@ APC：管控过程、提升良率
 
 <script defer>
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('.e-content a[href*="//"]');
+    const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
 
     links.forEach(function(link) {
         link.setAttribute('target', '_blank');
     });
 });
 </script>
+
 
 <script defer>
     document.addEventListener("DOMContentLoaded", function () {

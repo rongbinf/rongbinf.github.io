@@ -428,13 +428,14 @@ fatal error: &#39;al.h&#39; file not found #include &lt;al.h&gt; ^~~~~~ 1 error 
 
 <script defer>
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('.e-content a[href*="//"]');
+    const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
 
     links.forEach(function(link) {
         link.setAttribute('target', '_blank');
     });
 });
 </script>
+
 
 <script defer>
     document.addEventListener("DOMContentLoaded", function () {

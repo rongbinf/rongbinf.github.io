@@ -470,13 +470,14 @@ Mounted Bugler,1862, Winslow Homer, Graphite, brush and gray wash on off-white p
 
 <script defer>
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('.e-content a[href*="//"]');
+    const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
 
     links.forEach(function(link) {
         link.setAttribute('target', '_blank');
     });
 });
 </script>
+
 
 <script defer>
     document.addEventListener("DOMContentLoaded", function () {

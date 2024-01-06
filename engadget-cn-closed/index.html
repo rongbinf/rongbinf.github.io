@@ -394,13 +394,14 @@ Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，�
 
 <script defer>
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('.e-content a[href*="//"]');
+    const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
 
     links.forEach(function(link) {
         link.setAttribute('target', '_blank');
     });
 });
 </script>
+
 
 <script defer>
     document.addEventListener("DOMContentLoaded", function () {
