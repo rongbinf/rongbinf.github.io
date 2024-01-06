@@ -3662,22 +3662,25 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;/div&gt;
     
 &lt;hr&gt;
+
+
  &lt;div id=&#34;fake-example&#34; class=&#34;stream&#34;&gt;
         &lt;small&gt;&lt;i&gt;Rongbin:&lt;/i&gt;&lt;/small&gt;
         &lt;div class=&#34;h-entry&#34;&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;stream-inner e-content&amp;quot;&amp;gt;
-    这是一条假的测试stream。
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fanrongbin.com/fed&#34; hidden=&#34;from-humans&#34;&gt;&lt;/a&gt;
-&lt;p class=&#34;stream-meta&#34;&gt;
-&lt;span class=&#34;p-author h-card&#34;&gt;&lt;a href=&#34;https://fanrongbin.com&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/span&gt;
-&lt;time class=&#34;dt-published&#34; datetime=&#34;2023-01-01&#34; title=&#34;01 January 2023&#34;&gt;&lt;a class=&#34;stream-url&#34; href=&#34;https://fed.brid.gy/&#34;&gt;&lt;a href=&#34;https://fed.brid.gy/&#34;&gt;https://fed.brid.gy/&lt;/a&gt;&lt;/a&gt;&lt;/time&gt;
-&lt;a class=&#34;u-url&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
-&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
-&lt;/p&gt;&lt;/p&gt;
+
+    &lt;div class=&#34;stream-inner e-content&#34;&gt;
+        这是一条假的测试stream。
+    &lt;/div&gt;
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fanrongbin.com/fed&#34; hidden=&#34;from-humans&#34;&gt;&lt;/a&gt;
+    &lt;p class=&#34;stream-meta&#34;&gt;
+        &lt;span class=&#34;p-author h-card&#34;&gt;&lt;a href=&#34;https://fanrongbin.com&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/span&gt;
+        &lt;time class=&#34;dt-published&#34; datetime=&#34;2023-01-01&#34; title=&#34;01 January 2023&#34;&gt;&lt;a class=&#34;stream-url&#34; href=&#34;https://fed.brid.gy/&#34;&gt;https://fed.brid.gy/&lt;/a&gt;&lt;/time&gt;
+        &lt;a class=&#34;u-url&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+        &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;hr&gt;
 &lt;p&gt;直接在页面显示：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://fed.brid.gy/&#34;&gt;https://fed.brid.gy/&lt;/a&gt;&lt;/p&gt;
