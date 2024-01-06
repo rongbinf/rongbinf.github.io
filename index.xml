@@ -56,7 +56,7 @@
 &lt;p&gt;&lt;a href=&#34;https://brid.gy/&#34;&gt;Bridgy&lt;/a&gt;提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。&lt;/p&gt;
 &lt;p&gt;这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。&lt;/p&gt;
 
-&lt;div class=&#34;webmentions-how&#34;&gt;Leave your comment by &lt;a href=&#34;https://fanrongbin.com/webmention&#34;&gt;webmentioning&lt;/a&gt; this post. It takes about 30 minutes to display new responses.&lt;/div&gt;
+&lt;div class=&#34;webmentions-how&#34;&gt;Leave your comment by &lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;&gt;webmentioning&lt;/a&gt; this post. It takes about 30 minutes to display new responses.&lt;/div&gt;
 
 
 </description>
@@ -87,6 +87,7 @@
 &lt;/span&gt;
 
 &lt;hr&gt;
+&lt;p&gt;测试是否能够发出webmentions。&lt;/p&gt;
 &lt;p&gt;in reply to: &lt;a href=&#34;https://aaronparecki.com/2018/06/30/11/your-first-webmention&#34;&gt;@aaronpk&lt;/a&gt;&lt;/p&gt;
   &lt;p&gt;Trying out this guide to sending webmentions&lt;/p&gt;
 &lt;hr&gt;
