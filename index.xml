@@ -3657,7 +3657,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;/div&gt;
 &lt;/div&gt;
     
-&lt;p&gt;&lt;a rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; class=&#34;u-bridgy-fed&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://fed.brid.gy/&#34; class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     <item>
