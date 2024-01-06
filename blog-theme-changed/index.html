@@ -9,6 +9,7 @@
 额外自定义了Hypothes.is和目录的显示按钮，以及一些小小的js，用来实现切开过长的inline code、顶部阅读进度条，以及Guestbook页面的在线状态更新、首页的新文章拉取等等（借助Cloudflare Workers）。对旁注也做了样式， 就像这样。（桌面端会有一条连线。） 页面大于等于三处旁注时，会调用jsPlumb，例如这篇博文（请通过桌面端访问）。
 首页从依赖于Dolt的index.html，换到第一版，使用Skelet.min.css框架。然后是第二版，加上了头像和动画。最后是目前的这一版，依靠display: grid布局。
 I started adjusting my homepage and the blog theme bit by bit started from the end of 2023. First off, I swapped out the Dolt theme, which I&rsquo;d been using for quite a long time, for hugo-tufte to provide better reading experience. To make everything look more uniform with my &ldquo;hand-written&rdquo; homepage, I ended up creating my own theme. It’s still nameless (exampleTheme, lol), and I’m not really planning to share it publicly. ">
+<meta name="author" content="Rongbin FAN">
 
 <meta property="og:title" content="更换了博客主题 Blog Theme Changed - Rongbin&#39;s Blog" />
 <meta property="og:description" content="在23年年末陆陆续续对首页和博客主题进行了调整。首先是将用了很久的Dolt主题换成了hugo-tufte，而后为了首页相统一，就又自己写了目前的这个主题，还没起名字，应该也不会发出去哈哈。
@@ -43,6 +44,21 @@ I started adjusting my homepage and the blog theme bit by bit started from the e
 
 
 
+
+<div class="h-card" style="display:none;">
+  <span class="p-name" rel="author">Rongbin Fan</span>
+  <span class="p-given-name">Rongbin</span>
+  <span class="p-family-name">Fan</span>
+  <img class="u-photo" src="//fanrongbin.com/apple-touch-icon.png"/>
+  <abbr class="u-pronoun" title="he/him/his">he/him/his</abbr>
+  <a class="u-url" rel="me" href="//fanrongbin.com">w</a>,
+  <a class="u-email" href="mailto:hi@fanrongbin.com">e</a>,
+  <a class="u-email" href="mailto:fanrongbin0201@gmail.com">e-gmail</a>
+  <span class="p-locality">Beijing</span>,
+  <div class="p-category">human</div>.
+  <div class="p-note">Are you willing to, able to, imagine an alternative reality?</div>
+  <img class="u-featured" src="//img.fanrongbin.com/white.jpg"/>
+</div>
 </head>
 <body class="han-init-context">
   <section class="navbar">
@@ -124,7 +140,6 @@ I started adjusting my homepage and the blog theme bit by bit started from the e
 
 
   </main>
-  <a class="p-author" rel="author" href="https://fanrongbin.com" hidden="from-humans">Rongbin Fan</a>
   <a class="u-url" href="https://fanrongbin.com/blog-theme-changed/" hidden="from-humans"></a>
   <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy" hidden="from-humans"></a>
 </span>

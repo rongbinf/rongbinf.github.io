@@ -17,6 +17,7 @@
 得到token后，进入源仓库的Settings：
 选择Secrets and variables下的Actions，在右侧选择New repository secret 在Name中填入PERSONAL_TOKEN 在Secret中填入刚才生成的token，点击Add secret保存 3. 设置好Github Actions # 接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：
 重命名.yml为方便识别的名字，如deploy.yml 修改编辑框内容如下： name: deploy # 这个 action 的名字 on: push: # 代表每次 push 都会 turn on action workflow_dispatch: # 代表我们也可以手动 turn on jobs: build: runs-on: ubuntu-latest steps: - name: checkout uses: actions/checkout@v2 with: submodules: true fetch-depth: 0 - name: setup uses: peaceiris/actions-hugo@v2. ">
+<meta name="author" content="Rongbin FAN">
 
 <meta property="og:title" content="使用 Github Actions 自动部署 Hugo - Rongbin&#39;s Blog" />
 <meta property="og:description" content="回应痛点：
@@ -67,6 +68,21 @@
 
 
 
+
+<div class="h-card" style="display:none;">
+  <span class="p-name" rel="author">Rongbin Fan</span>
+  <span class="p-given-name">Rongbin</span>
+  <span class="p-family-name">Fan</span>
+  <img class="u-photo" src="//fanrongbin.com/apple-touch-icon.png"/>
+  <abbr class="u-pronoun" title="he/him/his">he/him/his</abbr>
+  <a class="u-url" rel="me" href="//fanrongbin.com">w</a>,
+  <a class="u-email" href="mailto:hi@fanrongbin.com">e</a>,
+  <a class="u-email" href="mailto:fanrongbin0201@gmail.com">e-gmail</a>
+  <span class="p-locality">Beijing</span>,
+  <div class="p-category">human</div>.
+  <div class="p-note">Are you willing to, able to, imagine an alternative reality?</div>
+  <img class="u-featured" src="//img.fanrongbin.com/white.jpg"/>
+</div>
 </head>
 <body class="han-init-context">
   <section class="navbar">
@@ -223,7 +239,6 @@
 
 
   </main>
-  <a class="p-author" rel="author" href="https://fanrongbin.com" hidden="from-humans">Rongbin Fan</a>
   <a class="u-url" href="https://fanrongbin.com/github-actions-deploy-hugo/" hidden="from-humans"></a>
   <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy" hidden="from-humans"></a>
 </span>

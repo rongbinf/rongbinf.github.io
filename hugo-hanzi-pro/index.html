@@ -14,6 +14,7 @@
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.js&#34;&gt;&lt;/script&gt; &lt;!-- 如果使用 CDN，直接复制官网给出的那条 link rel... --&gt; &lt;script src=&#34;/han.min.js&#34;&gt;&lt;/script&gt; &lt;!-- 如果为本地汇入 --&gt; 3. 启动脚本渲染 # 如果你只希望对于文章内容进行渲染，不影响菜单栏等，在/layouts/_default/single.html中找到对应你文章内容部分的label，如&lt;article id=&quot;main&quot;&gt;，加入class=&quot;han-init-context&quot;属性即可。
 到此我们已完成两个文件的汇入和启动渲染，hugo server查看，大部分情况下你会发现页面许多处的错乱，以及原&lt;em&gt;的强调样式变成了陌生的着重号等。同时，你也会惊讶地发现在中英文混排时，中英文之间自动加上了间距，且标点符号的显示有明显的优化。
 接下来，你需要根据自身需要调整han.min.css或override冲突的地方，这是我们最关键的工作。css文件下载下来是没有缩进的，你可以通过一些工具标准化，看得会清楚一点。 一般来说，解决冲突最方便的方式是：哪里看不顺眼就注释掉哪里。 ">
+<meta name="author" content="Rongbin FAN">
 
 <meta property="og:title" content="在 Hugo 引入汉字标准格式 - Rongbin&#39;s Blog" />
 <meta property="og:description" content="「汉字标准格式」 是一套支援各种印刷效果的 Sass &#43; JavaScript 排版框架 ，包含相邻文字装饰线跳脱 、汉ㄏㄢˋ字ㄗˋhànzì标ㄅㄧㄠ音ㄧㄣbiāoyīn 、着重号 、标点符号修正 、中文四大印刷体 、汉字－西文 mixed 间隙 、 「标点 『挤压』 与 『悬挂』 」 、章节边界调整……
@@ -58,6 +59,21 @@
 
 
 
+
+<div class="h-card" style="display:none;">
+  <span class="p-name" rel="author">Rongbin Fan</span>
+  <span class="p-given-name">Rongbin</span>
+  <span class="p-family-name">Fan</span>
+  <img class="u-photo" src="//fanrongbin.com/apple-touch-icon.png"/>
+  <abbr class="u-pronoun" title="he/him/his">he/him/his</abbr>
+  <a class="u-url" rel="me" href="//fanrongbin.com">w</a>,
+  <a class="u-email" href="mailto:hi@fanrongbin.com">e</a>,
+  <a class="u-email" href="mailto:fanrongbin0201@gmail.com">e-gmail</a>
+  <span class="p-locality">Beijing</span>,
+  <div class="p-category">human</div>.
+  <div class="p-note">Are you willing to, able to, imagine an alternative reality?</div>
+  <img class="u-featured" src="//img.fanrongbin.com/white.jpg"/>
+</div>
 </head>
 <body class="han-init-context">
   <section class="navbar">
@@ -160,7 +176,6 @@
 
 
   </main>
-  <a class="p-author" rel="author" href="https://fanrongbin.com" hidden="from-humans">Rongbin Fan</a>
   <a class="u-url" href="https://fanrongbin.com/hugo-hanzi-pro/" hidden="from-humans"></a>
   <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy" hidden="from-humans"></a>
 </span>

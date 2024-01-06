@@ -10,6 +10,7 @@
 非常用方法 # .caption { font: caption; } 不是很常见，即使 CSS 文档里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。
 使用这种方法会导致几个常见问题：
 在 iOS 设备和众多 Android 浏览器上无法返回正确的字体。 截止至 2015 年 12 月，仍无法在 Mac OS X 上的 Firefox 上支持 “smart” properties of San Francisco。（指能在 San Francisco Text 和 San Francisco Display 中根据实际情况（大于 20px）切换，并更改字间距。） 完全和系统相关控件一致，无法再自定义变更字体大小、粗细等。 常用方法 # html[lang^=&#34;en-&#34;] body { font-family: /* 1 */ -apple-system, BlinkMacSystemFont, /* 2 */ &#34;Segoe UI&#34;, &#34;Roboto&#34;, &#34;Oxygen&#34;, &#34;Ubuntu&#34;, &#34;Cantarell&#34;, &#34;Fira Sans&#34;, &#34;Droid Sans&#34;, /* 3 */ &#34;Helvetica Neue&#34;, sans-serif; } 以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题： ">
+<meta name="author" content="Rongbin FAN">
 
 <meta property="og:title" content="在 Web 设计中使用系统 UI 默认字体 - Rongbin&#39;s Blog" />
 <meta property="og:description" content="内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。
@@ -46,6 +47,21 @@
 
 
 
+
+<div class="h-card" style="display:none;">
+  <span class="p-name" rel="author">Rongbin Fan</span>
+  <span class="p-given-name">Rongbin</span>
+  <span class="p-family-name">Fan</span>
+  <img class="u-photo" src="//fanrongbin.com/apple-touch-icon.png"/>
+  <abbr class="u-pronoun" title="he/him/his">he/him/his</abbr>
+  <a class="u-url" rel="me" href="//fanrongbin.com">w</a>,
+  <a class="u-email" href="mailto:hi@fanrongbin.com">e</a>,
+  <a class="u-email" href="mailto:fanrongbin0201@gmail.com">e-gmail</a>
+  <span class="p-locality">Beijing</span>,
+  <div class="p-category">human</div>.
+  <div class="p-note">Are you willing to, able to, imagine an alternative reality?</div>
+  <img class="u-featured" src="//img.fanrongbin.com/white.jpg"/>
+</div>
 </head>
 <body class="han-init-context">
   <section class="navbar">
@@ -262,7 +278,6 @@
 
 
   </main>
-  <a class="p-author" rel="author" href="https://fanrongbin.com" hidden="from-humans">Rongbin Fan</a>
   <a class="u-url" href="https://fanrongbin.com/using-default-fonts-in-web-design/" hidden="from-humans"></a>
   <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy" hidden="from-humans"></a>
 </span>

@@ -7,6 +7,7 @@
 <meta name="description"
     content="什么时候会调用拷贝构造函数 # 一个对象以值传递的方式传入函数体 一个对象以值传递的方式从函数返回 一个对象通过另一个对象以进行初始化 默认拷贝构造函数：浅拷贝 # 即：将被拷贝对象的数据成员的值一一赋值给新创建的对象
 如果数据成员中有指针成员 浅拷贝只是增加了一个指针指向已经存在的内存 则新对象的指针所指向的地址与被拷贝对象的指针所指向的地址相同 则析构 delete 对象时会重复 delete 两次同一个内存空间而出错 实例 # class Rect{ private: int *p; // 一指针成员 public: Rect(){ // 构造函数，p 指向堆中分配的一内存 p = new int(100); // new 动态分配 } ~Rect(){ // 析构函数，释放动态分配的内存 if(p != NULL){ delete p; // delete 释放 p 所指向的内存 } } }; int main(){ Rect rect1; Rect rect2(rect1); // 拷贝 rect1 来构造 rect2 // 也即： Rect rect2 = rect1; // 浅拷贝，将成员的值进行拷贝 rect2. ">
+<meta name="author" content="Rongbin FAN">
 
 <meta property="og:title" content="C&#43;&#43; 中的拷贝构造函数：浅拷贝、深拷贝 - Rongbin&#39;s Blog" />
 <meta property="og:description" content="什么时候会调用拷贝构造函数 # 一个对象以值传递的方式传入函数体 一个对象以值传递的方式从函数返回 一个对象通过另一个对象以进行初始化 默认拷贝构造函数：浅拷贝 # 即：将被拷贝对象的数据成员的值一一赋值给新创建的对象
@@ -37,6 +38,21 @@
 
 
 
+
+<div class="h-card" style="display:none;">
+  <span class="p-name" rel="author">Rongbin Fan</span>
+  <span class="p-given-name">Rongbin</span>
+  <span class="p-family-name">Fan</span>
+  <img class="u-photo" src="//fanrongbin.com/apple-touch-icon.png"/>
+  <abbr class="u-pronoun" title="he/him/his">he/him/his</abbr>
+  <a class="u-url" rel="me" href="//fanrongbin.com">w</a>,
+  <a class="u-email" href="mailto:hi@fanrongbin.com">e</a>,
+  <a class="u-email" href="mailto:fanrongbin0201@gmail.com">e-gmail</a>
+  <span class="p-locality">Beijing</span>,
+  <div class="p-category">human</div>.
+  <div class="p-note">Are you willing to, able to, imagine an alternative reality?</div>
+  <img class="u-featured" src="//img.fanrongbin.com/white.jpg"/>
+</div>
 </head>
 <body class="han-init-context">
   <section class="navbar">
@@ -240,7 +256,6 @@
 
 
   </main>
-  <a class="p-author" rel="author" href="https://fanrongbin.com" hidden="from-humans">Rongbin Fan</a>
   <a class="u-url" href="https://fanrongbin.com/cpp-copy-constructor/" hidden="from-humans"></a>
   <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy" hidden="from-humans"></a>
 </span>

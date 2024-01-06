@@ -15,6 +15,7 @@ extra_objects=[&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.
 fatal error: &#39;al.h&#39; file not found #include &lt;al.h&gt; ^~~~~~ 1 error generated. error: command &#39;/usr/bin/gcc&#39; failed with exit code 1 需要对/pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c中的
 #include &lt;al.h&gt; #include &lt;alc.h&gt; 修改为：
 #include &lt;OpenAL/al.h&gt; #include &lt;OpenAL/alc.h&gt; 参考 # Trouble installing on osx &ldquo;fatal error: &lsquo;al. ">
+<meta name="author" content="Rongbin FAN">
 
 <meta property="og:title" content="在 Big Sur 安装 PocketSphinx 时出现的问题 - Rongbin&#39;s Blog" />
 <meta property="og:description" content="确认安装了swig # 首先确认是否安装了swig，否则运行setup.py报错：
@@ -61,6 +62,21 @@ fatal error: &#39;al.h&#39; file not found #include &lt;al.h&gt; ^~~~~~ 1 error 
 
 
 
+
+<div class="h-card" style="display:none;">
+  <span class="p-name" rel="author">Rongbin Fan</span>
+  <span class="p-given-name">Rongbin</span>
+  <span class="p-family-name">Fan</span>
+  <img class="u-photo" src="//fanrongbin.com/apple-touch-icon.png"/>
+  <abbr class="u-pronoun" title="he/him/his">he/him/his</abbr>
+  <a class="u-url" rel="me" href="//fanrongbin.com">w</a>,
+  <a class="u-email" href="mailto:hi@fanrongbin.com">e</a>,
+  <a class="u-email" href="mailto:fanrongbin0201@gmail.com">e-gmail</a>
+  <span class="p-locality">Beijing</span>,
+  <div class="p-category">human</div>.
+  <div class="p-note">Are you willing to, able to, imagine an alternative reality?</div>
+  <img class="u-featured" src="//img.fanrongbin.com/white.jpg"/>
+</div>
 </head>
 <body class="han-init-context">
   <section class="navbar">
@@ -163,7 +179,6 @@ fatal error: &#39;al.h&#39; file not found #include &lt;al.h&gt; ^~~~~~ 1 error 
 
 
   </main>
-  <a class="p-author" rel="author" href="https://fanrongbin.com" hidden="from-humans">Rongbin Fan</a>
   <a class="u-url" href="https://fanrongbin.com/pocketsphinx-install-errors/" hidden="from-humans"></a>
   <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy" hidden="from-humans"></a>
 </span>
