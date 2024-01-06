@@ -21,7 +21,6 @@
 方法 1：提前声明并使用 &lt;&gt; 确认 # #include &lt;iostream&gt; using namespace std; //需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数 template &lt;class A&gt; class complex; template &lt;class A&gt; ostream &amp; operator &lt;&lt; (ostream &amp;newout, const complex&lt;A&gt; &amp;m); template &lt;class A&gt; class complex{ //以复数类为例 private: A real, image; public: complex(A a, A b):real(a),image(b){ } //在运算符 &lt;&lt; 后加入 &lt;&gt; 以帮助编译器进一步确定该友元函数为模板函数 friend ostream &amp; operator &lt;&lt; &lt;&gt;(ostream &amp;newout, const complex&lt;A&gt; &amp;m); }; template &lt;class A&gt; ostream &amp; operator &lt;&lt; (ostream &amp;newout, const complex&lt;A&gt; &amp;m){ newout&lt;&lt;&#34;(&#34;&lt;&lt;m. " />
 
 <link rel="canonical" href="https://fanrongbin.com/cpp-template-friend/" />
-<link rel="bridgy" href="https://fed.brid.gy/" hidden="from-humans" class="u-bridgy-fed">
 <link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/cpp-template-friend/">
 <link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
 
@@ -77,6 +76,7 @@
       <p class="content-time"><time class="dt-published" datetime="2021-12-31T22:48:59&#43;08:00">31 December 2021</time></p>
     
     <a class="u-url" style="display:none;" href="https://fanrongbin.com/cpp-template-friend/"></a>
+    <a rel="bridgy" href="https://fed.brid.gy/" class="u-bridgy-fed" style="display:none;">https://fed.brid.gy/</a>
   </div>
 
 </section>
