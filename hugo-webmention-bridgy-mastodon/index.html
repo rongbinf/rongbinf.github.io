@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
-    content=" 什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
+    content="什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
 你在自己的网站上传了一篇文章 这篇文章被我在自己的网站里引用 Webmention服务确认了我的引用，并推送给你 你可以通过API、Atom Feed等方式取得通知 Webmention服务可以借助webmention.io或自行挂载，这里给出使用webmention.io的步骤：
 1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，所以需要先设置IndieAuth。在index.html中，对自己的帐号说明为rel=&quot;me&quot;，例如：
 &lt;a rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt;Send me an email&lt;/a&gt; 或者以隐藏的方式在&lt;head&gt;说明：
@@ -17,10 +17,10 @@
 &lt;div id=&#34;webmentions&#34;&gt;&lt;/div&gt; 你可以通过新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以等到后面完成连接Mastodon之后，通过发toot和回复的方式测试。webmention列表的样式可通过css自定义。
 4. 连接到 Bridgy # Bridgy提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。
 这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。
-Leave your comment by webmentioning this post.  ">
+Leave your comment by webmentioning this post. It takes about 30 minutes to display new responses. ">
 
 <meta property="og:title" content="在 Hugo 引入 Webmention 并借助 Bridgy 连接 Mastodon - Rongbin&#39;s Blog" />
-<meta property="og:description" content=" 什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
+<meta property="og:description" content="什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
 你在自己的网站上传了一篇文章 这篇文章被我在自己的网站里引用 Webmention服务确认了我的引用，并推送给你 你可以通过API、Atom Feed等方式取得通知 Webmention服务可以借助webmention.io或自行挂载，这里给出使用webmention.io的步骤：
 1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，所以需要先设置IndieAuth。在index.html中，对自己的帐号说明为rel=&quot;me&quot;，例如：
 &lt;a rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt;Send me an email&lt;/a&gt; 或者以隐藏的方式在&lt;head&gt;说明：
@@ -32,14 +32,14 @@ Leave your comment by webmentioning this post.  ">
 &lt;div id=&#34;webmentions&#34;&gt;&lt;/div&gt; 你可以通过新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以等到后面完成连接Mastodon之后，通过发toot和回复的方式测试。webmention列表的样式可通过css自定义。
 4. 连接到 Bridgy # Bridgy提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。
 这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。
-Leave your comment by webmentioning this post.  " />
+Leave your comment by webmentioning this post. It takes about 30 minutes to display new responses. " />
 <meta property="og:url" content="https://fanrongbin.com/hugo-webmention-bridgy-mastodon/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 <meta name="twitter:title" content="在 Hugo 引入 Webmention 并借助 Bridgy 连接 Mastodon - Rongbin&#39;s Blog" />
-<meta name="twitter:description" content=" 什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
+<meta name="twitter:description" content="什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
 你在自己的网站上传了一篇文章 这篇文章被我在自己的网站里引用 Webmention服务确认了我的引用，并推送给你 你可以通过API、Atom Feed等方式取得通知 Webmention服务可以借助webmention.io或自行挂载，这里给出使用webmention.io的步骤：
 1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，所以需要先设置IndieAuth。在index.html中，对自己的帐号说明为rel=&quot;me&quot;，例如：
 &lt;a rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt;Send me an email&lt;/a&gt; 或者以隐藏的方式在&lt;head&gt;说明：
@@ -51,7 +51,7 @@ Leave your comment by webmentioning this post.  " />
 &lt;div id=&#34;webmentions&#34;&gt;&lt;/div&gt; 你可以通过新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以等到后面完成连接Mastodon之后，通过发toot和回复的方式测试。webmention列表的样式可通过css自定义。
 4. 连接到 Bridgy # Bridgy提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。
 这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。
-Leave your comment by webmentioning this post.  " />
+Leave your comment by webmentioning this post. It takes about 30 minutes to display new responses. " />
 
 <link rel="canonical" href="https://fanrongbin.com/hugo-webmention-bridgy-mastodon/" />
 
@@ -168,7 +168,7 @@ Leave your comment by webmentioning this post.  " />
 <p><a href="https://brid.gy/">Bridgy</a>提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。</p>
 <p>这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。</p>
 
-<div class="webmentions-how">Leave your comment by <a href="/webmention">webmentioning</a> this post.</div>
+<div class="webmentions-how">Leave your comment by <a href="/webmention">webmentioning</a> this post. It takes about 30 minutes to display new responses.</div>
 
 
 
