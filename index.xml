@@ -58,17 +58,7 @@
 
 &lt;div class=&#34;webmentions-how&#34;&gt;Leave your comment by &lt;a href=&#34;https://fanrongbin.com/webmention&#34;&gt;webmentioning&lt;/a&gt; this post.&lt;/div&gt;
 
-&lt;div class=&#34;callout grey&#34;&gt;
-    &lt;div&gt;✒️&lt;/div&gt;
-    &lt;div class=&#34;callout-inner&#34;&gt;
-        Manually webmention:
-        &lt;form action=&#34;https://webmention.io/fanrongbin.com/webmention&#34; method=&#34;post&#34; style=&#34;padding-top:1ch;&#34;&gt;
-            &lt;input type=&#34;url&#34; name=&#34;source&#34; placeholder=&#34;Your URL&#34; required=&#34;&#34; /&gt;
-            &lt;input type=&#34;hidden&#34; name=&#34;target&#34; value=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&#34; /&gt;
-            &lt;input type=&#34;submit&#34; value=&#34;Submit&#34; /&gt;
-        &lt;/form&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+
 </description>
     </item>
     <item>
@@ -104,17 +94,7 @@
 &lt;div class=&#34;webmentions-how&#34;&gt;Leave your comment by replying this &lt;a href=&#34;https://mastodon.social/@rongbin/111707018440760447&#34;&gt;Mastodon toot&lt;/a&gt; or &lt;a
         href=&#34;https://fanrongbin.com/webmention&#34;&gt;webmentioning&lt;/a&gt; this post.&lt;/div&gt;
 
-&lt;div class=&#34;callout grey&#34;&gt;
-    &lt;div&gt;✒️&lt;/div&gt;
-    &lt;div class=&#34;callout-inner&#34;&gt;
-        Manually webmention:
-        &lt;form action=&#34;https://webmention.io/fanrongbin.com/webmention&#34; method=&#34;post&#34; style=&#34;padding-top:1ch;&#34;&gt;
-            &lt;input type=&#34;url&#34; name=&#34;source&#34; placeholder=&#34;Your URL&#34; required=&#34;&#34; /&gt;
-            &lt;input type=&#34;hidden&#34; name=&#34;target&#34; value=&#34;https://fanrongbin.com/blog-theme-changed/&#34; /&gt;
-            &lt;input type=&#34;submit&#34; value=&#34;Submit&#34; /&gt;
-        &lt;/form&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+
 </description>
     </item>
     <item>
