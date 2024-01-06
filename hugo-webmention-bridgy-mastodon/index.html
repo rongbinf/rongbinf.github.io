@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <title>在 Hugo 引入 Webmention 并借助 Bridgy 连接 Mastodon - Rongbin&#39;s Blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="description"
+    content=" 什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
+你在自己的网站上传了一篇文章 这篇文章被我在自己的网站里引用 Webmention服务确认了我的引用，并推送给你 你可以通过API、Atom Feed等方式取得通知 Webmention服务可以借助webmention.io或自行挂载，这里给出使用webmention.io的步骤：
+1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，为了使用它，需要先设置IndieAuth。你需要在网站对自己的帐号说明为rel=&quot;me&quot;，例如：
+&lt;a rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt;Send me an email&lt;/a&gt; 或者以隐藏的方式在&lt;head&gt;说明：
+&lt;link rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt; 这样一来，在使用IndieAuth登录的地方，会采用你说明的方式，例如通过向邮箱发送邮件，或跳转Github登录。
+2. 使用 webmention.io 挂载 # 在webmention.io登录后，你会看到一个Settings-Setup页面，其中给出了需要你在&lt;head&gt;加入的tag：
+&lt;link rel=&#34;webmention&#34; href=&#34;https://webmention.io/your_domain/webmention&#34; /&gt; 这条tag说明你的页面能够接受别人的提及，你可以通过webmention.rocks测试能否接收到。
+你可以通过webmention.io提供的Mentions Feed，在其他人提及时获得通知。
+3. 借助 webmention.js 在博文页面显示 webmention # Webmention.io提供API返回别人提及的具体内容，你可以通过Fetch API的方式自定。这里我们借助前人造好的轮子webmention.js，根据readme，在你的网站存放webmention.min.js文件并用&lt;script src=&quot;&quot;&gt;&lt;/script&gt;引入，在你需要展示webmention列表的地方插入：
+&lt;div id=&#34;webmentions&#34;&gt;&lt;/div&gt; 你可以通过新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以等到后面完成连接Mastodon之后，通过发toot和回复的方式测试。webmention列表的样式可通过css自定义。
+4. 连接到 Bridgy # Bridgy提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。
+这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。
+Leave your comment by webmentioning this post. ✒️ Manually webmention:  ">
+
+<meta property="og:title" content="在 Hugo 引入 Webmention 并借助 Bridgy 连接 Mastodon - Rongbin&#39;s Blog" />
+<meta property="og:description" content=" 什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
+你在自己的网站上传了一篇文章 这篇文章被我在自己的网站里引用 Webmention服务确认了我的引用，并推送给你 你可以通过API、Atom Feed等方式取得通知 Webmention服务可以借助webmention.io或自行挂载，这里给出使用webmention.io的步骤：
+1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，为了使用它，需要先设置IndieAuth。你需要在网站对自己的帐号说明为rel=&quot;me&quot;，例如：
+&lt;a rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt;Send me an email&lt;/a&gt; 或者以隐藏的方式在&lt;head&gt;说明：
+&lt;link rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt; 这样一来，在使用IndieAuth登录的地方，会采用你说明的方式，例如通过向邮箱发送邮件，或跳转Github登录。
+2. 使用 webmention.io 挂载 # 在webmention.io登录后，你会看到一个Settings-Setup页面，其中给出了需要你在&lt;head&gt;加入的tag：
+&lt;link rel=&#34;webmention&#34; href=&#34;https://webmention.io/your_domain/webmention&#34; /&gt; 这条tag说明你的页面能够接受别人的提及，你可以通过webmention.rocks测试能否接收到。
+你可以通过webmention.io提供的Mentions Feed，在其他人提及时获得通知。
+3. 借助 webmention.js 在博文页面显示 webmention # Webmention.io提供API返回别人提及的具体内容，你可以通过Fetch API的方式自定。这里我们借助前人造好的轮子webmention.js，根据readme，在你的网站存放webmention.min.js文件并用&lt;script src=&quot;&quot;&gt;&lt;/script&gt;引入，在你需要展示webmention列表的地方插入：
+&lt;div id=&#34;webmentions&#34;&gt;&lt;/div&gt; 你可以通过新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以等到后面完成连接Mastodon之后，通过发toot和回复的方式测试。webmention列表的样式可通过css自定义。
+4. 连接到 Bridgy # Bridgy提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。
+这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。
+Leave your comment by webmentioning this post. ✒️ Manually webmention:  " />
+<meta property="og:url" content="https://fanrongbin.com/hugo-webmention-bridgy-mastodon/" />
+<meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+<meta name="twitter:title" content="在 Hugo 引入 Webmention 并借助 Bridgy 连接 Mastodon - Rongbin&#39;s Blog" />
+<meta name="twitter:description" content=" 什么是 webmention # Webmention是由IndieWeb发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：
+你在自己的网站上传了一篇文章 这篇文章被我在自己的网站里引用 Webmention服务确认了我的引用，并推送给你 你可以通过API、Atom Feed等方式取得通知 Webmention服务可以借助webmention.io或自行挂载，这里给出使用webmention.io的步骤：
+1. 标识你的身份 # Webmention.io使用IndieAuth进行登录，为了使用它，需要先设置IndieAuth。你需要在网站对自己的帐号说明为rel=&quot;me&quot;，例如：
+&lt;a rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt;Send me an email&lt;/a&gt; 或者以隐藏的方式在&lt;head&gt;说明：
+&lt;link rel=&#34;me&#34; href=&#34;mailto:your_email@email.com&#34;&gt; 这样一来，在使用IndieAuth登录的地方，会采用你说明的方式，例如通过向邮箱发送邮件，或跳转Github登录。
+2. 使用 webmention.io 挂载 # 在webmention.io登录后，你会看到一个Settings-Setup页面，其中给出了需要你在&lt;head&gt;加入的tag：
+&lt;link rel=&#34;webmention&#34; href=&#34;https://webmention.io/your_domain/webmention&#34; /&gt; 这条tag说明你的页面能够接受别人的提及，你可以通过webmention.rocks测试能否接收到。
+你可以通过webmention.io提供的Mentions Feed，在其他人提及时获得通知。
+3. 借助 webmention.js 在博文页面显示 webmention # Webmention.io提供API返回别人提及的具体内容，你可以通过Fetch API的方式自定。这里我们借助前人造好的轮子webmention.js，根据readme，在你的网站存放webmention.min.js文件并用&lt;script src=&quot;&quot;&gt;&lt;/script&gt;引入，在你需要展示webmention列表的地方插入：
+&lt;div id=&#34;webmentions&#34;&gt;&lt;/div&gt; 你可以通过新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以等到后面完成连接Mastodon之后，通过发toot和回复的方式测试。webmention列表的样式可通过css自定义。
+4. 连接到 Bridgy # Bridgy提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。
+这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。
+Leave your comment by webmentioning this post. ✒️ Manually webmention:  " />
+
+<link rel="canonical" href="https://fanrongbin.com/hugo-webmention-bridgy-mastodon/" />
+
+<link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
+
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.920fe1a463307bbf16b7b9e27a91b34a68ec6aa081873e5007b80f0769253266.css" integrity="sha256-kg/hpGMwe78Wt7niepGzSmjsaqCBhz5QB7gPB2klMmY=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/han.min.css" type="text/css">
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body class="han-init-context h-entry">
+  <section class="navbar">
+    <span class="header-name">
+    <a href="/" class="header-link h-card p-name p-author u-url u-uid">Rongbin FAN</a>
+     / <a href="/posts" class="header-link">Blog</a>
+    <br>
+    <a href="/links" class="header-link header-guestbook">◩ Guestbook</a>
+</span>
+
+
+  </section>
+    
+
+<section class="content-header">
+
+  <div class="top-scroll-bar"></div>
+<div class="addn visible">
+<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;">Hypothes.is</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
+</div>
+<div id="contents-toc" class="no-select">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#什么是-webmention">什么是 webmention</a></li>
+    <li><a href="#1-标识你的身份">1. 标识你的身份</a></li>
+    <li><a href="#2-使用-webmentionio-挂载">2. 使用 webmention.io 挂载</a></li>
+    <li><a href="#3-借助-webmentionjs-在博文页面显示-webmention">3. 借助 webmention.js 在博文页面显示 webmention</a></li>
+    <li><a href="#4-连接到-bridgy">4. 连接到 Bridgy</a></li>
+  </ul>
+</nav>
+</div>
+
+  <div id="single-header">
+    <h1 class="content-h1 p-name">在 Hugo 引入 Webmention 并借助 Bridgy 连接 Mastodon</h1>
+    
+    
+      <p class="content-time"><time class="dt-published" datetime="2024-01-06T00:00:00&#43;00:00">06 January 2024</time></p>
+    
+  </div>
+
+</section>
+
+<style>
+  div.color {
+    background: linear-gradient(var(--textcolor) 0,transparent 25%);
+    opacity: .5;
+  }
+</style>
+
+
+    <div class="color"></div>
+  <main class="e-content">
+    
+
+<h2 id="什么是-webmention">
+什么是 webmention
+<a href="#%e4%bb%80%e4%b9%88%e6%98%af-webmention" class="heading-anchor">#</a>
+</h2>
+<p>Webmention是由<a href="https://indieweb.org">IndieWeb</a>发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：</p>
+<ol>
+<li>你在自己的网站上传了一篇文章</li>
+<li>这篇文章被我在自己的网站里引用</li>
+<li>Webmention服务确认了我的引用，并推送给你</li>
+<li>你可以通过API、Atom Feed等方式取得通知</li>
+</ol>
+<p>Webmention服务可以借助<a href="https://webmention.io/">webmention.io</a>或自行挂载，这里给出使用webmention.io的步骤：</p>
+<h2 id="1-标识你的身份">
+1. 标识你的身份
+<a href="#1-%e6%a0%87%e8%af%86%e4%bd%a0%e7%9a%84%e8%ba%ab%e4%bb%bd" class="heading-anchor">#</a>
+</h2>
+<p>Webmention.io使用<a href="https://indieweb.org/IndieAuth">IndieAuth</a>进行登录，为了使用它，需要先设置IndieAuth。你需要在网站对自己的帐号说明为<code>rel=&quot;me&quot;</code>，例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;me&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:your_email@email.com&#34;</span><span class="p">&gt;</span>Send me an email<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>或者以隐藏的方式在<code>&lt;head&gt;</code>说明：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;me&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:your_email@email.com&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>这样一来，在使用IndieAuth登录的地方，会采用你说明的方式，例如通过向邮箱发送邮件，或跳转Github登录。</p>
+<h2 id="2-使用-webmentionio-挂载">
+2. 使用 webmention.io 挂载
+<a href="#2-%e4%bd%bf%e7%94%a8-webmentionio-%e6%8c%82%e8%bd%bd" class="heading-anchor">#</a>
+</h2>
+<p>在webmention.io登录后，你会看到一个Settings-Setup页面，其中给出了需要你在<code>&lt;head&gt;</code>加入的tag：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;webmention&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://webmention.io/your_domain/webmention&#34;</span> <span class="p">/&gt;</span>
+</span></span></code></pre></div><p>这条tag说明你的页面能够接受别人的提及，你可以通过<a href="https://webmention.rocks/receive/1">webmention.rocks</a>测试能否接收到。</p>
+<p>你可以通过webmention.io提供的Mentions Feed，在其他人提及时获得通知。</p>
+<h2 id="3-借助-webmentionjs-在博文页面显示-webmention">
+3. 借助 webmention.js 在博文页面显示 webmention
+<a href="#3-%e5%80%9f%e5%8a%a9-webmentionjs-%e5%9c%a8%e5%8d%9a%e6%96%87%e9%a1%b5%e9%9d%a2%e6%98%be%e7%a4%ba-webmention" class="heading-anchor">#</a>
+</h2>
+<p>Webmention.io提供API返回别人提及的具体内容，你可以通过Fetch API的方式自定。这里我们借助前人造好的轮子<a href="https://github.com/PlaidWeb/webmention.js/">webmention.js</a>，根据readme，在你的网站存放<code>webmention.min.js</code>文件并用<code>&lt;script src=&quot;&quot;&gt;&lt;/script&gt;</code>引入，在你需要展示webmention列表的地方插入：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;webmentions&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>你可以通过新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以等到后面完成连接Mastodon之后，通过发toot和回复的方式测试。webmention列表的样式可通过<code>css</code>自定义。</p>
+<h2 id="4-连接到-bridgy">
+4. 连接到 Bridgy
+<a href="#4-%e8%bf%9e%e6%8e%a5%e5%88%b0-bridgy" class="heading-anchor">#</a>
+</h2>
+<p><a href="https://brid.gy/">Bridgy</a>提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。</p>
+<p>这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。</p>
+
+<div class="webmentions-how">Leave your comment by <a href="/webmention">webmentioning</a> this post.</div>
+
+<div class="callout grey">
+    <div>✒️</div>
+    <div class="callout-inner">
+        Manually webmention:
+        <form action="https://webmention.io/fanrongbin.com/webmention" method="post" style="padding-top:1ch;">
+            <input type="url" name="source" placeholder="Your URL" required="" />
+            <input type="hidden" name="target" value="CITED_POST_URL" />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</div>
+
+
+
+  </main>
+  
+    
+
+<script src="/webmention.min.js" defer></script>
+<div id="webmentions"></div>
+
+<div class="footer-nav">
+
+  <div class="previous-post" style="display:inline-block;">
+    
+    <a class="no-external" href="https://fanrongbin.com/blog-theme-changed/"><span class="arrow">←</span> 更换了博客主题 Blog Theme Changed</a>
+    
+  </div>
+
+  
+
+
+  <div class="Tags">
+    <ul style="list-style-type: none;">
+      <li class="label">TAGS</li>
+        <li><a href="/tags/static-blog/">static-blog</a></li>
+    </ul>
+  </div>
+
+  <div class="next-post" style="display:inline-block;float:right;">
+    
+  </div>
+
+</div>
+
+
+  
+  <footer class="opacity-6">
+    <p><a href="/colophon">Colophon</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p><p>© Rongbin FAN</p>
+  </footer>
+</body>
+<script src="/han.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (document.querySelector('.content-header')) {
+            document.getElementById('show-hypo').style.display = 'flex';
+        }
+
+        applyBreakAllClass();
+
+        handleScrollEvents();
+
+        initializeTOCFeatures();
+    });
+
+    window.addEventListener('scroll', throttle(handleScrollEvents, 250), false);
+
+    window.addEventListener('resize', applyBreakAllClass);
+
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function () {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function () {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
+
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+        var button = document.querySelector('#show-hypo a');
+
+        if (!existingScript) {
+            button.textContent = 'Loading';
+
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+
+            script.onload = () => {
+                button.textContent = 'Hypothes.is';
+            };
+
+            script.onerror = () => {
+                button.style.color = 'red';
+                button.textContent = 'Failed';
+            };
+
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+            button.style.color = 'var(--text-color)';
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function (element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    function applyBreakAllClass() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+        if (screenWidth <= 960) {
+            var codeElements = document.querySelectorAll('code');
+
+            codeElements.forEach(function (element) {
+                if (element.textContent.length > 10) {
+                    element.classList.add('break-all');
+                }
+            });
+        }
+    }
+
+    function handleScrollEvents() {
+        var lastScrollTop = 0;
+        var addnDiv = document.querySelector('.addn');
+        var topScrollBar = document.querySelector('.top-scroll-bar');
+
+        window.addEventListener('scroll', function () {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (topScrollBar) {
+                var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                topScrollBar.style.width = scrollPercent + '%';
+                topScrollBar.style.display = 'block';
+            }
+
+            if (addnDiv) {
+                if (currentScroll > lastScrollTop && currentScroll > 50) {
+                    addnDiv.classList.remove('visible');
+                } else {
+                    addnDiv.classList.add('visible');
+                }
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
+    }
+
+
+    function initializeTOCFeatures() {
+        const headers = document.querySelectorAll('h2, h3');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+
+        if (contentsFixedDiv) {
+            const toggleTOC = () => {
+                const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+                tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+
+                if (tocContainer.style.display === 'flex') {
+                    initializeTOCFeatures();
+                }
+            };
+
+            const highlightAppropriateHeader = () => {
+                let highlighted = false;
+                let lastPassedHeader = null;
+
+                headers.forEach(header => {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+                    const bounding = header.getBoundingClientRect();
+
+                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                        link.classList.add('toc-highlight');
+                        highlighted = true;
+                    } else {
+                        link.classList.remove('toc-highlight');
+                    }
+
+                    if (bounding.top < 0) {
+                        lastPassedHeader = header;
+                    }
+                });
+
+                if (!highlighted && lastPassedHeader) {
+                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
+                    link.classList.add('toc-highlight');
+                }
+            };
+
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+
+            if (!tocContainer.dataset.initialized) {
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+
+            document.addEventListener('click', (event) => {
+                if (window.getComputedStyle(tocContainer).display !== 'none') {
+                    tocContainer.style.display = 'none';
+                }
+            });
+
+            tocContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+
+            if (headers.length > 1) {
+                contentsFixedDiv.style.display = 'flex';
+                contentsFixedDiv.addEventListener('click', (event) => {
+                    toggleTOC();
+                    event.stopPropagation();
+                });
+            }
+        }
+    }
+</script>
+
+<script defer>
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('.e-content a[href*="//"]');
+
+    links.forEach(function(link) {
+        link.setAttribute('target', '_blank');
+    });
+});
+</script>
+
+<script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
+            var jQueryScript = document.createElement('script');
+            jQueryScript.src = '/jquery-3.6.0.min.js';
+            document.head.appendChild(jQueryScript);
+
+            var sidenoteLines = document.querySelectorAll('.sidenote-line');
+            sidenoteLines.forEach(function (line) {
+                line.style.display = 'none';
+            });
+
+            var styleElement = document.createElement('style');
+            styleElement.innerHTML = `
+                .jsplumb-line {
+                    opacity: 0.4;
+                    z-index: -1;
+                }
+                li>span>.sidenote-box {
+                    margin-left: -150%;
+                }
+            `;
+            document.body.appendChild(styleElement);
+
+            jQueryScript.onload = function () {
+                var jsPlumbScript = document.createElement('script');
+                jsPlumbScript.src = '/jsplumb.min.js';
+                document.head.appendChild(jsPlumbScript);
+
+                var jsPlumbCSS = document.createElement('link');
+                jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
+                jsPlumbCSS.rel = 'stylesheet';
+                document.head.appendChild(jsPlumbCSS);
+
+                jsPlumbScript.onload = function () {
+
+                    jQuery(document).ready(function () {
+                        jsPlumb.importDefaults({
+                            ConnectionsDetachable: false,
+                            ReattachConnections: false,
+                            Endpoint: "Blank", 
+                            Connector: ["Straight"], 
+                            PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 } 
+                        });
+
+                        function createConnections() {
+                            jsPlumb.deleteEveryEndpoint(); 
+
+                            jQuery('.sidenote-number').each(function () {
+                                var sidenoteNumber = jQuery(this);
+                                var sidenote = sidenoteNumber.find('.sidenote');
+
+                                if (sidenote.length) {
+                                    jsPlumb.connect({
+                                        source: sidenoteNumber[0], 
+                                        target: sidenote[0], 
+                                        anchors: ["Center", "RightMiddle"], 
+                                        cssClass: "jsplumb-line" 
+                                    });
+                                }
+                            });
+                        }
+
+                        createConnections();
+
+                        var resizeObserver = new ResizeObserver(function () {
+                            createConnections(); 
+                        });
+                        resizeObserver.observe(document.body);
+
+                    });
+                };
+            };
+        }
+    });
+</script>
+
+<script defer>
+    window.onload = function () {
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    }
+</script>
+
+
+</html>

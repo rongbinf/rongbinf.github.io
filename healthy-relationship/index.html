@@ -65,7 +65,7 @@ But I have more of a life than I once did. I have a wife, a busy career, aging p
 
 
 
-      <link rel="stylesheet" href="/css/main.min.2607c4066feb21a93093755a98004c51f64fa36215d366361809e14ab8918f91.css" integrity="sha256-JgfEBm/rIakwk3VamABMUfZPo2IV02Y2GAnhSriRj5E=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.920fe1a463307bbf16b7b9e27a91b34a68ec6aa081873e5007b80f0769253266.css" integrity="sha256-kg/hpGMwe78Wt7niepGzSmjsaqCBhz5QB7gPB2klMmY=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -383,6 +383,15 @@ But I have more of a life than I once did. I have a wife, a busy career, aging p
     }
 </script>
 
+<script defer>
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('.e-content a[href*="//"]');
+
+    links.forEach(function(link) {
+        link.setAttribute('target', '_blank');
+    });
+});
+</script>
 
 <script defer>
     document.addEventListener("DOMContentLoaded", function () {
