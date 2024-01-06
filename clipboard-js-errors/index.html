@@ -13,6 +13,31 @@ new ClipboardJS(&#39;.btn&#39;); 问题解决。一开始所参照的中文教�
 问题解决：把该段 JS 放到到本来调用 Clipboard.js 那一段之后。
 第三次报错：.tooltip() is not a function # 在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：
 var clipboard = new ClipboardJS(&#39;. ">
+
+<meta property="og:title" content="在使用 Clipboard.js 中学一点 JavaScript - Rongbin&#39;s Blog" />
+<meta property="og:description" content="在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。 我的组合是：Bootstrap（CSS 框架）&#43; Clipboard.js
+第一次报错：Uncaught TypeError: Illegal constructor # new Clipboard(&#39;.btn&#39;); 一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：
+new ClipboardJS(&#39;.btn&#39;); 问题解决。一开始所参照的中文教程比较久远，语句更新为 ClipboardJS。
+第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null # var clipboard = new ClipboardJS(&#39;.btn&#39;); 该语句是为了使用 DOM 选择器。
+为什么在这里要使用 DOM 选择器(DOM SELECTOR) # 为了在页面上快速找到引号内（在此为.btn）元素，然后进行下一步。报错原因：调用 JavaScript 时，DOM 选择器还没有渲染完。反映为在使用 DOM 选择器时，没找到或没找完该元素。在我的页面中，因为一开始把&lt;script&gt;&lt;/script&gt;都放在&lt;head&gt;标签之内，所以在&lt;body&gt;没渲染之前就加载了 DOM 选择器，当然什么都找不到了。
+问题解决：把该段 JS 放到到本来调用 Clipboard.js 那一段之后。
+第三次报错：.tooltip() is not a function # 在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：
+var clipboard = new ClipboardJS(&#39;. " />
+<meta property="og:url" content="https://fanrongbin.com/clipboard-js-errors/" />
+<meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+<meta name="twitter:title" content="在使用 Clipboard.js 中学一点 JavaScript - Rongbin&#39;s Blog" />
+<meta name="twitter:description" content="在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。 我的组合是：Bootstrap（CSS 框架）&#43; Clipboard.js
+第一次报错：Uncaught TypeError: Illegal constructor # new Clipboard(&#39;.btn&#39;); 一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：
+new ClipboardJS(&#39;.btn&#39;); 问题解决。一开始所参照的中文教程比较久远，语句更新为 ClipboardJS。
+第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null # var clipboard = new ClipboardJS(&#39;.btn&#39;); 该语句是为了使用 DOM 选择器。
+为什么在这里要使用 DOM 选择器(DOM SELECTOR) # 为了在页面上快速找到引号内（在此为.btn）元素，然后进行下一步。报错原因：调用 JavaScript 时，DOM 选择器还没有渲染完。反映为在使用 DOM 选择器时，没找到或没找完该元素。在我的页面中，因为一开始把&lt;script&gt;&lt;/script&gt;都放在&lt;head&gt;标签之内，所以在&lt;body&gt;没渲染之前就加载了 DOM 选择器，当然什么都找不到了。
+问题解决：把该段 JS 放到到本来调用 Clipboard.js 那一段之后。
+第三次报错：.tooltip() is not a function # 在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：
+var clipboard = new ClipboardJS(&#39;. " />
+
 <link rel="canonical" href="https://fanrongbin.com/clipboard-js-errors/" />
 
 <link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
