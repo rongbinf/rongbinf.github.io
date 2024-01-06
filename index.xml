@@ -9,7 +9,7 @@
     <lastBuildDate>Sat, 06 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>引入 Webmention 连接 Mastodon，并使用 Github Actions 自动化</title>
+      <title>引入 Webmention 连接 Mastodon &#43; Github Actions 自动化</title>
       <link>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</link>
       <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</guid>
@@ -3599,6 +3599,13 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This site is one of the &lt;a href=&#34;https://512kb.club/&#34;&gt;512kb.club&lt;/a&gt; and &lt;a href=&#34;https://1mb.club/&#34;&gt;1mb.club&lt;/a&gt; members.&lt;/p&gt;
 </description>
+    </item>
+    <item>
+      <title>Stream</title>
+      <link>https://fanrongbin.com/stream/</link>
+      <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/stream/</guid>
+      <description></description>
     </item>
     <item>
       <title>Wei Lan Library</title>
