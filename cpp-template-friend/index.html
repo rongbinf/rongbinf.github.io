@@ -28,7 +28,7 @@
 <body class="han-init-context">
   <section class="navbar">
     <span class="header-name">
-    <a href="/" class="header-link"><span class="h-card p-name u-url u-uid" href="https://fanrongbin.com">Rongbin FAN</span></a>
+    <a href="/" class="header-link"><span class="h-card p-name p-author u-url u-uid" href="https://fanrongbin.com">Rongbin FAN</span></a>
      / <a href="/posts" class="header-link">Blog</a>
     <br>
     <a href="/links" class="header-link header-guestbook">◩ Guestbook</a>
@@ -57,10 +57,10 @@
 </div>
 
   <div id="single-header">
-    <h1 class="content-h1">C&#43;&#43; 模版类重载流输入输出运算符</h1>
+    <h1 class="content-h1 p-name">C&#43;&#43; 模版类重载流输入输出运算符</h1>
     
     
-      <p class="content-time"><time datetime="2021-12-31T22:48:59&#43;08:00">31 December 2021</time></p>
+      <p class="content-time"><time class="dt-published" datetime="2021-12-31T22:48:59&#43;08:00">31 December 2021</time></p>
     
   </div>
 
@@ -75,7 +75,7 @@
 
 
     <div class="color"></div>
-  <main>
+  <main class="h-entry">
     
 
 <p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
@@ -183,12 +183,10 @@
   
     
 
-
+<script src="/webmention.min.js" async></script>
+<div id="webmentions"></div>
 
 <div class="footer-nav">
-
-  <script src="/webmention.min.js" async></script>
-<div id="webmentions"></div>
 
   <div class="previous-post" style="display:inline-block;">
     

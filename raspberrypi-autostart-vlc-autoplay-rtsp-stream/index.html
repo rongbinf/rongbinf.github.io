@@ -37,7 +37,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 <body class="han-init-context">
   <section class="navbar">
     <span class="header-name">
-    <a href="/" class="header-link"><span class="h-card p-name u-url u-uid" href="https://fanrongbin.com">Rongbin FAN</span></a>
+    <a href="/" class="header-link"><span class="h-card p-name p-author u-url u-uid" href="https://fanrongbin.com">Rongbin FAN</span></a>
      / <a href="/posts" class="header-link">Blog</a>
     <br>
     <a href="/links" class="header-link header-guestbook">◩ Guestbook</a>
@@ -81,10 +81,10 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 </div>
 
   <div id="single-header">
-    <h1 class="content-h1">树莓派实现开机自动播放 RTSP 流视频</h1>
+    <h1 class="content-h1 p-name">树莓派实现开机自动播放 RTSP 流视频</h1>
     
     
-      <p class="content-time"><time datetime="2021-01-06T00:00:00&#43;00:00">06 January 2021</time></p>
+      <p class="content-time"><time class="dt-published" datetime="2021-01-06T00:00:00&#43;00:00">06 January 2021</time></p>
     
   </div>
 
@@ -99,7 +99,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 
 
     <div class="color"></div>
-  <main>
+  <main class="h-entry">
     
 
 <p>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。</p>
@@ -248,12 +248,10 @@ Exec=/home/pi/test.sh
   
     
 
-
+<script src="/webmention.min.js" async></script>
+<div id="webmentions"></div>
 
 <div class="footer-nav">
-
-  <script src="/webmention.min.js" async></script>
-<div id="webmentions"></div>
 
   <div class="previous-post" style="display:inline-block;">
     
