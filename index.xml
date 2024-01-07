@@ -67,8 +67,7 @@
 &lt;a href=&#34;#%e4%bd%bf%e7%94%a8-webmentionapp-%e8%87%aa%e5%8a%a8%e5%8f%91%e9%80%81&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;你可能一次在博文中引用多个网页，但是不想再进行繁琐的手动发送webmention。&lt;a href=&#34;https://webmention.app/&#34;&gt;Webmention.app&lt;/a&gt;可以读取页面&lt;a href=&#34;https://microformats.org/wiki/h-entry&#34;&gt;&lt;code&gt;&amp;lt;h-entry&amp;gt;&lt;/code&gt;&lt;/a&gt;中的链接，帮你一键发送。&lt;/p&gt;
-&lt;p&gt;可以使用&lt;a href=&#34;https://webmention.app/check&#34;&gt;Test页面&lt;/a&gt;检查（只会检查前10个&lt;code&gt;&amp;lt;h-entry&amp;gt;&lt;/code&gt;），也可以通过API。登录服务获得token后没有request的限制。&lt;/p&gt;
-&lt;p&gt;具体请参见官网。&lt;/p&gt;
+&lt;p&gt;可以使用&lt;a href=&#34;https://webmention.app/check&#34;&gt;Test页面&lt;/a&gt;检查（只会检查前10个&lt;code&gt;&amp;lt;h-entry&amp;gt;&lt;/code&gt;），也可以通过API。登录服务获得token后没有request限制。具体请参见官网。&lt;/p&gt;
 &lt;h2 id=&#34;将你的博文发送到社交平台&#34;&gt;
 将你的博文发送到社交平台
 &lt;a href=&#34;#%e5%b0%86%e4%bd%a0%e7%9a%84%e5%8d%9a%e6%96%87%e5%8f%91%e9%80%81%e5%88%b0%e7%a4%be%e4%ba%a4%e5%b9%b3%e5%8f%b0&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -77,15 +76,16 @@
 连接到 Bridgy
 &lt;a href=&#34;#%e8%bf%9e%e6%8e%a5%e5%88%b0-bridgy&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://brid.gy/&#34;&gt;Bridgy&lt;/a&gt;提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。&lt;/p&gt;
-&lt;p&gt;这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://brid.gy/&#34;&gt;Bridgy&lt;/a&gt;可将网站和社交平台相联，使得没有个人页面的用户，也能通过支持的平台进行回复，Bridgy会帮助进行webmention。&lt;/p&gt;
+&lt;p&gt;进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可。如果cross-post，你需要用验证过的帐号publish带有博文链接的toot，在这条toot下的回复、转发、喜爱才会作为webmention传过来。&lt;/p&gt;
+&lt;p&gt;如果直接连接（也就是我目前的做法），你会以&lt;code&gt;@your-domain.com@your-domain.com&lt;/code&gt;加入联邦宇宙，向Bridgy的每次update都会对应更新这个账号下的toot。&lt;/p&gt;
 &lt;h3 id=&#34;使用-github-actions-自动化&#34;&gt;
 使用 Github Actions 自动化
 &lt;a href=&#34;#%e4%bd%bf%e7%94%a8-github-actions-%e8%87%aa%e5%8a%a8%e5%8c%96&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;我使用Hugo作为博客系统，希望实现根据我是否上传或更新&lt;code&gt;.md&lt;/code&gt;，自动发出webmention。&lt;a href=&#34;https://github.com/marketplace/actions/changed-files&#34;&gt;tj-actions/changed-files&lt;/a&gt;能够找到repo下文件的修改情况，故可以先寻找是否有文件被修改，之后发出 &lt;code&gt;curl&lt;/code&gt;命令即可。&lt;/p&gt;
 &lt;p&gt;在&lt;a href=&#34;https://fanrongbin.com/github-actions-deploy-hugo&#34;&gt;之前的博文&lt;/a&gt;里，我设置了&lt;code&gt;deploy.yml&lt;/code&gt;用来自动部署Hugo、生成静态文件。故对应在此设置为在&lt;code&gt;deploy&lt;/code&gt;后才运行。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;send webmentions according to md changes&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;send webmentions to bridgy according to md changes&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;workflow_run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -124,12 +124,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;          for FILE in $CHANGED_FILES; do
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;            if [[ $FILE == content/posts/*.md ]]; then
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;              POST_NAME=$(basename &amp;#34;$FILE&amp;#34; .md)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;              POST_URL=&amp;#34;https://fanrongbin.com/${POST_NAME}&amp;#34; # 注意修改为你的网站域名
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;              POST_URL=&amp;#34;https://your-domain.com/${POST_NAME}&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;              echo &amp;#34;Sending Webmention for $POST_URL&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;              curl -i -d source=${POST_URL} -d target=https://fed.brid.gy https://fed.brid.gy/webmention # 如果你使用的不是 Bridgy，请对应修改 target url
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;              curl -i -d source=${POST_URL} -d target=https://fed.brid.gy https://fed.brid.gy/webmention
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;            fi
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;          done&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你还可以接着使用&lt;code&gt;${POST_URL}&lt;/code&gt;trigger webmention.app的webhook。&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;测试是否能够发出webmentions。&lt;/p&gt;
 
 

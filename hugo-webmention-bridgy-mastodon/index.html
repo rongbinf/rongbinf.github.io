@@ -170,8 +170,7 @@
 <a href="#%e4%bd%bf%e7%94%a8-webmentionapp-%e8%87%aa%e5%8a%a8%e5%8f%91%e9%80%81" class="heading-anchor">#</a>
 </h3>
 <p>你可能一次在博文中引用多个网页，但是不想再进行繁琐的手动发送webmention。<a href="https://webmention.app/">Webmention.app</a>可以读取页面<a href="https://microformats.org/wiki/h-entry"><code>&lt;h-entry&gt;</code></a>中的链接，帮你一键发送。</p>
-<p>可以使用<a href="https://webmention.app/check">Test页面</a>检查（只会检查前10个<code>&lt;h-entry&gt;</code>），也可以通过API。登录服务获得token后没有request的限制。</p>
-<p>具体请参见官网。</p>
+<p>可以使用<a href="https://webmention.app/check">Test页面</a>检查（只会检查前10个<code>&lt;h-entry&gt;</code>），也可以通过API。登录服务获得token后没有request限制。具体请参见官网。</p>
 <h2 id="将你的博文发送到社交平台">
 将你的博文发送到社交平台
 <a href="#%e5%b0%86%e4%bd%a0%e7%9a%84%e5%8d%9a%e6%96%87%e5%8f%91%e9%80%81%e5%88%b0%e7%a4%be%e4%ba%a4%e5%b9%b3%e5%8f%b0" class="heading-anchor">#</a>
@@ -180,15 +179,16 @@
 连接到 Bridgy
 <a href="#%e8%bf%9e%e6%8e%a5%e5%88%b0-bridgy" class="heading-anchor">#</a>
 </h3>
-<p><a href="https://brid.gy/">Bridgy</a>提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。</p>
-<p>这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。</p>
+<p><a href="https://brid.gy/">Bridgy</a>可将网站和社交平台相联，使得没有个人页面的用户，也能通过支持的平台进行回复，Bridgy会帮助进行webmention。</p>
+<p>进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可。如果cross-post，你需要用验证过的帐号publish带有博文链接的toot，在这条toot下的回复、转发、喜爱才会作为webmention传过来。</p>
+<p>如果直接连接（也就是我目前的做法），你会以<code>@your-domain.com@your-domain.com</code>加入联邦宇宙，向Bridgy的每次update都会对应更新这个账号下的toot。</p>
 <h3 id="使用-github-actions-自动化">
 使用 Github Actions 自动化
 <a href="#%e4%bd%bf%e7%94%a8-github-actions-%e8%87%aa%e5%8a%a8%e5%8c%96" class="heading-anchor">#</a>
 </h3>
 <p>我使用Hugo作为博客系统，希望实现根据我是否上传或更新<code>.md</code>，自动发出webmention。<a href="https://github.com/marketplace/actions/changed-files">tj-actions/changed-files</a>能够找到repo下文件的修改情况，故可以先寻找是否有文件被修改，之后发出 <code>curl</code>命令即可。</p>
 <p>在<a href="/github-actions-deploy-hugo">之前的博文</a>里，我设置了<code>deploy.yml</code>用来自动部署Hugo、生成静态文件。故对应在此设置为在<code>deploy</code>后才运行。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">send webmentions according to md changes</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">send webmentions to bridgy according to md changes</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">workflow_run</span><span class="p">:</span><span class="w">
@@ -227,12 +227,13 @@
 </span></span></span><span class="line"><span class="cl"><span class="sd">          for FILE in $CHANGED_FILES; do
 </span></span></span><span class="line"><span class="cl"><span class="sd">            if [[ $FILE == content/posts/*.md ]]; then
 </span></span></span><span class="line"><span class="cl"><span class="sd">              POST_NAME=$(basename &#34;$FILE&#34; .md)
-</span></span></span><span class="line"><span class="cl"><span class="sd">              POST_URL=&#34;https://fanrongbin.com/${POST_NAME}&#34; # 注意修改为你的网站域名
+</span></span></span><span class="line"><span class="cl"><span class="sd">              POST_URL=&#34;https://your-domain.com/${POST_NAME}&#34;
 </span></span></span><span class="line"><span class="cl"><span class="sd">              echo &#34;Sending Webmention for $POST_URL&#34;
-</span></span></span><span class="line"><span class="cl"><span class="sd">              curl -i -d source=${POST_URL} -d target=https://fed.brid.gy https://fed.brid.gy/webmention # 如果你使用的不是 Bridgy，请对应修改 target url
+</span></span></span><span class="line"><span class="cl"><span class="sd">              curl -i -d source=${POST_URL} -d target=https://fed.brid.gy https://fed.brid.gy/webmention
 </span></span></span><span class="line"><span class="cl"><span class="sd">            fi
 </span></span></span><span class="line"><span class="cl"><span class="sd">          done</span><span class="w">          
-</span></span></span></code></pre></div><hr>
+</span></span></span></code></pre></div><p>你还可以接着使用<code>${POST_URL}</code>trigger webmention.app的webhook。</p>
+<hr>
 <p>测试是否能够发出webmentions。</p>
 
 
