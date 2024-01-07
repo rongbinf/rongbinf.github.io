@@ -143,6 +143,9 @@
 
 
 
+
+
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-07-test-webmention&#34;&gt;
 
 
@@ -169,7 +172,7 @@
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T11:12:35&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-test-webmention&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-test-webmention&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;11:12 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon#2024-01-07-test-webmention&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-test-webmention&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;11:12 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3660,6 +3663,9 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
       <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/stream/</guid>
       <description>
+
+
+
 
 
 
