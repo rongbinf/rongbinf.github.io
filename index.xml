@@ -3704,6 +3704,50 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-07-like-post&#34;&gt;
+
+
+
+
+
+
+    Liked: &lt;a class=&#34;u-like-of&#34; href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&#34;&gt;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&lt;/a&gt;
+
+
+
+
+
+
+&lt;div class=&#34;stream-inner e-content&#34;&gt;
+    一则like测试。liked a post。
+&lt;/div&gt;
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+
+&lt;p class=&#34;stream-meta&#34;&gt;
+    &lt;span class=&#34;p-author h-card&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-like-post&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-like-post&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;09:17 Sun&lt;/a&gt;
+    &lt;/time&gt;
+&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-07-first-note-reply&#34;&gt;
 
 
