@@ -145,11 +145,11 @@
 &lt;p class=&#34;stream-meta&#34;&gt;
     &lt;span class=&#34;p-author h-card&#34;&gt;
         &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
-            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;Rongbin FAN
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T11:12:35-08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-&#39;;&#34; class=&#34;stream-time&#34;&gt;11:12 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;11:12 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3686,11 +3686,11 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;p class=&#34;stream-meta&#34;&gt;
     &lt;span class=&#34;p-author h-card&#34;&gt;
         &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
-            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;Rongbin FAN
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-follow&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-follow&#39;;&#34; class=&#34;stream-time&#34;&gt;09:17 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-follow&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-follow&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;09:17 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3732,11 +3732,11 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;p class=&#34;stream-meta&#34;&gt;
     &lt;span class=&#34;p-author h-card&#34;&gt;
         &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
-            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;Rongbin FAN
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-repost&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-repost&#39;;&#34; class=&#34;stream-time&#34;&gt;09:17 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-repost&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-repost&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;09:17 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3778,11 +3778,11 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;p class=&#34;stream-meta&#34;&gt;
     &lt;span class=&#34;p-author h-card&#34;&gt;
         &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
-            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;Rongbin FAN
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-like&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-like&#39;;&#34; class=&#34;stream-time&#34;&gt;09:17 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-like&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-like&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;09:17 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3806,7 +3806,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 &lt;p class=&#34;stream-small&#34;&gt;
-    In reply to: &lt;a href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-note&#34; class=&#34;u-in-reply-to&#34;&gt;https://fanrongbin.com/stream/#2024-01-07-first-note&lt;/a&gt;
+    In reply to: &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-note&#34; class=&#34;u-in-reply-to&#34;&gt;https://fanrongbin.com/stream#2024-01-07-first-note&lt;/a&gt;
 &lt;/p&gt;
 
 
@@ -3824,11 +3824,11 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;p class=&#34;stream-meta&#34;&gt;
     &lt;span class=&#34;p-author h-card&#34;&gt;
         &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
-            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;Rongbin FAN
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T00:23:30&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-note-reply&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-note-reply&#39;;&#34; class=&#34;stream-time&#34;&gt;00:23 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-note-reply&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-note-reply&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;00:23 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3870,11 +3870,11 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;p class=&#34;stream-meta&#34;&gt;
     &lt;span class=&#34;p-author h-card&#34;&gt;
         &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
-            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; style=&#34;display:none;&#34;&gt;Rongbin FAN
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T00:01:15&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-note&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-note&#39;;&#34; class=&#34;stream-time&#34;&gt;00:01 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-note&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-note&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;00:01 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
