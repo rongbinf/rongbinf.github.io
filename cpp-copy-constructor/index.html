@@ -29,7 +29,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.3444548754863f90ff035506e8d6424fff2818832d54034f3e16e3b5c6fc27be.css" integrity="sha256-NERUh1SGP5D/A1UG6NZCT/8oGIMtVANPPhbjtcb8J74=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.80a4e7f6fd92ac95221fe429f585873792a918d653b1fe5d9e9ce973d88af157.css" integrity="sha256-gKTn9v2SrJUiH&#43;Qp9YWHN5KpGNZTsf5dnpzpc9iK8Vc=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -267,14 +267,66 @@
   
   
 
-<div class="webmentions-how">Response by interacting with this <a href="https://fed.brid.gy/r/https://fanrongbin.com/cpp-copy-constructor/">toot</a> or <a
+
+
+<div class="webmentions-how">Response <a class="btn" data-clipboard-text="https://fanrongbin.com/cpp-copy-constructor/">by interacting on Mastodon</a> or <a
   href="/hugo-webmention-bridgy-mastodon">webmentioning</a> this post.
-  <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post">
+  <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin-top: 2ch;">
         <input type="url" name="source" class="url" placeholder="Your URL" required="">
         <input type="hidden" name="target" value="https://fanrongbin.com/cpp-copy-constructor/">
-        <input type="submit" value="Send Webmention" style="margin-top: 2ch;">
+        <input type="submit" value="Webmention" style="background:var(--bg-color);">
   </form>
 </div>
+
+<div id="copy-success-message" class="copy-success">
+  <h3>You have copied this page url!</h3>
+  <p>Search it in your Mastodon server, and reply that toot by <em>@fanrongbin.com@fanrongbin.com</em>.</p>
+  <h3>已复制本页面网址!</h3>在你的 Mastodon 服务器搜索此网址，回复由 <em>@fanrongbin.com@fanrongbin.com</em> 发出的嘟文即可。</p>
+</div>
+
+<script defer>
+document.addEventListener('DOMContentLoaded', function() {
+  var script = document.createElement('script');
+  script.src = '/clipboard.min.js';
+  script.onload = function() {
+    const copyButton = document.querySelector('.btn');
+    const copySuccessMessage = document.getElementById('copy-success-message');
+
+    const clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function(e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+
+      copySuccessMessage.style.display = 'block';
+      copySuccessMessage.style.opacity = 1;
+
+      
+      
+      
+      
+
+      e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+      console.error('Action:', e.action);
+      console.error('Trigger:', e.trigger);
+    });
+
+    document.addEventListener('click', function(event) {
+      if (event.target !== copyButton) {
+        copySuccessMessage.style.display = 'none';
+        copySuccessMessage.style.opacity = 0;
+      }
+    });
+  };
+
+  document.head.appendChild(script);
+});
+</script>
+
 
 <script src="/webmention.min.js" defer></script>
 <div id="webmentions"></div>
