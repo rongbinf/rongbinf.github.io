@@ -149,7 +149,7 @@
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T11:12:35-08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-&#34; style=&#34;border:none;font-weight:bold;&#34;&gt;11:12 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-&#39;;&#34; class=&#34;stream-time&#34;&gt;11:12 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3690,7 +3690,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-follow&#34; style=&#34;border:none;font-weight:bold;&#34;&gt;09:17 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-follow&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-follow&#39;;&#34; class=&#34;stream-time&#34;&gt;09:17 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3736,7 +3736,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-repost&#34; style=&#34;border:none;font-weight:bold;&#34;&gt;09:17 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-repost&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-repost&#39;;&#34; class=&#34;stream-time&#34;&gt;09:17 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3782,7 +3782,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-like&#34; style=&#34;border:none;font-weight:bold;&#34;&gt;09:17 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-like&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-like&#39;;&#34; class=&#34;stream-time&#34;&gt;09:17 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3828,7 +3828,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T00:23:30&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-note-reply&#34; style=&#34;border:none;font-weight:bold;&#34;&gt;00:23 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-note-reply&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-note-reply&#39;;&#34; class=&#34;stream-time&#34;&gt;00:23 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3874,7 +3874,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
         &lt;/a&gt;
     &lt;/span&gt;
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T00:01:15&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-note&#34; style=&#34;border:none;font-weight:bold;&#34;&gt;00:01 Sun&lt;/a&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-first-note&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-first-note&#39;;&#34; class=&#34;stream-time&#34;&gt;00:01 Sun&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
