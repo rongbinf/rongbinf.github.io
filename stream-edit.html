@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Stream Shortcode Generator</title>
+  <style>
+    .context {
+      display: grid;
+      grid-column: 2/6;
+    }
+
+    div {
+      padding: 2ch;
+    }
+
+    input,select {
+      height: 2rem;
+    }
+
+    textarea {
+      height: 20rem;
+    }
+
+    input,
+    textarea {
+      width: 90%;
+    }
+
+    button {
+      padding: 2ch;
+      margin-right: 1ch;
+    }
+
+    #previewArea {
+      padding: 2ch;
+      background: #e7e7e7;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      input,textarea,select {
+        background: #000;
+        color: #fff;
+      }
+      button {
+        background: #3d3d3d;
+        color: #fff;
+      }
+      #previewArea {
+        background: #232323;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <main class="main article-entry">
+    <section class="context">
+      <div>
+        <p id="datetime">Current Date and Time: <span></span></p>
+        <p><a href="https://github.com/rongbinf/build/blob/main/content/stream.md">Github</a></p>
+        <p><a href="/stream">Stream</a></p>
+      </div>
+      <div>
+        <label for="sid">SID: </label>
+        <input type="text" id="sid">
+      </div>
+      <div>
+        <label for="stype">Stype: </label>
+        <select id="stype">
+          <option value="note">Note</option>
+          <option value="reply">Reply</option>
+          <option value="like">Like</option>
+          <option value="follow">Follow</option>
+          <option value="repost">Repost</option>
+        </select>
+      </div>
+      <div id="urlInput" class="hidden">
+        <label for="surl">SURL: </label>
+        <input type="text" id="surl">
+      </div>
+      <div>
+        <button id="bold">B</button>
+        <button id="italic">I</button>
+        <button id="link">Link</button>
+      </div>
+      <div>
+        <label for="content">Content: </label>
+        <textarea id="content"></textarea>
+      </div>
+      <div>
+        <button id="clear">Clear</button>
+        <button id="preview">Preview</button>
+        <button id="copy">Copy</button>
+        <!-- <button id="send" style="display: none;">Send</button> -->
+      </div>
+      <div id="previewArea"></div>
+    </section>
+  </main>
+</body>
+<script>
+  function applyMarkdown(type) {
+    const textArea = document.getElementById('content');
+    const start = textArea.selectionStart;
+    const end = textArea.selectionEnd;
+    const selectedText = textArea.value.substring(start, end);
+
+    let markdownText;
+    switch (type) {
+      case 'bold':
+        markdownText = `**${selectedText}**`;
+        break;
+      case 'italic':
+        markdownText = `*${selectedText}*`;
+        break;
+      case 'link':
+        markdownText = `[${selectedText}](url)`;
+        break;
+    }
+
+    textArea.value = textArea.value.substring(0, start) + markdownText + textArea.value.substring(end);
+    textArea.focus();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // 格式化日期时间为 2024-01-07T12:44:02+08:00 格式
+    function formatDateTime(date) {
+      const pad = (number) => number.toString().padStart(2, '0');
+
+      let offset = -date.getTimezoneOffset();
+      const sign = offset >= 0 ? '+' : '-';
+      offset = Math.abs(offset);
+
+      const hoursOffset = pad(Math.floor(offset / 60));
+      const minutesOffset = pad(offset % 60);
+
+      return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}${sign}${hoursOffset}:${minutesOffset}`;
+    }
+
+    // 更新日期和时间
+    function updateDateTime() {
+      const now = new Date();
+      const formattedDateTime = formatDateTime(now);
+      document.getElementById('datetime').innerText = `Current Date and Time: ${formattedDateTime}`;
+    }
+
+    // 每秒更新日期和时间
+    setInterval(updateDateTime, 1000);
+
+    // 处理stype选择
+    document.getElementById('stype').addEventListener('change', function () {
+      const stype = this.value;
+      const urlInputDiv = document.getElementById('urlInput');
+      if (stype === 'note') {
+        urlInputDiv.classList.add('hidden');
+      } else {
+        urlInputDiv.classList.remove('hidden');
+      }
+    });
+
+    // 清空按钮功能
+    document.getElementById('clear').addEventListener('click', function () {
+      document.getElementById('sid').value = '';
+      document.getElementById('surl').value = '';
+      document.getElementById('content').value = '';
+    });
+
+    // 预览按钮功能
+    document.getElementById('preview').addEventListener('click', function () {
+  const sid = document.getElementById('sid').value;
+  const stype = document.getElementById('stype').value;
+  const surl = stype !== 'note' ? document.getElementById('surl').value : '';
+  const content = document.getElementById('content').value;
+
+  const formattedDateTime = formatDateTime(new Date());
+  let previewContent = `{{<stream dt="${formattedDateTime}" sid="${sid}" stype="${stype}"${surl ? ` surl="${surl}"` : ''}>}}\n${content}\n{{</stream>}}`;
+
+  document.getElementById('previewArea').innerText = previewContent;
+});
+    document.getElementById('bold').addEventListener('click', function () { applyMarkdown('bold'); });
+    document.getElementById('italic').addEventListener('click', function () { applyMarkdown('italic'); });
+    document.getElementById('link').addEventListener('click', function () { applyMarkdown('link'); });
+
+    document.getElementById('copy').addEventListener('click', function () {
+      const text = document.getElementById('previewArea').innerText;
+      const el = document.createElement('textarea');
+      el.value = text;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+
+      alert("Content copied to clipboard!");
+    });
+
+  });
+
+
+</script>
+
+</html>
