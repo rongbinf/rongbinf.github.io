@@ -119,23 +119,23 @@
 
 
 
-
-
-    
-        &lt;div class=&#34;h-entry stream&#34; id=&#34;2024-01-07-&#34;&gt;
-        &lt;p class=&#34;stream-small&#34;&gt;In reply to: &lt;a class=&#34;u-in-reply-to stream-url&#34; href=&#34;https://aaronparecki.com/2018/06/30/11/your-first-webmention&#34;&gt;https://aaronparecki.com/2018/06/30/11/your-first-webmention&lt;/a&gt;&lt;/p&gt;
-        &lt;div class=&#34;e-content stream-inner&#34;&gt;
+&lt;div class=&#34;h-entry stream&#34; id=&#34;2024-01-07-&#34;&gt;
+    &lt;p class=&#34;stream-small&#34;&gt;In reply to: &lt;a class=&#34;u-in-reply-to stream-url&#34; href=&#34;https://aaronparecki.com/2018/06/30/11/your-first-webmention&#34;&gt;https://aaronparecki.com/2018/06/30/11/your-first-webmention&lt;/a&gt;&lt;/p&gt;
+    &lt;div class=&#34;e-content stream-inner&#34;&gt;
         Trying out this guide to sending webmentions.
     &lt;/div&gt;
     &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
     &lt;p class=&#34;stream-meta&#34;&gt;
         &lt;span class=&#34;p-author h-card&#34;&gt;&lt;a href=&#34;https://fanrongbin.com&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/span&gt;
-        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T11:12:35-08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a class=&#34;stream-url&#34; href=&#34;#2024-01-07-&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
-        &lt;a class=&#34;u-url&#34; href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/#2024-01-07-&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T11:12:35-08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a
+                class=&#34;stream-url&#34; href=&#34;#2024-01-07-&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
+        &lt;a class=&#34;u-url&#34;
+            href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/#2024-01-07-&#34;
+            style=&#34;display:none;&#34;&gt;&lt;/a&gt;
     &lt;/p&gt;
 &lt;/div&gt;
 
-    
+
 &lt;hr&gt;
 
 &lt;div class=&#34;webmentions-how&#34;&gt;Leave your comment by &lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;&gt;webmentioning&lt;/a&gt; this post. It takes about 30 minutes to display new responses.&lt;/div&gt;
@@ -3633,21 +3633,6 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
       <guid>https://fanrongbin.com/stream/</guid>
       <description>
 
-&lt;div class=&#34;h-card&#34; style=&#34;display:none;&#34; hidden=&#34;from-humans&#34;&gt;
-        &lt;span class=&#34;p-name&#34;&gt;Rongbin Fan&lt;/span&gt;
-        &lt;span class=&#34;p-given-name&#34;&gt;Rongbin&lt;/span&gt;
-        &lt;span class=&#34;p-family-name&#34;&gt;Fan&lt;/span&gt;
-        &lt;img class=&#34;u-photo&#34; src=&#34;//fanrongbin.com/apple-touch-icon.png&#34;/&gt;
-        &lt;abbr class=&#34;u-pronoun&#34; title=&#34;he/him/his&#34;&gt;he/him/his&lt;/abbr&gt;
-        &lt;a class=&#34;u-url&#34; rel=&#34;me&#34; href=&#34;//fanrongbin.com&#34;&gt;w&lt;/a&gt;,
-        &lt;a class=&#34;u-email&#34; href=&#34;mailto:hi@fanrongbin.com&#34;&gt;e&lt;/a&gt;,
-        &lt;a class=&#34;u-email&#34; href=&#34;mailto:fanrongbin0201@gmail.com&#34;&gt;e-gmail&lt;/a&gt;
-        &lt;span class=&#34;p-locality&#34;&gt;Beijing&lt;/span&gt;,
-        &lt;div class=&#34;p-category&#34;&gt;human&lt;/div&gt;.
-        &lt;div class=&#34;p-note&#34;&gt;Are you willing to, able to, imagine an alternative reality?&lt;/div&gt;
-        &lt;img class=&#34;u-featured&#34; src=&#34;//fanrongbin.com/blank-white.jpeg&#34; /&gt;
-        &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34;&gt;https://fed.brid.gy/&lt;/a&gt;
-&lt;/div&gt;
 
 
 
@@ -3656,30 +3641,27 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 
-
-
-
-
-
-    
 
 &lt;div class=&#34;h-entry stream&#34; id=&#34;2024-01-07-first-follow&#34;&gt;
-        &lt;p class=&#34;stream-small&#34;&gt;Following: &lt;a class=&#34;u-follow-of stream-url&#34; href=&#34;https://mastodon.social/@rongbin&#34;&gt;https://mastodon.social/@rongbin&lt;/a&gt;&lt;/p&gt;
-        &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
-        
-        &lt;div class=&#34;stream-inner&#34;&gt;
+    &lt;p class=&#34;stream-small&#34;&gt;Following: &lt;a class=&#34;u-follow-of stream-url&#34; href=&#34;https://mastodon.social/@rongbin&#34;&gt;https://mastodon.social/@rongbin&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+    
+    &lt;div class=&#34;stream-inner&#34;&gt;
         一则follow测试。
     &lt;/div&gt;
     
     &lt;p class=&#34;stream-meta&#34;&gt;
         &lt;span class=&#34;p-author h-card&#34;&gt;&lt;a href=&#34;https://fanrongbin.com&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/span&gt;
-        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18-08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-follow&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
-        &lt;a class=&#34;u-url&#34; href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-follow&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a
+                class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-follow&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
+        &lt;a class=&#34;u-url&#34;
+            href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-follow&#34;
+            style=&#34;display:none;&#34;&gt;&lt;/a&gt;
     &lt;/p&gt;
 &lt;/div&gt;
 
 
-    
 
 
 
@@ -3691,25 +3673,25 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 
-
-    
 
 &lt;div class=&#34;h-entry stream&#34; id=&#34;2024-01-07-first-repost&#34;&gt;
-        &lt;p class=&#34;stream-small&#34;&gt;Repost: &lt;a class=&#34;u-repost-of stream-url&#34; href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&#34;&gt;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&lt;/a&gt;&lt;/p&gt;
-        &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
-        
-        &lt;div class=&#34;stream-inner&#34;&gt;
+    &lt;p class=&#34;stream-small&#34;&gt;Repost: &lt;a class=&#34;u-repost-of stream-url&#34; href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&#34;&gt;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&lt;/a&gt;&lt;/p&gt;
+    &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+    
+    &lt;div class=&#34;stream-inner&#34;&gt;
         一则repost测试。
     &lt;/div&gt;
     
     &lt;p class=&#34;stream-meta&#34;&gt;
         &lt;span class=&#34;p-author h-card&#34;&gt;&lt;a href=&#34;https://fanrongbin.com&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/span&gt;
-        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18-08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-repost&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
-        &lt;a class=&#34;u-url&#34; href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-repost&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a
+                class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-repost&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
+        &lt;a class=&#34;u-url&#34;
+            href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-repost&#34;
+            style=&#34;display:none;&#34;&gt;&lt;/a&gt;
     &lt;/p&gt;
 &lt;/div&gt;
 
-    
 
 
 
@@ -3721,25 +3703,26 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 
-
-    
 
 &lt;div class=&#34;h-entry stream&#34; id=&#34;2024-01-07-first-like&#34;&gt;
-        &lt;p class=&#34;stream-small&#34;&gt;I like this: &lt;a class=&#34;u-like-of stream-url&#34; href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&#34;&gt;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&lt;/a&gt;&lt;/p&gt;
-        &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
-        
-        &lt;div class=&#34;stream-inner&#34;&gt;
+    &lt;p class=&#34;stream-small&#34;&gt;I like this: &lt;a class=&#34;u-like-of stream-url&#34; href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&#34;&gt;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+    
+    &lt;div class=&#34;stream-inner&#34;&gt;
         一则like测试。
     &lt;/div&gt;
     
     &lt;p class=&#34;stream-meta&#34;&gt;
         &lt;span class=&#34;p-author h-card&#34;&gt;&lt;a href=&#34;https://fanrongbin.com&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/span&gt;
-        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18-08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-like&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
-        &lt;a class=&#34;u-url&#34; href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-like&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T09:17:18&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a
+                class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-like&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
+        &lt;a class=&#34;u-url&#34;
+            href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-like&#34;
+            style=&#34;display:none;&#34;&gt;&lt;/a&gt;
     &lt;/p&gt;
 &lt;/div&gt;
 
-    
 
 
 
@@ -3751,22 +3734,22 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 
-
-    
-        &lt;div class=&#34;h-entry stream&#34; id=&#34;2024-01-07-first-note-reply&#34;&gt;
-        &lt;p class=&#34;stream-small&#34;&gt;In reply to: &lt;a class=&#34;u-in-reply-to stream-url&#34; href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-note&#34;&gt;https://fanrongbin.com/stream/#2024-01-07-first-note&lt;/a&gt;&lt;/p&gt;
-        &lt;div class=&#34;e-content stream-inner&#34;&gt;
+&lt;div class=&#34;h-entry stream&#34; id=&#34;2024-01-07-first-note-reply&#34;&gt;
+    &lt;p class=&#34;stream-small&#34;&gt;In reply to: &lt;a class=&#34;u-in-reply-to stream-url&#34; href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-note&#34;&gt;https://fanrongbin.com/stream/#2024-01-07-first-note&lt;/a&gt;&lt;/p&gt;
+    &lt;div class=&#34;e-content stream-inner&#34;&gt;
         一则reply测试。
     &lt;/div&gt;
     &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
     &lt;p class=&#34;stream-meta&#34;&gt;
         &lt;span class=&#34;p-author h-card&#34;&gt;&lt;a href=&#34;https://fanrongbin.com&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/span&gt;
-        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T00:23:30-08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-note-reply&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
-        &lt;a class=&#34;u-url&#34; href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-note-reply&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T00:23:30&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a
+                class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-note-reply&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
+        &lt;a class=&#34;u-url&#34;
+            href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-note-reply&#34;
+            style=&#34;display:none;&#34;&gt;&lt;/a&gt;
     &lt;/p&gt;
 &lt;/div&gt;
 
-    
 
 
 
@@ -3778,24 +3761,25 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 
+&lt;div class=&#34;stream&#34; id=&#34;2024-01-07-first-note&#34;&gt;
+    &lt;p class=&#34;stream-small&#34;&gt;Rongbin:&lt;/p&gt;
+    &lt;div class=&#34;h-entry&#34;&gt;
 
-    
-    &lt;div class=&#34;stream&#34; id=&#34;2024-01-07-first-note&#34;&gt;
-        &lt;p class=&#34;stream-small&#34;&gt;Rongbin:&lt;/p&gt;
-        &lt;div class=&#34;h-entry&#34;&gt;
-
-    &lt;div class=&#34;e-content stream-inner&#34;&gt;
-        一则note测试。
+        &lt;div class=&#34;e-content stream-inner&#34;&gt;
+            一则note测试。
+        &lt;/div&gt;
+        &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+        &lt;p class=&#34;stream-meta&#34;&gt;
+            &lt;span class=&#34;p-author h-card&#34;&gt;&lt;a href=&#34;https://fanrongbin.com&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/span&gt;
+            &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T00:01:15&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a
+                    class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-note&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
+            &lt;a class=&#34;u-url&#34;
+                href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-note&#34;
+                style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+        &lt;/p&gt;
     &lt;/div&gt;
-    &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy/&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
-    &lt;p class=&#34;stream-meta&#34;&gt;
-        &lt;span class=&#34;p-author h-card&#34;&gt;&lt;a href=&#34;https://fanrongbin.com&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;&lt;/span&gt;
-        &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T00:01:15-08:00&#34; title=&#34;07 January 2024&#34;&gt;&lt;a class=&#34;stream-url&#34; href=&#34;#2024-01-07-first-note&#34;&gt;07 January 2024&lt;/a&gt;&lt;/time&gt;
-        &lt;a class=&#34;u-url&#34; href=&#34;https://fanrongbin.com/stream/#2024-01-07-first-note&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-    
+
 &lt;hr&gt;
 
 

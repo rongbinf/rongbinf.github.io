@@ -17,7 +17,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 使用 VLC 播放 # 有两种方法：
 1. 使用命令 # Run on the server: vlc -vvv input_stream --sout &#39;#rtp{dst=192.168.0.12,port=1234,sdp=rtsp://server.example.org:8080/test.sdp}&#39; Run on the client(s): vlc rtsp://server.example.org:8080/test.sdp 2. 创建 playlist 文件 # 新建一个播放列表，或直接使用播放 URL 打开 RTSP 流视频，确认能够正常播放。
 将播放列表另存为文件。这里建议另存为 .m3u 格式，因为打开 .xspf 格式文件会弹窗提示你选择 execute 或 open。 ">
-<meta name="author" content="Rongbin FAN">
+<meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
 <meta property="og:title" content="树莓派实现开机自动播放 RTSP 流视频 - Rongbin&#39;s Blog" />
 <meta property="og:description" content="家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。
@@ -69,21 +69,6 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 <link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/">
 
 <link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
-
-<div class="h-card" style="display:none;">
-  <span class="p-name">Rongbin Fan</span>
-  <span class="p-given-name">Rongbin</span>
-  <span class="p-family-name">Fan</span>
-  <img class="u-photo" src="//fanrongbin.com/apple-touch-icon.png"/>
-  <abbr class="u-pronoun" title="he/him/his">he/him/his</abbr>
-  <a class="u-url" rel="me" href="//fanrongbin.com">w</a>,
-  <a class="u-email" href="mailto:hi@fanrongbin.com">e</a>,
-  <a class="u-email" href="mailto:fanrongbin0201@gmail.com">e-gmail</a>
-  <span class="p-locality">Beijing</span>,
-  <div class="p-category">human</div>.
-  <div class="p-note">Are you willing to, able to, imagine an alternative reality?</div>
-  <img class="u-featured" src="//fanrongbin.com/blank-white.jpeg" />
-</div>
 </head>
 
 <body class="han-init-context">
