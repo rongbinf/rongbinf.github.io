@@ -26,7 +26,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.b2d4e0f43b21845636c4fc203ec6f4d7c80598f57b0900912782988ec72f3dc3.css" integrity="sha256-stTg9DshhFY2xPwgPsb018gFmPV7CQCRJ4KYjscvPcM=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.3444548754863f90ff035506e8d6424fff2818832d54034f3e16e3b5c6fc27be.css" integrity="sha256-NERUh1SGP5D/A1UG6NZCT/8oGIMtVANPPhbjtcb8J74=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -68,11 +68,24 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#什么是-webmention">什么是 webmention</a></li>
-    <li><a href="#1-用indieauth标识你的身份">1. 用IndieAuth标识你的身份</a></li>
-    <li><a href="#2-使用-webmentionio-挂载">2. 使用 webmention.io 挂载</a></li>
-    <li><a href="#3-借助-webmentionjs-在博文页面显示-webmention">3. 借助 webmention.js 在博文页面显示 webmention</a></li>
-    <li><a href="#4-连接到-bridgy">4. 连接到 Bridgy</a></li>
-    <li><a href="#5-使用-github-pages-自动上传更新博文">5. 使用 Github Pages 自动上传/更新博文</a></li>
+    <li><a href="#接收-webmention">接收 webmention</a>
+      <ul>
+        <li><a href="#1-用-indieauth-标识你的身份">1. 用 IndieAuth 标识你的身份</a></li>
+        <li><a href="#2-使用-webmentionio-挂载">2. 使用 webmention.io 挂载</a></li>
+        <li><a href="#3-借助-webmentionjs-在博文页面显示-webmention">3. 借助 webmention.js 在博文页面显示 webmention</a></li>
+      </ul>
+    </li>
+    <li><a href="#发送-webmention">发送 webmention</a>
+      <ul>
+        <li><a href="#使用-webmentionapp-自动发送">使用 webmention.app 自动发送</a></li>
+      </ul>
+    </li>
+    <li><a href="#将你的博文发送到社交平台">将你的博文发送到社交平台</a>
+      <ul>
+        <li><a href="#连接到-bridgy">连接到 Bridgy</a></li>
+        <li><a href="#使用-github-actions-自动化">使用 Github Actions 自动化</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -109,50 +122,72 @@
 </h2>
 <p>Webmention是由<a href="https://indieweb.org">IndieWeb</a>发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：</p>
 <ol>
-<li>你在自己的网站上传了一篇文章</li>
-<li>这篇文章被我在自己的网站里引用</li>
-<li>Webmention服务确认了我的引用</li>
-<li>你可以通过API、Atom Feed等方式取得通知</li>
+<li>你上传了一篇文章</li>
+<li>这篇文章被我引用</li>
+<li>我向你的网站，通过<code>curl</code>或API等方式发出webmention</li>
+<li>你通过<a href="https://webmention.io">webmention.io</a>等服务或自行挂载，接收到我的webmention</li>
 </ol>
-<p>Webmention可以借助<a href="https://webmention.io/">webmention.io</a>服务或自行挂载，这里给出使用webmention.io的步骤：</p>
-<h2 id="1-用indieauth标识你的身份">
-1. 用IndieAuth标识你的身份
-<a href="#1-%e7%94%a8indieauth%e6%a0%87%e8%af%86%e4%bd%a0%e7%9a%84%e8%ba%ab%e4%bb%bd" class="heading-anchor">#</a>
+<h2 id="接收-webmention">
+接收 webmention
+<a href="#%e6%8e%a5%e6%94%b6-webmention" class="heading-anchor">#</a>
 </h2>
+<p>这里给出使用webmention.io的步骤：</p>
+<h3 id="1-用-indieauth-标识你的身份">
+1. 用 IndieAuth 标识你的身份
+<a href="#1-%e7%94%a8-indieauth-%e6%a0%87%e8%af%86%e4%bd%a0%e7%9a%84%e8%ba%ab%e4%bb%bd" class="heading-anchor">#</a>
+</h3>
 <p>Webmention.io使用<a href="https://indieweb.org/IndieAuth">IndieAuth</a>进行登录，所以需要先设置IndieAuth。在<code>index.html</code>中，对自己的帐号说明为<code>rel=&quot;me&quot;</code>，例如：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;me&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:your_email@email.com&#34;</span><span class="p">&gt;</span>Send me an email<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>或者以隐藏的方式在<code>&lt;head&gt;</code>说明：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;me&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:your_email@email.com&#34;</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>这样一来，采用IndieAuth登录的地方，会通过这些方式验证你的身份，例如通过向邮箱发送邮件，或跳转Github登录。</p>
-<h2 id="2-使用-webmentionio-挂载">
+<h3 id="2-使用-webmentionio-挂载">
 2. 使用 webmention.io 挂载
 <a href="#2-%e4%bd%bf%e7%94%a8-webmentionio-%e6%8c%82%e8%bd%bd" class="heading-anchor">#</a>
-</h2>
+</h3>
 <p>在webmention.io登录后，你会看到一个Settings-Setup页面，其中给出了需要你在<code>&lt;head&gt;</code>加入的tag：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;webmention&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://webmention.io/your_domain/webmention&#34;</span> <span class="p">/&gt;</span>
-</span></span></code></pre></div><p>这条tag说明你的页面能够接受别人的提及，你可以通过<a href="https://webmention.rocks/receive/1">webmention.rocks</a>测试能否接收到。</p>
+</span></span></code></pre></div><p>这条tag说明你的页面能够<strong>接受</strong>别人的提及，你可以通过<a href="https://webmention.rocks/receive/1">webmention.rocks</a>测试能否接收到。</p>
+<p><strong>到此，你已经实现了webmention的接收。</strong></p>
 <p>你可以通过webmention.io提供的Mentions Feed，在其他人提及时获得通知。</p>
-<h2 id="3-借助-webmentionjs-在博文页面显示-webmention">
+<h3 id="3-借助-webmentionjs-在博文页面显示-webmention">
 3. 借助 webmention.js 在博文页面显示 webmention
 <a href="#3-%e5%80%9f%e5%8a%a9-webmentionjs-%e5%9c%a8%e5%8d%9a%e6%96%87%e9%a1%b5%e9%9d%a2%e6%98%be%e7%a4%ba-webmention" class="heading-anchor">#</a>
-</h2>
-<p>Webmention.io提供API返回别人提及的具体内容，你可以通过Fetch API的方式自定。这里我们借助前人造好的轮子<a href="https://github.com/PlaidWeb/webmention.js/">webmention.js</a>，根据readme，在你的网站存放<code>webmention.min.js</code>文件并用<code>&lt;script src=&quot;&quot;&gt;&lt;/script&gt;</code>引入，在你需要展示webmention列表的地方插入：</p>
+</h3>
+<p>Webmention.io提供API返回你接受到的具体内容，这里我们借助前人造好的轮子<a href="https://github.com/PlaidWeb/webmention.js/">webmention.js</a>，根据readme，在你的网站存放<code>webmention.min.js</code>文件并用<code>&lt;script src=&quot;&quot;&gt;&lt;/script&gt;</code>引入，在你需要展示webmention列表的地方插入：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;webmentions&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>你可以通过新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以等到后面完成连接Mastodon之后，通过发toot和回复的方式测试。webmention列表的样式可通过<code>css</code>自定义。</p>
-<h2 id="4-连接到-bridgy">
-4. 连接到 Bridgy
-<a href="#4-%e8%bf%9e%e6%8e%a5%e5%88%b0-bridgy" class="heading-anchor">#</a>
+</span></span></code></pre></div><p>你可以新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以在连接Mastodon后，通过发toot和回复的方式测试。webmention列表的样式可通过<code>css</code>自定义。</p>
+<h2 id="发送-webmention">
+发送 webmention
+<a href="#%e5%8f%91%e9%80%81-webmention" class="heading-anchor">#</a>
 </h2>
+<p>很多支持webmention的站点，都会给出一个form方便你手动提交自己的链接。</p>
+<p>你也可以用<a href="https://indieweb.org/webmention-implementation-guide#One-liner_webmentions"><code>curl</code></a>发出webmention，发送前需检查对方收不收得到webmention，下面这条指令会进行检查。<code>$your_url</code>替换为你自己的引用页，<code>$target_url</code>替换为目标页。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -i -d <span class="s2">&#34;source=</span><span class="nv">$your_url</span><span class="s2">&amp;target=</span><span class="nv">$target_url</span><span class="s2">&#34;</span> <span class="sb">`</span>curl -i -s <span class="nv">$target_url</span> <span class="p">|</span> grep <span class="s1">&#39;rel=&#34;http://webmention.org/&#34;&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/rel=&#34;webmention&#34;//&#39;</span> <span class="p">|</span> grep -o -E <span class="s1">&#39;https?://[^ &#34;&gt;]+&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq<span class="sb">`</span>
+</span></span></code></pre></div><p>也可以用<a href="https://telegraph.p3k.io/">telegraph.p3k.io</a>（需要IndieAuth登录），或<a href="http://mention-tech.appspot.com/">mention.tech</a>（不需要登录）的在线服务。</p>
+<h3 id="使用-webmentionapp-自动发送">
+使用 webmention.app 自动发送
+<a href="#%e4%bd%bf%e7%94%a8-webmentionapp-%e8%87%aa%e5%8a%a8%e5%8f%91%e9%80%81" class="heading-anchor">#</a>
+</h3>
+<p>你可能一次在博文中引用多个网页，但是不想再进行繁琐的手动发送webmention。<a href="https://webmention.app/">Webmention.app</a>可以读取页面<a href="https://microformats.org/wiki/h-entry"><code>&lt;h-entry&gt;</code></a>中的链接，帮你一键发送。</p>
+<p>可以使用<a href="https://webmention.app/check">Test页面</a>检查（只会检查前10个<code>&lt;h-entry&gt;</code>），也可以通过API。登录服务获得token后没有request的限制。</p>
+<p>具体请参见官网。</p>
+<h2 id="将你的博文发送到社交平台">
+将你的博文发送到社交平台
+<a href="#%e5%b0%86%e4%bd%a0%e7%9a%84%e5%8d%9a%e6%96%87%e5%8f%91%e9%80%81%e5%88%b0%e7%a4%be%e4%ba%a4%e5%b9%b3%e5%8f%b0" class="heading-anchor">#</a>
+</h2>
+<h3 id="连接到-bridgy">
+连接到 Bridgy
+<a href="#%e8%bf%9e%e6%8e%a5%e5%88%b0-bridgy" class="heading-anchor">#</a>
+</h3>
 <p><a href="https://brid.gy/">Bridgy</a>提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。</p>
 <p>这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。</p>
-<h2 id="5-使用-github-pages-自动上传更新博文">
-5. 使用 Github Pages 自动上传/更新博文
-<a href="#5-%e4%bd%bf%e7%94%a8-github-pages-%e8%87%aa%e5%8a%a8%e4%b8%8a%e4%bc%a0%e6%9b%b4%e6%96%b0%e5%8d%9a%e6%96%87" class="heading-anchor">#</a>
-</h2>
-<p>由于Hugo是静态的，在每次上传或修改<code>.md</code>博文时，需要通过<code>curl</code>或类似<a href="https://telegraph.p3k.io">Telegraph</a>的服务向<code>https://fed.brid.gy</code>发出对应的webmention：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -i -d <span class="nv">source</span><span class="o">=</span>https://your-domain.com/your-post/ -d <span class="nv">target</span><span class="o">=</span>https://fed.brid.gy https://fed.brid.gy/webmention
-</span></span></code></pre></div><p>但我希望实现根据我是否上传或更新<code>.md</code>，自动发出webmention。我发现<a href="https://github.com/marketplace/actions/changed-files">tj-actions/changed-files</a>能够找到repo下文件的修改情况，通过寻找是否有文件被修改，之后对应用<code>curl</code>更新即可。</p>
-<p>在<a href="/github-actions-deploy-hugo">之前的博文</a>里，我设置了<code>deploy.yml</code>用来自动部署Hugo、生成静态文件。于是对应在这里设置为只在完成<code>deploy</code>后才运行。</p>
+<h3 id="使用-github-actions-自动化">
+使用 Github Actions 自动化
+<a href="#%e4%bd%bf%e7%94%a8-github-actions-%e8%87%aa%e5%8a%a8%e5%8c%96" class="heading-anchor">#</a>
+</h3>
+<p>我使用Hugo作为博客系统，希望实现根据我是否上传或更新<code>.md</code>，自动发出webmention。<a href="https://github.com/marketplace/actions/changed-files">tj-actions/changed-files</a>能够找到repo下文件的修改情况，故可以先寻找是否有文件被修改，之后发出 <code>curl</code>命令即可。</p>
+<p>在<a href="/github-actions-deploy-hugo">之前的博文</a>里，我设置了<code>deploy.yml</code>用来自动部署Hugo、生成静态文件。故对应在此设置为在<code>deploy</code>后才运行。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">send webmentions according to md changes</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
@@ -243,11 +278,6 @@
 
 
 </div>
-<hr>
-
-<div class="webmentions-how">Leave your comment by <a href="/hugo-webmention-bridgy-mastodon">webmentioning</a> this post. It takes about 30 minutes to display new responses.</div>
-
-
 
 
 
@@ -266,6 +296,15 @@
 
   
   
+
+<div class="webmentions-how">Response by interacting with this <a href="https://fed.brid.gy/r/https://fanrongbin.com/hugo-webmention-bridgy-mastodon/">toot</a> or <a
+  href="/hugo-webmention-bridgy-mastodon">webmentioning</a> this post.
+  <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post">
+        <input type="url" name="source" class="url" placeholder="Your URL" required="">
+        <input type="hidden" name="target" value="https://fanrongbin.com/hugo-webmention-bridgy-mastodon/">
+        <input type="submit" value="Send Webmention" style="margin-top: 2ch;">
+  </form>
+</div>
 
 <script src="/webmention.min.js" defer></script>
 <div id="webmentions"></div>

@@ -19,50 +19,72 @@
 &lt;/h2&gt;
 &lt;p&gt;Webmention是由&lt;a href=&#34;https://indieweb.org&#34;&gt;IndieWeb&lt;/a&gt;发起的W3C标准，用来实现网页之间的相互提及，不必借助平台或引入评论系统。它的工作流程是这样的：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;你在自己的网站上传了一篇文章&lt;/li&gt;
-&lt;li&gt;这篇文章被我在自己的网站里引用&lt;/li&gt;
-&lt;li&gt;Webmention服务确认了我的引用&lt;/li&gt;
-&lt;li&gt;你可以通过API、Atom Feed等方式取得通知&lt;/li&gt;
+&lt;li&gt;你上传了一篇文章&lt;/li&gt;
+&lt;li&gt;这篇文章被我引用&lt;/li&gt;
+&lt;li&gt;我向你的网站，通过&lt;code&gt;curl&lt;/code&gt;或API等方式发出webmention&lt;/li&gt;
+&lt;li&gt;你通过&lt;a href=&#34;https://webmention.io&#34;&gt;webmention.io&lt;/a&gt;等服务或自行挂载，接收到我的webmention&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Webmention可以借助&lt;a href=&#34;https://webmention.io/&#34;&gt;webmention.io&lt;/a&gt;服务或自行挂载，这里给出使用webmention.io的步骤：&lt;/p&gt;
-&lt;h2 id=&#34;1-用indieauth标识你的身份&#34;&gt;
-1. 用IndieAuth标识你的身份
-&lt;a href=&#34;#1-%e7%94%a8indieauth%e6%a0%87%e8%af%86%e4%bd%a0%e7%9a%84%e8%ba%ab%e4%bb%bd&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;h2 id=&#34;接收-webmention&#34;&gt;
+接收 webmention
+&lt;a href=&#34;#%e6%8e%a5%e6%94%b6-webmention&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
+&lt;p&gt;这里给出使用webmention.io的步骤：&lt;/p&gt;
+&lt;h3 id=&#34;1-用-indieauth-标识你的身份&#34;&gt;
+1. 用 IndieAuth 标识你的身份
+&lt;a href=&#34;#1-%e7%94%a8-indieauth-%e6%a0%87%e8%af%86%e4%bd%a0%e7%9a%84%e8%ba%ab%e4%bb%bd&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;Webmention.io使用&lt;a href=&#34;https://indieweb.org/IndieAuth&#34;&gt;IndieAuth&lt;/a&gt;进行登录，所以需要先设置IndieAuth。在&lt;code&gt;index.html&lt;/code&gt;中，对自己的帐号说明为&lt;code&gt;rel=&amp;quot;me&amp;quot;&lt;/code&gt;，例如：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;me&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;mailto:your_email@email.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Send me an email&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或者以隐藏的方式在&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;说明：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;me&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;mailto:your_email@email.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样一来，采用IndieAuth登录的地方，会通过这些方式验证你的身份，例如通过向邮箱发送邮件，或跳转Github登录。&lt;/p&gt;
-&lt;h2 id=&#34;2-使用-webmentionio-挂载&#34;&gt;
+&lt;h3 id=&#34;2-使用-webmentionio-挂载&#34;&gt;
 2. 使用 webmention.io 挂载
 &lt;a href=&#34;#2-%e4%bd%bf%e7%94%a8-webmentionio-%e6%8c%82%e8%bd%bd&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;在webmention.io登录后，你会看到一个Settings-Setup页面，其中给出了需要你在&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;加入的tag：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;webmention&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://webmention.io/your_domain/webmention&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这条tag说明你的页面能够接受别人的提及，你可以通过&lt;a href=&#34;https://webmention.rocks/receive/1&#34;&gt;webmention.rocks&lt;/a&gt;测试能否接收到。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这条tag说明你的页面能够&lt;strong&gt;接受&lt;/strong&gt;别人的提及，你可以通过&lt;a href=&#34;https://webmention.rocks/receive/1&#34;&gt;webmention.rocks&lt;/a&gt;测试能否接收到。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;到此，你已经实现了webmention的接收。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;你可以通过webmention.io提供的Mentions Feed，在其他人提及时获得通知。&lt;/p&gt;
-&lt;h2 id=&#34;3-借助-webmentionjs-在博文页面显示-webmention&#34;&gt;
+&lt;h3 id=&#34;3-借助-webmentionjs-在博文页面显示-webmention&#34;&gt;
 3. 借助 webmention.js 在博文页面显示 webmention
 &lt;a href=&#34;#3-%e5%80%9f%e5%8a%a9-webmentionjs-%e5%9c%a8%e5%8d%9a%e6%96%87%e9%a1%b5%e9%9d%a2%e6%98%be%e7%a4%ba-webmention&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;Webmention.io提供API返回别人提及的具体内容，你可以通过Fetch API的方式自定。这里我们借助前人造好的轮子&lt;a href=&#34;https://github.com/PlaidWeb/webmention.js/&#34;&gt;webmention.js&lt;/a&gt;，根据readme，在你的网站存放&lt;code&gt;webmention.min.js&lt;/code&gt;文件并用&lt;code&gt;&amp;lt;script src=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;引入，在你需要展示webmention列表的地方插入：&lt;/p&gt;
+&lt;/h3&gt;
+&lt;p&gt;Webmention.io提供API返回你接受到的具体内容，这里我们借助前人造好的轮子&lt;a href=&#34;https://github.com/PlaidWeb/webmention.js/&#34;&gt;webmention.js&lt;/a&gt;，根据readme，在你的网站存放&lt;code&gt;webmention.min.js&lt;/code&gt;文件并用&lt;code&gt;&amp;lt;script src=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;引入，在你需要展示webmention列表的地方插入：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;webmentions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你可以通过新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以等到后面完成连接Mastodon之后，通过发toot和回复的方式测试。webmention列表的样式可通过&lt;code&gt;css&lt;/code&gt;自定义。&lt;/p&gt;
-&lt;h2 id=&#34;4-连接到-bridgy&#34;&gt;
-4. 连接到 Bridgy
-&lt;a href=&#34;#4-%e8%bf%9e%e6%8e%a5%e5%88%b0-bridgy&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你可以新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以在连接Mastodon后，通过发toot和回复的方式测试。webmention列表的样式可通过&lt;code&gt;css&lt;/code&gt;自定义。&lt;/p&gt;
+&lt;h2 id=&#34;发送-webmention&#34;&gt;
+发送 webmention
+&lt;a href=&#34;#%e5%8f%91%e9%80%81-webmention&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
+&lt;p&gt;很多支持webmention的站点，都会给出一个form方便你手动提交自己的链接。&lt;/p&gt;
+&lt;p&gt;你也可以用&lt;a href=&#34;https://indieweb.org/webmention-implementation-guide#One-liner_webmentions&#34;&gt;&lt;code&gt;curl&lt;/code&gt;&lt;/a&gt;发出webmention，发送前需检查对方收不收得到webmention，下面这条指令会进行检查。&lt;code&gt;$your_url&lt;/code&gt;替换为你自己的引用页，&lt;code&gt;$target_url&lt;/code&gt;替换为目标页。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -i -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;source=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$your_url&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;amp;target=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$target_url&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;curl -i -s &lt;span class=&#34;nv&#34;&gt;$target_url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep &lt;span class=&#34;s1&#34;&gt;&amp;#39;rel=&amp;#34;http://webmention.org/&amp;#34;&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/rel=&amp;#34;webmention&amp;#34;//&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -o -E &lt;span class=&#34;s1&#34;&gt;&amp;#39;https?://[^ &amp;#34;&amp;gt;]+&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也可以用&lt;a href=&#34;https://telegraph.p3k.io/&#34;&gt;telegraph.p3k.io&lt;/a&gt;（需要IndieAuth登录），或&lt;a href=&#34;http://mention-tech.appspot.com/&#34;&gt;mention.tech&lt;/a&gt;（不需要登录）的在线服务。&lt;/p&gt;
+&lt;h3 id=&#34;使用-webmentionapp-自动发送&#34;&gt;
+使用 webmention.app 自动发送
+&lt;a href=&#34;#%e4%bd%bf%e7%94%a8-webmentionapp-%e8%87%aa%e5%8a%a8%e5%8f%91%e9%80%81&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;你可能一次在博文中引用多个网页，但是不想再进行繁琐的手动发送webmention。&lt;a href=&#34;https://webmention.app/&#34;&gt;Webmention.app&lt;/a&gt;可以读取页面&lt;a href=&#34;https://microformats.org/wiki/h-entry&#34;&gt;&lt;code&gt;&amp;lt;h-entry&amp;gt;&lt;/code&gt;&lt;/a&gt;中的链接，帮你一键发送。&lt;/p&gt;
+&lt;p&gt;可以使用&lt;a href=&#34;https://webmention.app/check&#34;&gt;Test页面&lt;/a&gt;检查（只会检查前10个&lt;code&gt;&amp;lt;h-entry&amp;gt;&lt;/code&gt;），也可以通过API。登录服务获得token后没有request的限制。&lt;/p&gt;
+&lt;p&gt;具体请参见官网。&lt;/p&gt;
+&lt;h2 id=&#34;将你的博文发送到社交平台&#34;&gt;
+将你的博文发送到社交平台
+&lt;a href=&#34;#%e5%b0%86%e4%bd%a0%e7%9a%84%e5%8d%9a%e6%96%87%e5%8f%91%e9%80%81%e5%88%b0%e7%a4%be%e4%ba%a4%e5%b9%b3%e5%8f%b0&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;连接到-bridgy&#34;&gt;
+连接到 Bridgy
+&lt;a href=&#34;#%e8%bf%9e%e6%8e%a5%e5%88%b0-bridgy&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://brid.gy/&#34;&gt;Bridgy&lt;/a&gt;提供的服务可将网站和社交平台相联，没有个人页面的用户，也能通过支持的平台进行回复，依靠Bridgy进行webmention。进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可，我使用cross-post。&lt;/p&gt;
 &lt;p&gt;这样一来，任何包括了你博文url的toot，对toot的回复、转发、喜爱，都会作为webmention传到你的页面。&lt;/p&gt;
-&lt;h2 id=&#34;5-使用-github-pages-自动上传更新博文&#34;&gt;
-5. 使用 Github Pages 自动上传/更新博文
-&lt;a href=&#34;#5-%e4%bd%bf%e7%94%a8-github-pages-%e8%87%aa%e5%8a%a8%e4%b8%8a%e4%bc%a0%e6%9b%b4%e6%96%b0%e5%8d%9a%e6%96%87&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;由于Hugo是静态的，在每次上传或修改&lt;code&gt;.md&lt;/code&gt;博文时，需要通过&lt;code&gt;curl&lt;/code&gt;或类似&lt;a href=&#34;https://telegraph.p3k.io&#34;&gt;Telegraph&lt;/a&gt;的服务向&lt;code&gt;https://fed.brid.gy&lt;/code&gt;发出对应的webmention：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -i -d &lt;span class=&#34;nv&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;https://your-domain.com/your-post/ -d &lt;span class=&#34;nv&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;https://fed.brid.gy https://fed.brid.gy/webmention
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;但我希望实现根据我是否上传或更新&lt;code&gt;.md&lt;/code&gt;，自动发出webmention。我发现&lt;a href=&#34;https://github.com/marketplace/actions/changed-files&#34;&gt;tj-actions/changed-files&lt;/a&gt;能够找到repo下文件的修改情况，通过寻找是否有文件被修改，之后对应用&lt;code&gt;curl&lt;/code&gt;更新即可。&lt;/p&gt;
-&lt;p&gt;在&lt;a href=&#34;https://fanrongbin.com/github-actions-deploy-hugo&#34;&gt;之前的博文&lt;/a&gt;里，我设置了&lt;code&gt;deploy.yml&lt;/code&gt;用来自动部署Hugo、生成静态文件。于是对应在这里设置为只在完成&lt;code&gt;deploy&lt;/code&gt;后才运行。&lt;/p&gt;
+&lt;h3 id=&#34;使用-github-actions-自动化&#34;&gt;
+使用 Github Actions 自动化
+&lt;a href=&#34;#%e4%bd%bf%e7%94%a8-github-actions-%e8%87%aa%e5%8a%a8%e5%8c%96&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;我使用Hugo作为博客系统，希望实现根据我是否上传或更新&lt;code&gt;.md&lt;/code&gt;，自动发出webmention。&lt;a href=&#34;https://github.com/marketplace/actions/changed-files&#34;&gt;tj-actions/changed-files&lt;/a&gt;能够找到repo下文件的修改情况，故可以先寻找是否有文件被修改，之后发出 &lt;code&gt;curl&lt;/code&gt;命令即可。&lt;/p&gt;
+&lt;p&gt;在&lt;a href=&#34;https://fanrongbin.com/github-actions-deploy-hugo&#34;&gt;之前的博文&lt;/a&gt;里，我设置了&lt;code&gt;deploy.yml&lt;/code&gt;用来自动部署Hugo、生成静态文件。故对应在此设置为在&lt;code&gt;deploy&lt;/code&gt;后才运行。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;send webmentions according to md changes&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -153,11 +175,6 @@
 
 
 &lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&#34;webmentions-how&#34;&gt;Leave your comment by &lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;&gt;webmentioning&lt;/a&gt; this post. It takes about 30 minutes to display new responses.&lt;/div&gt;
-
-
 </description>
     </item>
     <item>
@@ -184,12 +201,6 @@
 &lt;/span&gt; If a page has three or more side notes, it triggers &lt;a href=&#34;https://github.com/jsplumb/jsplumb&#34;&gt;jsPlumb&lt;/a&gt; – check it out on &lt;a href=&#34;https://fanrongbin.com/give-ko/#%E4%B8%BA%E4%BB%80%E4%B9%88-%EC%A3%BC%EB%8B%A4---%EB%8B%AC%EB%8B%A4&#34;&gt;this blog post&lt;/a&gt; (still displayed on desktop).&lt;/p&gt;
 &lt;p&gt;For the homepage, I moved from the Dolt-based &lt;code&gt;index.html&lt;/code&gt; to the &lt;a href=&#34;https://web.archive.org/web/20231021154310/https://fanrongbin.com/&#34;&gt;first version&lt;/a&gt; using the &lt;a href=&#34;https://github.com/Selekkt/skelet&#34;&gt;Skelet.min.css&lt;/a&gt; framework. Then came the &lt;a href=&#34;https://web.archive.org/web/20231222082517/http://fanrongbin.com/&#34;&gt;second version&lt;/a&gt; with an avatar and some animations. And now the &lt;a href=&#34;https://web.archive.org/web/20240105125446/https://fanrongbin.com/&#34;&gt;latest version&lt;/a&gt;  simply uses &lt;code&gt;display: grid&lt;/code&gt; to layout.&lt;/p&gt;
 &lt;/span&gt;
-
-&lt;hr&gt;
-
-&lt;div class=&#34;webmentions-how&#34;&gt;Leave your comment by replying this &lt;a href=&#34;https://mastodon.social/@rongbin/111707018440760447&#34;&gt;Mastodon toot&lt;/a&gt; or &lt;a
-        href=&#34;https://fanrongbin.com/webmention&#34;&gt;webmentioning&lt;/a&gt; this post. It takes about 30 minutes to display new responses.&lt;/div&gt;
-
 
 </description>
     </item>
