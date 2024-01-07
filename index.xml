@@ -21,7 +21,7 @@
 &lt;ol&gt;
 &lt;li&gt;你上传了一篇文章&lt;/li&gt;
 &lt;li&gt;文章被我引用&lt;/li&gt;
-&lt;li&gt;我向你的网站，通过&lt;code&gt;curl&lt;/code&gt;或API等方式发出webmention&lt;/li&gt;
+&lt;li&gt;我向你的网站发送带有引用处url的webmention&lt;/li&gt;
 &lt;li&gt;你通过&lt;a href=&#34;https://webmention.io&#34;&gt;webmention.io&lt;/a&gt;等服务或自行挂载，接收到我的webmention&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;接收-webmention&#34;&gt;
