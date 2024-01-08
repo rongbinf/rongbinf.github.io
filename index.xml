@@ -4118,55 +4118,62 @@ document.addEventListener(&#39;click&#39;, function(event) {
 
 
 
-&lt;script src=&#34;https://fanrongbin.com/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
-
-
-
 &lt;script defer&gt;
-  $(function() {
-    var api_key = &#39;474cf699bdce5cf4cf5ec69b1f16dddd&#39;;
+  document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+    var apiKey = &#39;474cf699bdce5cf4cf5ec69b1f16dddd&#39;;
     var username = &#39;rongbinf&#39;;
-    var base_url = &#39;https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&amp;user=&#39; + username + &#39;&amp;api_key=&#39; + api_key + &#39;&amp;limit=1&amp;format=json&#39;;
+    var baseUrl = &#39;https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&amp;user=&#39; + username + &#39;&amp;api_key=&#39; + apiKey + &#39;&amp;limit=1&amp;format=json&#39;;
 
-    $.getJSON(base_url, function(data) {
-      var track = data.recenttracks.track[0];
-    
-      // 更新封面图片
-      $(&#39;.lastfm .lastfm-cover&#39;).attr(&#39;src&#39;, track.image.find(img =&gt; img.size === &#39;large&#39;)[&#39;#text&#39;]);
-    
-    // 更新时间
-    var dateText = track.date ? track.date[&#39;#text&#39;] : &#39;&#39;;
-    var timeAgoText = &#39;&#39;;
-    if (dateText) {
-      var trackDate = new Date(parseInt(track.date.uts) * 1000);
+    fetch(baseUrl)
+      .then(response =&gt; response.json())
+      .then(data =&gt; {
+        var track = data.recenttracks.track[0];
+
+        // Update cover image
+        var coverImage = document.querySelector(&#39;.lastfm .lastfm-cover&#39;);
+        if (coverImage) {
+          var largeImage = track.image.find(img =&gt; img.size === &#39;large&#39;)[&#39;#text&#39;];
+          coverImage.setAttribute(&#39;src&#39;, largeImage);
+        }
+
+        // Update time
+        var timeAgoText = track.date ? getTimeAgoText(new Date(parseInt(track.date.uts) * 1000)) : &#39;&#39;;
+        var lastfmTime = document.querySelector(&#39;.lastfm .lastfm-time&#39;);
+        if (lastfmTime) {
+          lastfmTime.textContent = timeAgoText;
+        }
+
+        // Update track name, link, and album name
+        updateTextContent(&#39;.lastfm .lastfm-track&#39;, track.name);
+        updateAttribute(&#39;.lastfm-a&#39;, &#39;href&#39;, track.url.replace(/\+/g, &#39;%20&#39;));
+        updateTextContent(&#39;.lastfm .lastfm-album&#39;, track.album[&#39;#text&#39;]);
+      })
+      .catch(error =&gt; console.error(&#39;Error fetching last.fm data:&#39;, error));
+
+    function getTimeAgoText(date) {
       var now = new Date();
-      var timeDiff = now - trackDate;
-    
-      var minutesAgo = Math.floor(timeDiff / 60000); // 毫秒转换为分钟
-      var hoursAgo = Math.floor(timeDiff / 3600000); // 毫秒转换为小时
-      var daysAgo = Math.floor(timeDiff / (3600000 * 24)); // 毫秒转换为天
-    
-      if (daysAgo &gt;= 1) {
-        timeAgoText = daysAgo === 1 ? &#39;1 day ago&#39; : daysAgo + &#39; days ago&#39;;
-      } else if (hoursAgo &gt;= 1) {
-        timeAgoText = hoursAgo === 1 ? &#39;1 hour ago&#39; : hoursAgo + &#39; hours ago&#39;;
-      } else if (minutesAgo &gt;= 1) {
-        timeAgoText = minutesAgo === 1 ? &#39;1 minute ago&#39; : minutesAgo + &#39; minutes ago&#39;;
-      } else {
-        timeAgoText = &#39;Less than a minute ago&#39;;
-      }
+      var timeDiff = now.getTime() - date.getTime();
+
+      var seconds = Math.floor(timeDiff / 1000);
+      var minutes = Math.floor(seconds / 60);
+      var hours = Math.floor(minutes / 60);
+      var days = Math.floor(hours / 24);
+
+      if (days &gt; 0) return days === 1 ? &#39;1 day ago&#39; : days + &#39; days ago&#39;;
+      if (hours &gt; 0) return hours === 1 ? &#39;1 hour ago&#39; : hours + &#39; hours ago&#39;;
+      if (minutes &gt; 0) return minutes === 1 ? &#39;1 minute ago&#39; : minutes + &#39; minutes ago&#39;;
+      return &#39;Less than a minute ago&#39;;
     }
-    $(&#39;.lastfm .lastfm-time&#39;).text(timeAgoText);
-    
-      // 更新音轨名称
-      $(&#39;.lastfm .lastfm-track&#39;).text(track.name);
-    
-      // 更新音轨链接
-      $(&#39;.lastfm-a&#39;).attr(&#39;href&#39;, track.url.replace(/\+/g, &#39;%20&#39;));
-    
-      // 更新专辑名称
-      $(&#39;.lastfm .lastfm-album&#39;).text(track.album[&#39;#text&#39;]);
-    });
+
+    function updateTextContent(selector, text) {
+      var element = document.querySelector(selector);
+      if (element) element.textContent = text;
+    }
+
+    function updateAttribute(selector, attribute, value) {
+      var element = document.querySelector(selector);
+      if (element) element.setAttribute(attribute, value);
+    }
   });
 &lt;/script&gt;
 
@@ -4177,19 +4184,40 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
     var lastScrollTop = 0;
     var widget = document.querySelector(&#39;.widget&#39;);
 
-    window.addEventListener(&#39;scroll&#39;, function() {
+    function throttle(func, limit) {
+        var lastFunc;
+        var lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) &gt;= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
+
+    var handleScroll = function() {
         var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
         if (currentScroll &gt; lastScrollTop) {
-            // 向下滚动时，添加 .hide 类来隐藏 widget
             widget.classList.add(&#39;hide&#39;);
         } else {
-            // 向上滚动时，移除 .hide 类来显示 widget
             widget.classList.remove(&#39;hide&#39;);
         }
 
         lastScrollTop = currentScroll &lt;= 0 ? 0 : currentScroll;
-    }, false);
+    };
+
+    window.addEventListener(&#39;scroll&#39;, throttle(handleScroll, 200), false);
 });
 &lt;/script&gt;
 

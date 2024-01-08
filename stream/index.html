@@ -571,55 +571,62 @@ document.addEventListener('click', function(event) {
 
 
 
-<script src="/jquery-3.6.0.min.js"></script>
-
-
-
 <script defer>
-  $(function() {
-    var api_key = '474cf699bdce5cf4cf5ec69b1f16dddd';
+  document.addEventListener('DOMContentLoaded', function() {
+    var apiKey = '474cf699bdce5cf4cf5ec69b1f16dddd';
     var username = 'rongbinf';
-    var base_url = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + username + '&api_key=' + api_key + '&limit=1&format=json';
+    var baseUrl = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + username + '&api_key=' + apiKey + '&limit=1&format=json';
 
-    $.getJSON(base_url, function(data) {
-      var track = data.recenttracks.track[0];
-    
-      // 更新封面图片
-      $('.lastfm .lastfm-cover').attr('src', track.image.find(img => img.size === 'large')['#text']);
-    
-    // 更新时间
-    var dateText = track.date ? track.date['#text'] : '';
-    var timeAgoText = '';
-    if (dateText) {
-      var trackDate = new Date(parseInt(track.date.uts) * 1000);
+    fetch(baseUrl)
+      .then(response => response.json())
+      .then(data => {
+        var track = data.recenttracks.track[0];
+
+        // Update cover image
+        var coverImage = document.querySelector('.lastfm .lastfm-cover');
+        if (coverImage) {
+          var largeImage = track.image.find(img => img.size === 'large')['#text'];
+          coverImage.setAttribute('src', largeImage);
+        }
+
+        // Update time
+        var timeAgoText = track.date ? getTimeAgoText(new Date(parseInt(track.date.uts) * 1000)) : '';
+        var lastfmTime = document.querySelector('.lastfm .lastfm-time');
+        if (lastfmTime) {
+          lastfmTime.textContent = timeAgoText;
+        }
+
+        // Update track name, link, and album name
+        updateTextContent('.lastfm .lastfm-track', track.name);
+        updateAttribute('.lastfm-a', 'href', track.url.replace(/\+/g, '%20'));
+        updateTextContent('.lastfm .lastfm-album', track.album['#text']);
+      })
+      .catch(error => console.error('Error fetching last.fm data:', error));
+
+    function getTimeAgoText(date) {
       var now = new Date();
-      var timeDiff = now - trackDate;
-    
-      var minutesAgo = Math.floor(timeDiff / 60000); // 毫秒转换为分钟
-      var hoursAgo = Math.floor(timeDiff / 3600000); // 毫秒转换为小时
-      var daysAgo = Math.floor(timeDiff / (3600000 * 24)); // 毫秒转换为天
-    
-      if (daysAgo >= 1) {
-        timeAgoText = daysAgo === 1 ? '1 day ago' : daysAgo + ' days ago';
-      } else if (hoursAgo >= 1) {
-        timeAgoText = hoursAgo === 1 ? '1 hour ago' : hoursAgo + ' hours ago';
-      } else if (minutesAgo >= 1) {
-        timeAgoText = minutesAgo === 1 ? '1 minute ago' : minutesAgo + ' minutes ago';
-      } else {
-        timeAgoText = 'Less than a minute ago';
-      }
+      var timeDiff = now.getTime() - date.getTime();
+
+      var seconds = Math.floor(timeDiff / 1000);
+      var minutes = Math.floor(seconds / 60);
+      var hours = Math.floor(minutes / 60);
+      var days = Math.floor(hours / 24);
+
+      if (days > 0) return days === 1 ? '1 day ago' : days + ' days ago';
+      if (hours > 0) return hours === 1 ? '1 hour ago' : hours + ' hours ago';
+      if (minutes > 0) return minutes === 1 ? '1 minute ago' : minutes + ' minutes ago';
+      return 'Less than a minute ago';
     }
-    $('.lastfm .lastfm-time').text(timeAgoText);
-    
-      // 更新音轨名称
-      $('.lastfm .lastfm-track').text(track.name);
-    
-      // 更新音轨链接
-      $('.lastfm-a').attr('href', track.url.replace(/\+/g, '%20'));
-    
-      // 更新专辑名称
-      $('.lastfm .lastfm-album').text(track.album['#text']);
-    });
+
+    function updateTextContent(selector, text) {
+      var element = document.querySelector(selector);
+      if (element) element.textContent = text;
+    }
+
+    function updateAttribute(selector, attribute, value) {
+      var element = document.querySelector(selector);
+      if (element) element.setAttribute(attribute, value);
+    }
   });
 </script>
 
@@ -630,19 +637,40 @@ document.addEventListener('DOMContentLoaded', function() {
     var lastScrollTop = 0;
     var widget = document.querySelector('.widget');
 
-    window.addEventListener('scroll', function() {
+    function throttle(func, limit) {
+        var lastFunc;
+        var lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
+
+    var handleScroll = function() {
         var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
         if (currentScroll > lastScrollTop) {
-            // 向下滚动时，添加 .hide 类来隐藏 widget
             widget.classList.add('hide');
         } else {
-            // 向上滚动时，移除 .hide 类来显示 widget
             widget.classList.remove('hide');
         }
 
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    }, false);
+    };
+
+    window.addEventListener('scroll', throttle(handleScroll, 200), false);
 });
 </script>
 
