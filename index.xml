@@ -3854,6 +3854,7 @@ Stream Page
 &lt;hr&gt;
 
 
+&lt;!-- 加载responses --&gt;
 &lt;script defer&gt;
 // 1. 异步请求API
 async function fetchWebmentions() {
@@ -3992,6 +3993,7 @@ main();
 &lt;hr&gt;
 
 
+&lt;!-- 加载last.fm和一个follow按钮 --&gt;
 &lt;style&gt;
 	.navbar, .addn, footer {
 		opacity: 0.35 !important;
@@ -4004,45 +4006,109 @@ main();
 		background: unset;
 		border-right: 1px solid;
 	}
-	.lastfm {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        font-size: 90%;
-        position: fixed;
-        bottom: 5%;
+  .widget {
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      font-size: 90%;
+      position: fixed;
+      padding: 1ch;
+    	z-index: 500;
+      bottom: 5%;
     	left: 5%;
+  }
+	.lastfm {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
     	background: greenyellow;
     	color: black;
-    	padding: 1ch;
-    	z-index: 500;
 	}
-	.lastfm:hover {
-		outline: 5px solid black;
+	.lastfm:hover, .follow-mstd:hover {
+		outline: 5px solid var(--text-color);
 	}
+  .follow-mstd:hover, .follow-mstd-a:hover {
+    border-bottom: unset;
+  }
 	.lastfm-cover {
 		width: 55px;
-		border-radius: 8px;
+		/* border-radius: 8px; */
 		margin: 0 2ch 0 0;
 	}
 	.lastfm-name-p {
 		margin: -0.5ch 0;
 	}
-	a.lastfm-a::after {
+	.widget&gt;a::after {
 		content: none;
 	}
+  .follow-mstd {
+    background: #5c00ff;
+    color: white;
+    text-align: center;
+    padding: 1ch;
+  }
 &lt;/style&gt;
 
 
 
+&lt;div class=&#34;widget&#34;&gt;
 &lt;a class=&#34;lastfm-a&#34; href=&#34;#track-url&#34;&gt;&lt;div class=&#34;lastfm&#34;&gt;
 	&lt;img src=&#34;&#34; class=&#34;lastfm-cover&#34;&gt;
 	&lt;div class=&#34;lastfm-name&#34;&gt;
-	&lt;p class=&#34;lastfm-name-p&#34;&gt;&lt;span class=&#34;lastfm-track&#34; style=&#34;margin-right:2ch;font-weight:bold;&#34;&gt;Track Name&lt;/span&gt;&lt;span class=&#34;lastfm-time&#34; style=&#34;opacity:0.6;font-size:90%;font-style:italic;&#34;&gt;Time&lt;/span&gt;&lt;/p&gt;
+	&lt;p class=&#34;lastfm-name-p&#34;&gt;&lt;span class=&#34;lastfm-track&#34; style=&#34;margin-right:2ch;font-weight:bold;&#34;&gt;Track Name&lt;/span&gt;&lt;span class=&#34;lastfm-time&#34; style=&#34;opacity:0.6;font-size:90%;font-style:italic;margin-right:2ch;&#34;&gt;Time&lt;/span&gt;&lt;/p&gt;
 	&lt;p class=&#34;lastfm-name-p&#34;&gt;&lt;span class=&#34;lastfm-album&#34;&gt;Album Name&lt;/span&gt;&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;&lt;/a&gt;
+&lt;a class=&#34;follow-mstd-a&#34; id=&#34;follow-mstd-button&#34;&gt;&lt;div class=&#34;follow-mstd&#34;&gt;
+  Follow on Mastodon
+&lt;/div&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+
+
+&lt;style&gt;
+#follow-mstd-box {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 2ch;
+  border: 1px solid var(--text-color);
+}
+&lt;/style&gt;
+
+&lt;div id=&#34;follow-mstd-box&#34;&gt;
+&lt;p&gt;Enter your &lt;em&gt;@username@server_address&lt;/em&gt; here.&lt;br&gt;It&#39;ll redirect you to my profile page on your server.&lt;/p&gt;
+&lt;form action=&#34;https://fed.brid.gy/remote-follow&#34; method=&#34;post&#34;&gt;&lt;input id=&#34;follow-address&#34; name=&#34;address&#34; pattern=&#34;@[\w.]+@[\w.]+&#34; placeholder=&#34;@alice@m.cmx.im&#34; required=&#34;required&#34; title=&#34;@alice@m.cmx.im&#34; type=&#34;text&#34;&gt; &lt;input name=&#34;domain&#34; type=&#34;hidden&#34; value=&#34;fanrongbin.com&#34;&gt; &lt;input name=&#34;protocol&#34; type=&#34;hidden&#34; value=&#34;web&#34;&gt; &lt;input type=&#34;submit&#34; value=&#34;Go&#34;&gt;&amp;nbsp;&lt;/form&gt;
+&lt;/div&gt;
+
+
+
+&lt;script defer&gt;
+var button = document.getElementById(&#39;follow-mstd-button&#39;);
+var box = document.getElementById(&#39;follow-mstd-box&#39;);
+
+button.addEventListener(&#39;click&#39;, function() {
+    if (box.style.display === &#39;block&#39;) {
+        box.style.display = &#39;none&#39;;
+    } else {
+        box.style.display = &#39;block&#39;;
+    }
+});
+
+document.addEventListener(&#39;click&#39;, function(event) {
+    var isClickInsideBox = box.contains(event.target);
+    var isClickButton = button.contains(event.target);
+
+    if (!isClickInsideBox &amp;&amp; !isClickButton) {
+        box.style.display = &#39;none&#39;;
+    }
+}, true);
+&lt;/script&gt;
 
 
 
@@ -4050,7 +4116,7 @@ main();
 
 
 
-&lt;script&gt;
+&lt;script defer&gt;
   $(function() {
     var api_key = &#39;474cf699bdce5cf4cf5ec69b1f16dddd&#39;;
     var username = &#39;rongbinf&#39;;
