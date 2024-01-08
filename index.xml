@@ -4046,7 +4046,7 @@ main();
 }
 .stream.h-entry::before {
     content: &#34;&#34;;
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--text-color);
     position: relative;
     width: 1.5ch;
     display: block;
