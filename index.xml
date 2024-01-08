@@ -3840,30 +3840,32 @@ document.querySelectorAll(&#39;.mention-number&#39;).forEach(function(link) {
 
 
 
-&lt;script src=&#34;https://fanrongbin.com/jquery-3.6.0.min.js&#34; defer&gt;&lt;/script&gt;
+&lt;script defer src=&#34;https://fanrongbin.com/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
 
 
 
 &lt;script defer&gt;
-    jQuery(function($){
-      var urls = [];
-      var base;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+        jQuery(function($){
+          var urls = [];
+          var base;
 
-      $(&#34;*[data-webmention-count]&#34;).each(function(i,e){
-        var parser = document.createElement(&#39;span&#39;);
-        parser.href = $(e).data(&#39;url&#39;);
-        base = parser.protocol + &#34;//&#34; + parser.hostname;
-        urls.push(parser.pathname+parser.search);
-      });
+          $(&#34;*[data-webmention-count]&#34;).each(function(i,e){
+            var parser = document.createElement(&#39;span&#39;);
+            parser.href = $(e).data(&#39;url&#39;);
+            base = parser.protocol + &#34;//&#34; + parser.hostname;
+            urls.push(parser.pathname+parser.search);
+          });
 
-      $.getJSON(&#34;https://webmention.io/api/count&#34;, {
-        base: base,
-        targets: urls.join(&#34;,&#34;)
-      }, function(data){
-        $(&#34;*[data-webmention-count]&#34;).each(function(i,e){
-          $(e).text(data.count[$(e).data(&#39;url&#39;)]);
+          $.getJSON(&#34;https://webmention.io/api/count&#34;, {
+            base: base,
+            targets: urls.join(&#34;,&#34;)
+          }, function(data){
+            $(&#34;*[data-webmention-count]&#34;).each(function(i,e){
+              $(e).text(data.count[$(e).data(&#39;url&#39;)]);
+            });
+          });
         });
-      });
     });
 &lt;/script&gt;
 

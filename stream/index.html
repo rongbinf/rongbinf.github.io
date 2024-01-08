@@ -302,30 +302,32 @@ document.querySelectorAll('.mention-number').forEach(function(link) {
 
 
 
-<script src="/jquery-3.6.0.min.js" defer></script>
+<script defer src="/jquery-3.6.0.min.js"></script>
 
 
 
 <script defer>
-    jQuery(function($){
-      var urls = [];
-      var base;
+    document.addEventListener('DOMContentLoaded', function() {
+        jQuery(function($){
+          var urls = [];
+          var base;
 
-      $("*[data-webmention-count]").each(function(i,e){
-        var parser = document.createElement('span');
-        parser.href = $(e).data('url');
-        base = parser.protocol + "//" + parser.hostname;
-        urls.push(parser.pathname+parser.search);
-      });
+          $("*[data-webmention-count]").each(function(i,e){
+            var parser = document.createElement('span');
+            parser.href = $(e).data('url');
+            base = parser.protocol + "//" + parser.hostname;
+            urls.push(parser.pathname+parser.search);
+          });
 
-      $.getJSON("https://webmention.io/api/count", {
-        base: base,
-        targets: urls.join(",")
-      }, function(data){
-        $("*[data-webmention-count]").each(function(i,e){
-          $(e).text(data.count[$(e).data('url')]);
+          $.getJSON("https://webmention.io/api/count", {
+            base: base,
+            targets: urls.join(",")
+          }, function(data){
+            $("*[data-webmention-count]").each(function(i,e){
+              $(e).text(data.count[$(e).data('url')]);
+            });
+          });
         });
-      });
     });
 </script>
 
