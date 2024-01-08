@@ -4143,14 +4143,13 @@ main();
 &lt;style&gt;
 #follow-mstd-box {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 5%;
   background: var(--bgcolor);
   color: var(--text-color);
   padding: 2ch;
   border: 1px solid var(--text-color);
-  z-index: 500;
 }
 &lt;/style&gt;
 
