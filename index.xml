@@ -3796,7 +3796,98 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 		background: unset;
 		border-right: 1px solid;
 	}
+	.lastfm {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 90%;
+        position: fixed;
+        bottom: 5%;
+    	left: 5%;
+    	background: greenyellow;
+    	padding: 1ch;
+    	z-index: 500;
+	}
+	.lastfm:hover {
+		outline: 5px solid black;
+	}
+	.lastfm-cover {
+		width: 55px;
+		border-radius: 8px;
+		margin: 0 2ch 0 0;
+	}
+	.lastfm-name-p {
+		margin: -0.5ch 0;
+	}
+	a.lastfm-a::after {
+		content: none;
+	}
 &lt;/style&gt;
+
+
+
+&lt;a class=&#34;lastfm-a&#34; href=&#34;#track-url&#34;&gt;&lt;div class=&#34;lastfm&#34;&gt;
+	&lt;img src=&#34;&#34; class=&#34;lastfm-cover&#34;&gt;
+	&lt;div class=&#34;lastfm-name&#34;&gt;
+	&lt;p class=&#34;lastfm-name-p&#34;&gt;&lt;span class=&#34;lastfm-track&#34; style=&#34;margin-right:2ch;font-weight:bold;&#34;&gt;Track Name&lt;/span&gt;&lt;span class=&#34;lastfm-time&#34; style=&#34;opacity:0.6;font-size:90%;font-style:italic;&#34;&gt;Time&lt;/span&gt;&lt;/p&gt;
+	&lt;p class=&#34;lastfm-name-p&#34;&gt;&lt;span class=&#34;lastfm-album&#34;&gt;Album Name&lt;/span&gt;&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;&lt;/a&gt;
+
+
+
+&lt;script src=&#34;https://fanrongbin.com/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
+
+
+
+&lt;script&gt;
+  $(function() {
+    var api_key = &#39;474cf699bdce5cf4cf5ec69b1f16dddd&#39;;
+    var username = &#39;rongbinf&#39;;
+    var base_url = &#39;http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&amp;user=&#39; + username + &#39;&amp;api_key=&#39; + api_key + &#39;&amp;limit=1&amp;format=json&#39;;
+
+    $.getJSON(base_url, function(data) {
+      var track = data.recenttracks.track[0];
+
+      // 更新封面图片
+      $(&#39;.lastfm .lastfm-cover&#39;).attr(&#39;src&#39;, track.image.find(img =&gt; img.size === &#39;large&#39;)[&#39;#text&#39;]);
+
+    // 更新时间
+    var dateText = track.date ? track.date[&#39;#text&#39;] : &#39;&#39;;
+    var timeAgoText = &#39;&#39;;
+    if (dateText) {
+      var trackDate = new Date(parseInt(track.date.uts) * 1000);
+      var now = new Date();
+      var timeDiff = now - trackDate;
+
+      var minutesAgo = Math.floor(timeDiff / 60000); // 毫秒转换为分钟
+      var hoursAgo = Math.floor(timeDiff / 3600000); // 毫秒转换为小时
+      var daysAgo = Math.floor(timeDiff / (3600000 * 24)); // 毫秒转换为天
+
+      if (daysAgo &gt;= 1) {
+        timeAgoText = daysAgo === 1 ? &#39;1 day ago&#39; : daysAgo + &#39; days ago&#39;;
+      } else if (hoursAgo &gt;= 1) {
+        timeAgoText = hoursAgo === 1 ? &#39;1 hour ago&#39; : hoursAgo + &#39; hours ago&#39;;
+      } else if (minutesAgo &gt;= 1) {
+        timeAgoText = minutesAgo === 1 ? &#39;1 minute ago&#39; : minutesAgo + &#39; minutes ago&#39;;
+      } else {
+        timeAgoText = &#39;Less than a minute ago&#39;;
+      }
+    }
+    $(&#39;.lastfm .lastfm-time&#39;).text(timeAgoText);
+
+      // 更新音轨名称
+      $(&#39;.lastfm .lastfm-track&#39;).text(track.name);
+
+      // 更新音轨链接
+      $(&#39;.lastfm-a&#39;).attr(&#39;href&#39;, track.url.replace(/\+/g, &#39;%20&#39;));
+
+      // 更新专辑名称
+      $(&#39;.lastfm .lastfm-album&#39;).text(track.album[&#39;#text&#39;]);
+    });
+  });
+&lt;/script&gt;
 
 </description>
     </item>
