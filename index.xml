@@ -180,6 +180,54 @@
 
 
 &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-08-testing-webmention-app&#34;&gt;
+
+
+    Rongbin: 
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream-inner e-content&#34;&gt;
+    testing webmention.app to detect and send webmention. through mention/note, wrapped up in a new &lt;code&gt;h-entry&lt;/code&gt; with &lt;code&gt;e-content&lt;/code&gt;
+&lt;/div&gt;
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+
+&lt;p class=&#34;stream-meta&#34;&gt;
+    &lt;span class=&#34;p-author h-card&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T10:31:58&amp;#43;08:00&#34; title=&#34;08 January 2024&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon#2024-01-08-testing-webmention-app&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-testing-webmention-app&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;10:31 (UTC&amp;#43;08) Mon&lt;/a&gt;
+    &lt;/time&gt;
+&lt;/p&gt;
+
+
+&lt;/div&gt;
 </description>
     </item>
     <item>

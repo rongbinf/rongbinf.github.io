@@ -62,7 +62,7 @@
   <div class="top-scroll-bar"></div>
 <div class="addn visible">
 <div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;">Hypothes.is</a></div>
-<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleTOC()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
 </div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents">
@@ -278,6 +278,54 @@
     </span>
     <time class="dt-published" datetime="2024-01-07T11:12:35&#43;08:00" title="07 January 2024">
         <a href="https://fanrongbin.com/hugo-webmention-bridgy-mastodon#2024-01-07-test-webmention" onclick="event.preventDefault(); location.hash='2024-01-07-test-webmention';" class="stream-time u-url">11:12 (UTC&#43;08) Sun</a>
+    </time>
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="stream h-entry" id="2024-01-08-testing-webmention-app">
+
+
+    Rongbin: 
+
+
+
+
+
+
+
+
+
+
+<div class="stream-inner e-content">
+    testing webmention.app to detect and send webmention. through mention/note, wrapped up in a new <code>h-entry</code> with <code>e-content</code>
+</div>
+<a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy" style="display:none;"></a>
+
+<p class="stream-meta">
+    <span class="p-author h-card">
+        <a href="https://fanrongbin.com" class="u-url" style="display:none;">
+            <img src="https://fanrongbin.com/apple-touch-icon.png" class="u-photo" alt="Rongbin FAN" style="display:none;">
+        </a>
+    </span>
+    <time class="dt-published" datetime="2024-01-08T10:31:58&#43;08:00" title="08 January 2024">
+        <a href="https://fanrongbin.com/hugo-webmention-bridgy-mastodon#2024-01-08-testing-webmention-app" onclick="event.preventDefault(); location.hash='2024-01-08-testing-webmention-app';" class="stream-time u-url">10:31 (UTC&#43;08) Mon</a>
     </time>
 </p>
 
@@ -527,6 +575,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, false);
     }
 
+    function toggleTOC() {
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+        const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+        tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+
+        if (contentsFixedDiv) {
+            if (tocContainer.style.display === 'flex') {
+                initializeTOCFeatures();
+            }
+        }
+    }
 
     function initializeTOCFeatures() {
         const headers = document.querySelectorAll('h2, h3');
@@ -534,14 +594,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const tocContainer = document.getElementById('contents-toc');
 
         if (contentsFixedDiv) {
-            const toggleTOC = () => {
-                const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-                tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+            
+            
+            
 
-                if (tocContainer.style.display === 'flex') {
-                    initializeTOCFeatures();
-                }
-            };
+            
+            
+            
+            
 
             const highlightAppropriateHeader = () => {
                 let highlighted = false;
@@ -549,25 +609,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 headers.forEach(header => {
                     const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
-                    const bounding = header.getBoundingClientRect();
+                    if (link) {  
+                        const bounding = header.getBoundingClientRect();
 
-                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
-                        link.classList.add('toc-highlight');
-                        highlighted = true;
-                    } else {
-                        link.classList.remove('toc-highlight');
-                    }
+                        if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                            link.classList.add('toc-highlight');
+                            highlighted = true;
+                        } else {
+                            link.classList.remove('toc-highlight');
+                        }
 
-                    if (bounding.top < 0) {
-                        lastPassedHeader = header;
+                        if (bounding.top < 0) {
+                            lastPassedHeader = header;
+                        }
                     }
                 });
 
                 if (!highlighted && lastPassedHeader) {
                     const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
-                    link.classList.add('toc-highlight');
+                    if (link) {  
+                        link.classList.add('toc-highlight');
+                    }
                 }
             };
+
 
             const throttledHighlight = throttle(highlightAppropriateHeader, 250);
 

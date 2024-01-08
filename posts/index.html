@@ -511,6 +511,18 @@
         }, false);
     }
 
+    function toggleTOC() {
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+        const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+        tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+
+        if (contentsFixedDiv) {
+            if (tocContainer.style.display === 'flex') {
+                initializeTOCFeatures();
+            }
+        }
+    }
 
     function initializeTOCFeatures() {
         const headers = document.querySelectorAll('h2, h3');
@@ -518,14 +530,14 @@
         const tocContainer = document.getElementById('contents-toc');
 
         if (contentsFixedDiv) {
-            const toggleTOC = () => {
-                const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-                tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+            
+            
+            
 
-                if (tocContainer.style.display === 'flex') {
-                    initializeTOCFeatures();
-                }
-            };
+            
+            
+            
+            
 
             const highlightAppropriateHeader = () => {
                 let highlighted = false;
@@ -533,25 +545,30 @@
 
                 headers.forEach(header => {
                     const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
-                    const bounding = header.getBoundingClientRect();
+                    if (link) {  
+                        const bounding = header.getBoundingClientRect();
 
-                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
-                        link.classList.add('toc-highlight');
-                        highlighted = true;
-                    } else {
-                        link.classList.remove('toc-highlight');
-                    }
+                        if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                            link.classList.add('toc-highlight');
+                            highlighted = true;
+                        } else {
+                            link.classList.remove('toc-highlight');
+                        }
 
-                    if (bounding.top < 0) {
-                        lastPassedHeader = header;
+                        if (bounding.top < 0) {
+                            lastPassedHeader = header;
+                        }
                     }
                 });
 
                 if (!highlighted && lastPassedHeader) {
                     const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
-                    link.classList.add('toc-highlight');
+                    if (link) {  
+                        link.classList.add('toc-highlight');
+                    }
                 }
             };
+
 
             const throttledHighlight = throttle(highlightAppropriateHeader, 250);
 

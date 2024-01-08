@@ -95,7 +95,7 @@ R 知道今天已经快要来了，所以昨天就打包好了行李，给保温
   <div class="top-scroll-bar"></div>
 <div class="addn visible">
 <div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;">Hypothes.is</a></div>
-<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
+<div id="contents-fixed" class="header-button no-select"><a onclick="toggleTOC()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
 </div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents"></nav>
@@ -387,6 +387,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, false);
     }
 
+    function toggleTOC() {
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+        const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+        tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+
+        if (contentsFixedDiv) {
+            if (tocContainer.style.display === 'flex') {
+                initializeTOCFeatures();
+            }
+        }
+    }
 
     function initializeTOCFeatures() {
         const headers = document.querySelectorAll('h2, h3');
@@ -394,14 +406,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const tocContainer = document.getElementById('contents-toc');
 
         if (contentsFixedDiv) {
-            const toggleTOC = () => {
-                const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-                tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+            
+            
+            
 
-                if (tocContainer.style.display === 'flex') {
-                    initializeTOCFeatures();
-                }
-            };
+            
+            
+            
+            
 
             const highlightAppropriateHeader = () => {
                 let highlighted = false;
@@ -409,25 +421,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 headers.forEach(header => {
                     const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
-                    const bounding = header.getBoundingClientRect();
+                    if (link) {  
+                        const bounding = header.getBoundingClientRect();
 
-                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
-                        link.classList.add('toc-highlight');
-                        highlighted = true;
-                    } else {
-                        link.classList.remove('toc-highlight');
-                    }
+                        if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
+                            link.classList.add('toc-highlight');
+                            highlighted = true;
+                        } else {
+                            link.classList.remove('toc-highlight');
+                        }
 
-                    if (bounding.top < 0) {
-                        lastPassedHeader = header;
+                        if (bounding.top < 0) {
+                            lastPassedHeader = header;
+                        }
                     }
                 });
 
                 if (!highlighted && lastPassedHeader) {
                     const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
-                    link.classList.add('toc-highlight');
+                    if (link) {  
+                        link.classList.add('toc-highlight');
+                    }
                 }
             };
+
 
             const throttledHighlight = throttle(highlightAppropriateHeader, 250);
 
