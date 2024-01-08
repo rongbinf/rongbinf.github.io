@@ -3608,7 +3608,11 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
       <link>https://fanrongbin.com/colophon/</link>
       <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/colophon/</guid>
-      <description>&lt;ul&gt;
+      <description>&lt;h2 id=&#34;general&#34;&gt;
+General
+&lt;a href=&#34;#general&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Homepage&lt;/strong&gt;: Pure HTML, CSS, and JavaScript.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Blog:&lt;/strong&gt; &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, typography framework &lt;a href=&#34;https://github.com/ethantw/Han&#34;&gt;Han&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Host:&lt;/strong&gt; &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github&lt;/a&gt;, automatically deployed by &lt;a href=&#34;https://pages.cloudflare.com/&#34;&gt;Cloudflare Pages&lt;/a&gt;.&lt;/li&gt;
@@ -3622,6 +3626,20 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--mono&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ui-monospace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SF&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mono&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Menlo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Monaco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Andale&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mono&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;monospace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This site is one of the &lt;a href=&#34;https://512kb.club/&#34;&gt;512kb.club&lt;/a&gt; and &lt;a href=&#34;https://1mb.club/&#34;&gt;1mb.club&lt;/a&gt; members.&lt;/p&gt;
+&lt;h2 id=&#34;stream-page&#34;&gt;
+Stream Page
+&lt;a href=&#34;#stream-page&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;This page is inspired by &lt;a href=&#34;https://gregorlove.com/&#34;&gt;gRegorLove.com&lt;/a&gt;. I use Hugo Shortcodes to translate &lt;code&gt;*.md&lt;/code&gt; into partial HTML codes. (here&amp;rsquo;s my little &lt;a href=&#34;https://fanrongbin.com/stream-edit.html&#34;&gt;Stream Shortcode Generator&lt;/a&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Webmention&lt;/strong&gt;: &lt;a href=&#34;https://fed.brid.gy&#34;&gt;Bridgy&lt;/a&gt;, &lt;a href=&#34;https://webmention.io&#34;&gt;webmention.io&lt;/a&gt;, Github Actions to automate &lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;&lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;&gt;I&amp;rsquo;ve written a post&lt;/a&gt; about what&amp;rsquo;s webmention, how to enable your site to receive it, and how to integrate Mastodon (add your site to the fediverse). The post is in Chinese but I&amp;rsquo;m sure you can handle it with translation machine.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listening&lt;/strong&gt;: &lt;a href=&#34;https://last.fm&#34;&gt;Last.fm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     <item>
@@ -3834,8 +3852,144 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 &lt;/div&gt;
 &lt;hr&gt;
-&lt;p&gt;Inspired by &lt;a href=&#34;https://gregorlove.com/&#34;&gt;gRegorLove.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://fanrongbin.com/stream-edit.html&#34;&gt;Shortcode Generator&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;script defer&gt;
+// 1. 异步请求API
+async function fetchWebmentions() {
+  const response = await fetch(&#39;https://webmention.io/api/mentions.jf2?domain=fanrongbin.com&amp;token=W6lnMe3Kns5Xc2X0ywqFQg&#39;);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return await response.json();
+}
+
+// 2. 筛选数据
+function filterWebmentions(webmentions) {
+  const counts = {};
+  const filtered = webmentions.children.filter(entry =&gt; {
+    const target = entry[&#39;wm-target&#39;];
+    if (target &amp;&amp; target.startsWith(&#39;https://fanrongbin.com/stream&#39;)) {
+      counts[target] = (counts[target] || 0) + 1;
+      return true;
+    }
+    return false;
+  });
+  return { webmentions: filtered, counts };
+}
+
+// 3. 显示数据
+function displayWebmentions(webmentionsData) {
+  const { webmentions, counts } = webmentionsData;
+  const hEntries = document.querySelectorAll(&#39;.h-entry&#39;);
+
+  hEntries.forEach(hEntry =&gt; {
+    const streamTimeLink = hEntry.querySelector(&#39;.stream-time&#39;);
+    if (!streamTimeLink) return;
+
+    const streamTimeHref = streamTimeLink.getAttribute(&#39;href&#39;);
+    const matchedWebmentions = webmentions.filter(entry =&gt; entry[&#39;wm-target&#39;] === streamTimeHref);
+    const count = counts[streamTimeHref] || 0;
+    
+    if (matchedWebmentions.length &gt; 0) {
+      // 创建一个DocumentFragment
+      const fragment = document.createDocumentFragment();
+    
+      // 创建Webmentions容器，初始状态为隐藏
+      const webmentionsContainer = document.createElement(&#39;div&#39;);
+      webmentionsContainer.classList.add(&#39;stream-webmention-container&#39;);
+      webmentionsContainer.style.display = &#39;none&#39;;
+    
+      matchedWebmentions.forEach(entry =&gt; {
+        const webmentionElement = document.createElement(&#39;div&#39;);
+        webmentionElement.classList.add(&#39;stream-webmention-inner&#39;);
+    
+        // 显示作者信息
+        const authorName = entry.author?.name || &#39;origin&#39;;
+        const authorElement = document.createElement(&#39;div&#39;);
+        if (entry.author?.url) {
+          // 作者名作为超链接
+          const authorLink = document.createElement(&#39;a&#39;);
+          authorLink.href = entry.url;
+          authorLink.textContent = authorName;
+          authorElement.appendChild(authorLink);
+        } else {
+          // 显示为origin
+          authorElement.textContent = authorName;
+          authorLink.href = entry.url;
+          authorElement.appendChild(authorLink);
+        }
+        webmentionElement.appendChild(authorElement);
+    
+        // 显示Webmention文本内容
+        if (entry.content &amp;&amp; entry.content.text) {
+          const content = document.createElement(&#39;p&#39;);
+          content.textContent = entry.content.text;
+          webmentionElement.appendChild(content);
+        }
+    
+        webmentionsContainer.appendChild(webmentionElement);
+      });
+    
+      fragment.appendChild(webmentionsContainer);
+    
+      // 在&lt;time&gt;元素上方插入按钮
+      const timeElement = hEntry.querySelector(&#39;time&#39;);
+      if (timeElement) {
+        const button = document.createElement(&#39;span&#39;);
+        button.innerHTML = &#39;&lt;a class=&#34;mention-number&#34; style=&#34;border:none;&#34;&gt;responses&lt;/a&gt;&#39;;
+        button.style.paddingRight = &#39;1ch&#39;;
+        button.style.fontFamily = &#39;var(--sans)&#39;;
+        button.style.fontStyle = &#39;normal&#39;;
+    
+        button.onclick = () =&gt; {
+          webmentionsContainer.style.display = webmentionsContainer.style.display === &#39;none&#39; ? &#39;block&#39; : &#39;none&#39;;
+        };
+    
+        timeElement.parentNode.insertBefore(button, timeElement);
+      }
+    
+      // 将fragment一次性添加到DOM中
+      const streamMeta = hEntry.querySelector(&#39;.stream-meta&#39;);
+      if (streamMeta) {
+        streamMeta.parentNode.insertBefore(fragment, streamMeta.nextSibling);
+      }
+    
+      // 更新responses按钮文本
+      const responsesButton = hEntry.querySelector(&#39;.mention-number&#39;);
+      if (responsesButton) {
+        const responseText = count === 1 ? &#39;1 response&#39; : `${count} responses`;
+        responsesButton.textContent = responseText;
+      }
+    }
+  });
+}
+
+// 主逻辑
+async function main() {
+  try {
+    const webmentions = await fetchWebmentions();
+    const filteredWebmentions = filterWebmentions(webmentions);
+    displayWebmentions(filteredWebmentions);
+  } catch (error) {
+    console.error(&#39;Fetching Webmentions failed:&#39;, error);
+  }
+}
+
+main();
+&lt;/script&gt;
+
+&lt;style&gt;
+.stream-webmention-inner {
+  margin-inline-start: 4rem;
+  font-style: initial;
+  font-family: var(--sans);
+  border-left: 1px solid;
+  padding-left: 10px;
+}
+&lt;/style&gt;
+
+&lt;hr&gt;
 
 
 &lt;style&gt;
@@ -3904,10 +4058,10 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
     $.getJSON(base_url, function(data) {
       var track = data.recenttracks.track[0];
-
+    
       // 更新封面图片
       $(&#39;.lastfm .lastfm-cover&#39;).attr(&#39;src&#39;, track.image.find(img =&gt; img.size === &#39;large&#39;)[&#39;#text&#39;]);
-
+    
     // 更新时间
     var dateText = track.date ? track.date[&#39;#text&#39;] : &#39;&#39;;
     var timeAgoText = &#39;&#39;;
@@ -3915,11 +4069,11 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
       var trackDate = new Date(parseInt(track.date.uts) * 1000);
       var now = new Date();
       var timeDiff = now - trackDate;
-
+    
       var minutesAgo = Math.floor(timeDiff / 60000); // 毫秒转换为分钟
       var hoursAgo = Math.floor(timeDiff / 3600000); // 毫秒转换为小时
       var daysAgo = Math.floor(timeDiff / (3600000 * 24)); // 毫秒转换为天
-
+    
       if (daysAgo &gt;= 1) {
         timeAgoText = daysAgo === 1 ? &#39;1 day ago&#39; : daysAgo + &#39; days ago&#39;;
       } else if (hoursAgo &gt;= 1) {
@@ -3931,13 +4085,13 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
       }
     }
     $(&#39;.lastfm .lastfm-time&#39;).text(timeAgoText);
-
+    
       // 更新音轨名称
       $(&#39;.lastfm .lastfm-track&#39;).text(track.name);
-
+    
       // 更新音轨链接
       $(&#39;.lastfm-a&#39;).attr(&#39;href&#39;, track.url.replace(/\+/g, &#39;%20&#39;));
-
+    
       // 更新专辑名称
       $(&#39;.lastfm .lastfm-album&#39;).text(track.album[&#39;#text&#39;]);
     });

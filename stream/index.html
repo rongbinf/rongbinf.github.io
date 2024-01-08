@@ -6,16 +6,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
-    content="Rongbin: 给Stream页面加上了Last.fm Scrobble。 16:05 (UTC&#43;08) Mon In reply to: https://fanrongbin.com/hugo-webmention-bridgy-mastodon/ 在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。 09:29 (UTC&#43;08) Mon Rongbin: 在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。 22:06 (UTC&#43;08) Sun Rongbin: 好像差不多调试好了 stream 页面自动发出 webmention。 16:49 (UTC&#43;08) Sun Inspired by gRegorLove.com.
-Shortcode Generator
-Track NameTime
+    content="Rongbin: 给Stream页面加上了Last.fm Scrobble。 16:05 (UTC&#43;08) Mon In reply to: https://fanrongbin.com/hugo-webmention-bridgy-mastodon/ 在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。 09:29 (UTC&#43;08) Mon Rongbin: 在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。 22:06 (UTC&#43;08) Sun Rongbin: 好像差不多调试好了 stream 页面自动发出 webmention。 16:49 (UTC&#43;08) Sun Track NameTime
 Album Name ">
 <meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
 <meta property="og:title" content="Stream - Rongbin&#39;s Blog" />
-<meta property="og:description" content="Rongbin: 给Stream页面加上了Last.fm Scrobble。 16:05 (UTC&#43;08) Mon In reply to: https://fanrongbin.com/hugo-webmention-bridgy-mastodon/ 在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。 09:29 (UTC&#43;08) Mon Rongbin: 在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。 22:06 (UTC&#43;08) Sun Rongbin: 好像差不多调试好了 stream 页面自动发出 webmention。 16:49 (UTC&#43;08) Sun Inspired by gRegorLove.com.
-Shortcode Generator
-Track NameTime
+<meta property="og:description" content="Rongbin: 给Stream页面加上了Last.fm Scrobble。 16:05 (UTC&#43;08) Mon In reply to: https://fanrongbin.com/hugo-webmention-bridgy-mastodon/ 在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。 09:29 (UTC&#43;08) Mon Rongbin: 在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。 22:06 (UTC&#43;08) Sun Rongbin: 好像差不多调试好了 stream 页面自动发出 webmention。 16:49 (UTC&#43;08) Sun Track NameTime
 Album Name " />
 <meta property="og:url" content="https://fanrongbin.com/stream/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
@@ -23,9 +19,7 @@ Album Name " />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 <meta name="twitter:title" content="Stream - Rongbin&#39;s Blog" />
-<meta name="twitter:description" content="Rongbin: 给Stream页面加上了Last.fm Scrobble。 16:05 (UTC&#43;08) Mon In reply to: https://fanrongbin.com/hugo-webmention-bridgy-mastodon/ 在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。 09:29 (UTC&#43;08) Mon Rongbin: 在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。 22:06 (UTC&#43;08) Sun Rongbin: 好像差不多调试好了 stream 页面自动发出 webmention。 16:49 (UTC&#43;08) Sun Inspired by gRegorLove.com.
-Shortcode Generator
-Track NameTime
+<meta name="twitter:description" content="Rongbin: 给Stream页面加上了Last.fm Scrobble。 16:05 (UTC&#43;08) Mon In reply to: https://fanrongbin.com/hugo-webmention-bridgy-mastodon/ 在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。 09:29 (UTC&#43;08) Mon Rongbin: 在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。 22:06 (UTC&#43;08) Sun Rongbin: 好像差不多调试好了 stream 页面自动发出 webmention。 16:49 (UTC&#43;08) Sun Track NameTime
 Album Name " />
 
 <link rel="canonical" href="https://fanrongbin.com/stream/" />
@@ -302,8 +296,144 @@ Album Name " />
 
 </div>
 <hr>
-<p>Inspired by <a href="https://gregorlove.com/">gRegorLove.com</a>.</p>
-<p><a href="/stream-edit.html">Shortcode Generator</a></p>
+
+
+<script defer>
+// 1. 异步请求API
+async function fetchWebmentions() {
+  const response = await fetch('https://webmention.io/api/mentions.jf2?domain=fanrongbin.com&token=W6lnMe3Kns5Xc2X0ywqFQg');
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return await response.json();
+}
+
+// 2. 筛选数据
+function filterWebmentions(webmentions) {
+  const counts = {};
+  const filtered = webmentions.children.filter(entry => {
+    const target = entry['wm-target'];
+    if (target && target.startsWith('https://fanrongbin.com/stream')) {
+      counts[target] = (counts[target] || 0) + 1;
+      return true;
+    }
+    return false;
+  });
+  return { webmentions: filtered, counts };
+}
+
+// 3. 显示数据
+function displayWebmentions(webmentionsData) {
+  const { webmentions, counts } = webmentionsData;
+  const hEntries = document.querySelectorAll('.h-entry');
+
+  hEntries.forEach(hEntry => {
+    const streamTimeLink = hEntry.querySelector('.stream-time');
+    if (!streamTimeLink) return;
+
+    const streamTimeHref = streamTimeLink.getAttribute('href');
+    const matchedWebmentions = webmentions.filter(entry => entry['wm-target'] === streamTimeHref);
+    const count = counts[streamTimeHref] || 0;
+    
+    if (matchedWebmentions.length > 0) {
+      // 创建一个DocumentFragment
+      const fragment = document.createDocumentFragment();
+    
+      // 创建Webmentions容器，初始状态为隐藏
+      const webmentionsContainer = document.createElement('div');
+      webmentionsContainer.classList.add('stream-webmention-container');
+      webmentionsContainer.style.display = 'none';
+    
+      matchedWebmentions.forEach(entry => {
+        const webmentionElement = document.createElement('div');
+        webmentionElement.classList.add('stream-webmention-inner');
+    
+        // 显示作者信息
+        const authorName = entry.author?.name || 'origin';
+        const authorElement = document.createElement('div');
+        if (entry.author?.url) {
+          // 作者名作为超链接
+          const authorLink = document.createElement('a');
+          authorLink.href = entry.url;
+          authorLink.textContent = authorName;
+          authorElement.appendChild(authorLink);
+        } else {
+          // 显示为origin
+          authorElement.textContent = authorName;
+          authorLink.href = entry.url;
+          authorElement.appendChild(authorLink);
+        }
+        webmentionElement.appendChild(authorElement);
+    
+        // 显示Webmention文本内容
+        if (entry.content && entry.content.text) {
+          const content = document.createElement('p');
+          content.textContent = entry.content.text;
+          webmentionElement.appendChild(content);
+        }
+    
+        webmentionsContainer.appendChild(webmentionElement);
+      });
+    
+      fragment.appendChild(webmentionsContainer);
+    
+      // 在<time>元素上方插入按钮
+      const timeElement = hEntry.querySelector('time');
+      if (timeElement) {
+        const button = document.createElement('span');
+        button.innerHTML = '<a class="mention-number" style="border:none;">responses</a>';
+        button.style.paddingRight = '1ch';
+        button.style.fontFamily = 'var(--sans)';
+        button.style.fontStyle = 'normal';
+    
+        button.onclick = () => {
+          webmentionsContainer.style.display = webmentionsContainer.style.display === 'none' ? 'block' : 'none';
+        };
+    
+        timeElement.parentNode.insertBefore(button, timeElement);
+      }
+    
+      // 将fragment一次性添加到DOM中
+      const streamMeta = hEntry.querySelector('.stream-meta');
+      if (streamMeta) {
+        streamMeta.parentNode.insertBefore(fragment, streamMeta.nextSibling);
+      }
+    
+      // 更新responses按钮文本
+      const responsesButton = hEntry.querySelector('.mention-number');
+      if (responsesButton) {
+        const responseText = count === 1 ? '1 response' : `${count} responses`;
+        responsesButton.textContent = responseText;
+      }
+    }
+  });
+}
+
+// 主逻辑
+async function main() {
+  try {
+    const webmentions = await fetchWebmentions();
+    const filteredWebmentions = filterWebmentions(webmentions);
+    displayWebmentions(filteredWebmentions);
+  } catch (error) {
+    console.error('Fetching Webmentions failed:', error);
+  }
+}
+
+main();
+</script>
+
+<style>
+.stream-webmention-inner {
+  margin-inline-start: 4rem;
+  font-style: initial;
+  font-family: var(--sans);
+  border-left: 1px solid;
+  padding-left: 10px;
+}
+</style>
+
+<hr>
 
 
 <style>
@@ -372,10 +502,10 @@ Album Name " />
 
     $.getJSON(base_url, function(data) {
       var track = data.recenttracks.track[0];
-
+    
       // 更新封面图片
       $('.lastfm .lastfm-cover').attr('src', track.image.find(img => img.size === 'large')['#text']);
-
+    
     // 更新时间
     var dateText = track.date ? track.date['#text'] : '';
     var timeAgoText = '';
@@ -383,11 +513,11 @@ Album Name " />
       var trackDate = new Date(parseInt(track.date.uts) * 1000);
       var now = new Date();
       var timeDiff = now - trackDate;
-
+    
       var minutesAgo = Math.floor(timeDiff / 60000); // 毫秒转换为分钟
       var hoursAgo = Math.floor(timeDiff / 3600000); // 毫秒转换为小时
       var daysAgo = Math.floor(timeDiff / (3600000 * 24)); // 毫秒转换为天
-
+    
       if (daysAgo >= 1) {
         timeAgoText = daysAgo === 1 ? '1 day ago' : daysAgo + ' days ago';
       } else if (hoursAgo >= 1) {
@@ -399,13 +529,13 @@ Album Name " />
       }
     }
     $('.lastfm .lastfm-time').text(timeAgoText);
-
+    
       // 更新音轨名称
       $('.lastfm .lastfm-track').text(track.name);
-
+    
       // 更新音轨链接
       $('.lastfm-a').attr('href', track.url.replace(/\+/g, '%20'));
-
+    
       // 更新专辑名称
       $('.lastfm .lastfm-album').text(track.album['#text']);
     });
@@ -427,13 +557,6 @@ Album Name " />
   
 
   
-
-  
-
-<script src="/webmention.min.js" defer></script>
-<div id="webmentions"></div>
-
-
 
   <footer class="opacity-6">
     <p><a href="/colophon">Colophon</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p><p><a href="/stream">Stream</a></p>
