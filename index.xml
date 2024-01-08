@@ -3677,7 +3677,6 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
     &lt;/time&gt;
 &lt;/p&gt;
 
-&lt;script src=&#34;https://fanrongbin.com/webmention.min.js&#34; data-id=&#34;2024-01-08-reply-with-wm-container&#34; &gt;&lt;/script&gt;
 &lt;div id=&#34;2024-01-08-reply-with-wm-container&#34; class=&#34;stream-webmention&#34; style=&#34;display:none;&#34;&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -3729,7 +3728,6 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
     &lt;/time&gt;
 &lt;/p&gt;
 
-&lt;script src=&#34;https://fanrongbin.com/webmention.min.js&#34; data-id=&#34;2024-01-07-unnecessarily-busy-weekend-container&#34; &gt;&lt;/script&gt;
 &lt;div id=&#34;2024-01-07-unnecessarily-busy-weekend-container&#34; class=&#34;stream-webmention&#34; style=&#34;display:none;&#34;&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -3781,7 +3779,6 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
     &lt;/time&gt;
 &lt;/p&gt;
 
-&lt;script src=&#34;https://fanrongbin.com/webmention.min.js&#34; data-id=&#34;2024-01-07-test-container&#34; &gt;&lt;/script&gt;
 &lt;div id=&#34;2024-01-07-test-container&#34; class=&#34;stream-webmention&#34; style=&#34;display:none;&#34;&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -3802,7 +3799,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 	}
 &lt;/style&gt;
 
-&lt;script&gt;
+&lt;script defer&gt;
 document.querySelectorAll(&#39;.mention-number&#39;).forEach(function(link) {
     link.addEventListener(&#39;click&#39;, function(event) {
         event.preventDefault(); // 阻止&lt;a&gt;标签的默认行为
@@ -3839,6 +3836,31 @@ document.querySelectorAll(&#39;.mention-number&#39;).forEach(function(link) {
         }
     });
 });
+&lt;/script&gt;
+
+&lt;script src=&#34;https://fanrongbin.com/jquery-3.6.0.min.js&#34; defer&gt;&lt;script&gt;
+
+&lt;script defer&gt;
+    jQuery(function($){
+      var urls = [];
+      var base;
+
+      $(&#34;*[data-webmention-count]&#34;).each(function(i,e){
+        var parser = document.createElement(&#39;span&#39;);
+        parser.href = $(e).data(&#39;url&#39;);
+        base = parser.protocol + &#34;//&#34; + parser.hostname;
+        urls.push(parser.pathname+parser.search);
+      });
+
+      $.getJSON(&#34;https://webmention.io/api/count&#34;, {
+        base: base,
+        targets: urls.join(&#34;,&#34;)
+      }, function(data){
+        $(&#34;*[data-webmention-count]&#34;).each(function(i,e){
+          $(e).text(data.count[$(e).data(&#39;url&#39;)]);
+        });
+      });
+    });
 &lt;/script&gt;
 
 

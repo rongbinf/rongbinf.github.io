@@ -139,7 +139,6 @@ Shortcode Generator " />
     </time>
 </p>
 
-<script src="/webmention.min.js" data-id="2024-01-08-reply-with-wm-container" ></script>
 <div id="2024-01-08-reply-with-wm-container" class="stream-webmention" style="display:none;"></div>
 
 </div>
@@ -191,7 +190,6 @@ Shortcode Generator " />
     </time>
 </p>
 
-<script src="/webmention.min.js" data-id="2024-01-07-unnecessarily-busy-weekend-container" ></script>
 <div id="2024-01-07-unnecessarily-busy-weekend-container" class="stream-webmention" style="display:none;"></div>
 
 </div>
@@ -243,7 +241,6 @@ Shortcode Generator " />
     </time>
 </p>
 
-<script src="/webmention.min.js" data-id="2024-01-07-test-container" ></script>
 <div id="2024-01-07-test-container" class="stream-webmention" style="display:none;"></div>
 
 </div>
@@ -264,7 +261,7 @@ Shortcode Generator " />
 	}
 </style>
 
-<script>
+<script defer>
 document.querySelectorAll('.mention-number').forEach(function(link) {
     link.addEventListener('click', function(event) {
         event.preventDefault(); // 阻止<a>标签的默认行为
@@ -301,6 +298,31 @@ document.querySelectorAll('.mention-number').forEach(function(link) {
         }
     });
 });
+</script>
+
+<script src="/jquery-3.6.0.min.js" defer><script>
+
+<script defer>
+    jQuery(function($){
+      var urls = [];
+      var base;
+
+      $("*[data-webmention-count]").each(function(i,e){
+        var parser = document.createElement('span');
+        parser.href = $(e).data('url');
+        base = parser.protocol + "//" + parser.hostname;
+        urls.push(parser.pathname+parser.search);
+      });
+
+      $.getJSON("https://webmention.io/api/count", {
+        base: base,
+        targets: urls.join(",")
+      }, function(data){
+        $("*[data-webmention-count]").each(function(i,e){
+          $(e).text(data.count[$(e).data('url')]);
+        });
+      });
+    });
 </script>
 
 
