@@ -368,7 +368,7 @@ Album Name " />
   $(function() {
     var api_key = '474cf699bdce5cf4cf5ec69b1f16dddd';
     var username = 'rongbinf';
-    var base_url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + username + '&api_key=' + api_key + '&limit=1&format=json';
+    var base_url = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + username + '&api_key=' + api_key + '&limit=1&format=json';
 
     $.getJSON(base_url, function(data) {
       var track = data.recenttracks.track[0];

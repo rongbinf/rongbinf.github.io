@@ -3900,7 +3900,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
   $(function() {
     var api_key = &#39;474cf699bdce5cf4cf5ec69b1f16dddd&#39;;
     var username = &#39;rongbinf&#39;;
-    var base_url = &#39;http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&amp;user=&#39; + username + &#39;&amp;api_key=&#39; + api_key + &#39;&amp;limit=1&amp;format=json&#39;;
+    var base_url = &#39;https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&amp;user=&#39; + username + &#39;&amp;api_key=&#39; + api_key + &#39;&amp;limit=1&amp;format=json&#39;;
 
     $.getJSON(base_url, function(data) {
       var track = data.recenttracks.track[0];
