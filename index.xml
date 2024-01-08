@@ -3851,7 +3851,7 @@ document.querySelectorAll(&#39;.mention-number&#39;).forEach(function(link) {
           var base;
 
           $(&#34;*[data-webmention-count]&#34;).each(function(i,e){
-            var parser = document.createElement(&#39;span&#39;);
+            var parser = document.createElement(&#39;a&#39;);
             parser.href = $(e).data(&#39;url&#39;);
             base = parser.protocol + &#34;//&#34; + parser.hostname;
             urls.push(parser.pathname+parser.search);

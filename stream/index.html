@@ -313,7 +313,7 @@ document.querySelectorAll('.mention-number').forEach(function(link) {
           var base;
 
           $("*[data-webmention-count]").each(function(i,e){
-            var parser = document.createElement('span');
+            var parser = document.createElement('a');
             parser.href = $(e).data('url');
             base = parser.protocol + "//" + parser.hostname;
             urls.push(parser.pathname+parser.search);
