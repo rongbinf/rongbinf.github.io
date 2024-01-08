@@ -3788,6 +3788,9 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 &lt;style&gt;
+	.navbar, .addn, footer {
+		opacity: 0.5 !important;
+	}
 	.content-header{
 		background: unset;
 		color: unset;
@@ -3806,6 +3809,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
         bottom: 5%;
     	left: 5%;
     	background: greenyellow;
+    	color: black;
     	padding: 1ch;
     	z-index: 500;
 	}
