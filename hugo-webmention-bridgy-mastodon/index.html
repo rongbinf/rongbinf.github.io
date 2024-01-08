@@ -87,6 +87,7 @@
         <li><a href="#使用-github-actions-自动化">使用 Github Actions 自动化</a></li>
       </ul>
     </li>
+    <li><a href="#一些遗留的问题">一些遗留的问题</a></li>
   </ul>
 </nav>
 </div>
@@ -248,6 +249,14 @@
 <li>检查这条note的内容并以相关url作为target（里面所有的<code>&lt;a href=&quot;...&quot;</code>）</li>
 </ul>
 </li>
+</ol>
+<h2 id="一些遗留的问题">
+一些遗留的问题
+<a href="#%e4%b8%80%e4%ba%9b%e9%81%97%e7%95%99%e7%9a%84%e9%97%ae%e9%a2%98" class="heading-anchor">#</a>
+</h2>
+<ol>
+<li>如果fediverse上对博文的回应（回复、转发、喜爱）被修改或删除，无法触发Bridgy自动更新，即以回应为source，以博文为target重新发一次webmention</li>
+<li>如果发出回应的用户更改了自己的个人信息，也无法触发Bridgy自动更新，这个应该更没法解决了。</li>
 </ol>
 
 

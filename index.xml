@@ -145,6 +145,14 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2 id=&#34;一些遗留的问题&#34;&gt;
+一些遗留的问题
+&lt;a href=&#34;#%e4%b8%80%e4%ba%9b%e9%81%97%e7%95%99%e7%9a%84%e9%97%ae%e9%a2%98&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;如果fediverse上对博文的回应（回复、转发、喜爱）被修改或删除，无法触发Bridgy自动更新，即以回应为source，以博文为target重新发一次webmention&lt;/li&gt;
+&lt;li&gt;如果发出回应的用户更改了自己的个人信息，也无法触发Bridgy自动更新，这个应该更没法解决了。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     <item>
