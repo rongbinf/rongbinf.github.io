@@ -38,7 +38,7 @@ It&#39;ll redirect you to my profile page on your server.
 
 
 
-      <link rel="stylesheet" href="/css/main.min.22470a80a2cde089891ae0e6fcb08de7575f4fcf18b7179e12a8730fd9961b0a.css" integrity="sha256-IkcKgKLN4ImJGuDm/LCN51dfT88YtxeeEqhzD9mWGwo=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.757ce8a6d847ffad216ea0bf46783604e6165185621bb3ea61f756ec364736b6.css" integrity="sha256-dXzopthH/60hbqC/Rng2BOYWUYViG7PqYfdW7DZHNrY=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -470,6 +470,11 @@ main();
     	z-index: 500;
       bottom: 5%;
     	left: 5%;
+      transform: translate(0);
+  }
+  .widget.hide {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 	.lastfm {
       display: flex;
@@ -527,10 +532,11 @@ main();
   position: absolute;
   top: 50%;
   left: 5%;
-  background: var(--bg-color);
+  background: var(--bgcolor);
   color: var(--text-color);
   padding: 2ch;
   border: 1px solid var(--text-color);
+  z-index: 500;
 }
 </style>
 
@@ -615,6 +621,29 @@ document.addEventListener('click', function(event) {
       $('.lastfm .lastfm-album').text(track.album['#text']);
     });
   });
+</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var lastScrollTop = 0;
+    var widget = document.querySelector('.widget');
+
+    window.addEventListener('scroll', function() {
+        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // 向下滚动时，添加 .hide 类来隐藏 widget
+            widget.classList.add('hide');
+        } else {
+            // 向上滚动时，移除 .hide 类来显示 widget
+            widget.classList.remove('hide');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    }, false);
+});
 </script>
 
 

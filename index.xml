@@ -4017,6 +4017,11 @@ main();
     	z-index: 500;
       bottom: 5%;
     	left: 5%;
+      transform: translate(0);
+  }
+  .widget.hide {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 	.lastfm {
       display: flex;
@@ -4074,10 +4079,11 @@ main();
   position: absolute;
   top: 50%;
   left: 5%;
-  background: var(--bg-color);
+  background: var(--bgcolor);
   color: var(--text-color);
   padding: 2ch;
   border: 1px solid var(--text-color);
+  z-index: 500;
 }
 &lt;/style&gt;
 
@@ -4162,6 +4168,29 @@ document.addEventListener(&#39;click&#39;, function(event) {
       $(&#39;.lastfm .lastfm-album&#39;).text(track.album[&#39;#text&#39;]);
     });
   });
+&lt;/script&gt;
+
+
+
+&lt;script&gt;
+document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+    var lastScrollTop = 0;
+    var widget = document.querySelector(&#39;.widget&#39;);
+
+    window.addEventListener(&#39;scroll&#39;, function() {
+        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll &gt; lastScrollTop) {
+            // 向下滚动时，添加 .hide 类来隐藏 widget
+            widget.classList.add(&#39;hide&#39;);
+        } else {
+            // 向上滚动时，移除 .hide 类来显示 widget
+            widget.classList.remove(&#39;hide&#39;);
+        }
+
+        lastScrollTop = currentScroll &lt;= 0 ? 0 : currentScroll;
+    }, false);
+});
 &lt;/script&gt;
 
 </description>
