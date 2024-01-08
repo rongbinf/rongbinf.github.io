@@ -3909,7 +3909,6 @@ Stream Page
 &lt;hr&gt;
 
 
-&lt;!-- 加载responses --&gt;
 &lt;script defer&gt;
 // 1. 异步请求API
 async function fetchWebmentions() {
@@ -3948,10 +3947,8 @@ function displayWebmentions(webmentionsData) {
     const count = counts[streamTimeHref] || 0;
     
     if (matchedWebmentions.length &gt; 0) {
-      // 创建一个DocumentFragment
       const fragment = document.createDocumentFragment();
     
-      // 创建Webmentions容器，初始状态为隐藏
       const webmentionsContainer = document.createElement(&#39;div&#39;);
       webmentionsContainer.classList.add(&#39;stream-webmention-container&#39;);
       webmentionsContainer.style.display = &#39;none&#39;;
@@ -3960,24 +3957,20 @@ function displayWebmentions(webmentionsData) {
         const webmentionElement = document.createElement(&#39;div&#39;);
         webmentionElement.classList.add(&#39;stream-webmention-inner&#39;);
     
-        // 显示作者信息
         const authorName = entry.author?.name || &#39;origin&#39;;
         const authorElement = document.createElement(&#39;div&#39;);
         if (entry.author?.url) {
-          // 作者名作为超链接
           const authorLink = document.createElement(&#39;a&#39;);
           authorLink.href = entry.url;
           authorLink.textContent = authorName;
           authorElement.appendChild(authorLink);
         } else {
-          // 显示为origin
           authorElement.textContent = authorName;
           authorLink.href = entry.url;
           authorElement.appendChild(authorLink);
         }
         webmentionElement.appendChild(authorElement);
     
-        // 显示Webmention文本内容
         if (entry.content &amp;&amp; entry.content.text) {
           const content = document.createElement(&#39;p&#39;);
           content.textContent = entry.content.text;
@@ -3989,7 +3982,6 @@ function displayWebmentions(webmentionsData) {
     
       fragment.appendChild(webmentionsContainer);
     
-      // 在&lt;time&gt;元素上方插入按钮
       const timeElement = hEntry.querySelector(&#39;time&#39;);
       if (timeElement) {
         const button = document.createElement(&#39;span&#39;);
@@ -4005,13 +3997,11 @@ function displayWebmentions(webmentionsData) {
         timeElement.parentNode.insertBefore(button, timeElement);
       }
     
-      // 将fragment一次性添加到DOM中
       const streamMeta = hEntry.querySelector(&#39;.stream-meta&#39;);
       if (streamMeta) {
         streamMeta.parentNode.insertBefore(fragment, streamMeta.nextSibling);
       }
     
-      // 更新responses按钮文本
       const responsesButton = hEntry.querySelector(&#39;.mention-number&#39;);
       if (responsesButton) {
         const responseText = count === 1 ? &#39;1 response&#39; : `${count} responses`;
@@ -4021,7 +4011,6 @@ function displayWebmentions(webmentionsData) {
   });
 }
 
-// 主逻辑
 async function main() {
   try {
     const webmentions = await fetchWebmentions();
@@ -4061,7 +4050,6 @@ main();
 &lt;hr&gt;
 
 
-&lt;!-- 加载last.fm和一个follow按钮 --&gt;
 &lt;style&gt;
 	.navbar, .addn, footer {
 		opacity: 0.35 !important;
@@ -4120,6 +4108,17 @@ main();
     color: white;
     text-align: center;
     padding: 1ch;
+  }
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
   }
 &lt;/style&gt;
 
@@ -4194,14 +4193,19 @@ document.addEventListener(&#39;click&#39;, function(event) {
       .then(response =&gt; response.json())
       .then(data =&gt; {
         var track = data.recenttracks.track[0];
-    
         var coverImage = document.querySelector(&#39;.lastfm .lastfm-cover&#39;);
         if (coverImage) {
           var largeImage = track.image.find(img =&gt; img.size === &#39;large&#39;)[&#39;#text&#39;];
           coverImage.setAttribute(&#39;src&#39;, largeImage);
         }
-    
-        var timeAgoText = track.date ? getTimeAgoText(new Date(parseInt(track.date.uts) * 1000)) : &#39;&#39;;
+        
+        var timeAgoText = &#39;&#39;;
+        if (track[&#34;@attr&#34;] &amp;&amp; track[&#34;@attr&#34;].nowplaying) {
+          timeAgoText = &#39;Now playing!&#39;;
+        } else if (track.date) {
+          timeAgoText = getTimeAgoText(new Date(parseInt(track.date.uts) * 1000));
+        }
+
         var lastfmTime = document.querySelector(&#39;.lastfm .lastfm-time&#39;);
         if (lastfmTime) {
           lastfmTime.textContent = timeAgoText;

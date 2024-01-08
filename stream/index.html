@@ -35,7 +35,7 @@ It&#39;ll redirect to my profile page on your server. " />
 
 
 
-      <link rel="stylesheet" href="/css/main.min.101e6f6fec715c2b8e94b492d101c4093f14e0291b174390d24877d4ced08dce.css" integrity="sha256-EB5vb&#43;xxXCuOlLSS0QHECT8U4CkbF0OQ0kh31M7Qjc4=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.57c37e68499c6316b7fd7a3901d362d5e4ae80b5baa11f5d45bb78c3c1764ce8.css" integrity="sha256-V8N&#43;aEmcYxa3/Xo5AdNi1eSugLW6oR9dRbt4w8F2TOg=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -56,6 +56,7 @@ It&#39;ll redirect to my profile page on your server. " />
      / <a href="/posts" class="header-link">Blog</a>
     <br>
     <a href="/links" class="header-link header-guestbook">◩ Guestbook</a>
+    <a href="/stream" class="header-link header-guestbook">ϟ Stream</a>
 </span>
 
 
@@ -363,7 +364,6 @@ It&#39;ll redirect to my profile page on your server. " />
 <hr>
 
 
-<!-- 加载responses -->
 <script defer>
 // 1. 异步请求API
 async function fetchWebmentions() {
@@ -402,10 +402,8 @@ function displayWebmentions(webmentionsData) {
     const count = counts[streamTimeHref] || 0;
     
     if (matchedWebmentions.length > 0) {
-      // 创建一个DocumentFragment
       const fragment = document.createDocumentFragment();
     
-      // 创建Webmentions容器，初始状态为隐藏
       const webmentionsContainer = document.createElement('div');
       webmentionsContainer.classList.add('stream-webmention-container');
       webmentionsContainer.style.display = 'none';
@@ -414,24 +412,20 @@ function displayWebmentions(webmentionsData) {
         const webmentionElement = document.createElement('div');
         webmentionElement.classList.add('stream-webmention-inner');
     
-        // 显示作者信息
         const authorName = entry.author?.name || 'origin';
         const authorElement = document.createElement('div');
         if (entry.author?.url) {
-          // 作者名作为超链接
           const authorLink = document.createElement('a');
           authorLink.href = entry.url;
           authorLink.textContent = authorName;
           authorElement.appendChild(authorLink);
         } else {
-          // 显示为origin
           authorElement.textContent = authorName;
           authorLink.href = entry.url;
           authorElement.appendChild(authorLink);
         }
         webmentionElement.appendChild(authorElement);
     
-        // 显示Webmention文本内容
         if (entry.content && entry.content.text) {
           const content = document.createElement('p');
           content.textContent = entry.content.text;
@@ -443,7 +437,6 @@ function displayWebmentions(webmentionsData) {
     
       fragment.appendChild(webmentionsContainer);
     
-      // 在<time>元素上方插入按钮
       const timeElement = hEntry.querySelector('time');
       if (timeElement) {
         const button = document.createElement('span');
@@ -459,13 +452,11 @@ function displayWebmentions(webmentionsData) {
         timeElement.parentNode.insertBefore(button, timeElement);
       }
     
-      // 将fragment一次性添加到DOM中
       const streamMeta = hEntry.querySelector('.stream-meta');
       if (streamMeta) {
         streamMeta.parentNode.insertBefore(fragment, streamMeta.nextSibling);
       }
     
-      // 更新responses按钮文本
       const responsesButton = hEntry.querySelector('.mention-number');
       if (responsesButton) {
         const responseText = count === 1 ? '1 response' : `${count} responses`;
@@ -475,7 +466,6 @@ function displayWebmentions(webmentionsData) {
   });
 }
 
-// 主逻辑
 async function main() {
   try {
     const webmentions = await fetchWebmentions();
@@ -515,7 +505,6 @@ main();
 <hr>
 
 
-<!-- 加载last.fm和一个follow按钮 -->
 <style>
 	.navbar, .addn, footer {
 		opacity: 0.35 !important;
@@ -574,6 +563,17 @@ main();
     color: white;
     text-align: center;
     padding: 1ch;
+  }
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
   }
 </style>
 
@@ -648,14 +648,19 @@ document.addEventListener('click', function(event) {
       .then(response => response.json())
       .then(data => {
         var track = data.recenttracks.track[0];
-    
         var coverImage = document.querySelector('.lastfm .lastfm-cover');
         if (coverImage) {
           var largeImage = track.image.find(img => img.size === 'large')['#text'];
           coverImage.setAttribute('src', largeImage);
         }
-    
-        var timeAgoText = track.date ? getTimeAgoText(new Date(parseInt(track.date.uts) * 1000)) : '';
+        
+        var timeAgoText = '';
+        if (track["@attr"] && track["@attr"].nowplaying) {
+          timeAgoText = 'Now playing!';
+        } else if (track.date) {
+          timeAgoText = getTimeAgoText(new Date(parseInt(track.date.uts) * 1000));
+        }
+
         var lastfmTime = document.querySelector('.lastfm .lastfm-time');
         if (lastfmTime) {
           lastfmTime.textContent = timeAgoText;
