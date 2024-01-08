@@ -69,8 +69,8 @@
 使用 webmention.app 自动发送
 &lt;a href=&#34;#%e4%bd%bf%e7%94%a8-webmentionapp-%e8%87%aa%e5%8a%a8%e5%8f%91%e9%80%81&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;你可能一次在博文中引用多个网页，但是不想再进行繁琐的手动发送webmention。&lt;a href=&#34;https://webmention.app/&#34;&gt;Webmention.app&lt;/a&gt;可以读取页面&lt;a href=&#34;https://microformats.org/wiki/h-entry&#34;&gt;&lt;code&gt;&amp;lt;h-entry&amp;gt;&lt;/code&gt;&lt;/a&gt;中的链接，帮你一键发送。&lt;/p&gt;
-&lt;p&gt;可以使用&lt;a href=&#34;https://webmention.app/check&#34;&gt;Test页面&lt;/a&gt;检查（只会检查前10个&lt;code&gt;&amp;lt;h-entry&amp;gt;&lt;/code&gt;），也可以通过API。登录服务获得token后没有request限制。具体请参见官网。&lt;/p&gt;
+&lt;p&gt;你可能一次在博文中引用多个网页，但是不想再进行繁琐的手动发送webmention。&lt;a href=&#34;https://webmention.app/&#34;&gt;Webmention.app&lt;/a&gt;可以读取页面&lt;a href=&#34;https://microformats.org/wiki/h-entry&#34;&gt;&lt;code&gt;class=&amp;quot;h-entry&amp;quot;&lt;/code&gt;&lt;/a&gt;中的链接，帮你一键发送。&lt;/p&gt;
+&lt;p&gt;可以使用&lt;a href=&#34;https://webmention.app/check&#34;&gt;Test页面&lt;/a&gt;检查（只会检查前10个&lt;code&gt;h-entry&lt;/code&gt;），也可以通过API。登录服务获得token后没有request限制。具体请参见官网。&lt;/p&gt;
 &lt;h2 id=&#34;将你的博文发送到社交平台&#34;&gt;
 将你的博文发送到社交平台
 &lt;a href=&#34;#%e5%b0%86%e4%bd%a0%e7%9a%84%e5%8d%9a%e6%96%87%e5%8f%91%e9%80%81%e5%88%b0%e7%a4%be%e4%ba%a4%e5%b9%b3%e5%8f%b0&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -4154,7 +4154,7 @@ main();
 &lt;/style&gt;
 
 &lt;div id=&#34;follow-mstd-box&#34;&gt;
-&lt;p&gt;Enter your &lt;em&gt;@username@server_address&lt;/em&gt; here.&lt;br&gt;It&#39;ll redirect you to my profile page on your server.&lt;/p&gt;
+&lt;p&gt;Enter your &lt;em&gt;@username@server_address&lt;/em&gt; here.&lt;br&gt;It&#39;ll redirect to my profile page on your server.&lt;/p&gt;
 &lt;form action=&#34;https://fed.brid.gy/remote-follow&#34; method=&#34;post&#34;&gt;&lt;input id=&#34;follow-address&#34; name=&#34;address&#34; pattern=&#34;@[\w.]+@[\w.]+&#34; placeholder=&#34;@alice@m.cmx.im&#34; required=&#34;required&#34; title=&#34;@alice@m.cmx.im&#34; type=&#34;text&#34;&gt; &lt;input name=&#34;domain&#34; type=&#34;hidden&#34; value=&#34;fanrongbin.com&#34;&gt; &lt;input name=&#34;protocol&#34; type=&#34;hidden&#34; value=&#34;web&#34;&gt; &lt;input type=&#34;submit&#34; value=&#34;Go&#34;&gt;&amp;nbsp;&lt;/form&gt;
 &lt;/div&gt;
 
