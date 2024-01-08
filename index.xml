@@ -4129,21 +4129,18 @@ document.addEventListener(&#39;click&#39;, function(event) {
       .then(data =&gt; {
         var track = data.recenttracks.track[0];
 
-        // Update cover image
         var coverImage = document.querySelector(&#39;.lastfm .lastfm-cover&#39;);
         if (coverImage) {
           var largeImage = track.image.find(img =&gt; img.size === &#39;large&#39;)[&#39;#text&#39;];
           coverImage.setAttribute(&#39;src&#39;, largeImage);
         }
 
-        // Update time
         var timeAgoText = track.date ? getTimeAgoText(new Date(parseInt(track.date.uts) * 1000)) : &#39;&#39;;
         var lastfmTime = document.querySelector(&#39;.lastfm .lastfm-time&#39;);
         if (lastfmTime) {
           lastfmTime.textContent = timeAgoText;
         }
 
-        // Update track name, link, and album name
         updateTextContent(&#39;.lastfm .lastfm-track&#39;, track.name);
         updateAttribute(&#39;.lastfm-a&#39;, &#39;href&#39;, track.url.replace(/\+/g, &#39;%20&#39;));
         updateTextContent(&#39;.lastfm .lastfm-album&#39;, track.album[&#39;#text&#39;]);
@@ -4184,28 +4181,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
     var lastScrollTop = 0;
     var widget = document.querySelector(&#39;.widget&#39;);
 
-    function throttle(func, limit) {
-        var lastFunc;
-        var lastRan;
-        return function() {
-            const context = this;
-            const args = arguments;
-            if (!lastRan) {
-                func.apply(context, args);
-                lastRan = Date.now();
-            } else {
-                clearTimeout(lastFunc);
-                lastFunc = setTimeout(function() {
-                    if ((Date.now() - lastRan) &gt;= limit) {
-                        func.apply(context, args);
-                        lastRan = Date.now();
-                    }
-                }, limit - (Date.now() - lastRan));
-            }
-        }
-    }
-
-    var handleScroll = function() {
+    window.addEventListener(&#39;scroll&#39;, function() {
         var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
         if (currentScroll &gt; lastScrollTop) {
@@ -4215,9 +4191,7 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
         }
 
         lastScrollTop = currentScroll &lt;= 0 ? 0 : currentScroll;
-    };
-
-    window.addEventListener(&#39;scroll&#39;, throttle(handleScroll, 200), false);
+    }, false);
 });
 &lt;/script&gt;
 
