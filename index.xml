@@ -211,7 +211,7 @@
 
 
 &lt;div class=&#34;stream-inner e-content&#34;&gt;
-    testing webmention.app to detect and send webmention. through mention/note, wrapped up in a new &lt;code&gt;h-entry&lt;/code&gt; with &lt;code&gt;e-content&lt;/code&gt;
+    testing webmention.app to detect and send webmention. through &lt;a href=&#34;fanrongbin.com/hugo-hanzi-pro&#34;&gt;mention&lt;/a&gt;/note, wrapped up in a new &lt;code&gt;h-entry&lt;/code&gt; with &lt;code&gt;e-content&lt;/code&gt;
 &lt;/div&gt;
 &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
 
