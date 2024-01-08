@@ -3647,7 +3647,62 @@ Stream Page
       <link>https://fanrongbin.com/stream/</link>
       <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/stream/</guid>
-      <description>
+      <description>&lt;h2 id=&#34;2024&#34;&gt;
+2024
+&lt;a href=&#34;#2024&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-08-reply-test&#34;&gt;
+
+
+
+
+    In reply to: &lt;a class=&#34;u-in-reply-to stream-external&#34; href=&#34;https://fanrongbin.com/stream#2024-01-08-add-last-fm-scrobble&#34;&gt;https://fanrongbin.com/stream#2024-01-08-add-last-fm-scrobble&lt;/a&gt;
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream-inner e-content&#34;&gt;
+    如果在这里reply的话……以及测试超过1条response的样式。
+&lt;/div&gt;
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+
+
+&lt;p class=&#34;stream-meta&#34;&gt;
+    &lt;span class=&#34;p-author h-card&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T18:57:24&amp;#43;08:00&#34; title=&#34;2024-01-08T18:57:24&amp;#43;08:00&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-reply-test&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-reply-test&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;18:57 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
+    &lt;/time&gt;
+&lt;/p&gt;
+
+
+
+&lt;/div&gt;
+
 
 
 
@@ -3690,8 +3745,8 @@ Stream Page
         &lt;/a&gt;
     &lt;/span&gt;
     
-    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T16:05:07&amp;#43;08:00&#34; title=&#34;08 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-add-last-fm-scrobble&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-add-last-fm-scrobble&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;16:05 (UTC&amp;#43;08) Mon&lt;/a&gt;
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T16:05:07&amp;#43;08:00&#34; title=&#34;2024-01-08T16:05:07&amp;#43;08:00&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-add-last-fm-scrobble&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-add-last-fm-scrobble&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;16:05 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3741,8 +3796,8 @@ Stream Page
         &lt;/a&gt;
     &lt;/span&gt;
     
-    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T09:29:31&amp;#43;08:00&#34; title=&#34;08 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-reply-with-wm&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-reply-with-wm&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;09:29 (UTC&amp;#43;08) Mon&lt;/a&gt;
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T09:29:31&amp;#43;08:00&#34; title=&#34;2024-01-08T09:29:31&amp;#43;08:00&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-reply-with-wm&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-reply-with-wm&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;09:29 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3792,8 +3847,8 @@ Stream Page
         &lt;/a&gt;
     &lt;/span&gt;
     
-    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T22:06:38&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-unnecessarily-busy-weekend&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-unnecessarily-busy-weekend&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;22:06 (UTC&amp;#43;08) Sun&lt;/a&gt;
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T22:06:38&amp;#43;08:00&#34; title=&#34;2024-01-07T22:06:38&amp;#43;08:00&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-unnecessarily-busy-weekend&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-unnecessarily-busy-weekend&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;22:06 (&amp;#43;08) Sun 07 January 2024&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3843,8 +3898,8 @@ Stream Page
         &lt;/a&gt;
     &lt;/span&gt;
     
-    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T16:49:40&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-test&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-test&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;16:49 (UTC&amp;#43;08) Sun&lt;/a&gt;
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T16:49:40&amp;#43;08:00&#34; title=&#34;2024-01-07T16:49:40&amp;#43;08:00&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-test&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-test&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;16:49 (&amp;#43;08) Sun 07 January 2024&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -3986,7 +4041,20 @@ main();
   font-style: initial;
   font-family: var(--sans);
   border-left: 1px solid;
-  padding-left: 10px;
+  padding-left: 1rem;
+}
+.stream-webmention-inner&gt;p {
+  line-height: 1.5;
+  padding-top: 0.5rem;
+}
+.stream.h-entry::before {
+    content: &#34;&#34;;
+    border-top: 1px solid #000;
+    position: relative;
+    width: 1.5ch;
+    display: block;
+    left: -1.5rem;
+    top: 0.8rem;
 }
 &lt;/style&gt;
 
@@ -4004,7 +4072,6 @@ main();
 	}
 	div.color {
 		background: unset;
-		border-right: 1px solid;
 	}
   .widget {
     display: flex;
@@ -4128,45 +4195,45 @@ document.addEventListener(&#39;click&#39;, function(event) {
       .then(response =&gt; response.json())
       .then(data =&gt; {
         var track = data.recenttracks.track[0];
-
+    
         var coverImage = document.querySelector(&#39;.lastfm .lastfm-cover&#39;);
         if (coverImage) {
           var largeImage = track.image.find(img =&gt; img.size === &#39;large&#39;)[&#39;#text&#39;];
           coverImage.setAttribute(&#39;src&#39;, largeImage);
         }
-
+    
         var timeAgoText = track.date ? getTimeAgoText(new Date(parseInt(track.date.uts) * 1000)) : &#39;&#39;;
         var lastfmTime = document.querySelector(&#39;.lastfm .lastfm-time&#39;);
         if (lastfmTime) {
           lastfmTime.textContent = timeAgoText;
         }
-
+    
         updateTextContent(&#39;.lastfm .lastfm-track&#39;, track.name);
         updateAttribute(&#39;.lastfm-a&#39;, &#39;href&#39;, track.url.replace(/\+/g, &#39;%20&#39;));
         updateTextContent(&#39;.lastfm .lastfm-album&#39;, track.album[&#39;#text&#39;]);
       })
       .catch(error =&gt; console.error(&#39;Error fetching last.fm data:&#39;, error));
-
+    
     function getTimeAgoText(date) {
       var now = new Date();
       var timeDiff = now.getTime() - date.getTime();
-
+    
       var seconds = Math.floor(timeDiff / 1000);
       var minutes = Math.floor(seconds / 60);
       var hours = Math.floor(minutes / 60);
       var days = Math.floor(hours / 24);
-
+    
       if (days &gt; 0) return days === 1 ? &#39;1 day ago&#39; : days + &#39; days ago&#39;;
       if (hours &gt; 0) return hours === 1 ? &#39;1 hour ago&#39; : hours + &#39; hours ago&#39;;
       if (minutes &gt; 0) return minutes === 1 ? &#39;1 minute ago&#39; : minutes + &#39; minutes ago&#39;;
       return &#39;Less than a minute ago&#39;;
     }
-
+    
     function updateTextContent(selector, text) {
       var element = document.querySelector(selector);
       if (element) element.textContent = text;
     }
-
+    
     function updateAttribute(selector, attribute, value) {
       var element = document.querySelector(selector);
       if (element) element.setAttribute(attribute, value);
@@ -4183,13 +4250,13 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 
     window.addEventListener(&#39;scroll&#39;, function() {
         var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
+    
         if (currentScroll &gt; lastScrollTop) {
             widget.classList.add(&#39;hide&#39;);
         } else {
             widget.classList.remove(&#39;hide&#39;);
         }
-
+    
         lastScrollTop = currentScroll &lt;= 0 ? 0 : currentScroll;
     }, false);
 });
