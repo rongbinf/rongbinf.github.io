@@ -9,7 +9,7 @@
     <lastBuildDate>Sat, 06 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>用 Webmention 连接 Mastodon 并通过 Github Actions 拉取更新</title>
+      <title>用 Webmention 接收 Mastodon 互动</title>
       <link>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</link>
       <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</guid>
@@ -19,11 +19,16 @@
 &lt;/h2&gt;
 &lt;p&gt;Webmention是由&lt;a href=&#34;https://indieweb.org&#34;&gt;IndieWeb&lt;/a&gt;发起的W3C标准，用来实现网页间相互提及，不必借助平台或引入评论系统。它的工作流程如下：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;你上传了一篇文章&lt;/li&gt;
-&lt;li&gt;文章被我引用&lt;/li&gt;
-&lt;li&gt;我向你的网站发送带有引用处url的webmention&lt;/li&gt;
-&lt;li&gt;你通过&lt;a href=&#34;https://webmention.io&#34;&gt;webmention.io&lt;/a&gt;等服务或自行挂载，接收到我的webmention&lt;/li&gt;
+&lt;li&gt;我上传了一篇文章&lt;/li&gt;
+&lt;li&gt;文章被你引用&lt;/li&gt;
+&lt;li&gt;你向我的网站发送带有引用处url的webmention&lt;/li&gt;
+&lt;li&gt;我通过&lt;a href=&#34;https://webmention.io&#34;&gt;webmention.io&lt;/a&gt;等服务或自行挂载，接收到你的webmention&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;现在你就可以试试，在自己的页面提及此页url，例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    I&amp;#39;m trying webmention!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后把你的页面url在文末输入框提交，大约一分钟后刷新此页，就会看到你的webmention。&lt;/p&gt;
 &lt;h2 id=&#34;接收-webmention&#34;&gt;
 接收 webmention
 &lt;a href=&#34;#%e6%8e%a5%e6%94%b6-webmention&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -53,7 +58,7 @@
 &lt;/h3&gt;
 &lt;p&gt;Webmention.io提供API返回你接受到的具体内容，这里我们借助前人造好的轮子&lt;a href=&#34;https://github.com/PlaidWeb/webmention.js/&#34;&gt;webmention.js&lt;/a&gt;，根据readme，在你的网站存放&lt;code&gt;webmention.min.js&lt;/code&gt;文件并用&lt;code&gt;&amp;lt;script src=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;引入，在需要展示webmention列表的地方插入：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;webmentions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你可以新建一个测试页面，用来提及目标页面，以测试是否能正常发出和显示。你也可以在连接Mastodon后，通过发toot和回复的方式测试。webmention列表的样式可通过&lt;code&gt;css&lt;/code&gt;自定义。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你可以新建一个测试页面，用来提及目标页，以测试是否能正常发出和显示。也可以在连接Mastodon后，通过发toot和回复的方式测试。webmention列表的样式可通过&lt;code&gt;css&lt;/code&gt;自定义。&lt;/p&gt;
 &lt;h2 id=&#34;发送-webmention&#34;&gt;
 发送 webmention
 &lt;a href=&#34;#%e5%8f%91%e9%80%81-webmention&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -131,103 +136,17 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;          done&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你还可以接着使用&lt;code&gt;${POST_URL}&lt;/code&gt;trigger webmention.app的webhook。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;测试是否能够发出webmentions。&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-07-test-webmention&#34;&gt;
-
-
-
-
-    In reply to: &lt;a class=&#34;u-in-reply-to stream-external&#34; href=&#34;https://aaronparecki.com/2018/06/30/11/your-first-webmention&#34;&gt;https://aaronparecki.com/2018/06/30/11/your-first-webmention&lt;/a&gt;
-
-
-
-
-
-
-
-
-&lt;div class=&#34;stream-inner e-content&#34;&gt;
-    Trying out this guide to sending webmentions.
-&lt;/div&gt;
-&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
-
-&lt;p class=&#34;stream-meta&#34;&gt;
-    &lt;span class=&#34;p-author h-card&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
-            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
-        &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T11:12:35&amp;#43;08:00&#34; title=&#34;07 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon#2024-01-07-test-webmention&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-test-webmention&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;11:12 (UTC&amp;#43;08) Sun&lt;/a&gt;
-    &lt;/time&gt;
-&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-08-testing-webmention-app&#34;&gt;
-
-
-    Rongbin: 
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;stream-inner e-content&#34;&gt;
-    testing webmention.app to detect and send webmention. through &lt;a href=&#34;fanrongbin.com/hugo-hanzi-pro&#34;&gt;mention&lt;/a&gt;/note, wrapped up in a new &lt;code&gt;h-entry&lt;/code&gt; with &lt;code&gt;e-content&lt;/code&gt;
-&lt;/div&gt;
-&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
-
-&lt;p class=&#34;stream-meta&#34;&gt;
-    &lt;span class=&#34;p-author h-card&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
-            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
-        &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T10:31:58&amp;#43;08:00&#34; title=&#34;08 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon#2024-01-08-testing-webmention-app&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-testing-webmention-app&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;10:31 (UTC&amp;#43;08) Mon&lt;/a&gt;
-    &lt;/time&gt;
-&lt;/p&gt;
-
-
-&lt;/div&gt;
+&lt;p&gt;最初是看到IndieWeb上关于webmention的介绍，于是想着要不要自己也折腾一下，搜索到&lt;a href=&#34;https://aaronparecki.com/2018/06/30/11/your-first-webmention&#34;&gt;Aaron Parecki的博文&lt;/a&gt;，以及&lt;a href=&#34;https://www.jayeless.net/2021/02/integrating-webmentions-into-hugo.html&#34;&gt;Jayeless.net的博文&lt;/a&gt;后，觉得配置起来也不是很难嘛，然后就开始了……用第三方服务接收很简单，主要是一直卡在Bridgy这边。我新建了一个&lt;a href=&#34;fanrongbin.com/stream&#34;&gt;Stream&lt;/a&gt;页面，相当于有了自己的一条时间轴，为了传上联邦宇宙，需要把每条小note以锚点&lt;code&gt;#id&lt;/code&gt;的方式传到Bridgy。但，用webmention.app或者是telegraph.p3k.io始终没法发现到&lt;code&gt;https://fed.brid.gy/&lt;/code&gt;这条链接，导致我没法API传出去，后来：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;尝试以&lt;code&gt;&amp;lt;a href=&amp;quot;https://fed.brid.gy&amp;quot; hidden=&amp;quot;from-humans&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;的方式，加到带&lt;code&gt;class=&amp;quot;e-content&amp;quot;&lt;/code&gt;的元素里面。但如果note不包含其他url，具有Link Preview功能的地方，还是会显示出&lt;code&gt;fed.brid.gy&lt;/code&gt;的链接卡片。&lt;/li&gt;
+&lt;li&gt;在对Stream页面部署自动化时，分成了三个部分：
+&lt;ul&gt;
+&lt;li&gt;固定以&lt;code&gt;url#id&lt;/code&gt;作为source并以Bridgy作为target、&lt;/li&gt;
+&lt;li&gt;检查这条note的类型并以相关url作为target（例如reply、like）&lt;/li&gt;
+&lt;li&gt;检查这条note的内容并以相关url作为target（里面所有的&lt;code&gt;&amp;lt;a href=&amp;quot;...&amp;quot;&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     <item>
