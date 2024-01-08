@@ -3680,12 +3680,12 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 
-&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-08-test-reply-bsky&#34;&gt;
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-08-reply-with-wm&#34;&gt;
 
 
 
 
-    In reply to: &lt;a class=&#34;u-in-reply-to&#34; href=&#34;https://bsky.app/profile/rongbin.bsky.social/post/3khvhs2rvrv2k&#34;&gt;https://bsky.app/profile/rongbin.bsky.social/post/3khvhs2rvrv2k&lt;/a&gt;
+    In reply to: &lt;a class=&#34;u-in-reply-to&#34; href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&#34;&gt;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&lt;/a&gt;
 
 
 
@@ -3695,7 +3695,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 
 
 &lt;div class=&#34;stream-inner e-content&#34;&gt;
-    尝试回复一条 Bluesky 推文。
+    在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。
 &lt;/div&gt;
 &lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
 
@@ -3705,8 +3705,8 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
             &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
         &lt;/a&gt;
     &lt;/span&gt;
-    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T01:40:32&amp;#43;08:00&#34; title=&#34;08 January 2024&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-test-reply-bsky&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-test-reply-bsky&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;01:40 (UTC&amp;#43;08) Mon&lt;/a&gt;
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T09:29:31&amp;#43;08:00&#34; title=&#34;08 January 2024&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-reply-with-wm&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-reply-with-wm&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;09:29 (UTC&amp;#43;08) Mon&lt;/a&gt;
     &lt;/time&gt;
 &lt;/p&gt;
 
