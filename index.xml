@@ -3838,7 +3838,7 @@ document.querySelectorAll(&#39;.mention-number&#39;).forEach(function(link) {
 });
 &lt;/script&gt;
 
-&lt;script src=&#34;https://fanrongbin.com/jquery-3.6.0.min.js&#34; defer&gt;&lt;script&gt;
+&lt;script src=&#34;https://fanrongbin.com/jquery-3.6.0.min.js&#34; defer&gt;
 
 &lt;script defer&gt;
     jQuery(function($){
