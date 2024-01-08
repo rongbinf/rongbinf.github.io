@@ -268,7 +268,8 @@
     }
 
     #webmentions .comments li .text,
-    .stream-webmention .comments li .text {
+    .stream-webmention .comments li .text,
+    #webmentions .comments li .name {
         color: var(--text-color);
         grid-row: 2;
         grid-column: 1/span2;
@@ -309,10 +310,11 @@
         }
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 900px) {
 
         main,
-        .context {
+        .context,
+        .heading {
             grid-column: 1/-1;
         }
 
@@ -329,10 +331,6 @@
         .avatar {
             width: 7rem;
             height: 7rem;
-        }
-
-        .name {
-            font-size: 1.5rem;
         }
 
         .profile-tag {

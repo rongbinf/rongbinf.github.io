@@ -1,21 +1,34 @@
 * {
-    --serif: Georgia, et-book, "Numeral LF Serif", "Han Songti GB", "Noto Serif SC", "Noto Serif KR", Batang, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif, "Noto Emoji";
-    --kai: Georgia, et-book, "Numeral LF Serif", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, "Times New Roman", "Han Kaiti GB", STKaiti, Kaiti, "Kaiti SC", Kai, FZKaiti, "Noto Serif SC", "Noto Serif KR", Batang, cursive, serif, "Noto Emoji";
-    --sans: "Helvetica Neue", Helvetica, Arial, Verdana, -apple-system, BlinkMacSystemFont, Avenir, "Segoe UI Variable", "Segoe UI", "Han Heiti GB", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji";
-    --arrow: -apple-system, BlinkMacSystemFont, Calibri, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
-    --mono: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .2s cubic-bezier(0.33, 1, 0.68, 1);
+  font-family: var(--sans);
 
-    --bg-color: #fff;
-    --link-color: #0026ff;
-    --text-color: #000;
-    --color-block-bg-color: #f6ff00;
-    --color-block-text-color: #000;
+  --textcolor: rgb(0, 0, 0);
+  --text-color: var(--textcolor);
+  --link-color: #0026ff;
+  --bgcolor: rgb(255, 255, 255);
+  --bg-color: var(--bgcolor);
+  --highlight: rgb(0, 38, 255);
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--sans);
-    transition: all .2s cubic-bezier(0.33, 1, 0.68, 1);
+  --color-block-bg-color: #f6ff00;
+  --color-block-text-color: #000;
+
+  --serif: Georgia, et-book, "Numeral LF Serif", "Han Songti GB", "Noto Serif SC", "Noto Serif KR", Batang, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif, "Noto Emoji";
+  --kai: Georgia, et-book, "Numeral LF Serif", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, "Times New Roman", "Han Kaiti GB", STKaiti, Kaiti, "Kaiti SC", Kai, FZKaiti, "Noto Serif SC", "Noto Serif KR", Batang, cursive, serif, "Noto Emoji";
+  --sans: "Helvetica Neue", Helvetica, Arial, Verdana, -apple-system, BlinkMacSystemFont, Avenir, "Segoe UI Variable", "Segoe UI", "Han Heiti GB", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji";
+  --arrow: -apple-system, BlinkMacSystemFont, Calibri, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
+  --mono: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    --textcolor: rgb(255, 255, 255);
+    --link-color: rgba(175, 175, 175, 0.545);
+    --bgcolor: rgb(0, 0, 0);
+    --highlight: rgb(0, 38, 255);
+  }
 }
 
 ::selection {
@@ -28,12 +41,6 @@
     color: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-    * {
-        --bg-color: #000;
-        --text-color: #fff;
-    }
-}
 
 body {
     background: var(--bg-color);
