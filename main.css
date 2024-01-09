@@ -25,7 +25,6 @@
 @media (prefers-color-scheme: dark) {
   * {
     --textcolor: rgb(255, 255, 255);
-    --link-color: rgba(175, 175, 175, 0.545);
     --bgcolor: rgb(0, 0, 0);
     --highlight: rgb(0, 38, 255);
   }
