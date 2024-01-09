@@ -8,13 +8,13 @@
 <meta name="description"
     content="2024 # In reply to: https://fanrongbin.com/links 尝试往Guestbook发出webmention（折腾就到此结束吧） 22:05 (&#43;08) Mon 08 January 2024 In reply to: https://fanrongbin.com/stream#2024-01-08-add-last-fm-scrobble 如果在这里reply的话……以及测试超过1条response的样式。 18:57 (&#43;08) Mon 08 January 2024 Rongbin: 给Stream页面加上了Last.fm Scrobble。 16:05 (&#43;08) Mon 08 January 2024 In reply to: https://fanrongbin.com/hugo-webmention-bridgy-mastodon/ 在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。 09:29 (&#43;08) Mon 08 January 2024 Rongbin: 在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。 22:06 (&#43;08) Sun 07 January 2024 Rongbin: 好像差不多调试好了 stream 页面自动发出 webmention。 16:49 (&#43;08) Sun 07 January 2024 Track NameTime
 Album Name
-Follow on Mastodon Enter your @username@server_address here. ">
+Follow on Mastodon Stream Heat Enter your @username@server_address here. ">
 <meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
 <meta property="og:title" content="Stream - Rongbin&#39;s Blog" />
 <meta property="og:description" content="2024 # In reply to: https://fanrongbin.com/links 尝试往Guestbook发出webmention（折腾就到此结束吧） 22:05 (&#43;08) Mon 08 January 2024 In reply to: https://fanrongbin.com/stream#2024-01-08-add-last-fm-scrobble 如果在这里reply的话……以及测试超过1条response的样式。 18:57 (&#43;08) Mon 08 January 2024 Rongbin: 给Stream页面加上了Last.fm Scrobble。 16:05 (&#43;08) Mon 08 January 2024 In reply to: https://fanrongbin.com/hugo-webmention-bridgy-mastodon/ 在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。 09:29 (&#43;08) Mon 08 January 2024 Rongbin: 在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。 22:06 (&#43;08) Sun 07 January 2024 Rongbin: 好像差不多调试好了 stream 页面自动发出 webmention。 16:49 (&#43;08) Sun 07 January 2024 Track NameTime
 Album Name
-Follow on Mastodon Enter your @username@server_address here. " />
+Follow on Mastodon Stream Heat Enter your @username@server_address here. " />
 <meta property="og:url" content="https://fanrongbin.com/stream/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
@@ -23,7 +23,7 @@ Follow on Mastodon Enter your @username@server_address here. " />
 <meta name="twitter:title" content="Stream - Rongbin&#39;s Blog" />
 <meta name="twitter:description" content="2024 # In reply to: https://fanrongbin.com/links 尝试往Guestbook发出webmention（折腾就到此结束吧） 22:05 (&#43;08) Mon 08 January 2024 In reply to: https://fanrongbin.com/stream#2024-01-08-add-last-fm-scrobble 如果在这里reply的话……以及测试超过1条response的样式。 18:57 (&#43;08) Mon 08 January 2024 Rongbin: 给Stream页面加上了Last.fm Scrobble。 16:05 (&#43;08) Mon 08 January 2024 In reply to: https://fanrongbin.com/hugo-webmention-bridgy-mastodon/ 在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。 09:29 (&#43;08) Mon 08 January 2024 Rongbin: 在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。 22:06 (&#43;08) Sun 07 January 2024 Rongbin: 好像差不多调试好了 stream 页面自动发出 webmention。 16:49 (&#43;08) Sun 07 January 2024 Track NameTime
 Album Name
-Follow on Mastodon Enter your @username@server_address here. " />
+Follow on Mastodon Stream Heat Enter your @username@server_address here. " />
 
 <link rel="canonical" href="https://fanrongbin.com/stream/" />
 
@@ -412,6 +412,7 @@ Follow on Mastodon Enter your @username@server_address here. " />
 <hr>
 
 
+<!-- webmention response -->
 <script defer>
 // 1. 异步请求API
 async function fetchWebmentions() {
@@ -550,9 +551,9 @@ main();
 }
 </style>
 
-<hr>
 
 
+<!-- stream page and widget style -->
 <style>
 	.navbar, .addn, footer {
 		opacity: 0.35 !important;
@@ -566,35 +567,35 @@ main();
 	}
   .widget {
     display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
-      font-size: 90%;
-      position: fixed;
-      padding: 1ch;
-    	z-index: 500;
-      bottom: 5%;
-    	left: 5%;
-      transform: translate(0);
-      max-width: 350px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 90%;
+    position: fixed;
+    padding: 1ch;
+    z-index: 500;
+    bottom: 5%;
+    left: 5%;
+    transform: translate(0);
+    max-width: 350px;
   }
   .widget.hide {
     opacity: 0;
     transform: translateY(-10px);
   }
 	.lastfm {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    	background: greenyellow;
-    	color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: greenyellow;
+    color: black;
 	}
-	.lastfm:hover, .follow-mstd:hover {
+	.lastfm:hover, .follow-mstd:hover, .stream-calendar:hover {
 		outline: 5px solid var(--text-color);
 	}
-  .follow-mstd:hover, .follow-mstd-a:hover {
-    border-bottom: unset;
+  .follow-mstd, .follow-mstd-a, .stream-calendar-a {
+    border-bottom: none;
   }
 	.lastfm-cover {
 		width: 55px;
@@ -617,6 +618,54 @@ main();
     text-align: center;
     padding: 1ch;
   }
+  .stream-calendar {
+    background: var(--text-color);
+    color: var(--bgcolor);
+    text-align: center;
+    padding: 1ch;
+  }
+  #calendar-box {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    border: 1px solid;
+    background: var(--bgcolor);
+    padding: 10px;
+    display: none;
+  }
+  #calendar-button {
+      text-align: center;
+      width: calc(40px*7);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+  }
+  #calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 40px);
+      text-align: center;
+  }
+  .day-header {
+      text-transform: lowercase;
+      font-size: 80%;
+      padding:10px;
+  }
+  .day {
+      height: 40px;
+      border-radius: 40px;
+      padding: 10px;
+  }
+  .dark-mode-black-text {
+      color: black;
+  }
+  #prevMonth, #nextMonth {
+      border: none;
+      padding: 0 10px;
+  }
+  #prevMonth:hover, #nextMonth:hover {
+      outline: 5px solid;
+      cursor: pointer;
+  }
   @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -632,6 +681,7 @@ main();
 
 
 
+<!-- widget div -->
 <div class="widget">
 <a class="lastfm-a" href="#track-url"><div class="lastfm">
 	<img src="" class="lastfm-cover">
@@ -643,10 +693,14 @@ main();
 <a class="follow-mstd-a" id="follow-mstd-button"><div class="follow-mstd">
   Follow on Mastodon
 </div></a>
+<a class="stream-calendar-a"><div class="stream-calendar">
+Stream Heat
+</div></a>
 </div>
 
 
 
+<!-- mstd popup box div -->
 <style>
 #follow-mstd-box {
   display: none;
@@ -661,36 +715,60 @@ main();
 </style>
 
 <div id="follow-mstd-box">
-<p>Enter your <em>@username@server_address</em> here.<br>It'll redirect to my profile page on your server.</p>
+<p style="font-size:85%;">Enter your <em>@username@server_address</em> here.<br>It'll redirect to my profile page on your server.</p>
 <form action="https://fed.brid.gy/remote-follow" method="post"><input id="follow-address" name="address" pattern="@[\w.]+@[\w.]+" placeholder="@alice@m.cmx.im" required="required" title="@alice@m.cmx.im" type="text"> <input name="domain" type="hidden" value="fanrongbin.com"> <input name="protocol" type="hidden" value="web"> <input type="submit" value="Go">&nbsp;</form>
 </div>
 
 
 
-<script defer>
-var button = document.getElementById('follow-mstd-button');
-var box = document.getElementById('follow-mstd-box');
+<!-- calendar div -->
+<div id="calendar-box">
+<div id="calendar-button">
+    <a id="prevMonth">←</a>
+    <span id="currentMonthYear"></span>
+    <a id="nextMonth">→</a>
+</div>
+<div id="calendar"></div>
+</div>
 
-button.addEventListener('click', function() {
-    if (box.style.display === 'block') {
-        box.style.display = 'none';
-    } else {
-        box.style.display = 'block';
-    }
+
+
+<!-- mstd popup -->
+<script defer>
+var followButton = document.getElementById('follow-mstd-button');
+var followBox = document.getElementById('follow-mstd-box');
+var calendarButton = document.querySelector('.stream-calendar-a');
+var calendarBox = document.getElementById('calendar-box');
+
+followButton.addEventListener('click', function() {
+    toggleDisplay(followBox);
+});
+
+calendarButton.addEventListener('click', function() {
+    toggleDisplay(calendarBox);
 });
 
 document.addEventListener('click', function(event) {
-    var isClickInsideBox = box.contains(event.target);
-    var isClickButton = button.contains(event.target);
-
-    if (!isClickInsideBox && !isClickButton) {
-        box.style.display = 'none';
+    if (!followBox.contains(event.target) && !followButton.contains(event.target)) {
+        followBox.style.display = 'none';
+    }
+    if (!calendarBox.contains(event.target) && !calendarButton.contains(event.target)) {
+        calendarBox.style.display = 'none';
     }
 }, true);
+
+function toggleDisplay(element) {
+    if (element.style.display === 'block') {
+        element.style.display = 'none';
+    } else {
+        element.style.display = 'block';
+    }
+}
 </script>
 
 
 
+<!-- lastfm -->
 <script defer>
   document.addEventListener('DOMContentLoaded', function() {
     var apiKey = '474cf699bdce5cf4cf5ec69b1f16dddd';
@@ -754,6 +832,7 @@ document.addEventListener('click', function(event) {
 
 
 
+<!-- widget scroll hide -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var lastScrollTop = 0;
@@ -771,6 +850,127 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     }, false);
 });
+</script>
+
+
+
+<!-- calendar -->
+<script defer>
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+let currentYear = 2024;
+let currentMonth = 0;
+
+const calendar = document.getElementById('calendar');
+const currentMonthYear = document.getElementById('currentMonthYear');
+const prevMonthButton = document.getElementById('prevMonth');
+const nextMonthButton = document.getElementById('nextMonth');
+
+const publishedItems = document.querySelectorAll('.dt-published');
+
+const dateCounts = {};
+
+const loadCalendarDays = () => {
+    calendar.innerHTML = '';
+
+    const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    weekDays.forEach(dayName => {
+        let dayHeader = document.createElement("div");
+        dayHeader.className = "day-header";
+        dayHeader.innerText = dayName;
+        calendar.appendChild(dayHeader);
+    });
+
+    let firstDay = (new Date(currentYear, currentMonth)).getDay();
+    firstDay = firstDay === 0 ? 6 : firstDay - 1; // Adjust for Monday start
+    let daysInMonth = 32 - new Date(currentYear, currentMonth, 32).getDate();
+
+    for (let i = 0; i < firstDay; i++) {
+        let cell = document.createElement("div");
+        calendar.appendChild(cell);
+    }
+
+    for (let i = 1; i <= daysInMonth; i++) {
+        let cell = document.createElement("div");
+        cell.className = "day";
+        cell.innerText = i;
+        cell.setAttribute('data-date', `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`);
+        calendar.appendChild(cell);
+    }
+};
+
+const updateMonthButtons = () => {
+    const publishedItems = document.querySelectorAll('.dt-published');
+    const monthsWithData = new Set([...publishedItems].map(item => {
+        const date = new Date(item.getAttribute('datetime'));
+        return date.getFullYear() === currentYear ? date.getMonth() : null;
+    }));
+
+    prevMonthButton.style.display = monthsWithData.has(currentMonth - 1) ? 'block' : 'none';
+    nextMonthButton.style.display = monthsWithData.has(currentMonth + 1) ? 'block' : 'none';
+};
+
+const loadCalendar = () => {
+    currentMonthYear.innerText = `${monthNames[currentMonth]} ${currentYear}`;
+    loadCalendarDays();
+    updateCalendarColors();
+    updateMonthButtons();
+};
+
+prevMonthButton.onclick = () => {
+    currentMonth--;
+    if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+    }
+    loadCalendar();
+    updateCalendarColors();
+};
+
+nextMonthButton.onclick = () => {
+    currentMonth++;
+    if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+    }
+    loadCalendar();
+    updateCalendarColors();
+};
+
+publishedItems.forEach(item => {
+    const datetime = item.getAttribute('datetime');
+    const date = datetime.split('T')[0];
+
+    if (date in dateCounts) {
+        dateCounts[date]++;
+    } else {
+        dateCounts[date] = 1;
+    }
+});
+
+const updateCalendarColors = () => {
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    for (const datetime in dateCounts) {
+        const count = dateCounts[datetime];
+        const date = datetime.split('T')[0];
+        const [year, month, day] = date.split('-').map(Number);
+        const calendarDay = document.querySelector(`#calendar .day[data-date="${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}"]`);
+
+        if (calendarDay) {
+            const opacity = Math.min(1, count * 0.2);
+            calendarDay.style.backgroundColor = `rgba(200, 255, 115, ${opacity})`;
+
+            // 在深色模式下且背景透明度大于0.4时改变文字颜色
+            if (isDarkMode && opacity > 0.4) {
+                calendarDay.classList.add('dark-mode-black-text');
+            } else {
+                calendarDay.classList.remove('dark-mode-black-text');
+            }
+        }
+    }
+};
+
+loadCalendar();
 </script>
 
 

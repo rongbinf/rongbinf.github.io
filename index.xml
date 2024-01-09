@@ -3968,6 +3968,7 @@ Stream Page
 &lt;hr&gt;
 
 
+&lt;!-- webmention response --&gt;
 &lt;script defer&gt;
 // 1. 异步请求API
 async function fetchWebmentions() {
@@ -4106,9 +4107,9 @@ main();
 }
 &lt;/style&gt;
 
-&lt;hr&gt;
 
 
+&lt;!-- stream page and widget style --&gt;
 &lt;style&gt;
 	.navbar, .addn, footer {
 		opacity: 0.35 !important;
@@ -4122,35 +4123,35 @@ main();
 	}
   .widget {
     display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
-      font-size: 90%;
-      position: fixed;
-      padding: 1ch;
-    	z-index: 500;
-      bottom: 5%;
-    	left: 5%;
-      transform: translate(0);
-      max-width: 350px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 90%;
+    position: fixed;
+    padding: 1ch;
+    z-index: 500;
+    bottom: 5%;
+    left: 5%;
+    transform: translate(0);
+    max-width: 350px;
   }
   .widget.hide {
     opacity: 0;
     transform: translateY(-10px);
   }
 	.lastfm {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    	background: greenyellow;
-    	color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: greenyellow;
+    color: black;
 	}
-	.lastfm:hover, .follow-mstd:hover {
+	.lastfm:hover, .follow-mstd:hover, .stream-calendar:hover {
 		outline: 5px solid var(--text-color);
 	}
-  .follow-mstd:hover, .follow-mstd-a:hover {
-    border-bottom: unset;
+  .follow-mstd, .follow-mstd-a, .stream-calendar-a {
+    border-bottom: none;
   }
 	.lastfm-cover {
 		width: 55px;
@@ -4173,6 +4174,54 @@ main();
     text-align: center;
     padding: 1ch;
   }
+  .stream-calendar {
+    background: var(--text-color);
+    color: var(--bgcolor);
+    text-align: center;
+    padding: 1ch;
+  }
+  #calendar-box {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    border: 1px solid;
+    background: var(--bgcolor);
+    padding: 10px;
+    display: none;
+  }
+  #calendar-button {
+      text-align: center;
+      width: calc(40px*7);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+  }
+  #calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 40px);
+      text-align: center;
+  }
+  .day-header {
+      text-transform: lowercase;
+      font-size: 80%;
+      padding:10px;
+  }
+  .day {
+      height: 40px;
+      border-radius: 40px;
+      padding: 10px;
+  }
+  .dark-mode-black-text {
+      color: black;
+  }
+  #prevMonth, #nextMonth {
+      border: none;
+      padding: 0 10px;
+  }
+  #prevMonth:hover, #nextMonth:hover {
+      outline: 5px solid;
+      cursor: pointer;
+  }
   @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -4188,6 +4237,7 @@ main();
 
 
 
+&lt;!-- widget div --&gt;
 &lt;div class=&#34;widget&#34;&gt;
 &lt;a class=&#34;lastfm-a&#34; href=&#34;#track-url&#34;&gt;&lt;div class=&#34;lastfm&#34;&gt;
 	&lt;img src=&#34;&#34; class=&#34;lastfm-cover&#34;&gt;
@@ -4199,10 +4249,14 @@ main();
 &lt;a class=&#34;follow-mstd-a&#34; id=&#34;follow-mstd-button&#34;&gt;&lt;div class=&#34;follow-mstd&#34;&gt;
   Follow on Mastodon
 &lt;/div&gt;&lt;/a&gt;
+&lt;a class=&#34;stream-calendar-a&#34;&gt;&lt;div class=&#34;stream-calendar&#34;&gt;
+Stream Heat
+&lt;/div&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 
 
+&lt;!-- mstd popup box div --&gt;
 &lt;style&gt;
 #follow-mstd-box {
   display: none;
@@ -4217,36 +4271,60 @@ main();
 &lt;/style&gt;
 
 &lt;div id=&#34;follow-mstd-box&#34;&gt;
-&lt;p&gt;Enter your &lt;em&gt;@username@server_address&lt;/em&gt; here.&lt;br&gt;It&#39;ll redirect to my profile page on your server.&lt;/p&gt;
+&lt;p style=&#34;font-size:85%;&#34;&gt;Enter your &lt;em&gt;@username@server_address&lt;/em&gt; here.&lt;br&gt;It&#39;ll redirect to my profile page on your server.&lt;/p&gt;
 &lt;form action=&#34;https://fed.brid.gy/remote-follow&#34; method=&#34;post&#34;&gt;&lt;input id=&#34;follow-address&#34; name=&#34;address&#34; pattern=&#34;@[\w.]+@[\w.]+&#34; placeholder=&#34;@alice@m.cmx.im&#34; required=&#34;required&#34; title=&#34;@alice@m.cmx.im&#34; type=&#34;text&#34;&gt; &lt;input name=&#34;domain&#34; type=&#34;hidden&#34; value=&#34;fanrongbin.com&#34;&gt; &lt;input name=&#34;protocol&#34; type=&#34;hidden&#34; value=&#34;web&#34;&gt; &lt;input type=&#34;submit&#34; value=&#34;Go&#34;&gt;&amp;nbsp;&lt;/form&gt;
 &lt;/div&gt;
 
 
 
-&lt;script defer&gt;
-var button = document.getElementById(&#39;follow-mstd-button&#39;);
-var box = document.getElementById(&#39;follow-mstd-box&#39;);
+&lt;!-- calendar div --&gt;
+&lt;div id=&#34;calendar-box&#34;&gt;
+&lt;div id=&#34;calendar-button&#34;&gt;
+    &lt;a id=&#34;prevMonth&#34;&gt;←&lt;/a&gt;
+    &lt;span id=&#34;currentMonthYear&#34;&gt;&lt;/span&gt;
+    &lt;a id=&#34;nextMonth&#34;&gt;→&lt;/a&gt;
+&lt;/div&gt;
+&lt;div id=&#34;calendar&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
-button.addEventListener(&#39;click&#39;, function() {
-    if (box.style.display === &#39;block&#39;) {
-        box.style.display = &#39;none&#39;;
-    } else {
-        box.style.display = &#39;block&#39;;
-    }
+
+
+&lt;!-- mstd popup --&gt;
+&lt;script defer&gt;
+var followButton = document.getElementById(&#39;follow-mstd-button&#39;);
+var followBox = document.getElementById(&#39;follow-mstd-box&#39;);
+var calendarButton = document.querySelector(&#39;.stream-calendar-a&#39;);
+var calendarBox = document.getElementById(&#39;calendar-box&#39;);
+
+followButton.addEventListener(&#39;click&#39;, function() {
+    toggleDisplay(followBox);
+});
+
+calendarButton.addEventListener(&#39;click&#39;, function() {
+    toggleDisplay(calendarBox);
 });
 
 document.addEventListener(&#39;click&#39;, function(event) {
-    var isClickInsideBox = box.contains(event.target);
-    var isClickButton = button.contains(event.target);
-
-    if (!isClickInsideBox &amp;&amp; !isClickButton) {
-        box.style.display = &#39;none&#39;;
+    if (!followBox.contains(event.target) &amp;&amp; !followButton.contains(event.target)) {
+        followBox.style.display = &#39;none&#39;;
+    }
+    if (!calendarBox.contains(event.target) &amp;&amp; !calendarButton.contains(event.target)) {
+        calendarBox.style.display = &#39;none&#39;;
     }
 }, true);
+
+function toggleDisplay(element) {
+    if (element.style.display === &#39;block&#39;) {
+        element.style.display = &#39;none&#39;;
+    } else {
+        element.style.display = &#39;block&#39;;
+    }
+}
 &lt;/script&gt;
 
 
 
+&lt;!-- lastfm --&gt;
 &lt;script defer&gt;
   document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
     var apiKey = &#39;474cf699bdce5cf4cf5ec69b1f16dddd&#39;;
@@ -4310,6 +4388,7 @@ document.addEventListener(&#39;click&#39;, function(event) {
 
 
 
+&lt;!-- widget scroll hide --&gt;
 &lt;script&gt;
 document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
     var lastScrollTop = 0;
@@ -4327,6 +4406,127 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
         lastScrollTop = currentScroll &lt;= 0 ? 0 : currentScroll;
     }, false);
 });
+&lt;/script&gt;
+
+
+
+&lt;!-- calendar --&gt;
+&lt;script defer&gt;
+const monthNames = [&#34;Jan&#34;, &#34;Feb&#34;, &#34;Mar&#34;, &#34;Apr&#34;, &#34;May&#34;, &#34;Jun&#34;, &#34;Jul&#34;, &#34;Aug&#34;, &#34;Sep&#34;, &#34;Oct&#34;, &#34;Nov&#34;, &#34;Dec&#34;];
+let currentYear = 2024;
+let currentMonth = 0;
+
+const calendar = document.getElementById(&#39;calendar&#39;);
+const currentMonthYear = document.getElementById(&#39;currentMonthYear&#39;);
+const prevMonthButton = document.getElementById(&#39;prevMonth&#39;);
+const nextMonthButton = document.getElementById(&#39;nextMonth&#39;);
+
+const publishedItems = document.querySelectorAll(&#39;.dt-published&#39;);
+
+const dateCounts = {};
+
+const loadCalendarDays = () =&gt; {
+    calendar.innerHTML = &#39;&#39;;
+
+    const weekDays = [&#34;Mon&#34;, &#34;Tue&#34;, &#34;Wed&#34;, &#34;Thu&#34;, &#34;Fri&#34;, &#34;Sat&#34;, &#34;Sun&#34;];
+    weekDays.forEach(dayName =&gt; {
+        let dayHeader = document.createElement(&#34;div&#34;);
+        dayHeader.className = &#34;day-header&#34;;
+        dayHeader.innerText = dayName;
+        calendar.appendChild(dayHeader);
+    });
+
+    let firstDay = (new Date(currentYear, currentMonth)).getDay();
+    firstDay = firstDay === 0 ? 6 : firstDay - 1; // Adjust for Monday start
+    let daysInMonth = 32 - new Date(currentYear, currentMonth, 32).getDate();
+
+    for (let i = 0; i &lt; firstDay; i++) {
+        let cell = document.createElement(&#34;div&#34;);
+        calendar.appendChild(cell);
+    }
+
+    for (let i = 1; i &lt;= daysInMonth; i++) {
+        let cell = document.createElement(&#34;div&#34;);
+        cell.className = &#34;day&#34;;
+        cell.innerText = i;
+        cell.setAttribute(&#39;data-date&#39;, `${currentYear}-${String(currentMonth + 1).padStart(2, &#39;0&#39;)}-${String(i).padStart(2, &#39;0&#39;)}`);
+        calendar.appendChild(cell);
+    }
+};
+
+const updateMonthButtons = () =&gt; {
+    const publishedItems = document.querySelectorAll(&#39;.dt-published&#39;);
+    const monthsWithData = new Set([...publishedItems].map(item =&gt; {
+        const date = new Date(item.getAttribute(&#39;datetime&#39;));
+        return date.getFullYear() === currentYear ? date.getMonth() : null;
+    }));
+
+    prevMonthButton.style.display = monthsWithData.has(currentMonth - 1) ? &#39;block&#39; : &#39;none&#39;;
+    nextMonthButton.style.display = monthsWithData.has(currentMonth + 1) ? &#39;block&#39; : &#39;none&#39;;
+};
+
+const loadCalendar = () =&gt; {
+    currentMonthYear.innerText = `${monthNames[currentMonth]} ${currentYear}`;
+    loadCalendarDays();
+    updateCalendarColors();
+    updateMonthButtons();
+};
+
+prevMonthButton.onclick = () =&gt; {
+    currentMonth--;
+    if (currentMonth &lt; 0) {
+        currentMonth = 11;
+        currentYear--;
+    }
+    loadCalendar();
+    updateCalendarColors();
+};
+
+nextMonthButton.onclick = () =&gt; {
+    currentMonth++;
+    if (currentMonth &gt; 11) {
+        currentMonth = 0;
+        currentYear++;
+    }
+    loadCalendar();
+    updateCalendarColors();
+};
+
+publishedItems.forEach(item =&gt; {
+    const datetime = item.getAttribute(&#39;datetime&#39;);
+    const date = datetime.split(&#39;T&#39;)[0];
+
+    if (date in dateCounts) {
+        dateCounts[date]++;
+    } else {
+        dateCounts[date] = 1;
+    }
+});
+
+const updateCalendarColors = () =&gt; {
+    const isDarkMode = window.matchMedia &amp;&amp; window.matchMedia(&#39;(prefers-color-scheme: dark)&#39;).matches;
+
+    for (const datetime in dateCounts) {
+        const count = dateCounts[datetime];
+        const date = datetime.split(&#39;T&#39;)[0];
+        const [year, month, day] = date.split(&#39;-&#39;).map(Number);
+        const calendarDay = document.querySelector(`#calendar .day[data-date=&#34;${year}-${month.toString().padStart(2, &#39;0&#39;)}-${day.toString().padStart(2, &#39;0&#39;)}&#34;]`);
+
+        if (calendarDay) {
+            const opacity = Math.min(1, count * 0.2);
+            calendarDay.style.backgroundColor = `rgba(200, 255, 115, ${opacity})`;
+
+            // 在深色模式下且背景透明度大于0.4时改变文字颜色
+            if (isDarkMode &amp;&amp; opacity &gt; 0.4) {
+                calendarDay.classList.add(&#39;dark-mode-black-text&#39;);
+            } else {
+                calendarDay.classList.remove(&#39;dark-mode-black-text&#39;);
+            }
+        }
+    }
+};
+
+loadCalendar();
 &lt;/script&gt;
 
 </description>
