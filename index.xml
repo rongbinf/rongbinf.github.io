@@ -4128,7 +4128,6 @@ main();
     align-items: stretch;
     font-size: 90%;
     position: fixed;
-    padding: 1ch;
     z-index: 500;
     bottom: 5%;
     left: 5%;
