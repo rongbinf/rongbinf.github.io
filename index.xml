@@ -3365,7 +3365,7 @@ Scale (维)
       <link>https://fanrongbin.com/using-default-fonts-in-web-design/</link>
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/using-default-fonts-in-web-design/</guid>
-      <description>&lt;p&gt;内容高于设计，但也源自设计。现如今我们可以发现一种趋势：Web 设计逐渐靠近底层加载平台，从而做到更佳协调和统一地给用户呈现内容。非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。&lt;/p&gt;
+      <description>&lt;p&gt;内容高于设计，但也源自设计。我们发现一种趋势：Web 设计逐渐靠近底层加载平台，从而更佳协调和统一地呈现内容。其中非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。&lt;/p&gt;
 &lt;p&gt;使用默认 UI 字体可以通过两种方式实现：&lt;/p&gt;
 &lt;h2 id=&#34;非常用方法&#34;&gt;
 非常用方法
@@ -3374,7 +3374,7 @@ Scale (维)
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;caption&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;font&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;caption&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不是很常见，即使 &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/font&#34;&gt;CSS 文档&lt;/a&gt;里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不是很常见，即使 &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/font&#34;&gt;CSS 文档&lt;/a&gt;里面有。意思就是使用底层平台，也就是所用操作系统中对应&lt;strong&gt;控件&lt;/strong&gt;的字体、字体大小、风格粗细等等，达到完全一致。&lt;/p&gt;
 &lt;p&gt;使用这种方法会导致几个常见问题：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在 iOS 设备和众多 Android 浏览器上无法返回正确的字体。&lt;/li&gt;
@@ -3393,9 +3393,9 @@ Scale (维)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;即使这几年不会有多大改变，但每次厂商换字体时都要重新修一遍。&lt;/li&gt;
+&lt;li&gt;厂商换字体时都要重新修一遍。&lt;/li&gt;
 &lt;li&gt;仅列出适用于大多数用户的字体。&lt;/li&gt;
-&lt;li&gt;若用户所用系统有比默认 UI 字体排序更前的字体（例如一个 Android 开发者在 Windows 上安装了 Roboto），则声明的是排序更前的字体（显示 Segoe UI 而并非 Roboto）。&lt;/li&gt;
+&lt;li&gt;若用户所用系统有比默认 UI 字体排序更前的字体（例如一个 Android 开发者在 Windows 上安装了 Roboto），则声明的是排序更前的字体。&lt;/li&gt;
 &lt;li&gt;命名冲突（例如 Oxygen）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;细节&#34;&gt;
@@ -3419,7 +3419,7 @@ Scale (维)
 &lt;li&gt;Segoe UI 面向 Windows 及 Windows Phone/Windows 10 Mobile。&lt;/li&gt;
 &lt;li&gt;Roboto 面向 Android 和较新版本的 Chrome OS。&lt;/li&gt;
 &lt;li&gt;Oxygen 面向 KDE。&lt;/li&gt;
-&lt;li&gt;Ubuntu 还需要说吗&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Ubuntu&lt;/li&gt;
 &lt;li&gt;Cantarell 面向 GNOME。&lt;/li&gt;
 &lt;li&gt;Fira Sans 面向 Firefox OS。&lt;/li&gt;
 &lt;li&gt;Droid Sans 面向较旧版本的 Android。&lt;/li&gt;
@@ -3429,8 +3429,8 @@ Scale (维)
 &lt;a href=&#34;#-3--%e5%a4%87%e7%94%a8%e5%ad%97%e4%bd%93&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Helvetica Neue 因为这很经典（雾）。&lt;/li&gt;
-&lt;li&gt;sans-serif 因为这很默认（大雾）。&lt;/li&gt;
+&lt;li&gt;Helvetica Neue 只是我的一个个人喜好。&lt;/li&gt;
+&lt;li&gt;sans-serif 回退到无衬线字体。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;包括中文字体的解决方法&#34;&gt;
 包括中文字体的解决方法
@@ -3460,7 +3460,7 @@ Scale (维)
 关于「苹方」
 &lt;a href=&#34;#%e5%85%b3%e4%ba%8e%e8%8b%b9%e6%96%b9&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;「苹方」有不同的字重可供选择，可以直接使用。（没有 Bold 我很服气）&lt;/p&gt;
+&lt;p&gt;「苹方」有不同的字重可供选择，可以直接使用。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;some-element&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;font-family&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;PingFang SC ExtraLight&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;/* 或者 &amp;#34;PingFang SC Thin&amp;#34; */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;font-family&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;PingFang SC Light&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
