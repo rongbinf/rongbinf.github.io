@@ -3018,26 +3018,26 @@ Exec=/home/pi/test.sh
       <link>https://fanrongbin.com/hexo-github-pages-cloudflare/</link>
       <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/hexo-github-pages-cloudflare/</guid>
-      <description>&lt;h1 id=&#34;系统环境配置&#34;&gt;
+      <description>&lt;h2 id=&#34;系统环境配置&#34;&gt;
 系统环境配置
 &lt;a href=&#34;#%e7%b3%bb%e7%bb%9f%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%ae&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;h2 id=&#34;安装-nodejs&#34;&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;安装-nodejs&#34;&gt;
 安装 Node.js
 &lt;a href=&#34;#%e5%ae%89%e8%a3%85-nodejs&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;Node.js 是一种 JavaScript 的运行环境，&lt;a href=&#34;https://nodejs.org/download/&#34;&gt;点击此处&lt;/a&gt;以下载。&lt;/p&gt;
 &lt;p&gt;如何安装 Node.js 详见&lt;a href=&#34;https://www.runoob.com/nodejs/nodejs-install-setup.html/&#34;&gt;此文章&lt;/a&gt;。注意：Linux 上安装 Node.js 需要安装 Python 2.6 或 2.7 ，不建议安装 Python 3.0 以上版本。&lt;/p&gt;
-&lt;h2 id=&#34;安装-git&#34;&gt;
+&lt;h3 id=&#34;安装-git&#34;&gt;
 安装 Git
 &lt;a href=&#34;#%e5%ae%89%e8%a3%85-git&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;Git 是一个开源的分布式版本控制系统，帮助你合并多次改动并记录下来。&lt;a href=&#34;http://git-scm.com/downloads/&#34;&gt;点击此处&lt;/a&gt;以下载。&lt;/p&gt;
 &lt;p&gt;如何安装 Git 详见&lt;a href=&#34;https://www.runoob.com/git/git-install-setup.html/&#34;&gt;此文章&lt;/a&gt;。&lt;/p&gt;
-&lt;h1 id=&#34;安装-hexo&#34;&gt;
+&lt;h2 id=&#34;安装-hexo&#34;&gt;
 安装 Hexo
 &lt;a href=&#34;#%e5%ae%89%e8%a3%85-hexo&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h1&gt;
+&lt;/h2&gt;
 &lt;p&gt;Hexo 是一个使用 Markdown 引擎解析文章的快速、简洁且高效的博客框架。当你已经安装好 Node.js 和 Git 后，直接使用 npm 安装 Hexo。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &amp;lt;folder&amp;gt; &lt;span class=&#34;c1&#34;&gt;# 将 &amp;lt;folder&amp;gt; 改为你希望安装 Hexo 的路径&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ npm install hexo-cli -g &lt;span class=&#34;c1&#34;&gt;# 使用 npm 安装&lt;/span&gt;
@@ -3064,10 +3064,10 @@ Exec=/home/pi/test.sh
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    unicode: 9.0
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    cldr: 31.0.1
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    tz: 2017b
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hexo-的基本命令&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;hexo-的基本命令&#34;&gt;
 Hexo 的基本命令
 &lt;a href=&#34;#hexo-%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%91%bd%e4%bb%a4&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ hexo init &amp;lt;folder&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;新建一个博客。将 &lt;folder&gt; 改为你希望搭建博客的路径。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ hexo new &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;layout&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &amp;lt;title&amp;gt;
@@ -3084,10 +3084,10 @@ Hexo 的基本命令
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# 或简写为&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ hexo d
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;部署网站到远端。可选的选项有：-g(&amp;ndash;generate)部署之前先生成静态文件。&lt;/p&gt;
-&lt;h2 id=&#34;hexo-的文件结构&#34;&gt;
+&lt;h3 id=&#34;hexo-的文件结构&#34;&gt;
 Hexo 的文件结构
 &lt;a href=&#34;#hexo-%e7%9a%84%e6%96%87%e4%bb%b6%e7%bb%93%e6%9e%84&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;博客新建完成后，指定文件夹的目录如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    .
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── _config.yml &lt;span class=&#34;c1&#34;&gt;# 网站的配置信息。&lt;/span&gt;
@@ -3097,22 +3097,22 @@ Hexo 的文件结构
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    ├── _drafts
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    └── _posts &lt;span class=&#34;c1&#34;&gt;# 将文章存放于此。&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    └── themes &lt;span class=&#34;c1&#34;&gt;# 主题文件夹。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装和设置-hexo-主题&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装和设置-hexo-主题&#34;&gt;
 安装和设置 Hexo 主题。
 &lt;a href=&#34;#%e5%ae%89%e8%a3%85%e5%92%8c%e8%ae%be%e7%bd%ae-hexo-%e4%b8%bb%e9%a2%98&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;此处以本博客使用的 typing 为例。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ hexo clean &lt;span class=&#34;c1&#34;&gt;# 清除缓存文件（db.json）和已经生成的静态文件（/public）。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装主题&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;安装主题&#34;&gt;
 安装主题
 &lt;a href=&#34;#%e5%ae%89%e8%a3%85%e4%b8%bb%e9%a2%98&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &amp;lt;folder&amp;gt; &lt;span class=&#34;c1&#34;&gt;# 将 &amp;lt;folder&amp;gt; 改为你安装博客的路径&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ git clone https://github.com/geekplux/hexo-theme-typing themes/typing 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;设置更新主题&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;设置更新主题&#34;&gt;
 设置、更新主题
 &lt;a href=&#34;#%e8%ae%be%e7%bd%ae%e6%9b%b4%e6%96%b0%e4%b8%bb%e9%a2%98&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    theme: typing
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改 Hexo 目录下 _config.yml 配置文件中的 theme 属性，将其设置为 typing 以启用主题。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; themes/typing
@@ -3120,10 +3120,10 @@ Hexo 的文件结构
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ hexo g
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ hexo s
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时访问 http://localhost:4000/ 可以预览你更换的主题。&lt;/p&gt;
-&lt;h2 id=&#34;配置博客&#34;&gt;
+&lt;h3 id=&#34;配置博客&#34;&gt;
 配置博客
 &lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e5%8d%9a%e5%ae%a2&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;使用文本编辑工具打开 _config.xml，按需求修改文件内容。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# Site&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        title: Undercurrent &lt;span class=&#34;c1&#34;&gt;# 博客名称，网站标题&lt;/span&gt;
@@ -3140,20 +3140,20 @@ Hexo 的文件结构
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        permalink: :year/:month/:day/:title/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        permalink_defaults:
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意：如果使用独立域名，请记得修改 url 的值为独立域名的网址。&lt;/p&gt;
-&lt;h1 id=&#34;配置-github-pages&#34;&gt;
+&lt;h2 id=&#34;配置-github-pages&#34;&gt;
 配置 GitHub Pages
 &lt;a href=&#34;#%e9%85%8d%e7%bd%ae-github-pages&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h1&gt;
+&lt;/h2&gt;
 &lt;p&gt;GitHub Pages 是一个免费的静态网站托管平台，既可以用于展示你在 GitHub 上的项目，也可以用来做个人博客。（国内有类似的服务 Coding Pages）&lt;/p&gt;
 &lt;p&gt;每个帐号只能有一个用于存放个人主页的仓库，命名必须为 username/username.github.io，创建后的主页将通过 &lt;a href=&#34;http://username.github.io/&#34;&gt;http://username.github.io/&lt;/a&gt; 来访问。&lt;/p&gt;
-&lt;h2 id=&#34;连接-github&#34;&gt;
+&lt;h3 id=&#34;连接-github&#34;&gt;
 连接 GitHub
 &lt;a href=&#34;#%e8%bf%9e%e6%8e%a5-github&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h3 id=&#34;创建-ssh-key&#34;&gt;
+&lt;/h3&gt;
+&lt;h4 id=&#34;创建-ssh-key&#34;&gt;
 创建 SSH Key
 &lt;a href=&#34;#%e5%88%9b%e5%bb%ba-ssh-key&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h4&gt;
 &lt;p&gt;检查电脑上现有的 SSH key。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.ssh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果已经存在 key 文件，备份旧的文件并删除它。&lt;/p&gt;
@@ -3175,10 +3175,10 @@ Hexo 的文件结构
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    The key fingerprint is:
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    The key’s randomart image is:
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;表示成功设置 SSH Key。&lt;/p&gt;
-&lt;h3 id=&#34;添加-ssh-key-到-github&#34;&gt;
+&lt;h4 id=&#34;添加-ssh-key-到-github&#34;&gt;
 添加 SSH Key 到 GitHub
 &lt;a href=&#34;#%e6%b7%bb%e5%8a%a0-ssh-key-%e5%88%b0-github&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h4&gt;
 &lt;p&gt;用文本编辑工具打开 id_rsa.pub 文件，如果找不到该文件，注意本机是否已经设置显示隐藏文件。复制这个文件中所有的文本内容。&lt;/p&gt;
 &lt;p&gt;打开 GitHub 主页，点击头像，点击 Settings 进入设置。选择左侧的 SSH and GPG keys，点击 New SSH key。将复制的内容粘贴在 Key 一栏中，设置一个 Title（可以为本机名称）后点击 Add SSH key 即成功添加。&lt;/p&gt;
 &lt;p&gt;如果需要配置多个 GitHub 帐号，请参考此文章：&lt;a href=&#34;https://www.cnblogs.com/mackxu/p/ssh-keygen.html/&#34;&gt;多个 github 帐号的 SSH key 切换&lt;/a&gt;。&lt;/p&gt;
@@ -3190,27 +3190,27 @@ Hexo 的文件结构
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Are you sure you want to &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt; connecting &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;yes/no&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时输入 yes 即可：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Hi &amp;lt;username&amp;gt;! You&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;ve successfully authenticated, but GitHub does not provide shell access.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;在-git-中配置帐号&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;在-git-中配置帐号&#34;&gt;
 在 Git 中配置帐号
 &lt;a href=&#34;#%e5%9c%a8-git-%e4%b8%ad%e9%85%8d%e7%bd%ae%e5%b8%90%e5%8f%b7&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;你的名字&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_email@youremail.com&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意：使用的名字不是你在 GitHub 中的昵称。&lt;/p&gt;
-&lt;h2 id=&#34;创建-github-pages&#34;&gt;
+&lt;h3 id=&#34;创建-github-pages&#34;&gt;
 创建 GitHub Pages
 &lt;a href=&#34;#%e5%88%9b%e5%bb%ba-github-pages&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;点击右上角的加号选择 New repository，进入页面填写 Repository name 为 username.github.io，注意不要填写错误。选择 Public，点击 Create repository 即完成创建。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/h-1.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;部署-hexo-到-github-pages&#34;&gt;
+&lt;h2 id=&#34;部署-hexo-到-github-pages&#34;&gt;
 部署 Hexo 到 GitHub Pages
 &lt;a href=&#34;#%e9%83%a8%e7%bd%b2-hexo-%e5%88%b0-github-pages&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;h2 id=&#34;使用-hexo-deploy&#34;&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;使用-hexo-deploy&#34;&gt;
 使用 hexo deploy
 &lt;a href=&#34;#%e4%bd%bf%e7%94%a8-hexo-deploy&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;安装拓展：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    $ npm install hexo-deployer-git --save
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将配置文件修改为如下形式：&lt;/p&gt;
@@ -3236,10 +3236,10 @@ Hexo 的文件结构
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    git commit -m “update”
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    git push origin master &lt;span class=&#34;c1&#34;&gt;# 提交代码到主分支&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在以后需要部署时只需执行这段脚本（可以将脚本保存为 deploy.sh）。执行过程中可能需要输入 GitHub 帐号密码，按提示一步一步来即可。&lt;/p&gt;
-&lt;h1 id=&#34;绑定独立域名&#34;&gt;
+&lt;h2 id=&#34;绑定独立域名&#34;&gt;
 绑定独立域名
 &lt;a href=&#34;#%e7%bb%91%e5%ae%9a%e7%8b%ac%e7%ab%8b%e5%9f%9f%e5%90%8d&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h1&gt;
+&lt;/h2&gt;
 &lt;p&gt;首先你需要有一个独立域名，可以通过 &lt;a href=&#34;https://godaddy.com/&#34;&gt;Godaddy&lt;/a&gt; 或&lt;a href=&#34;https://www.net.cn/&#34;&gt;阿里云-万网&lt;/a&gt;来购买。这里以万网为例。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com.github.io/blog-img/h-2.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;进入 repository 的 Settings，向下滚动找到 Custom domain，输入你的域名，点击 Save 保存。&lt;/p&gt;
@@ -3251,10 +3251,10 @@ Hexo 的文件结构
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/h-3.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;等候约三到五分钟即可应用本次更改。&lt;/p&gt;
-&lt;h1 id=&#34;使用-github-与-lets-encrypt-提供的-ssl-服务&#34;&gt;
+&lt;h2 id=&#34;使用-github-与-lets-encrypt-提供的-ssl-服务&#34;&gt;
 使用 Github 与 Let’s Encrypt 提供的 SSL 服务
 &lt;a href=&#34;#%e4%bd%bf%e7%94%a8-github-%e4%b8%8e-lets-encrypt-%e6%8f%90%e4%be%9b%e7%9a%84-ssl-%e6%9c%8d%e5%8a%a1&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h1&gt;
+&lt;/h2&gt;
 &lt;p&gt;虽然 Github 早在 2016 年为 GitHub Pages 添加了 HTTPS 支持，但自定义域名开启 HTTPS 却是一件令人头疼的事情。 直接用 https 链接访问自定义域名会出现证书错误（这是因为 Github 提供的 SSL 证书指向的域名是 *.github.com 和 *.github.io，而不是我们绑定的域名），只能使用 Cloudflare 之类的支持 Universal SSL 的 CDN 曲线支持 HTTPS 。&lt;/p&gt;
 &lt;p&gt;如果你之前使用了 Cloudflare 提供的 SSL 服务，请登录 Cloudflare 用户中心暂停或停止服务。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/h-4.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
@@ -3269,10 +3269,10 @@ Hexo 的文件结构
 		CNAME www 185.199.111.153
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;请进入 *.github.io repository 的 Settings 中，清空原有自定域名点击 Save，待页面刷新后再次输入自定域名保存。待解析成功即自动带上 https 啦。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/h-5.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;使用-cloudflare-提供的-ssl-服务&#34;&gt;
+&lt;h2 id=&#34;使用-cloudflare-提供的-ssl-服务&#34;&gt;
 使用 Cloudflare 提供的 SSL 服务
 &lt;a href=&#34;#%e4%bd%bf%e7%94%a8-cloudflare-%e6%8f%90%e4%be%9b%e7%9a%84-ssl-%e6%9c%8d%e5%8a%a1&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h1&gt;
+&lt;/h2&gt;
 &lt;p&gt;由于 GitHub Pages 本身不支持上传 SSL 证书（截至 2018.2），我们可以使用 Cloudflare 提供的免费 CDN，利用反向代理实现全站 https。&lt;/p&gt;
 &lt;p&gt;注册并登录 Cloudflare，点击 Add Site 以添加自己的网站。输入网址后点击 Begin Scan 便会开始扫描网站的解析记录。点击 Continue Setup 以继续。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/h-6.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
@@ -3285,10 +3285,10 @@ Hexo 的文件结构
 	ruth.ns.cloudflare.com
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/h-9.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;等候约三到五分钟即可应用本次更改，你可以在 Cloudflare 查看应用情况。&lt;/p&gt;
-&lt;h1 id=&#34;参考文章&#34;&gt;
+&lt;h2 id=&#34;参考文章&#34;&gt;
 参考文章
 &lt;a href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h1&gt;
+&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://beiyuu.com/github-pages/&#34;&gt;使用 Github Pages 建独立博客&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://jiji262.github.io/2016/04/15/2016-04-15-hexo-github-pages-blog/&#34;&gt;手把手教你使用 Hexo + Github Pages 搭建个人独立博客&lt;/a&gt;&lt;/li&gt;
