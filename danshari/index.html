@@ -276,10 +276,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script defer>
     var mainElement = document.querySelector('main');
+    var contentHeader = document.querySelector('section.content-header');
+    const headers = mainElement.querySelectorAll('h2, h3');
     document.addEventListener('DOMContentLoaded', function () {
 
-        if (document.querySelector('.content-header')) {
-            document.getElementById('show-hypo').style.display = 'flex';
+        if (contentHeader) {
+            contentHeader.querySelector('#show-hypo').style.display = 'flex';
         }
         
         handleScrollEvents();
@@ -346,8 +348,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleScrollEvents() {
         var lastScrollTop = 0;
-        var addnDiv = document.querySelector('.addn');
-        var topScrollBar = document.querySelector('.top-scroll-bar');
+        var addnDiv = contentHeader.querySelector('.addn');
+        var topScrollBar = contentHeader.querySelector('.top-scroll-bar');
 
         window.addEventListener('scroll', function () {
             requestAnimationFrame(function () {
@@ -372,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showHypo() {
         var existingScript = document.getElementById('hypothes-script');
-        var button = document.getElementById('show-hypo');
+        var button = contentHeader.querySelector('#show-hypo');
 
         if (!existingScript) {
             button.textContent = 'Loading';
@@ -420,9 +422,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function initializeTOCFeatures() {
-        const headers = mainElement.querySelectorAll('h2, h3');
-        const contentsFixedDiv = document.getElementById('contents-fixed');
-        const tocContainer = document.getElementById('contents-toc');
+        const contentsFixedDiv = contentHeader.querySelector('#contents-fixed');
+        const tocContainer = contentHeader.querySelector('#contents-toc');
         if (contentsFixedDiv && headers.length > 1) {
             contentsFixedDiv.style.display = 'flex';
             contentsFixedDiv.addEventListener('click', (event) => {
@@ -438,23 +439,53 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function highlightAppropriateHeader() {
-        const headers = document.querySelectorAll('h2, h3');
-        headers.forEach(header => {
-            const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
-            if (link) {
-                const bounding = header.getBoundingClientRect();
-                if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
-                    link.classList.add('toc-highlight');
-                } else {
-                    link.classList.remove('toc-highlight');
+        let highlightedHeader = null;
+        let foundHeaderInView = false;
+
+        
+        for (let i = 0; i < headers.length; i++) {
+            const header = headers[i];
+            const bounding = header.getBoundingClientRect();
+
+            if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+                highlightedHeader = header; 
+                foundHeaderInView = true;
+                break;
+            }
+        }
+
+        
+        if (!foundHeaderInView) {
+            for (let i = 0; i < headers.length; i++) {
+                const header = headers[i];
+                let nextHeader = headers[i + 1];
+                let endOfSection = nextHeader ? nextHeader.getBoundingClientRect().top : Infinity;
+
+                const startOfSection = header.getBoundingClientRect().bottom;
+
+                if (startOfSection < window.innerHeight && endOfSection > 0) {
+                    highlightedHeader = header;
+                    break;
                 }
             }
+        }
+
+        
+        contentHeader.querySelectorAll('nav#TableOfContents a').forEach(link => {
+            link.classList.remove('toc-highlight');
         });
+
+        
+        if (highlightedHeader) {
+            const link = contentHeader.querySelector(`nav#TableOfContents a[href="#${highlightedHeader.id}"]`);
+            if (link) {
+                link.classList.add('toc-highlight');
+            }
+        }
     }
 
-
     function toggleTOC() {
-        const tocContainer = document.getElementById('contents-toc');
+        const tocContainer = contentHeader.querySelector('#contents-toc');
         const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
         tocContainer.style.display = isDisplayed ? 'none' : 'flex';
     }
