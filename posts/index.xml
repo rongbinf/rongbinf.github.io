@@ -23,6 +23,13 @@
       <description>23年年末，陆续对首页和博客主题进行了调整。首先是将用了很久的Dolt主题换成hugo-tufte，为了首页相统一，就又自己写了目前的这个主题，还没起名字，应该也不会发出去哈哈。&#xA;额外自定义了Hypothes.is和目录的显示按钮，以及一些小小的js，用来实现切开过长的inline code、顶部阅读进度条、Guestbook页面的在线状态更新、首页的新文章拉取等（借助Cloudflare Workers）。对旁注也做了样式 像这样。（桌面端有一条连线） ，页面大于等于三处旁注时，会调用jsPlumb，例如这篇博文（请通过桌面端访问）。&#xA;首页从依赖于Dolt的index.html，换到第一版，使用Skelet.min.css框架。然后是第二版，加上了头像和动画。最后是目前的这一版，依靠display: grid布局。&#xA;I started adjusting my homepage and the blog theme bit by bit started from the end of 2023. First off, I swapped out the Dolt theme, which I&amp;rsquo;d been using for quite a long time, for hugo-tufte to provide better reading experience. To make everything look more uniform with my &amp;ldquo;hand-written&amp;rdquo; homepage, I ended up creating my own theme. It’s still nameless (exampleTheme, lol), and I’m not really planning to share it publicly.</description>
     </item>
     <item>
+      <title>2023 年终：我的时间是水</title>
+      <link>https://fanrongbin.com/2023-my-time-is-like-water/</link>
+      <pubDate>Sun, 31 Dec 2023 01:45:30 +0800</pubDate>
+      <guid>https://fanrongbin.com/2023-my-time-is-like-water/</guid>
+      <description>时间过得越来越快，但我越来越不去想着要抓住它，而是任凭它流过我，所以无法包裹我。面对高楼大厦，面对空无一人的房间，面对攒动的人群，面对自己，这些时刻里真实与臆造的界限那么清晰，像几条线拉下我耸着肩的心脏，呼吸才能沉住气。&#xA;这是好还是坏呢？听上去，像是一种主动的麻木。但这毕竟不是我的任务，这就是一种中性的“状态”，一种持续的动感，不是什么姿态。更不应该是什么习惯，那时我会把它摔个粉碎。现在我们还相安无事。没有强加的判断，没有好坏，也没有强加在判断之上的循环自证。有结论了再寻找因果，挺偷懒的，或许抛弃结论中的好坏就是一种没办法的有办法。&#xA;它也顺便帮我带走了很多东西，时间就是水，水也就是时间，这是第一个意思。水一水，一天又过去了，这也是一种意思。反正，我确实在这之中变得轻盈了。而轻盈一定会让人变得肤浅。总之，人是一块儿——面包，靠吞食自己饱腹，边吃边拉，当然变得越来越轻。沾上水，有的部分就变重了，久而久之它也变质了、化了。那些填满了水的气孔。&#xA;车轱辘话说完了，希望你没明白！反正，今年听到最喜欢的新专辑有：yeule《softscars》、Olivia Dean《Messy》、Kelena《Raven》、Moby《Ambient 23》、Laufey &amp;amp; Iceland Symphony Orchestra《A Night At The Symphony》、Complete Mountain Almanac《Folk》、Victoria Monét《JAGUAR II》。&#xA;2023 年 12 月 31 日</description>
+    </item>
+    <item>
       <title>斜交策略 Oblique Strategies</title>
       <link>https://fanrongbin.com/oblique-strategies/</link>
       <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
