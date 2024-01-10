@@ -161,12 +161,12 @@
       <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/blog-theme-changed/</guid>
       <description>&lt;p&gt;23年年末，陆续对首页和博客主题进行了调整。首先是将用了很久的&lt;a href=&#34;https://github.com/HEIGE-PCloud/DoIt&#34;&gt;Dolt&lt;/a&gt;主题换成&lt;a href=&#34;https://github.com/loikein/hugo-tufte&#34;&gt;hugo-tufte&lt;/a&gt;，为了首页相统一，就又自己写了目前的这个主题，还没起名字，应该也不会发出去哈哈。&lt;/p&gt;
-&lt;p&gt;额外自定义了&lt;a href=&#34;https://web.hypothes.is/&#34;&gt;Hypothes.is&lt;/a&gt;和目录的显示按钮，以及一些小小的js，用来实现切开过长的inline code、顶部阅读进度条、&lt;a href=&#34;https://fanrongbin.com/links&#34;&gt;Guestbook页面&lt;/a&gt;的在线状态更新、首页的新文章拉取等等（借助Cloudflare Workers）。对旁注也做了样式，&lt;span class=&#34;sidenote-number&#34;&gt;
+&lt;p&gt;额外自定义了&lt;a href=&#34;https://web.hypothes.is/&#34;&gt;Hypothes.is&lt;/a&gt;和目录的显示按钮，以及一些小小的js，用来实现切开过长的inline code、顶部阅读进度条、&lt;a href=&#34;https://fanrongbin.com/links&#34;&gt;Guestbook页面&lt;/a&gt;的在线状态更新、首页的新文章拉取等等（借助Cloudflare Workers）。对旁注也做了样式&lt;span class=&#34;sidenote-number&#34;&gt;
     &lt;span class=&#34;sidenote-box&#34;&gt;
         &lt;small class=&#34;sidenote&#34;&gt;像这样。（桌面端有一条连线）&lt;/small&gt;
         &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
     &lt;/span&gt;
-&lt;/span&gt;页面大于等于三处旁注时，会调用&lt;a href=&#34;https://github.com/jsplumb/jsplumb&#34;&gt;jsPlumb&lt;/a&gt;，例如&lt;a href=&#34;https://fanrongbin.com/give-ko/#%e4%b8%ba%e4%bb%80%e4%b9%88-%ec%a3%bc%eb%8b%a4---%eb%8b%ac%eb%8b%a4&#34;&gt;这篇博文&lt;/a&gt;（请通过桌面端访问）。&lt;/p&gt;
+&lt;/span&gt;，页面大于等于三处旁注时，会调用&lt;a href=&#34;https://github.com/jsplumb/jsplumb&#34;&gt;jsPlumb&lt;/a&gt;，例如&lt;a href=&#34;https://fanrongbin.com/give-ko/#%e4%b8%ba%e4%bb%80%e4%b9%88-%ec%a3%bc%eb%8b%a4---%eb%8b%ac%eb%8b%a4&#34;&gt;这篇博文&lt;/a&gt;（请通过桌面端访问）。&lt;/p&gt;
 &lt;p&gt;首页从依赖于Dolt的&lt;code&gt;index.html&lt;/code&gt;，换到&lt;a href=&#34;https://web.archive.org/web/20231021154310/https://fanrongbin.com/&#34;&gt;第一版&lt;/a&gt;，使用&lt;a href=&#34;https://github.com/Selekkt/skelet&#34;&gt;Skelet.min.css&lt;/a&gt;框架。然后是&lt;a href=&#34;https://web.archive.org/web/20231222082517/http://fanrongbin.com/&#34;&gt;第二版&lt;/a&gt;，加上了头像和动画。最后是&lt;a href=&#34;https://web.archive.org/web/20240105125446/https://fanrongbin.com/&#34;&gt;目前的这一版&lt;/a&gt;，依靠&lt;code&gt;display: grid&lt;/code&gt;布局。&lt;/p&gt;
 &lt;hr&gt;
 

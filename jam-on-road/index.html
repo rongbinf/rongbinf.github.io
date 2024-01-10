@@ -56,7 +56,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.add31549e563067eddd6c8a432c5aaa87fe0f8f446948e4ca3476dc02c8fca68.css" integrity="sha256-rdMVSeVjBn7d1sikMsWqqH/g&#43;PRGlI5Mo0dtwCyPymg=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.928592684ec166588d10bfa948952b420e2752e667f057ae456e181b3500c7f3.css" integrity="sha256-koWSaE7BZliNEL&#43;pSJUrQg4nUuZn8FeuRW4YGzUAx/M=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -256,24 +256,144 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 
-<script src="/han.min.js" defer></script>
+<script src="/han.min.js"></script>
 
-<script>
+<script defer>
+    var mainElement = document.querySelector('main');
     document.addEventListener('DOMContentLoaded', function () {
+
         if (document.querySelector('.content-header')) {
             document.getElementById('show-hypo').style.display = 'flex';
         }
+        
+        handleScrollEvents();
 
         applyBreakAllClass();
 
-        handleScrollEvents();
+        setupSidenotes();
+
+        initializeMutationObserver();
 
         initializeTOCFeatures();
+
+        preventMultiTouchGestures();
+
+        setExternalLinksToOpenInNewTab();
     });
 
-    window.addEventListener('scroll', throttle(handleScrollEvents, 250), false);
+    function updateHHangableBehavior() {
+        var sidenoteHangables = mainElement.querySelectorAll('.sidenote-number + h-hangable');
+        sidenoteHangables.forEach(function (hHangable) {
+            var sidenoteNumber = hHangable.previousElementSibling;
+            var sidenoteBox = sidenoteNumber.querySelector('.sidenote-box');
+            if (sidenoteBox) {
+                sidenoteNumber.insertBefore(hHangable, sidenoteBox);
+            }
+        });
+    }
 
-    window.addEventListener('resize', applyBreakAllClass);
+    function initializeMutationObserver() {
+        var observer = new MutationObserver(function (mutations) {
+            var shouldUpdate = false;
+            mutations.forEach(function (mutation) {
+                mutation.addedNodes.forEach(function (node) {
+                    if (node.nodeType === 1 && node.matches('h-hangable')) {
+                        var previousSibling = node.previousElementSibling;
+                        if (previousSibling && previousSibling.matches('.sidenote-number')) {
+                            shouldUpdate = true;
+                        }
+                    }
+                });
+            });
+            if (shouldUpdate) {
+                setTimeout(updateHHangableBehavior, 1200);
+            }
+        });
+
+        var config = { childList: true, subtree: true };
+        if (mainElement) {
+            observer.observe(mainElement, config);
+        }
+    }
+
+    function applyBreakAllClass() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if (screenWidth <= 960) {
+            var codeElements = mainElement.querySelectorAll('code');
+            codeElements.forEach(function (element) {
+                if (element.textContent.length > 10) {
+                    element.classList.add('break-all');
+                }
+            });
+        }
+    }
+
+    function handleScrollEvents() {
+        var lastScrollTop = 0;
+        var addnDiv = document.querySelector('.addn');
+        var topScrollBar = document.querySelector('.top-scroll-bar');
+
+        window.addEventListener('scroll', function () {
+            requestAnimationFrame(function () {
+                var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (topScrollBar) {
+                    var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                    topScrollBar.style.width = scrollPercent + '%';
+                    topScrollBar.style.display = 'block';
+                }
+                if (addnDiv) {
+                    if (currentScroll > lastScrollTop && currentScroll > 50) {
+                        addnDiv.classList.remove('visible');
+                    } else {
+                        addnDiv.classList.add('visible');
+                    }
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+        }, false);
+    }
+
+
+    function initializeTOCFeatures() {
+        const headers = mainElement.querySelectorAll('h2, h3');
+        const contentsFixedDiv = document.getElementById('contents-fixed');
+        const tocContainer = document.getElementById('contents-toc');
+        if (contentsFixedDiv && headers.length > 1) {
+            contentsFixedDiv.style.display = 'flex';
+            contentsFixedDiv.addEventListener('click', (event) => {
+                toggleTOC();
+                event.stopPropagation();
+            });
+        }
+        if (tocContainer && !tocContainer.dataset.initialized) {
+            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+            window.addEventListener('scroll', throttledHighlight);
+            tocContainer.dataset.initialized = 'true';
+        }
+    }
+
+    function highlightAppropriateHeader() {
+        const headers = document.querySelectorAll('h2, h3');
+        headers.forEach(header => {
+            const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
+            if (link) {
+                const bounding = header.getBoundingClientRect();
+                if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+                    link.classList.add('toc-highlight');
+                } else {
+                    link.classList.remove('toc-highlight');
+                }
+            }
+        });
+    }
+
+
+    function toggleTOC() {
+        const tocContainer = document.getElementById('contents-toc');
+        const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+        tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+    }
+
 
     function throttle(func, limit) {
         let lastFunc;
@@ -296,289 +416,97 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function showHypo() {
-        var existingScript = document.getElementById('hypothes-script');
-        var button = document.querySelector('#show-hypo a');
-
-        if (!existingScript) {
-            button.textContent = 'Loading';
-
-            var script = document.createElement('script');
-            script.id = 'hypothes-script';
-            script.src = 'https://hypothes.is/embed.js';
-
-            script.onload = () => {
-                button.textContent = 'Hypothes.is';
-            };
-
-            script.onerror = () => {
-                button.style.color = 'red';
-                button.textContent = 'Failed';
-            };
-
-            document.body.appendChild(script);
-        } else {
-            toggleHypothesisElementsVisibility();
-            button.style.color = 'var(--text-color)';
-        }
-    }
-
-    function toggleHypothesisElementsVisibility() {
-        const elementsToToggle = [
-            'hypothesis-sidebar',
-            'hypothesis-notebook',
-            'hypothesis-profile',
-            'hypothesis-adder',
-            'hypothesis-highlight-cluster-toolbar'
-        ];
-
-        elementsToToggle.forEach(function (element) {
-            var el = document.querySelector(element);
-            if (el) {
-                if (el.style.display === 'none') {
-                    el.style.display = '';
-                } else {
-                    el.style.display = 'none';
-                }
-            }
+    function setExternalLinksToOpenInNewTab() {
+        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
+        links.forEach(function (link) {
+            link.setAttribute('target', '_blank');
         });
     }
 
-    function applyBreakAllClass() {
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-        if (screenWidth <= 960) {
-            var codeElements = document.querySelectorAll('code');
-
-            codeElements.forEach(function (element) {
-                if (element.textContent.length > 10) {
-                    element.classList.add('break-all');
-                }
-            });
-        }
-    }
-
-    function handleScrollEvents() {
-        var lastScrollTop = 0;
-        var addnDiv = document.querySelector('.addn');
-        var topScrollBar = document.querySelector('.top-scroll-bar');
-
-        window.addEventListener('scroll', function () {
-            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (topScrollBar) {
-                var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                topScrollBar.style.width = scrollPercent + '%';
-                topScrollBar.style.display = 'block';
-            }
-
-            if (addnDiv) {
-                if (currentScroll > lastScrollTop && currentScroll > 50) {
-                    addnDiv.classList.remove('visible');
-                } else {
-                    addnDiv.classList.add('visible');
-                }
-            }
-
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        }, false);
-    }
-
-    function toggleTOC() {
-        const contentsFixedDiv = document.getElementById('contents-fixed');
-        const tocContainer = document.getElementById('contents-toc');
-        const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-        tocContainer.style.display = isDisplayed ? 'none' : 'flex';
-
-        if (contentsFixedDiv) {
-            if (tocContainer.style.display === 'flex') {
-                initializeTOCFeatures();
-            }
-        }
-    }
-
-    function initializeTOCFeatures() {
-        const headers = document.querySelectorAll('h2, h3');
-        const contentsFixedDiv = document.getElementById('contents-fixed');
-        const tocContainer = document.getElementById('contents-toc');
-
-        if (contentsFixedDiv) {
-            
-            
-            
-
-            
-            
-            
-            
-
-            const highlightAppropriateHeader = () => {
-                let highlighted = false;
-                let lastPassedHeader = null;
-
-                headers.forEach(header => {
-                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
-                    if (link) {  
-                        const bounding = header.getBoundingClientRect();
-
-                        if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
-                            link.classList.add('toc-highlight');
-                            highlighted = true;
-                        } else {
-                            link.classList.remove('toc-highlight');
-                        }
-
-                        if (bounding.top < 0) {
-                            lastPassedHeader = header;
-                        }
-                    }
-                });
-
-                if (!highlighted && lastPassedHeader) {
-                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
-                    if (link) {  
-                        link.classList.add('toc-highlight');
-                    }
-                }
-            };
-
-
-            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
-
-            if (!tocContainer.dataset.initialized) {
-                window.addEventListener('scroll', throttledHighlight);
-                tocContainer.dataset.initialized = 'true';
-            }
-
-            document.addEventListener('click', (event) => {
-                if (window.getComputedStyle(tocContainer).display !== 'none') {
-                    tocContainer.style.display = 'none';
-                }
-            });
-
-            tocContainer.addEventListener('click', (event) => {
-                event.stopPropagation();
-            });
-
-            if (headers.length > 1) {
-                contentsFixedDiv.style.display = 'flex';
-                contentsFixedDiv.addEventListener('click', (event) => {
-                    toggleTOC();
-                    event.stopPropagation();
-                });
-            }
-        }
-    }
-</script>
-
-<script defer>
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
-
-    links.forEach(function(link) {
-        link.setAttribute('target', '_blank');
-    });
-});
-</script>
-
-
-<script defer>
-    document.addEventListener("DOMContentLoaded", function () {
-        if (document.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
+    function setupSidenotes() {
+        if (mainElement.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
             var jQueryScript = document.createElement('script');
             jQueryScript.src = '/jquery-3.6.0.min.js';
             document.head.appendChild(jQueryScript);
-
-            var sidenoteLines = document.querySelectorAll('.sidenote-line');
-            sidenoteLines.forEach(function (line) {
-                line.style.display = 'none';
-            });
-
-            var styleElement = document.createElement('style');
-            styleElement.innerHTML = `
-                .jsplumb-line {
-                    opacity: 0.4;
-                    z-index: -1;
-                }
-                li>span>.sidenote-box {
-                    margin-left: -150%;
-                }
-            `;
-            document.body.appendChild(styleElement);
 
             jQueryScript.onload = function () {
                 var jsPlumbScript = document.createElement('script');
                 jsPlumbScript.src = '/jsplumb.min.js';
                 document.head.appendChild(jsPlumbScript);
 
-                var jsPlumbCSS = document.createElement('link');
-                jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
-                jsPlumbCSS.rel = 'stylesheet';
-                document.head.appendChild(jsPlumbCSS);
-
                 jsPlumbScript.onload = function () {
-
-                    jQuery(document).ready(function () {
-                        jsPlumb.importDefaults({
-                            ConnectionsDetachable: false,
-                            ReattachConnections: false,
-                            Endpoint: "Blank", 
-                            Connector: ["Straight"], 
-                            PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 } 
-                        });
-
-                        function createConnections() {
-                            jsPlumb.deleteEveryEndpoint(); 
-
-                            jQuery('.sidenote-number').each(function () {
-                                var sidenoteNumber = jQuery(this);
-                                var sidenote = sidenoteNumber.find('.sidenote');
-
-                                if (sidenote.length) {
-                                    jsPlumb.connect({
-                                        source: sidenoteNumber[0], 
-                                        target: sidenote[0], 
-                                        anchors: ["Center", "RightMiddle"], 
-                                        cssClass: "jsplumb-line" 
-                                    });
-                                }
-                            });
-                        }
-
-                        createConnections();
-
-                        var resizeObserver = new ResizeObserver(function () {
-                            createConnections(); 
-                        });
-                        resizeObserver.observe(document.body);
-
-                    });
+                    initJsPlumb();
                 };
             };
         }
-    });
-</script>
+    }
 
-<script defer>
-    window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
+    function initJsPlumb() {
+        var jsPlumbCSS = document.createElement('link');
+        jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
+        jsPlumbCSS.rel = 'stylesheet';
+        document.head.appendChild(jsPlumbCSS);
+
+        jQuery(document).ready(function () {
+            jsPlumb.importDefaults({
+                ConnectionsDetachable: false,
+                ReattachConnections: false,
+                Endpoint: "Blank",
+                Connector: ["Straight"],
+                PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 }
+            });
+
+            createConnections();
+            var resizeObserver = new ResizeObserver(function () {
+                createConnections();
+            });
+            resizeObserver.observe(document.body);
         });
     }
+
+    function createConnections() {
+        jsPlumb.deleteEveryEndpoint();
+        jQuery('.sidenote-number').each(function () {
+            var sidenoteNumber = jQuery(this);
+            var sidenote = sidenoteNumber.find('.sidenote');
+
+            if (sidenote.length) {
+                jsPlumb.connect({
+                    source: sidenoteNumber[0],
+                    target: sidenote[0],
+                    anchors: ["Center", "RightMiddle"],
+                    cssClass: "jsplumb-line"
+                });
+            }
+        });
+    }
+
+
+    function preventMultiTouchGestures() {
+        window.onload = function () {
+            document.addEventListener('touchstart', function (event) {
+                if (event.touches.length > 1) {
+                    event.preventDefault();
+                }
+            }, false);
+            var lastTouchEnd = 0;
+            document.addEventListener('touchend', function (event) {
+                var now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+            document.addEventListener('gesturestart', function (event) {
+                event.preventDefault();
+            }, false);
+        }
+    }
 </script>
+
+
+
+
 
 
 
