@@ -94,8 +94,8 @@
 
   <div class="top-scroll-bar"></div>
 <div class="addn visible">
-<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;">Hypothes.is</a></div>
-<div id="contents-fixed" class="header-button no-select"><a onclick="toggleTOC()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
+<a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;"><div id="show-hypo" class="header-button no-select">Hypothes.is</div></a>
+<a onclick="toggleTOC()" style="color:var(--textcolor);text-decoration:none;border:none;"><div id="contents-fixed" class="header-button no-select">Contents</div></a>
 </div>
 <div id="contents-toc" class="no-select">
     <nav id="TableOfContents"></nav>
@@ -358,6 +358,55 @@ document.addEventListener('DOMContentLoaded', function() {
                 lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
             });
         }, false);
+    }
+
+
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+        var button = document.getElementById('show-hypo');
+
+        if (!existingScript) {
+            button.textContent = 'Loading';
+
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+
+            script.onload = () => {
+                button.textContent = 'Hypothes.is';
+            };
+
+            script.onerror = () => {
+                button.style.color = 'red';
+                button.textContent = 'Failed';
+            };
+
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+            button.style.color = 'var(--text-color)';
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function (element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
     }
 
 

@@ -161,6 +161,55 @@
     }
 
 
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+        var button = document.getElementById('show-hypo');
+
+        if (!existingScript) {
+            button.textContent = 'Loading';
+
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+
+            script.onload = () => {
+                button.textContent = 'Hypothes.is';
+            };
+
+            script.onerror = () => {
+                button.style.color = 'red';
+                button.textContent = 'Failed';
+            };
+
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+            button.style.color = 'var(--text-color)';
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function (element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
+    }
+
+
     function initializeTOCFeatures() {
         const headers = mainElement.querySelectorAll('h2, h3');
         const contentsFixedDiv = document.getElementById('contents-fixed');
