@@ -65,7 +65,7 @@ But I have more of a life than I once did. I have a wife, a busy career, aging p
 
 
 
-      <link rel="stylesheet" href="/css/main.min.b4d8fa5c1a08bbea84747678c97d0f24ce1cecaed32e58e4e25552e4568a1aca.css" integrity="sha256-tNj6XBoIu&#43;qEdHZ4yX0PJM4c7K7TLljk4lVS5FaKGso=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.1158e0184bedd33569e56f95bf40da7c2dade42a736fb16fa0d79d5fd80441bd.css" integrity="sha256-EVjgGEvt0zVp5W&#43;Vv0DafC2t5Cpzb7FvoNedX9gEQb0=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -204,13 +204,15 @@ But I have more of a life than I once did. I have a wife, a busy career, aging p
 
 </div>
 
-<div class="webmentions-how">Response <a class="btn" data-clipboard-text="https://fanrongbin.com/healthy-relationship/">by interacting on Mastodon</a> or <a
-  href="/hugo-webmention-bridgy-mastodon">webmentioning</a> this post.
-  <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin-top: 2ch;">
+<div class="webmentions-how">
+  <p>Response <a class="btn" data-clipboard-text="https://fanrongbin.com/healthy-relationship/">by interacting on Mastodon</a> or <a
+  href="/hugo-webmention-bridgy-mastodon">webmentioning</a> this post.</p>
+  <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin: 2ch 0;">
         <input type="url" name="source" class="url" placeholder="Your URL" required="">
         <input type="hidden" name="target" value="https://fanrongbin.com/healthy-relationship/">
         <input type="submit" value="Webmention" style="background:var(--bg-color);">
   </form>
+  <p>You can use <a onclick="showHypo();" title="This will toggle Hypothes.is plugin on this page.">Hypothes.is</a> to select texts and highlight.</p>
 </div>
 
 <div id="copy-success-message" class="copy-success">
@@ -276,7 +278,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 
-<script src="/han.min.js"></script>
+<script src="/han.min.js" defer></script>
+
+
+
+<script type="application/json" class="js-hypothesis-config" defer>
+{
+    "sideBySide": {
+        "mode": "manual"
+    }
+}
+</script>    
 
 <script defer>
     var mainElement = document.querySelector('main');
@@ -351,30 +363,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function handleScrollEvents() {
-        var lastScrollTop = 0;
-        var addnDiv = contentHeader.querySelector('.addn');
-        var topScrollBar = contentHeader.querySelector('.top-scroll-bar');
+        if (contentHeader) {
+            let lastScrollTop = 0;
+            let isScrolling = false;
+            const addnDiv = contentHeader.querySelector('.addn');
+            const topScrollBar = contentHeader.querySelector('.top-scroll-bar');
 
-        window.addEventListener('scroll', function () {
-            requestAnimationFrame(function () {
-                var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                if (topScrollBar) {
-                    var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                    topScrollBar.style.width = scrollPercent + '%';
-                    topScrollBar.style.display = 'block';
+            window.addEventListener('scroll', function () {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function () {
+                        if (topScrollBar) {
+                            const scrollPercent = (currentScroll / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                            topScrollBar.style.width = scrollPercent + '%';
+                            topScrollBar.style.display = 'block';
+                        }
+                        if (addnDiv) {
+                            if (currentScroll > lastScrollTop && currentScroll > 50) {
+                                addnDiv.classList.remove('visible');
+                            } else {
+                                addnDiv.classList.add('visible');
+                            }
+                        }
+                        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
                 }
-                if (addnDiv) {
-                    if (currentScroll > lastScrollTop && currentScroll > 50) {
-                        addnDiv.classList.remove('visible');
-                    } else {
-                        addnDiv.classList.add('visible');
-                    }
-                }
-                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-            });
-        }, false);
+            }, false);
+        }
     }
-
 
     function showHypo() {
         var existingScript = document.getElementById('hypothes-script');
@@ -396,6 +414,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 button.textContent = 'Failed';
             };
 
+            
             document.body.appendChild(script);
         } else {
             toggleHypothesisElementsVisibility();
@@ -426,19 +445,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function initializeTOCFeatures() {
-        const contentsFixedDiv = contentHeader.querySelector('#contents-fixed');
-        const tocContainer = contentHeader.querySelector('#contents-toc');
-        if (contentsFixedDiv && headers.length > 1) {
-            contentsFixedDiv.style.display = 'flex';
-            contentsFixedDiv.addEventListener('click', (event) => {
-                toggleTOC();
-                event.stopPropagation();
-            });
-        }
-        if (tocContainer && !tocContainer.dataset.initialized) {
-            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
-            window.addEventListener('scroll', throttledHighlight);
-            tocContainer.dataset.initialized = 'true';
+        if (contentHeader) {
+            const contentsFixedDiv = contentHeader.querySelector('#contents-fixed');
+            const tocContainer = contentHeader.querySelector('#contents-toc');
+            if (contentsFixedDiv && headers.length > 1) {
+                contentsFixedDiv.style.display = 'flex';
+                contentsFixedDiv.addEventListener('click', (event) => {
+                    toggleTOC();
+                    event.stopPropagation();
+                });
+            }
+            if (tocContainer && !tocContainer.dataset.initialized) {
+                const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
         }
     }
 
