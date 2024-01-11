@@ -3635,9 +3635,13 @@ General
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Homepage&lt;/strong&gt;: Pure HTML, CSS, and JavaScript.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Blog:&lt;/strong&gt; &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, typography framework &lt;a href=&#34;https://github.com/ethantw/Han&#34;&gt;Han&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Blog:&lt;/strong&gt; &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, typography framework &lt;a href=&#34;https://github.com/ethantw/Han&#34;&gt;Han&lt;/a&gt;, theme by me.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Host:&lt;/strong&gt; &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github&lt;/a&gt;, automatically deployed by &lt;a href=&#34;https://pages.cloudflare.com/&#34;&gt;Cloudflare Pages&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Font:&lt;/strong&gt; Mostly Helvetica Neue, Helvetica, Arial.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Font:&lt;/strong&gt; Mostly Helvetica Neue, Helvetica, Arial.
+&lt;ul&gt;
+&lt;li&gt;Use default or pre-installed fonts to save more resources and load faster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;et-book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Numeral LF Serif&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Songti GB&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif KR&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Batang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Palatino&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino Linotype&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino LT STD&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Book Antiqua&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -3651,11 +3655,11 @@ General
 Stream Page
 &lt;a href=&#34;#stream-page&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;This page is inspired by &lt;a href=&#34;https://gregorlove.com/&#34;&gt;gRegorLove.com&lt;/a&gt;. I use Hugo Shortcodes to translate &lt;code&gt;*.md&lt;/code&gt; into partial HTML codes. (here&amp;rsquo;s my little &lt;a href=&#34;https://fanrongbin.com/stream-edit.html&#34;&gt;Stream Shortcode Generator&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://fanrongbin.com/stream&#34;&gt;This page&lt;/a&gt; is inspired by &lt;a href=&#34;https://gregorlove.com/&#34;&gt;gRegorLove.com&lt;/a&gt;. I use Hugo Shortcodes to translate &lt;code&gt;*.md&lt;/code&gt; into &lt;a href=&#34;http://microformats.org/wiki/about&#34;&gt;microformat&lt;/a&gt; HTML.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Webmention&lt;/strong&gt;: &lt;a href=&#34;https://fed.brid.gy&#34;&gt;Bridgy&lt;/a&gt;, &lt;a href=&#34;https://webmention.io&#34;&gt;webmention.io&lt;/a&gt;, Github Actions to automate &lt;span class=&#34;sidenote-number&#34;&gt;
     &lt;span class=&#34;sidenote-box&#34;&gt;
-        &lt;small class=&#34;sidenote&#34;&gt;&lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;&gt;I&amp;rsquo;ve written a post&lt;/a&gt; about what&amp;rsquo;s webmention, how to enable your site to receive it, and how to integrate Mastodon (add your site to the fediverse). The post is in Chinese but I&amp;rsquo;m sure you can handle it with translation machine.&lt;/small&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;&lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;&gt;I&amp;rsquo;ve written a post&lt;/a&gt; about what&amp;rsquo;s webmention, how to enable your site to receive it, and how to integrate Mastodon (add your site to the fediverse). The post is in Chinese but I&amp;rsquo;m sure you can handle it with any translation machine.&lt;/small&gt;
         &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
     &lt;/span&gt;
 &lt;/span&gt;&lt;/li&gt;
@@ -4661,11 +4665,11 @@ What&amp;rsquo;s the background?
         &lt;small class=&#34;sidenote&#34;&gt;Source: National Bureau of Statistics, 2021&lt;/small&gt;
         &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
     &lt;/span&gt;
-&lt;/span&gt; in China&amp;rsquo;s cities as delivery motorbike-riders, laborers, doorkeepers and at other jobs that urbanites avoid.&lt;/li&gt;
+&lt;/span&gt; in China&amp;rsquo;s cities as delivery motorbike-riders, labourers, doorkeepers and other jobs that urbanites avoid.&lt;/li&gt;
 &lt;li&gt;The children of this floating population are called floating children.&lt;/li&gt;
 &lt;li&gt;The families, holding a rural &lt;em&gt;Hukou&lt;/em&gt; &lt;span class=&#34;sidenote-number&#34;&gt;
     &lt;span class=&#34;sidenote-box&#34;&gt;
-        &lt;small class=&#34;sidenote&#34;&gt;&lt;em&gt;Hukou&lt;/em&gt;, China&amp;rsquo;s household registration system, which divides population into two different statuses: agricultural and non-agricultural residency statuses. Yet China provides a wide range of public education, resources in cities, which means only city hukou holders could benefit from, are exceedingly more than schools in rural.&lt;/small&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;&lt;em&gt;Hukou&lt;/em&gt;, China&amp;rsquo;s household registration system, which divides the population into two different statuses: agricultural and non-agricultural residency statuses. Yet China provides a wide range of public education, resources in cities, which means only city hukou holders could benefit from, are exceedingly more than schools in rural.&lt;/small&gt;
         &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
     &lt;/span&gt;
 &lt;/span&gt; and on a tight budget, could only afford low-cost private schools which barely have good education resources, even books.&lt;/li&gt;
@@ -4676,9 +4680,9 @@ How?
 &lt;a href=&#34;#how&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Though some of these schools do receive donations, the lack of teacher and librarian hinders the daily operation of the school library.&lt;/li&gt;
+&lt;li&gt;Though some of these schools do receive donations, the lack of teachers and librarians hinders the daily operation of the school library.&lt;/li&gt;
 &lt;li&gt;Here, volunteers from Wei Lan Library take the responsibility by spending one or two days a week, sorting books, helping kids find good ones and maintaining a rather safe environment to study.&lt;/li&gt;
-&lt;li&gt;And they step even further: conduct both quantitative and qualitative research, reach out to publishing houses and enterprises about possibilities to donate, work with press and media, speak out at forums and conferences and so forth.&lt;/li&gt;
+&lt;li&gt;They step even further: conduct both quantitative and qualitative research, reach out to publishing houses and enterprises about possibilities to donate, work with press and media, speak out at forums and conferences and so forth.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;im-interested-in-it-can-i-help&#34;&gt;
 I&amp;rsquo;m interested in it! Can I help?
@@ -4686,8 +4690,8 @@ I&amp;rsquo;m interested in it! Can I help?
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Yes! If you are based in China, you are very welcome to be a volunteer on-site to help with the daily operation - this is the key and the heart of the project.&lt;/li&gt;
-&lt;li&gt;If you&amp;rsquo;d like to support with public communication, promotion, information disclosure, or anything you can think of and willing to, you can always find a place here.&lt;/li&gt;
-&lt;li&gt;Read more about the project on its &lt;a href=&#34;https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ&#34;&gt;official WeChat account&lt;/a&gt; and &lt;a href=&#34;http://www.sanzhi.org.cn/?page_id=3922&#34;&gt;official website&lt;/a&gt; (Simplified Chinese). Drop me a message if you don&amp;rsquo;t speak Chinese, and I&amp;rsquo;m more than happy to help you with learning more about Wei Lan and also the recruitment process.&lt;/li&gt;
+&lt;li&gt;If you&amp;rsquo;d like to support public communication, promotion, information disclosure, or anything you can think of and are willing to do, you can always find a place here.&lt;/li&gt;
+&lt;li&gt;Read more about the project on its &lt;a href=&#34;https://mp.weixin.qq.com/s/_Dcztsm71l-4XW3bZPt_XQ&#34;&gt;official WeChat account&lt;/a&gt; and &lt;a href=&#34;http://www.sanzhi.org.cn/?page_id=3922&#34;&gt;official website&lt;/a&gt; (Simplified Chinese). Drop me a message if you don&amp;rsquo;t speak Chinese, and I&amp;rsquo;m more than happy to help you learn more about Wei Lan and also the recruitment process.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
