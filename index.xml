@@ -171,12 +171,12 @@
 &lt;hr&gt;
 
 &lt;span lang=&#34;en&#34;&gt;&lt;p&gt;I started adjusting my homepage and the blog theme bit by bit started from the end of 2023. First off, I swapped out the &lt;a href=&#34;https://github.com/HEIGE-PCloud/DoIt&#34;&gt;Dolt&lt;/a&gt; theme, which I&amp;rsquo;d been using for quite a long time, for &lt;a href=&#34;https://github.com/loikein/hugo-tufte&#34;&gt;hugo-tufte&lt;/a&gt; to provide better reading experience. To make everything look more uniform with my &amp;ldquo;hand-written&amp;rdquo; homepage, I ended up creating my own theme. It’s still nameless (&lt;code&gt;exampleTheme&lt;/code&gt;, lol), and I’m not really planning to share it publicly.&lt;/p&gt;
-&lt;p&gt;I added some JavaScript extras here and there too, like buttons for &lt;a href=&#34;https://web.hypothes.is/&#34;&gt;Hypothes.is&lt;/a&gt; and for the table of contents, and functions like breaking up long inline code, showing a reading progress bar at the top, updating online status on the &lt;a href=&#34;https://fanrongbin.com/links&#34;&gt;Guestbook page&lt;/a&gt;, and pulling new articles for the homepage (using Cloudflare Workers). Also, I gave a new look to the side notes &lt;span class=&#34;sidenote-number&#34;&gt;
+&lt;p&gt;I added some JavaScript extras here and there too, like buttons for &lt;a href=&#34;https://web.hypothes.is/&#34;&gt;Hypothes.is&lt;/a&gt; and for the table of contents, and functions like breaking up long inline code, showing a reading progress bar at the top, updating online status on the &lt;a href=&#34;https://fanrongbin.com/links&#34;&gt;Guestbook page&lt;/a&gt;, and pulling new articles for the homepage (using Cloudflare Workers). Also, I gave a new look to the side notes. &lt;span class=&#34;sidenote-number&#34;&gt;
 &lt;span class=&#34;sidenote-box&#34;&gt;
 &lt;small class=&#34;sidenote&#34;&gt;Kinda like this (there’s a neat line on desktop).&lt;/small&gt;
 &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
 &lt;/span&gt;
-&lt;/span&gt; If a page has three or more side notes, it triggers &lt;a href=&#34;https://github.com/jsplumb/jsplumb&#34;&gt;jsPlumb&lt;/a&gt; – check it out on &lt;a href=&#34;https://fanrongbin.com/give-ko/#%E4%B8%BA%E4%BB%80%E4%B9%88-%EC%A3%BC%EB%8B%A4---%EB%8B%AC%EB%8B%A4&#34;&gt;this blog post&lt;/a&gt; (still displayed on desktop).&lt;/p&gt;
+&lt;/span&gt;If a page has three or more side notes, it triggers &lt;a href=&#34;https://github.com/jsplumb/jsplumb&#34;&gt;jsPlumb&lt;/a&gt; – check it out on &lt;a href=&#34;https://fanrongbin.com/give-ko/#%E4%B8%BA%E4%BB%80%E4%B9%88-%EC%A3%BC%EB%8B%A4---%EB%8B%AC%EB%8B%A4&#34;&gt;this blog post&lt;/a&gt; (still displayed on desktop).&lt;/p&gt;
 &lt;p&gt;For the homepage, I moved from the Dolt-based &lt;code&gt;index.html&lt;/code&gt; to the &lt;a href=&#34;https://web.archive.org/web/20231021154310/https://fanrongbin.com/&#34;&gt;first version&lt;/a&gt; using the &lt;a href=&#34;https://github.com/Selekkt/skelet&#34;&gt;Skelet.min.css&lt;/a&gt; framework. Then came the &lt;a href=&#34;https://web.archive.org/web/20231222082517/http://fanrongbin.com/&#34;&gt;second version&lt;/a&gt; with an avatar and some animations. And now the &lt;a href=&#34;https://web.archive.org/web/20240105125446/https://fanrongbin.com/&#34;&gt;latest version&lt;/a&gt;  simply uses &lt;code&gt;display: grid&lt;/code&gt; to layout.&lt;/p&gt;
 &lt;/span&gt;
 
@@ -3688,6 +3688,57 @@ Stream Page
 
 
 
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-11-potis-ai&#34;&gt;
+
+
+    Rongbin: 
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream-inner e-content&#34;&gt;
+    &lt;a href=&#34;https://www.potis.ai/?ref=fanrongbin.com&#34;&gt;Potis.ai&lt;/a&gt; wants to help recruiters test candidates&amp;rsquo; real skills. So more text-base case prompts and longer answers, less SHL and VI screening probably. 魔法打败魔法, use another gen-AI to generate AI-less contents, and again feed it back to a third gen-AI. How much nonsense contents we&amp;rsquo;re gonna have in this foreseeable future?
+&lt;/div&gt;
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+
+
+&lt;p class=&#34;stream-meta&#34;&gt;
+    &lt;span class=&#34;p-author h-card&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-11T10:41:37&amp;#43;08:00&#34; title=&#34;2024-01-11T10:41:37&amp;#43;08:00&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-11-potis-ai&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-11-potis-ai&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;10:41 (&amp;#43;08) Thu 11 January 2024&lt;/a&gt;
+    &lt;/time&gt;
+&lt;/p&gt;
+
+
+
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-08-send-wm-to-guestbook&#34;&gt;
 
 
@@ -4448,16 +4499,16 @@ const loadCalendarDays = () =&gt; {
         dayHeader.innerText = dayName;
         calendar.appendChild(dayHeader);
     });
-
+    
     let firstDay = (new Date(currentYear, currentMonth)).getDay();
     firstDay = firstDay === 0 ? 6 : firstDay - 1; // Adjust for Monday start
     let daysInMonth = 32 - new Date(currentYear, currentMonth, 32).getDate();
-
+    
     for (let i = 0; i &lt; firstDay; i++) {
         let cell = document.createElement(&#34;div&#34;);
         calendar.appendChild(cell);
     }
-
+    
     for (let i = 1; i &lt;= daysInMonth; i++) {
         let cell = document.createElement(&#34;div&#34;);
         cell.className = &#34;day&#34;;
@@ -4524,11 +4575,11 @@ const updateCalendarColors = () =&gt; {
         const date = datetime.split(&#39;T&#39;)[0];
         const [year, month, day] = date.split(&#39;-&#39;).map(Number);
         const calendarDay = document.querySelector(`#calendar .day[data-date=&#34;${year}-${month.toString().padStart(2, &#39;0&#39;)}-${day.toString().padStart(2, &#39;0&#39;)}&#34;]`);
-
+    
         if (calendarDay) {
             const opacity = Math.min(1, count * 0.2);
             calendarDay.style.backgroundColor = `rgba(200, 255, 115, ${opacity})`;
-
+    
             // 在深色模式下且背景透明度大于0.4时改变文字颜色
             if (isDarkMode &amp;&amp; opacity &gt; 0.4) {
                 calendarDay.classList.add(&#39;dark-mode-black-text&#39;);
