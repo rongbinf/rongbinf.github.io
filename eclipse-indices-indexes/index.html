@@ -44,7 +44,7 @@ to become greater in amount or level than something else: " />
 
 
 
-      <link rel="stylesheet" href="/css/main.min.e3f7da1186b3d17f02e7549a659a4cf53e08be9cedc6f606a267645945ff49bb.css" integrity="sha256-4/faEYaz0X8C51SaZZpM9T4IvpztxvYGomdkWUX/Sbs=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.b41ba883c489e7fca9d110fffd6d38dd531362e54b69de96e3c91b832ce87374.css" integrity="sha256-tBuog8SJ5/yp0RD//W043VMTYuVLad6W48kbgyzoc3Q=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -660,6 +660,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function setupSidenotes() {
         if (mainElement.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
+            const sidenoteLine = mainElement.querySelectorAll('.sidenote-line');
+
+            sidenoteLine.forEach(element => {
+                element.style.border = 'none';
+            });
+
             var jQueryScript = document.createElement('script');
             jQueryScript.src = '/jquery-3.6.0.min.js';
             document.head.appendChild(jQueryScript);

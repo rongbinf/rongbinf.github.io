@@ -3640,6 +3640,7 @@ General
 &lt;li&gt;&lt;strong&gt;Font:&lt;/strong&gt; Mostly Helvetica Neue, Helvetica, Arial.
 &lt;ul&gt;
 &lt;li&gt;Use default or pre-installed fonts to save more resources and load faster.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.babelstone.co.uk/Fonts/Shapes.html&#34;&gt;BabelStone Shapes&lt;/a&gt; to display &amp;ldquo;half stars&amp;rdquo; on my stream page.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -3664,6 +3665,118 @@ Stream Page
     &lt;/span&gt;
 &lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Listening&lt;/strong&gt;: &lt;a href=&#34;https://last.fm&#34;&gt;Last.fm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-i-use-and-recommend&#34;&gt;
+What I use and recommend
+&lt;a href=&#34;#what-i-use-and-recommend&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;software-and-service&#34;&gt;
+Software and Service
+&lt;a href=&#34;#software-and-service&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Writing: Typora
+&lt;ul&gt;
+&lt;li&gt;One of the best desktop Markdown editors, cheaper than iA writer, and charges one-time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Code Editor: Visual Studio Code, Sublime Text&lt;/li&gt;
+&lt;li&gt;Reading: NetNewsWire
+&lt;ul&gt;
+&lt;li&gt;Good old RSS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Notes Taking: Logseq + OneDrive to backup
+&lt;ul&gt;
+&lt;li&gt;I&amp;rsquo;m leaving platforms like Notion.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mail and Calendar: Thunderbird on Windows, Spark &amp;amp; Calendars by Readdle on iOS
+&lt;ul&gt;
+&lt;li&gt;The latest version of Thunderbird supports end-to-end encryption/decryption, including PGP. It is open-source and much lighter than Outlook. Supports iCloud using plugins and app passwords.&lt;/li&gt;
+&lt;li&gt;Calendars by Readdle has a wonderful monthly view and supports dragging event blocks among different days.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hardware&#34;&gt;
+Hardware
+&lt;a href=&#34;#hardware&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;ThinkPad P1 Gen 5&lt;/del&gt;
+&lt;ul&gt;
+&lt;li&gt;My main working machine. It&amp;rsquo;s a workstation that&amp;rsquo;ll need to stay plugged in all day with only 2~3 hours of battery life. Must install TPFanControl if you are considering using it in quiet places. The keyboard is good. Generally okay but not recommended.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MacBook Pro (15-inch, 2017)
+&lt;ul&gt;
+&lt;li&gt;Incredibly durable, still functioning well (except the butterfly keyboard) after:
+&lt;ul&gt;
+&lt;li&gt;Water damage x1&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;&lt;p&gt;I was in total shock and my brain went blank when I accidentally spilled water out of my thermos on the keyboard. After I&amp;rsquo;m getting more conscious like after 3 seconds I put the laptop upside down to let water out from the speakers&amp;hellip;then my parents suggested putting the machine in a rice container for a night to see how it would go. (Don&amp;rsquo;t do that. Your laptop is nothing like a Walkman or CD player back in their ages)&lt;/p&gt;
+&lt;p&gt;The next day I went to the Genius Bar and they charged ~USD$1000 and said it would be better to just buy a new one. I was so frustrated because just weeks ago I learnt that Apple had this renewal plan, which I could get my keyboard and battery renewed for free, and they&amp;rsquo;ve all gone with this.&lt;/p&gt;
+&lt;p&gt;I went back home and decided to try a third-party. The shop owner&amp;rsquo;s son helped me tear the laptop down and dry it off and here comes the magic — it simply recovered&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Just go straight to any store that can tear your machine down and dry it off.&lt;/em&gt;&lt;/p&gt;
+&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Battery dead + PCB burnt x1
+&lt;ul&gt;
+&lt;li&gt;This was the late late consequence of the water damage. I went travelling for a week, put the laptop in sleep mode, and after I came back I couldn&amp;rsquo;t reboot it. It turned out my PCB was burnt through and there&amp;rsquo;s even a hole in it. Cost ~$120 to replace the board.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;iPhone 13, &lt;del&gt;256G&lt;/del&gt;
+&lt;ul&gt;
+&lt;li&gt;You will need more storage if your life is tied up with WeChat and you don&amp;rsquo;t want to subscribe iCloud+.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;iPad mini (6th gen) with Apple Pencil (2nd gen)
+&lt;ul&gt;
+&lt;li&gt;Best device to read and watch anything. Can be put in my jacket pocket.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Apple Watch Series 5
+&lt;ul&gt;
+&lt;li&gt;The feature I use every day is actually the &lt;em&gt;Haptic&lt;/em&gt; (vibration) to wake me up or set a timer silently.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AirPods Pro (2nd gen)
+&lt;ul&gt;
+&lt;li&gt;A good pair of wireless earphones for commuting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HP DHH-3113
+&lt;ul&gt;
+&lt;li&gt;A good pair of wired earphones for online meetings, two mics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Magic Keyboard (1st gen)
+&lt;ul&gt;
+&lt;li&gt;A quality and durable one speaking of chattering and noise. Must bear with charging batteries. Got it secondhand ~$20.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DOIO KB16B-02
+&lt;ul&gt;
+&lt;li&gt;There are a bunch of similar devices out there, e.g. the fancy Stream Deck. As long as you can have about 5 to 10 additional keys to customise I think they are all the same (functionally).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;daily-life&#34;&gt;
+Daily Life
+&lt;a href=&#34;#daily-life&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thermos JNL-352 ALB (350mL)
+&lt;ul&gt;
+&lt;li&gt;My classic choice.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
