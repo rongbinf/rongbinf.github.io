@@ -3695,6 +3695,7 @@ Stream Page
 
 
 
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-11-zenbook-duo&#34;&gt;
 
 
@@ -3735,6 +3736,7 @@ Note:
 
 
 &lt;/div&gt;
+
 
 
 
@@ -3813,6 +3815,7 @@ Note:
 
 
 
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-08-send-wm-to-guestbook&#34;&gt;
 
 
@@ -3853,6 +3856,7 @@ Note:
 
 
 &lt;/div&gt;
+
 
 
 
@@ -3931,6 +3935,7 @@ Note:
 
 
 
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-08-add-last-fm-scrobble&#34;&gt;
 
 
@@ -3971,6 +3976,7 @@ Note:
 
 
 &lt;/div&gt;
+
 
 
 
@@ -4049,6 +4055,7 @@ Note:
 
 
 
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-07-unnecessarily-busy-weekend&#34;&gt;
 
 
@@ -4089,6 +4096,7 @@ Note:
 
 
 &lt;/div&gt;
+
 
 
 
@@ -4171,6 +4179,7 @@ Note:
 
 
 
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2022-04-23-serenade-sunwoojunga&#34;&gt;
 
 
@@ -4190,7 +4199,7 @@ Note:
     
     
     
-        &lt;span class=&#34;stream-music&#34;&gt;Album: &lt;em&gt;Serenade&lt;/em&gt; by Sunwoojunga&lt;/span&gt;
+        &lt;p class=&#34;stream-music&#34;&gt;Album: &lt;em&gt;Serenade&lt;/em&gt; by Sunwoojunga &lt;span class=&#34;stream-music-rating&#34;&gt;(4.0)&lt;/span&gt;&lt;/p&gt;
     
 
 
@@ -4245,6 +4254,7 @@ Note:
 
 
 
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2022-04-23-ambient-1-brian-eno&#34;&gt;
 
 
@@ -4264,7 +4274,7 @@ Note:
     
     
     
-        &lt;span class=&#34;stream-music&#34;&gt;Album: &lt;em&gt;Ambient 1: Music for Airports&lt;/em&gt; by Brian Eno&lt;/span&gt;
+        &lt;p class=&#34;stream-music&#34;&gt;Album: &lt;em&gt;Ambient 1: Music for Airports&lt;/em&gt; by Brian Eno &lt;span class=&#34;stream-music-rating&#34;&gt;(5.0)&lt;/span&gt;&lt;/p&gt;
     
 
 
@@ -4318,6 +4328,7 @@ Note:
 
 
 
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2022-04-23-long-blue-light-leif-vollebekk&#34;&gt;
 
 
@@ -4337,7 +4348,7 @@ Note:
     
     
     
-        &lt;span class=&#34;stream-music&#34;&gt;Album: &lt;em&gt;Long Blue Light&lt;/em&gt; by Leif Vollebekk&lt;/span&gt;
+        &lt;p class=&#34;stream-music&#34;&gt;Album: &lt;em&gt;Long Blue Light&lt;/em&gt; by Leif Vollebekk &lt;span class=&#34;stream-music-rating&#34;&gt;(3.5)&lt;/span&gt;&lt;/p&gt;
     
 
 
@@ -4814,6 +4825,48 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
         lastScrollTop = currentScroll &lt;= 0 ? 0 : currentScroll;
     }, false);
 });
+&lt;/script&gt;
+
+
+
+&lt;!-- score to star --&gt;
+&lt;style&gt;
+@font-face {
+  font-family: &#34;BabelStone Shapes&#34;;
+  src: url(/font/BabelStoneShapes.woff2) format(&#39;woff2&#39;);
+  unicode-range: U+2605, U+2BE8, U+2BEA;
+}
+.stream-music-rating {
+  font-family: &#34;BabelStone Shapes&#34;, var(--sans);
+  margin-left: 1ch;
+  /* position: relative;
+  top: -1px; */
+}
+&lt;/style&gt;
+&lt;script defer&gt;
+function updateRatingsToStars() {
+    var ratingElements = document.getElementsByClassName(&#39;stream-music-rating&#39;);
+
+    for (var element of ratingElements) {
+        var ratingText = element.innerText; // 如：&#34;(3.5)&#34;
+        var rating = parseFloat(ratingText.match(/\d+(\.\d+)?/)[0]);
+
+        var stars = &#39;&#39;;
+
+        for (var i = 0; i &lt; Math.floor(rating); i++) {
+            stars += &#39;★&#39;;
+        }
+
+        if (rating % 1 &gt;= 0.5) {
+            stars += &#39;⯪&#39;;
+        }
+
+        element.innerHTML = stars;
+    }
+}
+
+// 调用函数以更新显示
+updateRatingsToStars();
 &lt;/script&gt;
 
 

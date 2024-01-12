@@ -86,7 +86,7 @@
       </div>
       <div id="utcOffsetInput" class="hidden">
         <label for="utcOffset">UTC Offset: </label>
-        <input type="text" id="utcOffset" placeholder="e.g., +00">
+        <input type="text" id="utcOffset" placeholder="e.g. +00">
       </div>      
       <div>
         <label for="sid">SID: </label>
@@ -119,6 +119,11 @@
         <label for="artist">Artist: </label>
         <input type="text" id="artist">
       </div>
+      <div id="ratingInput" class="hidden">
+        <label for="rating">Rating: </label>
+        <input type="text" id="rating" placeholder="e.g. 3.0">
+        </div>
+      </div>
       <div id="urlInput" class="hidden">
         <label for="surl">SURL: </label>
         <input type="text" id="surl">
@@ -131,6 +136,7 @@
       <div>
         <label for="content">Content: </label>
         <textarea id="content"></textarea>
+        <span id="charCount">0 characters</span>
       </div>
       <div>
         <button id="clear">Clear</button>
@@ -152,6 +158,7 @@
   const musicTypeSelect = document.getElementById('musictype');
   const artistInput = document.getElementById('artist');
   const musicNameInput = document.getElementById('musicName');
+  const ratingInput = document.getElementById('rating');
   const manualDateTimeCheckbox = document.getElementById('manualDateTime');
   const dateTimeInput = document.getElementById('dateTimeInput');
   const utcOffsetInput = document.getElementById('utcOffset');
@@ -209,6 +216,12 @@
     musicTypeSelect.parentElement.classList.toggle('hidden', !isMusic);
     artistInput.parentElement.classList.toggle('hidden', !isMusic);
     musicNameInput.parentElement.classList.toggle('hidden', !isMusic);
+    ratingInput.parentElement.classList.toggle('hidden', !isMusic);
+  });
+
+  document.getElementById('content').addEventListener('input', function () {
+    const charCount = this.value.length;
+    document.getElementById('charCount').textContent = `${charCount} characters`;
   });
 
   document.getElementById('clear').addEventListener('click', function () {
@@ -235,7 +248,7 @@
     let streamParams = `dt="${dateTime}" sid="${sidInput.value}" stype="${stypeSelect.value}"`;
 
     if (stypeSelect.value === 'music') {
-      streamParams += ` musictype="${musicTypeSelect.value}" artist="${artistInput.value}" music="${musicNameInput.value}"`;
+      streamParams += ` musictype="${musicTypeSelect.value}" artist="${artistInput.value}" music="${musicNameInput.value}" rating="${ratingInput.value}"`;
     } else if (stypeSelect.value !== 'note') {
       streamParams += ` surl="${surlInput.value}"`;
     }
@@ -260,6 +273,7 @@
   document.getElementById('bold').addEventListener('click', () => applyMarkdown('bold'));
   document.getElementById('italic').addEventListener('click', () => applyMarkdown('italic'));
   document.getElementById('link').addEventListener('click', () => applyMarkdown('link'));
+
 </script>
 
 </html>
