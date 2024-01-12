@@ -4001,7 +4001,7 @@ Note:
 
 
 
-    In reply to: &lt;a class=&#34;u-in-reply-to stream-external&#34; href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&#34;&gt;https://fanrongbin.com/hugo-webmention-bridgy-mastodon/&lt;/a&gt;
+    In reply to: &lt;a class=&#34;u-in-reply-to stream-external&#34; href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;&gt;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&lt;/a&gt;
 
 
 
@@ -4555,6 +4555,9 @@ main();
     opacity: 0;
     transform: translateY(-10px);
   }
+  .widget&gt;a{
+    border-bottom: unset;
+  }
 	.lastfm {
     display: flex;
     flex-direction: row;
@@ -4838,9 +4841,10 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 }
 .stream-music-rating {
   font-family: &#34;BabelStone Shapes&#34;, var(--sans);
-  margin-left: 1ch;
-  /* position: relative;
-  top: -1px; */
+  /* margin-left: 1ch; */
+  position: relative;
+  top: -1px;
+  font-size: 90%;
 }
 &lt;/style&gt;
 &lt;script defer&gt;
