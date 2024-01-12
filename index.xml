@@ -4662,7 +4662,7 @@ main();
     bottom: 5%;
     left: 5%;
     transform: translate(0);
-    max-width: 350px;
+    max-width: 330px;
   }
   .widget.hide {
     opacity: 0;
@@ -4687,12 +4687,12 @@ main();
     margin-bottom: 5px;
   }
 	.lastfm-cover {
-		width: 55px;
+		width: 65px;
 		/* border-radius: 8px; */
 		margin: 0 10px 0 0;
 	}
   .lastfm-name {
-    margin: 5px 10px 0 0;
+    margin: 5px 10px 5px 5px
   }
 	.lastfm-name-p {
 		margin: 0 0 5px 0;
