@@ -3692,10 +3692,15 @@ Stream Page
 
 
 
+
+
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-11-zenbook-duo&#34;&gt;
 
 
 Note: 
+
+
 
 
 
@@ -3720,13 +3725,18 @@ Note:
     &lt;/span&gt;
     
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-11T12:28:04&amp;#43;08:00&#34; title=&#34;2024-01-11T12:28:04&amp;#43;08:00&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-11-zenbook-duo&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-11-zenbook-duo&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;12:28 (&amp;#43;08) Thu 11 January 2024&lt;/a&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-11-zenbook-duo&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-11-zenbook-duo&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;12:28 (&amp;#43;08) Thu 11 January 2024&lt;/a&gt;
+        
     &lt;/time&gt;
 &lt;/p&gt;
 
 
 
 &lt;/div&gt;
+
+
+
 
 
 
@@ -3757,6 +3767,8 @@ Note:
 
 
 
+
+
 &lt;div class=&#34;stream-inner e-content&#34;&gt;
     &lt;a href=&#34;https://www.potis.ai/?ref=fanrongbin.com&#34;&gt;Potis.ai&lt;/a&gt; wants to help recruiters test candidates&amp;rsquo; real skills. So more text-based case prompts and longer answers, less SHL and VI screening probably. 魔法打败魔法, use another gen-AI to generate AI-less contents and again feed it back to a third gen-AI. How much nonsense content are we gonna have in this foreseeable future?
 &lt;/div&gt;
@@ -3771,13 +3783,18 @@ Note:
     &lt;/span&gt;
     
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-11T10:41:37&amp;#43;08:00&#34; title=&#34;2024-01-11T10:41:37&amp;#43;08:00&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-11-potis-ai&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-11-potis-ai&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;10:41 (&amp;#43;08) Thu 11 January 2024&lt;/a&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-11-potis-ai&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-11-potis-ai&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;10:41 (&amp;#43;08) Thu 11 January 2024&lt;/a&gt;
+        
     &lt;/time&gt;
 &lt;/p&gt;
 
 
 
 &lt;/div&gt;
+
+
+
 
 
 
@@ -3808,6 +3825,8 @@ Note:
 
 
 
+
+
 &lt;div class=&#34;stream-inner e-content&#34;&gt;
     尝试往Guestbook发出webmention（折腾就到此结束吧）
 &lt;/div&gt;
@@ -3822,13 +3841,18 @@ Note:
     &lt;/span&gt;
     
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T22:05:21&amp;#43;08:00&#34; title=&#34;2024-01-08T22:05:21&amp;#43;08:00&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-send-wm-to-guestbook&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-send-wm-to-guestbook&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;22:05 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-send-wm-to-guestbook&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-send-wm-to-guestbook&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;22:05 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
+        
     &lt;/time&gt;
 &lt;/p&gt;
 
 
 
 &lt;/div&gt;
+
+
+
 
 
 
@@ -3859,6 +3883,8 @@ Note:
 
 
 
+
+
 &lt;div class=&#34;stream-inner e-content&#34;&gt;
     如果在这里reply的话……以及测试超过1条response的样式。
 &lt;/div&gt;
@@ -3873,13 +3899,18 @@ Note:
     &lt;/span&gt;
     
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T18:57:24&amp;#43;08:00&#34; title=&#34;2024-01-08T18:57:24&amp;#43;08:00&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-reply-test&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-reply-test&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;18:57 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-reply-test&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-reply-test&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;18:57 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
+        
     &lt;/time&gt;
 &lt;/p&gt;
 
 
 
 &lt;/div&gt;
+
+
+
 
 
 
@@ -3910,6 +3941,8 @@ Note:
 
 
 
+
+
 &lt;div class=&#34;stream-inner e-content&#34;&gt;
     给&lt;a href=&#34;https://fanrongbin.com/stream/&#34;&gt;Stream页面&lt;/a&gt;加上了Last.fm Scrobble。
 &lt;/div&gt;
@@ -3924,13 +3957,18 @@ Note:
     &lt;/span&gt;
     
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T16:05:07&amp;#43;08:00&#34; title=&#34;2024-01-08T16:05:07&amp;#43;08:00&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-add-last-fm-scrobble&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-add-last-fm-scrobble&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;16:05 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-add-last-fm-scrobble&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-add-last-fm-scrobble&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;16:05 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
+        
     &lt;/time&gt;
 &lt;/p&gt;
 
 
 
 &lt;/div&gt;
+
+
+
 
 
 
@@ -3961,6 +3999,8 @@ Note:
 
 
 
+
+
 &lt;div class=&#34;stream-inner e-content&#34;&gt;
     在手机端Mastodon App搜索url，可能会需要一点时间，但整体还可以，在没法用搜索API或其他方式直接在评论者的server调用的情况下，只能这样苟着了哈哈哈。
 &lt;/div&gt;
@@ -3975,13 +4015,18 @@ Note:
     &lt;/span&gt;
     
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-08T09:29:31&amp;#43;08:00&#34; title=&#34;2024-01-08T09:29:31&amp;#43;08:00&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-reply-with-wm&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-reply-with-wm&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;09:29 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-08-reply-with-wm&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-08-reply-with-wm&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;09:29 (&amp;#43;08) Mon 08 January 2024&lt;/a&gt;
+        
     &lt;/time&gt;
 &lt;/p&gt;
 
 
 
 &lt;/div&gt;
+
+
+
 
 
 
@@ -4012,6 +4057,8 @@ Note:
 
 
 
+
+
 &lt;div class=&#34;stream-inner e-content&#34;&gt;
     在webmention上忙了一个周末，现在好像终于弄得差不多了。明天开始复习下一门考试了。
 &lt;/div&gt;
@@ -4026,13 +4073,18 @@ Note:
     &lt;/span&gt;
     
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T22:06:38&amp;#43;08:00&#34; title=&#34;2024-01-07T22:06:38&amp;#43;08:00&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-unnecessarily-busy-weekend&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-unnecessarily-busy-weekend&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;22:06 (&amp;#43;08) Sun 07 January 2024&lt;/a&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-unnecessarily-busy-weekend&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-unnecessarily-busy-weekend&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;22:06 (&amp;#43;08) Sun 07 January 2024&lt;/a&gt;
+        
     &lt;/time&gt;
 &lt;/p&gt;
 
 
 
 &lt;/div&gt;
+
+
+
 
 
 
@@ -4063,6 +4115,8 @@ Note:
 
 
 
+
+
 &lt;div class=&#34;stream-inner e-content&#34;&gt;
     好像差不多调试好了 stream 页面自动发出 webmention。
 &lt;/div&gt;
@@ -4077,7 +4131,222 @@ Note:
     &lt;/span&gt;
     
     &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-07T16:49:40&amp;#43;08:00&#34; title=&#34;2024-01-07T16:49:40&amp;#43;08:00&#34;&gt;
-        &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-test&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-test&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;16:49 (&amp;#43;08) Sun 07 January 2024&lt;/a&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-07-test&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-07-test&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;16:49 (&amp;#43;08) Sun 07 January 2024&lt;/a&gt;
+        
+    &lt;/time&gt;
+&lt;/p&gt;
+
+
+
+&lt;/div&gt;
+&lt;h2 id=&#34;2022&#34;&gt;
+2022
+&lt;a href=&#34;#2022&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2022-04-23-serenade-sunwoojunga&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        Album: &lt;a class=&#34;music stream-external&#34; href=&#34;https://www.last.fm/search?q=Serenade+Sunwoojunga&#34; target=&#34;_blank&#34;&gt;Serenade - Sunwoojunga&lt;/a&gt;
+    
+
+
+
+&lt;div class=&#34;stream-inner e-content&#34;&gt;
+    &lt;p&gt;Can you find another all-rounder like Sunwoojunga? A stunning full-length 정규 album shows off her ability from every perspective. &amp;ldquo;Interview&amp;rdquo; sets up a cosy but also mixed mood. &amp;ldquo;Run With Me&amp;rdquo; soaks everyone in the Korean sentiment with powerful, empathetic strings and vocals.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Serenade&amp;rdquo; tells stories wittily and &amp;ldquo;Multi Player&amp;rdquo; joins smoothly, starting a much loosen atmosphere which continues to the end. To some extent, the appealing of consistency inevitably leads to similarity until &amp;ldquo;Superhero&amp;rdquo; cracks everything open and gives space for lights to come in. The second half of the album is much more dynamic, such as the quirky and experimental &amp;ldquo;My Birthday Song&amp;rdquo; as a great example of using synthesisers.&lt;/p&gt;
+&lt;p&gt;Listeners could sharply grasp the emotions Sunwoojunga would like to convey through her unique and solid vocal skills. Get astonished by &amp;ldquo;Run With Me&amp;rdquo; then step by step, track by track, enjoy the singing freedom with her and hold a parade in &amp;ldquo;Life&amp;rdquo; and &amp;ldquo;Invisible Treasure&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;To Zero&amp;rdquo; resets everything and &amp;ldquo;Classic&amp;rdquo; keeps the pop music form but stylish in every way, signing her name proudly on the album with this brutal end.&lt;/p&gt;
+&lt;p&gt;Lyrics are so important in this album since Sunwoojunga often starts her creation by writing first. Though for non-Korean speakers it may be difficult to understand the delicate meanings in lyrics, it is also quite interesting to first speculate everything only based on rhythms, melodies and scattered English, and then to check the translation to see whether new ideas were generated. Just try to find some time and listen to it non-stop as if you were wandering around in the amusement park with the artist.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+
+
+&lt;p class=&#34;stream-meta&#34;&gt;
+    &lt;span class=&#34;p-author h-card&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2022-04-23T00:00:00&amp;#43;00:00&#34; title=&#34;2022-04-23T00:00:00&amp;#43;00:00&#34;&gt;
+        
+            
+                &lt;a href=&#34;https://fanrongbin.com/stream#2022-04-23-serenade-sunwoojunga&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2022-04-23-serenade-sunwoojunga&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;Sat 23 April 2022&lt;/a&gt;
+            
+            
+    &lt;/time&gt;
+&lt;/p&gt;
+
+
+
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2022-04-23-ambient-1-brian-eno&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        Album: &lt;a class=&#34;music stream-external&#34; href=&#34;https://www.last.fm/search?q=Ambient%201%3a%20Music%20for%20Airports+Brian%20Eno&#34; target=&#34;_blank&#34;&gt;Ambient 1: Music for Airports - Brian Eno&lt;/a&gt;
+    
+
+
+
+&lt;div class=&#34;stream-inner e-content&#34;&gt;
+    &lt;p&gt;Ahead of its era, &amp;ldquo;Ambient 1: Music for Airports&amp;rdquo; does far more than staying in the background of a futuristic airport but for everyone to attach emotions and make the most of it. &amp;ldquo;1/1&amp;rdquo; is filled with zen fermatas, carrying notes like waterdrops, doing everything but also nothing to empty your mind. Repetitions might be dreary or tedious for some people, but there are differences in the background to be detected and understood if trying to immerse oneself in. &amp;ldquo;1/1&amp;rdquo; is also the most suitable and functional one among the four tracks.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;2/1&amp;rdquo; unfolds with generous and expansive vocals. Sunlight, but rather intensified, tranquil and remote. It waits and remains, saves time for you to walk into it, to take a sunbath, on your own initiative. Then &amp;ldquo;1/2&amp;rdquo; comes in as the stopover to see the piano and vocals blending with each other in detail.&lt;/p&gt;
+&lt;p&gt;You may get lost in the ambitious synthesiser sounds of &amp;ldquo;2/2&amp;rdquo;. It scales up quite suddenly. Even though the former track lasts more than 10 minutes, not much connecting and digesting job has been done. However, concerns could be eased when it plays to the middle, especially for listeners willing to swing with the inner flow, grasping the opportunities to discover layers and depths.&lt;/p&gt;
+&lt;p&gt;The importance of this album is effortlessly being told by &amp;ldquo;1/1&amp;rdquo; standing alone, while &amp;ldquo;1/2&amp;rdquo; tells stories of vocal use, frequency and the blanks in between. Both of them are easy to adapt and drift away. &amp;ldquo;2/1&amp;rdquo; and &amp;ldquo;2/2&amp;rdquo; may be less graspable generally but still have their narrative.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+
+
+&lt;p class=&#34;stream-meta&#34;&gt;
+    &lt;span class=&#34;p-author h-card&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2022-04-23T00:00:00&amp;#43;00:00&#34; title=&#34;2022-04-23T00:00:00&amp;#43;00:00&#34;&gt;
+        
+            
+                &lt;a href=&#34;https://fanrongbin.com/stream#2022-04-23-ambient-1-brian-eno&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2022-04-23-ambient-1-brian-eno&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;Sat 23 April 2022&lt;/a&gt;
+            
+            
+    &lt;/time&gt;
+&lt;/p&gt;
+
+
+
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2022-04-23-long-blue-light-leif-vollebekk&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        Album: &lt;a class=&#34;music stream-external&#34; href=&#34;https://www.last.fm/search?q=Long%20Blue%20Light+Leif%20Vollebekk&#34; target=&#34;_blank&#34;&gt;Long Blue Light - Leif Vollebekk&lt;/a&gt;
+    
+
+
+
+&lt;div class=&#34;stream-inner e-content&#34;&gt;
+    &lt;p&gt;&amp;ldquo;Long Blue Light&amp;rdquo; could be in one of your relax playlists, just to sit back and unbend yourself. Great at conveying solitude and casualness with light lyricsim and the end falling apart. It could also be in your road playlist since it is easy to sing along.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;29 #Strafford APTS&amp;rdquo;, a Bon Iver cover, is much like a statement or a memoir of the artist&amp;rsquo;s teen age. Instruments are beautifully knited. It is much subtle and melodic with refurbished overdubs if comparison between cover and the original is necessary. But to me it is more like a different flank of a hill, this one tracing back the history but looking forward to a mist-lifted future.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+
+
+&lt;p class=&#34;stream-meta&#34;&gt;
+    &lt;span class=&#34;p-author h-card&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2022-04-23T00:00:00&amp;#43;00:00&#34; title=&#34;2022-04-23T00:00:00&amp;#43;00:00&#34;&gt;
+        
+            
+                &lt;a href=&#34;https://fanrongbin.com/stream#2022-04-23-long-blue-light-leif-vollebekk&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2022-04-23-long-blue-light-leif-vollebekk&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;Sat 23 April 2022&lt;/a&gt;
+            
+            
     &lt;/time&gt;
 &lt;/p&gt;
 
@@ -4240,6 +4509,7 @@ main();
 	div.color {
 		background: unset;
 	}
+	div.addn:hover { opacity: 1 !important; }
   .widget {
     display: flex;
     flex-direction: column;
@@ -4356,6 +4626,7 @@ main();
 
 
 
+
 &lt;!-- widget div --&gt;
 &lt;div class=&#34;widget&#34;&gt;
 &lt;a class=&#34;lastfm-a&#34; href=&#34;#track-url&#34;&gt;&lt;div class=&#34;lastfm&#34;&gt;
@@ -4399,9 +4670,9 @@ Stream Heat
 &lt;!-- calendar div --&gt;
 &lt;div id=&#34;calendar-box&#34;&gt;
 &lt;div id=&#34;calendar-button&#34;&gt;
-    &lt;a id=&#34;prevMonth&#34;&gt;←&lt;/a&gt;
+    &lt;a id=&#34;nextMonth&#34; alt=&#34;i know this looks so weird nextmonth is using the left arrow, but i really dont wanna change my messy js&#34;&gt;←&lt;/a&gt;
     &lt;span id=&#34;currentMonthYear&#34;&gt;&lt;/span&gt;
-    &lt;a id=&#34;nextMonth&#34;&gt;→&lt;/a&gt;
+    &lt;a id=&#34;prevMonth&#34; alt=&#34;same as nextmonth lol&#34;&gt;→&lt;/a&gt;
 &lt;/div&gt;
 &lt;div id=&#34;calendar&#34;&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -4532,21 +4803,27 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
 &lt;!-- calendar --&gt;
 &lt;script defer&gt;
 const monthNames = [&#34;Jan&#34;, &#34;Feb&#34;, &#34;Mar&#34;, &#34;Apr&#34;, &#34;May&#34;, &#34;Jun&#34;, &#34;Jul&#34;, &#34;Aug&#34;, &#34;Sep&#34;, &#34;Oct&#34;, &#34;Nov&#34;, &#34;Dec&#34;];
-let currentYear = 2024;
-let currentMonth = 0;
+let currentYear;
+let currentMonth;
 
 const calendar = document.getElementById(&#39;calendar&#39;);
 const currentMonthYear = document.getElementById(&#39;currentMonthYear&#39;);
 const prevMonthButton = document.getElementById(&#39;prevMonth&#39;);
 const nextMonthButton = document.getElementById(&#39;nextMonth&#39;);
-
 const publishedItems = document.querySelectorAll(&#39;.dt-published&#39;);
 
-const dateCounts = {};
+const monthsWithData = new Set([...publishedItems].map(item =&gt; {
+    const datetime = item.getAttribute(&#39;datetime&#39;);
+    const date = new Date(datetime);
+    return `${date.getFullYear()}-${date.getMonth()}`;
+}));
+
+let [year, month] = [...monthsWithData][0].split(&#39;-&#39;).map(Number);
+currentYear = year;
+currentMonth = month;
 
 const loadCalendarDays = () =&gt; {
     calendar.innerHTML = &#39;&#39;;
-
     const weekDays = [&#34;Mon&#34;, &#34;Tue&#34;, &#34;Wed&#34;, &#34;Thu&#34;, &#34;Fri&#34;, &#34;Sat&#34;, &#34;Sun&#34;];
     weekDays.forEach(dayName =&gt; {
         let dayHeader = document.createElement(&#34;div&#34;);
@@ -4554,16 +4831,16 @@ const loadCalendarDays = () =&gt; {
         dayHeader.innerText = dayName;
         calendar.appendChild(dayHeader);
     });
-    
+
     let firstDay = (new Date(currentYear, currentMonth)).getDay();
     firstDay = firstDay === 0 ? 6 : firstDay - 1; // Adjust for Monday start
     let daysInMonth = 32 - new Date(currentYear, currentMonth, 32).getDate();
-    
+
     for (let i = 0; i &lt; firstDay; i++) {
         let cell = document.createElement(&#34;div&#34;);
         calendar.appendChild(cell);
     }
-    
+
     for (let i = 1; i &lt;= daysInMonth; i++) {
         let cell = document.createElement(&#34;div&#34;);
         cell.className = &#34;day&#34;;
@@ -4574,14 +4851,11 @@ const loadCalendarDays = () =&gt; {
 };
 
 const updateMonthButtons = () =&gt; {
-    const publishedItems = document.querySelectorAll(&#39;.dt-published&#39;);
-    const monthsWithData = new Set([...publishedItems].map(item =&gt; {
-        const date = new Date(item.getAttribute(&#39;datetime&#39;));
-        return date.getFullYear() === currentYear ? date.getMonth() : null;
-    }));
+    const monthArray = [...monthsWithData];
+    const currentIndex = monthArray.indexOf(`${currentYear}-${currentMonth}`);
 
-    prevMonthButton.style.display = monthsWithData.has(currentMonth - 1) ? &#39;block&#39; : &#39;none&#39;;
-    nextMonthButton.style.display = monthsWithData.has(currentMonth + 1) ? &#39;block&#39; : &#39;none&#39;;
+    prevMonthButton.style.display = currentIndex &gt; 0 ? &#39;block&#39; : &#39;none&#39;;
+    nextMonthButton.style.display = currentIndex &lt; monthArray.length - 1 ? &#39;block&#39; : &#39;none&#39;;
 };
 
 const loadCalendar = () =&gt; {
@@ -4592,50 +4866,56 @@ const loadCalendar = () =&gt; {
 };
 
 prevMonthButton.onclick = () =&gt; {
-    currentMonth--;
-    if (currentMonth &lt; 0) {
-        currentMonth = 11;
-        currentYear--;
+    const monthArray = [...monthsWithData];
+    const currentIndex = monthArray.indexOf(`${currentYear}-${currentMonth}`);
+
+    if (currentIndex &gt; 0) {
+        const [prevYear, prevMonth] = monthArray[currentIndex - 1].split(&#39;-&#39;).map(Number);
+        currentYear = prevYear;
+        currentMonth = prevMonth;
+        loadCalendar();
+        updateMonthButtons();
     }
-    loadCalendar();
-    updateCalendarColors();
 };
 
 nextMonthButton.onclick = () =&gt; {
-    currentMonth++;
-    if (currentMonth &gt; 11) {
-        currentMonth = 0;
-        currentYear++;
+    const monthArray = [...monthsWithData];
+    const currentIndex = monthArray.indexOf(`${currentYear}-${currentMonth}`);
+
+    if (currentIndex &lt; monthArray.length - 1) {
+        const [nextYear, nextMonth] = monthArray[currentIndex + 1].split(&#39;-&#39;).map(Number);
+        currentYear = nextYear;
+        currentMonth = nextMonth;
+        loadCalendar();
+        updateMonthButtons();
     }
-    loadCalendar();
-    updateCalendarColors();
 };
-
-publishedItems.forEach(item =&gt; {
-    const datetime = item.getAttribute(&#39;datetime&#39;);
-    const date = datetime.split(&#39;T&#39;)[0];
-
-    if (date in dateCounts) {
-        dateCounts[date]++;
-    } else {
-        dateCounts[date] = 1;
-    }
-});
 
 const updateCalendarColors = () =&gt; {
     const isDarkMode = window.matchMedia &amp;&amp; window.matchMedia(&#39;(prefers-color-scheme: dark)&#39;).matches;
+    const dateCounts = {};
+
+    publishedItems.forEach(item =&gt; {
+        const datetime = item.getAttribute(&#39;datetime&#39;);
+        const date = datetime.split(&#39;T&#39;)[0];
+
+        if (dateCounts[date]) {
+            dateCounts[date]++;
+        } else {
+            dateCounts[date] = 1;
+        }
+    });
 
     for (const datetime in dateCounts) {
         const count = dateCounts[datetime];
         const date = datetime.split(&#39;T&#39;)[0];
         const [year, month, day] = date.split(&#39;-&#39;).map(Number);
-        const calendarDay = document.querySelector(`#calendar .day[data-date=&#34;${year}-${month.toString().padStart(2, &#39;0&#39;)}-${day.toString().padStart(2, &#39;0&#39;)}&#34;]`);
-    
+        const calendarDay = document.querySelector(`.day[data-date=&#34;${year}-${String(month).padStart(2, &#39;0&#39;)}-${String(day).padStart(2, &#39;0&#39;)}&#34;]`);
+
         if (calendarDay) {
-            const opacity = Math.min(1, count * 0.2);
+            const opacity = Math.min(1, 0.2 + count * 0.1);
             calendarDay.style.backgroundColor = `rgba(200, 255, 115, ${opacity})`;
-    
-            // 在深色模式下且背景透明度大于0.4时改变文字颜色
+
             if (isDarkMode &amp;&amp; opacity &gt; 0.4) {
                 calendarDay.classList.add(&#39;dark-mode-black-text&#39;);
             } else {
@@ -4647,6 +4927,8 @@ const updateCalendarColors = () =&gt; {
 
 loadCalendar();
 &lt;/script&gt;
+
+
 
 </description>
     </item>

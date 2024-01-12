@@ -17,7 +17,8 @@
       padding: 2ch;
     }
 
-    input,select {
+    input,
+    select {
       height: 2rem;
     }
 
@@ -27,7 +28,8 @@
 
     input,
     textarea {
-      width: 90%;
+      width: 100%;
+      line-height: 1.2;
     }
 
     button {
@@ -39,16 +41,25 @@
       padding: 2ch;
       background: #e7e7e7;
     }
-    
+
+    .hidden {
+      display: none;
+    }
+
     @media (prefers-color-scheme: dark) {
-      input,textarea,select {
+
+      input,
+      textarea,
+      select {
         background: #000;
         color: #fff;
       }
+
       button {
         background: #3d3d3d;
         color: #fff;
       }
+
       #previewArea {
         background: #232323;
       }
@@ -66,6 +77,18 @@
         <p><a href="/stream">Stream</a></p>
       </div>
       <div>
+        <label for="manualDateTime">Manual Date and Time: </label>
+        <input type="checkbox" id="manualDateTime">
+      </div>
+      <div id="dateTimePicker" class="hidden">
+        <label for="dateTimeInput">Date and Time: </label>
+        <input type="datetime-local" id="dateTimeInput">
+      </div>
+      <div id="utcOffsetInput" class="hidden">
+        <label for="utcOffset">UTC Offset: </label>
+        <input type="text" id="utcOffset" placeholder="e.g., +00">
+      </div>      
+      <div>
         <label for="sid">SID: </label>
         <input type="text" id="sid">
       </div>
@@ -77,7 +100,24 @@
           <option value="like">Like</option>
           <option value="follow">Follow</option>
           <option value="repost">Repost</option>
+          <option value="music">Music</option>
         </select>
+      </div>
+      <div id="musicOptions" class="hidden">
+        <label for="musictype">Music Type: </label>
+        <select id="musictype">
+          <option value=""></option>
+          <option value="album">Album</option>
+          <option value="song">Song</option>
+        </select>
+      </div>
+      <div id="musicNameInput" class="hidden">
+        <label for="musicName">Music Name: </label>
+        <input type="text" id="musicName">
+      </div>
+      <div id="artistInput" class="hidden">
+        <label for="artist">Artist: </label>
+        <input type="text" id="artist">
       </div>
       <div id="urlInput" class="hidden">
         <label for="surl">SURL: </label>
@@ -102,104 +142,124 @@
     </section>
   </main>
 </body>
+
 <script>
+  // 缓存DOM元素引用
+  const textArea = document.getElementById('content');
+  const sidInput = document.getElementById('sid');
+  const stypeSelect = document.getElementById('stype');
+  const surlInput = document.getElementById('surl');
+  const musicTypeSelect = document.getElementById('musictype');
+  const artistInput = document.getElementById('artist');
+  const musicNameInput = document.getElementById('musicName');
+  const manualDateTimeCheckbox = document.getElementById('manualDateTime');
+  const dateTimeInput = document.getElementById('dateTimeInput');
+  const utcOffsetInput = document.getElementById('utcOffset');
+  const previewArea = document.getElementById('previewArea');
+  const dateTimeDisplay = document.getElementById('datetime');
+
   function applyMarkdown(type) {
-    const textArea = document.getElementById('content');
     const start = textArea.selectionStart;
     const end = textArea.selectionEnd;
     const selectedText = textArea.value.substring(start, end);
-
-    let markdownText;
-    switch (type) {
-      case 'bold':
-        markdownText = `**${selectedText}**`;
-        break;
-      case 'italic':
-        markdownText = `*${selectedText}*`;
-        break;
-      case 'link':
-        markdownText = `[${selectedText}](url)`;
-        break;
-    }
-
-    textArea.value = textArea.value.substring(0, start) + markdownText + textArea.value.substring(end);
+    const markdown = {
+      'bold': `**${selectedText}**`,
+      'italic': `*${selectedText}*`,
+      'link': `[${selectedText}](url)`
+    };
+    textArea.value = textArea.value.slice(0, start) + markdown[type] + textArea.value.slice(end);
     textArea.focus();
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    // 格式化日期时间为 2024-01-07T12:44:02+08:00 格式
-    function formatDateTime(date) {
-      const pad = (number) => number.toString().padStart(2, '0');
+  function formatDateTime(date) {
+    const pad = (number) => number.toString().padStart(2, '0');
+    let offset = -date.getTimezoneOffset();
+    const sign = offset >= 0 ? '+' : '-';
+    offset = Math.abs(offset);
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}${sign}${pad(Math.floor(offset / 60))}:${pad(offset % 60)}`;
+  }
 
-      let offset = -date.getTimezoneOffset();
-      const sign = offset >= 0 ? '+' : '-';
-      offset = Math.abs(offset);
-
-      const hoursOffset = pad(Math.floor(offset / 60));
-      const minutesOffset = pad(offset % 60);
-
-      return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}${sign}${hoursOffset}:${minutesOffset}`;
+  function formatUTCOffset(offset) {
+    if (!offset) return '+00:00';
+    if (offset.match(/^[\+\-]?\d{1,2}$/)) {
+      const sign = offset.startsWith('-') ? '-' : '+';
+      let hours = offset.match(/\d+/)[0].padStart(2, '0');
+      return `${sign}${hours}:00`;
     }
-
-    // 更新日期和时间
-    function updateDateTime() {
-      const now = new Date();
-      const formattedDateTime = formatDateTime(now);
-      document.getElementById('datetime').innerText = `Current Date and Time: ${formattedDateTime}`;
+    if (!offset.includes(':')) {
+      return offset.substring(0, 3) + ':' + offset.substring(3);
     }
+    return offset;
+  }
 
-    // 每秒更新日期和时间
-    setInterval(updateDateTime, 1000);
 
-    // 处理stype选择
-    document.getElementById('stype').addEventListener('change', function () {
-      const stype = this.value;
-      const urlInputDiv = document.getElementById('urlInput');
-      if (stype === 'note') {
-        urlInputDiv.classList.add('hidden');
-      } else {
-        urlInputDiv.classList.remove('hidden');
-      }
-    });
+  function updateDateTime() {
+    dateTimeDisplay.innerText = `Current Date and Time: ${formatDateTime(new Date())}`;
+  }
+  setInterval(updateDateTime, 1000);
 
-    // 清空按钮功能
-    document.getElementById('clear').addEventListener('click', function () {
-      document.getElementById('sid').value = '';
-      document.getElementById('surl').value = '';
-      document.getElementById('content').value = '';
-    });
-
-    // 预览按钮功能
-    document.getElementById('preview').addEventListener('click', function () {
-  const sid = document.getElementById('sid').value;
-  const stype = document.getElementById('stype').value;
-  const surl = stype !== 'note' ? document.getElementById('surl').value : '';
-  const content = document.getElementById('content').value;
-
-  const formattedDateTime = formatDateTime(new Date());
-  let previewContent = `{{<stream dt="${formattedDateTime}" sid="${sid}" stype="${stype}"${surl ? ` surl="${surl}"` : ''}>}}\n${content}\n{{</stream>}}`;
-
-  document.getElementById('previewArea').innerText = previewContent;
-});
-    document.getElementById('bold').addEventListener('click', function () { applyMarkdown('bold'); });
-    document.getElementById('italic').addEventListener('click', function () { applyMarkdown('italic'); });
-    document.getElementById('link').addEventListener('click', function () { applyMarkdown('link'); });
-
-    document.getElementById('copy').addEventListener('click', function () {
-      const text = document.getElementById('previewArea').innerText;
-      const el = document.createElement('textarea');
-      el.value = text;
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand('copy');
-      document.body.removeChild(el);
-
-      alert("Content copied to clipboard!");
-    });
-
+  manualDateTimeCheckbox.addEventListener('change', function () {
+    dateTimeInput.parentElement.classList.toggle('hidden', !this.checked);
+    utcOffsetInput.parentElement.classList.toggle('hidden', !this.checked);
   });
 
+  stypeSelect.addEventListener('change', function () {
+    const isMusic = this.value === 'music';
+    surlInput.parentElement.classList.toggle('hidden', this.value === 'note' || isMusic);
+    musicTypeSelect.parentElement.classList.toggle('hidden', !isMusic);
+    artistInput.parentElement.classList.toggle('hidden', !isMusic);
+    musicNameInput.parentElement.classList.toggle('hidden', !isMusic);
+  });
 
+  document.getElementById('clear').addEventListener('click', function () {
+    sidInput.value = '';
+    stypeSelect.value = 'note';
+    surlInput.value = '';
+    musicTypeSelect.value = '';
+    artistInput.value = '';
+    musicNameInput.value = '';
+    textArea.value = '';
+    utcOffsetInput.value = '';
+    manualDateTimeCheckbox.checked = false;
+    dateTimeInput.parentElement.classList.add('hidden');
+    utcOffsetInput.parentElement.classList.add('hidden');
+  });
+
+  document.getElementById('preview').addEventListener('click', function () {
+    if (!sidInput.value.trim()) {
+      alert("Please fill in the SID field.");
+      return;
+    }
+    
+    let dateTime = manualDateTimeCheckbox.checked ? dateTimeInput.value + ':00' + formatUTCOffset(utcOffsetInput.value) : formatDateTime(new Date());
+    let streamParams = `dt="${dateTime}" sid="${sidInput.value}" stype="${stypeSelect.value}"`;
+
+    if (stypeSelect.value === 'music') {
+      streamParams += ` musictype="${musicTypeSelect.value}" artist="${artistInput.value}" music="${musicNameInput.value}"`;
+    } else if (stypeSelect.value !== 'note') {
+      streamParams += ` surl="${surlInput.value}"`;
+    }
+
+    previewArea.innerText = `{{<stream ${streamParams}>}}\n${textArea.value}\n{{</stream>}}`;
+  });
+
+  document.getElementById('copy').addEventListener('click', function () {
+    if (!sidInput.value.trim()) {
+      alert("Please fill in the SID field.");
+      return;
+    }
+    const el = document.createElement('textarea');
+    el.value = previewArea.innerText;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert("Content copied to clipboard!");
+  });
+
+  document.getElementById('bold').addEventListener('click', () => applyMarkdown('bold'));
+  document.getElementById('italic').addEventListener('click', () => applyMarkdown('italic'));
+  document.getElementById('link').addEventListener('click', () => applyMarkdown('link'));
 </script>
 
 </html>
