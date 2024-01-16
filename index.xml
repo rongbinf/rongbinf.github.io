@@ -9,6 +9,113 @@
     <lastBuildDate>Sat, 06 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>My ~Flow~ of Knowledge</title>
+      <link>https://fanrongbin.com/flow/</link>
+      <pubDate>Tue, 16 Jan 2024 13:57:27 +0800</pubDate>
+      <guid>https://fanrongbin.com/flow/</guid>
+      <description>&lt;p&gt;My flow (version 0.1) is based on &lt;a href=&#34;https://zettelkasten.de/posts/knowledge-cycle-efficiently-organize-writing-projects/&#34;&gt;The Knowledge Cycle&lt;/a&gt;:&lt;/p&gt;
+&lt;h2 id=&#34;1-research&#34;&gt;
+1. Research
+&lt;a href=&#34;#1-research&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s okay to be an omnivore as long as you keep your plate and tablecloth clean&lt;/li&gt;
+&lt;li&gt;What
+&lt;ul&gt;
+&lt;li&gt;Articles: RSS reader (NetNewsWire, shifting to self-hosting), mail inboxes for newsletters, social media&lt;/li&gt;
+&lt;li&gt;Books and Essays: Apple Books, PDF reader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Screen out those that I&amp;rsquo;m going to read&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Use my mobile devices&lt;/li&gt;
+&lt;li&gt;Do this to kill time when queuing, waiting&amp;hellip;&lt;/li&gt;
+&lt;li&gt;How
+&lt;ul&gt;
+&lt;li&gt;Send to a separate email address for later reading and archive&lt;/li&gt;
+&lt;li&gt;Delete those that I will not read. &lt;a href=&#34;https://zettelkasten.de/posts/collectors-fallacy/&#34;&gt;Don&amp;rsquo;t pile it up again.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Save/Archive&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;How
+&lt;ul&gt;
+&lt;li&gt;Pocket and Readwise Reader currently, shifting to &lt;a href=&#34;https://github.com/deathau/markdownload&#34;&gt;save as &lt;code&gt;*.md&lt;/code&gt; files&lt;/a&gt;&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;Raw &lt;code&gt;*.md&lt;/code&gt; files go to my OneDrive and later my NAS. Only keep notes and quotes in Obsidian.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-reading&#34;&gt;
+2. Reading
+&lt;a href=&#34;#2-reading&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;If the content can be understood by reading it once, don&amp;rsquo;t read it twice. If it should be read twice, then make a bookmark.&lt;/li&gt;
+&lt;li&gt;If I want to highlight, leave relevant notes as well.&lt;/li&gt;
+&lt;li&gt;Read articles on the computer, and books on the iPad.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-taking-lasting-notes&#34;&gt;
+3. Taking lasting notes
+&lt;a href=&#34;#3-taking-lasting-notes&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Note cards and reference cards (quotes):&lt;/strong&gt; Obsidian&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Highlight&lt;/strong&gt; will be moved from Readwise Reader to Obsidian reference cards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-compose-blog-posts-based-on-notes&#34;&gt;
+4. Compose blog posts based on notes
+&lt;a href=&#34;#4-compose-blog-posts-based-on-notes&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scheduled/Structured writing projects:&lt;/strong&gt; Logseq as my to-do list and to categorise&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Topics derive from readings:&lt;/strong&gt; Start the cycle again&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Curation:&lt;/strong&gt; &lt;em&gt;Hybrid&lt;/em&gt; project to share great articles, highlights, notes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To get into this &lt;em&gt;pure&lt;/em&gt; flow, step 0 is to: clear up my email inboxes, RSS reader, browser bookmarks, Books app on my iPad, and Telegram channels.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If it&amp;rsquo;s possible to subscribe via RSS, then embrace the good old RSS.&lt;/li&gt;
+&lt;li&gt;Curate the newsletter subscription list. Only keep those you feel necessary to be notified when new pieces come.
+&lt;ul&gt;
+&lt;li&gt;Receive important push notifications only. (especially for Telegram channels)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Minimise the usage of social media.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t follow the same public media on different platforms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-i-leave-platforms&#34;&gt;
+Why I leave platforms
+&lt;a href=&#34;#why-i-leave-platforms&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The main reason I turn to raw &lt;code&gt;*.md&lt;/code&gt; files and Obsidian is my upgraded appetite for long-lasting information as someone diagnosed with &lt;a href=&#34;https://zettelkasten.de/posts/collectors-fallacy/&#34;&gt;the collector&amp;rsquo;s fallacy&lt;/a&gt; and currently under treatment. I want to keep what I&amp;rsquo;ve read &lt;em&gt;offline&lt;/em&gt; and store it &lt;em&gt;locally&lt;/em&gt;, so no worrying about platforms shutting down, page URLs going invalid, or authors deleting the whole site (I know it&amp;rsquo;s their right to do so, and it&amp;rsquo;s also my right to download the public internet). This reduces my monthly expenses on SaaS, too.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;flow&#34;&gt;
+~Flow~
+&lt;a href=&#34;#flow&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Inspired by &lt;a href=&#34;https://zettelkasten.de/posts/overview&#34;&gt;the Zettelkasten blog series&lt;/a&gt;, I created this page to document my daily routine (of let&amp;rsquo;s say, &lt;em&gt;flow&lt;/em&gt;) of processing information and turning that into solid knowledge. I try to craft an organised, for-the-future, and go-offline-at-any-time learning system, so this page works as a storyteller of this journey, a guide for anyone who looks for similar purposes, and my manifesto to stick to this routine, &lt;em&gt;flow with the flow&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;While looking for suitable tools, I thought of starting a &lt;a href=&#34;https://en.wikipedia.org/wiki/Webring&#34;&gt;webring&lt;/a&gt; to gather insights into how others manage their knowledge and arrange their working/learning process, including tools and theories they employ. This can serve as a community to discuss, or an index for internet nomads to discover new ways and perspectives.&lt;/p&gt;
+&lt;p&gt;But why limit it to only be about productivity, about knowledge management? I simply ask myself. Every pursuit and every lifestyle has a unique flow in it to tell the story of &lt;em&gt;who I am&lt;/em&gt;, and taking a peek into how others &lt;em&gt;live&lt;/em&gt;, not just the &amp;ldquo;boring&amp;rdquo; how-you-take-notes, can give us so many fresh ideas and stories, same as what &lt;a href=&#34;https://nownownow.com/about&#34;&gt;now pages&lt;/a&gt;, &lt;a href=&#34;https://hackerstations.com/&#34;&gt;Hacker Station&lt;/a&gt;, and &lt;a href=&#34;https://www.theproofwellness.com/interviews&#34;&gt;The Proof&lt;/a&gt; has been doing. So this is &lt;strong&gt;&lt;a href=&#34;https://flow-webring.netlify.app/&#34;&gt;~Flow~&lt;/a&gt;,&lt;/strong&gt; a webring working as a bookmark to collect people&amp;rsquo;s flows, and a line connecting dots with thoughts on the internet. It can be about how you manage your knowledge, brew coffee, write codes, spend an ordinary Sunday afternoon, research, create, and many more. It is about &lt;strong&gt;you&lt;/strong&gt; and &lt;strong&gt;your way of life&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;More importantly, sharing your flow with others via a single webpage might help you establish a &lt;em&gt;way&lt;/em&gt; that you can stick to, keep changelogs, and iterate for a very long time. I&amp;rsquo;ve been caught up in productivity &lt;em&gt;tools&lt;/em&gt; for some time, doing nothing but digging the App Store, SSPAI, Product Hunt, and v2ex to find new apps. And this makes me almost forget the real support behind—thoughts. Tools are here to reduce the coefficient of friction in your workflow, but this coefficient starts at such a low level and will not bring a strong impact on your dependent variable, which is your solid output. This passion towards tools/applications seems to be alike coffee lovers pursuing better coffee machines, pots, percolators, or filters, but there&amp;rsquo;s no tangible result like a cup of wonderful espresso for you to enjoy without good coffee beans, water, and temperature. Coffee machine to coffee is what productivity tool to productivity.&lt;/p&gt;
+&lt;p&gt;Jot down your flow, practice it, make it better, and write down why—it&amp;rsquo;s a fresh start.&lt;/p&gt;
+&lt;div style=&#34;width:88px;height:31px;display:flex;flex-direction:row;&#34;&gt;
+&lt;a class=&#34;no-external&#34; href=&#34;https://flow-webring.netlify.app/rongbin/previous&#34;&gt;&lt;img src=&#34;https://flow-webring.netlify.app/flow-badge-prev-next.png&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;no-external&#34; href=&#34;https://flow-webring.netlify.app&#34;&gt;&lt;img src=&#34;https://flow-webring.netlify.app/flow-badge.gif&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;no-external&#34; href=&#34;https://flow-webring.netlify.app/rongbin/next&#34;&gt;&lt;img src=&#34;https://flow-webring.netlify.app/flow-badge-prev-next.png&#34;&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    <item>
       <title>用 Webmention 接收 Mastodon 互动</title>
       <link>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</link>
       <pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate>
@@ -3809,6 +3916,66 @@ Daily Life
 
 
 
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-15-reading-is-really-searching&#34;&gt;
+
+
+Note: 
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream-inner e-content&#34;&gt;
+    &lt;a href=&#34;https://zettelkasten.de/posts/reading-is-searching/&#34;&gt;Reading is really searching.&lt;/a&gt;
+&lt;/div&gt;
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+
+
+&lt;p class=&#34;stream-meta&#34;&gt;
+    &lt;span class=&#34;p-author h-card&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-01-15T19:50:32&amp;#43;08:00&#34; title=&#34;2024-01-15T19:50:32&amp;#43;08:00&#34;&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-01-15-reading-is-really-searching&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-01-15-reading-is-really-searching&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;19:50 (&amp;#43;08) Mon 15 January 2024&lt;/a&gt;
+        
+    &lt;/time&gt;
+    
+&lt;/p&gt;
+
+
+
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 &lt;div class=&#34;stream h-entry&#34; id=&#34;2024-01-11-zenbook-duo&#34;&gt;
 
 
@@ -4967,17 +5134,17 @@ function updateRatingsToStars() {
     for (var element of ratingElements) {
         var ratingText = element.innerText; // 如：&#34;(3.5)&#34;
         var rating = parseFloat(ratingText.match(/\d+(\.\d+)?/)[0]);
-
+    
         var stars = &#39;&#39;;
-
+    
         for (var i = 0; i &lt; Math.floor(rating); i++) {
             stars += &#39;★&#39;;
         }
-
+    
         if (rating % 1 &gt;= 0.5) {
             stars += &#39;⯪&#39;;
         }
-
+    
         element.innerHTML = stars;
     }
 }
@@ -5023,12 +5190,12 @@ const loadCalendarDays = () =&gt; {
     let firstDay = (new Date(currentYear, currentMonth)).getDay();
     firstDay = firstDay === 0 ? 6 : firstDay - 1; // Adjust for Monday start
     let daysInMonth = 32 - new Date(currentYear, currentMonth, 32).getDate();
-
+    
     for (let i = 0; i &lt; firstDay; i++) {
         let cell = document.createElement(&#34;div&#34;);
         calendar.appendChild(cell);
     }
-
+    
     for (let i = 1; i &lt;= daysInMonth; i++) {
         let cell = document.createElement(&#34;div&#34;);
         cell.className = &#34;day&#34;;
@@ -5086,24 +5253,24 @@ const updateCalendarColors = () =&gt; {
     publishedItems.forEach(item =&gt; {
         const datetime = item.getAttribute(&#39;datetime&#39;);
         const date = datetime.split(&#39;T&#39;)[0];
-
+    
         if (dateCounts[date]) {
             dateCounts[date]++;
         } else {
             dateCounts[date] = 1;
         }
     });
-
+    
     for (const datetime in dateCounts) {
         const count = dateCounts[datetime];
         const date = datetime.split(&#39;T&#39;)[0];
         const [year, month, day] = date.split(&#39;-&#39;).map(Number);
         const calendarDay = document.querySelector(`.day[data-date=&#34;${year}-${String(month).padStart(2, &#39;0&#39;)}-${String(day).padStart(2, &#39;0&#39;)}&#34;]`);
-
+    
         if (calendarDay) {
             const opacity = Math.min(1, 0.2 + count * 0.1);
             calendarDay.style.backgroundColor = `rgba(200, 255, 115, ${opacity})`;
-
+    
             if (isDarkMode &amp;&amp; opacity &gt; 0.4) {
                 calendarDay.classList.add(&#39;dark-mode-black-text&#39;);
             } else {
