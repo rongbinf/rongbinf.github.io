@@ -6,8 +6,81 @@
     <description>Recent content on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 06 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jan 2024 16:59:25 +0800</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Set up your Thunderbird on Windows</title>
+      <link>https://fanrongbin.com/set-up-your-thunderbird-on-windows/</link>
+      <pubDate>Sun, 21 Jan 2024 16:59:25 +0800</pubDate>
+      <guid>https://fanrongbin.com/set-up-your-thunderbird-on-windows/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using &lt;a href=&#34;https://www.thunderbird.net/&#34;&gt;Thunderbird&lt;/a&gt; for about a year starting from I shifted to Windows. There are three reasons why you should use Thunderbird on Windows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;It&amp;rsquo;s open-source and free.&lt;/li&gt;
+&lt;li&gt;It supports &lt;a href=&#34;https://en.wikipedia.org/wiki/Pretty_Good_Privacy&#34;&gt;PGP&lt;/a&gt; encryption and some end-to-end chat services, and they are built-in features.&lt;/li&gt;
+&lt;li&gt;Every email service works pretty well here. So you finally have &lt;em&gt;one place&lt;/em&gt; to put all your accounts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And it&amp;rsquo;s so much lighter and has fewer problems than Outlook.&lt;/p&gt;
+&lt;h2 id=&#34;icloud-calendars&#34;&gt;
+iCloud Calendars
+&lt;a href=&#34;#icloud-calendars&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;If you don&amp;rsquo;t want to give up iCloud.&lt;/p&gt;
+&lt;p&gt;To sync iCloud calendars on Thunderbird:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install two extensions: &lt;a href=&#34;https://github.com/jobisoft/TbSync&#34;&gt;TbSync&lt;/a&gt; and &lt;a href=&#34;https://github.com/jobisoft/DAV-4-TbSync/&#34;&gt;Provider for CalDAV &amp;amp; CardDAV (DAV-4-TbSync)&lt;/a&gt;. You can search extensions on &lt;a href=&#34;https://addons.thunderbird.net&#34;&gt;addons.thunderbird.net&lt;/a&gt; or &lt;code&gt;Settings → Add-ons and Themes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Get an app-specific password from your &lt;a href=&#34;https://appleid.apple.com/&#34;&gt;iCloud&lt;/a&gt; &lt;code&gt;Dashboard → Security → Generate Password...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add your iCloud account to TbSync using CalDAV&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;how-to-add-your-icloud-account-to-tbsync&#34;&gt;
+How to add your iCloud account to TbSync
+&lt;a href=&#34;#how-to-add-your-icloud-account-to-tbsync&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/20240121172235.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to TbSync settings&lt;/li&gt;
+&lt;li&gt;Add your account using CalDAV&lt;/li&gt;
+&lt;li&gt;Choose &lt;code&gt;iCloud&lt;/code&gt; on the pop-up window&lt;/li&gt;
+&lt;li&gt;Fill in your iCloud email address and your app-specific password&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;default-descending-view&#34;&gt;
+Default Descending View
+&lt;a href=&#34;#default-descending-view&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Thunderbird sorts emails in ascending order by default when you add a new account.&lt;/p&gt;
+&lt;p&gt;Go to &lt;code&gt;Settings → Preference → Config Editor... (at the end of the page)&lt;/code&gt;, search &lt;code&gt;mailnews.default&lt;/code&gt;, change the value of &lt;code&gt;mailnews.default_sort_order&lt;/code&gt; from &lt;code&gt;1&lt;/code&gt; to &lt;code&gt;2&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can find the meaning of types and values, and the add-on to change this &lt;a href=&#34;https://superuser.com/questions/13518/change-the-default-sorting-order-in-thunderbird&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;encrypted-emails&#34;&gt;
+Encrypted Emails
+&lt;a href=&#34;#encrypted-emails&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Go to &lt;code&gt;Settings → Account Settings → [your email] → End-To-End Encryption&lt;/code&gt;, and you can add an OpenPGP key for this email account. You can either import&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;If you already have an OpenPGP key, then you should import rather than generate a new one so that you won&amp;rsquo;t lose access to encrypted emails using your old key.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt; or create a new key if you are new to the encrypted email world.&lt;/p&gt;
+&lt;p&gt;If your recipient doesn&amp;rsquo;t know how to decrypt, &lt;em&gt;maybe it&amp;rsquo;s better not to encrypt then.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;encrypted-chat-services&#34;&gt;
+Encrypted Chat Services
+&lt;a href=&#34;#encrypted-chat-services&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Thunderbird supports &lt;a href=&#34;https://en.wikipedia.org/wiki/Internet_Relay_Chat&#34;&gt;IRC&lt;/a&gt;, &lt;a href=&#34;https://martix.org/&#34;&gt;Matrix&lt;/a&gt;, &lt;a href=&#34;https://ok.ru/&#34;&gt;Odnoklassniki&lt;/a&gt;, &lt;a href=&#34;https://xmpp.org/uses/instant-messaging/&#34;&gt;XMPP&lt;/a&gt; currently. You can add your account at the same place you add your email, or on the Chat view.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Just don&amp;rsquo;t forget to click the button on the bottom left to toggle online/offline if everything is still grey.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;more-about-thunderbird&#34;&gt;
+More about Thunderbird
+&lt;a href=&#34;#more-about-thunderbird&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;You can read your &lt;a href=&#34;https://blog.thunderbird.net/2022/05/thunderbird-rss-feeds-guide-favorite-content-to-the-inbox/&#34;&gt;RSS feeds on Thunderbird&lt;/a&gt;.&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;I don&amp;rsquo;t do this cause I want to separate reading emails and RSS feeds. You can add some feeds that you&amp;rsquo;d like to receive notifications when updated to Thunderbird.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;You can use &lt;a href=&#34;https://github.com/Extended-Thunder/send-later&#34;&gt;Send Later&lt;/a&gt; to set up when to send your email, and even make it default to delay for some minutes when clicking &amp;ldquo;Send&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kb.mozillazine.org/Figuring_out_whether_the_recipient_read_your_message#:~:text=You%20can%20specify%20what%20Thunderbird%20should%20do%20when%20it%20gets%20a%20request%20to%20send%20a%20return%20receipt%20in%20%22Tools%20%2D%3E%20Options%20%2D%3E%20Advanced%20%2D%3E%20General%20%2D%3E%20Return%20receipts%22.&#34;&gt;Return Receipt&lt;/a&gt; and &lt;a href=&#34;https://kb.mozillazine.org/Figuring_out_whether_the_recipient_read_your_message#:~:text=Use%20%22Options%20%2D%3E%20Delivery%20Status%20Notification%22%20when%20composing%20a%20message%20to%20request%20a%20DSN%20receipt.&#34;&gt;Delivery Status Notification&lt;/a&gt; are not always working, because some email clients redact this request by default, e.g. Gmail.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll need to do some configuration for Microsoft Exchange. For me, again I want to separate &lt;em&gt;work in my real life&lt;/em&gt; and &lt;em&gt;me on the internet&lt;/em&gt; so I just keep the Exchange account in Outlook. (And it&amp;rsquo;s easier for IT)&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>My ~Flow~ of Knowledge</title>
       <link>https://fanrongbin.com/flow/</link>
