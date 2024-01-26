@@ -48,15 +48,10 @@
       "url" : "https://fanrongbin.com/"
     }
   </script>
-
-    <link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/links">
-    <link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
-
 </head>
 
 <style>
-    main,
-    .context {
+    main, .context {
         grid-column: 2/-1;
     }
 
@@ -152,137 +147,8 @@
         visibility: hidden;
     }
 
-    /* webmentions */
-
-    .webmentions-how {
-        font-size: 90%;
-        font-style: italic;
-        opacity: 0.6;
-        padding-top: 4rem;
-    }
-
-    #webmentions,
-    .webmentions-how,
-    .stream-webmention {
-        margin: 0;
-        line-height: 1.2em;
-        grid-column: 2/6;
-    }
-
-    .stream-webmention {
-        font-style: initial;
-        font-family: var(--sans);
-        margin: 0 10%;
-        width: 80%;
-    }
-
-    #webmentions .comments,
-    .stream-webmention .comments {
-        max-height: 40em;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        font-size: 90%;
-    }
-
-    #webmentions h2 {
-        font-size: medium;
-    }
-
-    .stream-webmention h2 {
-        font-size: 80%;
-        opacity: .6;
-        font-weight: normal;
-        margin: 0;
-        max-width: unset;
-        text-transform: lowercase;
-        text-align: center;
-    }
-
-    .stream-webmention h2::before {
-        content: "all ";
-    }
-
-    #webmentions .reacts img,
-    .stream-webmention .reacts img {
-        margin: 3px -1ex 1px 0;
-    }
-
-    #webmentions img.missing,
-    .stream-webmention img.missing {
-        background: white;
-        border: solid transparent 1px;
-    }
-
-    #webmentions ul,
-    .stream-webmention ul {
-        list-style-type: none;
-    }
-
-    #webmentions a.reaction,
-    .stream-webmention a.reaction {
-        border-bottom: none;
-    }
-
-    #webmentions a.reaction::after,
-    a.source::after,
-    .stream-webmention a.reaction::after {
-        content: none;
-    }
-
-    #webmentions a.reaction,
-    .stream-webmention a.reaction {
-        position: relative;
-        text-decoration: none;
-        text-shadow: 0px 0px 3px white;
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    #webmentions a.reaction img,
-    .stream-webmention a.reaction img {
-        max-height: 2rem;
-        width: auto;
-        border-radius: 25%;
-        display: inline;
-        position: relative;
-        top: 10px;
-    }
-
-    #webmentions a.reaction sub,
-    .stream-webmention a.reaction sub {
-        font-size: 85%;
-    }
-
-    #webmentions .comments li,
-    .stream-webmention .comments li {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        display: grid;
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: 4rem 30ch 1fr;
-        align-items: end;
-    }
-
-    #webmentions .comments li .text,
-    .stream-webmention .comments li .text,
-    #webmentions .comments li .name {
-        color: var(--text-color);
-        grid-row: 2;
-        grid-column: 1/span2;
-        padding: 1ch 0 2ch 0;
-    }
-
-    #webmentions .comments li .source,
-    .stream-webmention .comments li .source {
-        font-weight: bold;
-        grid-row: 1;
-        grid-column: 2;
-    }
-
     @media (min-width: 1200px) {
-
-        main,
-        .context {
+        main, .context {
             grid-column: 2/6;
         }
     }
@@ -294,26 +160,19 @@
     }
 
     @media (max-width: 1000px) {
-
         main,
-        #giscus,
-        #webmention-area {
+        #giscus {
             grid-column: 1/-1;
         }
-
         .context {
             padding: 2ch;
         }
     }
 
-    @media only screen and (max-width: 900px) {
-
-        main,
-        .context,
-        .heading {
+    @media only screen and (max-width: 800px) {
+        main, .context {
             grid-column: 1/-1;
         }
-
         .profile-grid {
             grid-template-columns: repeat(3, 1fr);
             grid-row-gap: 1.5rem;
@@ -327,6 +186,10 @@
         .avatar {
             width: 7rem;
             height: 7rem;
+        }
+
+        .name {
+            font-size: 1.5rem;
         }
 
         .profile-tag {
@@ -402,15 +265,6 @@
                     <p><a class="button is-pill is-outline profile-button the-link" href="https://foreverliketh.is/"
                             target="_blank">Website</a></p>
                 </div>
-                <div class="profile" id="hiyyq">
-                    <div class="avatar"><img src="https://hiyyq.cn/images/avatar.png"></div>
-                    <span class="status">
-                        <p class="name-tag">YYQ</p><span class="online"></span>
-                    </span>
-                    <button class="profile-tag" style="background: #3797ff;">#tech</button>
-                    <p><a class="button is-pill is-outline profile-button the-link" href="http://hiyyq.cn"
-                            target="_blank">Blog</a></p>
-                </div>
                 <div class="profile" id="placeholder">
                     <div class="avatar"></div>
                     <span class="status">
@@ -422,14 +276,10 @@
                 </div>
             </div>
 
-            <script src="/webmention.min.js" defer></script>
-
-
             <div class="guestbook-comment">
-                <div id="webmention-area">
-                    <p>Leave a comment or send a webmention to this page.</p>
-                    <div id="webmentions"></div>
-                </div>
+                <p>
+                    Leave a comment:
+                </p>
                 <div id="giscus">
                     <script id="giscus-script" src="https://giscus.app/client.js" data-repo="rongbinf/giscus-comment"
                         data-repo-id="R_kgDOK3UYzw" data-category="Announcements"
@@ -442,13 +292,14 @@
             </div>
 
 
+
         </section>
 
 
         <section id="footer" class="footer" style="margin-bottom:0;padding-top:2ch;padding-bottom: 0;">
             <p>© 2049</p>
         </section>
-
+    
     </main>
 </body>
 
@@ -503,23 +354,23 @@
 <!-- disable viewport zooming on iOS -->
 <script defer>
     window.onload = function () {
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        });
-        var lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-        document.addEventListener('gesturestart', function (event) {
-            event.preventDefault();
-        });
+      document.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      });
+      var lastTouchEnd = 0;
+      document.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
+      document.addEventListener('gesturestart', function (event) {
+        event.preventDefault();
+      });
     }
-</script>
-<script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </script>
+
 </html>

@@ -1,626 +1,506 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" dir="ltr">
+<html lang="en">
+
 <head>
-  <title>Guestbook - Rongbin&#39;s Blog</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<meta name="description"
-    content="Miang
-#animeBangumi
-An Zifan
-#front-endWebsite
-张洪Heo
-#techBlog
-foreverliketh.is
-#creativeWebsite
-Your site
-#labelLink
-Leave a comment: ">
-<link rel="canonical" href="https://fanrongbin.com/links/" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <title>Guestbook | Rongbin FAN</title>
+    <meta name="description" content="Are you willing to, able to, imagine an alternative reality?">
+    <meta name="author" content="Rongbin FAN">
 
+    <meta property="og:title" content="Guestbook | Rongbin FAN" />
+    <meta property="og:description" content="Are you willing to, able to, imagine an alternative reality?" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fanrongbin.com" />
+    <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+    <meta name="twitter:title" content="Rongbin FAN" />
+    <meta name="twitter:description" content="Thoughts and ideas." />
 
+    <meta name="application-name" content="Rongbin FAN">
+    <meta name="apple-mobile-web-app-title" content="Rongbin FAN">
+    <meta name="theme-color" content="#fff">
+    <meta name="msapplication-TileColor" content="#fff">
 
+    <meta name="google-site-verification" content="f9S1PcORQC1rTiGZYbp79oBJ-nNHN_CBQ8yGhW_rufs" />
+    <meta name="msvalidate.01" content="6DFC6C69D3CAC309F3ED39EA45B19F2A" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-      <link rel="stylesheet" href="/css/main.min.84898193bbb221a3656f7b249fa8d5f0f82aca74e26f1d05e325d9ad693a8223.css" integrity="sha256-hImBk7uyIaNlb3skn6jV8PgqynTibx0F4yXZrWk6giM=" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-<link rel="stylesheet" href="/han.min.css" type="text/css">
+    <link rel="icon" ref="/favicon.svg">
+    <link rel="mask-icon" href=”/favicon.svg” color="#000">
 
-      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+    <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
 
+    <link rel="stylesheet" href="/main.css">
+    <!-- <script src="/clipboard.min.js"></script> -->
 
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Rongbin FAN",
+      "url" : "https://fanrongbin.com/"
+    }
+  </script>
+
+    <link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/links">
+    <link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
 
 </head>
-<body class="han-init-context">
-  <section class="navbar">
-    <span class="header-name"><a href="/" class="header-link">Rongbin FAN</a> / <a href="/posts" class="header-link">Blog</a>
-<br><a href="/links" class="header-link header-guestbook">◩ Guestbook</a>
-</span>
-
-
-  </section>
-    
-
-<section class="content-header">
-
-  <div class="top-scroll-bar"></div>
-<div class="addn visible">
-<div id="show-hypo" class="header-button no-select"><a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;">Hypothes.is</a></div>
-<div id="contents-fixed" class="header-button no-select"><a onclick="toggleContents()" style="color:var(--textcolor);text-decoration:none;border:none;">Contents</a></div>
-</div>
-<div id="contents-toc" class="no-select">
-    <nav id="TableOfContents"></nav>
-</div>
-
-  <div id="single-header">
-    <h1 class="content-h1">Guestbook</h1>
-  </div>
-
-</section>
 
 <style>
-  div.color {
-    background: linear-gradient(var(--textcolor) 0,transparent 25%);
-    opacity: .5;
-  }
-</style>
+    main,
+    .context {
+        grid-column: 2/-1;
+    }
 
+    img {
+        margin: unset;
+        width: inherit;
+    }
 
-    <div class="color"></div>
-  <main>
-    
+    .guestbook-comment {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .profile-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+    }
 
-
-<style>
-	main { grid-column: 2/-1; }
-	.color { display:none; }
-	img {margin:unset;}
-	.guestbook-comment {
-		display: grid;
-		grid-template-columns: repeat(2,1fr);
-	}
-	.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0,1fr));
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-  }
-
-  .profile {
-    /* backdrop-filter: blur(10px);
+    .profile {
+        /* backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background-blend-mode: exclusion;
     background: rgba(255, 255, 255, 0.35); */
-    padding: 2rem;
-    /* box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.1); */
+        padding: 2rem;
+        /* box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.1); */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
-    transition: box-shadow .2s, -webkit-box-shadow .2s;
-  }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
-  .profile:hover {
-    box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.25);
-    transition: box-shadow .2s, -webkit-box-shadow .2s;
-  }
-
-  .avatar {
-    overflow: hidden;
-    border-radius: 9999px;
-    box-shadow: 0 0 10px 1px rgb(170 170 170 / 25%);
-    background: #bcbcbc8a;
-    width: 100px;
-    height: 100px;
-  }
-
-  .avatar-8831 {
-    transform: rotate(-20deg);
-    background-repeat: space;
-  }
-
-  .name-tag {
-    margin-top: 1rem;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-
-  .status {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .online {
-    height: 8px;
-    width: 8px;
-    background-color: #bbb;
-    border-radius: 9999px;
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .profile-tag {
-    padding: 2px;
-    border: none;
-    color: white;
-    margin-bottom: 0.5em;
-    font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
-    font-size: .8rem;
-  }
-
-  .the-link {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-	@media (min-width: 1200px) {
-		main {grid-column:2/6;}
-  }
-  
-  	@media (max-width: 1400px) {
-  	.profile-grid {grid-template-columns: repeat(4, minmax(0,1fr));}
-  	}
-  
-	@media (max-width: 1000px) {
-		main, #giscus {grid-column:1/-1;}
-	}
-
-  @media only screen and (max-width: 830px) {
-    .profile-grid {
-      grid-template-columns: repeat(3, 1fr);
-      grid-row-gap: 1.5rem;
-      grid-column-gap: 1.5rem;
+        transition: box-shadow .2s, -webkit-box-shadow .2s;
     }
 
-    .profile {
-      padding: 1.5rem;
+    .profile:hover {
+        box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.25);
+        transition: box-shadow .2s, -webkit-box-shadow .2s;
     }
-    
+
     .avatar {
-      width: 7rem;
-      height: 7rem;
+        overflow: hidden;
+        border-radius: 9999px;
+        box-shadow: 0 0 10px 1px rgb(170 170 170 / 25%);
+        background: #bcbcbc8a;
+        width: 100px;
+        height: 100px;
     }
-    
-    .name {
-      font-size: 1.5rem;
+
+    .avatar-8831 {
+        transform: rotate(-20deg);
+        background-repeat: space;
     }
-    
+
+    .name-tag {
+        margin-top: 1rem;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .status {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .online {
+        height: 8px;
+        width: 8px;
+        background-color: #bbb;
+        border-radius: 9999px;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
     .profile-tag {
-      font-size: 1rem;
-    }
-  }
-
-  @media only screen and (max-width: 630px) {
-    .profile-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-row-gap: 1rem;
-      grid-column-gap: 1rem;
+        padding: 2px;
+        border: none;
+        color: white;
+        margin-bottom: 0.5em;
+        font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+        font-size: .8rem;
     }
 
-    .profile {
-      padding: 1rem;
+    .the-link {
+        opacity: 0;
+        visibility: hidden;
     }
-  }
+
+    /* webmentions */
+
+    .webmentions-how {
+        font-size: 90%;
+        font-style: italic;
+        opacity: 0.6;
+        padding-top: 4rem;
+    }
+
+    #webmentions,
+    .webmentions-how,
+    .stream-webmention {
+        margin: 0;
+        line-height: 1.2em;
+        grid-column: 2/6;
+    }
+
+    .stream-webmention {
+        font-style: initial;
+        font-family: var(--sans);
+        margin: 0 10%;
+        width: 80%;
+    }
+
+    #webmentions .comments,
+    .stream-webmention .comments {
+        max-height: 40em;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        font-size: 90%;
+    }
+
+    #webmentions h2 {
+        font-size: medium;
+    }
+
+    .stream-webmention h2 {
+        font-size: 80%;
+        opacity: .6;
+        font-weight: normal;
+        margin: 0;
+        max-width: unset;
+        text-transform: lowercase;
+        text-align: center;
+    }
+
+    .stream-webmention h2::before {
+        content: "all ";
+    }
+
+    #webmentions .reacts img,
+    .stream-webmention .reacts img {
+        margin: 3px -1ex 1px 0;
+    }
+
+    #webmentions img.missing,
+    .stream-webmention img.missing {
+        background: white;
+        border: solid transparent 1px;
+    }
+
+    #webmentions ul,
+    .stream-webmention ul {
+        list-style-type: none;
+    }
+
+    #webmentions a.reaction,
+    .stream-webmention a.reaction {
+        border-bottom: none;
+    }
+
+    #webmentions a.reaction::after,
+    a.source::after,
+    .stream-webmention a.reaction::after {
+        content: none;
+    }
+
+    #webmentions a.reaction,
+    .stream-webmention a.reaction {
+        position: relative;
+        text-decoration: none;
+        text-shadow: 0px 0px 3px white;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #webmentions a.reaction img,
+    .stream-webmention a.reaction img {
+        max-height: 2rem;
+        width: auto;
+        border-radius: 25%;
+        display: inline;
+        position: relative;
+        top: 10px;
+    }
+
+    #webmentions a.reaction sub,
+    .stream-webmention a.reaction sub {
+        font-size: 85%;
+    }
+
+    #webmentions .comments li,
+    .stream-webmention .comments li {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: 4rem 30ch 1fr;
+        align-items: end;
+    }
+
+    #webmentions .comments li .text,
+    .stream-webmention .comments li .text,
+    #webmentions .comments li .name {
+        color: var(--text-color);
+        grid-row: 2;
+        grid-column: 1/span2;
+        padding: 1ch 0 2ch 0;
+    }
+
+    #webmentions .comments li .source,
+    .stream-webmention .comments li .source {
+        font-weight: bold;
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    @media (min-width: 1200px) {
+
+        main,
+        .context {
+            grid-column: 2/6;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .profile-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 1000px) {
+
+        main,
+        #giscus,
+        #webmention-area {
+            grid-column: 1/-1;
+        }
+
+        .context {
+            padding: 2ch;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+
+        main,
+        .context,
+        .heading {
+            grid-column: 1/-1;
+        }
+
+        .profile-grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 1.5rem;
+            grid-column-gap: 1.5rem;
+        }
+
+        .profile {
+            padding: 1.5rem;
+        }
+
+        .avatar {
+            width: 7rem;
+            height: 7rem;
+        }
+
+        .profile-tag {
+            font-size: 1rem;
+        }
+    }
+
+    @media only screen and (max-width: 630px) {
+        .profile-grid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 1rem;
+            grid-column-gap: 1rem;
+        }
+
+        .profile {
+            padding: 1rem;
+        }
+    }
 </style>
 
+<body>
 
+    <main class="main">
 
-      <div class="profile-grid">
-        <div class="profile" id="miang">
-          <div class="avatar"><img src="https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg"></div>
-          <span class="status">
-            <p class="name-tag">Miang</p><span class="online"></span>
-          </span>
-          <button class="profile-tag" style="background: #ea4c89;">#anime</button>
-          <p><a class="button is-pill is-outline profile-button the-link" href="https://bgm.tv/anime/list/miang"
-              target="_blank">Bangumi</a></p>
-        </div>
-        <div class="profile" id="anzifan">
-          <div class="avatar"><img src="https://avatars.githubusercontent.com/u/38721913?v=4"></div>
-          <span class="status">
-            <p class="name-tag">An Zifan</p><span class="online"></span>
-          </span>
-          <button class="profile-tag" style="background: #ffe100; color: #000;">#front-end</button>
-          <p><a class="button is-pill is-outline profile-button the-link" href="https://www.anzifan.com"
-              target="_blank">Website</a></p>
-        </div>
-        <div class="profile" id="zhheo">
-          <div class="avatar"><img src="https://bu.dusays.com/2022/12/28/63ac2812183aa.png"></div>
-          <span class="status">
-            <p class="name-tag">张洪Heo</p><span class="online"></span>
-          </span>
-          <button class="profile-tag" style="background: #3797ff;">#tech</button>
-          <p><a class="button is-pill is-outline profile-button the-link" href="https://blog.zhheo.com/"
-              target="_blank">Blog</a></p>
-        </div>
-        <div class="profile" id="foreverlikethis">
-          <div class="avatar avatar-8831" style="background-image: url(https://img.fanrongbin.com/foreverliketh.is.png);"></div>
-          <span class="status">
-            <p class="name-tag">foreverliketh.is</p><span class="online"></span>
-          </span>
-          <button class="profile-tag" style="background: #aa42ff;">#creative</button>
-          <p><a class="button is-pill is-outline profile-button the-link" href="https://foreverliketh.is/"
-              target="_blank">Website</a></p>
-        </div>
-        <div class="profile" id="placeholder">
-          <div class="avatar"></div>
-          <span class="status">
-            <p class="name-tag">Your site</p><span class="online"></span>
-          </span>
-          <button class="profile-tag" style="background: #7e7e7e;">#label</button>
-          <p><a class="button is-pill is-outline profile-button the-link" href="http://none.none"
-              target="_blank">Link</a></p>
-        </div>
-      </div>
-      
-      <div class="guestbook-comment">
-        <p>
-          Leave a comment:
-        </p>
-        <div id="giscus">
-          <script id="giscus-script"
-                  src="https://giscus.app/client.js"
-                  data-repo="rongbinf/giscus-comment"
-                  data-repo-id="R_kgDOK3UYzw"
-                  data-category="Announcements"
-                  data-category-id="DIC_kwDOK3UYz84Cbl2R"
-                  data-mapping="title"
-                  data-strict="0"
-                  data-reactions-enabled="0"
-                  data-emit-metadata="0"
-                  data-input-position="top"
-                  data-theme="https://fanrongbin.com/giscus.css"
-                  data-lang="en"
-                  data-loading="lazy"
-                  crossorigin="anonymous"
-                  async>
-          </script>        
-        </div>
-      </div>
-      
-      <!-- detect website status -->
-<script defer>
-  document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://website-status.fanrongbin.com')
-      .then(response => response.json())
-      .then(data => {
-        data.forEach(item => {
-          // 找到对应 URL 的链接元素
-          const link = document.querySelector(`a[href="${item.url}"]`);
-          if (link) {
-            const profile = link.closest('.profile');
-            if (profile) {
-              // 获取对应的 <span class="online"> 元素
-              const onlineIndicator = profile.querySelector('.online');
-              if (onlineIndicator) {
-                // 根据状态设置背景颜色
-                onlineIndicator.style.backgroundColor = item.status === 200 ? '#00df07' : 'red';
-              }
+        <section class="heading heading-name">
+            <h1><a href="/" id="home">Rongbin FAN</a> / Guestbook</h1>
+        </section>
 
-              // 找到对应的 .the-link 按钮
-              const theLinkButton = profile.querySelector('.the-link');
-              if (theLinkButton) {
-                // 设置动画
-                theLinkButton.style.opacity = '0';
-                theLinkButton.style.visibility = 'hidden';
-                theLinkButton.style.transition = 'all .2s ease-in-out';
-    
-                // 状态处理
-                if (item.status === 200) {
-                  // 显示按钮
-                  theLinkButton.style.opacity = '1';
-                  theLinkButton.style.visibility = 'visible';
-                } else {
-                  // 显示 "Offline" 并隐藏链接
-                  theLinkButton.textContent = 'Offline';
-                  theLinkButton.removeAttribute('href');
-                  theLinkButton.style.opacity = '0.5';
-                  theLinkButton.style.visibility = 'visible';
-                }
-              }
-            }
-          }
-        });
-      })
-      .catch(error => console.error('Error:', error));
-  });
-</script>
+        <!-- <section class="heading heading-general">
+            <h1 class="intro"><strong>Guestbook</strong></h1>
+        </section> -->
+
+        <section class="context">
 
 
 
+            <div class="profile-grid">
+                <div class="profile" id="miang">
+                    <div class="avatar"><img src="https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg">
+                    </div>
+                    <span class="status">
+                        <p class="name-tag">Miang</p><span class="online"></span>
+                    </span>
+                    <button class="profile-tag" style="background: #ea4c89;">#anime</button>
+                    <p><a class="button is-pill is-outline profile-button the-link"
+                            href="https://bgm.tv/anime/list/miang" target="_blank">Bangumi</a></p>
+                </div>
+                <div class="profile" id="anzifan">
+                    <div class="avatar"><img src="https://avatars.githubusercontent.com/u/38721913?v=4"></div>
+                    <span class="status">
+                        <p class="name-tag">An Zifan</p><span class="online"></span>
+                    </span>
+                    <button class="profile-tag" style="background: #ffe100; color: #000;">#front-end</button>
+                    <p><a class="button is-pill is-outline profile-button the-link" href="https://www.anzifan.com"
+                            target="_blank">Website</a></p>
+                </div>
+                <div class="profile" id="zhheo">
+                    <div class="avatar"><img src="https://bu.dusays.com/2022/12/28/63ac2812183aa.png"></div>
+                    <span class="status">
+                        <p class="name-tag">张洪Heo</p><span class="online"></span>
+                    </span>
+                    <button class="profile-tag" style="background: #3797ff;">#tech</button>
+                    <p><a class="button is-pill is-outline profile-button the-link" href="https://blog.zhheo.com/"
+                            target="_blank">Blog</a></p>
+                </div>
+                <div class="profile" id="foreverlikethis">
+                    <div class="avatar avatar-8831"
+                        style="background-image: url(https://img.fanrongbin.com/foreverliketh.is.png);"></div>
+                    <span class="status">
+                        <p class="name-tag">foreverliketh.is</p><span class="online"></span>
+                    </span>
+                    <button class="profile-tag" style="background: #aa42ff;">#creative</button>
+                    <p><a class="button is-pill is-outline profile-button the-link" href="https://foreverliketh.is/"
+                            target="_blank">Website</a></p>
+                </div>
+                <div class="profile" id="hiyyq">
+                    <div class="avatar"><img src="https://hiyyq.cn/images/avatar.png"></div>
+                    <span class="status">
+                        <p class="name-tag">YYQ</p><span class="online"></span>
+                    </span>
+                    <button class="profile-tag" style="background: #3797ff;">#tech</button>
+                    <p><a class="button is-pill is-outline profile-button the-link" href="http://hiyyq.cn"
+                            target="_blank">Blog</a></p>
+                </div>
+                <div class="profile" id="placeholder">
+                    <div class="avatar"></div>
+                    <span class="status">
+                        <p class="name-tag">Your site</p><span class="online"></span>
+                    </span>
+                    <button class="profile-tag" style="background: #7e7e7e;">#label</button>
+                    <p><a class="button is-pill is-outline profile-button the-link" href="http://none.none"
+                            target="_blank">Link</a></p>
+                </div>
+            </div>
 
-  </main>
-  
-  <footer class="opacity-6">
-    <p><a href="/#colophon">Colophon</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p><p>© Rongbin FAN</p>
-  </footer>
+            <script src="/webmention.min.js" defer></script>
+
+
+            <div class="guestbook-comment">
+                <div id="webmention-area">
+                    <p>Leave a comment or send a webmention to this page.</p>
+                    <div id="webmentions"></div>
+                </div>
+                <div id="giscus">
+                    <script id="giscus-script" src="https://giscus.app/client.js" data-repo="rongbinf/giscus-comment"
+                        data-repo-id="R_kgDOK3UYzw" data-category="Announcements"
+                        data-category-id="DIC_kwDOK3UYz84Cbl2R" data-mapping="title" data-strict="0"
+                        data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top"
+                        data-theme="https://fanrongbin.com/giscus.css" data-lang="en" data-loading="lazy"
+                        crossorigin="anonymous" async>
+                        </script>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <section id="footer" class="footer" style="margin-bottom:0;padding-top:2ch;padding-bottom: 0;">
+            <p>© 2049</p>
+        </section>
+
+    </main>
 </body>
-<script src="/han.min.js"></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        if (document.querySelector('.content-header')) {
-            document.getElementById('show-hypo').style.display = 'flex';
-        }
-
-        applyBreakAllClass();
-
-        handleScrollEvents();
-
-        initializeTOCFeatures();
-    });
-
-    window.addEventListener('scroll', throttle(handleScrollEvents, 250), false);
-
-    window.addEventListener('resize', applyBreakAllClass);
-
-    function throttle(func, limit) {
-        let lastFunc;
-        let lastRan;
-        return function () {
-            const context = this;
-            const args = arguments;
-            if (!lastRan) {
-                func.apply(context, args);
-                lastRan = Date.now();
-            } else {
-                clearTimeout(lastFunc);
-                lastFunc = setTimeout(function () {
-                    if ((Date.now() - lastRan) >= limit) {
-                        func.apply(context, args);
-                        lastRan = Date.now();
-                    }
-                }, limit - (Date.now() - lastRan));
-            }
-        }
-    }
-
-    function showHypo() {
-        var existingScript = document.getElementById('hypothes-script');
-        var button = document.querySelector('#show-hypo a');
-
-        if (!existingScript) {
-            button.textContent = 'Loading';
-
-            var script = document.createElement('script');
-            script.id = 'hypothes-script';
-            script.src = 'https://hypothes.is/embed.js';
-
-            script.onload = () => {
-                button.textContent = 'Hypothes.is';
-            };
-
-            script.onerror = () => {
-                button.style.color = 'red';
-                button.textContent = 'Failed';
-            };
-
-            document.body.appendChild(script);
-        } else {
-            toggleHypothesisElementsVisibility();
-            button.style.color = 'initial';
-        }
-    }
-
-    function toggleHypothesisElementsVisibility() {
-        const elementsToToggle = [
-            'hypothesis-sidebar',
-            'hypothesis-notebook',
-            'hypothesis-profile',
-            'hypothesis-adder',
-            'hypothesis-highlight-cluster-toolbar'
-        ];
-
-        elementsToToggle.forEach(function (element) {
-            var el = document.querySelector(element);
-            if (el) {
-                if (el.style.display === 'none') {
-                    el.style.display = '';
-                } else {
-                    el.style.display = 'none';
-                }
-            }
-        });
-    }
-
-    function applyBreakAllClass() {
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-        if (screenWidth <= 960) {
-            var codeElements = document.querySelectorAll('code');
-
-            codeElements.forEach(function (element) {
-                if (element.textContent.length > 10) {
-                    element.classList.add('break-all');
-                }
-            });
-        }
-    }
-
-    function handleScrollEvents() {
-        var lastScrollTop = 0;
-        var addnDiv = document.querySelector('.addn');
-        var topScrollBar = document.querySelector('.top-scroll-bar');
-
-        window.addEventListener('scroll', function () {
-            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (topScrollBar) {
-                var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                topScrollBar.style.width = scrollPercent + '%';
-                topScrollBar.style.display = 'block';
-            }
-
-            if (addnDiv) {
-                if (currentScroll > lastScrollTop && currentScroll > 50) {
-                    addnDiv.classList.remove('visible');
-                } else {
-                    addnDiv.classList.add('visible');
-                }
-            }
-
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        }, false);
-    }
-
-
-    function initializeTOCFeatures() {
-        const headers = document.querySelectorAll('h2, h3');
-        const contentsFixedDiv = document.getElementById('contents-fixed');
-        const tocContainer = document.getElementById('contents-toc');
-
-        if (contentsFixedDiv) {
-            const toggleTOC = () => {
-                const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-                tocContainer.style.display = isDisplayed ? 'none' : 'flex';
-
-                if (tocContainer.style.display === 'flex') {
-                    initializeTOCFeatures();
-                }
-            };
-
-            const highlightAppropriateHeader = () => {
-                let highlighted = false;
-                let lastPassedHeader = null;
-
-                headers.forEach(header => {
-                    const link = document.querySelector(`nav#TableOfContents a[href="#${header.id}"]`);
-                    const bounding = header.getBoundingClientRect();
-
-                    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !highlighted) {
-                        link.classList.add('toc-highlight');
-                        highlighted = true;
-                    } else {
-                        link.classList.remove('toc-highlight');
-                    }
-
-                    if (bounding.top < 0) {
-                        lastPassedHeader = header;
-                    }
-                });
-
-                if (!highlighted && lastPassedHeader) {
-                    const link = document.querySelector(`nav#TableOfContents a[href="#${lastPassedHeader.id}"]`);
-                    link.classList.add('toc-highlight');
-                }
-            };
-
-            const throttledHighlight = throttle(highlightAppropriateHeader, 250);
-
-            if (!tocContainer.dataset.initialized) {
-                window.addEventListener('scroll', throttledHighlight);
-                tocContainer.dataset.initialized = 'true';
-            }
-
-            document.addEventListener('click', (event) => {
-                if (window.getComputedStyle(tocContainer).display !== 'none') {
-                    tocContainer.style.display = 'none';
-                }
-            });
-
-            tocContainer.addEventListener('click', (event) => {
-                event.stopPropagation();
-            });
-
-            if (headers.length > 1) {
-                contentsFixedDiv.style.display = 'flex';
-                contentsFixedDiv.addEventListener('click', (event) => {
-                    toggleTOC();
-                    event.stopPropagation();
-                });
-            }
-        }
-    }
-</script>
-
-
+<!-- detect website status -->
 <script defer>
-    document.addEventListener("DOMContentLoaded", function () {
-        if (document.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
-            var jQueryScript = document.createElement('script');
-            jQueryScript.src = '/jquery-3.6.0.min.js';
-            document.head.appendChild(jQueryScript);
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('https://website-status.fanrongbin.com')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(item => {
+                    // 找到对应 URL 的链接元素
+                    const link = document.querySelector(`a[href="${item.url}"]`);
+                    if (link) {
+                        const profile = link.closest('.profile');
+                        if (profile) {
+                            // 获取对应的 <span class="online"> 元素
+                            const onlineIndicator = profile.querySelector('.online');
+                            if (onlineIndicator) {
+                                // 根据状态设置背景颜色
+                                onlineIndicator.style.backgroundColor = item.status === 200 ? '#00df07' : 'red';
+                            }
 
-            var sidenoteLines = document.querySelectorAll('.sidenote-line');
-            sidenoteLines.forEach(function (line) {
-                line.style.display = 'none';
-            });
+                            // 找到对应的 .the-link 按钮
+                            const theLinkButton = profile.querySelector('.the-link');
+                            if (theLinkButton) {
+                                // 设置动画
+                                theLinkButton.style.opacity = '0';
+                                theLinkButton.style.visibility = 'hidden';
+                                theLinkButton.style.transition = 'all .2s ease-in-out';
 
-            var styleElement = document.createElement('style');
-            styleElement.innerHTML = `
-                .jsplumb-line {
-                    opacity: 0.4;
-                    z-index: -1;
-                }
-                li>span>.sidenote-box {
-                    margin-left: -150%;
-                }
-            `;
-            document.body.appendChild(styleElement);
-
-            jQueryScript.onload = function () {
-                var jsPlumbScript = document.createElement('script');
-                jsPlumbScript.src = '/jsplumb.min.js';
-                document.head.appendChild(jsPlumbScript);
-
-                var jsPlumbCSS = document.createElement('link');
-                jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
-                jsPlumbCSS.rel = 'stylesheet';
-                document.head.appendChild(jsPlumbCSS);
-
-                jsPlumbScript.onload = function () {
-
-                    jQuery(document).ready(function () {
-                        jsPlumb.importDefaults({
-                            ConnectionsDetachable: false,
-                            ReattachConnections: false,
-                            Endpoint: "Blank", 
-                            Connector: ["Straight"], 
-                            PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 } 
-                        });
-
-                        function createConnections() {
-                            jsPlumb.deleteEveryEndpoint(); 
-
-                            jQuery('.sidenote-number').each(function () {
-                                var sidenoteNumber = jQuery(this);
-                                var sidenote = sidenoteNumber.find('.sidenote');
-
-                                if (sidenote.length) {
-                                    jsPlumb.connect({
-                                        source: sidenoteNumber[0], 
-                                        target: sidenote[0], 
-                                        anchors: ["Center", "RightMiddle"], 
-                                        cssClass: "jsplumb-line" 
-                                    });
+                                // 状态处理
+                                if (item.status === 200) {
+                                    // 显示按钮
+                                    theLinkButton.style.opacity = '1';
+                                    theLinkButton.style.visibility = 'visible';
+                                } else {
+                                    // 显示 "Offline" 并隐藏链接
+                                    theLinkButton.textContent = 'Offline';
+                                    theLinkButton.removeAttribute('href');
+                                    theLinkButton.style.opacity = '0.5';
+                                    theLinkButton.style.visibility = 'visible';
                                 }
-                            });
+                            }
                         }
-
-                        createConnections();
-
-                        var resizeObserver = new ResizeObserver(function () {
-                            createConnections(); 
-                        });
-                        resizeObserver.observe(document.body);
-
-                    });
-                };
-            };
-        }
+                    }
+                });
+            })
+            .catch(error => console.error('Error:', error));
     });
 </script>
 
+<!-- disable viewport zooming on iOS -->
 <script defer>
     window.onload = function () {
         document.addEventListener('touchstart', function (event) {
@@ -641,6 +521,5 @@ Leave a comment: ">
         });
     }
 </script>
-
-
+<script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </html>
