@@ -2814,7 +2814,7 @@ T+2 交易规则
       <link>https://fanrongbin.com/network-resetting-2021/</link>
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/network-resetting-2021/</guid>
-      <description>&lt;p&gt;在&lt;a href=&#34;https://fanrongbin.com/posts/network-resetting-2023&#34;&gt;这篇新博文&lt;/a&gt;中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。&lt;/p&gt;
+      <description>&lt;p&gt;在&lt;a href=&#34;https://fanrongbin.com/network-resetting-2023&#34;&gt;这篇新博文&lt;/a&gt;中，重新梳理了网络布局，以及提供公网 IP 下通过 OpenVPN 外部访问的一种参考。欢迎你点击超链接阅读。&lt;/p&gt;
 &lt;p&gt;原先的布置：&lt;/p&gt;
 &lt;img src=&#34;https://i.loli.net/2021/01/07/SMAdbvcfqWgz65G.png&#34; alt=&#34;Before&#34; /&gt;
 &lt;p&gt;之前使用主路由 AC-68U 搭两个网件的信号扩展器，基本能实现全屋覆盖，但扩展器毕竟只是扩展器，在速度上存在很多损耗，而且由于路由器位置摆放的问题（还没上千兆交换机，为了保证 NAS 的速度，主路由只能放在入户处），仍然存在信号死角。&lt;/p&gt;
