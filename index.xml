@@ -978,10 +978,9 @@ TP-LINK 易展有线回程
 &lt;p&gt;无法获取公网IP的读者，建议可以考虑改路由器拨号后，通过NAS的IPv6地址访问。下文内容需要公网IP。&lt;/p&gt;
 &lt;p&gt;在微信服务号直接跟客服说要开通之后，给填了工单，师傅打电话来确认，他那边后台操作，全程不到半小时，特别顺畅。&lt;/p&gt;
 &lt;p&gt;于是就先不折腾IPv6了，直接折腾IPv4外部访问。方案有很多，之前因为没有公网IP，用的ZeroTier，速度一般。现在可以通过公网IP直接访问，但为了安全考虑，只开一个端口转发给VPN（OpenVPN），防火墙、登录规则、二步验证等都保持开启。同时，因为是动态IP，隔三差五就会改，找了自己一个不用的域名挂在Cloudflare，通过Cloudflare DDNS插件绑好API key，监测到路由器重新拨号时，对照IP映射是否一致，不一致则更新。&lt;/p&gt;
-&lt;p&gt;群晖和华硕都自带DDNS和VPN Server服务（注意群晖的VPN Server可能要在官网下载后手动安装）。DDNS使用自带服务的话，方便的地方在于不需要再额外处理域名的问题，但因为使用https的话，自带服务是通过80端口访问&lt;span lang=&#34;en&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/span&gt;申请SSL，这个端口电信默认是封着的，一般也不会给开，SSL无法签发下来。其次，&lt;span class=&#34;newthought&#34;&gt;DSM6的用户&lt;/span&gt;
-&lt;span class=&#34;sidenote-number&#34;&gt;
+&lt;p&gt;群晖和华硕都自带DDNS和VPN Server服务（注意群晖的VPN Server可能要在官网下载后手动安装）。DDNS使用自带服务的话，方便的地方在于不需要再额外处理域名的问题，但因为使用https的话，自带服务是通过80端口访问&lt;span lang=&#34;en&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/span&gt;申请SSL，这个端口电信默认是封着的，一般也不会给开，SSL无法签发下来。其次，DSM6的用户&lt;span class=&#34;sidenote-number&#34;&gt;
     &lt;span class=&#34;sidenote-box&#34;&gt;
-        &lt;small class=&#34;sidenote&#34;&gt;&lt;em&gt;DSM 7的界面给的是下拉框并写明是“自动”，但DSM 6不是。&lt;/em&gt;&lt;/small&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;DSM 7的界面给的是下拉框并写明是“自动”，但DSM 6不是。&lt;/small&gt;
         &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
     &lt;/span&gt;
 &lt;/span&gt;，群晖DDNS不一定能够自动修改对应的IP。&lt;/p&gt;
