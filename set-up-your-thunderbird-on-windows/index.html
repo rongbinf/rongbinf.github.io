@@ -373,14 +373,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function applyBreakAllClass() {
         var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        if (screenWidth <= 960) {
-            var codeElements = mainElement.querySelectorAll('code');
-            codeElements.forEach(function (element) {
+        var codeElements = mainElement.querySelectorAll('code');
+
+        codeElements.forEach(function (element) {
+            if (screenWidth <= 960) {
                 if (element.textContent.length > 10) {
                     element.classList.add('break-all');
                 }
-            });
-        }
+            }
+            else {
+                if (element.textContent.length > 30) {
+                    element.classList.add('break-all');
+                }
+            }
+        });
     }
 
     function handleScrollEvents() {
