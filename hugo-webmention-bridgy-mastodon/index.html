@@ -254,7 +254,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="sd">          done</span><span class="w">          
 </span></span></span></code></pre></div><p>你还可以接着使用<code>${POST_URL}</code>trigger webmention.app的webhook。</p>
 <hr>
-<p>最初是看到IndieWeb上关于webmention的介绍，于是想着要不要自己也折腾一下，搜索到<a href="https://aaronparecki.com/2018/06/30/11/your-first-webmention">Aaron Parecki的博文</a>，以及<a href="https://www.jayeless.net/2021/02/integrating-webmentions-into-hugo.html">Jayeless.net的博文</a>后，觉得配置起来也不是很难嘛，然后就开始了……用第三方服务接收很简单，主要是一直卡在Bridgy这边。我新建了一个<a href="fanrongbin.com/stream">Stream</a>页面，相当于有了自己的一条时间轴，为了传上联邦宇宙，需要把每条小note以锚点<code>#id</code>的方式传到Bridgy。但，用webmention.app或者是telegraph.p3k.io始终没法发现到<code>https://fed.brid.gy/</code>这条链接，导致我没法API传出去，后来：</p>
+<p>最初是看到IndieWeb上关于webmention的介绍，于是想着要不要自己也折腾一下，搜索到<a href="https://aaronparecki.com/2018/06/30/11/your-first-webmention">Aaron Parecki的博文</a>，以及<a href="https://www.jayeless.net/2021/02/integrating-webmentions-into-hugo.html">Jayeless.net的博文</a>后，觉得配置起来也不是很难嘛，然后就开始了……用第三方服务接收很简单，主要是一直卡在Bridgy这边。我新建了一个<a href="https://fanrongbin.com/stream">Stream</a>页面，相当于有了自己的一条时间轴，为了传上联邦宇宙，需要把每条小note以锚点<code>#id</code>的方式传到Bridgy。但，用webmention.app或者是telegraph.p3k.io始终没法发现到<code>https://fed.brid.gy/</code>这条链接，导致我没法API传出去，后来：</p>
 <ol>
 <li>尝试以<code>&lt;a href=&quot;https://fed.brid.gy&quot; hidden=&quot;from-humans&quot;&gt;&lt;/a&gt;</code>的方式，加到带<code>class=&quot;e-content&quot;</code>的元素里面。但如果note不包含其他url，具有Link Preview功能的地方，还是会显示出<code>fed.brid.gy</code>的链接卡片。</li>
 <li>在对Stream页面部署自动化时，分成了三个部分：
