@@ -103,7 +103,38 @@
         <script async src="https://xandra.cc/safonts/webring.js"></script>
     </main>
 </body>
-<script> function updatePosts(data) { data.forEach((post, index) => { const postDiv = document.getElementById(`post-${index + 1}`); if (postDiv) { const titleElement = postDiv.querySelector('.h3-blog-title'); const dateElement = postDiv.querySelector('.blog-date'); titleElement.textContent = post.title; titleElement.classList.remove('placeholder'); dateElement.textContent = post.date; dateElement.classList.remove('placeholder'); postDiv.parentNode.href = post.url; } }); } document.addEventListener('DOMContentLoaded', function () { fetch('https://post-fetch.fanrongbin.com').then(response => response.json()).then(data => updatePosts(data)).catch(error => console.error('Error fetching posts:', error)); });</script>
+
+<script>
+function htmlDecode(input){
+  var doc = new DOMParser().parseFromString(input, "text/html");
+  return doc.documentElement.textContent;
+}
+
+function updatePosts(data) {
+  data.forEach((post, index) => {
+    const postDiv = document.getElementById(`post-${index + 1}`);
+    if (postDiv) {
+      const titleElement = postDiv.querySelector('.h3-blog-title');
+      const dateElement = postDiv.querySelector('.blog-date');
+
+      titleElement.textContent = htmlDecode(post.title);
+      titleElement.classList.remove('placeholder');
+      dateElement.textContent = htmlDecode(post.date);
+      dateElement.classList.remove('placeholder');
+
+      postDiv.parentNode.href = post.url;
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://post-fetch.fanrongbin.com')
+    .then(response => response.json())
+    .then(data => updatePosts(data))
+    .catch(error => console.error('Error fetching posts:', error));
+});
+</script>
+
 <script
     defer> document.addEventListener('DOMContentLoaded', function () { const footerSection = document.getElementById('footer'); let isOriginalContent = true; const originalContent = footerSection.innerHTML; const newContent = ` <div class="footer-link"> <p>⨺ <a href="/wei-lan">Wei Lan Library</a></p> <p><a href="/colophon">Colophon</a></p> </div> <div class="footer-link"> <div class="indie-webring"> <a href="https://xn--sr8hvo.ws/previous">←</a> <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> <a href="https://xn--sr8hvo.ws/next">→</a> </div> <ring-900 site="https://fanrongbin.com/"></ring-900> </div> <style>.footer{flex-direction:column;}.footer-link{display:flex;justify-content: space-between;} *{--g1v5x3-background-color: var(--bg-color);--g1v5x3-text-color: var(--text-color);--g1v5x3-title-color: var(--text-color);--g1v5x3-link-color: var(--link-color);--g1v5x3-padding: 0;} </style> `; if (footerSection) { footerSection.addEventListener('click', function (event) { if (!event.target.closest('a')) { if (isOriginalContent) { footerSection.innerHTML = newContent; } else { footerSection.innerHTML = originalContent; } isOriginalContent = !isOriginalContent; } }); } });</script>
 <script
