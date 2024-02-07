@@ -101,6 +101,8 @@
           <option value="follow">Follow</option>
           <option value="repost">Repost</option>
           <option value="music">Music</option>
+          <option value="movie">Movie</option>
+          <option value="tv">TV</option>
         </select>
       </div>
       <div id="musicOptions" class="hidden">
@@ -109,6 +111,23 @@
           <option value=""></option>
           <option value="album">Album</option>
           <option value="song">Song</option>
+        </select>
+      </div>
+      <div id="movieOptions" class="hidden">
+        <label for="movieName">Movie Name: </label>
+        <input type="text" id="movieName">
+        <label for="movieRating">Movie Rating: </label>
+        <input type="text" id="movieRating" placeholder="e.g. 3.5">
+      </div>
+      <div id="tvOptions" class="hidden">
+        <label for="tvName">TV Name: </label>
+        <input type="text" id="tvName">
+        <label for="tvRating">TV Rating: </label>
+        <input type="text" id="tvRating" placeholder="e.g. 3.5">
+        <label for="tvType">TV Type: </label>
+        <select id="tvType">
+          <option value="series">Series</option>
+          <option value="tvshow">TV Show</option>
         </select>
       </div>
       <div id="musicNameInput" class="hidden">
@@ -121,7 +140,7 @@
       </div>
       <div id="ratingInput" class="hidden">
         <label for="rating">Rating: </label>
-        <input type="text" id="rating" placeholder="e.g. 3.0">
+        <input type="text" id="rating" placeholder="e.g. 3.5">
         </div>
       </div>
       <div id="urlInput" class="hidden">
@@ -149,6 +168,7 @@
   </main>
 </body>
 
+
 <script>
   // 缓存DOM元素引用
   const textArea = document.getElementById('content');
@@ -164,6 +184,11 @@
   const utcOffsetInput = document.getElementById('utcOffset');
   const previewArea = document.getElementById('previewArea');
   const dateTimeDisplay = document.getElementById('datetime');
+  const movieNameInput = document.getElementById('movieName');
+  const movieRatingInput = document.getElementById('movieRating');
+  const tvNameInput = document.getElementById('tvName');
+  const tvRatingInput = document.getElementById('tvRating');
+  const tvTypeSelect = document.getElementById('tvType');
 
   function applyMarkdown(type) {
     const start = textArea.selectionStart;
@@ -199,7 +224,6 @@
     return offset;
   }
 
-
   function updateDateTime() {
     dateTimeDisplay.innerText = `Current Date and Time: ${formatDateTime(new Date())}`;
   }
@@ -212,11 +236,16 @@
 
   stypeSelect.addEventListener('change', function () {
     const isMusic = this.value === 'music';
-    surlInput.parentElement.classList.toggle('hidden', this.value === 'note' || isMusic);
+    const isMovie = this.value === 'movie';
+    const isTV = this.value === 'tv';
+
+    surlInput.parentElement.classList.toggle('hidden', this.value === 'note' || isMusic || isMovie || isTV);
     musicTypeSelect.parentElement.classList.toggle('hidden', !isMusic);
     artistInput.parentElement.classList.toggle('hidden', !isMusic);
     musicNameInput.parentElement.classList.toggle('hidden', !isMusic);
     ratingInput.parentElement.classList.toggle('hidden', !isMusic);
+    document.getElementById('movieOptions').classList.toggle('hidden', !isMovie);
+    document.getElementById('tvOptions').classList.toggle('hidden', !isTV);
   });
 
   document.getElementById('content').addEventListener('input', function () {
@@ -231,11 +260,19 @@
     musicTypeSelect.value = '';
     artistInput.value = '';
     musicNameInput.value = '';
+    ratingInput.value = '';
+    movieNameInput.value = '';
+    movieRatingInput.value = '';
+    tvNameInput.value = '';
+    tvRatingInput.value = '';
+    tvTypeSelect.value = '';
     textArea.value = '';
     utcOffsetInput.value = '';
     manualDateTimeCheckbox.checked = false;
     dateTimeInput.parentElement.classList.add('hidden');
     utcOffsetInput.parentElement.classList.add('hidden');
+    document.getElementById('movieOptions').classList.add('hidden');
+    document.getElementById('tvOptions').classList.add('hidden');
   });
 
   document.getElementById('preview').addEventListener('click', function () {
@@ -249,6 +286,10 @@
 
     if (stypeSelect.value === 'music') {
       streamParams += ` musictype="${musicTypeSelect.value}" artist="${artistInput.value}" music="${musicNameInput.value}" rating="${ratingInput.value}"`;
+    } else if (stypeSelect.value === 'movie') {
+      streamParams += ` movie="${movieNameInput.value}" movierating="${movieRatingInput.value}"`;
+    } else if (stypeSelect.value === 'tv') {
+      streamParams += ` tv="${tvNameInput.value}" tvrating="${tvRatingInput.value}" tvtype="${tvTypeSelect.value}"`;
     } else if (stypeSelect.value !== 'note') {
       streamParams += ` surl="${surlInput.value}"`;
     }
@@ -273,7 +314,7 @@
   document.getElementById('bold').addEventListener('click', () => applyMarkdown('bold'));
   document.getElementById('italic').addEventListener('click', () => applyMarkdown('italic'));
   document.getElementById('link').addEventListener('click', () => applyMarkdown('link'));
-
 </script>
+
 
 </html>

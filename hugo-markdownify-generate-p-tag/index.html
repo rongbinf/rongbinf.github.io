@@ -5,24 +5,42 @@
 >
 
 <head>
-  <title class="p-name">Tech - Rongbin&#39;s Blog</title>
+  <title class="p-name">Hugo Markdownify 无法生成 &lt;p&gt; tag - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
-    content=" ">
+    content="在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&lt;p&gt;tag。
+例如：
+{{ $text .= &#34;What a *nice* day!&#34; }} {{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day! 但我预期生成的应是：
+{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt; 这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
+在我的情况中，先识别是否存在&lt;p&gt;tag的方式：
+{{ $markdown := .intro | markdownify }} {{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }} 或进一步匹配以h、p开头的tag都可以：
+{{ $markdown := .text | markdownify }} {{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }}  ">
 <meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
-<meta property="og:title" content="Tech - Rongbin&#39;s Blog" />
-<meta property="og:description" content=" " />
-<meta property="og:url" content="https://fanrongbin.com/tags/tech/" />
+<meta property="og:title" content="Hugo Markdownify 无法生成 &lt;p&gt; tag - Rongbin&#39;s Blog" />
+<meta property="og:description" content="在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&lt;p&gt;tag。
+例如：
+{{ $text .= &#34;What a *nice* day!&#34; }} {{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day! 但我预期生成的应是：
+{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt; 这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
+在我的情况中，先识别是否存在&lt;p&gt;tag的方式：
+{{ $markdown := .intro | markdownify }} {{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }} 或进一步匹配以h、p开头的tag都可以：
+{{ $markdown := .text | markdownify }} {{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }}  " />
+<meta property="og:url" content="https://fanrongbin.com/hugo-markdownify-generate-p-tag/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
-<meta name="twitter:title" content="Tech - Rongbin&#39;s Blog" />
-<meta name="twitter:description" content=" " />
+<meta name="twitter:title" content="Hugo Markdownify 无法生成 &lt;p&gt; tag - Rongbin&#39;s Blog" />
+<meta name="twitter:description" content="在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&lt;p&gt;tag。
+例如：
+{{ $text .= &#34;What a *nice* day!&#34; }} {{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day! 但我预期生成的应是：
+{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt; 这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
+在我的情况中，先识别是否存在&lt;p&gt;tag的方式：
+{{ $markdown := .intro | markdownify }} {{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }} 或进一步匹配以h、p开头的tag都可以：
+{{ $markdown := .text | markdownify }} {{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }}  " />
 
-<link rel="canonical" href="https://fanrongbin.com/tags/tech/" />
+<link rel="canonical" href="https://fanrongbin.com/hugo-markdownify-generate-p-tag/" />
 
 
 
@@ -36,11 +54,10 @@
       <script src="/js/main.f2979a93a325fecf9605263bd141398a311c8e23388ed7dcff74f92f7e632866.js" integrity="sha256-8peak6Ml/s&#43;WBSY70UE5ijEcjiM4jtfc/3T5L35jKGY=" crossorigin="anonymous"></script>
 
 
-<link rel="alternate" type="application/rss+xml" href="https://fanrongbin.com/tags/tech/index.xml" title="Rongbin's Blog">
 
 
 
-<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/tags/tech/">
+<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/hugo-markdownify-generate-p-tag/">
 
 <link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
 
@@ -64,34 +81,82 @@
 
   <article class="article-entry h-entry">
       
+
+<section class="content-header">
+
+  <div class="top-scroll-bar"></div>
+<div class="addn visible">
+<a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;"><div id="show-hypo" class="header-button no-select">Hypothes.is</div></a>
+<a onclick="toggleTOC()" style="color:var(--textcolor);text-decoration:none;border:none;"><div id="contents-fixed" class="header-button no-select">Contents</div></a>
+</div>
+<div id="contents-toc" class="no-select">
+    <nav id="TableOfContents"></nav>
+</div>
+
+  <div id="single-header">
+    <h1 class="p-name content-h1">Hugo Markdownify 无法生成 &lt;p&gt; tag</h1>
+    
+
+
+    
+      
+      
+      
+        
+        <p class="content-time"><time class="dt-published" datetime="2024-02-07T11:25:24&#43;08:00">07 February 2024</time></p>
+        
+      
+    
+
+    <a rel="author" class="p-name h-card" href="https://fanrongbin.com" style="display:none;">Rongbin Fan</a>
+  </div>
+
+</section>
+
+<style>
+  div.color {
+    background: linear-gradient(var(--textcolor) 0,transparent 25%);
+    opacity: .5;
+  }
+</style>
+
+
       <div class="color"></div>
       
       
       <main class="e-content">
       
       
-<h2>Tech</h2>
 
-
-<a href="/segoe-ui-variable/"><div class="item">
-    <h3 class="list-title">Windows 11 的新字体：Segoe UI Variable</h3>
-    <p class="list-date">30 Mar 2022</p>
-  </div></a>
-
-<a href="/apple-media-service-marketing/"><div class="item">
-    <h3 class="list-title">来自 Apple 的流媒体推广工具</h3>
-    <p class="list-date">4 Dec 2021</p>
-  </div></a>
-
-<a href="/engadget-cn-closed/"><div class="item">
-    <h3 class="list-title">Engadget 简体中文版关闭</h3>
-    <p class="list-date">2 Nov 2021</p>
-  </div></a>
+<p>在尝试为<a href="/stream">Stream</a>页面利用<a href="https://gohugo.io/content-management/shortcodes/">Hugo Shortcodes</a>添加新的<code>movie</code>和<code>tv</code>标签时，使用<code>{{ .Inner | Markdownify }}</code>无法正确对Markdown文本生成HTML<code>&lt;p&gt;</code>tag。</p>
+<p>例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span> <span class="err">$</span><span class="nx">text</span> <span class="p">.=</span> <span class="s">&#34;What a *nice* day!&#34;</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="err">$</span><span class="nx">text</span> <span class="p">|</span> <span class="nx">Markdownify</span><span class="p">}}</span> <span class="o">-</span><span class="p">&gt;</span> <span class="nx">What</span> <span class="nx">a</span> <span class="p">&lt;</span><span class="nx">em</span><span class="p">&gt;</span><span class="nx">nice</span><span class="p">&lt;</span><span class="o">/</span><span class="nx">em</span><span class="p">&gt;</span> <span class="nx">day</span><span class="p">!</span>
+</span></span></code></pre></div><p>但我预期生成的应是：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span> <span class="err">$</span><span class="nx">text</span> <span class="p">|</span> <span class="nx">Markdownify</span> <span class="p">}}</span> <span class="o">-</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">p</span><span class="p">&gt;</span><span class="nx">What</span> <span class="nx">a</span> <span class="p">&lt;</span><span class="nx">em</span><span class="p">&gt;</span><span class="nx">nice</span><span class="p">&lt;</span><span class="o">/</span><span class="nx">em</span><span class="p">&gt;</span> <span class="nx">day</span><span class="p">!&lt;</span><span class="o">/</span><span class="nx">p</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>这是个<a href="https://github.com/gohugoio/hugo/issues/3040">老问题</a>：<code>Markdownify</code>最主要被用来生成标题之类的<em>inline</em>元素，而不是类似段落的<em>blocks</em>。但很多Hugo主题都在使用<code>Markdownify</code>，所以一时想要用<a href="https://gohugo.io/methods/page/renderstring/"><code>RenderString</code></a>取代<a href="https://discourse.gohugo.io/t/deprecate-markdownify/37789/">也不太可能</a>。</p>
+<p>在我的情况中，<a href="https://github.com/gohugoio/hugo/issues/3040#issuecomment-352190818">先识别是否存在<code>&lt;p&gt;</code>tag</a>的方式：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span> <span class="err">$</span><span class="nx">markdown</span> <span class="o">:=</span> <span class="p">.</span><span class="nx">intro</span> <span class="p">|</span> <span class="nx">markdownify</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="k">if</span> <span class="nf">not</span> <span class="p">(</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Contains</span> <span class="err">$</span><span class="nx">markdown</span> <span class="s">&#34;&lt;p&gt;&#34;</span> <span class="p">)</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nx">p</span><span class="p">&gt;{{</span> <span class="err">$</span><span class="nx">markdown</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="k">else</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{{</span> <span class="err">$</span><span class="nx">markdown</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+</span></span></code></pre></div><p>或<a href="https://github.com/gohugoio/hugo/issues/3040#issuecomment-539296048">进一步</a>匹配以<code>h</code>、<code>p</code>开头的tag都可以：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span> <span class="err">$</span><span class="nx">markdown</span> <span class="o">:=</span> <span class="p">.</span><span class="nx">text</span> <span class="p">|</span> <span class="nx">markdownify</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="k">if</span> <span class="nf">not</span> <span class="p">(</span> <span class="nx">findRE</span> <span class="s">&#34;&lt;[h|p][^&gt;]*&gt;&#34;</span> <span class="err">$</span><span class="nx">markdown</span> <span class="p">)</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nx">p</span><span class="p">&gt;{{</span> <span class="err">$</span><span class="nx">markdown</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="k">else</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{{</span> <span class="err">$</span><span class="nx">markdown</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span> <span class="nx">end</span> <span class="p">}}</span>
+</span></span></code></pre></div>
 
 
           
       
-          <a class="u-url" href="https://fanrongbin.com/tags/tech/" style="display:none;"></a>
+          <a class="u-url" href="https://fanrongbin.com/hugo-markdownify-generate-p-tag/" style="display:none;"></a>
       
       
       <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy/" style="display:none;"></a>
@@ -104,7 +169,97 @@
 
   
   
+
+<div class="footer-nav">
+
+  <div class="previous-post" style="display:inline-block;">
+    
+    <a class="no-external" href="https://fanrongbin.com/set-up-your-thunderbird-on-windows/"><span class="arrow">←</span> Set up your Thunderbird on Windows</a>
+    
+  </div>
+
   
+
+
+  <div class="Tags">
+    <ul style="list-style-type: none;margin:0;">
+      <li class="label">TAGS</li>
+        <li><a href="/tags/static-blog/">static-blog</a></li>
+    </ul>
+  </div>
+
+  <div class="next-post" style="display:inline-block;float:right;">
+    
+  </div>
+
+</div>
+
+<div class="webmentions-how">
+  <p>Respond <a class="btn" data-clipboard-text="https://fanrongbin.com/hugo-markdownify-generate-p-tag/">on Mastodon</a>, <a
+  href="/hugo-webmention-bridgy-mastodon">webmention</a> this post, or <a href="/contact" target="_blank">contact me</a> directly.</p>
+  <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin: 2ch 0;">
+        <input type="url" name="source" class="url" placeholder="Your URL" required="">
+        <input type="hidden" name="target" value="https://fanrongbin.com/hugo-markdownify-generate-p-tag/">
+        <input type="submit" value="Webmention" style="background:var(--bg-color);">
+  </form>
+  <p>You can use <a onclick="showHypo();" title="This will toggle Hypothes.is plugin on this page.">Hypothes.is</a> to select texts and highlight.</p>
+</div>
+
+<div id="copy-success-message" class="copy-success">
+  <h4>You've copied this page url!</h4>
+  <p style="font-weight: normal;">Search it in your Mastodon server, and reply that toot by <em>@fanrongbin.com@fanrongbin.com</em>.</p>
+</div>
+
+<script defer>
+document.addEventListener('DOMContentLoaded', function() {
+  var script = document.createElement('script');
+  script.src = '/clipboard.min.js';
+  script.onload = function() {
+    const copyButton = document.querySelector('.btn');
+    const copySuccessMessage = document.getElementById('copy-success-message');
+
+    const clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function(e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+
+      copySuccessMessage.style.display = 'block';
+      copySuccessMessage.style.opacity = 1;
+
+      
+      
+      
+      
+
+      e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+      console.error('Action:', e.action);
+      console.error('Trigger:', e.trigger);
+    });
+
+    document.addEventListener('click', function(event) {
+      if (event.target !== copyButton) {
+        copySuccessMessage.style.display = 'none';
+        copySuccessMessage.style.opacity = 0;
+      }
+    });
+  };
+
+  document.head.appendChild(script);
+});
+</script>
+
+
+  
+
+<script src="/webmention.min.js" defer></script>
+<div id="webmentions"></div>
+
+
   
 
   <footer class="opacity-6">
