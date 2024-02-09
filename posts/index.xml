@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 21 Jan 2024 16:59:25 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 07 Feb 2024 11:25:24 +0800</lastBuildDate>
     <atom:link href="https://fanrongbin.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Markdownify 无法生成 &lt;p&gt; tag</title>
+      <link>https://fanrongbin.com/hugo-markdownify-generate-p-tag/</link>
+      <pubDate>Wed, 07 Feb 2024 11:25:24 +0800</pubDate>
+      <guid>https://fanrongbin.com/hugo-markdownify-generate-p-tag/</guid>
+      <description>在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&amp;lt;p&amp;gt;tag。&#xA;例如：&#xA;{{ $text .= &amp;#34;What a *nice* day!&amp;#34; }} {{ $text | Markdownify}} -&amp;gt; What a &amp;lt;em&amp;gt;nice&amp;lt;/em&amp;gt; day! 但我预期生成的应是：&#xA;{{ $text | Markdownify }} -&amp;gt; &amp;lt;p&amp;gt;What a &amp;lt;em&amp;gt;nice&amp;lt;/em&amp;gt; day!&amp;lt;/p&amp;gt; 这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。&#xA;在我的情况中，先识别是否存在&amp;lt;p&amp;gt;tag的方式：&#xA;{{ $markdown := .intro | markdownify }} {{ if not ( strings.Contains $markdown &amp;#34;&amp;lt;p&amp;gt;&amp;#34; ) }} &amp;lt;p&amp;gt;{{ $markdown }}&amp;lt;/p&amp;gt; {{ else }} {{ $markdown }} {{ end }} 或进一步匹配以h、p开头的tag都可以：&#xA;{{ $markdown := .text | markdownify }} {{ if not ( findRE &amp;#34;&amp;lt;[h|p][^&amp;gt;]*&amp;gt;&amp;#34; $markdown ) }} &amp;lt;p&amp;gt;{{ $markdown }}&amp;lt;/p&amp;gt; {{ else }} {{ $markdown }} {{ end }} </description>
+    </item>
     <item>
       <title>Set up your Thunderbird on Windows</title>
       <link>https://fanrongbin.com/set-up-your-thunderbird-on-windows/</link>
@@ -280,6 +287,13 @@
       <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/come-back-home/</guid>
       <description>由于常年固定使用某些邮箱注册帐户，以及邮件订阅设置的混乱，导致我不得不腾出一个下午的时间清理这些邮件，大多是注册帐户时发来的验证、社交网络的提醒、过去订阅的博客资讯和提醒你时常回看的应用广告。于是我把现在已经不常用的、能合并或替代的各类帐号注销，一是方便管理，二是删除自己曾经留下的网络痕迹。&#xA;进行邮件清理后，我试着对自己的信息源进行管理。我把自己获取信息的途径分为三种：信息聚合类应用、订阅邮件和 RSS 订阅源。信息聚合类应用包括 Medium 、微信订阅号和知乎专栏这种长文聚合，以及 Quora 的问答、端传媒等新闻资讯应用。在这之中比较难管理的是微信订阅号。有部分作者有个人博客的，我都将其收进 Reeder 用 RSS 订阅的形式阅读，但部分只有个人公众号的作者，需要进一步对内容作出筛选，或者寻找能 push 的第三方服务。使用邮件订阅或 RSS 的形式阅读，最大的优点是即时离线存档，不仅便于日后阅读和搜索归档，也避免了一些文章被封锁的风险。&#xA;由此出发，其实最终需要花费心思的是对信息源的筛选和整合。如何最大限度地利用网络信息帮助自己成长？&#xA;Leo Babauta 在他的著名博客 zen habits 中提到了一个很有趣的观点。他认为生活的简化是一种循环的模式：&#xA;The Simplicity Cycle goes something like this (it’s a little different each time):&#xA;Inspiration phase: You find something that sparks an interest, and you start exploring it (reading about a new topic, diving into learning a new subject, exploring a new activity or hobby, creating a new project or venture, etc.</description>
+    </item>
+    <item>
+      <title>Hexo &#43; GitHub Pages &#43; Cloudflare</title>
+      <link>https://fanrongbin.com/hexo-github-pages-cloudflare/</link>
+      <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/hexo-github-pages-cloudflare/</guid>
+      <description>系统环境配置 # 安装 Node.js # Node.js 是一种 JavaScript 的运行环境，点击此处以下载。&#xA;如何安装 Node.js 详见此文章。注意：Linux 上安装 Node.js 需要安装 Python 2.6 或 2.7 ，不建议安装 Python 3.0 以上版本。&#xA;安装 Git # Git 是一个开源的分布式版本控制系统，帮助你合并多次改动并记录下来。点击此处以下载。&#xA;如何安装 Git 详见此文章。&#xA;安装 Hexo # Hexo 是一个使用 Markdown 引擎解析文章的快速、简洁且高效的博客框架。当你已经安装好 Node.js 和 Git 后，直接使用 npm 安装 Hexo。&#xA;$ cd &amp;lt;folder&amp;gt; # 将 &amp;lt;folder&amp;gt; 改为你希望安装 Hexo 的路径 $ npm install hexo-cli -g # 使用 npm 安装 $ hexo init &amp;lt;folder&amp;gt; # 将 &amp;lt;folder&amp;gt; 改为你希望搭建博客的路径 $ cd &amp;lt;folder&amp;gt; $ hexo generate # 或 hexo g $ hexo server # 或 hexo s 此时你可以访问 http://localhost:4000/ 查看预览。</description>
     </item>
     <item>
       <title>初探 Fluent Design System</title>
