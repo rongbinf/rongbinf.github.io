@@ -59,7 +59,7 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
 
 
 
-      <link rel="stylesheet" href="/css/main.min.fe6e83225945140ab2278beb2906b3b8739e71cd0f45d5ae484f167433a3bd8d.css" integrity="sha256-/m6DIllFFAqyJ4vrKQazuHOecc0PRdWuSE8WdDOjvY0=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.9ddf855cc2972f69b4a5e416ad5611c5e13ffae5ed21dfaf4cc2343d66d168aa.css" integrity="sha256-nd&#43;FXMKXL2m0peQWrVYRxeE/&#43;uXtId&#43;vTMI0PWbRaKo=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -153,6 +153,8 @@ RTSP 端口 port 默认为 554，若为默认可不填写。
     opacity: .5;
   }
 </style>
+
+<div class="link-display"></div>
 
 
       <div class="color"></div>
@@ -688,8 +690,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function setExternalLinksToOpenInNewTab() {
         const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
+        const linkDisplay = document.querySelector('.link-display');
+
         links.forEach(function (link) {
             link.setAttribute('target', '_blank');
+
+            link.addEventListener('mouseover', function () {
+                const url = new URL(this.href);
+                const rootDomain = url.hostname.replace(/^www\./, '');
+                const boldDomain = `<span class="bold-domain">${rootDomain}</span>`;
+                const displayUrl = this.href.replace(rootDomain, boldDomain);
+
+                linkDisplay.innerHTML = displayUrl;
+                linkDisplay.style.display = 'block';
+                const linkRect = this.getBoundingClientRect();
+                linkDisplay.style.top = `${linkRect.bottom + window.scrollY}px`;
+                linkDisplay.style.left = `${linkRect.left + window.scrollX}px`;
+            });
+
+            link.addEventListener('mouseout', function () {
+                linkDisplay.style.display = 'none';
+            });
         });
     }
 
@@ -779,11 +800,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 </script>
-
-
-
-
-
-
 
 </html>
