@@ -41,7 +41,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.d5d79022866038002159778693440c5b19703c02ad5d62ba1aeb578a23fa8b54.css" integrity="sha256-1deQIoZgOAAhWXeGk0QMWxlwPAKtXWK6GutXiiP6i1Q=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.aff593ba634b310924b9912e5d236bf3291933cbff65ed38d7e902d4fec7e145.css" integrity="sha256-r/WTumNLMQkkuZEuXSNr8ykZM8v/Ze041&#43;kC1P7H4UU=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "mode": "manual"
     }
 }
-</script>    
+</script>
 
 <script defer>
     var mainElement = document.querySelector('main');
@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (contentHeader) {
             contentHeader.querySelector('#show-hypo').style.display = 'flex';
         }
-        
+
         handleScrollEvents();
 
         applyBreakAllClass();
@@ -514,6 +514,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         isScrolling = false;
                     });
                     isScrolling = true;
+                }
+                if (window.innerWidth >= 1600) {
+                    toggleTOCOnScroll();
                 }
             }, false);
         }
@@ -640,6 +643,22 @@ document.addEventListener('DOMContentLoaded', function() {
         tocContainer.style.display = isDisplayed ? 'none' : 'flex';
     }
 
+    function toggleTOCOnScroll() {
+        const tocContainer = document.querySelector('#TableOfContents');
+        const footerNav = document.querySelector('.footer-nav');
+
+        if (!tocContainer || !footerNav) return;
+
+        const footerNavTop = footerNav.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        
+        if (footerNavTop <= windowHeight) {
+            tocContainer.style.display = 'none';
+        } else {
+            tocContainer.style.display = 'flex';
+        }
+    }
 
     function throttle(func, limit) {
         let lastFunc;
