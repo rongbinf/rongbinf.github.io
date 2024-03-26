@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 07 Feb 2024 11:25:24 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 Mar 2024 21:03:00 +0800</lastBuildDate>
     <atom:link href="https://fanrongbin.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discussion in 2024: SaaS</title>
+      <link>https://fanrongbin.com/discussion-in-2024-saas/</link>
+      <pubDate>Mon, 18 Mar 2024 21:03:00 +0800</pubDate>
+      <guid>https://fanrongbin.com/discussion-in-2024-saas/</guid>
+      <description>Assume that you know nothing about SaaS.&#xA;Firstly, it is a business model. Its full name is Software as a Service. So there are two key concepts:&#xA;Software: clients are using a computer programme Service: clients do not own this software, only enjoying the rights to use the software What does it mean by not owning the software?&#xA;The traditional software industry providing standardised software like Microsoft Office or Adobe Photoshop from the early 20th century, is based on selling software discs and serial numbers off the shelves in supermarkets.</description>
+    </item>
     <item>
       <title>Hugo Markdownify 无法生成 &lt;p&gt; tag</title>
       <link>https://fanrongbin.com/hugo-markdownify-generate-p-tag/</link>
