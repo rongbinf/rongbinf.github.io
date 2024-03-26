@@ -12,12 +12,12 @@
   --bg-color: var(--bgcolor);
   --highlight: rgb(0, 38, 255);
 
-  --color-block-bg-color: #f6ff00;
+  /* --color-block-bg-color: #f6ff00; */
   --color-block-text-color: #000;
 
   --serif: Georgia, et-book, "Numeral LF Serif", "Han Songti GB", "Noto Serif SC", "Noto Serif KR", Batang, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif, "Noto Emoji";
   --kai: Georgia, et-book, "Numeral LF Serif", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, "Times New Roman", "Han Kaiti GB", STKaiti, Kaiti, "Kaiti SC", Kai, FZKaiti, "Noto Serif SC", "Noto Serif KR", Batang, cursive, serif, "Noto Emoji";
-  --sans: "Helvetica Neue", Helvetica, Arial, Verdana, -apple-system, BlinkMacSystemFont, Avenir, "Segoe UI Variable", "Segoe UI", "Han Heiti GB", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji";
+  --sans: "Helvetica Neue Book", Helvetica, Arial, Verdana, -apple-system, BlinkMacSystemFont, Avenir, "Segoe UI Variable", "Segoe UI", "Biaodian Pro Sans", "Han Heiti", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji";
   --arrow: -apple-system, BlinkMacSystemFont, Calibri, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
   --mono: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
 }
@@ -128,7 +128,7 @@ em {
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
-    cursor: help;
+    cursor: pointer;
     position: relative;
     bottom: 0;
 }
@@ -162,10 +162,10 @@ em {
     justify-content: space-between;
 }
 
-.heading-general {
+/* .heading-general {
     background: var(--text-color);
     color: var(--bg-color);
-}
+} */
 
 .block-link {
     padding-top: 3vh;
@@ -175,7 +175,7 @@ em {
 .block-link:hover, .block-link:active, .block-link:focus, .block-link:focus-visible {
     background: var(--link-color);
     color: #fff;
-    cursor: help;
+    cursor: default;
 }
 
 .blog-title:hover, .blog-title:active, .blog-title:focus, .blog-title:focus-visible {

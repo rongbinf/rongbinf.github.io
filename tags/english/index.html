@@ -29,7 +29,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.9ddf855cc2972f69b4a5e416ad5611c5e13ffae5ed21dfaf4cc2343d66d168aa.css" integrity="sha256-nd&#43;FXMKXL2m0peQWrVYRxeE/&#43;uXtId&#43;vTMI0PWbRaKo=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.6024310b0ee49c54d14111b7c7497879eb7b973c84977df6ff0d2e8392871e55.css" integrity="sha256-YCQxCw7knFTRQRG3x0l4eet7lzyEl332/w0ug5KHHlU=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -177,20 +177,14 @@
 
     function applyBreakAllClass() {
         var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var codeElements = mainElement.querySelectorAll('code');
-
-        codeElements.forEach(function (element) {
-            if (screenWidth <= 960) {
+        if (screenWidth <= 960) {
+            var codeElements = mainElement.querySelectorAll('code');
+            codeElements.forEach(function (element) {
                 if (element.textContent.length > 10) {
                     element.classList.add('break-all');
                 }
-            }
-            else {
-                if (element.textContent.length > 30) {
-                    element.classList.add('break-all');
-                }
-            }
-        });
+            });
+        }
     }
 
     function handleScrollEvents() {
@@ -370,27 +364,8 @@
 
     function setExternalLinksToOpenInNewTab() {
         const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
-        const linkDisplay = document.querySelector('.link-display');
-
         links.forEach(function (link) {
             link.setAttribute('target', '_blank');
-
-            link.addEventListener('mouseover', function () {
-                const url = new URL(this.href);
-                const rootDomain = url.hostname.replace(/^www\./, '');
-                const boldDomain = `<span class="bold-domain">${rootDomain}</span>`;
-                const displayUrl = this.href.replace(rootDomain, boldDomain);
-
-                linkDisplay.innerHTML = displayUrl;
-                linkDisplay.style.display = 'block';
-                const linkRect = this.getBoundingClientRect();
-                linkDisplay.style.top = `${linkRect.bottom + window.scrollY}px`;
-                linkDisplay.style.left = `${linkRect.left + window.scrollX}px`;
-            });
-
-            link.addEventListener('mouseout', function () {
-                linkDisplay.style.display = 'none';
-            });
         });
     }
 
@@ -480,5 +455,11 @@
         }
     }
 </script>
+
+
+
+
+
+
 
 </html>

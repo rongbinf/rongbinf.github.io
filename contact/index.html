@@ -51,10 +51,10 @@
 </head>
 
 <style>
-    * {
+    /* * {
         --color-block-bg-color: var(--link-color);
         --color-block-text-color: #fff;
-    }
+    } */
     .copy-success {
         display: none;
         position: fixed;
@@ -80,10 +80,11 @@
         </section>
 
         <section class="heading heading-general">
-            <h1 class="intro">Feel free to connect.<br><strong>Let's make it happen.</strong></h1>
+            <h1>Make things happen.</h1>
+            <!-- <p>Fill out the form or send messages directly.</p> -->
         </section>
 
-        <section class="color">
+        <!-- <section class="color">
             <div class="block">
                 <h2>Email will be the fastest.</h2>
             </div>
@@ -92,7 +93,37 @@
                     or you can DM me via Telegram or Matrix.org, both of which support end-to-end encryption.
                 </p>
             </div>
-        </section>
+        </section> -->
+
+        <!-- <section class="color" style="margin:2ch">
+            <form action="https://public.herotofu.com/v1/d1081ed0-ab14-11ee-9dd2-c1caafee32ff" method="post" accept-charset="UTF-8">
+              <div class="form-label">
+                <label for="name">Name</label>
+                <input name="Name" id="name" type="text" placeholder="Required" required />
+              </div>
+              <div class="form-label">
+                <label for="email">Email</label>
+                <input name="Email" id="email" type="email" placeholder="Required" required  />
+              </div>
+              <div class="form-label">
+                <label for="subject">Subject</label>
+                <input name="Subject" id="subject" type="text" />
+              </div>
+              <div class="form-label">
+                <label for="message">Message</label>
+                <textarea name="Message" id="message" type="text" placeholder="Required" required></textarea>
+              </div>
+              <div class="form-label button">
+                <input type="submit" value="Submit" class="button-input" />
+                <div style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;" aria-hidden="true">
+                  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+                </div>
+              </div>
+            </form>
+
+            <div class="block"><p>Your form will be handled by <a href="https://herotofu.com" target="_blank">Herotofu</a>. Your information will only be used to recognise unique users and avoid spam, and in accordance with the applicable data privacy law.</p></div>
+
+        </section> -->
 
         <script>
             const copyButton = document.querySelector('.btn');
@@ -136,7 +167,7 @@
                     <div class="block-link block-button-link">copy email address</div>
                 </a>
                 <a href="/pubkey-hi.asc">
-                    <div class="block-link block-button-link" target="_blank">PGP key</div>
+                    <div class="block-link block-button-link" target="_blank">PGP* key</div>
                 </a>
                 <a class="btn" data-clipboard-text="080B 9361 A289 A293 33EE 0C2E 1F91 A892 591D A9CF">
                     <div class="block-link block-button-link">copy fingerprint</div>
@@ -174,6 +205,8 @@
                     <li>rongbin.fan (at) outlook.com</li>
                     <li>fanrongbin0201 (at) gmail.com</li>
                 </ul>
+                <p>*PGP allows you to send encrypted emails. 
+                    Telegram and Matrix.org also support end-to-end encryption.</p>
             </div>
 
         </section>
