@@ -6,8 +6,302 @@
     <description>Recent content on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Mon, 18 Mar 2024 21:03:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2024 23:18:35 +0800</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resources</title>
+      <link>https://fanrongbin.com/resources/</link>
+      <pubDate>Wed, 27 Mar 2024 23:18:35 +0800</pubDate>
+      <guid>https://fanrongbin.com/resources/</guid>
+      <description>&lt;h2 id=&#34;media&#34;&gt;
+Media
+&lt;a href=&#34;#media&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;world-us-business&#34;&gt;
+World, US, Business
+&lt;a href=&#34;#world-us-business&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.barrons.com/&#34;&gt;Barron&amp;rsquo;s&lt;/a&gt;, &lt;a href=&#34;https://www.barrons.com/magazine&#34;&gt;magazine&lt;/a&gt; published weekly on Monday&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bloomberg.com/&#34;&gt;Bloomberg&lt;/a&gt;, &lt;a href=&#34;https://www.bloomberg.com/businessweek&#34;&gt;Businessweek&lt;/a&gt; published bi-weekly&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bbc.com/news&#34;&gt;BBC News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ft.com/&#34;&gt;FT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hbr.org/&#34;&gt;HBR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mckinseyquarterly.com/&#34;&gt;McKinsey Quarterly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.nytimes.com/&#34;&gt;NYT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reuters.com/&#34;&gt;Reuters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.economist.com/&#34;&gt;The Economist&lt;/a&gt;, &lt;a href=&#34;https://www.economist.com/weeklyedition/archive&#34;&gt;issue&lt;/a&gt; published weekly on Saturday&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.theguardian.com/&#34;&gt;The Guardian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.washingtonpost.com/&#34;&gt;The Washington Post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.wsj.com/&#34;&gt;WSJ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;asia&#34;&gt;
+Asia
+&lt;a href=&#34;#asia&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.caixinglobal.com/&#34;&gt;Caixin Global&lt;/a&gt;, &lt;a href=&#34;https://www.caixin.com/&#34;&gt;Caixin Chinese&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hk01.com/&#34;&gt;HK01&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://koreajoongangdaily.joins.com/&#34;&gt;JoongAng Daily&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://asia.nikkei.com/&#34;&gt;Nikkei Asia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.scmp.com/&#34;&gt;South China Morning Post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cambridge.org/core/journals/china-quarterly&#34;&gt;The China Quarterly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://theinitium.com/&#34;&gt;The Initium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.thenewslens.com/&#34;&gt;The News Lens&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.twreporter.org/&#34;&gt;The Reporter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tech&#34;&gt;
+Tech
+&lt;a href=&#34;#tech&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://news.ycombinator.com/&#34;&gt;Hacker News&lt;/a&gt; on Y combinator&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lobste.rs/&#34;&gt;Lobsters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.technologyreview.com/&#34;&gt;MIT Technology Review&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.producthunt.com/&#34;&gt;Product Hunt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://restofworld.org/&#34;&gt;Rest of World&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://slashdot.org/&#34;&gt;Slashdot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.solidot.org/&#34;&gt;Solidot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://techcrunch.com/&#34;&gt;TechCrunch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.theinformation.com/&#34;&gt;The Information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.theverge.com/&#34;&gt;The Verge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;regional-data&#34;&gt;
+Regional Data
+&lt;a href=&#34;#regional-data&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;world&#34;&gt;
+World
+&lt;a href=&#34;#world&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.imf.org/en/Data&#34;&gt;IMF Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ourworldindata.org/&#34;&gt;Our World in Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://data.un.org/&#34;&gt;UNdata&lt;/a&gt;, &lt;a href=&#34;https://unstats.un.org/&#34;&gt;UN Statistics Division&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://data.worldbank.org/&#34;&gt;WB Open Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cia.gov/the-world-factbook/&#34;&gt;World Factbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.who.int/data&#34;&gt;WHO Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wto.org/statistics&#34;&gt;WTO Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;asia-1&#34;&gt;
+Asia
+&lt;a href=&#34;#asia-1&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.adb.org/what-we-do/data&#34;&gt;ADB Data and Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://statistics.apec.org/&#34;&gt;APEC Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.oecd.org/southeast-asia/data/&#34;&gt;OECD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;america&#34;&gt;
+America
+&lt;a href=&#34;#america&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bea.gov/&#34;&gt;Bureau of Economic Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bls.gov/data/&#34;&gt;Bureau of Labor Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://fred.stlouisfed.org/&#34;&gt;FRED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.piie.com/&#34;&gt;Peterson Institute&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pewresearch.org/&#34;&gt;Pew Research Center&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sec.gov/edgar/search-and-access&#34;&gt;SEC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://data.census.gov/&#34;&gt;Census Bureau Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;china&#34;&gt;
+China
+&lt;a href=&#34;#china&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cei.cn/&#34;&gt;CEInet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://iftp.chinamoney.com.cn/chinese/index.html&#34;&gt;China Money&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnnic.com.cn/IDR/ReportDownloads/&#34;&gt;CNNIC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/index.html&#34;&gt;PBC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.stats.gov.cn/english/&#34;&gt;National Bureau of Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;europe&#34;&gt;
+Europe
+&lt;a href=&#34;#europe&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://data.ecb.europa.eu/&#34;&gt;ECB Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://data.europa.eu/en&#34;&gt;EU Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hong-kong&#34;&gt;
+Hong Kong
+&lt;a href=&#34;#hong-kong&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.censtatd.gov.hk/&#34;&gt;Census and Statistics Department&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://data.gov.hk/en/&#34;&gt;DATA.GOV.HK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/&#34;&gt;Monetary Authority&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://opendata.isoc.hk/&#34;&gt;Open Data Index&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;singapore&#34;&gt;
+Singapore
+&lt;a href=&#34;#singapore&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.singstat.gov.sg/&#34;&gt;Department of Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stan.stb.gov.sg/content/stan/en/tourism-statistics.html&#34;&gt;Tourism Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;uk&#34;&gt;
+UK
+&lt;a href=&#34;#uk&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.data-archive.ac.uk/&#34;&gt;Data Archive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ukdataservice.ac.uk/&#34;&gt;Data Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.data.gov.uk/&#34;&gt;Open Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ons.gov.uk/&#34;&gt;Office for National Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gov.uk/government/statistical-data-sets&#34;&gt;Statistical data sets by GOV.UK&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;academics&#34;&gt;
+Academics
+&lt;a href=&#34;#academics&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;paper&#34;&gt;
+Paper
+&lt;a href=&#34;#paper&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://arxiv.org/&#34;&gt;arXiv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://econpapers.repec.org/&#34;&gt;EconPapers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Elsevier &lt;a href=&#34;https://www.sciencedirect.com/&#34;&gt;ScienceDirect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.emergentmind.com/&#34;&gt;Emergent Mind&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Scholar&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.icpsr.umich.edu/&#34;&gt;ICPSR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ideas.repec.org/&#34;&gt;IDEAS&lt;/a&gt;/&lt;a href=&#34;http://repec.org/&#34;&gt;RePEc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jstor.org/&#34;&gt;JSTOR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.nber.org/&#34;&gt;NBER&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://global.oup.com/academic/&#34;&gt;OUP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.researchgate.net/&#34;&gt;ResearchGate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.springer.com/&#34;&gt;Springer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ssrn.com/&#34;&gt;SSRN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.wiley.com/&#34;&gt;Wiley&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;library-toolkit-and-club&#34;&gt;
+Library Toolkit and Club
+&lt;a href=&#34;#library-toolkit-and-club&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CBS: &lt;a href=&#34;https://courses.business.columbia.edu/&#34;&gt;Course Syllabus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cornell: &lt;a href=&#34;https://guides.library.cornell.edu/home&#34;&gt;Research Guides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Harvard: &lt;a href=&#34;https://hbswk.hbs.edu/&#34;&gt;HBR Working Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;INSEAD: &lt;a href=&#34;https://www.insead.edu/insead-centre-entrepreneurship/useful-resources&#34;&gt;Centre for Entrepreneurship&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LBS: &lt;a href=&#34;https://library.london.edu/az.php&#34;&gt;Databases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MIT: &lt;a href=&#34;https://libraries.mit.edu/&#34;&gt;Library&lt;/a&gt;, &lt;a href=&#34;https://cdo.mit.edu/channels/consulting/&#34;&gt;CDO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NW Kellogg: &lt;a href=&#34;https://library.kellogg.northwestern.edu/deep-dive&#34;&gt;Industry Deep Dive&lt;/a&gt;, &lt;a href=&#34;https://library.kellogg.northwestern.edu/consulting&#34;&gt;Consulting Resources&lt;/a&gt;, &lt;a href=&#34;https://library.kellogg.northwestern.edu/consulting/caseprep&#34;&gt;CasePrep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tlink.lib.tsinghua.edu.cn/&#34;&gt;THU Tlink&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lib.uibe.edu.cn/zy/sjk/index.htm&#34;&gt;UIBE Library&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;people-and-blogs&#34;&gt;
+People and Blogs
+&lt;a href=&#34;#people-and-blogs&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Aswath Damodaran&lt;/li&gt;
+&lt;li&gt;Billy Oppenheimer&lt;/li&gt;
+&lt;li&gt;Casey Accidental&lt;/li&gt;
+&lt;li&gt;Contrary Research&lt;/li&gt;
+&lt;li&gt;Cornerstone VC&lt;/li&gt;
+&lt;li&gt;Dan Luu&lt;/li&gt;
+&lt;li&gt;Derek Sivers&lt;/li&gt;
+&lt;li&gt;Eryk Wdowiak&lt;/li&gt;
+&lt;li&gt;Hannah Ritchie&lt;/li&gt;
+&lt;li&gt;HHHypergrowth&lt;/li&gt;
+&lt;li&gt;Interact&lt;/li&gt;
+&lt;li&gt;Lawyers, Guns &amp;amp; Money&lt;/li&gt;
+&lt;li&gt;Michael Porter at HBS Institute for Strategy &amp;amp; Competitiveness&lt;/li&gt;
+&lt;li&gt;Oaktree Insights&lt;/li&gt;
+&lt;li&gt;Paul Graham&lt;/li&gt;
+&lt;li&gt;Statistical Thinking by&lt;/li&gt;
+&lt;li&gt;Steven Pressfield&lt;/li&gt;
+&lt;li&gt;Stratechery by Ben Thompson&lt;/li&gt;
+&lt;li&gt;The Netflix Techblog&lt;/li&gt;
+&lt;li&gt;The Newsprint by Josh Ginter&lt;/li&gt;
+&lt;li&gt;Wang Xing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tools-and-platforms&#34;&gt;
+Tools and Platforms
+&lt;a href=&#34;#tools-and-platforms&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cbinsights.com/&#34;&gt;CB Insights&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://crowdview.ai/&#34;&gt;CrowdView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.crunchbase.com/&#34;&gt;Crunchbase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.data-axle.com/&#34;&gt;Data Axle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dataroma.com/&#34;&gt;DATAROMA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://snapshot.factiva.com/&#34;&gt;Factiva&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://finviz.com/&#34;&gt;Finviz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.fxstreet.com/&#34;&gt;FXStreet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ibisworld.com/&#34;&gt;IBISWorld&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.investing.com/&#34;&gt;Investing.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.koyfin.com/&#34;&gt;Koyfin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linguee.com/&#34;&gt;Linguee&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ludwig.guru/&#34;&gt;Ludwig.guru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pitchbook.com/&#34;&gt;PitchBook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.proquest.com/&#34;&gt;ProQuest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://seekingalpha.com/&#34;&gt;Seeking Alpha&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statista.com/&#34;&gt;Statista&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hemingwayapp.com/&#34;&gt;The Hemingway Editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.fool.com/&#34;&gt;The Motley Fool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://theresanaiforthat.com/&#34;&gt;There&amp;rsquo;s An AI For That&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://vault.com/&#34;&gt;Vault&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://archive.org/web/&#34;&gt;Wayback Machine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.wordreference.com/&#34;&gt;WordReference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;career-related&#34;&gt;
+Career Related
+&lt;a href=&#34;#career-related&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.teamblind.com/&#34;&gt;Blind&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://careerinconsulting.com/case-interview-examples/&#34;&gt;Career in Consulting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://casecoach.com/&#34;&gt;Case Coach&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://caseinterview.com/&#34;&gt;Case Interview by Victor Cheng&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.efinancialcareers.co.uk/&#34;&gt;eFinancialCareers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gmatclub.com&#34;&gt;GMAT Club&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://managementconsulted.com/&#34;&gt;Management Consulted&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;McKinsey: &lt;a href=&#34;https://www.mckinsey.com/careers/interviewing/getting-ready-for-your-interviews&#34;&gt;Interviewing Tips&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.passthecase.com/&#34;&gt;Pass The Case&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://powerful-problem-solving.com/resources#slidedecks&#34;&gt;Powerful Problem Solving Resources and Books&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.preplounge.com/en/consulting-forum&#34;&gt;PrepLounge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.streetofwalls.com/finance-training-courses/consulting-case-study-training/intro-consulting-case-study-training-program/&#34;&gt;Street of Walls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Student Blogs: &lt;a href=&#34;https://admissionsblog.london.edu/&#34;&gt;LBS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.wallstreetoasis.com/&#34;&gt;WallStreetOasis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;books&#34;&gt;
+Books
+&lt;a href=&#34;#books&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Case in Point&lt;/li&gt;
+&lt;li&gt;Case Interview Secrets&lt;/li&gt;
+&lt;li&gt;Flawless Consulting&lt;/li&gt;
+&lt;li&gt;Influence by Robert Cialdini&lt;/li&gt;
+&lt;li&gt;Interview Math by Lewis Lin&lt;/li&gt;
+&lt;li&gt;Leading Change&lt;/li&gt;
+&lt;li&gt;Problem Solving 101 by Ken Watanabe&lt;/li&gt;
+&lt;li&gt;Say It with Presentations: How to Design and Deliver Successful Business Presentations&lt;/li&gt;
+&lt;li&gt;Scientific Method in Practice by Hugh G. Gauch Jr.&lt;/li&gt;
+&lt;li&gt;Spin Selling&lt;/li&gt;
+&lt;li&gt;The Art of Innovation by Tom Kelly with Jonathan Littman&lt;/li&gt;
+&lt;li&gt;The Checklist Manifesto: How to Get Things Right by Atul Gawande&lt;/li&gt;
+&lt;li&gt;The Fifth Discipline&lt;/li&gt;
+&lt;li&gt;The Minto Pyramid Principle: Logic in Writing, Thinking, &amp;amp; Problem Solving&lt;/li&gt;
+&lt;li&gt;The Trusted Advisor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;articles&#34;&gt;
+Articles
+&lt;a href=&#34;#articles&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://consultingtoolkit.com/consulting-skills/&#34;&gt;Consulting Toolkit Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://consulting.studentgroups.columbia.edu/sites/default/files/content/behavioral%20interview/fit_interview_071712.pdf&#34;&gt;Fit Interview Preparation&lt;/a&gt; by Oren Shur&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lawprofessors.typepad.com/legalwriting/&#34;&gt;Legal Writing Prof Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.olev.de/s/strat/Strategy%20Survival%20Guide.pdf&#34;&gt;Strategy Survival Guide: Prime Minister&amp;rsquo;s Strategy Unit (2004)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://typographyforlawyers.com/&#34;&gt;Typography for Lawyers (2nd edition)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Discussion in 2024: SaaS</title>
       <link>https://fanrongbin.com/discussion-in-2024-saas/</link>
