@@ -303,17 +303,80 @@ Articles
 </description>
     </item>
     <item>
-      <title>Discussion in 2024: SaaS</title>
-      <link>https://fanrongbin.com/discussion-in-2024-saas/</link>
+      <title>On SaaS</title>
+      <link>https://fanrongbin.com/on-saas/</link>
       <pubDate>Mon, 18 Mar 2024 21:03:00 +0800</pubDate>
-      <guid>https://fanrongbin.com/discussion-in-2024-saas/</guid>
-      <description>&lt;p&gt;Assume that you know nothing about SaaS.&lt;/p&gt;
-&lt;p&gt;Firstly, it is a business model. Its full name is &lt;em&gt;Software as a Service&lt;/em&gt;. So there are two key concepts:&lt;/p&gt;
+      <guid>https://fanrongbin.com/on-saas/</guid>
+      <description>&lt;div class=&#34;callout &#34;&gt;
+    &lt;div&gt;&lt;/div&gt;
+      &lt;div class=&#34;callout-inner&#34;&gt;
+      &lt;p&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; SaaS (Software as a Service) is all about standardised products and services that&amp;rsquo;ll bring corresponding growth in high gross profit.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SaaS business:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Subscription-based&lt;/strong&gt; purchasing&lt;/li&gt;
+&lt;li&gt;Selling &lt;em&gt;the right to enjoy services&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;What services: &lt;strong&gt;tiered pricing, on-demand pricing&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rights can be expired: expiration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Software is not running in your local servers: &lt;strong&gt;web-based standardised&lt;/strong&gt; products&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;What&amp;rsquo;s good:
+&lt;ul&gt;
+&lt;li&gt;cheap, and flexible to raise demands or opt-out&lt;/li&gt;
+&lt;li&gt;significant cash flow for vendors, creates elastic sales strategies, and has substantial economies of scale based on standardised features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Churn is the &lt;em&gt;key&lt;/em&gt; problem:
+&lt;ul&gt;
+&lt;li&gt;easy replacement&lt;/li&gt;
+&lt;li&gt;weak features squeezing clients heading towards customisation&lt;/li&gt;
+&lt;li&gt;security concerns (most SaaS run on clouds)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Metrics:
+&lt;ul&gt;
+&lt;li&gt;retention/churn/conversion&lt;/li&gt;
+&lt;li&gt;average revenue/cost, LTV/CAC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;What&amp;rsquo;s the future?
+&lt;ul&gt;
+&lt;li&gt;client understanding&lt;/li&gt;
+&lt;li&gt;trends in industries and management acceptance&lt;/li&gt;
+&lt;li&gt;performance of clients themselves&lt;/li&gt;
+&lt;li&gt;next variation of the real economy to drive digitalisation&lt;/li&gt;
+&lt;li&gt;discovery of niches at the intersection of markets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Last questions:
+&lt;ul&gt;
+&lt;li&gt;Do we have the &lt;em&gt;moat&lt;/em&gt;?&lt;/li&gt;
+&lt;li&gt;Have we known the clients well enough? What do they all want?&lt;/li&gt;
+&lt;li&gt;They want this and that. What&amp;rsquo;s the link between this and that? Have we modelled and refined the abstract business operating logic?&lt;/li&gt;
+&lt;li&gt;Have we covered every node on the workflow by standardised feature legos?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;p&gt;Assume that you know nothing about SaaS.&lt;/p&gt;
+&lt;h3 id=&#34;firstly-it-is-a-business-model&#34;&gt;
+Firstly, it is a business model.
+&lt;a href=&#34;#firstly-it-is-a-business-model&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Its full name is &lt;em&gt;Software as a Service&lt;/em&gt;. So there are two key concepts:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Software: clients are using a computer programme&lt;/li&gt;
 &lt;li&gt;Service: clients do not own this software, only enjoying the rights to use the software&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;What does it mean by not owning the software?&lt;/p&gt;
+&lt;h3 id=&#34;what-does-it-mean-by-not-owning-the-software&#34;&gt;
+What does it mean by not owning the software?
+&lt;a href=&#34;#what-does-it-mean-by-not-owning-the-software&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;The traditional software industry providing standardised software like Microsoft Office or Adobe Photoshop from the early 21st century, is based on selling software discs and serial numbers off the shelves in supermarkets.
 &lt;ul&gt;
@@ -328,13 +391,19 @@ Articles
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;SaaS does not work like that.&lt;/p&gt;
+&lt;h3 id=&#34;saas-doesnt-work-like-traditional-software-business&#34;&gt;
+SaaS doesn&amp;rsquo;t work like traditional software business.
+&lt;a href=&#34;#saas-doesnt-work-like-traditional-software-business&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Clients use the software continuously by subscribing to pay the service provider periodically for months or years.&lt;/li&gt;
 &lt;li&gt;What clients have is only the right to use the software during the billing period, and to enjoy any corresponding services and software updates.&lt;/li&gt;
 &lt;li&gt;Clients do not have access to any source code, which also means that the software maintenance can only be done by SaaS providers instead of in-house IT.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;So, these are the fundamentals of SaaS business:&lt;/p&gt;
+&lt;h3 id=&#34;so-these-are-the-fundamentals-of-saas-business&#34;&gt;
+So, these are the fundamentals of SaaS business:
+&lt;a href=&#34;#so-these-are-the-fundamentals-of-saas-business&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Subscription-based&lt;/strong&gt; purchasing&lt;/li&gt;
 &lt;li&gt;Selling &lt;em&gt;the right to enjoy services&lt;/em&gt;
@@ -345,7 +414,10 @@ Articles
 &lt;/li&gt;
 &lt;li&gt;Software is not running in your local servers: &lt;strong&gt;web-based standardised&lt;/strong&gt; products&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Why do people like SaaS?&lt;/p&gt;
+&lt;h3 id=&#34;why-do-people-like-saas&#34;&gt;
+Why do people like SaaS?
+&lt;a href=&#34;#why-do-people-like-saas&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;It&amp;rsquo;s cheaper:
 &lt;ul&gt;
@@ -360,24 +432,36 @@ Articles
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Why does the traditional software industry shift to SaaS?&lt;/p&gt;
+&lt;h3 id=&#34;why-does-the-traditional-software-industry-shift-to-saas&#34;&gt;
+Why does the traditional software industry shift to SaaS?
+&lt;a href=&#34;#why-does-the-traditional-software-industry-shift-to-saas&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;It provides continuous cash flow through subscription.&lt;/li&gt;
 &lt;li&gt;It creates elastic sales and marketing strategies by packaging different features.&lt;/li&gt;
 &lt;li&gt;It has substantial economies of scale as providers develop software features one time but sell them to everyone.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;But it&amp;rsquo;s not perfect: what if people stop subscribing?&lt;/p&gt;
+&lt;h3 id=&#34;but-its-not-perfect-what-if-people-stop-subscribing&#34;&gt;
+But it&amp;rsquo;s not perfect: what if people stop subscribing?
+&lt;a href=&#34;#but-its-not-perfect-what-if-people-stop-subscribing&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Maybe it&amp;rsquo;s because of intense competition: too many competitors want to solve similar problems within similar scenarios. They simply can replace one another which leads to a price war.&lt;/li&gt;
 &lt;li&gt;Maybe it&amp;rsquo;s because of a weak supply: too few vendors can satisfy customer needs and customers often have tricky business workflow. They rather go with customisation.&lt;/li&gt;
 &lt;li&gt;Maybe it&amp;rsquo;s because of specific security and compliance requirements, necessitating data being stored or handled locally on self-hosted servers.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Therefore, SaaS has the following differences from traditional software in financials:&lt;/p&gt;
+&lt;h3 id=&#34;therefore-saas-has-the-following-differences-from-traditional-software-in-financials&#34;&gt;
+Therefore, SaaS has the following differences from traditional software in financials:
+&lt;a href=&#34;#therefore-saas-has-the-following-differences-from-traditional-software-in-financials&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;More SG&amp;amp;A (especially sales) expenses and headcounts&lt;/li&gt;
 &lt;li&gt;The size of products/development team is much bigger than delivery/implement team&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And also these key metrics:&lt;/p&gt;
+&lt;h3 id=&#34;and-also-these-key-metrics&#34;&gt;
+And also these key metrics:
+&lt;a href=&#34;#and-also-these-key-metrics&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Retention, churn, conversion&lt;/li&gt;
 &lt;li&gt;Average revenue and cost of customer acquisition
@@ -387,7 +471,10 @@ Articles
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Lastly, let&amp;rsquo;s talk about the future. It depends on:&lt;/p&gt;
+&lt;h3 id=&#34;lastly-lets-talk-about-the-future-it-depends-on&#34;&gt;
+Lastly, let&amp;rsquo;s talk about the future. It depends on:
+&lt;a href=&#34;#lastly-lets-talk-about-the-future-it-depends-on&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;How well do vendors understand their clients: becoming a must in their clients&amp;rsquo; needs
 &lt;ul&gt;
@@ -419,6 +506,10 @@ Articles
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Fundamentally, &lt;strong&gt;SaaS is all about standardised products and services that&amp;rsquo;ll bring corresponding growth in high gross profit.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;last-questions&#34;&gt;
+Last questions:
+&lt;a href=&#34;#last-questions&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Do we have the &lt;em&gt;moat&lt;/em&gt;?&lt;/li&gt;
 &lt;li&gt;Have we known the clients well enough? What do they all want?&lt;/li&gt;

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>On on Rongbin&#39;s Blog</title>
+    <link>https://fanrongbin.com/tags/on/</link>
+    <description>Recent content in On on Rongbin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Mon, 18 Mar 2024 21:03:00 +0800</lastBuildDate>
+    <atom:link href="https://fanrongbin.com/tags/on/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On SaaS</title>
+      <link>https://fanrongbin.com/on-saas/</link>
+      <pubDate>Mon, 18 Mar 2024 21:03:00 +0800</pubDate>
+      <guid>https://fanrongbin.com/on-saas/</guid>
+      <description>tl;dr: SaaS (Software as a Service) is all about standardised products and services that&amp;rsquo;ll bring corresponding growth in high gross profit.&#xA;SaaS business: Subscription-based purchasing Selling the right to enjoy services What services: tiered pricing, on-demand pricing Rights can be expired: expiration Software is not running in your local servers: web-based standardised products What&amp;rsquo;s good: cheap, and flexible to raise demands or opt-out significant cash flow for vendors, creates elastic sales strategies, and has substantial economies of scale based on standardised features Churn is the key problem: easy replacement weak features squeezing clients heading towards customisation security concerns (most SaaS run on clouds) Metrics: retention/churn/conversion average revenue/cost, LTV/CAC What&amp;rsquo;s the future?</description>
+    </item>
+  </channel>
+</rss>
