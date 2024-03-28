@@ -17,6 +17,13 @@
 Media
 &lt;a href=&#34;#media&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
+&lt;div class=&#34;callout &#34;&gt;
+    &lt;div&gt;&lt;/div&gt;
+      &lt;div class=&#34;callout-inner&#34;&gt;
+      What are you looking for? Don&amp;rsquo;t indulge in browsing.&lt;br&gt;
+Have trust in people, not the outlet.
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;h3 id=&#34;world-us-business&#34;&gt;
 World, US, Business
 &lt;a href=&#34;#world-us-business&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -50,6 +57,39 @@ Asia
 &lt;li&gt;&lt;a href=&#34;https://www.thenewslens.com/&#34;&gt;The News Lens&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.twreporter.org/&#34;&gt;The Reporter&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h4 id=&#34;aseansea&#34;&gt;
+ASEAN/SEA
+&lt;a href=&#34;#aseansea&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Asia CNA&lt;/li&gt;
+&lt;li&gt;Focus Economics&lt;/li&gt;
+&lt;li&gt;Southeast-Asia Impact Alliance&lt;/li&gt;
+&lt;li&gt;Trading Economics&lt;/li&gt;
+&lt;li&gt;Malaysia
+&lt;ul&gt;
+&lt;li&gt;Free Malaysia Today&lt;/li&gt;
+&lt;li&gt;New Straits Times&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Thailand
+&lt;ul&gt;
+&lt;li&gt;Bangkok Post&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The Philippines
+&lt;ul&gt;
+&lt;li&gt;GMA News&lt;/li&gt;
+&lt;li&gt;Philippines News Agency&lt;/li&gt;
+&lt;li&gt;Rappler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vietnam
+&lt;ul&gt;
+&lt;li&gt;VN Economy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;tech&#34;&gt;
 Tech
 &lt;a href=&#34;#tech&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -70,27 +110,27 @@ Tech
 Regional Data
 &lt;a href=&#34;#regional-data&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
+&lt;div class=&#34;callout &#34;&gt;
+    &lt;div&gt;&lt;/div&gt;
+      &lt;div class=&#34;callout-inner&#34;&gt;
+      Data can be misleadingly interpreted and re-interpreted, especially macroeconomic data. Nothing is unbiased.
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;h3 id=&#34;world&#34;&gt;
 World
 &lt;a href=&#34;#world&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.csis.org/&#34;&gt;CSIS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ilostat.ilo.org/&#34;&gt;ILOSTAT&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.imf.org/en/Data&#34;&gt;IMF Data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://ourworldindata.org/&#34;&gt;Our World in Data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://data.un.org/&#34;&gt;UNdata&lt;/a&gt;, &lt;a href=&#34;https://unstats.un.org/&#34;&gt;UN Statistics Division&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://unctad.org/statistics&#34;&gt;UNCTADstat&lt;/a&gt; (Trade and Development)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://data.worldbank.org/&#34;&gt;WB Open Data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cia.gov/the-world-factbook/&#34;&gt;World Factbook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.who.int/data&#34;&gt;WHO Data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://wto.org/statistics&#34;&gt;WTO Statistics&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;asia-1&#34;&gt;
-Asia
-&lt;a href=&#34;#asia-1&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
-&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.adb.org/what-we-do/data&#34;&gt;ADB Data and Statistics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://statistics.apec.org/&#34;&gt;APEC Statistics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.oecd.org/southeast-asia/data/&#34;&gt;OECD&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;america&#34;&gt;
 America
@@ -100,10 +140,68 @@ America
 &lt;li&gt;&lt;a href=&#34;https://www.bea.gov/&#34;&gt;Bureau of Economic Analysis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bls.gov/data/&#34;&gt;Bureau of Labor Statistics&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://fred.stlouisfed.org/&#34;&gt;FRED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.usitc.gov/data/index.htm&#34;&gt;International Trade Commission&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.piie.com/&#34;&gt;Peterson Institute&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.pewresearch.org/&#34;&gt;Pew Research Center&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.sec.gov/edgar/search-and-access&#34;&gt;SEC&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://data.census.gov/&#34;&gt;Census Bureau Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aseansea-1&#34;&gt;
+ASEAN/SEA
+&lt;a href=&#34;#aseansea-1&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ASEAN&lt;/li&gt;
+&lt;li&gt;Indonesia
+&lt;ul&gt;
+&lt;li&gt;Bank Indonesia&lt;/li&gt;
+&lt;li&gt;Indonesia Ministry of Investment&lt;/li&gt;
+&lt;li&gt;Statistics Indonesia&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Malaysia
+&lt;ul&gt;
+&lt;li&gt;Central Bank of Malaysia&lt;/li&gt;
+&lt;li&gt;Malaysia Reserve&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Singapore
+&lt;ul&gt;
+&lt;li&gt;Ministry of Trade and Industry Singapore
+&lt;ul&gt;
+&lt;li&gt;Economic Survey of Singapore by mti.gov.sg&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Monetary Authority of Singapore&lt;/li&gt;
+&lt;li&gt;Singapore Department of Statistics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Thailand
+&lt;ul&gt;
+&lt;li&gt;Office of the National Economic and Social Development (NESDC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The Philippines
+&lt;ul&gt;
+&lt;li&gt;Dept of Finance, Republic of the Philippines&lt;/li&gt;
+&lt;li&gt;Philippine Statistics Authority&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vietnam
+&lt;ul&gt;
+&lt;li&gt;General Statistics Office of Vietnam&lt;/li&gt;
+&lt;li&gt;Vietnam Law and Legal Forum&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;asia-1&#34;&gt;
+Asia
+&lt;a href=&#34;#asia-1&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.adb.org/what-we-do/data&#34;&gt;ADB Data and Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://statistics.apec.org/&#34;&gt;APEC Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.oecd.org/southeast-asia/data/&#34;&gt;OECD&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;china&#34;&gt;
 China
@@ -157,6 +255,12 @@ UK
 Academics
 &lt;a href=&#34;#academics&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
+&lt;div class=&#34;callout &#34;&gt;
+    &lt;div&gt;&lt;/div&gt;
+      &lt;div class=&#34;callout-inner&#34;&gt;
+      See the potential to bring theories into applications.&lt;br&gt;Filter out opportunists.
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;h3 id=&#34;paper&#34;&gt;
 Paper
 &lt;a href=&#34;#paper&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -4508,6 +4612,97 @@ Daily Life
 2024
 &lt;a href=&#34;#2024&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;stream h-entry&#34; id=&#34;2024-03-28-e-conomy-sea&#34;&gt;
+
+
+Note: 
+&lt;div class=&#34;stream-inner e-content&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;p&gt;今天浏览了三个神仙联名发布的&lt;a href=&#34;https://economysea.withgoogle.com/report/&#34;&gt;e-Conomy SEA系列报告&lt;/a&gt;。20-22年疫情期间的内容很常规，以委托发问卷 + 一些测算更新和回顾为主，最大的洞见可能就只是消费者对digital services的接受度上升和习惯的改变（这或许有些太人尽皆知），适合让实习生整理成时间序列，然后内部画图的时候就能用上（乐）。19年和23年的报告，一头一尾好像还有些看的，随手胡说八道一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电商和网约车（包括外卖配送）的发展是超过预期的，整体来说各个赛道的轨迹跟国内高度接近，例如在帮你约车的同时推销点小额贷&lt;/li&gt;
+&lt;li&gt;电商（+ 电子支付）、网约车的习惯基本养成，但外卖还不一定（这个与城市化程度、以及东南亚老百姓到底需不需要叫外卖的灵魂拷问之间不无关系）&lt;/li&gt;
+&lt;li&gt;互联网基建的问题基本都解决了，网络计费也在大众可承受的范围内&lt;/li&gt;
+&lt;li&gt;头部玩家基本结束了获客阶段，往提高用户参与（engagement）和盈利能力走&lt;/li&gt;
+&lt;li&gt;城市地区贡献了超过50%的digital economy value，但只占据全部人口的15%（19年），建议多关注非城市地区、un-/underbanked的人群（但这个建议或许有些骨感）&lt;/li&gt;
+&lt;li&gt;越南在统计的六国中数字化程度最高（但19年也只是小幅超过5%的水平）&lt;/li&gt;
+&lt;li&gt;SEA面对宏观不确定性和疫情冲击时，表现出比其他市场更强的resilience&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;展望的主题23年定为profitable growth，这个是挺务实的。因为机构一直以早期轮次投得比较多，较靠后的轮次投得少而且难退出，SEA新创的盈利能力没有想象中的好，退出比较难。我能想到比较合适的退出现在就只是M&amp;amp;A这一条路子，各个赛道跑出来一两个龙头垄断就差不多了，虽然现在看上去价格战还要打一会儿，但是很快就没钱打了。&lt;/p&gt;
+&lt;p&gt;一直说东南亚是个充满活力和年轻的市场，但这话说出来之后，很容易忘记它和其他亚洲国家之间的差别，也忘了时间——迁移是迁移不出去的，很多东西就是复刻、迁移过来的；digital再怎样也是加在economy上的形容词，再造一个奇迹需要伴随着奇迹长大，可headwinds吹呀吹，大家等不及。&lt;/p&gt;
+&lt;p&gt;最后的感想是确实好多数字，好多规模，这里million那里billion，但脑子里如果没有参照物=what&amp;rsquo;s the point? 这也是摆在面前的课（坎）题（儿）……&lt;/p&gt;
+&lt;p&gt;Slides设计得也一年比一年好了。&lt;/p&gt;
+
+
+
+&lt;/div&gt;
+
+&lt;a class=&#34;u-bridgy-fed&#34; rel=&#34;bridgy&#34; href=&#34;https://fed.brid.gy&#34; style=&#34;display:none;&#34;&gt;&lt;/a&gt;
+
+&lt;p class=&#34;stream-meta&#34;&gt;
+    &lt;span class=&#34;p-author h-card&#34;&gt;
+        &lt;a href=&#34;https://fanrongbin.com&#34; class=&#34;u-url&#34; style=&#34;display:none;&#34;&gt;
+            &lt;img src=&#34;https://fanrongbin.com/apple-touch-icon.png&#34; class=&#34;u-photo&#34; alt=&#34;Rongbin FAN&#34; style=&#34;display:none;&#34;&gt;
+        &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;time class=&#34;dt-published&#34; datetime=&#34;2024-03-28T20:38:30&amp;#43;08:00&#34; title=&#34;2024-03-28T20:38:30&amp;#43;08:00&#34;&gt;
+        
+                &lt;a href=&#34;https://fanrongbin.com/stream#2024-03-28-e-conomy-sea&#34; onclick=&#34;event.preventDefault(); location.hash=&#39;2024-03-28-e-conomy-sea&#39;;&#34; class=&#34;stream-time u-url&#34;&gt;20:38 (&amp;#43;08) Thu 28 March 2024&lt;/a&gt;
+        
+    &lt;/time&gt;
+    
+    
+    
+
+&lt;/p&gt;
+
+&lt;/div&gt;
 
 
 
