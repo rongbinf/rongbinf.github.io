@@ -288,8 +288,10 @@
                 </video>
 
                 <script>
-                    document.querySelectorAll('.video').play();
-                </script>
+                    document.querySelectorAll('.video').forEach(video => {
+                        video.play();
+                    });
+                </script>                
 
             </div>
 
@@ -418,6 +420,22 @@ document.querySelectorAll('.slideshow-container').forEach(container => {
     });
 });
 
+    // document.querySelectorAll('.slideshow-container .video').forEach(video => {
+    //     video.addEventListener('ended', () => {
+    //         let replayButton = document.querySelector('.replay');
+    //         if (replayButton) {
+    //             replayButton.style.display = 'block';
+    //         }
+    //     });
+    // });
+
+    // document.querySelector('.replay').addEventListener('click', () => {
+    //     let video = document.querySelector('.slideshow-container .video');
+    //     if (video) {
+    //         video.play();
+    //         document.querySelector('.replay').style.display = 'none';
+    //     }
+    // });
 
 </script>
 
@@ -441,24 +459,6 @@ document.querySelectorAll('.slideshow-container').forEach(container => {
             event.preventDefault();
         });
     }
-
-    document.querySelectorAll('.slideshow-container .video').forEach(video => {
-        video.addEventListener('ended', () => {
-            let replayButton = document.querySelector('.replay');
-            if (replayButton) {
-                replayButton.style.display = 'block';
-            }
-        });
-    });
-
-    document.querySelector('.replay').addEventListener('click', () => {
-        let video = document.querySelector('.slideshow-container .video');
-        if (video) {
-            video.play();
-            document.querySelector('.replay').style.display = 'none';
-        }
-    });
-
 
 </script>
 <script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
