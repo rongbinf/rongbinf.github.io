@@ -14,10 +14,10 @@
     <meta property="og:description" content="Organise your day, better." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://fanrongbin.com" />
-    <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+    <meta property="og:image" content="https://img.fanrongbin.com/Calinda%20Logo%20%403x.webp" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+    <meta name="twitter:image" content="https://img.fanrongbin.com/Calinda%20Logo%20%403x.webp" />
     <meta name="twitter:title" content="Calinda" />
     <meta name="twitter:description" content="Organise your day, better." />
 
@@ -30,9 +30,9 @@
     <meta name="msvalidate.01" content="6DFC6C69D3CAC309F3ED39EA45B19F2A" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.fanrongbin.com/Calinda%20Logo%20%403x.webp">
 
-    <link rel="icon" ref="//img.fanrongbin.com/calinda-logo.png">
+    <link rel="icon" ref="https://img.fanrongbin.com/Calinda%20Logo%20%403x.webp">
 
     <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
 
@@ -86,7 +86,7 @@
     .screen {
         width: 20em;
         /* height: 41em; */
-        margin: 0 2.5em 5em 0;
+        margin: 0 2em 5em 0;
         border: 10px solid #d9d9d93f;
         border-radius: 26px;
         /* box-shadow: rgba(194, 194, 194, 0.4) 5px 5px, rgba(194, 194, 194, 0.3) 10px 10px; */
@@ -133,7 +133,7 @@
     }
 
     .draft-img {
-        width: 99vw;
+        width: 100vw;
         overflow: hidden;
         opacity: 0.4;
         mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
@@ -153,7 +153,11 @@
     .footer {
         position: fixed;
         padding-left: 1ch;
-        bottom: 0;
+        bottom: 1ch;
+    }
+
+    .footer>a>p {
+        margin-bottom: 0;
     }
 
     @media (min-width: 1300px) {
@@ -205,9 +209,13 @@
             margin-bottom: -12em;
         }
 
+        .slideshow-container {
+            padding: 1em;
+        }
+
         .draft {
             position: fixed !important;
-            bottom: 0 !important;
+            bottom: -1em !important;
             top: unset !important;
         }
     }
@@ -217,12 +225,16 @@
             flex-direction: column;
         }
 
+        .context {
+            padding: 1ch;
+        }
+
         .block {
             position: initial;
             top: unset;
             width: unset;
             left: unset;
-            padding: inherit;
+            padding: 1ch;
             background: unset;
             backdrop-filter: unset;
             margin-bottom: unset;
@@ -248,7 +260,7 @@
         </section>
 
         <section class="heading heading-general" style="display:flex;flex-direction:column;gap:2em;">
-            <img src="https://img.fanrongbin.com/Calinda%20Logo%20%403x.png" width="90">
+            <img src="https://img.fanrongbin.com/Calinda%20Logo%20%403x.webp" width="90">
             <div class="heading-title">
                 <h1 style="font-size:2em;">Calinda</h1>
                 <p style="margin:unset;">Organise your day, better.</p>
@@ -259,15 +271,15 @@
 
             <div class="slideshow-container">
 
-                <video autoplay muted class="screen video" poster="https://img.fanrongbin.com/Home%403x.png"
+                <video autoplay muted class="screen video" poster="https://img.fanrongbin.com/Home%403x.webp"
                     onclick="this.play()">
                     <source src="https://img.fanrongbin.com/202403311202791.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
-                <img class="screen" src="https://img.fanrongbin.com/Edit%20Event%403x.png" style="opacity:0.4;">
+                <img class="screen" src="https://img.fanrongbin.com/Edit%20Event%403x.webp" style="opacity:0.4;">
 
-                <video autoplay muted class="screen video" poster="https://img.fanrongbin.com/Weekly%20View%20-%20Press%20Events%402x.png"
+                <video autoplay muted class="screen video" poster="https://img.fanrongbin.com/Weekly%20View%20-%20Press%20Events%402x.webp"
                     onclick="this.play()">
                     <source src="https://img.fanrongbin.com/1711877969.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -306,10 +318,10 @@
 
             <div class="slideshow-container">
 
-                <img class="screen slideshow-img" src="https://img.fanrongbin.com/Home%403x.png" id="today-1">
-                <img class="screen slideshow-img" src="https://img.fanrongbin.com/Swipe%20Up%20Example%403x.png"
+                <img class="screen slideshow-img" src="https://img.fanrongbin.com/Home%403x.webp" id="today-1">
+                <img class="screen slideshow-img" src="https://img.fanrongbin.com/Swipe%20Up%20Example%403x.webp"
                     id="today-2" style="opacity:0.4;">
-                <img class="screen slideshow-img" src="https://img.fanrongbin.com/News%403x.png" id="today-3">
+                <img class="screen slideshow-img" src="https://img.fanrongbin.com/News%403x.webp" id="today-3">
 
             </div>
 
@@ -325,9 +337,9 @@
 
             <div class="slideshow-container">
 
-                <img class="screen" src="https://img.fanrongbin.com/Habits%403x.png" id="life-1">
-                <img class="screen" src="https://img.fanrongbin.com/Readings-2%403x.png" id="life-2" style="opacity:0.4;">
-                <img class="screen" src="https://img.fanrongbin.com/Journal%403x.png" id="life-3">
+                <img class="screen" src="https://img.fanrongbin.com/Habits%403x.webp" id="life-1">
+                <img class="screen" src="https://img.fanrongbin.com/Readings-2%403x.webp" id="life-2" style="opacity:0.4;">
+                <img class="screen" src="https://img.fanrongbin.com/Journal%403x.webp" id="life-3">
 
             </div>
 
@@ -369,10 +381,10 @@ function updateImageSources() {
     const isSmallScreen = window.matchMedia('(max-width: 1000px)').matches;
     contextImages.forEach(img => {
         let src = img.getAttribute('src');
-        if (isSmallScreen && src.includes('%403x.png')) {
-            img.setAttribute('src', src.replace('%403x.png', '%402x.png'));
-        } else if (!isSmallScreen && src.includes('%402x.png')) {
-            img.setAttribute('src', src.replace('%402x.png', '%403x.png'));
+        if (isSmallScreen && src.includes('%403x.webp')) {
+            img.setAttribute('src', src.replace('%403x.webp', '%402x.webp'));
+        } else if (!isSmallScreen && src.includes('%402x.webp')) {
+            img.setAttribute('src', src.replace('%402x.webp', '%403x.webp'));
         }
     });
 }
@@ -387,13 +399,13 @@ window.addEventListener('resize', () => {
 
 document.querySelectorAll('.slideshow-container').forEach(container => {
     let items = container.querySelectorAll('img, video');
-    let itemWidthem = 18;
+    let itemWidthem = 95;
 
     items.forEach((item, index) => {
         item.addEventListener('click', () => {
             let translateXValue = -itemWidthem * index;
             items.forEach(innerItem => {
-                innerItem.style.transform = `translateX(${translateXValue}em)`;
+                innerItem.style.transform = `translateX(${translateXValue}%)`;
                 innerItem.style.opacity = innerItem === item ? '1' : '0.4';
             });
         });
