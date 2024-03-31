@@ -137,6 +137,15 @@ em {
     opacity: 1;
 }
 
+section.prototype {
+    grid-column: 2/2;
+    padding: 2ch;
+}
+
+section.prototype>a>img {
+    width: 90px;
+}
+
 /* styling */
 
 #home {
@@ -308,6 +317,15 @@ textarea:focus, textarea:focus-visible, textarea:focus-within {
 
     .footer {
         padding: 2ch;
+    }
+
+    section.prototype {
+        grid-column: unset;
+        padding: 2ch;
+    }
+    
+    section.prototype>a>img {
+        width: 60px;
     }
 }
 
