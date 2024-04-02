@@ -6,8 +6,202 @@
     <description>Recent content on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 27 Mar 2024 23:18:35 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 19:33:27 +0800</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Reddit</title>
+      <link>https://fanrongbin.com/reddit-ipo/</link>
+      <pubDate>Mon, 01 Apr 2024 19:33:27 +0800</pubDate>
+      <guid>https://fanrongbin.com/reddit-ipo/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;en&lt;/strong&gt; | zh-hans&lt;/p&gt;
+&lt;p&gt;I only got around to reading &lt;a href=&#34;(https://www.sec.gov/Archives/edgar/data/1713445/000162828024006294/reddits-1q423.htm)&#34;&gt;Reddit&amp;rsquo;s S-1&lt;/a&gt; today, with a primary focus on the platform&amp;rsquo;s internet metrics. So, some facts, as of the end of 2023:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reddit
+&lt;ul&gt;
+&lt;li&gt;Active: (regardless of login status, as long as identifiable)
+&lt;blockquote&gt;
+&lt;p&gt;We define a daily active unique (“DAUq”) as a user whom we can identify with a unique identifier who has visited a page on the Reddit website, &lt;a href=&#34;https://www.reddit.com&#34;&gt;www.reddit.com&lt;/a&gt;, or opened a Reddit application at least once during a 24-hour period.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Daily active uniques&lt;/strong&gt;, DAUq (active): 73.1m (reached 60m in Q1 2023, jumped by 7.1m in Q4)&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;Facebook DAU globally 2.11b, North America 205m, META DAP (daily active person, any login to Facebook / Instagram / Messenger / WhatsApp counts) globally 3.19b (2023 10-K, as of Dec 2023)&lt;br&gt;X (formerly Twitter) mDAU (monetizable daily active users) globally 237.8m, US 41.5m (2022 Q2, Apr to Jun 2022)&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;Of these DAUq, 36.4m logged-in (~50%)&lt;/li&gt;
+&lt;li&gt;Of these DAUq, 36.4m from the US&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Weekly active uniques&lt;/strong&gt;, WAUq (active): 267.5m (saw an increase of over 20m in Q3 and also in Q4 2023)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User persona&lt;/strong&gt;: align with common sense, predominantly from English-speaking countries, mostly male, young and middle-aged
+&lt;ul&gt;
+&lt;li&gt;~50% from the US
+&lt;ul&gt;
+&lt;li&gt;Among US adult users, 41% are aged 18-34, 50% are male, 64% have a household income of &amp;gt;= $75k&lt;/li&gt;
+&lt;li&gt;87% of US adult users don&amp;rsquo;t use Twitch (which is kind of surprising), 73% do not use Snapchat, 68% do not use LinkedIn, 59% do not use Pinterest, 53% do not use X, 41% do not use TikTok&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;This is quite an interesting dimension especially for advertisers to determine if a platform&amp;rsquo;s user profile suits their needs and to decide on potential exposure overlap.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;To compare with other social media platforms, see Pew Research
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pewresearch.org/internet/2024/01/31/americans-social-media-use/&#34;&gt;Americans&amp;rsquo; Social Media Use&lt;/a&gt; (Survey period May-September 2023, 5,733 U.S. adults)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pewresearch.org/internet/2023/12/11/teens-social-media-and-technology-2023/&#34;&gt;Teens, Social Media and Technology 2023&lt;/a&gt; (Survey period September-October 2023, 1,453 U.S. teens aged 13-17)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ARPU&lt;/strong&gt;: quarterly revenue in a given place, divided by the average DAUq in that region for the quarter
+&lt;blockquote&gt;
+&lt;p&gt;We define average revenue per unique (“ARPU”) as quarterly revenue in a given geography divided by the average DAUq in that geography.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;2023 Q4: all users $3.43, US $5.51, excl. US $1.34&lt;/li&gt;
+&lt;li&gt;Seasonality: Q4 the highest, Q1 the lowest (contributed to the seasonality in ad business, holiday season and promotion), with 2022 total revenue at ~$667m and 2023 at ~$804m&lt;/li&gt;
+&lt;li&gt;Note that the growth in logged-out users can raise the denominator DAUq but unnecessarily brings revenue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reddit&amp;rsquo;s growth strategy is built on three pillars: ads, data licensing, and user economy.&lt;/p&gt;
+&lt;h2 id=&#34;ads&#34;&gt;
+Ads
+&lt;a href=&#34;#ads&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The market size is estimated to be $1 trillion (excl. China and Russia), with an 8% CAGR, reaching $1.4 trillion in three years. Reddit also expects to have a share in the segmented search business ($750b by 2027).&lt;/p&gt;
+&lt;p&gt;The success of the ads business of internet companies at the end hinges on how accurately they can profile their users, and then convert this into leads. Generally, the wider the business reach / the larger the ecosystem, the more data is being accumulated, the more frequently ads banner are being updated real-time, and the more precise the profiling and strategies become (Take Alibaba as an example, from daily consumption to Fintech). Advertising is also a rapidly evolving sector with AI advancing, e.g. gaining insights from search histories, connecting dots between keywords for more precise labelling and recommendations etc.&lt;/p&gt;
+&lt;p&gt;Reddit values anonymity, but of course this remains at the user-to-user level, meaning users may not know who they&amp;rsquo;ve been talking to, but the ad system will still continue to label users&amp;rsquo; demographics. Though users are allow to leave false info or blank profiles, or to turn off customised advertising altogether, their interactions within communities still exhibit certain behavioural patterns which belong to certain groups to be identified and labelled. This works the same across all content-driven algorithms / products (YouTube, TikTok, Instagram, etc.) while in contrast to the relationship / network-driven products like Facebook (though now they all try their best to adapt content-driven models). &lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;I know that Reddit relies on community communications / comments, but this is nothing like network-driven but rather a place full of primary and secondary information generation and distribution.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;Reddit firstly categorises users into different interest groups based on their interactions (read, reply, vote, comment&amp;hellip;), then goes into subcategories (e.g. Food &amp;amp; Drink -&amp;gt; Cooking, for someone recently visiting r/gifrecipes), and layers on other dimensions like device and location.&lt;/p&gt;
+&lt;p&gt;In some ways, Reddit shares some similarities with Xiaohongshu (it&amp;rsquo;s an emerging social media platform for Chinese speakers, if you know, you know).&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Precisely label users by interests, and have high conversion rates&lt;/li&gt;
+&lt;li&gt;Lots of human-generated useful content enough to be used as a second search engine&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;But their user personas are fundamentally different ever since their own beginning. Reddit&amp;rsquo;s appears somewhat young and financially capable, they usually take rather a long period of time to make purchasing decisions, which is very different from Xiaohongshu&amp;rsquo;s cause mostly of the time people go to Xiaohongshu to search what&amp;rsquo;s the best to buy.&lt;/p&gt;
+&lt;p&gt;In all, Reddit&amp;rsquo;s ads business and content-driven logic is sound, and the growth strategy mentioned in the S-1 are also solid. But they really need to be wary of:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The not-so-good user profile (as mentioned earlier)&lt;/li&gt;
+&lt;li&gt;User habits and the underlying growth slump:
+&lt;ul&gt;
+&lt;li&gt;Gen Z is no longer interested in texts: how do we increase user engagement (represented by the screen time spent on the platform) and the willingness to create contents (represented by posts&amp;rsquo; recency)?&lt;/li&gt;
+&lt;li&gt;Users tend to enter the platform via search engines instead of Reddit&amp;rsquo;s own Explore page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;data-licensing-and-user-economy&#34;&gt;
+Data Licensing and User Economy
+&lt;a href=&#34;#data-licensing-and-user-economy&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Relevant strategies and plans are briefly mentioned. My guess is that there would be 1) API for individuals and small businesses (roughly $0.24 per 1,000 API calls); 2) maybe some contracts with larger B2B businesses. They use the &lt;em&gt;broader AI market&lt;/em&gt; for sizing which is estimated at $1 trillion by 2027. (quite conservative than I imagined)&lt;/p&gt;
+&lt;p&gt;The user economy model is rather familiar for us. 1) platform-based: subscription (existing Reddit Premium), digital goods (avatars, NFTs, etc.), some in-app purchasing (games); 2) commission-based: firstly led by incentivising content creation, and they could also adapt e-commerce by adding a user-to-user marketplace (no matter it is for selling digital or physical goods). This segment is estimated generously compared to other estimation, and the very unclear demand underlying, currently at $1.3 trillion and expected to reach $2.1 trillion by 2027.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In all, this IPO came too late as everyone&amp;rsquo;s attention has been shifting to short videos; the valuation is too optimistic, overestimating its main users&amp;rsquo; purchasing power and willingness, and the scale and possibility of the user economy.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;en | &lt;strong&gt;zh-hans&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;今天才坐下来看&lt;a href=&#34;https://www.sec.gov/Archives/edgar/data/1713445/000162828024006294/reddits-1q423.htm&#34;&gt;Reddit招股书&lt;/a&gt;，主要关注平台metrics。23年年底：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reddit
+&lt;ul&gt;
+&lt;li&gt;对活跃的定义：（登不登录都算，只要能够识别）
+&lt;blockquote&gt;
+&lt;p&gt;We define a daily active unique (“DAUq”) as a user whom we can identify with a unique identifier who has visited a page on the Reddit website, &lt;a href=&#34;https://www.reddit.com&#34;&gt;www.reddit.com&lt;/a&gt;, or opened a Reddit application at least once during a 24-hour period.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日活&lt;/strong&gt; DAUq (active)：73.1m（23年Q1破60m，23年Q4突然较Q3涨7.1m）&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;Facebook DAU 全球2.11b、北美205m，META DAP（daily active person，Facebook / Instargam / Messenger / WhatsApp任一登录都包含在内）全球3.19b（23年报，23年12月）&lt;br&gt;X mDAU 全球237.8m、美国41.5m（22Q2季报，22年4-6月）&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;其中登录用户36.4m (~50%)&lt;/li&gt;
+&lt;li&gt;其中美国用户36.4m&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;周活&lt;/strong&gt; WAUq (active)：267.5m（也是23年Q3、Q4较上一季度涨超过20m）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用户构成&lt;/strong&gt;：自行公布的画像跟大家认知差不多，英语国家为主、男性用户为主、中青年为主
+&lt;ul&gt;
+&lt;li&gt;~50%来自美国
+&lt;ul&gt;
+&lt;li&gt;美国成年用户中41%在18-34岁之间，50%为男性，64%家庭年收入大于等于$75k&lt;/li&gt;
+&lt;li&gt;美国所有访问过Reddit的用户87%不用Twitch（这是挺让我意外的）、73%不用Snapchat、68%不用LinkedIn、59%不用Pinterest、53%不用X、41%不用TikTok&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;这也是个挺好玩的维度，供广告商判断平台的用户画像到底适不适合自己投，会不会/要不要做重复曝光。&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;和其他社交平台对比，可以大致参考Pew Research的：
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pewresearch.org/internet/2024/01/31/americans-social-media-use/&#34;&gt;Americans&amp;rsquo; Social Media Use&lt;/a&gt;（统计时段23年5月-9月，统计对象5,733名美国成人）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pewresearch.org/internet/2023/12/11/teens-social-media-and-technology-2023/&#34;&gt;Teens, Social Media and Technology 2023&lt;/a&gt;（统计时段23年9月-10月，统计对象1,453名美国13至17岁的青少年）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ARPU&lt;/strong&gt;：给定地区的季度收入，除以给定地区该季度的平均DAUq
+&lt;blockquote&gt;
+&lt;p&gt;We define average revenue per unique (“ARPU”) as quarterly revenue in a given geography divided by the average DAUq in that geography.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;23年Q4全体$3.43：美国$5.51、美国以外$1.34&lt;/li&gt;
+&lt;li&gt;收入有明显季节特征：Q1-Q4递增（来自广告业务的季节特征，Q4年末促销冲单等等，广告做的多） ，22年总营收$~6.67亿，23年$~8.04亿。&lt;/li&gt;
+&lt;li&gt;注意未登录用户增长（logged-out users）会带来分母DAUq提高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;战略上给了三板斧：广告、数据授权、用户经济（User Economy）。&lt;/p&gt;
+&lt;h2 id=&#34;广告&#34;&gt;
+广告
+&lt;a href=&#34;#%e5%b9%bf%e5%91%8a&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;规模上（排除了中国、俄罗斯）预计目前是$1万亿，8%的年复合，3年后是$1.4万亿，Reddit还预计自己能在搜索业务（27年$750b）上分一杯羹。&lt;/p&gt;
+&lt;p&gt;互联网公司的广告业务，到最后是看谁给用户画像画得够准，然后能怎么有效给商家转化成线索。一般来说业务触角广或共享数据的生态圈够大，积累数据就越多，实时更新广告位也越频繁，画像和投放策略就越精准（阿里巴巴为例，衣食住行+Fintech包圆）。广告也是随AI发展迅速迭代的一个业务，例如洞察搜索记录、建立关键词之间的联系之后，能更精准地打标签和广告推荐等。&lt;/p&gt;
+&lt;p&gt;Reddit匿名性（anonymity）的价值观停留在user-to-user和demo层面，网友之间可能不知道对方是个什么角色，但系统内还是会继续label用户的。用户可以选择不设置年龄性别这类硬标签，或者直接把整个个性化广告的开关关掉，但在社区上的interactions依然具有某些特定的行为习惯以供识别。所有内容算法为驱动的产品都是如此（YouTube、TikTok、Instagram等），对立面是Facebook为代表的人际关系驱动（当然现在我们知道大家都在往内容驱动做）。&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;虽然Reddit社区的核心是conversations/comments，但这显然不是一种有现实意义和强转化的关系，而是信息的二次传播和生产。&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;Reddit先根据用户阅读、回复或vote过的帖子，初筛用户到兴趣组里（或者从sub出发，sub也能打上兴趣标签），然后切二级（例如Food &amp;amp; Drink下的Cooking，一个最近访问过r/gifrecipes的用户就属于这个兴趣组），再layer上用户的device和location等等其他允许获取的特征。&lt;/p&gt;
+&lt;p&gt;某种意义上，相比贴吧，Reddit和小红书之间具有更多相似性：（事实上Reddit和贴吧之间，除了页面有点像，还有什么别的共同点？）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;兴趣标签精准、广告转化率比较高&lt;/li&gt;
+&lt;li&gt;足够多活人内容，具有往搜索引擎发展的内容资本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;但两者“开山鼻祖”不同，尽管用户对平台的使用方式很类似，用户画像在人口特征上天差地别，小红书上市比起Reddit上市会更让我兴奋一点（前提是摒弃市场对中概的情绪因素）。Reddit用户画像虽然看上去还算年轻、有一定购买力，但是这部分人消费决策所花费的时间太长。&lt;/p&gt;
+&lt;p&gt;综上，广告业务逻辑没问题，广告战略也没问题，需要警惕的是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;不太乐观的用户画像（如前述）&lt;/li&gt;
+&lt;li&gt;用户习惯以及习惯背后的增长颓势：
+&lt;ul&gt;
+&lt;li&gt;Gen Z越来越看不下去一点文字，还怎么提升engagement（以使用时长为代表）和内容生产意愿（以用户搜索结果列表中帖子的发表时间为代表）？&lt;/li&gt;
+&lt;li&gt;最大的入口不是Reddit主站，而是搜索引擎，但搜索引擎都快自顾不暇了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;数据授权用户经济&#34;&gt;
+数据授权、用户经济
+&lt;a href=&#34;#%e6%95%b0%e6%8d%ae%e6%8e%88%e6%9d%83%e7%94%a8%e6%88%b7%e7%bb%8f%e6%b5%8e&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;靠授权Reddit上的帖子用于AI/LLM训练，没细讲，大概就是对个人和小批量客户开API（Reddit自己大体估计的价格是在$0.24/1000次API调用的水平），大型to-B可能可以走contract之类的。市场规模用的是&lt;em&gt;broader AI market&lt;/em&gt;，到27年$1万亿（估计得比想象中保守）。&lt;/p&gt;
+&lt;p&gt;用户经济的模式大家也比较喜闻乐见了，主要在平台自己做加法（订阅：现有的Reddit Premium；digital goods：头像挂件、比较geek的NFT之流；未来预期还有游戏什么的，就属于氪金增值了），或者激励内容创作、开放user-to-user marketplace等抽佣上，所以也能包括实体商品。这一块儿估计得很大，预计目前是$1.3万亿、27年$2.1万亿，但也是最虚的一块儿，看不到什么需求。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;综上，Reddit上市的时机太晚，大家都去看短视频了；估值不要把主力用户的消费力和消费意愿看得太高，不要对用户经济盲目乐观。&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Resources</title>
       <link>https://fanrongbin.com/resources/</link>
@@ -352,7 +546,10 @@ Tools and Platforms
 &lt;li&gt;&lt;a href=&#34;https://archive.org/web/&#34;&gt;Wayback Machine&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.wordreference.com/&#34;&gt;WordReference&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;career-related&#34;&gt;
+&lt;hr&gt;
+&lt;details&gt;
+    &lt;summary&gt;More&lt;/summary&gt;
+    &lt;h2 id=&#34;career-related&#34;&gt;
 Career Related
 &lt;a href=&#34;#career-related&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
@@ -404,6 +601,8 @@ Articles
 &lt;li&gt;&lt;a href=&#34;https://www.olev.de/s/strat/Strategy%20Survival%20Guide.pdf&#34;&gt;Strategy Survival Guide: Prime Minister&amp;rsquo;s Strategy Unit (2004)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://typographyforlawyers.com/&#34;&gt;Typography for Lawyers (2nd edition)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;/details&gt;
 </description>
     </item>
     <item>
