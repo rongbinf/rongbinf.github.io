@@ -6,14 +6,35 @@
     <description>Recent content in Tech on Rongbin&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 30 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2024 13:14:34 +0800</lastBuildDate>
     <atom:link href="https://fanrongbin.com/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microsoft 365 中 Office 套件的两种 UI</title>
+      <link>https://fanrongbin.com/microsoft-365-office-ui/</link>
+      <pubDate>Wed, 22 May 2024 13:14:34 +0800</pubDate>
+      <guid>https://fanrongbin.com/microsoft-365-office-ui/</guid>
+      <description>最近打开Office（Windows 11 23H2，Office 版本2405）会随机在面向Windows 10的旧 UI和改成 Fluent Design 的新 UI中选用。因为我自己觉得如果是在工作机器上，Fluent Design很累赘，所以一直用Win11DisableRoundedCorners把全局的圆角关掉，现在偶尔出现的旧UI很赏心悦目，很想把它留住。&#xA;目前还可以通过注册表形式修改。&#xA;新建一个文本文档，复制粘贴下列代码后保存，文件后缀改为.reg，双击运行即可。&#xA;Windows Registry Editor Version 5.00 [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentConfigs\ExternalFeatureOverrides\word] &amp;#34;Microsoft.Office.UXPlatform.FluentSVRefresh&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&amp;#34;= &amp;#34;false&amp;#34; [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentConfigs\ExternalFeatureOverrides\excel] &amp;#34;Microsoft.Office.UXPlatform.FluentSVRefresh&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&amp;#34;= &amp;#34;false&amp;#34; [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentConfigs\ExternalFeatureOverrides\onenote] &amp;#34;Microsoft.Office.UXPlatform.FluentSVRefresh&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&amp;#34;= &amp;#34;false&amp;#34; [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentConfigs\ExternalFeatureOverrides\outlook] &amp;#34;Microsoft.Office.UXPlatform.FluentSVRefresh&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&amp;#34;= &amp;#34;false&amp;#34; [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentConfigs\ExternalFeatureOverrides\powerpoint] &amp;#34;Microsoft.Office.UXPlatform.FluentSVRefresh&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&amp;#34;= &amp;#34;false&amp;#34; [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentConfigs\ExternalFeatureOverrides\visio] &amp;#34;Microsoft.Office.UXPlatform.FluentSVRefresh&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&amp;#34;= &amp;#34;false&amp;#34; [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentConfigs\ExternalFeatureOverrides\publisher] &amp;#34;Microsoft.Office.UXPlatform.FluentSVRefresh&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&amp;#34;= &amp;#34;false&amp;#34; [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\ExperimentConfigs\ExternalFeatureOverrides\access] &amp;#34;Microsoft.Office.UXPlatform.FluentSVRefresh&amp;#34;= &amp;#34;false&amp;#34; &amp;#34;Microsoft.</description>
+    </item>
+    <item>
+      <title>Set up your Thunderbird on Windows</title>
+      <link>https://fanrongbin.com/set-up-your-thunderbird-on-windows/</link>
+      <pubDate>Sun, 21 Jan 2024 16:59:25 +0800</pubDate>
+      <guid>https://fanrongbin.com/set-up-your-thunderbird-on-windows/</guid>
+      <description>I&amp;rsquo;ve been using Thunderbird for about a year starting from I shifted to Windows. There are three reasons why you should use Thunderbird on Windows:&#xA;It&amp;rsquo;s open-source and free. It supports PGP encryption and some end-to-end chat services, and they are built-in features. Every email service works pretty well here. So you finally have one place to put all your accounts. And it&amp;rsquo;s so much lighter and has fewer problems than Outlook.</description>
+    </item>
     <item>
       <title>Windows 11 的新字体：Segoe UI Variable</title>
       <link>https://fanrongbin.com/segoe-ui-variable/</link>
       <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/segoe-ui-variable/</guid>
       <description>微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 发布了 Segoe UI 的可变字体版本：Segoe UI Variable，在 Windows 11 正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。&#xA;风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，看起来也更像 Product Sans 了。&#xA;可以通过 Windows 的官方文档，或直接访问此链接下载 Segoe UI Variable。</description>
+    </item>
+    <item>
+      <title>在 Big Sur 安装 PocketSphinx 时出现的问题</title>
+      <link>https://fanrongbin.com/pocketsphinx-install-errors/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/pocketsphinx-install-errors/</guid>
+      <description>确认安装了swig # 首先确认是否安装了swig，否则运行setup.py报错：&#xA;error: command &amp;#39;swig&amp;#39; failed: No such file or directory 修改 OpenAL 的位置 # 似乎对于 Catalina 以及后续版本，都需要在setup.py中修改OpenAL的位置：&#xA;修改第 235 行：&#xA;sb_include_dirs.append(&amp;#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&amp;#39;) 为：&#xA;sb_include_dirs.append(&amp;#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&amp;#39;) 修改第 242 行：&#xA;extra_objects=[&amp;#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL&amp;#39;], 为：&#xA;extra_objects=[&amp;#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL.tbd&amp;#39;], 修改调用头文件的名字 # 对于报错：&#xA;fatal error: &amp;#39;al.h&amp;#39; file not found #include &amp;lt;al.h&amp;gt; ^~~~~~ 1 error generated. error: command &amp;#39;/usr/bin/gcc&amp;#39; failed with exit code 1 需要对/pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c中的&#xA;#include &amp;lt;al.h&amp;gt; #include &amp;lt;alc.h&amp;gt; 修改为：&#xA;#include &amp;lt;OpenAL/al.h&amp;gt; #include &amp;lt;OpenAL/alc.h&amp;gt; 参考 # Trouble installing on osx &amp;ldquo;fatal error: &amp;lsquo;al.</description>
     </item>
     <item>
       <title>来自 Apple 的流媒体推广工具</title>
@@ -28,6 +49,20 @@
       <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/engadget-cn-closed/</guid>
       <description>2021 年 11 月 1 日起，用户无法从中国大陆使用 Yahoo 的产品与服务。这并不影响 Yahoo 在全球其他地方的产品及服务。&#xA;Yahoo 中国&#xA;同时，Yahoo Weather（雅虎天气）宣布停止中国大陆服务，Engadget 简体中文版亦宣布停止更新。&#xA;Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，触角广泛，文字亦精炼扼要。记得最初是在 Flipboard 或者 Zaker 上偶然订阅了 Engadget 中文版，它是我所接触到的第一个科技资讯媒体。后来陆陆续续地还订阅了 The Verge、TechCrunch，还有 LiveSino、月光博客。它们构成我的很多回忆。中间编辑团队一度更换，希望了解更多的话，可见文末。&#xA;现在的话，新资讯有赖于 Telegram 上的几个频道推送通知，产品测评的话看 YouTube 多一点（Dave2D、TESTV 等等），市场新闻、创投等也有比较集中的信源了。&#xA;关于团队更换的一些说法：&#xA;《歡迎來到全新的 Engadget 中文版》 - Richard Lai@Engadget 《Engadget 中文版與癮科技拆夥的可能內幕》- 永遠的真田幸村 祝新老成员未来都好。&#xA;正式开站纪念博文存档：</description>
+    </item>
+    <item>
+      <title>树莓派实现开机自动播放 RTSP 流视频</title>
+      <link>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/raspberrypi-autostart-vlc-autoplay-rtsp-stream/</guid>
+      <description>家里电视柜空间有限。为了能够显示监控实时画面，电工直接把海康威视巨大的 NVR 装在柜内，通过巨大的 VGA 线外接巨大的显示器。为了将这些巨大的设备移到机柜去，考虑使用树莓派直接播放摄像头提供的 RTSP 流。&#xA;获取摄像头 RTSP 流 # 对于海康威视和萤石摄像头，其 RTSP 流地址格式为：&#xA;rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream&#xA;具体参数（如视频编码）自行调整。&#xA;对于 TP-LINK 摄像头，其 RTSP 流地址格式：&#xA;主码流为：rtsp://[username]:[password]@[ip]:[port]/stream1&#xA;子码流将 stream1 替换为 stream2 即可。&#xA;RTSP 端口 port 默认为 554，若为默认可不填写。&#xA;使用 VLC 播放 # 有两种方法：&#xA;1. 使用命令 # Run on the server: vlc -vvv input_stream --sout &amp;#39;#rtp{dst=192.168.0.12,port=1234,sdp=rtsp://server.example.org:8080/test.sdp}&amp;#39; Run on the client(s): vlc rtsp://server.example.org:8080/test.sdp 2. 创建 playlist 文件 # 新建一个播放列表，或直接使用播放 URL 打开 RTSP 流视频，确认能够正常播放。&#xA;将播放列表另存为文件。这里建议另存为 .m3u 格式，因为打开 .xspf 格式文件会弹窗提示你选择 execute 或 open。</description>
+    </item>
+    <item>
+      <title>在 Web 设计中使用系统 UI 默认字体</title>
+      <link>https://fanrongbin.com/using-default-fonts-in-web-design/</link>
+      <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/using-default-fonts-in-web-design/</guid>
+      <description>内容高于设计，但也源自设计。我们发现一种趋势：Web 设计逐渐靠近底层加载平台，从而更佳协调和统一地呈现内容。其中非常重要的一点是在提供文字内容时，采用和底层平台相同的字体。在各种网页排版所用的字体中，使用默认 UI 字体是一种保险而不保守的做法。而且这意味着无需再使用如 Google Web fonts 一类的在线字体服务（web-font delivery service）或使用事先存在服务器上的字体文件。&#xA;使用默认 UI 字体可以通过两种方式实现：&#xA;非常用方法 # .caption { font: caption; } 不是很常见，即使 CSS 文档里面有。意思就是使用底层平台，也就是所用操作系统中对应控件的字体、字体大小、风格粗细等等，达到完全一致。&#xA;使用这种方法会导致几个常见问题：&#xA;在 iOS 设备和众多 Android 浏览器上无法返回正确的字体。 截止至 2015 年 12 月，仍无法在 Mac OS X 上的 Firefox 上支持 “smart” properties of San Francisco。（指能在 San Francisco Text 和 San Francisco Display 中根据实际情况（大于 20px）切换，并更改字间距。） 完全和系统相关控件一致，无法再自定义变更字体大小、粗细等。 常用方法 # html[lang^=&amp;#34;en-&amp;#34;] body { font-family: /* 1 */ -apple-system, BlinkMacSystemFont, /* 2 */ &amp;#34;Segoe UI&amp;#34;, &amp;#34;Roboto&amp;#34;, &amp;#34;Oxygen&amp;#34;, &amp;#34;Ubuntu&amp;#34;, &amp;#34;Cantarell&amp;#34;, &amp;#34;Fira Sans&amp;#34;, &amp;#34;Droid Sans&amp;#34;, /* 3 */ &amp;#34;Helvetica Neue&amp;#34;, sans-serif; } 以上提供的代码仅适用于内容语言为英文。使用这种方法同样会造成一些问题：</description>
     </item>
   </channel>
 </rss>

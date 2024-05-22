@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 
-<html lang="en"  dir="ltr"
+<html lang="zh-Hans"  dir="ltr"
 
 >
 
 <head>
-  <title class="p-name">Set up your Thunderbird on Windows - Rongbin&#39;s Blog</title>
+  <title class="p-name">Microsoft 365 中 Office 套件的两种 UI - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
-    content="iCloud calendars, default descending view, and encrypted emails/chats. ">
+    content="Switch between two different interfaces for Office (Microsoft 365) ">
 <meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
-<meta property="og:title" content="Set up your Thunderbird on Windows - Rongbin&#39;s Blog" />
-<meta property="og:description" content="iCloud calendars, default descending view, and encrypted emails/chats. " />
-<meta property="og:url" content="https://fanrongbin.com/set-up-your-thunderbird-on-windows/" />
+<meta property="og:title" content="Microsoft 365 中 Office 套件的两种 UI - Rongbin&#39;s Blog" />
+<meta property="og:description" content="Switch between two different interfaces for Office (Microsoft 365) " />
+<meta property="og:url" content="https://fanrongbin.com/microsoft-365-office-ui/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
-<meta name="twitter:title" content="Set up your Thunderbird on Windows - Rongbin&#39;s Blog" />
-<meta name="twitter:description" content="iCloud calendars, default descending view, and encrypted emails/chats. " />
+<meta name="twitter:title" content="Microsoft 365 中 Office 套件的两种 UI - Rongbin&#39;s Blog" />
+<meta name="twitter:description" content="Switch between two different interfaces for Office (Microsoft 365) " />
 
-<link rel="canonical" href="https://fanrongbin.com/set-up-your-thunderbird-on-windows/" />
+<link rel="canonical" href="https://fanrongbin.com/microsoft-365-office-ui/" />
 
 
 
@@ -39,7 +39,7 @@
 
 
 
-<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/set-up-your-thunderbird-on-windows/">
+<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/microsoft-365-office-ui/">
 
 <link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
 
@@ -73,23 +73,11 @@
 <a onclick="toggleTOC()" style="color:var(--textcolor);text-decoration:none;border:none;"><div id="contents-fixed" class="header-button no-select">Contents</div></a>
 </div>
 <div id="contents-toc" class="no-select">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#icloud-calendars">iCloud Calendars</a>
-      <ul>
-        <li><a href="#how-to-add-your-icloud-account-to-tbsync">How to add your iCloud account to TbSync</a></li>
-      </ul>
-    </li>
-    <li><a href="#default-descending-view">Default Descending View</a></li>
-    <li><a href="#encrypted-emails">Encrypted Emails</a></li>
-    <li><a href="#encrypted-chat-services">Encrypted Chat Services</a></li>
-    <li><a href="#more-about-thunderbird">More about Thunderbird</a></li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
 </div>
 
   <div id="single-header">
-    <h1 class="p-name content-h1">Set up your Thunderbird on Windows</h1><p class="subtitle">iCloud calendars, default descending view, and encrypted emails/chats</p>
+    <h1 class="p-name content-h1">Microsoft 365 中 Office 套件的两种 UI</h1>
     
 
 
@@ -98,7 +86,7 @@
       
       
         
-        <p class="content-time"><time class="dt-published" datetime="2024-01-21T16:59:25&#43;08:00">21 January 2024</time></p>
+        <p class="content-time"><time class="dt-published" datetime="2024-05-22T13:14:34&#43;08:00">22 May 2024</time></p>
         
       
     
@@ -114,84 +102,68 @@
 
 
       
-      <p class="p-summary" style="display:none;">iCloud calendars, default descending view, and encrypted emails/chats.</p>
+      <p class="p-summary" style="display:none;">Switch between two different interfaces for Office (Microsoft 365)</p>
       
       <main class="e-content">
       
       
 
-<p>I&rsquo;ve been using <a href="https://www.thunderbird.net/">Thunderbird</a> for about a year starting from I shifted to Windows. There are three reasons why you should use Thunderbird on Windows:</p>
-<ol>
-<li>It&rsquo;s open-source and free.</li>
-<li>It supports <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a> encryption and some end-to-end chat services, and they are built-in features.</li>
-<li>Every email service works pretty well here. So you finally have <em>one place</em> to put all your accounts.</li>
-</ol>
-<p>And it&rsquo;s so much lighter and has fewer problems than Outlook.</p>
-<h2 id="icloud-calendars">
-iCloud Calendars
-<a href="#icloud-calendars" class="heading-anchor">#</a>
-</h2>
-<p>If you don&rsquo;t want to give up iCloud.</p>
-<p>To sync iCloud calendars on Thunderbird:</p>
-<ol>
-<li>Install two extensions: <a href="https://github.com/jobisoft/TbSync">TbSync</a> and <a href="https://github.com/jobisoft/DAV-4-TbSync/">Provider for CalDAV &amp; CardDAV (DAV-4-TbSync)</a>. You can search extensions on <a href="https://addons.thunderbird.net">addons.thunderbird.net</a> or <code>Settings → Add-ons and Themes</code></li>
-<li>Get an app-specific password from your <a href="https://appleid.apple.com/">iCloud</a> <code>Dashboard → Security → Generate Password...</code></li>
-<li>Add your iCloud account to TbSync using CalDAV</li>
-</ol>
-<h3 id="how-to-add-your-icloud-account-to-tbsync">
-How to add your iCloud account to TbSync
-<a href="#how-to-add-your-icloud-account-to-tbsync" class="heading-anchor">#</a>
-</h3>
-<p><img src="https://img.fanrongbin.com/20240121172235.png" alt=""></p>
-<ol>
-<li>Go to TbSync settings</li>
-<li>Add your account using CalDAV</li>
-<li>Choose <code>iCloud</code> on the pop-up window</li>
-<li>Fill in your iCloud email address and your app-specific password</li>
-</ol>
-<h2 id="default-descending-view">
-Default Descending View
-<a href="#default-descending-view" class="heading-anchor">#</a>
-</h2>
-<p>Thunderbird sorts emails in ascending order by default when you add a new account.</p>
-<p>Go to <code>Settings → Preference → Config Editor... (at the end of the page)</code>, search <code>mailnews.default</code>, change the value of <code>mailnews.default_sort_order</code> from <code>1</code> to <code>2</code>.</p>
-<p>You can find the meaning of types and values, and the add-on to change this <a href="https://superuser.com/questions/13518/change-the-default-sorting-order-in-thunderbird">here</a>.</p>
-<h2 id="encrypted-emails">
-Encrypted Emails
-<a href="#encrypted-emails" class="heading-anchor">#</a>
-</h2>
-<p>Go to <code>Settings → Account Settings → [your email] → End-To-End Encryption</code>, and you can add an OpenPGP key for this email account. You can either import<span class="sidenote-number">
-    <span class="sidenote-box">
-        <small class="sidenote">If you already have an OpenPGP key, then you should import rather than generate a new one so that you won&rsquo;t lose access to encrypted emails using your old key.</small>
-        <span class="sidenote-line"></span>
-    </span>
-</span> or create a new key if you are new to the encrypted email world.</p>
-<p>If your recipient doesn&rsquo;t know how to decrypt, <em>maybe it&rsquo;s better not to encrypt then.</em></p>
-<h2 id="encrypted-chat-services">
-Encrypted Chat Services
-<a href="#encrypted-chat-services" class="heading-anchor">#</a>
-</h2>
-<p>Thunderbird supports <a href="https://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC</a>, <a href="https://martix.org/">Matrix</a>, <a href="https://ok.ru/">Odnoklassniki</a>, <a href="https://xmpp.org/uses/instant-messaging/">XMPP</a> currently. You can add your account at the same place you add your email, or on the Chat view.</p>
-<p><strong>Just don&rsquo;t forget to click the button on the bottom left to toggle online/offline if everything is still grey.</strong></p>
-<h2 id="more-about-thunderbird">
-More about Thunderbird
-<a href="#more-about-thunderbird" class="heading-anchor">#</a>
-</h2>
-<p>You can read your <a href="https://blog.thunderbird.net/2022/05/thunderbird-rss-feeds-guide-favorite-content-to-the-inbox/">RSS feeds on Thunderbird</a>.<span class="sidenote-number">
-    <span class="sidenote-box">
-        <small class="sidenote">I don&rsquo;t do this cause I want to separate reading emails and RSS feeds. You can add some feeds that you&rsquo;d like to receive notifications when updated to Thunderbird.</small>
-        <span class="sidenote-line"></span>
-    </span>
-</span></p>
-<p>You can use <a href="https://github.com/Extended-Thunder/send-later">Send Later</a> to set up when to send your email, and even make it default to delay for some minutes when clicking &ldquo;Send&rdquo;.</p>
-<p><a href="https://kb.mozillazine.org/Figuring_out_whether_the_recipient_read_your_message#:~:text=You%20can%20specify%20what%20Thunderbird%20should%20do%20when%20it%20gets%20a%20request%20to%20send%20a%20return%20receipt%20in%20%22Tools%20%2D%3E%20Options%20%2D%3E%20Advanced%20%2D%3E%20General%20%2D%3E%20Return%20receipts%22.">Return Receipt</a> and <a href="https://kb.mozillazine.org/Figuring_out_whether_the_recipient_read_your_message#:~:text=Use%20%22Options%20%2D%3E%20Delivery%20Status%20Notification%22%20when%20composing%20a%20message%20to%20request%20a%20DSN%20receipt.">Delivery Status Notification</a> are not always working, because some email clients redact this request by default, e.g. Gmail.</p>
-<p>You&rsquo;ll need to do some configuration for Microsoft Exchange. For me, again I want to separate <em>work in my real life</em> and <em>me on the internet</em> so I just keep the Exchange account in Outlook. (And it&rsquo;s easier for IT)</p>
+<p>最近打开Office（Windows 11 23H2，Office 版本2405）会随机在<a href="https://web.archive.org/web/20240522052927/https://filestore.community.support.microsoft.com/api/images/81f99e98-6718-4fed-878a-aeb6d7c2c6a8?upload=true">面向Windows 10的旧 UI</a>和<a href="https://web.archive.org/web/20240522052901/https://support.microsoft.com/en-us/office/the-new-look-of-office-a6cdf19a-b2bd-4be1-9515-d74a37aa59bf">改成 Fluent Design 的新 UI</a>中选用。因为我自己觉得如果是在工作机器上，Fluent Design很累赘，所以一直用<a href="https://github.com/valinet/Win11DisableRoundedCorners">Win11DisableRoundedCorners</a>把全局的圆角关掉，现在偶尔出现的旧UI很赏心悦目，很想把它留住。</p>
+<p>目前还可以通过注册表形式修改。</p>
+<p>新建一个文本文档，复制粘贴下列代码后保存，文件后缀改为<code>.reg</code>，双击运行即可。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vb" data-lang="vb"><span class="line"><span class="cl"><span class="n">Windows</span> <span class="n">Registry</span> <span class="n">Editor</span> <span class="n">Version</span> <span class="n">5</span><span class="p">.</span><span class="n">00</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="n">HKEY_CURRENT_USER</span><span class="o">\</span><span class="n">Software</span><span class="o">\</span><span class="n">Microsoft</span><span class="o">\</span><span class="n">Office</span><span class="o">\</span><span class="n">16</span><span class="p">.</span><span class="n">0</span><span class="o">\</span><span class="n">Common</span><span class="o">\</span><span class="n">ExperimentConfigs</span><span class="o">\</span><span class="n">ExternalFeatureOverrides</span><span class="o">\</span><span class="n">word</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRefresh&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="n">HKEY_CURRENT_USER</span><span class="o">\</span><span class="n">Software</span><span class="o">\</span><span class="n">Microsoft</span><span class="o">\</span><span class="n">Office</span><span class="o">\</span><span class="n">16</span><span class="p">.</span><span class="n">0</span><span class="o">\</span><span class="n">Common</span><span class="o">\</span><span class="n">ExperimentConfigs</span><span class="o">\</span><span class="n">ExternalFeatureOverrides</span><span class="o">\</span><span class="n">excel</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRefresh&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="n">HKEY_CURRENT_USER</span><span class="o">\</span><span class="n">Software</span><span class="o">\</span><span class="n">Microsoft</span><span class="o">\</span><span class="n">Office</span><span class="o">\</span><span class="n">16</span><span class="p">.</span><span class="n">0</span><span class="o">\</span><span class="n">Common</span><span class="o">\</span><span class="n">ExperimentConfigs</span><span class="o">\</span><span class="n">ExternalFeatureOverrides</span><span class="o">\</span><span class="n">onenote</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRefresh&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="n">HKEY_CURRENT_USER</span><span class="o">\</span><span class="n">Software</span><span class="o">\</span><span class="n">Microsoft</span><span class="o">\</span><span class="n">Office</span><span class="o">\</span><span class="n">16</span><span class="p">.</span><span class="n">0</span><span class="o">\</span><span class="n">Common</span><span class="o">\</span><span class="n">ExperimentConfigs</span><span class="o">\</span><span class="n">ExternalFeatureOverrides</span><span class="o">\</span><span class="n">outlook</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRefresh&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="n">HKEY_CURRENT_USER</span><span class="o">\</span><span class="n">Software</span><span class="o">\</span><span class="n">Microsoft</span><span class="o">\</span><span class="n">Office</span><span class="o">\</span><span class="n">16</span><span class="p">.</span><span class="n">0</span><span class="o">\</span><span class="n">Common</span><span class="o">\</span><span class="n">ExperimentConfigs</span><span class="o">\</span><span class="n">ExternalFeatureOverrides</span><span class="o">\</span><span class="n">powerpoint</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRefresh&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="n">HKEY_CURRENT_USER</span><span class="o">\</span><span class="n">Software</span><span class="o">\</span><span class="n">Microsoft</span><span class="o">\</span><span class="n">Office</span><span class="o">\</span><span class="n">16</span><span class="p">.</span><span class="n">0</span><span class="o">\</span><span class="n">Common</span><span class="o">\</span><span class="n">ExperimentConfigs</span><span class="o">\</span><span class="n">ExternalFeatureOverrides</span><span class="o">\</span><span class="n">visio</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRefresh&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="n">HKEY_CURRENT_USER</span><span class="o">\</span><span class="n">Software</span><span class="o">\</span><span class="n">Microsoft</span><span class="o">\</span><span class="n">Office</span><span class="o">\</span><span class="n">16</span><span class="p">.</span><span class="n">0</span><span class="o">\</span><span class="n">Common</span><span class="o">\</span><span class="n">ExperimentConfigs</span><span class="o">\</span><span class="n">ExternalFeatureOverrides</span><span class="o">\</span><span class="n">publisher</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRefresh&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="n">HKEY_CURRENT_USER</span><span class="o">\</span><span class="n">Software</span><span class="o">\</span><span class="n">Microsoft</span><span class="o">\</span><span class="n">Office</span><span class="o">\</span><span class="n">16</span><span class="p">.</span><span class="n">0</span><span class="o">\</span><span class="n">Common</span><span class="o">\</span><span class="n">ExperimentConfigs</span><span class="o">\</span><span class="n">ExternalFeatureOverrides</span><span class="o">\</span><span class="n">access</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRefresh&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.RibbonTouchOptimization&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Microsoft.Office.UXPlatform.FluentSVRibbonOptionsMenu&#34;</span><span class="o">=</span> <span class="s">&#34;false&#34;</span>
+</span></span></code></pre></div><p>改回新UI的方式即把<code>false</code>都换回<code>true</code>。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.reddit.com/r/windowsinsiders/comments/onni11/enable_new_office_design_with_regedit/">Enable new office design with regedit. - Reddit</a></li>
+<li><a href="https://www.reddit.com/r/sysadmin/comments/r0gm4r/revert_new_windows_11_office_layout/">Revert New &ldquo;Windows 11&rdquo; Office Layout - Reddit</a></li>
+<li><a href="https://meta.appinn.net/t/topic/27681/3">office365更新了UI - 小众软件</a></li>
+</ul>
 
 
 
           
       
-          <a class="u-url" href="https://fanrongbin.com/set-up-your-thunderbird-on-windows/" style="display:none;"></a>
+          <a class="u-url" href="https://fanrongbin.com/microsoft-365-office-ui/" style="display:none;"></a>
       
       
       <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy/" style="display:none;"></a>
@@ -209,7 +181,7 @@ More about Thunderbird
 
   <div class="previous-post" style="display:inline-block;">
     
-    <a class="no-external" href="https://fanrongbin.com/flow/"><span class="arrow">←</span> My ~Flow~ of Knowledge</a>
+    <a class="no-external" href="https://fanrongbin.com/on-reddit-ipo/"><span class="arrow">←</span> On Reddit IPO</a>
     
   </div>
 
@@ -225,9 +197,6 @@ More about Thunderbird
 
   <div class="next-post" style="display:inline-block;float:right;">
     
-    <a class="no-external" href="https://fanrongbin.com/hugo-markdownify-generate-p-tag/">Hugo Markdownify 无法生成 &lt;p&gt; tag <span
-        class="arrow">→</span></a>
-    
   </div>
 
 </div>
@@ -239,7 +208,7 @@ More about Thunderbird
   href="/hugo-webmention-bridgy-mastodon">Webmention</a> this post, or <a href="/contact" target="_blank">contact me</a> directly.</p>
   <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin: 2ch 0;">
         <input type="url" name="source" class="url" placeholder="Your URL" required="">
-        <input type="hidden" name="target" value="https://fanrongbin.com/set-up-your-thunderbird-on-windows/">
+        <input type="hidden" name="target" value="https://fanrongbin.com/microsoft-365-office-ui/">
         <input type="submit" value="Webmention" style="background:var(--bg-color);">
   </form>
   <p>You can use <a onclick="showHypo();" title="This will toggle Hypothes.is plugin on this page.">Hypothes.is</a> to select texts and highlight.</p>
