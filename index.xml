@@ -6,8 +6,104 @@
     <description>Recent content on Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 22 May 2024 13:14:34 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Jun 2024 10:03:56 +0800</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>打包分享你的 Excel VBA 和自定义选项卡</title>
+      <link>https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/</link>
+      <pubDate>Thu, 27 Jun 2024 10:03:56 +0800</pubDate>
+      <guid>https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/</guid>
+      <description>&lt;p&gt;办公电脑开放的权限比较少，装个软件也得批，虽然用到这台老爷机的机会不多，但秉承着最大化摸鱼效率的宗旨，做了几个小按钮，方便自己刷格式用，也能在多台设备（包括macOS）共享。不过还是没有Arixcel方便（笑）&lt;/p&gt;
+&lt;h2 id=&#34;编写submacro后保存为xlam文件&#34;&gt;
+编写Sub/macro后保存为&lt;code&gt;.xlam&lt;/code&gt;文件
+&lt;a href=&#34;#%e7%bc%96%e5%86%99submacro%e5%90%8e%e4%bf%9d%e5%ad%98%e4%b8%baxlam%e6%96%87%e4%bb%b6&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;先新建一个Excel工作簿（文件→新建）&lt;/li&gt;
+&lt;li&gt;打开Excel自带的VBA窗口（开发工具→Visual Basic，或者 &lt;kbd&gt;Alt+F11&lt;/kbd&gt;）&lt;/li&gt;
+&lt;li&gt;一般我会选择插入模块的方式保存Sub/macro，所以在左侧对应VBA Project右键选择插入模块&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;建议把模块名（例如“模块1”）改为英文，以避免不同语言环境下打不开（中文模块名只能在中文系统环境+软件设置的情况下正常运作）。&lt;/p&gt;
+&lt;p&gt;如果不需要分享自定义选项卡，则编写完毕保存&lt;code&gt;.xlam&lt;/code&gt;后，共享给其他人即可。&lt;code&gt;.xlam&lt;/code&gt;通过Excel加载项的方式加载，可以手动移动到对应路径后&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;在Windows，路径为&lt;code&gt;C:\Users\%%YourUsername%%\AppData\Roaming\Microsoft\AddIns&lt;/code&gt;（把&lt;code&gt;%%YourUsername%%&lt;/code&gt;替换为你实际的用户文件夹名；AppData文件夹默认隐藏，建议用url访问）&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt; 在Excel加载项窗口选中，也可以不移动，选择&lt;code&gt;浏览(B)...&lt;/code&gt;手动locate到该文件。不使用locate的方式是为了防止误删，删了相当于卸了这个加载项。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20240627135128610.png&#34; alt=&#34;Excel-AddIns&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果希望将这些Sub/macro放到顶部tab选项卡里并共享，我这里使用Office RibbonX生成按钮，会需要对语句做一定的调整，下文会提到。&lt;/p&gt;
+&lt;h2 id=&#34;用office-ribbonx制作自定义选项卡&#34;&gt;
+用Office RibbonX制作自定义选项卡
+&lt;a href=&#34;#%e7%94%a8office-ribbonx%e5%88%b6%e4%bd%9c%e8%87%aa%e5%ae%9a%e4%b9%89%e9%80%89%e9%a1%b9%e5%8d%a1&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;编写好函数后暂存为&lt;code&gt;.xlam&lt;/code&gt;，关闭Excel，然后用&lt;a href=&#34;https://github.com/fernandreu/office-ribbonx-editor&#34;&gt;Office RibbonX Editor&lt;/a&gt;打开该文件。&lt;/p&gt;
+&lt;p&gt;选择菜单栏Insert，如果面向Office 2010+的版本，选Office 2010+ UI Part即可；如果有面向2007老版本的需求则选Office 2007 UI Part。这会向文件插入一个&lt;code&gt;.xml&lt;/code&gt;，我们通过自定义该文件来创建选项卡、分组和按钮。&lt;/p&gt;
+&lt;p&gt;选择刚刚创建的&lt;code&gt;.xml&lt;/code&gt;，选择菜单栏Insert，我们可以通过插入sample XML先看看示例，例如选择新建一个选项卡（Excel - A Custom Tab），也可以在既有的tab里插入分组、按钮等等。&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/*/https://www.rondebruin.nl/win/s2/win001.htm&#34;&gt;这里&lt;/a&gt;也有一个教程（Archived，因为作者自己删了）。&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;例子：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;customUI&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.microsoft.com/office/2009/07/customui&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;&amp;lt;ribbon&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nt&#34;&gt;&amp;lt;tabs&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nt&#34;&gt;&amp;lt;tab&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;customTab&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Formatting&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;formattingGeneral&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;General&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;generalSetZoomAndHideGridlines&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Zoom 100% No Gridlines&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SetZoomAndHideGridlines&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BlackAndWhiteWhite&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;generalShowFontWindow&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Font Setting&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ShowFontWindow&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;CharacterBorder&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;formattingCell&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Cell&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cellSetZoomAndHideGridlines&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Center Across&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;CenterAcross&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OutlineDemoteToBodyText&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cellSetYellowBackground&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Yellow Bg&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SetYellowBackground&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AppointmentColor10&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cellSetGreyBackground&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Grey Bg&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SetGreyBackground&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AppointmentColor4&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cellEdgeTopBorder&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Top Border&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;EdgeTopBorder&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SelectionPaneHidden&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;formattingFont&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Font&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fontSetRedFont&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Red&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SetRedFont&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AppointmentColor1&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fontSetGreenFont&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Green&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SetGreenFont&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AppointmentColor3&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fontSetBlueFont&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Blue&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SetBlueFont&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AppointmentColor2&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fontSetBlackFont&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Black&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SetBlackFont&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BlackAndWhiteBlack&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;formattingValue&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Value&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;valueFormatMoneyNoDecimal&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Money (Integer)&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;FormatMoneyNoDecimal&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DollarSign&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;valueFormatMultiple&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Multiplier (#x)&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;FormatMultiple&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;EquationMatrixGallery&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;formattingOther&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Other&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;otherAddRowWithSheetName&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Top Row Sheet Name&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AddRowWithSheetName&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Info&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;otherSetBasicWidth&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;A-D Width&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SetBasicWidth&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;TableDesign&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;otherCopyActiveSheet&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Copy Active Worksheet&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;large&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;onAction=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;CopyActiveSheet&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;imageMso=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;WebServerDiscussions&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nt&#34;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nt&#34;&gt;&amp;lt;/tab&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nt&#34;&gt;&amp;lt;/tabs&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;&amp;lt;/ribbon&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/customUI&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这是一个创建新选项卡的例子，会在Excel顶部的ribbon最末，插入这个&lt;code&gt;label&lt;/code&gt;为&lt;code&gt;Formatting&lt;/code&gt;的tab，tab下有5个group，group里又分别是各个按钮，结构还是非常简单的。&lt;/p&gt;
+&lt;p&gt;对于按钮，注意确保&lt;code&gt;id&lt;/code&gt;的唯一性，&lt;code&gt;onAction&lt;/code&gt;对应为VBA中的Sub/macro名，&lt;code&gt;imageMso&lt;/code&gt;为按钮的icon，可以很方便地在搜索引擎获得（例如对于Excel 2016：&lt;a href=&#34;https://bert-toolkit.com/imagemso-list.html&#34;&gt;BERT ImageMSO List Reference&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;如果你保存为&lt;code&gt;.xlam&lt;/code&gt;并已经加载到Excel加载项，在RibbonX Editor中保存后再次打开Excel时即可看到新建的tab。&lt;/p&gt;
+&lt;p&gt;此时点击这些按钮会报错，因为还没有将按钮与Sub/macro相链接。&lt;/p&gt;
+&lt;h2 id=&#34;修改submacro&#34;&gt;
+修改Sub/macro
+&lt;a href=&#34;#%e4%bf%ae%e6%94%b9submacro&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;为了让按钮和你的Sub/macro对应，需要在你不传参的Sub/macro头部&lt;code&gt;()&lt;/code&gt;内加入&lt;code&gt;control As IRibbonControl&lt;/code&gt;，例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vb&#34; data-lang=&#34;vb&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;Sub&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;CenterAcross&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;control&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;As&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IRibbonControl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;End&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;Sub&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存后点击按钮，此时应该正常工作。&lt;/p&gt;
+&lt;p&gt;分享给其他人使用，只需要分享该&lt;code&gt;.xlam&lt;/code&gt;，让其在自己的Excel加载项中加载即可。&lt;/p&gt;
+&lt;h2 id=&#34;下载这个例子&#34;&gt;
+下载这个例子
+&lt;a href=&#34;#%e4%b8%8b%e8%bd%bd%e8%bf%99%e4%b8%aa%e4%be%8b%e5%ad%90&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;你可以在&lt;a href=&#34;https://1drv.ms/u/s!Air94ZR4iXshhtMv59yBu8KRbHVCnQ?e=DpM6uw&#34;&gt;这里下载&lt;/a&gt;我的例子，它包括这些小功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一键缩放所有表到100%，并隐藏网格线&lt;/li&gt;
+&lt;li&gt;一键修改中英文字体和字号&lt;/li&gt;
+&lt;li&gt;在每张表顶部加上表的名字（即底部tab写的名字）&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     <item>
       <title>Microsoft 365 中 Office 套件的两种 UI</title>
       <link>https://fanrongbin.com/microsoft-365-office-ui/</link>
@@ -1104,12 +1200,12 @@ Why I leave platforms
 &lt;p&gt;The main reason I turn to raw &lt;code&gt;*.md&lt;/code&gt; files and Obsidian is my upgraded appetite for long-lasting information as someone diagnosed with &lt;a href=&#34;https://zettelkasten.de/posts/collectors-fallacy/&#34;&gt;the collector&amp;rsquo;s fallacy&lt;/a&gt; and currently under treatment. I want to keep what I&amp;rsquo;ve read &lt;em&gt;offline&lt;/em&gt; and store it &lt;em&gt;locally&lt;/em&gt;, so no worrying about platforms shutting down, page URLs going invalid, or authors deleting the whole site (I know it&amp;rsquo;s their right to do so, and it&amp;rsquo;s also my right to download the public internet). This reduces my monthly expenses on SaaS, too.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;flow&#34;&gt;
-~Flow~
+&lt;del&gt;Flow&lt;/del&gt;
 &lt;a href=&#34;#flow&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Inspired by &lt;a href=&#34;https://zettelkasten.de/posts/overview&#34;&gt;the Zettelkasten blog series&lt;/a&gt;, I created this page to document my daily routine (or let&amp;rsquo;s say, &lt;em&gt;flow&lt;/em&gt;) of processing information and turning that into solid knowledge. I try to craft an organised, for-the-future, and go-offline-at-any-time learning system, so this page works as a storyteller of this journey, a guide for anyone who looks for similar purposes, and my manifesto to stick to this routine, &lt;em&gt;flow with the flow&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;While looking for suitable tools, I thought of starting a &lt;a href=&#34;https://en.wikipedia.org/wiki/Webring&#34;&gt;webring&lt;/a&gt; to gather insights into how others manage their knowledge and arrange their working/learning process, including tools and theories they employ. This can serve as a community to discuss, or an index for internet nomads to discover new ways and perspectives.&lt;/p&gt;
-&lt;p&gt;But why limit it to only be about productivity, about knowledge management? I simply ask myself. Every pursuit and every lifestyle has a unique flow in it to tell the story of &lt;em&gt;who I am&lt;/em&gt;, and taking a peek into how others &lt;em&gt;live&lt;/em&gt;, not just the &amp;ldquo;boring&amp;rdquo; how-you-take-notes, can give us so many fresh ideas and stories, same as what &lt;a href=&#34;https://nownownow.com/about&#34;&gt;now pages&lt;/a&gt;, &lt;a href=&#34;https://hackerstations.com/&#34;&gt;Hacker Station&lt;/a&gt;, and &lt;a href=&#34;https://www.theproofwellness.com/interviews&#34;&gt;The Proof&lt;/a&gt; has been doing. So this is &lt;strong&gt;&lt;a href=&#34;https://flow-webring.netlify.app/&#34;&gt;~Flow~&lt;/a&gt;,&lt;/strong&gt; a webring working as a bookmark to collect people&amp;rsquo;s flows, and a line connecting dots with thoughts on the internet. It can be about how you manage your knowledge, brew coffee, write codes, spend an ordinary Sunday afternoon, research, create, and many more. It is about &lt;strong&gt;you&lt;/strong&gt; and &lt;strong&gt;your way of life&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;But why limit it to only be about productivity, about knowledge management? I simply ask myself. Every pursuit and every lifestyle has a unique flow in it to tell the story of &lt;em&gt;who I am&lt;/em&gt;, and taking a peek into how others &lt;em&gt;live&lt;/em&gt;, not just the &amp;ldquo;boring&amp;rdquo; how-you-take-notes, can give us so many fresh ideas and stories, same as what &lt;a href=&#34;https://nownownow.com/about&#34;&gt;now pages&lt;/a&gt;, &lt;a href=&#34;https://hackerstations.com/&#34;&gt;Hacker Station&lt;/a&gt;, and &lt;a href=&#34;https://www.theproofwellness.com/interviews&#34;&gt;The Proof&lt;/a&gt; has been doing. So this is &lt;strong&gt;&lt;a href=&#34;https://flow-webring.netlify.app/&#34;&gt;&lt;del&gt;Flow&lt;/del&gt;&lt;/a&gt;,&lt;/strong&gt; a webring working as a bookmark to collect people&amp;rsquo;s flows, and a line connecting dots with thoughts on the internet. It can be about how you manage your knowledge, brew coffee, write codes, spend an ordinary Sunday afternoon, research, create, and many more. It is about &lt;strong&gt;you&lt;/strong&gt; and &lt;strong&gt;your way of life&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;More importantly, sharing your flow with others via a single webpage might help you establish a &lt;em&gt;way&lt;/em&gt; that you can stick to, keep changelogs, and iterate for a very long time. I&amp;rsquo;ve been caught up in productivity &lt;em&gt;tools&lt;/em&gt; for some time, doing nothing but digging the App Store, SSPAI, Product Hunt, and v2ex to find new apps. And this makes me almost forget the real support behind—thoughts. Tools are here to reduce the coefficient of friction in your workflow, but this coefficient starts at such a low level and will not bring a strong impact on your dependent variable, which is your solid output. This passion towards tools/applications seems to be alike coffee lovers pursuing better coffee machines, pots, percolators, or filters, but there&amp;rsquo;s no tangible result like a cup of wonderful espresso for you to enjoy without good coffee beans, water, and temperature. Coffee machine to coffee is what productivity tool to productivity.&lt;/p&gt;
 &lt;p&gt;Jot down your flow, practice it, make it better, and write down why—it&amp;rsquo;s a fresh start.&lt;/p&gt;
 &lt;div style=&#34;width:88px;height:31px;display:flex;flex-direction:row;&#34;&gt;
@@ -4784,27 +4880,42 @@ Software and Service
 &lt;a href=&#34;#software-and-service&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Writing: Typora
+&lt;li&gt;
+&lt;p&gt;Writing: &lt;a href=&#34;https://typora.io/?ref=fanrongbin.com&#34;&gt;Typora&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;One of the best desktop Markdown editors, cheaper than iA writer, and charges one-time.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Code Editor: Visual Studio Code, Sublime Text&lt;/li&gt;
-&lt;li&gt;Reading: NetNewsWire
+&lt;li&gt;
+&lt;p&gt;Code Editor: Visual Studio Code, Sublime Text&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reading: &lt;a href=&#34;https://netnewswire.com/?ref=fanrongbin.com&#34;&gt;NetNewsWire&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Good old RSS.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Notes Taking: Logseq + OneDrive to backup
+&lt;li&gt;
+&lt;p&gt;Notes Taking: Obsidian + Obsidian Sync&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;I&amp;rsquo;m leaving platforms like Notion.&lt;/li&gt;
+&lt;li&gt;Previous: Logseq + OneDrive&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;I gave up because Logseq raw files are unreadable and difficult to be exported/imported to other platforms&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;m also trying to leave platforms like Notion.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Mail and Calendar: Thunderbird on Windows, Spark &amp;amp; Calendars by Readdle on iOS
+&lt;li&gt;
+&lt;p&gt;Mail and Calendar: &lt;a href=&#34;https://www.thunderbird.net/?ref=fanrongbin.com&#34;&gt;Thunderbird&lt;/a&gt; on Windows, Spark &amp;amp; Calendars by &lt;a href=&#34;https://readdle.com/?ref=fanrongbin.com&#34;&gt;Readdle&lt;/a&gt; on iOS&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The latest version of Thunderbird supports end-to-end encryption/decryption, including PGP. It is open-source and much lighter than Outlook. Supports iCloud using plugins and app passwords.&lt;/li&gt;
 &lt;li&gt;Calendars by Readdle has a wonderful monthly view and supports dragging event blocks among different days.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.arixcel.com/?ref=fanrongbin.com&#34;&gt;Arixcel&lt;/a&gt;: &lt;kbd&gt;Ctrl+Q&lt;/kbd&gt; and &lt;kbd&gt;Ctrl+Shift+Q&lt;/kbd&gt; can save your life.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;hardware&#34;&gt;

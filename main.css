@@ -148,11 +148,11 @@ section.prototype>a>img {
 
 /* styling */
 
-#home {
+#home, #blog {
     border-bottom: 1px solid var(--text-color);
 }
 
-#home:hover {
+#home:hover, #blog:hover {
     border-bottom: 5px solid;
 }
 

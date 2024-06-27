@@ -5,39 +5,24 @@
 >
 
 <head>
-  <title class="p-name">首先是不要忘记 - Rongbin&#39;s Blog</title>
+  <title class="p-name">打包分享你的 Excel VBA 和自定义选项卡 - Rongbin&#39;s Blog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
-    content="在床上坐下，挺起腰板直起背，「清理公众号列表」的念头忽的一闪，立即抓住，生怕又让它溜了过去，成为日后躺在 Inbox 里安稳过日子的「有空再做」。
-于是有意无意的发现自己还关注着初中一位语文老师的公众号，但上次发文已经是六年前了，一段不长不短的轨迹，我走完初高中，但他却在中途永久地被揉成零散的碎片，散落在它生活过的痕迹和仍存留着记忆的人们身上。
-高中的杂乱的确把我欢笑着度过的初中记忆冲淡了很多，而且我没有拼命留下什么记忆的习惯。如果记忆还准确的话，应该是在初三时很短暂地上了几周他的语文培优课。他不高的个子，风趣又真挚的讲课方式，踏实的内容，以及有条理的阐述。培优课很快结束了，但他却被我列进了心里那一撮神圣得不可替代的人里。不过，我想他是不大记得有这样一个皮肤很黑，上课总爱托着下巴的小同学曾经很刻苦地在他课上做笔记。
-当我得知他罹患白血病时是怎样的一番惊讶和伤感，现在也很模糊了，但此时我又在这之中的确触碰着他过去不过十分简单就留下的印痕。倘若我并未遇到这样一个偶然的巧合，选择回看这些已久的事物，我还会想起么？我又何以记住，又如此忘记？
-这不得不又是一个我总爱提及的「信息过载」问题，不过这不是今天的重点。更想让自己明白的一个浅显的道理是，真正地去记住值得记住的事物，记住必须记住的事物，以一种时常回看、常常回想的方式记住。
-我从来没有像此时一样如此害怕忘记，即使我一直很擅长忘记和被忘记。 ">
+    content="写入 xla(m) 文件后，用 Office RibbonX 包装自定义选项卡 ">
 <meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
-<meta property="og:title" content="首先是不要忘记 - Rongbin&#39;s Blog" />
-<meta property="og:description" content="在床上坐下，挺起腰板直起背，「清理公众号列表」的念头忽的一闪，立即抓住，生怕又让它溜了过去，成为日后躺在 Inbox 里安稳过日子的「有空再做」。
-于是有意无意的发现自己还关注着初中一位语文老师的公众号，但上次发文已经是六年前了，一段不长不短的轨迹，我走完初高中，但他却在中途永久地被揉成零散的碎片，散落在它生活过的痕迹和仍存留着记忆的人们身上。
-高中的杂乱的确把我欢笑着度过的初中记忆冲淡了很多，而且我没有拼命留下什么记忆的习惯。如果记忆还准确的话，应该是在初三时很短暂地上了几周他的语文培优课。他不高的个子，风趣又真挚的讲课方式，踏实的内容，以及有条理的阐述。培优课很快结束了，但他却被我列进了心里那一撮神圣得不可替代的人里。不过，我想他是不大记得有这样一个皮肤很黑，上课总爱托着下巴的小同学曾经很刻苦地在他课上做笔记。
-当我得知他罹患白血病时是怎样的一番惊讶和伤感，现在也很模糊了，但此时我又在这之中的确触碰着他过去不过十分简单就留下的印痕。倘若我并未遇到这样一个偶然的巧合，选择回看这些已久的事物，我还会想起么？我又何以记住，又如此忘记？
-这不得不又是一个我总爱提及的「信息过载」问题，不过这不是今天的重点。更想让自己明白的一个浅显的道理是，真正地去记住值得记住的事物，记住必须记住的事物，以一种时常回看、常常回想的方式记住。
-我从来没有像此时一样如此害怕忘记，即使我一直很擅长忘记和被忘记。 " />
-<meta property="og:url" content="https://fanrongbin.com/first-of-all-dont-forget/" />
+<meta property="og:title" content="打包分享你的 Excel VBA 和自定义选项卡 - Rongbin&#39;s Blog" />
+<meta property="og:description" content="写入 xla(m) 文件后，用 Office RibbonX 包装自定义选项卡 " />
+<meta property="og:url" content="https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
-<meta name="twitter:title" content="首先是不要忘记 - Rongbin&#39;s Blog" />
-<meta name="twitter:description" content="在床上坐下，挺起腰板直起背，「清理公众号列表」的念头忽的一闪，立即抓住，生怕又让它溜了过去，成为日后躺在 Inbox 里安稳过日子的「有空再做」。
-于是有意无意的发现自己还关注着初中一位语文老师的公众号，但上次发文已经是六年前了，一段不长不短的轨迹，我走完初高中，但他却在中途永久地被揉成零散的碎片，散落在它生活过的痕迹和仍存留着记忆的人们身上。
-高中的杂乱的确把我欢笑着度过的初中记忆冲淡了很多，而且我没有拼命留下什么记忆的习惯。如果记忆还准确的话，应该是在初三时很短暂地上了几周他的语文培优课。他不高的个子，风趣又真挚的讲课方式，踏实的内容，以及有条理的阐述。培优课很快结束了，但他却被我列进了心里那一撮神圣得不可替代的人里。不过，我想他是不大记得有这样一个皮肤很黑，上课总爱托着下巴的小同学曾经很刻苦地在他课上做笔记。
-当我得知他罹患白血病时是怎样的一番惊讶和伤感，现在也很模糊了，但此时我又在这之中的确触碰着他过去不过十分简单就留下的印痕。倘若我并未遇到这样一个偶然的巧合，选择回看这些已久的事物，我还会想起么？我又何以记住，又如此忘记？
-这不得不又是一个我总爱提及的「信息过载」问题，不过这不是今天的重点。更想让自己明白的一个浅显的道理是，真正地去记住值得记住的事物，记住必须记住的事物，以一种时常回看、常常回想的方式记住。
-我从来没有像此时一样如此害怕忘记，即使我一直很擅长忘记和被忘记。 " />
+<meta name="twitter:title" content="打包分享你的 Excel VBA 和自定义选项卡 - Rongbin&#39;s Blog" />
+<meta name="twitter:description" content="写入 xla(m) 文件后，用 Office RibbonX 包装自定义选项卡 " />
 
-<link rel="canonical" href="https://fanrongbin.com/first-of-all-dont-forget/" />
+<link rel="canonical" href="https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/" />
 
 
 
@@ -54,7 +39,7 @@
 
 
 
-<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/first-of-all-dont-forget/">
+<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/">
 
 <link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
 
@@ -89,11 +74,18 @@
 <a onclick="toggleTOC()" style="color:var(--textcolor);text-decoration:none;border:none;"><div id="contents-fixed" class="header-button no-select">Contents</div></a>
 </div>
 <div id="contents-toc" class="no-select">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#编写submacro后保存为xlam文件">编写Sub/macro后保存为<code>.xlam</code>文件</a></li>
+    <li><a href="#用office-ribbonx制作自定义选项卡">用Office RibbonX制作自定义选项卡</a></li>
+    <li><a href="#修改submacro">修改Sub/macro</a></li>
+    <li><a href="#下载这个例子">下载这个例子</a></li>
+  </ul>
+</nav>
 </div>
 
   <div id="single-header">
-    <h1 class="p-name content-h1">首先是不要忘记</h1>
+    <h1 class="p-name content-h1">打包分享你的 Excel VBA 和自定义选项卡</h1>
     
 
 
@@ -102,7 +94,7 @@
       
       
         
-        <p class="content-time"><time class="dt-published" datetime="2020-07-13T00:00:00&#43;00:00">13 July 2020</time></p>
+        <p class="content-time"><time class="dt-published" datetime="2024-06-27T10:03:56&#43;08:00">27 June 2024</time></p>
         
       
     
@@ -118,24 +110,107 @@
 
 
       
-      
+      <p class="p-summary" style="display:none;">写入 xla(m) 文件后，用 Office RibbonX 包装自定义选项卡</p>
       
       <main class="e-content">
       
       
 
-<p>在床上坐下，挺起腰板直起背，「清理公众号列表」的念头忽的一闪，立即抓住，生怕又让它溜了过去，成为日后躺在 Inbox 里安稳过日子的「有空再做」。</p>
-<p>于是有意无意的发现自己还关注着初中一位语文老师的公众号，但上次发文已经是六年前了，一段不长不短的轨迹，我走完初高中，但他却在中途永久地被揉成零散的碎片，散落在它生活过的痕迹和仍存留着记忆的人们身上。</p>
-<p>高中的杂乱的确把我欢笑着度过的初中记忆冲淡了很多，而且我没有拼命留下什么记忆的习惯。如果记忆还准确的话，应该是在初三时很短暂地上了几周他的语文培优课。他不高的个子，风趣又真挚的讲课方式，踏实的内容，以及有条理的阐述。培优课很快结束了，但他却被我列进了心里那一撮神圣得不可替代的人里。不过，我想他是不大记得有这样一个皮肤很黑，上课总爱托着下巴的小同学曾经很刻苦地在他课上做笔记。</p>
-<p>当我得知他罹患白血病时是怎样的一番惊讶和伤感，现在也很模糊了，但此时我又在这之中的确触碰着他过去不过十分简单就留下的印痕。倘若我并未遇到这样一个偶然的巧合，选择回看这些已久的事物，我还会想起么？我又何以记住，又如此忘记？</p>
-<p>这不得不又是一个我总爱提及的「信息过载」问题，不过这不是今天的重点。更想让自己明白的一个浅显的道理是，真正地去记住值得记住的事物，记住必须记住的事物，以一种时常回看、常常回想的方式记住。</p>
-<p>我从来没有像此时一样如此害怕忘记，即使我一直很擅长忘记和被忘记。</p>
+<p>办公电脑开放的权限比较少，装个软件也得批，虽然用到这台老爷机的机会不多，但秉承着最大化摸鱼效率的宗旨，做了几个小按钮，方便自己刷格式用，也能在多台设备（包括macOS）共享。不过还是没有Arixcel方便（笑）</p>
+<h2 id="编写submacro后保存为xlam文件">
+编写Sub/macro后保存为<code>.xlam</code>文件
+<a href="#%e7%bc%96%e5%86%99submacro%e5%90%8e%e4%bf%9d%e5%ad%98%e4%b8%baxlam%e6%96%87%e4%bb%b6" class="heading-anchor">#</a>
+</h2>
+<ol>
+<li>先新建一个Excel工作簿（文件→新建）</li>
+<li>打开Excel自带的VBA窗口（开发工具→Visual Basic，或者 <kbd>Alt+F11</kbd>）</li>
+<li>一般我会选择插入模块的方式保存Sub/macro，所以在左侧对应VBA Project右键选择插入模块</li>
+</ol>
+<p>建议把模块名（例如“模块1”）改为英文，以避免不同语言环境下打不开（中文模块名只能在中文系统环境+软件设置的情况下正常运作）。</p>
+<p>如果不需要分享自定义选项卡，则编写完毕保存<code>.xlam</code>后，共享给其他人即可。<code>.xlam</code>通过Excel加载项的方式加载，可以手动移动到对应路径后<span class="sidenote-number">
+    <span class="sidenote-box">
+        <small class="sidenote">在Windows，路径为<code>C:\Users\%%YourUsername%%\AppData\Roaming\Microsoft\AddIns</code>（把<code>%%YourUsername%%</code>替换为你实际的用户文件夹名；AppData文件夹默认隐藏，建议用url访问）</small>
+        <span class="sidenote-line"></span>
+    </span>
+</span> 在Excel加载项窗口选中，也可以不移动，选择<code>浏览(B)...</code>手动locate到该文件。不使用locate的方式是为了防止误删，删了相当于卸了这个加载项。</p>
+<p><img src="https://img.fanrongbin.com/image-20240627135128610.png" alt="Excel-AddIns"></p>
+<p>如果希望将这些Sub/macro放到顶部tab选项卡里并共享，我这里使用Office RibbonX生成按钮，会需要对语句做一定的调整，下文会提到。</p>
+<h2 id="用office-ribbonx制作自定义选项卡">
+用Office RibbonX制作自定义选项卡
+<a href="#%e7%94%a8office-ribbonx%e5%88%b6%e4%bd%9c%e8%87%aa%e5%ae%9a%e4%b9%89%e9%80%89%e9%a1%b9%e5%8d%a1" class="heading-anchor">#</a>
+</h2>
+<p>编写好函数后暂存为<code>.xlam</code>，关闭Excel，然后用<a href="https://github.com/fernandreu/office-ribbonx-editor">Office RibbonX Editor</a>打开该文件。</p>
+<p>选择菜单栏Insert，如果面向Office 2010+的版本，选Office 2010+ UI Part即可；如果有面向2007老版本的需求则选Office 2007 UI Part。这会向文件插入一个<code>.xml</code>，我们通过自定义该文件来创建选项卡、分组和按钮。</p>
+<p>选择刚刚创建的<code>.xml</code>，选择菜单栏Insert，我们可以通过插入sample XML先看看示例，例如选择新建一个选项卡（Excel - A Custom Tab），也可以在既有的tab里插入分组、按钮等等。<span class="sidenote-number">
+    <span class="sidenote-box">
+        <small class="sidenote"><a href="https://web.archive.org/web/*/https://www.rondebruin.nl/win/s2/win001.htm">这里</a>也有一个教程（Archived，因为作者自己删了）。</small>
+        <span class="sidenote-line"></span>
+    </span>
+</span></p>
+<p>例子：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;customUI</span> <span class="na">xmlns=</span><span class="s">&#34;http://schemas.microsoft.com/office/2009/07/customui&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;ribbon&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&lt;tabs&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&lt;tab</span> <span class="na">id=</span><span class="s">&#34;customTab&#34;</span> <span class="na">label=</span><span class="s">&#34;Formatting&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;group</span> <span class="na">id=</span><span class="s">&#34;formattingGeneral&#34;</span> <span class="na">label=</span><span class="s">&#34;General&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;generalSetZoomAndHideGridlines&#34;</span> <span class="na">label=</span><span class="s">&#34;Zoom 100% No Gridlines&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;SetZoomAndHideGridlines&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;BlackAndWhiteWhite&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;generalShowFontWindow&#34;</span> <span class="na">label=</span><span class="s">&#34;Font Setting&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;ShowFontWindow&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;CharacterBorder&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;/group&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;group</span> <span class="na">id=</span><span class="s">&#34;formattingCell&#34;</span> <span class="na">label=</span><span class="s">&#34;Cell&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;cellSetZoomAndHideGridlines&#34;</span> <span class="na">label=</span><span class="s">&#34;Center Across&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;CenterAcross&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;OutlineDemoteToBodyText&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;cellSetYellowBackground&#34;</span> <span class="na">label=</span><span class="s">&#34;Yellow Bg&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;SetYellowBackground&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;AppointmentColor10&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;cellSetGreyBackground&#34;</span> <span class="na">label=</span><span class="s">&#34;Grey Bg&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;SetGreyBackground&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;AppointmentColor4&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;cellEdgeTopBorder&#34;</span> <span class="na">label=</span><span class="s">&#34;Top Border&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;EdgeTopBorder&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;SelectionPaneHidden&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;/group&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;group</span> <span class="na">id=</span><span class="s">&#34;formattingFont&#34;</span> <span class="na">label=</span><span class="s">&#34;Font&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;fontSetRedFont&#34;</span> <span class="na">label=</span><span class="s">&#34;Red&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;SetRedFont&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;AppointmentColor1&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;fontSetGreenFont&#34;</span> <span class="na">label=</span><span class="s">&#34;Green&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;SetGreenFont&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;AppointmentColor3&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;fontSetBlueFont&#34;</span> <span class="na">label=</span><span class="s">&#34;Blue&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;SetBlueFont&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;AppointmentColor2&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;fontSetBlackFont&#34;</span> <span class="na">label=</span><span class="s">&#34;Black&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;SetBlackFont&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;BlackAndWhiteBlack&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;/group&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;group</span> <span class="na">id=</span><span class="s">&#34;formattingValue&#34;</span> <span class="na">label=</span><span class="s">&#34;Value&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;valueFormatMoneyNoDecimal&#34;</span> <span class="na">label=</span><span class="s">&#34;Money (Integer)&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;FormatMoneyNoDecimal&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;DollarSign&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;valueFormatMultiple&#34;</span> <span class="na">label=</span><span class="s">&#34;Multiplier (#x)&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;FormatMultiple&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;EquationMatrixGallery&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;/group&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;group</span> <span class="na">id=</span><span class="s">&#34;formattingOther&#34;</span> <span class="na">label=</span><span class="s">&#34;Other&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;otherAddRowWithSheetName&#34;</span> <span class="na">label=</span><span class="s">&#34;Top Row Sheet Name&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;AddRowWithSheetName&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;Info&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;otherSetBasicWidth&#34;</span> <span class="na">label=</span><span class="s">&#34;A-D Width&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;SetBasicWidth&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;TableDesign&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&#34;otherCopyActiveSheet&#34;</span> <span class="na">label=</span><span class="s">&#34;Copy Active Worksheet&#34;</span> <span class="na">size=</span><span class="s">&#34;large&#34;</span> <span class="na">onAction=</span><span class="s">&#34;CopyActiveSheet&#34;</span> <span class="na">imageMso=</span><span class="s">&#34;WebServerDiscussions&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&lt;/group&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&lt;/tab&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&lt;/tabs&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;/ribbon&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/customUI&gt;</span>
+</span></span></code></pre></div><p>这是一个创建新选项卡的例子，会在Excel顶部的ribbon最末，插入这个<code>label</code>为<code>Formatting</code>的tab，tab下有5个group，group里又分别是各个按钮，结构还是非常简单的。</p>
+<p>对于按钮，注意确保<code>id</code>的唯一性，<code>onAction</code>对应为VBA中的Sub/macro名，<code>imageMso</code>为按钮的icon，可以很方便地在搜索引擎获得（例如对于Excel 2016：<a href="https://bert-toolkit.com/imagemso-list.html">BERT ImageMSO List Reference</a>）。</p>
+<p>如果你保存为<code>.xlam</code>并已经加载到Excel加载项，在RibbonX Editor中保存后再次打开Excel时即可看到新建的tab。</p>
+<p>此时点击这些按钮会报错，因为还没有将按钮与Sub/macro相链接。</p>
+<h2 id="修改submacro">
+修改Sub/macro
+<a href="#%e4%bf%ae%e6%94%b9submacro" class="heading-anchor">#</a>
+</h2>
+<p>为了让按钮和你的Sub/macro对应，需要在你不传参的Sub/macro头部<code>()</code>内加入<code>control As IRibbonControl</code>，例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vb" data-lang="vb"><span class="line"><span class="cl"><span class="k">Sub</span> <span class="nf">CenterAcross</span><span class="p">(</span><span class="n">control</span> <span class="ow">As</span> <span class="n">IRibbonControl</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="k">End</span> <span class="k">Sub</span>
+</span></span></code></pre></div><p>保存后点击按钮，此时应该正常工作。</p>
+<p>分享给其他人使用，只需要分享该<code>.xlam</code>，让其在自己的Excel加载项中加载即可。</p>
+<h2 id="下载这个例子">
+下载这个例子
+<a href="#%e4%b8%8b%e8%bd%bd%e8%bf%99%e4%b8%aa%e4%be%8b%e5%ad%90" class="heading-anchor">#</a>
+</h2>
+<p>你可以在<a href="https://1drv.ms/u/s!Air94ZR4iXshhtMv59yBu8KRbHVCnQ?e=DpM6uw">这里下载</a>我的例子，它包括这些小功能：</p>
+<ul>
+<li>一键缩放所有表到100%，并隐藏网格线</li>
+<li>一键修改中英文字体和字号</li>
+<li>在每张表顶部加上表的名字（即底部tab写的名字）</li>
+</ul>
 
 
 
           
       
-          <a class="u-url" href="https://fanrongbin.com/first-of-all-dont-forget/" style="display:none;"></a>
+          <a class="u-url" href="https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/" style="display:none;"></a>
       
       
       <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy/" style="display:none;"></a>
@@ -153,24 +228,15 @@
 
   <div class="previous-post" style="display:inline-block;">
     
-    <a class="no-external" href="https://fanrongbin.com/clipboard-js-errors/"><span class="arrow">←</span> 在使用 Clipboard.js 中学一点 JavaScript</a>
+    <a class="no-external" href="https://fanrongbin.com/microsoft-365-office-ui/"><span class="arrow">←</span> Microsoft 365 中 Office 套件的两种 UI</a>
     
   </div>
 
   
 
 
-  <div class="Tags">
-    <ul style="list-style-type: none;margin:0;">
-      <li class="label">TAGS</li>
-        <li><a href="/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/">只言片语</a></li>
-    </ul>
-  </div>
 
   <div class="next-post" style="display:inline-block;float:right;">
-    
-    <a class="no-external" href="https://fanrongbin.com/after-der-steppenwolf/">荒野之狼，之后 <span
-        class="arrow">→</span></a>
     
   </div>
 
@@ -183,7 +249,7 @@
   href="/hugo-webmention-bridgy-mastodon">Webmention</a> this post, or <a href="/contact" target="_blank">contact me</a> directly.</p>
   <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin: 2ch 0;">
         <input type="url" name="source" class="url" placeholder="Your URL" required="">
-        <input type="hidden" name="target" value="https://fanrongbin.com/first-of-all-dont-forget/">
+        <input type="hidden" name="target" value="https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/">
         <input type="submit" value="Webmention" style="background:var(--bg-color);">
   </form>
   <p>You can use <a onclick="showHypo();" title="This will toggle Hypothes.is plugin on this page.">Hypothes.is</a> to select texts and highlight.</p>
