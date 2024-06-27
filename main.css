@@ -124,6 +124,9 @@ em {
 .footer {
     grid-column: 2 / span 4;
     /* padding-top: 5vw; */
+    margin-bottom: 0;
+    padding-top: 2ch;
+    padding-bottom: 2ch;
     opacity: 0.5;
     display: flex;
     justify-content: space-between;
@@ -317,6 +320,7 @@ textarea:focus, textarea:focus-visible, textarea:focus-within {
 
     .footer {
         padding: 2ch;
+        flex-direction: column;
     }
 
     section.prototype {
@@ -353,4 +357,14 @@ textarea:focus, textarea:focus-visible, textarea:focus-within {
 ::-webkit-scrollbar-thumb {
     background-color: #7f7f7fcb;
     /* outline: 1px solid slategrey; */
+}
+
+/* indieweb webring */
+.footer-link {
+    margin-bottom: 2ch;
+    line-height: 1.5;
+}
+
+.indie-webring>a, .footer>p>a {
+    border: none;
 }
