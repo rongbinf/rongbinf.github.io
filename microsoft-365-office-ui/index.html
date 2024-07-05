@@ -109,8 +109,16 @@
       
       
 
-<p>最近打开Office（Windows 11 23H2，Office 版本2405）会随机在<a href="https://web.archive.org/web/20240522052927/https://filestore.community.support.microsoft.com/api/images/81f99e98-6718-4fed-878a-aeb6d7c2c6a8?upload=true">面向Windows 10的旧 UI</a>和<a href="https://web.archive.org/web/20240522052901/https://support.microsoft.com/en-us/office/the-new-look-of-office-a6cdf19a-b2bd-4be1-9515-d74a37aa59bf">改成 Fluent Design 的新 UI</a>中选用。因为我自己觉得如果是在工作机器上，Fluent Design很累赘，所以一直用<a href="https://github.com/valinet/Win11DisableRoundedCorners">Win11DisableRoundedCorners</a>把全局的圆角关掉，现在偶尔出现的旧UI很赏心悦目，很想把它留住。</p>
-<p>目前还可以通过注册表形式修改。</p>
+<div class="callout ">
+    <div></div>
+      <div class="callout-inner">
+      在登录Microsoft 365的Office 2406版本中，以下方法均失效。
+    </div>
+  </div>
+<p>最近打开Office（Windows 11 23H2，Office 版本2405）会随机在<a href="https://web.archive.org/web/20240522052927/https://filestore.community.support.microsoft.com/api/images/81f99e98-6718-4fed-878a-aeb6d7c2c6a8?upload=true">面向Windows 10的旧 UI</a>和<a href="https://web.archive.org/web/20240522052901/https://support.microsoft.com/en-us/office/the-new-look-of-office-a6cdf19a-b2bd-4be1-9515-d74a37aa59bf">改成 Fluent Design 的新 UI</a>中选用，被叫做*<a href="https://insider.microsoft365.com/zh-cn/blog/visual-refresh-of-office-apps-for-windows">Visual Refresh</a>*。Fluent Design有时给人感觉很累赘，所以一直用<a href="https://github.com/valinet/Win11DisableRoundedCorners">Win11DisableRoundedCorners</a>把全局的圆角关掉，现在偶尔出现的旧UI很赏心悦目，很想把它留住。</p>
+<p>可以通过<a href="https://github.com/YerongAI/Office-Tool">Office Tool Plus</a>设置：部署→高级设置→应用程序首选项，搜索<code>visual refresh</code>，对应点进去调为“关闭”，然后“应用”即可。</p>
+<p><img src="https://img.fanrongbin.com/image-20240703124924107.png" alt="image-20240703124924107"></p>
+<p>还可以通过注册表形式修改。</p>
 <p>新建一个文本文档，复制粘贴下列代码后保存，文件后缀改为<code>.reg</code>，双击运行即可。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vb" data-lang="vb"><span class="line"><span class="cl"><span class="n">Windows</span> <span class="n">Registry</span> <span class="n">Editor</span> <span class="n">Version</span> <span class="n">5</span><span class="p">.</span><span class="n">00</span>
 </span></span><span class="line"><span class="cl"><span class="o">[</span><span class="n">HKEY_CURRENT_USER</span><span class="o">\</span><span class="n">Software</span><span class="o">\</span><span class="n">Microsoft</span><span class="o">\</span><span class="n">Office</span><span class="o">\</span><span class="n">16</span><span class="p">.</span><span class="n">0</span><span class="o">\</span><span class="n">Common</span><span class="o">\</span><span class="n">ExperimentConfigs</span><span class="o">\</span><span class="n">ExternalFeatureOverrides</span><span class="o">\</span><span class="n">word</span><span class="o">]</span>

@@ -24,7 +24,7 @@
       <link>https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/</link>
       <pubDate>Thu, 27 Jun 2024 10:03:56 +0800</pubDate>
       <guid>https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/</guid>
-      <description>&lt;p&gt;办公电脑开放的权限比较少，装个软件也得批，虽然用到这台老爷机的机会不多，但秉承着最大化摸鱼效率的宗旨，做了几个小按钮，方便自己刷格式用，也能在多台设备（包括macOS）共享。不过还是没有Arixcel方便（笑）&lt;/p&gt;
+      <description>&lt;p&gt;办公电脑开放的权限不多，装软件也得批，虽然用到这台老爷机的机会不多，但秉承着最大化摸鱼效率的宗旨，做了几个小按钮，方便自己刷格式用，也能在多台设备（包括macOS）共享。不过还是没有Arixcel方便（笑）&lt;/p&gt;
 &lt;h2 id=&#34;编写submacro后保存为xlam文件&#34;&gt;
 编写Sub/macro后保存为&lt;code&gt;.xlam&lt;/code&gt;文件
 &lt;a href=&#34;#%e7%bc%96%e5%86%99submacro%e5%90%8e%e4%bf%9d%e5%ad%98%e4%b8%baxlam%e6%96%87%e4%bb%b6&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -120,8 +120,16 @@
       <link>https://fanrongbin.com/microsoft-365-office-ui/</link>
       <pubDate>Wed, 22 May 2024 13:14:34 +0800</pubDate>
       <guid>https://fanrongbin.com/microsoft-365-office-ui/</guid>
-      <description>&lt;p&gt;最近打开Office（Windows 11 23H2，Office 版本2405）会随机在&lt;a href=&#34;https://web.archive.org/web/20240522052927/https://filestore.community.support.microsoft.com/api/images/81f99e98-6718-4fed-878a-aeb6d7c2c6a8?upload=true&#34;&gt;面向Windows 10的旧 UI&lt;/a&gt;和&lt;a href=&#34;https://web.archive.org/web/20240522052901/https://support.microsoft.com/en-us/office/the-new-look-of-office-a6cdf19a-b2bd-4be1-9515-d74a37aa59bf&#34;&gt;改成 Fluent Design 的新 UI&lt;/a&gt;中选用。因为我自己觉得如果是在工作机器上，Fluent Design很累赘，所以一直用&lt;a href=&#34;https://github.com/valinet/Win11DisableRoundedCorners&#34;&gt;Win11DisableRoundedCorners&lt;/a&gt;把全局的圆角关掉，现在偶尔出现的旧UI很赏心悦目，很想把它留住。&lt;/p&gt;
-&lt;p&gt;目前还可以通过注册表形式修改。&lt;/p&gt;
+      <description>&lt;div class=&#34;callout &#34;&gt;
+    &lt;div&gt;&lt;/div&gt;
+      &lt;div class=&#34;callout-inner&#34;&gt;
+      在登录Microsoft 365的Office 2406版本中，以下方法均失效。
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;p&gt;最近打开Office（Windows 11 23H2，Office 版本2405）会随机在&lt;a href=&#34;https://web.archive.org/web/20240522052927/https://filestore.community.support.microsoft.com/api/images/81f99e98-6718-4fed-878a-aeb6d7c2c6a8?upload=true&#34;&gt;面向Windows 10的旧 UI&lt;/a&gt;和&lt;a href=&#34;https://web.archive.org/web/20240522052901/https://support.microsoft.com/en-us/office/the-new-look-of-office-a6cdf19a-b2bd-4be1-9515-d74a37aa59bf&#34;&gt;改成 Fluent Design 的新 UI&lt;/a&gt;中选用，被叫做*&lt;a href=&#34;https://insider.microsoft365.com/zh-cn/blog/visual-refresh-of-office-apps-for-windows&#34;&gt;Visual Refresh&lt;/a&gt;*。Fluent Design有时给人感觉很累赘，所以一直用&lt;a href=&#34;https://github.com/valinet/Win11DisableRoundedCorners&#34;&gt;Win11DisableRoundedCorners&lt;/a&gt;把全局的圆角关掉，现在偶尔出现的旧UI很赏心悦目，很想把它留住。&lt;/p&gt;
+&lt;p&gt;可以通过&lt;a href=&#34;https://github.com/YerongAI/Office-Tool&#34;&gt;Office Tool Plus&lt;/a&gt;设置：部署→高级设置→应用程序首选项，搜索&lt;code&gt;visual refresh&lt;/code&gt;，对应点进去调为“关闭”，然后“应用”即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20240703124924107.png&#34; alt=&#34;image-20240703124924107&#34;&gt;&lt;/p&gt;
+&lt;p&gt;还可以通过注册表形式修改。&lt;/p&gt;
 &lt;p&gt;新建一个文本文档，复制粘贴下列代码后保存，文件后缀改为&lt;code&gt;.reg&lt;/code&gt;，双击运行即可。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vb&#34; data-lang=&#34;vb&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Windows&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Registry&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Editor&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Version&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;00&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HKEY_CURRENT_USER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Software&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Office&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Common&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ExperimentConfigs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ExternalFeatureOverrides&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
