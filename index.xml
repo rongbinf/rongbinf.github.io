@@ -1672,18 +1672,21 @@ Why I leave platforms
 4. 如果你还希望刷新 Cloudflare 缓存
 &lt;a href=&#34;#4-%e5%a6%82%e6%9e%9c%e4%bd%a0%e8%bf%98%e5%b8%8c%e6%9c%9b%e5%88%b7%e6%96%b0-cloudflare-%e7%bc%93%e5%ad%98&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;我还使用Cloudflare Pages来加速访问。为了在更新博文后刷新&lt;code&gt;posts&lt;/code&gt;页面的缓存，可以借助这个&lt;a href=&#34;https://github.com/marketplace/actions/cloudflare-purge-cache&#34;&gt;Cloudflare Purge Cache&lt;/a&gt; Action。在&lt;code&gt;deploy&lt;/code&gt;之后加入：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Cloudflare Purge Cache&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;jakejarvis/cloudflare-purge-action@v0.3.0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;CLOUDFLARE_ZONE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.CLOUDFLARE_ZONE }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;CLOUDFLARE_TOKEN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.CLOUDFLARE_TOKEN }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;	 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 这里填入你对应需要刷新的文件&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PURGE_URLS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;[&amp;#34;https://fanrongbin.com/posts/index.html&amp;#34;, &amp;#34;https://www.fanrongbin.com/posts/index.html&amp;#34;, &amp;#34;https://fanrongbin.com/main.css&amp;#34;]&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;p&gt;我还使用Cloudflare Pages来加速访问。为了在更新博文后刷新&lt;code&gt;posts&lt;/code&gt;页面的缓存，可以借助&lt;a href=&#34;https://github.com/marketplace/actions/cloudflare-purge-cache&#34;&gt;Cloudflare Purge Cache&lt;/a&gt;，或者&lt;a href=&#34;https://github.com/marketplace/actions/cloudflare-cache-purge-action&#34;&gt;Cloudflare Cache Purge Action&lt;/a&gt;等。&lt;/p&gt;
+&lt;p&gt;以后者为例，在&lt;code&gt;deploy&lt;/code&gt;之后加入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Purge cache&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;nathanvaughn/actions-cloudflare-purge@master&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;cf_zone&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.CLOUDFLARE_ZONE }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;cf_auth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.CLOUDFLARE_AUTH_KEY }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;         https://fanrongbin.com/posts/index.html
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;         https://fanrongbin.com/index.html
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;         https://fanrongbin.com/main.css&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;         
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;需要新增两个&lt;code&gt;secret&lt;/code&gt;：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;CLOUDFLARE_ZONE&lt;/code&gt;：在Cloudflare的Dashboard取得，即&lt;code&gt;Zone ID&lt;/code&gt;（区域ID）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;CLOUDFLARE_TOKEN&lt;/code&gt;：在&lt;a href=&#34;https://dash.cloudflare.com/profile/api-tokens&#34;&gt;API页面&lt;/a&gt;配置一个专用于刷新缓存的API，具体可以参考&lt;a href=&#34;https://github.com/marketplace/actions/cloudflare-purge-cache#option-1-restricted-api-token&#34;&gt;Action页面教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CLOUDFLARE_AUTH_KEY&lt;/code&gt;：在&lt;a href=&#34;https://dash.cloudflare.com/profile/api-tokens&#34;&gt;API页面&lt;/a&gt;配置一个专用于刷新缓存的API，具体可以参考&lt;a href=&#34;https://github.com/marketplace/actions/cloudflare-cache-purge-action&#34;&gt;Action页面教程&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -7337,9 +7340,6 @@ main();
 
 &lt;!-- stream page and widget style --&gt;
 &lt;style&gt;
-	.navbar, .addn, footer {
-		opacity: 0.35 !important;
-	}
 	.content-header{
 		background: unset;
 		color: unset;
