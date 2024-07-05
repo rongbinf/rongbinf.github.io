@@ -112,6 +112,7 @@
     <li><a href="#1-把源仓库传到一个新库">1. 把源仓库传到一个新库</a></li>
     <li><a href="#2-将新库和github-pages仓库串起来">2. 将新库和Github Pages仓库串起来</a></li>
     <li><a href="#3-设置好github-actions">3. 设置好Github Actions</a></li>
+    <li><a href="#4-如果你还希望刷新-cloudflare-缓存">4. 如果你还希望刷新 Cloudflare 缓存</a></li>
   </ul>
 </nav>
 </div>
@@ -246,6 +247,23 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="c"># 指定将自动部署得到的 public 文件夹 push 上去</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">commit_message</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.event.head_commit.message }}</span><span class="w">
 </span></span></span></code></pre></div><p>若点击保存，则将自动完成第一次commit，注意提前备份原Github Pages仓库里的内容。（没备份也可以通过历史commit找到啦，哈哈）</p>
+<h2 id="4-如果你还希望刷新-cloudflare-缓存">
+4. 如果你还希望刷新 Cloudflare 缓存
+<a href="#4-%e5%a6%82%e6%9e%9c%e4%bd%a0%e8%bf%98%e5%b8%8c%e6%9c%9b%e5%88%b7%e6%96%b0-cloudflare-%e7%bc%93%e5%ad%98" class="heading-anchor">#</a>
+</h2>
+<p>我还使用Cloudflare Pages来加速访问。为了在更新博文后刷新<code>posts</code>页面的缓存，可以借助这个<a href="https://github.com/marketplace/actions/cloudflare-purge-cache">Cloudflare Purge Cache</a> Action。在<code>deploy</code>之后加入：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Cloudflare Purge Cache</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">jakejarvis/cloudflare-purge-action@v0.3.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nt">CLOUDFLARE_ZONE</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.CLOUDFLARE_ZONE }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nt">CLOUDFLARE_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.CLOUDFLARE_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	 </span><span class="c"># 这里填入你对应需要刷新的文件</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nt">PURGE_URLS</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;[&#34;https://fanrongbin.com/posts/index.html&#34;, &#34;https://www.fanrongbin.com/posts/index.html&#34;, &#34;https://fanrongbin.com/main.css&#34;]&#39;</span><span class="w">
+</span></span></span></code></pre></div><p>需要新增两个<code>secret</code>：</p>
+<ul>
+<li><code>CLOUDFLARE_ZONE</code>：在Cloudflare的Dashboard取得，即<code>Zone ID</code>（区域ID）</li>
+<li><code>CLOUDFLARE_TOKEN</code>：在<a href="https://dash.cloudflare.com/profile/api-tokens">API页面</a>配置一个专用于刷新缓存的API，具体可以参考<a href="https://github.com/marketplace/actions/cloudflare-purge-cache#option-1-restricted-api-token">Action页面教程</a></li>
+</ul>
 
 
 
