@@ -2,11 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://fanrongbin.com/posts/</loc><lastmod>2024-06-27T10:03:56&#43;08:00</lastmod></url><url>
-            <loc>https://fanrongbin.com/</loc><lastmod>2024-06-27T10:03:56&#43;08:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/posts/</loc><lastmod>2024-07-03T04:42:45&#43;08:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/</loc><lastmod>2024-07-03T04:42:45&#43;08:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/tags/</loc><lastmod>2024-07-03T04:42:45&#43;08:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/</loc><lastmod>2024-07-03T04:42:45&#43;08:00</lastmod></url><url>
+            <loc>https://fanrongbin.com/i-graduated/</loc><lastmod>2024-07-03T04:42:45&#43;08:00</lastmod></url><url>
             <loc>https://fanrongbin.com/share-your-excel-vba-and-customised-tabs/</loc><lastmod>2024-06-27T10:03:56&#43;08:00</lastmod></url><url>
             <loc>https://fanrongbin.com/microsoft-365-office-ui/</loc><lastmod>2024-05-22T13:14:34&#43;08:00</lastmod></url><url>
-            <loc>https://fanrongbin.com/tags/</loc><lastmod>2024-05-22T13:14:34&#43;08:00</lastmod></url><url>
             <loc>https://fanrongbin.com/tags/tech/</loc><lastmod>2024-05-22T13:14:34&#43;08:00</lastmod></url><url>
             <loc>https://fanrongbin.com/on-reddit-ipo/</loc><lastmod>2024-04-01T19:33:27&#43;08:00</lastmod></url><url>
             <loc>https://fanrongbin.com/resources/</loc><lastmod>2024-03-27T23:18:35&#43;08:00</lastmod></url><url>
@@ -19,7 +21,6 @@
             <loc>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</loc><lastmod>2024-01-06T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/blog-theme-changed/</loc><lastmod>2024-01-05T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/2023-my-time-is-like-water/</loc><lastmod>2023-12-31T01:45:30&#43;08:00</lastmod></url><url>
-            <loc>https://fanrongbin.com/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/</loc><lastmod>2023-12-31T01:45:30&#43;08:00</lastmod></url><url>
             <loc>https://fanrongbin.com/oblique-strategies/</loc><lastmod>2023-11-22T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/github-actions-deploy-hugo/</loc><lastmod>2023-11-18T00:00:00&#43;00:00</lastmod></url><url>
             <loc>https://fanrongbin.com/hugo-hanzi-pro/</loc><lastmod>2023-11-18T00:00:00&#43;00:00</lastmod></url><url>
