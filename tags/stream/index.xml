@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stream on Rongbin&#39;s Blog</title>
+    <link>https://fanrongbin.com/tags/stream/</link>
+    <description>Recent content in stream on Rongbin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Sun, 07 Jul 2024 08:00:00 +0800</lastBuildDate>
+    <atom:link href="https://fanrongbin.com/tags/stream/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>https://fanrongbin.com/stream/test/</link>
+      <pubDate>Sun, 07 Jul 2024 08:00:00 +0800</pubDate>
+      <guid>https://fanrongbin.com/stream/test/</guid>
+      <description>test</description>
+    </item>
+  </channel>
+</rss>
