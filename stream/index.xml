@@ -6,24 +6,8 @@
     <description>Recent content on Stream  in Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Mon, 08 Jul 2024 23:08:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2024 22:13:59 +0800</lastBuildDate>
     <atom:link href="https://fanrongbin.com/stream/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Loot Season 1 &amp; 2 (2022, 2024)</title>
-      <link>https://fanrongbin.com/stream/loot/</link>
-      <pubDate>Mon, 08 Jul 2024 23:08:15 +0800</pubDate>
-      <guid>https://fanrongbin.com/stream/loot/</guid>
-      <description>&lt;p&gt;Maya is the only reason why I watch this.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Dark Matter Season 1 (2024)</title>
-      <link>https://fanrongbin.com/stream/dark-matter-season-one/</link>
-      <pubDate>Mon, 08 Jul 2024 22:44:05 +0800</pubDate>
-      <guid>https://fanrongbin.com/stream/dark-matter-season-one/</guid>
-      <description>&lt;p&gt;Great casting (shout out to Jimmi Simpson)! Getting more into it only after E07. It does have more realistic side compared to other multiverse stories, although some might say this makes it less hard-core.&lt;/p&gt;
-</description>
-    </item>
     <item>
       <title></title>
       <link>https://fanrongbin.com/stream/bridgy-move-url/</link>
@@ -38,6 +22,30 @@
       <pubDate>Mon, 08 Jul 2024 00:04:08 +0800</pubDate>
       <guid>https://fanrongbin.com/stream/stream-page-update-jul-2024/</guid>
       <description>&lt;p&gt;今晚把Stream的构建方式从shortcode改为单独的&lt;code&gt;.md&lt;/code&gt;文件。更方便了，也更直观了。把日期、统计等交给Hugo做，就不需要在浏览器这端加载有的没的JS。现在也可以单独订阅Stream页面的RSS了。&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Dark Matter Season 1 (2024)</title>
+      <link>https://fanrongbin.com/stream/dark-matter-season-one/</link>
+      <pubDate>Sat, 06 Jul 2024 20:50:00 +0800</pubDate>
+      <guid>https://fanrongbin.com/stream/dark-matter-season-one/</guid>
+      <description>&lt;p&gt;Great casting (shout out to Jimmi Simpson)! Getting more into it only after E07. It does have more realistic side compared to other multiverse stories, although some might say this makes it less hard-core.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Loot Season 1 &amp; 2 (2022, 2024)</title>
+      <link>https://fanrongbin.com/stream/loot/</link>
+      <pubDate>Sat, 06 Jul 2024 15:39:00 +0800</pubDate>
+      <guid>https://fanrongbin.com/stream/loot/</guid>
+      <description>&lt;p&gt;Maya is the only reason why I watch this.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>A Quiet Place: Day One (2024)</title>
+      <link>https://fanrongbin.com/stream/a-quiet-place-day-one/</link>
+      <pubDate>Sat, 29 Jun 2024 18:29:00 +0800</pubDate>
+      <guid>https://fanrongbin.com/stream/a-quiet-place-day-one/</guid>
+      <description>&lt;p&gt;iPod Classic + EarPods Ad (Extended ver.)&lt;/p&gt;
 </description>
     </item>
     <item>
