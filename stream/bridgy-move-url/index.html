@@ -9,20 +9,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
-    content="今晚把Stream的构建方式从shortcode改为单独的.md文件。更方便了，也更直观了。把日期、统计等交给Hugo做，就不需要在浏览器这端加载有的没的JS。现在也可以单独订阅Stream页面的RSS了。 ">
+    content="重新配置Bridgy的时候踩坑：如果是纯文本内容，且不希望加载到fediverse后出现来自Bridgy的link preview，记得把那条url移到e-content之外。 ">
 <meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
 <meta property="og:title" content=" - Rongbin&#39;s Blog" />
-<meta property="og:description" content="今晚把Stream的构建方式从shortcode改为单独的.md文件。更方便了，也更直观了。把日期、统计等交给Hugo做，就不需要在浏览器这端加载有的没的JS。现在也可以单独订阅Stream页面的RSS了。 " />
-<meta property="og:url" content="https://fanrongbin.com/stream/stream-page-update-jul-2024/" />
+<meta property="og:description" content="重新配置Bridgy的时候踩坑：如果是纯文本内容，且不希望加载到fediverse后出现来自Bridgy的link preview，记得把那条url移到e-content之外。 " />
+<meta property="og:url" content="https://fanrongbin.com/stream/bridgy-move-url/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 <meta name="twitter:title" content=" - Rongbin&#39;s Blog" />
-<meta name="twitter:description" content="今晚把Stream的构建方式从shortcode改为单独的.md文件。更方便了，也更直观了。把日期、统计等交给Hugo做，就不需要在浏览器这端加载有的没的JS。现在也可以单独订阅Stream页面的RSS了。 " />
+<meta name="twitter:description" content="重新配置Bridgy的时候踩坑：如果是纯文本内容，且不希望加载到fediverse后出现来自Bridgy的link preview，记得把那条url移到e-content之外。 " />
 
-<link rel="canonical" href="https://fanrongbin.com/stream/stream-page-update-jul-2024/" />
+<link rel="canonical" href="https://fanrongbin.com/stream/bridgy-move-url/" />
 
 
 
@@ -37,7 +37,7 @@
 
 
 
-<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/stream/stream-page-update-jul-2024/">
+<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/stream/bridgy-move-url/">
 
 <link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
 
@@ -79,7 +79,7 @@
 
   <div id="single-header">
     <h1 class="p-name content-h1"></h1>
-    <p class="content-time stream-time"><time class="dt-published" datetime="2024-07-08T00:04:08&#43;08:00">2024-07-08T00:04:08&#43;08:00</time></p>
+    <p class="content-time stream-time"><time class="dt-published" datetime="2024-07-08T22:13:59&#43;08:00">2024-07-08T22:13:59&#43;08:00</time></p>
 
     <a rel="author" class="p-name h-card" href="https://fanrongbin.com" style="display:none;">Rongbin Fan</a>
 
@@ -121,13 +121,13 @@
 
     
 
-<p>今晚把Stream的构建方式从shortcode改为单独的<code>.md</code>文件。更方便了，也更直观了。把日期、统计等交给Hugo做，就不需要在浏览器这端加载有的没的JS。现在也可以单独订阅Stream页面的RSS了。</p>
+<p>重新配置<a href="https://fed.brid.gy">Bridgy</a>的时候踩坑：如果是纯文本内容，且不希望加载到fediverse后出现来自Bridgy的link preview，记得把那条url移到<code>e-content</code>之外。</p>
 
 
 
           
       
-          <a class="u-url" href="https://fanrongbin.com/stream/stream-page-update-jul-2024/" hidden="from-humans" style="display:none;"></a>
+          <a class="u-url" href="https://fanrongbin.com/stream/bridgy-move-url/" hidden="from-humans" style="display:none;"></a>
       
 
       </main>
@@ -150,7 +150,7 @@
 <div class="previous-post" style="display:inline-block;">
   
     
-      <a class="no-external" href="/stream/google-changed-sign-in-page/"><span class="arrow">←</span> Previous Stream</a>
+      <a class="no-external" href="/stream/stream-page-update-jul-2024/"><span class="arrow">←</span> Previous Stream</a>
     
   
 </div>
@@ -160,10 +160,6 @@
 
 
 <div class="next-post" style="display:inline-block;float:right;">
-  
-    
-      <a class="no-external" href="/stream/bridgy-move-url/">Next Stream <span class="arrow">→</span></a>
-    
   
 </div>
 
@@ -177,7 +173,7 @@
   href="/hugo-webmention-bridgy-mastodon">Webmention</a> this post, or <a href="/contact" target="_blank">contact me</a> directly.</p>
   <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin: 2ch 0;">
         <input type="url" name="source" class="url" placeholder="Your URL" required="">
-        <input type="hidden" name="target" value="https://fanrongbin.com/stream/stream-page-update-jul-2024/">
+        <input type="hidden" name="target" value="https://fanrongbin.com/stream/bridgy-move-url/">
         <input type="submit" value="Webmention" style="background:var(--bg-color);">
   </form>
   <p id="commenthypo">Use <a onclick="showHypo();" title="This will toggle Hypothes.is plugin on this page.">Hypothes.is</a> to highlight or note.</p>
