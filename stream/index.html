@@ -1378,6 +1378,7 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
     }
 
     .widget.hide {
+        pointer-events: none;
         opacity: 0;
         transform: translateY(-10px);
     }
@@ -1394,6 +1395,7 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
         background: greenyellow;
         color: black;
         position: relative;
+        top: -5px;
     }
 
     .lastfm:hover,
@@ -1408,13 +1410,13 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
     .follow-mstd-a:hover,
     .stream-calendar-a:hover {
         border-bottom: none;
-        margin-bottom: 5px;
+        padding-bottom: 5px;
     }
 
     .lastfm-cover {
         width: 64px;
          
-        margin: 0 10px 5px 0;
+        margin: 0 10px 0 0;
     }
 
     .lastfm-name {
@@ -1605,7 +1607,7 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
     #follow-mstd-box {
         display: none;
         position: fixed;
-        top: 50%;
+        top: 10%;
         left: 5%;
         background: var(--bgcolor);
         color: var(--text-color);
@@ -2003,6 +2005,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 </script>
+
+
+<script type="text/javascript" src="https://unpkg.com/album-art"></script>
+
 
 
           
