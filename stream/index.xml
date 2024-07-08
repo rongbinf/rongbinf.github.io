@@ -13,7 +13,7 @@
       <link>https://fanrongbin.com/stream/stream-page-update-jul-2024/</link>
       <pubDate>Mon, 08 Jul 2024 00:04:08 +0800</pubDate>
       <guid>https://fanrongbin.com/stream/stream-page-update-jul-2024/</guid>
-      <description>&lt;p&gt;今晚把Stream页面从shortcode改为单独的&lt;code&gt;.md&lt;/code&gt;文件。更方便了，也更直观了。把日期、统计等交给Hugo做，就不需要在浏览器这端加载有的没的JS。现在也可以单独订阅Stream页面的RSS了。&lt;/p&gt;
+      <description>&lt;p&gt;今晚把Stream的构建方式从shortcode改为单独的&lt;code&gt;.md&lt;/code&gt;文件。更方便了，也更直观了。把日期、统计等交给Hugo做，就不需要在浏览器这端加载有的没的JS。现在也可以单独订阅Stream页面的RSS了。&lt;/p&gt;
 </description>
     </item>
     <item>
