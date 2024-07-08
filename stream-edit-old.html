@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Stream Shortcode Generator</title>
+  <style>
+    .context {
+      display: grid;
+      grid-column: 2/6;
+    }
+
+    div {
+      padding: 2ch;
+    }
+
+    input,
+    select {
+      height: 2rem;
+    }
+
+    textarea {
+      height: 20rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      line-height: 1.2;
+    }
+
+    button {
+      padding: 2ch;
+      margin-right: 1ch;
+    }
+
+    #previewArea {
+      padding: 2ch;
+      background: #e7e7e7;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+      input,
+      textarea,
+      select {
+        background: #000;
+        color: #fff;
+      }
+
+      button {
+        background: #3d3d3d;
+        color: #fff;
+      }
+
+      #previewArea {
+        background: #232323;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <main class="main article-entry">
+    <section class="context">
+      <div>
+        <p id="datetime">Current Date and Time: <span></span></p>
+        <p><a href="https://github.com/rongbinf/build/blob/main/content/stream.md">Github</a></p>
+        <p><a href="/stream">Stream</a></p>
+      </div>
+      <div>
+        <label for="manualDateTime">Manual Date and Time: </label>
+        <input type="checkbox" id="manualDateTime">
+      </div>
+      <div id="dateTimePicker" class="hidden">
+        <label for="dateTimeInput">Date and Time: </label>
+        <input type="datetime-local" id="dateTimeInput">
+      </div>
+      <div id="utcOffsetInput" class="hidden">
+        <label for="utcOffset">UTC Offset: </label>
+        <input type="text" id="utcOffset" placeholder="e.g. +00">
+      </div>      
+      <div>
+        <label for="sid">SID: </label>
+        <input type="text" id="sid">
+      </div>
+      <div>
+        <label for="stype">Stype: </label>
+        <select id="stype">
+          <option value="note">Note</option>
+          <option value="reply">Reply</option>
+          <option value="like">Like</option>
+          <option value="follow">Follow</option>
+          <option value="repost">Repost</option>
+          <option value="music">Music</option>
+          <option value="movie">Movie</option>
+          <option value="tv">TV</option>
+        </select>
+      </div>
+      <div id="musicOptions" class="hidden">
+        <label for="musictype">Music Type: </label>
+        <select id="musictype">
+          <option value=""></option>
+          <option value="album">Album</option>
+          <option value="song">Song</option>
+        </select>
+      </div>
+      <div id="movieOptions" class="hidden">
+        <label for="movieName">Movie Name: </label>
+        <input type="text" id="movieName">
+        <label for="movieRating">Movie Rating: </label>
+        <input type="text" id="movieRating" placeholder="e.g. 3.5">
+      </div>
+      <div id="tvOptions" class="hidden">
+        <label for="tvName">TV Name: </label>
+        <input type="text" id="tvName">
+        <label for="tvRating">TV Rating: </label>
+        <input type="text" id="tvRating" placeholder="e.g. 3.5">
+        <label for="tvType">TV Type: </label>
+        <select id="tvType">
+          <option value="series">Series</option>
+          <option value="tvshow">TV Show</option>
+        </select>
+      </div>
+      <div id="musicNameInput" class="hidden">
+        <label for="musicName">Music Name: </label>
+        <input type="text" id="musicName">
+      </div>
+      <div id="artistInput" class="hidden">
+        <label for="artist">Artist: </label>
+        <input type="text" id="artist">
+      </div>
+      <div id="ratingInput" class="hidden">
+        <label for="rating">Rating: </label>
+        <input type="text" id="rating" placeholder="e.g. 3.5">
+        </div>
+      </div>
+      <div id="urlInput" class="hidden">
+        <label for="surl">SURL: </label>
+        <input type="text" id="surl">
+      </div>
+      <div>
+        <button id="bold">B</button>
+        <button id="italic">I</button>
+        <button id="link">Link</button>
+      </div>
+      <div>
+        <label for="content">Content: </label>
+        <textarea id="content"></textarea>
+        <span id="charCount">0 characters</span>
+      </div>
+      <div>
+        <button id="clear">Clear</button>
+        <button id="preview">Preview</button>
+        <button id="copy">Copy</button>
+        <!-- <button id="send" style="display: none;">Send</button> -->
+      </div>
+      <div id="previewArea"></div>
+    </section>
+  </main>
+</body>
+
+
+<script>
+  // 缓存DOM元素引用
+  const textArea = document.getElementById('content');
+  const sidInput = document.getElementById('sid');
+  const stypeSelect = document.getElementById('stype');
+  const surlInput = document.getElementById('surl');
+  const musicTypeSelect = document.getElementById('musictype');
+  const artistInput = document.getElementById('artist');
+  const musicNameInput = document.getElementById('musicName');
+  const ratingInput = document.getElementById('rating');
+  const manualDateTimeCheckbox = document.getElementById('manualDateTime');
+  const dateTimeInput = document.getElementById('dateTimeInput');
+  const utcOffsetInput = document.getElementById('utcOffset');
+  const previewArea = document.getElementById('previewArea');
+  const dateTimeDisplay = document.getElementById('datetime');
+  const movieNameInput = document.getElementById('movieName');
+  const movieRatingInput = document.getElementById('movieRating');
+  const tvNameInput = document.getElementById('tvName');
+  const tvRatingInput = document.getElementById('tvRating');
+  const tvTypeSelect = document.getElementById('tvType');
+
+  function applyMarkdown(type) {
+    const start = textArea.selectionStart;
+    const end = textArea.selectionEnd;
+    const selectedText = textArea.value.substring(start, end);
+    const markdown = {
+      'bold': `**${selectedText}**`,
+      'italic': `*${selectedText}*`,
+      'link': `[${selectedText}](url)`
+    };
+    textArea.value = textArea.value.slice(0, start) + markdown[type] + textArea.value.slice(end);
+    textArea.focus();
+  }
+
+  function formatDateTime(date) {
+    const pad = (number) => number.toString().padStart(2, '0');
+    let offset = -date.getTimezoneOffset();
+    const sign = offset >= 0 ? '+' : '-';
+    offset = Math.abs(offset);
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}${sign}${pad(Math.floor(offset / 60))}:${pad(offset % 60)}`;
+  }
+
+  function formatUTCOffset(offset) {
+    if (!offset) return '+00:00';
+    if (offset.match(/^[\+\-]?\d{1,2}$/)) {
+      const sign = offset.startsWith('-') ? '-' : '+';
+      let hours = offset.match(/\d+/)[0].padStart(2, '0');
+      return `${sign}${hours}:00`;
+    }
+    if (!offset.includes(':')) {
+      return offset.substring(0, 3) + ':' + offset.substring(3);
+    }
+    return offset;
+  }
+
+  function updateDateTime() {
+    dateTimeDisplay.innerText = `Current Date and Time: ${formatDateTime(new Date())}`;
+  }
+  setInterval(updateDateTime, 1000);
+
+  manualDateTimeCheckbox.addEventListener('change', function () {
+    dateTimeInput.parentElement.classList.toggle('hidden', !this.checked);
+    utcOffsetInput.parentElement.classList.toggle('hidden', !this.checked);
+  });
+
+  stypeSelect.addEventListener('change', function () {
+    const isMusic = this.value === 'music';
+    const isMovie = this.value === 'movie';
+    const isTV = this.value === 'tv';
+
+    surlInput.parentElement.classList.toggle('hidden', this.value === 'note' || isMusic || isMovie || isTV);
+    musicTypeSelect.parentElement.classList.toggle('hidden', !isMusic);
+    artistInput.parentElement.classList.toggle('hidden', !isMusic);
+    musicNameInput.parentElement.classList.toggle('hidden', !isMusic);
+    ratingInput.parentElement.classList.toggle('hidden', !isMusic);
+    document.getElementById('movieOptions').classList.toggle('hidden', !isMovie);
+    document.getElementById('tvOptions').classList.toggle('hidden', !isTV);
+  });
+
+  document.getElementById('content').addEventListener('input', function () {
+    const charCount = this.value.length;
+    document.getElementById('charCount').textContent = `${charCount} characters`;
+  });
+
+  document.getElementById('clear').addEventListener('click', function () {
+    sidInput.value = '';
+    stypeSelect.value = 'note';
+    surlInput.value = '';
+    musicTypeSelect.value = '';
+    artistInput.value = '';
+    musicNameInput.value = '';
+    ratingInput.value = '';
+    movieNameInput.value = '';
+    movieRatingInput.value = '';
+    tvNameInput.value = '';
+    tvRatingInput.value = '';
+    tvTypeSelect.value = '';
+    textArea.value = '';
+    utcOffsetInput.value = '';
+    manualDateTimeCheckbox.checked = false;
+    dateTimeInput.parentElement.classList.add('hidden');
+    utcOffsetInput.parentElement.classList.add('hidden');
+    document.getElementById('movieOptions').classList.add('hidden');
+    document.getElementById('tvOptions').classList.add('hidden');
+  });
+
+  document.getElementById('preview').addEventListener('click', function () {
+    if (!sidInput.value.trim()) {
+      alert("Please fill in the SID field.");
+      return;
+    }
+    
+    let dateTime = manualDateTimeCheckbox.checked ? dateTimeInput.value + ':00' + formatUTCOffset(utcOffsetInput.value) : formatDateTime(new Date());
+    let streamParams = `dt="${dateTime}" sid="${sidInput.value}" stype="${stypeSelect.value}"`;
+
+    if (stypeSelect.value === 'music') {
+      streamParams += ` musictype="${musicTypeSelect.value}" artist="${artistInput.value}" music="${musicNameInput.value}" rating="${ratingInput.value}"`;
+    } else if (stypeSelect.value === 'movie') {
+      streamParams += ` movie="${movieNameInput.value}" movierating="${movieRatingInput.value}"`;
+    } else if (stypeSelect.value === 'tv') {
+      streamParams += ` tv="${tvNameInput.value}" tvrating="${tvRatingInput.value}" tvtype="${tvTypeSelect.value}"`;
+    } else if (stypeSelect.value !== 'note') {
+      streamParams += ` surl="${surlInput.value}"`;
+    }
+
+    previewArea.innerText = `{{<stream ${streamParams}>}}\n${textArea.value}\n{{</stream>}}`;
+  });
+
+  document.getElementById('copy').addEventListener('click', function () {
+    if (!sidInput.value.trim()) {
+      alert("Please fill in the SID field.");
+      return;
+    }
+    const el = document.createElement('textarea');
+    el.value = previewArea.innerText;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert("Content copied to clipboard!");
+  });
+
+  document.getElementById('bold').addEventListener('click', () => applyMarkdown('bold'));
+  document.getElementById('italic').addEventListener('click', () => applyMarkdown('italic'));
+  document.getElementById('link').addEventListener('click', () => applyMarkdown('link'));
+</script>
+
+
+</html>
