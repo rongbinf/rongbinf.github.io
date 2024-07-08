@@ -1658,6 +1658,9 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
                 var track = data.recenttracks.track[0];
                 var coverImage = document.querySelector('.lastfm .lastfm-cover');
                 if (coverImage) {
+                    
+                    coverImage.setAttribute('src', 'https://img.fanrongbin.com/cover-placeholder.webp');
+
                     var largeImage = track.image.find(img => img.size === 'large')['#text'];
                     if (largeImage) {
                         
@@ -1665,19 +1668,18 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
                         img.onload = function() {
                             coverImage.setAttribute('src', largeImage);
                         };
+                        
                         img.onerror = function() {
-                            coverImage.setAttribute('src', 'https://img.fanrongbin.com/cover-placeholder.webp');
+                            console.log('Failed to load cover image, keeping placeholder');
                         };
                         
                         setTimeout(function() {
                             if (!img.complete || !img.naturalWidth) {
                                 img.src = ''; 
-                                coverImage.setAttribute('src', 'https://img.fanrongbin.com/cover-placeholder.webp');
+                                console.log('Cover image load timed out, keeping placeholder');
                             }
                         }, 10000);
                         img.src = largeImage;
-                    } else {
-                        coverImage.setAttribute('src', 'https://img.fanrongbin.com/cover-placeholder.webp');
                     }
                 }
 
