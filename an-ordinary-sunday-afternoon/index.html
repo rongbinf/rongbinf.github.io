@@ -29,7 +29,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.ba79bf4ceb45836f02272583df441b1995999fb2c9bc473c20dff46a5df08641.css" integrity="sha256-unm/TOtFg28CJyWD30QbGZWZn7LJvEc8IN/0al3whkE=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.e6563dc962f9309961bf969c64c138e47186f8b1fa18fee6604f33f088a5b6c9.css" integrity="sha256-5lY9yWL5MJlhv5acZME45HGG&#43;LH6GP7mYE8z8Iiltsk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -77,10 +77,11 @@
     <nav id="TableOfContents"></nav>
 </div>
 
+  
+
   <div id="single-header">
     <h1 class="p-name content-h1">在一个普通的周日下午</h1>
     
-
 
     
       
@@ -94,6 +95,8 @@
 
     <a rel="author" class="p-name h-card" href="https://fanrongbin.com" style="display:none;">Rongbin Fan</a>
   </div>
+
+  
 
 </section>
 
@@ -141,13 +144,18 @@
 
 <div class="footer-nav">
 
-  <div class="previous-post" style="display:inline-block;">
-    
-    <a class="no-external" href="https://fanrongbin.com/339/"><span class="arrow">←</span> 白色的空间</a>
-    
-  </div>
 
+
+
+<div class="previous-post" style="display:inline-block;">
   
+    
+      <a class="no-external" href="/339/"><span class="arrow">←</span> 白色的空间</a>
+    
+  
+</div>
+
+
 
 
   <div class="Tags">
@@ -157,12 +165,14 @@
     </ul>
   </div>
 
-  <div class="next-post" style="display:inline-block;float:right;">
+<div class="next-post" style="display:inline-block;float:right;">
+  
     
-    <a class="no-external" href="https://fanrongbin.com/clipboard-js-errors/">在使用 Clipboard.js 中学一点 JavaScript <span
-        class="arrow">→</span></a>
+      <a class="no-external" href="/clipboard-js-errors/">在使用 Clipboard.js 中学一点 JavaScript <span class="arrow">→</span></a>
     
-  </div>
+  
+</div>
+
 
 </div>
 
@@ -176,62 +186,31 @@
         <input type="hidden" name="target" value="https://fanrongbin.com/an-ordinary-sunday-afternoon/">
         <input type="submit" value="Webmention" style="background:var(--bg-color);">
   </form>
-  <p>You can use <a onclick="showHypo();" title="This will toggle Hypothes.is plugin on this page.">Hypothes.is</a> to select texts and highlight.</p>
+  <p id="commenthypo">Use <a onclick="showHypo();" title="This will toggle Hypothes.is plugin on this page.">Hypothes.is</a> to highlight or note.</p>
 </div>
 
-<div id="copy-success-message" class="copy-success">
-  <h4>You've copied this page url!</h4>
-  <p style="font-weight: normal;">Search it in your Mastodon server, and reply that toot by <em>@fanrongbin.com@fanrongbin.com</em>.</p>
-</div>
 
-<script defer>
-document.addEventListener('DOMContentLoaded', function() {
-  var script = document.createElement('script');
-  script.src = '/clipboard.min.js';
-  script.onload = function() {
-    const copyButton = document.querySelector('.btn');
-    const copySuccessMessage = document.getElementById('copy-success-message');
 
-    const clipboard = new ClipboardJS('.btn');
 
-    clipboard.on('success', function(e) {
-      console.info('Action:', e.action);
-      console.info('Text:', e.text);
-      console.info('Trigger:', e.trigger);
-
-      copySuccessMessage.style.display = 'block';
-      copySuccessMessage.style.opacity = 1;
-
-      
-      
-      
-      
-
-      e.clearSelection();
-    });
-
-    clipboard.on('error', function(e) {
-      console.error('Action:', e.action);
-      console.error('Trigger:', e.trigger);
-    });
-
-    document.addEventListener('click', function(event) {
-      if (event.target !== copyButton) {
-        copySuccessMessage.style.display = 'none';
-        copySuccessMessage.style.opacity = 0;
-      }
-    });
-  };
-
-  document.head.appendChild(script);
-});
-</script>
 
 
   
 
 <script src="/webmention.min.js" defer></script>
 <div id="webmentions"></div>
+
+<details id="giscus-box">
+  <summary>Comment (log in via Github)</summary>
+<div id="giscus">
+  <script id="giscus-script" src="https://giscus.app/client.js" data-repo="rongbinf/giscus-comment"
+      data-repo-id="R_kgDOK3UYzw" data-category="Announcements"
+      data-category-id="DIC_kwDOK3UYz84Cbl2R" data-mapping="title" data-strict="0"
+      data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top"
+      data-theme="https://fanrongbin.com/giscus.css" data-lang="en" data-loading="lazy"
+      crossorigin="anonymous" defer>
+      </script>
+</div>
+</details>
 
 
   
@@ -371,8 +350,11 @@ document.addEventListener('DOMContentLoaded', function() {
         var existingScript = document.getElementById('hypothes-script');
         var button = contentHeader.querySelector('#show-hypo');
 
+        var commentHypo = document.getElementById("commenthypo");
+
         if (!existingScript) {
             button.textContent = 'Loading';
+            commentHypo.textContent = 'Loading'
 
             var script = document.createElement('script');
             script.id = 'hypothes-script';
@@ -380,11 +362,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             script.onload = () => {
                 button.textContent = 'Hypothes.is';
+                commentHypo.textContent = 'You can now select text to highlight or note.'
             };
 
             script.onerror = () => {
                 button.style.color = 'red';
                 button.textContent = 'Failed';
+                commentHypo.textContent = 'Network error. Please refresh and try again.'
             };
 
             

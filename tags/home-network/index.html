@@ -29,7 +29,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.ba79bf4ceb45836f02272583df441b1995999fb2c9bc473c20dff46a5df08641.css" integrity="sha256-unm/TOtFg28CJyWD30QbGZWZn7LJvEc8IN/0al3whkE=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.e6563dc962f9309961bf969c64c138e47186f8b1fa18fee6604f33f088a5b6c9.css" integrity="sha256-5lY9yWL5MJlhv5acZME45HGG&#43;LH6GP7mYE8z8Iiltsk=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -244,8 +244,11 @@
         var existingScript = document.getElementById('hypothes-script');
         var button = contentHeader.querySelector('#show-hypo');
 
+        var commentHypo = document.getElementById("commenthypo");
+
         if (!existingScript) {
             button.textContent = 'Loading';
+            commentHypo.textContent = 'Loading'
 
             var script = document.createElement('script');
             script.id = 'hypothes-script';
@@ -253,11 +256,13 @@
 
             script.onload = () => {
                 button.textContent = 'Hypothes.is';
+                commentHypo.textContent = 'You can now select text to highlight or note.'
             };
 
             script.onerror = () => {
                 button.style.color = 'red';
                 button.textContent = 'Failed';
+                commentHypo.textContent = 'Network error. Please refresh and try again.'
             };
 
             
