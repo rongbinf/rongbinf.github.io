@@ -1659,7 +1659,26 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
                 var coverImage = document.querySelector('.lastfm .lastfm-cover');
                 if (coverImage) {
                     var largeImage = track.image.find(img => img.size === 'large')['#text'];
-                    coverImage.setAttribute('src', largeImage);
+                    if (largeImage) {
+                        
+                        var img = new Image();
+                        img.onload = function() {
+                            coverImage.setAttribute('src', largeImage);
+                        };
+                        img.onerror = function() {
+                            coverImage.setAttribute('src', 'https://img.fanrongbin.com/cover-placeholder.webp');
+                        };
+                        
+                        setTimeout(function() {
+                            if (!img.complete || !img.naturalWidth) {
+                                img.src = ''; 
+                                coverImage.setAttribute('src', 'https://img.fanrongbin.com/cover-placeholder.webp');
+                            }
+                        }, 10000);
+                        img.src = largeImage;
+                    } else {
+                        coverImage.setAttribute('src', 'https://img.fanrongbin.com/cover-placeholder.webp');
+                    }
                 }
 
                 var timeAgoText = '';
