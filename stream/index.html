@@ -1374,7 +1374,7 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
         bottom: 5%;
         left: 5%;
         transform: translate(0);
-        max-width: 330px;
+        max-width: 280px;
     }
 
     .widget.hide {
@@ -1429,6 +1429,10 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
         text-align: left;
         display: flex;
         flex-direction: row;
+    }
+
+    .lastfm-album {
+        font-size: 85%;
     }
 
     .widget>a::after {
@@ -1523,8 +1527,8 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
 
     .buttons > button {
         border: none;
-        width: 25%;
-        padding: 0.5ch 1ch 1ch 1ch;
+        width: 33%;  
+        padding: 0.5ch 0.5ch 1ch 0.5ch;
         background-color: var(--bgcolor);
         color: var(--text-color);
         display: flex;
@@ -1560,9 +1564,18 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
 
     @media (max-width: 480px) {
         .widget {
-            font-size: 85%;
-            max-width: 300px;
+            font-size: 90%;
             align-items: flex-start;
+        }
+        .lastfm-album {
+            display: none;
+        }
+        .lastfm-name-p {
+            flex-direction: column;
+            margin: 0;
+        }
+        .lastfm-cover {
+            width: 47px;
         }
     }
 </style>
@@ -1582,10 +1595,10 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
         </div>
     </a>
     <a class="stream-rss-a" id="stream-rss-button" href="/stream/index.xml">
-        <div class="stream-rss">RSS of This Page</div>
+        <div class="stream-rss">RSS</div>
     </a>
     <a class="follow-mstd-a" id="follow-mstd-button">
-        <div class="follow-mstd">Respond/Follow on Mastodon</div>
+        
     </a>
     <a class="stream-calendar-a">
         <div class="stream-calendar">
