@@ -29,7 +29,7 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.138c18b69cee7cdcd8a19df6aae12830a7b14327a728c5ada7e7c59d8c12b2a6.css" integrity="sha256-E4wYtpzufNzYoZ32quEoMKexQyenKMWtp&#43;fFnYwSsqY=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.532ab033f2f6593c840f3938f5a4ac05fdb3648279035c96e12baf62b1116c7a.css" integrity="sha256-UyqwM/L2WTyEDzk49aSsBf2zZIJ5A1yW4SuvYrERbHo=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -92,14 +92,17 @@
 
 
 
+
 <style>
-  .navbar, footer, .footer-nav, .webmentions-how, .comment-box {
+  .navbar, footer, .footer-nav, .webmentions-how, .comment-box, .comment-title {
     opacity: 0.15 !important;
   }
   .navbar:hover, footer:hover, .footer-nav:hover, .webmentions-how:hover, .comment-box:hover {
     opacity: 1 !important;
   }
 </style>
+
+
 
 <div class="link-display"></div>
 
@@ -230,19 +233,6 @@
 
 </div>
 
-<div class="webmentions-how">
-  <p>
-    
-    <a
-  href="/hugo-webmention-bridgy-mastodon">Webmention</a> this post, or <a href="/contact" target="_blank">contact me</a> directly.</p>
-  <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin: 2ch 0;">
-        <input type="url" name="source" class="url" placeholder="Your URL" required="">
-        <input type="hidden" name="target" value="https://fanrongbin.com/stream/loot/">
-        <input type="submit" value="Webmention" style="background:var(--bg-color);">
-  </form>
-  <p id="commenthypo">Use <a onclick="showHypo();" title="This will toggle Hypothes.is plugin on this page.">Hypothes.is</a> to highlight or note.</p>
-</div>
-
 
 
 
@@ -250,11 +240,9 @@
 
   
 
-<script src="/webmention.min.js" defer></script>
-<div id="webmentions"></div>
-
+<h2 class="comment-title">Comment</h2>
 <details class="comment-box">
-  <summary>Giscus</summary>
+  <summary>Login via Github</summary>
 <div id="giscus">
   <script id="giscus-script" src="https://giscus.app/client.js" data-repo="rongbinf/giscus-comment"
       data-repo-id="R_kgDOK3UYzw" data-category="Announcements"
@@ -267,7 +255,7 @@
 </details>
 
 <details class="comment-box">
-  <summary>Twikoo</summary>
+  <summary>No Login</summary>
   <div id="tcomment"></div>
 <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js" integrity="sha384-4KfOjEinLSkv1i1J8TzlkC/RTnuiLoR1OLerVgjEKoH5djYtbf7mzEFsz9p3nfuA" crossorigin="anonymous" defer></script>
 <script defer>
@@ -278,6 +266,27 @@ twikoo.init({
 })
 </script>
 </details>
+
+<details class="comment-box">
+  <summary>Webmention</summary>
+  <script src="/webmention.min.js" defer></script>
+  <div id="webmentions"></div>
+  <div>
+    <p>
+      
+      What is <a
+    href="/hugo-webmention-bridgy-mastodon">Webmention</a>?</p>
+    <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin: 2ch 0;">
+          <input type="url" name="source" class="url" placeholder="Your URL" required="">
+          <input type="hidden" name="target" value="https://fanrongbin.com/stream/loot/">
+          <input type="submit" value="Send" style="background:var(--bg-color);">
+    </form>
+  </div>
+</details>
+
+<details class="comment-box">
+  <summary><a id="commenthypo" onclick="showHypo();">Hypothes.is</a></summary>
+  </details>
 
 
   
