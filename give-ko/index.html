@@ -766,7 +766,7 @@ C께서 A에게/한테 N을 <u>주시다</u>
     }
 
     function setExternalLinksToOpenInNewTab() {
-        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
+        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url):not(.stream-time)');
         const linkDisplay = document.querySelector('.link-display');
 
         links.forEach(function (link) {

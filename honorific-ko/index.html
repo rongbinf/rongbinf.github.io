@@ -690,7 +690,7 @@ tl;dr 小结
     }
 
     function setExternalLinksToOpenInNewTab() {
-        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
+        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url):not(.stream-time)');
         const linkDisplay = document.querySelector('.link-display');
 
         links.forEach(function (link) {

@@ -612,7 +612,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
     }
 
     function setExternalLinksToOpenInNewTab() {
-        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
+        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url):not(.stream-time)');
         const linkDisplay = document.querySelector('.link-display');
 
         links.forEach(function (link) {
