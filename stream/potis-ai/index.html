@@ -29,11 +29,9 @@
 
 
 
-      <link rel="stylesheet" href="/css/main.min.e6563dc962f9309961bf969c64c138e47186f8b1fa18fee6604f33f088a5b6c9.css" integrity="sha256-5lY9yWL5MJlhv5acZME45HGG&#43;LH6GP7mYE8z8Iiltsk=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.717ffb1ec86b9a80c6b0715a18db7ab4a888a164d5482caa00d473529c1745bb.css" integrity="sha256-cX/7HshrmoDGsHFaGNt6tKiIoWTVSCyqANRzUpwXRbs=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
-
-      <script src="/js/main.f2979a93a325fecf9605263bd141398a311c8e23388ed7dcff74f92f7e632866.js" integrity="sha256-8peak6Ml/s&#43;WBSY70UE5ijEcjiM4jtfc/3T5L35jKGY=" crossorigin="anonymous"></script>
 
 
 
@@ -83,12 +81,8 @@
     <h1 class="p-name content-h1"></h1>
     <p class="content-time stream-time"><time class="dt-published" datetime="2024-01-11T10:41:37&#43;08:00">2024-01-11T10:41:37&#43;08:00</time></p>
 
-    
-
-    
-
-
     <a rel="author" class="p-name h-card" href="https://fanrongbin.com" style="display:none;">Rongbin Fan</a>
+
   </div>
 
   
@@ -117,25 +111,47 @@
       
       
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
 <p><a href="https://www.potis.ai/?ref=fanrongbin.com">Potis.ai</a> wants to help recruiters test candidates&rsquo; real skills. So more text-based case prompts and longer answers, less SHL and VI screening probably. 魔法打败魔法, use another gen-AI to generate AI-less contents and again feed it back to a third gen-AI. How much nonsense content are we gonna have in this foreseeable future?</p>
 
 
 
           
       
-          <a class="u-url" href="https://fanrongbin.com/stream/potis-ai/" style="display:none;"></a>
+          <a class="u-url" href="https://fanrongbin.com/stream/potis-ai/" hidden="from-humans" style="display:none;"></a>
       
-      
-      <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy/" style="display:none;"></a>
 
       </main>
-  
+      
+      
+      <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy/" hidden="from-humans" style="display:none;"></a>
+
   
   </article>
   
 
   
   
+
+
 
 <div class="footer-nav">
 
@@ -161,7 +177,6 @@
     
   
 </div>
-
 
 </div>
 
@@ -189,7 +204,7 @@
 <div id="webmentions"></div>
 
 <details id="giscus-box">
-  <summary>Comment (log in via Github)</summary>
+  <summary>Giscus</summary>
 <div id="giscus">
   <script id="giscus-script" src="https://giscus.app/client.js" data-repo="rongbinf/giscus-comment"
       data-repo-id="R_kgDOK3UYzw" data-category="Announcements"
@@ -351,7 +366,7 @@
 
             script.onload = () => {
                 button.textContent = 'Hypothes.is';
-                commentHypo.textContent = 'You can now select text to highlight or note.'
+                commentHypo.textContent = 'You can now select texts to highlight or note.'
             };
 
             script.onerror = () => {
@@ -500,7 +515,7 @@
     }
 
     function setExternalLinksToOpenInNewTab() {
-        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
+        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url):not(.stream-time)');
         const linkDisplay = document.querySelector('.link-display');
 
         links.forEach(function (link) {
