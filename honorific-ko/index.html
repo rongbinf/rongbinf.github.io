@@ -382,14 +382,59 @@ tl;dr 小结
 <details class="comment-box">
   <summary>No Login</summary>
   <div id="tcomment"></div>
-<script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js" integrity="sha384-4KfOjEinLSkv1i1J8TzlkC/RTnuiLoR1OLerVgjEKoH5djYtbf7mzEFsz9p3nfuA" crossorigin="anonymous" defer></script>
-<script defer>
-twikoo.init({
-  envId: 'https://twikoo.fanrongbin.com',
-  el: '#tcomment', 
-  lang: 'en'
-})
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js" integrity="sha384-4KfOjEinLSkv1i1J8TzlkC/RTnuiLoR1OLerVgjEKoH5djYtbf7mzEFsz9p3nfuA" crossorigin="anonymous" onload="initTwikoo()" defer></script>
+  <script>
+  function initTwikoo() {
+    twikoo.init({
+      envId: 'https://twikoo.fanrongbin.com',
+      el: '#tcomment',
+      lang: 'en',
+    });
+  }
+  </script>
+  <style>
+    .twikoo svg{
+      margin: 0;
+    }
+    .tk-avatar .tk-avatar-img {
+      margin: 0;
+    }
+    .el-input-group__append, .el-input-group__prepend {
+      background-color: unset !important;
+      border: unset !important;
+    }
+    .el-input__inner, .el-textarea__inner {
+      border: 0;
+      border-bottom: 1px solid var(--text-color);
+      border-radius: 0;
+    }
+    .el-input.is-active .el-input__inner, .el-input__inner:focus,
+    .twikoo .el-input__inner:focus, .twikoo .el-textarea__inner:focus {
+      border-color: var(--text-color) !important;
+    }
+    .el-button--primary {
+      background-color: var(--highlight) !important;
+    }
+    .el-button--primary.is-disabled {
+      background-color: var(--highlight) !important;
+      border: 0 !important;
+      opacity: 0.5 !important;
+    }
+    .twikoo .el-button:not(.el-button--primary):not(.el-button--text):hover {
+      border-color: white !important;
+      background-color: var(--highlight) !important;
+      color: white !important;
+    }
+    .tk-submit-action-icon.__markdown {
+      border: none;
+    }
+    .tk-submit-action-icon.__markdown::after {
+      content: none;
+    }
+    .tk-icon.__comments {
+      color: var(--highlight);
+    }
+  </style>
 </details>
 
 <details class="comment-box">
