@@ -17,17 +17,26 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -35,20 +44,8 @@
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;重新配置&lt;a href=&#34;https://fed.brid.gy&#34;&gt;Bridgy&lt;/a&gt;的时候踩坑：如果是纯文本内容，且不希望加载到联邦宇宙后出现来自Bridgy的link preview（当然这条stream不可避免会有哈哈哈），记得把那条url移到&lt;code&gt;e-content&lt;/code&gt;之外。&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -60,17 +57,26 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -78,20 +84,8 @@
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;今晚把Stream的构建方式从shortcode改为单独的&lt;code&gt;.md&lt;/code&gt;文件。更方便了，也更直观了。把日期、统计等交给Hugo做，就不需要在浏览器这端加载有的没的JS。现在也可以单独订阅Stream页面的RSS了。&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -103,46 +97,43 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
 
         
-
+        
+        
+        
+        
+        &lt;p&gt;TV Series: &lt;em&gt;Dark Matter Season 1 (2024)&lt;/em&gt; &lt;span class=&quot;stream-media-rating&quot;&gt;(4)&lt;/span&gt;&lt;/p&gt;
+        
+        
         
 
         
-            
-            
-
-            
-
-            
-            
-            
-            
-            
-            <p class="stream-media">TV Series: <em>Dark Matter Season 1 (2024)</em> <span class="stream-media-rating">(4)</span></p>
-            
-            
-            
-
-            
-      
       &lt;p&gt;Great casting (shout out to Jimmi Simpson)! Getting more into it only after E07. It does have more realistic side compared to other multiverse stories, although some might say this makes it less hard-core.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -154,46 +145,43 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
 
         
-
+        
+        
+        
+        
+        &lt;p&gt;TV Series: &lt;em&gt;Loot Season 1 &amp; 2 (2022, 2024)&lt;/em&gt; &lt;span class=&quot;stream-media-rating&quot;&gt;(3)&lt;/span&gt;&lt;/p&gt;
+        
+        
         
 
         
-            
-            
-
-            
-
-            
-            
-            
-            
-            
-            <p class="stream-media">TV Series: <em>Loot Season 1 &amp; 2 (2022, 2024)</em> <span class="stream-media-rating">(3)</span></p>
-            
-            
-            
-
-            
-      
       &lt;p&gt;Maya is the only reason why I watch this.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -205,42 +193,40 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+
+        
+        
+        
+        
+        &lt;p&gt;Movie: &lt;em&gt;A Quiet Place: Day One (2024)&lt;/em&gt; &lt;span class=&quot;stream-media-rating&quot;&gt;(2)&lt;/span&gt;&lt;/p&gt;
         
 
         
 
         
-
-        
-
-        
-            
-            
-
-            
-            
-            
-            <p class="stream-media">Movie: <em>A Quiet Place: Day One (2024)</em> <span class="stream-media-rating">(2)</span></p>
-            
-
-            
-
-            
-      
       &lt;p&gt;iPod Classic + EarPods Ad (Extended ver.)&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -252,42 +238,40 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+
+        
+        
+        
+        
+        &lt;p&gt;Movie: &lt;em&gt;Conann (2023)&lt;/em&gt; &lt;span class=&quot;stream-media-rating&quot;&gt;(4)&lt;/span&gt;&lt;/p&gt;
         
 
         
 
         
-
-        
-
-        
-            
-            
-
-            
-            
-            
-            <p class="stream-media">Movie: <em>Conann (2023)</em> <span class="stream-media-rating">(4)</span></p>
-            
-
-            
-
-            
-      
       &lt;p&gt;Had my SMILE surgery just a few weeks ago and am now dragged to the cinema to &lt;em&gt;enjoy&lt;/em&gt; a visual bullying. It&amp;rsquo;s beautiful, theatrical, not as cult as I expected, and philosophical - I&amp;rsquo;d killed the younger self every ten years.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -299,42 +283,40 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+
+        
+        
+        
+        
+        &lt;p&gt;Movie: &lt;em&gt;波紋 (2023)&lt;/em&gt; &lt;span class=&quot;stream-media-rating&quot;&gt;(4)&lt;/span&gt;&lt;/p&gt;
         
 
         
 
         
-
-        
-
-        
-            
-            
-
-            
-            
-            
-            <p class="stream-media">Movie: <em>波紋 (2023)</em> <span class="stream-media-rating">(4)</span></p>
-            
-
-            
-
-            
-      
       &lt;p&gt;My empathy probably arises from the various middle-aged stories in real life, whether from gossip or what I have witnessed - &lt;em&gt;unsuccessful&lt;/em&gt; marriages, menopause, religion (or anything similar to it), &amp;hellip;, which made me barely laugh at the water-worshipping scenes because it is so TRUE they seek mental support from any possible way. It&amp;rsquo;s not about the freaking water but the forming of a community and someone pretending to care (the master).&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -346,42 +328,40 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+
+        
+        
+        
+        
+        &lt;p&gt;Movie: &lt;em&gt;君たちはどう生きるか (2023)&lt;/em&gt; &lt;span class=&quot;stream-media-rating&quot;&gt;(5)&lt;/span&gt;&lt;/p&gt;
         
 
         
 
         
-
-        
-
-        
-            
-            
-
-            
-            
-            
-            <p class="stream-media">Movie: <em>君たちはどう生きるか (2023)</em> <span class="stream-media-rating">(5)</span></p>
-            
-
-            
-
-            
-      
       &lt;p&gt;你想活出怎样的人生？&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -393,17 +373,26 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -411,17 +400,6 @@
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;Google has &lt;a href=&#34;https://support.google.com/accounts/answer/7338427&#34;&gt;changed the sign-in page&lt;/a&gt; for some time.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Is it necessary to tell users we&amp;rsquo;ve changed to &lt;em&gt;this UI&lt;/em&gt; (that you must &lt;em&gt;manually close&lt;/em&gt; to close the banner)? Or the purpose is to re-emphasise the new design language&lt;/li&gt;
@@ -429,7 +407,6 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/20240405175900.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -441,17 +418,26 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -459,20 +445,8 @@
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;Suno AI is creating &lt;a href=&#34;https://app.suno.ai/song/c83d007e-92da-4ae4-bf9c-f7fc48278aec/&#34;&gt;fascinating music&lt;/a&gt;.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -484,42 +458,40 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+
+        
+        
+        
+        
+        &lt;p&gt;Movie: &lt;em&gt;Werckmeister harmóniák (2000)&lt;/em&gt; &lt;/p&gt;
         
 
         
 
         
-
-        
-
-        
-            
-            
-
-            
-            
-            
-            <p class="stream-media">Movie: <em>Werckmeister harmóniák (2000)</em> </p>
-            
-
-            
-
-            
-      
       &lt;p&gt;Disenchantment.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -531,42 +503,40 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+
+        
+        
+        
+        
+        &lt;p&gt;Movie: &lt;em&gt;L&#39;Autre Laurens (2023)&lt;/em&gt; &lt;span class=&quot;stream-media-rating&quot;&gt;(3.5)&lt;/span&gt;&lt;/p&gt;
         
 
         
 
         
-
-        
-
-        
-            
-            
-
-            
-            
-            
-            <p class="stream-media">Movie: <em>L&#39;Autre Laurens (2023)</em> <span class="stream-media-rating">(3.5)</span></p>
-            
-
-            
-
-            
-      
       &lt;p&gt;Better cut down 30 minutes more.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -578,17 +548,26 @@
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -596,22 +575,10 @@
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;윤여정 @나영석의 나불나불:&lt;/p&gt;
 &lt;p&gt;그렇게 산 좋고 물 좋고 정자 좋은 데가 어딨어?&lt;/br&gt;
 There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -623,48 +590,45 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
 
         
-
+        
+        
+        
+        
+        &lt;p&gt;TV Series: &lt;em&gt;Mr. and Mrs. Smith (2024)&lt;/em&gt; &lt;span class=&quot;stream-media-rating&quot;&gt;(3.5)&lt;/span&gt;&lt;/p&gt;
+        
+        
         
 
         
-            
-            
-
-            
-
-            
-            
-            
-            
-            
-            <p class="stream-media">TV Series: <em>Mr. and Mrs. Smith (2024)</em> <span class="stream-media-rating">(3.5)</span></p>
-            
-            
-            
-
-            
-      
       &lt;p&gt;Great setting and script. The couple is giving me &lt;em&gt;The Good Fight&lt;/em&gt; Marissa and Jay vibe, and dramatic in a different way. It&amp;rsquo;s like a U-turn starting from E06 and a cliche ending we see on &lt;em&gt;Killing Eve&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;By the way, I really love the intro logo animation &lt;a href=&#34;https://futuredeluxe.com/work/prime&#34;&gt;designed by FutureDeluxe&lt;/a&gt;, the sound of this opener designed by &lt;a href=&#34;https://www.zeligsound.com/amazon-prime-video-sonic-brand&#34;&gt;Zelig Sound&lt;/a&gt;, and the new branding of Prime Video &lt;a href=&#34;https://www.pentagram.com/work/prime-video/story&#34;&gt;designed by Pentagram&lt;/a&gt;, so satisfying and clean.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/prime-video-intro-logo-animation.gif&#34; alt=&#34;Amazon Prime Video Intro Logo Animation&#34;&gt;&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -676,17 +640,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -694,22 +667,10 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;Grammarly &lt;a href=&#34;https://www.linkedin.com/posts/grammarly_we-dont-need-moredocs-emails-or-contentwhen-activity-7158828045485678595-9qGa&#34;&gt;rebranded&lt;/a&gt; to &lt;a href=&#34;https://www.grammarly.com/media-assets&#34;&gt;this&lt;/a&gt;: 1) removed the signature arrow, 2) darker green and black, 3) geometric sans-serif font to make the corporate image sharper.&lt;/p&gt;
 &lt;p&gt;From school to workplace.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/grammarly-logo.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -721,17 +682,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -739,20 +709,8 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;引用原文时，为了符合语法等情况，如果原句第一个字母的大小写不适宜，可以再修改后&lt;a href=&#34;https://www.reddit.com/r/NoStupidQuestions/comments/cdzxz5/why_do_people_occasionally_put_brackets_around/&#34;&gt;加上方括号表示进行了修改&lt;/a&gt;。&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -764,17 +722,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -782,20 +749,8 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;Using ∞ to represent &amp;ldquo;8&amp;rdquo; or &amp;ldquo;00&amp;rdquo; is a lazy design.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -807,17 +762,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -825,20 +789,8 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;微信什么时候推出&lt;strong&gt;微信云盘&lt;/strong&gt;？微信云盘，是一个生存方式。&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -850,17 +802,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -868,20 +829,8 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;I strongly recommend &lt;a href=&#34;https://stevenpressfield.com/books/do-the-work&#34;&gt;&lt;em&gt;Do the Work&lt;/em&gt;&lt;/a&gt; by Steven Pressfield to anyone who has many thoughts but only keeps them in a secret list, and then forgets the list.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -893,17 +842,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -911,20 +869,8 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;&lt;a href=&#34;https://zettelkasten.de/posts/reading-is-searching/&#34;&gt;Reading is really searching.&lt;/a&gt;&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -936,17 +882,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -954,20 +909,8 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;&lt;a href=&#34;https://asus.click/zenbookduo_Dave&#34;&gt;Asus Zenbook Duo&lt;/a&gt; is &lt;a href=&#34;https://youtu.be/K6Cr73w8CJE?si=MNsVfzge2bKBokcz&#34;&gt;crazy&lt;/a&gt;.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -979,17 +922,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -997,20 +949,8 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;&lt;a href=&#34;https://www.potis.ai/?ref=fanrongbin.com&#34;&gt;Potis.ai&lt;/a&gt; wants to help recruiters test candidates&amp;rsquo; real skills. So more text-based case prompts and longer answers, less SHL and VI screening probably. 魔法打败魔法, use another gen-AI to generate AI-less contents and again feed it back to a third gen-AI. How much nonsense content are we gonna have in this foreseeable future?&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -1022,17 +962,38 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+        
+        
+        
+        
+
+        
+
+        
+        &lt;p&gt;Album: &lt;em&gt;Ambient 1: Music for Airports&lt;/em&gt; by Brian Eno &lt;span
+                class=&quot;stream-media-rating&quot;&gt;(5)&lt;/span&gt;&lt;/p&gt;
+        
         
 
         
@@ -1040,35 +1001,11 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-            <p class="stream-media">Album: <em>Ambient 1: Music for Airports</em> by Brian Eno <span
-                    class="stream-media-rating">(5)</span></p>
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;Ahead of its era, &amp;ldquo;Ambient 1: Music for Airports&amp;rdquo; does far more than staying in the background of a futuristic airport but for everyone to attach emotions and make the most of it. &amp;ldquo;1/1&amp;rdquo; is filled with zen fermatas, carrying notes like waterdrops, doing everything but also nothing to empty your mind. Repetitions might be dreary or tedious for some people, but there are differences in the background to be detected and understood if trying to immerse oneself in. &amp;ldquo;1/1&amp;rdquo; is also the most suitable and functional one among the four tracks.&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;2/1&amp;rdquo; unfolds with generous and expansive vocals. Sunlight, but rather intensified, tranquil and remote. It waits and remains, saves time for you to walk into it, to take a sunbath, on your own initiative. Then &amp;ldquo;1/2&amp;rdquo; comes in as the stopover to see the piano and vocals blending with each other in detail.&lt;/p&gt;
 &lt;p&gt;You may get lost in the ambitious synthesiser sounds of &amp;ldquo;2/2&amp;rdquo;. It scales up quite suddenly. Even though the former track lasts more than 10 minutes, not much connecting and digesting job has been done. However, concerns could be eased when it plays to the middle, especially for listeners willing to swing with the inner flow, grasping the opportunities to discover layers and depths.&lt;/p&gt;
 &lt;p&gt;The importance of this album is effortlessly being told by &amp;ldquo;1/1&amp;rdquo; standing alone, while &amp;ldquo;1/2&amp;rdquo; tells stories of vocal use, frequency and the blanks in between. Both of them are easy to adapt and drift away. &amp;ldquo;2/1&amp;rdquo; and &amp;ldquo;2/2&amp;rdquo; may be less graspable generally but still have their narrative.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -1080,17 +1017,38 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+        
+        
+        
+        
+
+        
+
+        
+        &lt;p&gt;Album: &lt;em&gt;Long Blue Light&lt;/em&gt; by Leif Vollebekk &lt;span
+                class=&quot;stream-media-rating&quot;&gt;(3.5)&lt;/span&gt;&lt;/p&gt;
+        
         
 
         
@@ -1098,33 +1056,9 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-            <p class="stream-media">Album: <em>Long Blue Light</em> by Leif Vollebekk <span
-                    class="stream-media-rating">(3.5)</span></p>
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;&amp;ldquo;Long Blue Light&amp;rdquo; could be in one of your relax playlists, just to sit back and unbend yourself. Great at conveying solitude and casualness with light lyricsim and the end falling apart. It could also be in your road playlist since it is easy to sing along.&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;29 #Strafford APTS&amp;rdquo;, a Bon Iver cover, is much like a statement or a memoir of the artist&amp;rsquo;s teen age. Instruments are beautifully knited. It is much subtle and melodic with refurbished overdubs if comparison between cover and the original is necessary. But to me it is more like a different flank of a hill, this one tracing back the history but looking forward to a mist-lifted future.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -1136,17 +1070,38 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+        
+        
+        
+        
+
+        
+
+        
+        &lt;p&gt;Album: &lt;em&gt;Serenade&lt;/em&gt; by Sunwoojunga &lt;span
+                class=&quot;stream-media-rating&quot;&gt;(4)&lt;/span&gt;&lt;/p&gt;
+        
         
 
         
@@ -1154,36 +1109,12 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-            <p class="stream-media">Album: <em>Serenade</em> by Sunwoojunga <span
-                    class="stream-media-rating">(4)</span></p>
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;Can you find another all-rounder like Sunwoojunga? A stunning full-length 정규 album shows off her ability from every perspective. &amp;ldquo;Interview&amp;rdquo; sets up a cosy but also mixed mood. &amp;ldquo;Run With Me&amp;rdquo; soaks everyone in the Korean sentiment with powerful, empathetic strings and vocals.&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;Serenade&amp;rdquo; tells stories wittily and &amp;ldquo;Multi Player&amp;rdquo; joins smoothly, starting a much loosen atmosphere which continues to the end. To some extent, the appealing of consistency inevitably leads to similarity until &amp;ldquo;Superhero&amp;rdquo; cracks everything open and gives space for lights to come in. The second half of the album is much more dynamic, such as the quirky and experimental &amp;ldquo;My Birthday Song&amp;rdquo; as a great example of using synthesisers.&lt;/p&gt;
 &lt;p&gt;Listeners could sharply grasp the emotions Sunwoojunga would like to convey through her unique and solid vocal skills. Get astonished by &amp;ldquo;Run With Me&amp;rdquo; then step by step, track by track, enjoy the singing freedom with her and hold a parade in &amp;ldquo;Life&amp;rdquo; and &amp;ldquo;Invisible Treasure&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;To Zero&amp;rdquo; resets everything and &amp;ldquo;Classic&amp;rdquo; keeps the pop music form but stylish in every way, signing her name proudly on the album with this brutal end.&lt;/p&gt;
 &lt;p&gt;Lyrics are so important in this album since Sunwoojunga often starts her creation by writing first. Though for non-Korean speakers it may be difficult to understand the delicate meanings in lyrics, it is also quite interesting to first speculate everything only based on rhythms, melodies and scattered English, and then to check the translation to see whether new ideas were generated. Just try to find some time and listen to it non-stop as if you were wandering around in the amusement park with the artist.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -1195,17 +1126,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -1213,20 +1153,8 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;Hey. I just want you to know that — you can make great decisions. Just forget about those scars left by the limit of what you cannot hold.&lt;/p&gt;
 
-      
       </description>
     </item>
     <item>
@@ -1238,17 +1166,26 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
 
       
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
         
 
         
@@ -1256,24 +1193,12 @@ There&amp;rsquo;s no place with perfect mountains, waters, and nice pavilions.&l
         
 
         
-
-        
-            
-            
-
-            
-
-            
-
-            
-      
       &lt;p&gt;신서유기8:&lt;/p&gt;
 &lt;p&gt;이거는 인생이야&amp;hellip;&lt;/br&gt;
 포기만 안 하면 돼 끝까지!&lt;/br&gt;
 남들보다 늦었다고 실망할 필요 없고&lt;/br&gt;
 다왔다고 자만할 필요도 없는&amp;hellip;&lt;/p&gt;
 
-      
       </description>
     </item>
   </channel>
