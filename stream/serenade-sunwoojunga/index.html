@@ -117,6 +117,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
       
       
       
@@ -161,6 +170,50 @@
   
   
 
+
+
+<style>
+  @font-face {
+      font-family: "BabelStone Shapes";
+      src: url(/font/BabelStoneShapes.woff2) format('woff2');
+      unicode-range: U+2605, U+2BE8, U+2BEA;
+  }
+
+  .stream-media-rating {
+      font-family: "BabelStone Shapes", var(--sans);
+       
+      position: relative;
+      top: -1px;
+      font-size: 90%;
+  }
+</style>
+<script defer>
+  function updateRatingsToStars() {
+      var ratingElements = document.getElementsByClassName('stream-media-rating');
+
+      for (var element of ratingElements) {
+          var ratingText = element.innerText; 
+          var rating = parseFloat(ratingText.match(/\d+(\.\d+)?/)[0]);
+
+          var stars = '';
+
+          for (var i = 0; i < Math.floor(rating); i++) {
+              stars += '★';
+          }
+
+          if (rating % 1 >= 0.5) {
+              stars += '⯪';
+          }
+
+          element.innerHTML = stars;
+      }
+  }
+
+  
+  updateRatingsToStars();
+</script>
+
+
 <div class="footer-nav">
 
 
@@ -185,7 +238,6 @@
     
   
 </div>
-
 
 </div>
 
@@ -375,7 +427,7 @@
 
             script.onload = () => {
                 button.textContent = 'Hypothes.is';
-                commentHypo.textContent = 'You can now select text to highlight or note.'
+                commentHypo.textContent = 'You can now select texts to highlight or note.'
             };
 
             script.onerror = () => {
