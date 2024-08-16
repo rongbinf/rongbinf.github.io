@@ -82,6 +82,8 @@
         padding: 2ch;
         cursor: pointer;
         z-index: 50;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.5s ease;
     }
 
     .block {
@@ -186,6 +188,40 @@
         cursor: pointer;
     }
 
+    /* Image container to position the loader */
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    /* Loader overlay */
+    .loader-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color);
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-color);
+        font-size: 1.5em;
+    }
+
+    /* Hide loader after the image loads */
+    .image-loaded .loader-overlay {
+        display: none;
+    }
+
+    /* Show the image when it has fully loaded */
+    .image-loaded .page {
+        opacity: 1;
+    }
+
+
 
     @media (min-width: 1920px) {
         .page {
@@ -246,8 +282,18 @@
                     <p>新建分组时允许自定义分组头像，方便识别</p>
                     <p>版本 2 类似置顶，通过展开折叠显示组内会话。</p>
                 </div>
-                <img class="page" src="https://img.fanrongbin.com/cluster-1.webp">
-                <img class="page" src="https://img.fanrongbin.com/cluster-2.webp">
+                <div class="image-container">
+                    <div class="loader-overlay">
+                        <div class="loader-text">Loading 0%</div>
+                    </div>
+                    <img class="page" src="https://img.fanrongbin.com/cluster-1.webp">
+                </div>
+                <div class="image-container">
+                    <div class="loader-overlay">
+                        <div class="loader-text">Loading 0%</div>
+                    </div>
+                    <img class="page" src="https://img.fanrongbin.com/cluster-2.webp">
+                </div>
             </div>
 
             <div class="container">
@@ -256,7 +302,12 @@
                     <div class="number"><h1>2</h1></div>
                     <p>分组的再上一层级分类，可自行选择，或 App 自动根据聊天类型分类。如服务号、企业微信群聊等。</p>
                 </div>
-                <img class="page" src="https://img.fanrongbin.com/Scenario.webp">
+                <div class="image-container">
+                    <div class="loader-overlay">
+                        <div class="loader-text">Loading 0%</div>
+                    </div>
+                    <img class="page" src="https://img.fanrongbin.com/Scenario.webp">
+                </div>
             </div>
 
             <div class="container">
@@ -267,7 +318,12 @@
                     <p>以及将“状态”挪至发现页，采用类似 Instagram Stories 做法，头像右下角为状态图标，仍设置“所有”以访问按照状态类型（而非以用户）进行分类的页面。</p>
                     <p>允许显示扩充内容、快捷访问。</p>
                 </div>
-                <img class="page" src="https://img.fanrongbin.com/Discover.webp">
+                <div class="image-container">
+                    <div class="loader-overlay">
+                        <div class="loader-text">Loading 0%</div>
+                    </div>
+                    <img class="page" src="https://img.fanrongbin.com/Discover.webp">
+                </div>
             </div>
 
             <div class="container">
@@ -278,7 +334,12 @@
                     <p>把添加用户的二维码从单纯 icon 做成按钮。</p>
                     <p>云同步是一个我知道微信不会做，但我还依旧画出来的理想主义……</p>
                 </div>
-                <img class="page" src="https://img.fanrongbin.com/Me.webp">
+                <div class="image-container">
+                    <div class="loader-overlay">
+                        <div class="loader-text">Loading 0%</div>
+                    </div>
+                    <img class="page" src="https://img.fanrongbin.com/Me.webp">
+                </div>
             </div>
 
             <a href="#backtotop"><div class="container link">
@@ -320,6 +381,39 @@ modal.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all image containers
+    var imageContainers = document.querySelectorAll('.image-container');
+
+    imageContainers.forEach(function(container) {
+        var img = container.querySelector('.page');
+        var loaderOverlay = container.querySelector('.loader-overlay');
+        var loaderText = container.querySelector('.loader-text');
+
+        // Create a new Image object to track loading
+        var imgLoader = new Image();
+        imgLoader.src = img.src;
+
+        imgLoader.addEventListener('progress', function(event) {
+            if (event.lengthComputable) {
+                var percent = Math.round((event.loaded / event.total) * 100);
+                loaderText.innerText = 'Loading ' + percent + '%';
+            }
+        });
+
+        imgLoader.onload = function() {
+            container.classList.add('image-loaded');
+            img.src = imgLoader.src; // Ensure the original image is displayed
+        };
+
+        imgLoader.onerror = function() {
+            loaderText.innerText = 'Failed to load image';
+        };
+    });
+});
 
 </script>
 
