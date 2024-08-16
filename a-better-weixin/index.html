@@ -144,10 +144,22 @@
         padding-left: 1ch;
         bottom: 1ch;
         z-index: 500;
+        flex-direction: column;
+    }
+
+    .footer>a:hover {
+        background-color: var(--highlight);
+        color: var(--bg-color);
     }
 
     .footer>a>p {
         margin-bottom: 0;
+    }
+
+    .page-comment {
+        padding: 2ch;
+        max-width: 800px;
+        margin-bottom: 5rem;
     }
 
     .modal {
@@ -375,6 +387,96 @@
                 </div>
             </a>
 
+            <div class="page-comment">
+                <h2 class="comment-title">Comment</h2>
+                <details class="comment-box">
+                    <summary>Login via Github</summary>
+                    <div id="giscus">
+                        <script id="giscus-script" src="https://giscus.app/client.js"
+                            data-repo="rongbinf/giscus-comment" data-repo-id="R_kgDOK3UYzw"
+                            data-category="Announcements" data-category-id="DIC_kwDOK3UYz84Cbl2R"
+                            data-mapping="pathname" data-strict="0" data-reactions-enabled="0" data-emit-metadata="0"
+                            data-input-position="top" data-theme="https://fanrongbin.com/giscus.css" data-lang="en"
+                            data-loading="lazy" crossorigin="anonymous" defer>
+                            </script>
+                    </div>
+                </details>
+
+                <details class="comment-box">
+                    <summary>No Login</summary>
+                    <div id="tcomment"></div>
+                    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js"
+                        integrity="sha384-4KfOjEinLSkv1i1J8TzlkC/RTnuiLoR1OLerVgjEKoH5djYtbf7mzEFsz9p3nfuA"
+                        crossorigin="anonymous" onload="initTwikoo()" defer></script>
+                    <script>
+                        function initTwikoo() {
+                            twikoo.init({
+                                envId: 'https://twikoo.fanrongbin.com',
+                                el: '#tcomment',
+                                lang: 'en',
+                            });
+                        }
+                    </script>
+                    <style>
+                        .twikoo svg {
+                            margin: 0;
+                        }
+
+                        .tk-avatar .tk-avatar-img {
+                            margin: 0;
+                        }
+
+                        .el-input-group__append,
+                        .el-input-group__prepend {
+                            background-color: unset !important;
+                            border: unset !important;
+                        }
+
+                        .el-input__inner,
+                        .el-textarea__inner {
+                            border: 0;
+                            border-bottom: 1px solid var(--text-color);
+                            border-radius: 0;
+                        }
+
+                        .el-input.is-active .el-input__inner,
+                        .el-input__inner:focus,
+                        .twikoo .el-input__inner:focus,
+                        .twikoo .el-textarea__inner:focus {
+                            border-color: var(--text-color) !important;
+                        }
+
+                        .el-button--primary {
+                            background-color: var(--highlight) !important;
+                        }
+
+                        .el-button--primary.is-disabled {
+                            background-color: var(--highlight) !important;
+                            border: 0 !important;
+                            opacity: 0.5 !important;
+                        }
+
+                        .twikoo .el-button:not(.el-button--primary):not(.el-button--text):hover {
+                            border-color: white !important;
+                            background-color: var(--highlight) !important;
+                            color: white !important;
+                        }
+
+                        .tk-submit-action-icon.__markdown {
+                            border: none;
+                        }
+
+                        .tk-submit-action-icon.__markdown::after {
+                            content: none;
+                        }
+
+                        .tk-icon.__comments {
+                            color: var(--highlight);
+                        }
+                    </style>
+                </details>
+            </div>
+
         </section>
 
         <section class="footer" style="">
@@ -382,54 +484,57 @@
             <a href="/">
                 <p>All rights reserved. © Rongbin FAN</p>
             </a>
+            <a href="https://www.figma.com/community/file/892976858322777290/le-wagon-ux-wechat-ux-kit" target="_blank">
+                <p>Special thanks to Le Wagon.</p>
+            </a>
         </section>
 
     </main>
 </body>
 
 <script>
-var modal = document.getElementById("imageModal");
-var modalImg = document.getElementById("modalImage");
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
 
-var closeButton = document.querySelector(".close");
+    var closeButton = document.querySelector(".close");
 
-document.querySelectorAll('.page').forEach(function (img) {
-    img.addEventListener('click', function () {
-        modalImg.src = this.src;
+    document.querySelectorAll('.page').forEach(function (img) {
+        img.addEventListener('click', function () {
+            modalImg.src = this.src;
 
-        modal.classList.add('show');
+            modal.classList.add('show');
 
-        modalImg.onload = function () {
-            modalImg.classList.add('show');
-        };
+            modalImg.onload = function () {
+                modalImg.classList.add('show');
+            };
+        });
     });
-});
 
-closeButton.onclick = function () {
-    modal.classList.remove('show');
-    modalImg.classList.remove('show');
-}
-
-modal.onclick = function (event) {
-    if (event.target === modal) {
+    closeButton.onclick = function () {
         modal.classList.remove('show');
         modalImg.classList.remove('show');
     }
-}
 
-document.querySelectorAll('img.page').forEach(function (img) {
-    img.addEventListener('load', function () {
-        var loaderOverlay = this.nextElementSibling;
-        if (loaderOverlay && loaderOverlay.classList.contains('loader-overlay')) {
-            loaderOverlay.style.display = 'none'; // Hide the loader overlay
+    modal.onclick = function (event) {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+            modalImg.classList.remove('show');
         }
-        img.style.opacity = '1'; // Set the image to be fully visible
-    });
-
-    if (img.complete) {
-        img.dispatchEvent(new Event('load'));
     }
-});
+
+    document.querySelectorAll('img.page').forEach(function (img) {
+        img.addEventListener('load', function () {
+            var loaderOverlay = this.nextElementSibling;
+            if (loaderOverlay && loaderOverlay.classList.contains('loader-overlay')) {
+                loaderOverlay.style.display = 'none'; // Hide the loader overlay
+            }
+            img.style.opacity = '1'; // Set the image to be fully visible
+        });
+
+        if (img.complete) {
+            img.dispatchEvent(new Event('load'));
+        }
+    });
 
 </script>
 
