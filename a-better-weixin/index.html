@@ -82,7 +82,8 @@
         padding: 2ch;
         cursor: pointer;
         z-index: 50;
-        opacity: 0; /* Initially hidden */
+        opacity: 0;
+        /* Initially hidden */
         transition: opacity 0.5s ease;
     }
 
@@ -101,6 +102,7 @@
         width: 10em;
         border: none;
         padding: 2ch;
+        margin-bottom: 5ch;
         position: relative;
         left: 16.67%;
     }
@@ -109,12 +111,12 @@
         border: none !important;
     }
 
-    div.container.link > div.block {
+    div.container.link>div.block {
         background-color: var(--bg-color);
         color: var(--text-color);
     }
-   
-    div.container.link > div.block:hover {
+
+    div.container.link>div.block:hover {
         background-color: var(--link-color);
         color: #fff;
     }
@@ -150,22 +152,27 @@
     }
 
     .modal {
-        display: none; 
+        display: none;
         position: fixed;
         z-index: 1000;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.8);
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        overflow: hidden;
     }
 
     .modal-content {
-        margin: auto;
-        display: block;
         max-height: 100%;
-        max-width: 100%;
         height: auto;
         width: auto;
     }
@@ -188,14 +195,12 @@
         cursor: pointer;
     }
 
-    /* Image container to position the loader */
     .image-container {
         position: relative;
         display: inline-block;
         width: 100%;
     }
 
-    /* Loader overlay */
     .loader-overlay {
         position: absolute;
         top: 0;
@@ -231,7 +236,20 @@
 
     @media (max-width: 780px) {
         h2 {
-            margin-bottom: 1em;
+            margin-bottom: 2em;
+        }
+
+        .modal-content-wrapper {
+            height: 100vh;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            justify-content: flex-start;
+            padding: 2ch;
+        }
+
+        .modal-content {
+            height: 100vh;
+            width: auto;
         }
     }
 
@@ -260,9 +278,10 @@
 
         <div id="imageModal" class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content" id="modalImage">
+            <div class="modal-content-wrapper">
+                <img class="modal-content" id="modalImage">
+            </div>
         </div>
-  
 
         <section class="context">
 
@@ -277,20 +296,22 @@
             <div class="container">
                 <div class="block no-pointer-event">
                     <h2 id="cluster">对聊天会话分组</h2>
-                    <div class="number"><h1>1</h1></div>
+                    <div class="number">
+                        <h1>1</h1>
+                    </div>
                     <p>版本 1 类似折叠群聊，允许用户自行选择多个会话并组合到一个 item 里。</p>
                     <p>新建分组时允许自定义分组头像，方便识别</p>
                     <p>版本 2 类似置顶，通过展开折叠显示组内会话。</p>
                 </div>
                 <div class="image-container">
                     <div class="loader-overlay">
-                        <div class="loader-text">Loading 0%</div>
+                        <div class="loader-text">Loading</div>
                     </div>
                     <img class="page" src="https://img.fanrongbin.com/cluster-1.webp">
                 </div>
                 <div class="image-container">
                     <div class="loader-overlay">
-                        <div class="loader-text">Loading 0%</div>
+                        <div class="loader-text">Loading</div>
                     </div>
                     <img class="page" src="https://img.fanrongbin.com/cluster-2.webp">
                 </div>
@@ -299,12 +320,14 @@
             <div class="container">
                 <div class="block no-pointer-event">
                     <h2 id="scenario">情景分类</h2>
-                    <div class="number"><h1>2</h1></div>
+                    <div class="number">
+                        <h1>2</h1>
+                    </div>
                     <p>分组的再上一层级分类，可自行选择，或 App 自动根据聊天类型分类。如服务号、企业微信群聊等。</p>
                 </div>
                 <div class="image-container">
                     <div class="loader-overlay">
-                        <div class="loader-text">Loading 0%</div>
+                        <div class="loader-text">Loading</div>
                     </div>
                     <img class="page" src="https://img.fanrongbin.com/Scenario.webp">
                 </div>
@@ -313,14 +336,16 @@
             <div class="container">
                 <div class="block no-pointer-event">
                     <h2 id="discover">发现页</h2>
-                    <div class="number"><h1>3</h1></div>
+                    <div class="number">
+                        <h1>3</h1>
+                    </div>
                     <p>最大的改动为将订阅号挪至发现页，在发现页聚合所有<strong>强流式媒体属性</strong>的入口。</p>
                     <p>以及将“状态”挪至发现页，采用类似 Instagram Stories 做法，头像右下角为状态图标，仍设置“所有”以访问按照状态类型（而非以用户）进行分类的页面。</p>
                     <p>允许显示扩充内容、快捷访问。</p>
                 </div>
                 <div class="image-container">
                     <div class="loader-overlay">
-                        <div class="loader-text">Loading 0%</div>
+                        <div class="loader-text">Loading</div>
                     </div>
                     <img class="page" src="https://img.fanrongbin.com/Discover.webp">
                 </div>
@@ -329,24 +354,28 @@
             <div class="container">
                 <div class="block no-pointer-event">
                     <h2 id="me">“我”页面 & 云同步</h2>
-                    <div class="number"><h1>4</h1></div>
+                    <div class="number">
+                        <h1>4</h1>
+                    </div>
                     <p>将服务、卡包放在一块儿比较符合逻辑，虽然卡包可能不是微信支付团队做。</p>
                     <p>把添加用户的二维码从单纯 icon 做成按钮。</p>
                     <p>云同步是一个我知道微信不会做，但我还依旧画出来的理想主义……</p>
                 </div>
                 <div class="image-container">
                     <div class="loader-overlay">
-                        <div class="loader-text">Loading 0%</div>
+                        <div class="loader-text">Loading</div>
                     </div>
                     <img class="page" src="https://img.fanrongbin.com/Me.webp">
                 </div>
             </div>
 
-            <a href="#backtotop"><div class="container link">
-                <div class="block">
-                    <h2>回到页面顶部</h2>
-                </div> 
-            </div></a>
+            <a href="#backtotop">
+                <div class="container link">
+                    <div class="block">
+                        <h2>回到页面顶部</h2>
+                    </div>
+                </div>
+            </a>
 
         </section>
 
@@ -361,59 +390,79 @@
 </body>
 
 <script>
-var modal = document.getElementById("imageModal");
-var modalImg = document.getElementById("modalImage");
-var closeButton = document.querySelector(".close");
+    // Get the modal
+    var modal = document.getElementById("imageModal");
 
-document.querySelectorAll('.page').forEach(function(img) {
-    img.addEventListener('click', function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
+    // Get the modal image element
+    var modalImg = document.getElementById("modalImage");
+
+    // Get the close button
+    var closeButton = document.querySelector(".close");
+
+    // Iterate over each image with the class "page"
+    document.querySelectorAll('.page').forEach(function (img) {
+        img.addEventListener('click', function () {
+            // Display the modal
+            modal.style.display = "block";
+            modalImg.src = this.src;
+
+            // Adjust the image for small screens
+            if (window.innerWidth <= 780) {
+                // No additional styles needed as the CSS handles the layout
+            } else {
+                // Reset styles for larger screens
+                modalImg.style.height = "auto";
+                modalImg.style.width = "auto";
+                modal.style.overflow = "hidden";
+            }
+        });
     });
-});
 
-closeButton.onclick = function() {
-    modal.style.display = "none";
-}
-
-modal.onclick = function(event) {
-    if (event.target === modal) {
+    // Close the modal when the close button is clicked
+    closeButton.onclick = function () {
         modal.style.display = "none";
     }
-}
+
+    // Close the modal when the user clicks anywhere outside the image
+    modal.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all image containers
-    var imageContainers = document.querySelectorAll('.image-container');
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all image containers
+        var imageContainers = document.querySelectorAll('.image-container');
 
-    imageContainers.forEach(function(container) {
-        var img = container.querySelector('.page');
-        var loaderOverlay = container.querySelector('.loader-overlay');
-        var loaderText = container.querySelector('.loader-text');
+        imageContainers.forEach(function (container) {
+            var img = container.querySelector('.page');
+            var loaderOverlay = container.querySelector('.loader-overlay');
+            var loaderText = container.querySelector('.loader-text');
 
-        // Create a new Image object to track loading
-        var imgLoader = new Image();
-        imgLoader.src = img.src;
+            // Create a new Image object to track loading
+            var imgLoader = new Image();
+            imgLoader.src = img.src;
 
-        imgLoader.addEventListener('progress', function(event) {
-            if (event.lengthComputable) {
-                var percent = Math.round((event.loaded / event.total) * 100);
-                loaderText.innerText = 'Loading ' + percent + '%';
-            }
+            imgLoader.addEventListener('progress', function (event) {
+                if (event.lengthComputable) {
+                    var percent = Math.round((event.loaded / event.total) * 100);
+                    loaderText.innerText = 'Loading ' + percent + '%';
+                }
+            });
+
+            imgLoader.onload = function () {
+                container.classList.add('image-loaded');
+                img.src = imgLoader.src; // Ensure the original image is displayed
+            };
+
+            imgLoader.onerror = function () {
+                loaderText.innerText = 'Failed to load image';
+            };
         });
-
-        imgLoader.onload = function() {
-            container.classList.add('image-loaded');
-            img.src = imgLoader.src; // Ensure the original image is displayed
-        };
-
-        imgLoader.onerror = function() {
-            loaderText.innerText = 'Failed to load image';
-        };
     });
-});
 
 </script>
 
