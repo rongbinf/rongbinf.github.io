@@ -201,6 +201,8 @@
         position: relative;
         display: inline-block;
         width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .loader-overlay {
@@ -252,6 +254,7 @@
             height: 100vh;
             width: auto;
             max-width: unset;
+            object-fit: contain;
         }
     }
 
@@ -309,13 +312,13 @@
                     <div class="loader-overlay">
                         <div class="loader-text">Loading</div>
                     </div>
-                    <img class="page" src="https://img.fanrongbin.com/cluster-1-compressed.webp">
+                    <img class="page" src="https://img.fanrongbin.com/cluster-1-compressed.webp" loading="lazy>
                 </div>
                 <div class="image-container">
                     <div class="loader-overlay">
                         <div class="loader-text">Loading</div>
                     </div>
-                    <img class="page" src="https://img.fanrongbin.com/cluster-2-compressed.webp">
+                    <img class="page" src="https://img.fanrongbin.com/cluster-2-compressed.webp" loading="lazy>
                 </div>
             </div>
 
@@ -331,7 +334,7 @@
                     <div class="loader-overlay">
                         <div class="loader-text">Loading</div>
                     </div>
-                    <img class="page" src="https://img.fanrongbin.com/Scenario-compressed.webp">
+                    <img class="page" src="https://img.fanrongbin.com/Scenario-compressed.webp" loading="lazy>
                 </div>
             </div>
 
@@ -349,7 +352,7 @@
                     <div class="loader-overlay">
                         <div class="loader-text">Loading</div>
                     </div>
-                    <img class="page" src="https://img.fanrongbin.com/Discover-compressed.webp">
+                    <img class="page" src="https://img.fanrongbin.com/Discover-compressed.webp" loading="lazy>
                 </div>
             </div>
 
@@ -367,7 +370,7 @@
                     <div class="loader-overlay">
                         <div class="loader-text">Loading</div>
                     </div>
-                    <img class="page" src="https://img.fanrongbin.com/Me-compressed.webp">
+                    <img class="page" src="https://img.fanrongbin.com/Me-compressed.webp" loading="lazy>
                 </div>
             </div>
 
@@ -392,27 +395,50 @@
 </body>
 
 <script>
-    // Get the modal
+    // Get the modal and the modal image element
     var modal = document.getElementById("imageModal");
-
-    // Get the modal image element
     var modalImg = document.getElementById("modalImage");
 
     // Get the close button
     var closeButton = document.querySelector(".close");
 
-    // Iterate over each image with the class "page"
+    // Preload all images to avoid reloading on click and handle loading states
+    document.querySelectorAll('.image-container').forEach(function (container) {
+        var img = container.querySelector('.page');
+        var loaderOverlay = container.querySelector('.loader-overlay');
+        var loaderText = container.querySelector('.loader-text');
+
+        // Create a new Image object to track loading
+        var imgLoader = new Image();
+        imgLoader.src = img.src;
+
+        imgLoader.onload = function () {
+            container.classList.add('image-loaded');
+            img.src = imgLoader.src; // Ensure the original image is displayed
+            loaderOverlay.style.display = 'none'; // Hide the loader overlay when image is loaded
+        };
+
+        imgLoader.onerror = function () {
+            loaderText.innerText = 'Failed to load image';
+        };
+    });
+
+    // Add click event listener to each image with the class "page"
     document.querySelectorAll('.page').forEach(function (img) {
         img.addEventListener('click', function () {
+            // Set the modal image source to the clicked image source
+            modalImg.src = this.src;
+
             // Display the modal
             modal.style.display = "block";
-            modalImg.src = this.src;
 
             // Adjust the image for small screens
             if (window.innerWidth <= 780) {
-                // No additional styles needed as the CSS handles the layout
+                modalImg.style.height = "100vh";
+                modalImg.style.width = "auto";
+                modal.style.overflowX = "scroll";
+                modal.style.overflowY = "hidden";
             } else {
-                // Reset styles for larger screens
                 modalImg.style.height = "auto";
                 modalImg.style.width = "auto";
                 modal.style.overflow = "hidden";
@@ -431,42 +457,8 @@
             modal.style.display = "none";
         }
     }
-
 </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get all image containers
-        var imageContainers = document.querySelectorAll('.image-container');
-
-        imageContainers.forEach(function (container) {
-            var img = container.querySelector('.page');
-            var loaderOverlay = container.querySelector('.loader-overlay');
-            var loaderText = container.querySelector('.loader-text');
-
-            // Create a new Image object to track loading
-            var imgLoader = new Image();
-            imgLoader.src = img.src;
-
-            imgLoader.addEventListener('progress', function (event) {
-                if (event.lengthComputable) {
-                    var percent = Math.round((event.loaded / event.total) * 100);
-                    loaderText.innerText = 'Loading ' + percent + '%';
-                }
-            });
-
-            imgLoader.onload = function () {
-                container.classList.add('image-loaded');
-                img.src = imgLoader.src; // Ensure the original image is displayed
-            };
-
-            imgLoader.onerror = function () {
-                loaderText.innerText = 'Failed to load image';
-            };
-        });
-    });
-
-</script>
 
 <!-- disable viewport zooming on iOS -->
 <!-- <script defer>
