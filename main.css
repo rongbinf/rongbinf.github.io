@@ -68,6 +68,7 @@ a:active,
 a:visited {
     text-decoration: unset;
     color: unset;
+    width: fit-content;
 }
 
 p>a,
@@ -143,10 +144,18 @@ em {
 section.prototype {
     grid-column: 2/2;
     padding: 2ch;
+    display: flex;
+    flex-direction: column;
+    gap: 2ch;
 }
 
 section.prototype>a>img {
-    width: 90px;
+    border-radius: 26px;
+}
+
+section.prototype>a>img:hover {
+    outline: 5px solid #000;
+    border-radius: 26px;
 }
 
 /* styling */
@@ -326,10 +335,6 @@ textarea:focus, textarea:focus-visible, textarea:focus-within {
     section.prototype {
         grid-column: unset;
         padding: 2ch;
-    }
-    
-    section.prototype>a>img {
-        width: 60px;
     }
 }
 
