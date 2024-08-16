@@ -84,7 +84,6 @@
         z-index: 50;
         opacity: 0;
         /* Initially hidden */
-        transition: opacity 0.5s ease;
     }
 
     .block {
@@ -161,6 +160,12 @@
         height: 100%;
         overflow: hidden;
         background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal.show {
+        display: flex;
     }
 
     .modal-content-wrapper {
@@ -179,7 +184,11 @@
         max-width: 100%;
     }
 
-    .close {
+    .modal-content.show {
+        opacity: 1;
+    }
+
+    .modal .close {
         position: absolute;
         top: 20px;
         right: 35px;
@@ -190,8 +199,8 @@
         cursor: pointer;
     }
 
-    .close:hover,
-    .close:focus {
+    .modal .close:hover,
+    .modal .close:focus {
         color: #bbb;
         text-decoration: none;
         cursor: pointer;
@@ -379,63 +388,49 @@
 </body>
 
 <script>
-    // Get the modal and the modal image element
-    var modal = document.getElementById("imageModal");
-    var modalImg = document.getElementById("modalImage");
+var modal = document.getElementById("imageModal");
+var modalImg = document.getElementById("modalImage");
 
-    // Get the close button
-    var closeButton = document.querySelector(".close");
+var closeButton = document.querySelector(".close");
 
-    // Add click event listener to each image with the class "page"
-    document.querySelectorAll('.page').forEach(function (img) {
-        img.addEventListener('click', function () {
-            // Set the modal image source to the clicked image source
-            modalImg.src = this.src;
+document.querySelectorAll('.page').forEach(function (img) {
+    img.addEventListener('click', function () {
+        modalImg.src = this.src;
 
-            // Display the modal
-            modal.style.display = "block";
+        modal.classList.add('show');
 
-            // Adjust the image for small screens
-            if (window.innerWidth <= 780) {
-                modalImg.style.height = "100vh";
-                modalImg.style.width = "auto";
-                modal.style.overflowX = "scroll";
-                modal.style.overflowY = "hidden";
-            } else {
-                modalImg.style.height = "auto";
-                modalImg.style.width = "auto";
-                modal.style.overflow = "hidden";
-            }
-        });
+        modalImg.onload = function () {
+            modalImg.classList.add('show');
+        };
+    });
+});
+
+closeButton.onclick = function () {
+    modal.classList.remove('show');
+    modalImg.classList.remove('show');
+}
+
+modal.onclick = function (event) {
+    if (event.target === modal) {
+        modal.classList.remove('show');
+        modalImg.classList.remove('show');
+    }
+}
+
+document.querySelectorAll('img.page').forEach(function (img) {
+    img.addEventListener('load', function () {
+        var loaderOverlay = this.nextElementSibling;
+        if (loaderOverlay && loaderOverlay.classList.contains('loader-overlay')) {
+            loaderOverlay.style.display = 'none'; // Hide the loader overlay
+        }
+        img.style.opacity = '1'; // Set the image to be fully visible
     });
 
-    // Close the modal when the close button is clicked
-    closeButton.onclick = function () {
-        modal.style.display = "none";
+    if (img.complete) {
+        img.dispatchEvent(new Event('load'));
     }
+});
 
-    // Close the modal when the user clicks anywhere outside the image
-    modal.onclick = function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    // Remove the loader overlay when the image has finished loading
-    document.querySelectorAll('img.page').forEach(function (img) {
-        img.addEventListener('load', function () {
-            var loaderOverlay = this.nextElementSibling;
-            if (loaderOverlay && loaderOverlay.classList.contains('loader-overlay')) {
-                loaderOverlay.style.display = 'none'; // Hide the loader overlay
-            }
-            img.style.opacity = '1'; // Set the image to be fully visible
-        });
-
-        // In case the image is already loaded from cache
-        if (img.complete) {
-            img.dispatchEvent(new Event('load'));
-        }
-    });
 </script>
 
 
