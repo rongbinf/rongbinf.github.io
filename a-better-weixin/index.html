@@ -211,27 +211,16 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 5ch;
         background-color: var(--bg-color);
         opacity: 0.5;
+        color: var(--text-color);
+        font-size: 1.5em;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--text-color);
-        font-size: 1.5em;
+        z-index: 80;
     }
-
-    /* Hide loader after the image loads */
-    .image-loaded .loader-overlay {
-        display: none;
-    }
-
-    /* Show the image when it has fully loaded */
-    .image-loaded .page {
-        opacity: 1;
-    }
-
-
 
     @media (min-width: 1920px) {
         .page {
@@ -275,7 +264,7 @@
         </section>
 
         <section class="heading heading-general" style="display:flex;flex-direction:column;gap:2em;">
-            <img src="https://img.fanrongbin.com/a-better-wechat.webp">
+            <img src="https://img.fanrongbin.com/a-better-wechat.webp" loading="eager">
             <div class="heading-title">
                 <h1 style="font-size:2em;">A Better Weixin.</h1>
                 <p style="margin:unset;">其实更想知道微信团队设计（与不设计）某功能或逻辑的缘由——</p>
@@ -310,16 +299,12 @@
                     <p>版本 2 类似置顶，通过展开折叠显示组内会话。</p>
                 </div>
                 <div class="image-container">
-                    <div class="loader-overlay">
-                        <div class="loader-text">Loading</div>
-                    </div>
-                    <img class="page" src="https://img.fanrongbin.com/cluster-1-compressed.webp" loading="lazy>
+                    <img class="page" src="https://img.fanrongbin.com/cluster-1-compressed.webp" loading="eager">
+                    <div class="loader-overlay">Loading</div>
                 </div>
                 <div class="image-container">
-                    <div class="loader-overlay">
-                        <div class="loader-text">Loading</div>
-                    </div>
-                    <img class="page" src="https://img.fanrongbin.com/cluster-2-compressed.webp" loading="lazy>
+                    <img class="page" src="https://img.fanrongbin.com/cluster-2-compressed.webp" loading="lazy">
+                    <div class="loader-overlay">Loading</div>
                 </div>
             </div>
 
@@ -332,10 +317,8 @@
                     <p>分组的再上一层级分类，可自行选择，或 App 自动根据聊天类型分类。如服务号、企业微信群聊等。</p>
                 </div>
                 <div class="image-container">
-                    <div class="loader-overlay">
-                        <div class="loader-text">Loading</div>
-                    </div>
-                    <img class="page" src="https://img.fanrongbin.com/Scenario-compressed.webp" loading="lazy>
+                    <img class="page" src="https://img.fanrongbin.com/Scenario-compressed.webp" loading="lazy">
+                    <div class="loader-overlay">Loading</div>
                 </div>
             </div>
 
@@ -350,10 +333,8 @@
                     <p>允许显示扩充内容、快捷访问。</p>
                 </div>
                 <div class="image-container">
-                    <div class="loader-overlay">
-                        <div class="loader-text">Loading</div>
-                    </div>
-                    <img class="page" src="https://img.fanrongbin.com/Discover-compressed.webp" loading="lazy>
+                    <img class="page" src="https://img.fanrongbin.com/Discover-compressed.webp" loading="lazy">
+                    <div class="loader-overlay">Loading</div>
                 </div>
             </div>
 
@@ -368,10 +349,8 @@
                     <p>云同步是一个我知道微信不会做，但我还依旧画出来的理想主义……</p>
                 </div>
                 <div class="image-container">
-                    <div class="loader-overlay">
-                        <div class="loader-text">Loading</div>
-                    </div>
-                    <img class="page" src="https://img.fanrongbin.com/Me-compressed.webp" loading="lazy>
+                    <img class="page" src="https://img.fanrongbin.com/Me-compressed.webp" loading="lazy">
+                    <div class="loader-overlay">Loading</div>
                 </div>
             </div>
 
@@ -402,27 +381,6 @@
 
     // Get the close button
     var closeButton = document.querySelector(".close");
-
-    // Preload all images to avoid reloading on click and handle loading states
-    document.querySelectorAll('.image-container').forEach(function (container) {
-        var img = container.querySelector('.page');
-        var loaderOverlay = container.querySelector('.loader-overlay');
-        var loaderText = container.querySelector('.loader-text');
-
-        // Create a new Image object to track loading
-        var imgLoader = new Image();
-        imgLoader.src = img.src;
-
-        imgLoader.onload = function () {
-            container.classList.add('image-loaded');
-            img.src = imgLoader.src; // Ensure the original image is displayed
-            loaderOverlay.style.display = 'none'; // Hide the loader overlay when image is loaded
-        };
-
-        imgLoader.onerror = function () {
-            loaderText.innerText = 'Failed to load image';
-        };
-    });
 
     // Add click event listener to each image with the class "page"
     document.querySelectorAll('.page').forEach(function (img) {
@@ -458,6 +416,22 @@
             modal.style.display = "none";
         }
     }
+
+    // Remove the loader overlay when the image has finished loading
+    document.querySelectorAll('img.page').forEach(function (img) {
+        img.addEventListener('load', function () {
+            var loaderOverlay = this.nextElementSibling;
+            if (loaderOverlay && loaderOverlay.classList.contains('loader-overlay')) {
+                loaderOverlay.style.display = 'none'; // Hide the loader overlay
+            }
+            img.style.opacity = '1'; // Set the image to be fully visible
+        });
+
+        // In case the image is already loaded from cache
+        if (img.complete) {
+            img.dispatchEvent(new Event('load'));
+        }
+    });
 </script>
 
 
