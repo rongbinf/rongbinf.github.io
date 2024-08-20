@@ -51,7 +51,7 @@
 
 <style>
     * {
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans", "思源黑体", "Source Han Sans", Inter, system-ui, "Helvetica Neue Book", Helvetica, Arial, Verdana, Avenir, "Segoe UI Variable", "Segoe UI", "Biaodian Pro Sans", "Han Heiti", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji";
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Source Sans", "思源黑体", "Source Han Sans", system-ui, "Helvetica Neue Book", Helvetica, Arial, Verdana, Avenir, "Segoe UI Variable", "Segoe UI", "Biaodian Pro Sans", "Han Heiti", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji";
         --link-color: #2cae62;
     }
 
@@ -282,6 +282,7 @@
 
         <section class="heading heading-name">
             <p id="backtotop">Prototype #2</p>
+            <p>August 2024</p>
         </section>
 
         <section class="heading heading-general" style="display:flex;flex-direction:column;gap:2em;">
@@ -292,12 +293,12 @@
             </div>
         </section>
 
-        <div id="imageModal" class="modal">
+        <!-- <div id="imageModal" class="modal">
             <span class="close">&times;</span>
             <div class="modal-content-wrapper">
                 <img class="modal-content" id="modalImage">
             </div>
-        </div>
+        </div> -->
 
         <section class="context">
 
@@ -370,8 +371,8 @@
                         <h1>4</h1>
                     </div>
                     <p>将服务、卡包放在一块儿比较符合逻辑，虽然卡包可能不是微信支付团队做。</p>
-                    <p>把添加用户的二维码从单纯 icon 做成按钮。</p>
-                    <p>云同步是一个我知道微信不会做，但我还依旧画出来的理想主义……</p>
+                    <p>把用户的二维码从单纯 icon 做成按钮。</p>
+                    <p>云同步是一个我知道微信不会做，但还依旧画出来的理想主义……</p>
                 </div>
                 <div class="image-container">
                     <img class="page" src="https://img.fanrongbin.com/Me-compressed.webp" loading="lazy">
@@ -493,50 +494,69 @@
 </body>
 
 <script>
-    var modal = document.getElementById("imageModal");
-    var modalImg = document.getElementById("modalImage");
-
-    var closeButton = document.querySelector(".close");
-
     document.querySelectorAll('.page').forEach(function (img) {
         img.addEventListener('click', function () {
-            modalImg.src = this.src;
+            const modal = document.createElement('div');
+            modal.classList.add('modal', 'show');
+            
+            const closeButton = document.createElement('span');
+            closeButton.classList.add('close');
+            closeButton.textContent = '×';
+            modal.appendChild(closeButton);
+            
+            const modalContentWrapper = document.createElement('div');
+            modalContentWrapper.classList.add('modal-content-wrapper');
+            modal.appendChild(modalContentWrapper);
 
-            modal.classList.add('show');
+            const loaderOverlay = document.createElement('div');
+            loaderOverlay.classList.add('loader-overlay');
+            loaderOverlay.textContent = 'Loading';
+            modalContentWrapper.appendChild(loaderOverlay);
+
+            const modalImg = document.createElement('img');
+            modalImg.src = this.src;
+            modalImg.classList.add('modal-content');
+            modalContentWrapper.appendChild(modalImg);
+
+            document.body.appendChild(modal);
 
             modalImg.onload = function () {
+                loaderOverlay.style.display = 'none';
                 modalImg.classList.add('show');
             };
+
+            if (modalImg.complete) {
+                modalImg.dispatchEvent(new Event('load'));
+            }
+
+            closeButton.addEventListener('click', function () {
+                modal.remove();
+            });
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    modal.remove();
+                }
+            });
         });
     });
-
-    closeButton.onclick = function () {
-        modal.classList.remove('show');
-        modalImg.classList.remove('show');
-    }
-
-    modal.onclick = function (event) {
-        if (event.target === modal) {
-            modal.classList.remove('show');
-            modalImg.classList.remove('show');
-        }
-    }
 
     document.querySelectorAll('img.page').forEach(function (img) {
         img.addEventListener('load', function () {
             var loaderOverlay = this.nextElementSibling;
             if (loaderOverlay && loaderOverlay.classList.contains('loader-overlay')) {
-                loaderOverlay.style.display = 'none'; // Hide the loader overlay
+                loaderOverlay.style.display = 'none'; // 隐藏加载器overlay
             }
-            img.style.opacity = '1'; // Set the image to be fully visible
+            img.style.opacity = '1'; // 使图片完全显示
         });
 
         if (img.complete) {
             img.dispatchEvent(new Event('load'));
         }
     });
-
 </script>
+
+
 
 
 <!-- disable viewport zooming on iOS -->
