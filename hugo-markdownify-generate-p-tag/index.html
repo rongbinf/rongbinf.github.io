@@ -11,21 +11,55 @@
 <meta name="description"
     content="在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&lt;p&gt;tag。
 例如：
-{{ $text .= &#34;What a *nice* day!&#34; }} {{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day! 但我预期生成的应是：
-{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt; 这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
+{{ $text .= &#34;What a *nice* day!&#34; }}
+{{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day!
+但我预期生成的应是：
+{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt;
+这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
 在我的情况中，先识别是否存在&lt;p&gt;tag的方式：
-{{ $markdown := .intro | markdownify }} {{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }} 或进一步匹配以h、p开头的tag都可以：
-{{ $markdown := .text | markdownify }} {{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }}  ">
+{{ $markdown := .intro | markdownify }}
+
+{{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }}
+    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
+{{ else }}
+    {{ $markdown }}
+{{ end }}
+或进一步匹配以h、p开头的tag都可以：
+{{ $markdown := .text | markdownify }}
+
+{{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }}
+    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
+{{ else }}
+    {{ $markdown }}
+{{ end }}
+ ">
 <meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
 <meta property="og:title" content="Hugo Markdownify 无法生成 &lt;p&gt; tag - Rongbin&#39;s Blog" />
 <meta property="og:description" content="在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&lt;p&gt;tag。
 例如：
-{{ $text .= &#34;What a *nice* day!&#34; }} {{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day! 但我预期生成的应是：
-{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt; 这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
+{{ $text .= &#34;What a *nice* day!&#34; }}
+{{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day!
+但我预期生成的应是：
+{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt;
+这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
 在我的情况中，先识别是否存在&lt;p&gt;tag的方式：
-{{ $markdown := .intro | markdownify }} {{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }} 或进一步匹配以h、p开头的tag都可以：
-{{ $markdown := .text | markdownify }} {{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }}  " />
+{{ $markdown := .intro | markdownify }}
+
+{{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }}
+    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
+{{ else }}
+    {{ $markdown }}
+{{ end }}
+或进一步匹配以h、p开头的tag都可以：
+{{ $markdown := .text | markdownify }}
+
+{{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }}
+    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
+{{ else }}
+    {{ $markdown }}
+{{ end }}
+ " />
 <meta property="og:url" content="https://fanrongbin.com/hugo-markdownify-generate-p-tag/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
@@ -34,11 +68,28 @@
 <meta name="twitter:title" content="Hugo Markdownify 无法生成 &lt;p&gt; tag - Rongbin&#39;s Blog" />
 <meta name="twitter:description" content="在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&lt;p&gt;tag。
 例如：
-{{ $text .= &#34;What a *nice* day!&#34; }} {{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day! 但我预期生成的应是：
-{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt; 这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
+{{ $text .= &#34;What a *nice* day!&#34; }}
+{{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day!
+但我预期生成的应是：
+{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt;
+这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
 在我的情况中，先识别是否存在&lt;p&gt;tag的方式：
-{{ $markdown := .intro | markdownify }} {{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }} 或进一步匹配以h、p开头的tag都可以：
-{{ $markdown := .text | markdownify }} {{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }} &lt;p&gt;{{ $markdown }}&lt;/p&gt; {{ else }} {{ $markdown }} {{ end }}  " />
+{{ $markdown := .intro | markdownify }}
+
+{{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }}
+    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
+{{ else }}
+    {{ $markdown }}
+{{ end }}
+或进一步匹配以h、p开头的tag都可以：
+{{ $markdown := .text | markdownify }}
+
+{{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }}
+    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
+{{ else }}
+    {{ $markdown }}
+{{ end }}
+ " />
 
 <link rel="canonical" href="https://fanrongbin.com/hugo-markdownify-generate-p-tag/" />
 

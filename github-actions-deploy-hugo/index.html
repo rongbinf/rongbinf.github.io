@@ -10,32 +10,204 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
     content="回应痛点：
-写作所用的设备不带环境，没有Git，必须换回原来用的设备hugo生成网页并部署 只想好好写东西，不想再管我的终端/命令行 本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经push到了username/username.github.io这个仓库。
-1. 把源仓库传到一个新库 # 整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库clone下来，也可以通过上传单个.md文件到content/posts文件夹的手动push方式来自动部署，而这都不需要重新搭建Hugo环境。
+
+写作所用的设备不带环境，没有Git，必须换回原来用的设备hugo生成网页并部署
+只想好好写东西，不想再管我的终端/命令行
+
+本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经push到了username/username.github.io这个仓库。
+
+1. 把源仓库传到一个新库
+#
+
+整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库clone下来，也可以通过上传单个.md文件到content/posts文件夹的手动push方式来自动部署，而这都不需要重新搭建Hugo环境。
 在这里我们使用Github Desktop：
-点击菜单栏File，选择Create a new repository。 为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（config.toml所在的整个文件夹和子文件夹）复制进来。 复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。 2. 将新库和Github Pages仓库串起来 # 在username/username.github.io下是public文件夹内生成的静态网页（你一定记得的，在本地我们需要cd public），而我们希望通过添加或修改源仓库的.md来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。
+
+点击菜单栏File，选择Create a new repository。
+为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（config.toml所在的整个文件夹和子文件夹）复制进来。
+复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。
+
+
+2. 将新库和Github Pages仓库串起来
+#
+
+在username/username.github.io下是public文件夹内生成的静态网页（你一定记得的，在本地我们需要cd public），而我们希望通过添加或修改源仓库的.md来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。
 网页版，点击头像，进入Github个人的Settings：
+
+
 边栏最下方Developer Settings，
-选择Personal access tokens下的Tokens (classic) 点击右方Generate a new token (classic) 输入密码后进入设置，在Note框中填写方便识别的名字，如Deploy，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow
+
+选择Personal access tokens下的Tokens (classic)
+
+点击右方Generate a new token (classic)
+
+
+
+
+
+输入密码后进入设置，在Note框中填写方便识别的名字，如Deploy，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow
+
+
 点击生成后token即出现，注意它只会出现这唯一的一次，将其复制保存下来
+
+
 得到token后，进入源仓库的Settings：
-选择Secrets and variables下的Actions，在右侧选择New repository secret 在Name中填入PERSONAL_TOKEN 在Secret中填入刚才生成的token，点击Add secret保存 3. 设置好Github Actions # 接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：
-重命名.yml为方便识别的名字，如deploy.yml 修改编辑框内容如下： name: deploy # 这个 action 的名字 on: push: # 代表每次 push 都会 turn on action workflow_dispatch: # 代表我们也可以手动 turn on jobs: build: runs-on: ubuntu-latest steps: - name: checkout uses: actions/checkout@v2 with: submodules: true fetch-depth: 0 - name: setup uses: peaceiris/actions-hugo@v2. ">
+
+选择Secrets and variables下的Actions，在右侧选择New repository secret
+在Name中填入PERSONAL_TOKEN
+在Secret中填入刚才生成的token，点击Add secret保存
+
+
+3. 设置好Github Actions
+#
+
+接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：
+
+重命名.yml为方便识别的名字，如deploy.yml
+修改编辑框内容如下：
+
+name: deploy 
+# 这个 action 的名字
+
+on:
+    push: 
+    # 代表每次 push 都会 turn on action
+    workflow_dispatch: 
+    # 代表我们也可以手动 turn on
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v2
+              with:
+                  submodules: true
+                  fetch-depth: 0
+
+            - name: setup
+              uses: peaceiris/actions-hugo@v2.6.0
+              with:
+                  hugo-version: &#34;latest&#34;
+                  extended: true 
+                  # 按需选择是否使用 hugo-extended
+
+            - name: build
+              run: hugo
+
+            - name: deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }} 
+                  # 生成的 token 就用在这里，因为下面用到 external repository
+                  EXTERNAL_REPOSITORY: username/username.github.io 
+                  # 修改为你的 Github Pages 仓库
+                  PUBLISH_BRANCH: main 
+                  # 以及对应的分支 main/master
+                  PUBLISH_DIR: ./public 
+                  # 指定将自动部署得到的 public 文件夹 push 上去
+                  commit_message: ${{ github.event.head_commit.message }}
+若点击保存，则将自动完成第一次commit，注意提前备份原Github Pages仓库里的内容。（没备份也可以通过历史commit找到啦，哈哈） ">
 <meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
 <meta property="og:title" content="使用 Github Actions 自动部署 Hugo - Rongbin&#39;s Blog" />
 <meta property="og:description" content="回应痛点：
-写作所用的设备不带环境，没有Git，必须换回原来用的设备hugo生成网页并部署 只想好好写东西，不想再管我的终端/命令行 本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经push到了username/username.github.io这个仓库。
-1. 把源仓库传到一个新库 # 整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库clone下来，也可以通过上传单个.md文件到content/posts文件夹的手动push方式来自动部署，而这都不需要重新搭建Hugo环境。
+
+写作所用的设备不带环境，没有Git，必须换回原来用的设备hugo生成网页并部署
+只想好好写东西，不想再管我的终端/命令行
+
+本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经push到了username/username.github.io这个仓库。
+
+1. 把源仓库传到一个新库
+#
+
+整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库clone下来，也可以通过上传单个.md文件到content/posts文件夹的手动push方式来自动部署，而这都不需要重新搭建Hugo环境。
 在这里我们使用Github Desktop：
-点击菜单栏File，选择Create a new repository。 为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（config.toml所在的整个文件夹和子文件夹）复制进来。 复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。 2. 将新库和Github Pages仓库串起来 # 在username/username.github.io下是public文件夹内生成的静态网页（你一定记得的，在本地我们需要cd public），而我们希望通过添加或修改源仓库的.md来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。
+
+点击菜单栏File，选择Create a new repository。
+为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（config.toml所在的整个文件夹和子文件夹）复制进来。
+复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。
+
+
+2. 将新库和Github Pages仓库串起来
+#
+
+在username/username.github.io下是public文件夹内生成的静态网页（你一定记得的，在本地我们需要cd public），而我们希望通过添加或修改源仓库的.md来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。
 网页版，点击头像，进入Github个人的Settings：
+
+
 边栏最下方Developer Settings，
-选择Personal access tokens下的Tokens (classic) 点击右方Generate a new token (classic) 输入密码后进入设置，在Note框中填写方便识别的名字，如Deploy，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow
+
+选择Personal access tokens下的Tokens (classic)
+
+点击右方Generate a new token (classic)
+
+
+
+
+
+输入密码后进入设置，在Note框中填写方便识别的名字，如Deploy，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow
+
+
 点击生成后token即出现，注意它只会出现这唯一的一次，将其复制保存下来
+
+
 得到token后，进入源仓库的Settings：
-选择Secrets and variables下的Actions，在右侧选择New repository secret 在Name中填入PERSONAL_TOKEN 在Secret中填入刚才生成的token，点击Add secret保存 3. 设置好Github Actions # 接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：
-重命名.yml为方便识别的名字，如deploy.yml 修改编辑框内容如下： name: deploy # 这个 action 的名字 on: push: # 代表每次 push 都会 turn on action workflow_dispatch: # 代表我们也可以手动 turn on jobs: build: runs-on: ubuntu-latest steps: - name: checkout uses: actions/checkout@v2 with: submodules: true fetch-depth: 0 - name: setup uses: peaceiris/actions-hugo@v2. " />
+
+选择Secrets and variables下的Actions，在右侧选择New repository secret
+在Name中填入PERSONAL_TOKEN
+在Secret中填入刚才生成的token，点击Add secret保存
+
+
+3. 设置好Github Actions
+#
+
+接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：
+
+重命名.yml为方便识别的名字，如deploy.yml
+修改编辑框内容如下：
+
+name: deploy 
+# 这个 action 的名字
+
+on:
+    push: 
+    # 代表每次 push 都会 turn on action
+    workflow_dispatch: 
+    # 代表我们也可以手动 turn on
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v2
+              with:
+                  submodules: true
+                  fetch-depth: 0
+
+            - name: setup
+              uses: peaceiris/actions-hugo@v2.6.0
+              with:
+                  hugo-version: &#34;latest&#34;
+                  extended: true 
+                  # 按需选择是否使用 hugo-extended
+
+            - name: build
+              run: hugo
+
+            - name: deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }} 
+                  # 生成的 token 就用在这里，因为下面用到 external repository
+                  EXTERNAL_REPOSITORY: username/username.github.io 
+                  # 修改为你的 Github Pages 仓库
+                  PUBLISH_BRANCH: main 
+                  # 以及对应的分支 main/master
+                  PUBLISH_DIR: ./public 
+                  # 指定将自动部署得到的 public 文件夹 push 上去
+                  commit_message: ${{ github.event.head_commit.message }}
+若点击保存，则将自动完成第一次commit，注意提前备份原Github Pages仓库里的内容。（没备份也可以通过历史commit找到啦，哈哈） " />
 <meta property="og:url" content="https://fanrongbin.com/github-actions-deploy-hugo/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
@@ -43,17 +215,103 @@
 <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 <meta name="twitter:title" content="使用 Github Actions 自动部署 Hugo - Rongbin&#39;s Blog" />
 <meta name="twitter:description" content="回应痛点：
-写作所用的设备不带环境，没有Git，必须换回原来用的设备hugo生成网页并部署 只想好好写东西，不想再管我的终端/命令行 本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经push到了username/username.github.io这个仓库。
-1. 把源仓库传到一个新库 # 整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库clone下来，也可以通过上传单个.md文件到content/posts文件夹的手动push方式来自动部署，而这都不需要重新搭建Hugo环境。
+
+写作所用的设备不带环境，没有Git，必须换回原来用的设备hugo生成网页并部署
+只想好好写东西，不想再管我的终端/命令行
+
+本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经push到了username/username.github.io这个仓库。
+
+1. 把源仓库传到一个新库
+#
+
+整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库clone下来，也可以通过上传单个.md文件到content/posts文件夹的手动push方式来自动部署，而这都不需要重新搭建Hugo环境。
 在这里我们使用Github Desktop：
-点击菜单栏File，选择Create a new repository。 为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（config.toml所在的整个文件夹和子文件夹）复制进来。 复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。 2. 将新库和Github Pages仓库串起来 # 在username/username.github.io下是public文件夹内生成的静态网页（你一定记得的，在本地我们需要cd public），而我们希望通过添加或修改源仓库的.md来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。
+
+点击菜单栏File，选择Create a new repository。
+为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（config.toml所在的整个文件夹和子文件夹）复制进来。
+复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。
+
+
+2. 将新库和Github Pages仓库串起来
+#
+
+在username/username.github.io下是public文件夹内生成的静态网页（你一定记得的，在本地我们需要cd public），而我们希望通过添加或修改源仓库的.md来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。
 网页版，点击头像，进入Github个人的Settings：
+
+
 边栏最下方Developer Settings，
-选择Personal access tokens下的Tokens (classic) 点击右方Generate a new token (classic) 输入密码后进入设置，在Note框中填写方便识别的名字，如Deploy，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow
+
+选择Personal access tokens下的Tokens (classic)
+
+点击右方Generate a new token (classic)
+
+
+
+
+
+输入密码后进入设置，在Note框中填写方便识别的名字，如Deploy，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow
+
+
 点击生成后token即出现，注意它只会出现这唯一的一次，将其复制保存下来
+
+
 得到token后，进入源仓库的Settings：
-选择Secrets and variables下的Actions，在右侧选择New repository secret 在Name中填入PERSONAL_TOKEN 在Secret中填入刚才生成的token，点击Add secret保存 3. 设置好Github Actions # 接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：
-重命名.yml为方便识别的名字，如deploy.yml 修改编辑框内容如下： name: deploy # 这个 action 的名字 on: push: # 代表每次 push 都会 turn on action workflow_dispatch: # 代表我们也可以手动 turn on jobs: build: runs-on: ubuntu-latest steps: - name: checkout uses: actions/checkout@v2 with: submodules: true fetch-depth: 0 - name: setup uses: peaceiris/actions-hugo@v2. " />
+
+选择Secrets and variables下的Actions，在右侧选择New repository secret
+在Name中填入PERSONAL_TOKEN
+在Secret中填入刚才生成的token，点击Add secret保存
+
+
+3. 设置好Github Actions
+#
+
+接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：
+
+重命名.yml为方便识别的名字，如deploy.yml
+修改编辑框内容如下：
+
+name: deploy 
+# 这个 action 的名字
+
+on:
+    push: 
+    # 代表每次 push 都会 turn on action
+    workflow_dispatch: 
+    # 代表我们也可以手动 turn on
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v2
+              with:
+                  submodules: true
+                  fetch-depth: 0
+
+            - name: setup
+              uses: peaceiris/actions-hugo@v2.6.0
+              with:
+                  hugo-version: &#34;latest&#34;
+                  extended: true 
+                  # 按需选择是否使用 hugo-extended
+
+            - name: build
+              run: hugo
+
+            - name: deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }} 
+                  # 生成的 token 就用在这里，因为下面用到 external repository
+                  EXTERNAL_REPOSITORY: username/username.github.io 
+                  # 修改为你的 Github Pages 仓库
+                  PUBLISH_BRANCH: main 
+                  # 以及对应的分支 main/master
+                  PUBLISH_DIR: ./public 
+                  # 指定将自动部署得到的 public 文件夹 push 上去
+                  commit_message: ${{ github.event.head_commit.message }}
+若点击保存，则将自动完成第一次commit，注意提前备份原Github Pages仓库里的内容。（没备份也可以通过历史commit找到啦，哈哈） " />
 
 <link rel="canonical" href="https://fanrongbin.com/github-actions-deploy-hugo/" />
 

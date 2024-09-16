@@ -9,45 +9,144 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="description"
-    content="确认安装了swig # 首先确认是否安装了swig，否则运行setup.py报错：
-error: command &#39;swig&#39; failed: No such file or directory 修改 OpenAL 的位置 # 似乎对于 Catalina 以及后续版本，都需要在setup.py中修改OpenAL的位置：
+    content="
+确认安装了swig
+#
+
+首先确认是否安装了swig，否则运行setup.py报错：
+error: command &#39;swig&#39; failed: No such file or directory
+
+修改 OpenAL 的位置
+#
+
+似乎对于 Catalina 以及后续版本，都需要在setup.py中修改OpenAL的位置：
 修改第 235 行：
-sb_include_dirs.append(&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;) 为：
-sb_include_dirs.append(&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;) 修改第 242 行：
-extra_objects=[&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL&#39;], 为：
-extra_objects=[&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL.tbd&#39;], 修改调用头文件的名字 # 对于报错：
-fatal error: &#39;al.h&#39; file not found #include &lt;al.h&gt; ^~~~~~ 1 error generated. error: command &#39;/usr/bin/gcc&#39; failed with exit code 1 需要对/pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c中的
-#include &lt;al.h&gt; #include &lt;alc.h&gt; 修改为：
-#include &lt;OpenAL/al.h&gt; #include &lt;OpenAL/alc.h&gt; 参考 # Trouble installing on osx &ldquo;fatal error: &lsquo;al. ">
+sb_include_dirs.append(&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;)
+为：
+sb_include_dirs.append(&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;)
+修改第 242 行：
+extra_objects=[&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL&#39;],
+为：
+extra_objects=[&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL.tbd&#39;],
+
+修改调用头文件的名字
+#
+
+对于报错：
+fatal error: &#39;al.h&#39; file not found
+      #include &lt;al.h&gt;
+               ^~~~~~
+      1 error generated.
+error: command &#39;/usr/bin/gcc&#39; failed with exit code 1
+需要对/pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c中的
+#include &lt;al.h&gt;
+#include &lt;alc.h&gt;
+修改为：
+#include &lt;OpenAL/al.h&gt;
+#include &lt;OpenAL/alc.h&gt;
+
+参考
+#
+
+
+Trouble installing on osx &ldquo;fatal error: &lsquo;al.h&rsquo; file not found&rdquo; #28
+Trouble installing on Mac OS Big Sur 11.0.1 &ldquo;fatal error: &lsquo;al.h&rsquo; file not found&rdquo; #67
+ ">
 <meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
 
 <meta property="og:title" content="在 Big Sur 安装 PocketSphinx 时出现的问题 - Rongbin&#39;s Blog" />
-<meta property="og:description" content="确认安装了swig # 首先确认是否安装了swig，否则运行setup.py报错：
-error: command &#39;swig&#39; failed: No such file or directory 修改 OpenAL 的位置 # 似乎对于 Catalina 以及后续版本，都需要在setup.py中修改OpenAL的位置：
+<meta property="og:description" content="
+确认安装了swig
+#
+
+首先确认是否安装了swig，否则运行setup.py报错：
+error: command &#39;swig&#39; failed: No such file or directory
+
+修改 OpenAL 的位置
+#
+
+似乎对于 Catalina 以及后续版本，都需要在setup.py中修改OpenAL的位置：
 修改第 235 行：
-sb_include_dirs.append(&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;) 为：
-sb_include_dirs.append(&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;) 修改第 242 行：
-extra_objects=[&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL&#39;], 为：
-extra_objects=[&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL.tbd&#39;], 修改调用头文件的名字 # 对于报错：
-fatal error: &#39;al.h&#39; file not found #include &lt;al.h&gt; ^~~~~~ 1 error generated. error: command &#39;/usr/bin/gcc&#39; failed with exit code 1 需要对/pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c中的
-#include &lt;al.h&gt; #include &lt;alc.h&gt; 修改为：
-#include &lt;OpenAL/al.h&gt; #include &lt;OpenAL/alc.h&gt; 参考 # Trouble installing on osx &ldquo;fatal error: &lsquo;al. " />
+sb_include_dirs.append(&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;)
+为：
+sb_include_dirs.append(&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;)
+修改第 242 行：
+extra_objects=[&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL&#39;],
+为：
+extra_objects=[&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL.tbd&#39;],
+
+修改调用头文件的名字
+#
+
+对于报错：
+fatal error: &#39;al.h&#39; file not found
+      #include &lt;al.h&gt;
+               ^~~~~~
+      1 error generated.
+error: command &#39;/usr/bin/gcc&#39; failed with exit code 1
+需要对/pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c中的
+#include &lt;al.h&gt;
+#include &lt;alc.h&gt;
+修改为：
+#include &lt;OpenAL/al.h&gt;
+#include &lt;OpenAL/alc.h&gt;
+
+参考
+#
+
+
+Trouble installing on osx &ldquo;fatal error: &lsquo;al.h&rsquo; file not found&rdquo; #28
+Trouble installing on Mac OS Big Sur 11.0.1 &ldquo;fatal error: &lsquo;al.h&rsquo; file not found&rdquo; #67
+ " />
 <meta property="og:url" content="https://fanrongbin.com/pocketsphinx-install-errors/" />
 <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
 <meta name="twitter:title" content="在 Big Sur 安装 PocketSphinx 时出现的问题 - Rongbin&#39;s Blog" />
-<meta name="twitter:description" content="确认安装了swig # 首先确认是否安装了swig，否则运行setup.py报错：
-error: command &#39;swig&#39; failed: No such file or directory 修改 OpenAL 的位置 # 似乎对于 Catalina 以及后续版本，都需要在setup.py中修改OpenAL的位置：
+<meta name="twitter:description" content="
+确认安装了swig
+#
+
+首先确认是否安装了swig，否则运行setup.py报错：
+error: command &#39;swig&#39; failed: No such file or directory
+
+修改 OpenAL 的位置
+#
+
+似乎对于 Catalina 以及后续版本，都需要在setup.py中修改OpenAL的位置：
 修改第 235 行：
-sb_include_dirs.append(&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;) 为：
-sb_include_dirs.append(&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;) 修改第 242 行：
-extra_objects=[&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL&#39;], 为：
-extra_objects=[&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL.tbd&#39;], 修改调用头文件的名字 # 对于报错：
-fatal error: &#39;al.h&#39; file not found #include &lt;al.h&gt; ^~~~~~ 1 error generated. error: command &#39;/usr/bin/gcc&#39; failed with exit code 1 需要对/pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c中的
-#include &lt;al.h&gt; #include &lt;alc.h&gt; 修改为：
-#include &lt;OpenAL/al.h&gt; #include &lt;OpenAL/alc.h&gt; 参考 # Trouble installing on osx &ldquo;fatal error: &lsquo;al. " />
+sb_include_dirs.append(&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;)
+为：
+sb_include_dirs.append(&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/Headers&#39;)
+修改第 242 行：
+extra_objects=[&#39;/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL&#39;],
+为：
+extra_objects=[&#39;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Versions/A/OpenAL.tbd&#39;],
+
+修改调用头文件的名字
+#
+
+对于报错：
+fatal error: &#39;al.h&#39; file not found
+      #include &lt;al.h&gt;
+               ^~~~~~
+      1 error generated.
+error: command &#39;/usr/bin/gcc&#39; failed with exit code 1
+需要对/pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c中的
+#include &lt;al.h&gt;
+#include &lt;alc.h&gt;
+修改为：
+#include &lt;OpenAL/al.h&gt;
+#include &lt;OpenAL/alc.h&gt;
+
+参考
+#
+
+
+Trouble installing on osx &ldquo;fatal error: &lsquo;al.h&rsquo; file not found&rdquo; #28
+Trouble installing on Mac OS Big Sur 11.0.1 &ldquo;fatal error: &lsquo;al.h&rsquo; file not found&rdquo; #67
+ " />
 
 <link rel="canonical" href="https://fanrongbin.com/pocketsphinx-install-errors/" />
 
