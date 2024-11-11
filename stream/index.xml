@@ -6,8 +6,29 @@
     <description>Recent content on Stream  in Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Mon, 23 Sep 2024 00:02:20 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2024 12:04:42 +0100</lastBuildDate>
     <atom:link href="https://fanrongbin.com/stream/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://fanrongbin.com/stream/ds_store/</link>
+      <pubDate>Thu, 10 Oct 2024 12:04:42 +0100</pubDate>
+      <guid>https://fanrongbin.com/stream/ds_store/</guid>
+      <description>
+        
+
+        
+
+        
+
+        
+  
+        &lt;p&gt;To delete all &lt;code&gt;._*&lt;/code&gt; or &lt;code&gt;._DS_Store&lt;/code&gt; files on Windows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;del&lt;/span&gt; /s /a ._*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# replace ._* with .DS_Store
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use CMD, not PowerShell.&lt;/p&gt;
+
+      </description>
+    </item>
     <item>
       <title>Movie: The Substance</title>
       <link>https://fanrongbin.com/stream/the-substance/</link>
