@@ -58,6 +58,7 @@
         font-family: Outfit, Inter, -apple-system, BlinkMacSystemFont, "Source Sans", "思源黑体", "Source Han Sans", system-ui, "Helvetica Neue Book", Helvetica, Arial, Verdana, Avenir, "Segoe UI Variable", "Segoe UI", "Biaodian Pro Sans", "Han Heiti", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji" !important;
         --bg-blur-color: #ffffff70;
         --shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        transition: all .2s cubic-bezier(0.33, 1, 0.68, 1);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -241,8 +242,34 @@
         touch-action: manipulation;
     }
 
+    button:hover {
+        background-color: #dcdcdc;
+        color: #101010;
+    }
+
+    div.footer-button {
+        display: flex;
+        gap: 1ch;
+    }
+
+    div.footer-button>a {
+        background: unset;
+        color: unset;
+        border-bottom: unset;
+    }
+
     button.disabled {
         opacity: 0.3;
+    }
+
+    .gradient-button {
+        background-image: linear-gradient(90deg, #7000ff, #00a1ff);
+        color: #fff;
+    }
+
+    .gradient-button:hover {
+        background-image: linear-gradient(90deg, #5100bc, #0072b4);
+        color: #fff;
     }
 
     .gradient-text {
@@ -367,8 +394,8 @@
         .feature-vertical-de {
             position: relative;
             width: 20em;
-            right: 6em;
-            top: 8em;
+            right: 2em;
+            top: 5.5em;
             margin: 0 -5em;
             background: #ffffff4a;
             backdrop-filter: blur(80px);
@@ -443,7 +470,7 @@
             </div>
             <img src="https://img.fanrongbin.com/ai-scheduling-updated.webp" class="screenshot ai-popup ai-popup-1">
             <img src="https://img.fanrongbin.com/ai-scheduling-2.webp" class="screenshot ai-popup ai-popup-2">
-            <p>Way beyond the calendar apps we have right now. You now have a personal assistant to align your team's schedule, and to check your availability when HR suddenly prompts you on the phone.</p>
+            <p>You now have a personal assistant to align your team's schedule, and to check your availability when HR suddenly prompts you on the phone.</p>
             <p class="anno">*We use open-source large language models and we run your data on your local device only.</p>
         </section>
 
@@ -497,7 +524,7 @@
                     <h3>Timezone</h3>
                     <p>Tick <em>Show My Timezone</em> to compare and make wise proposals.</p>
                     <h3>Exclude certain events</h3>
-                    <p>Sometimes you wanna be more flexible as some events on your calendar are <em>tentative</em>. You
+                    <p>Some events on your calendar are <em>tentative</em> and can be rescheduled. You
                         can
                         <strong>exclude</strong> them to mark the according slots as available for others to choose.
                     </p>
@@ -552,9 +579,11 @@
         <section class="section contact">
             <h1 class="gradient-text">Let's make it possible.</h1>
             <p style="width: 70vw; margin-top: 2em;">Whether you wanna start from building this app from scratch with
-                me, or you have an idea to integrate some features into your app, <a href="/contact"
-                    target="_blank">shoot me an email</a> to see how can we make this together.</p>
-            <p style="margin-top: 2em;"><a href="/calinda/v1" target="_blank">Previous Experiment</a></p>
+                me, or you have an idea to integrate some features into your app, contact me to see how can we make this together.</p>
+            <div class="footer-button">
+            <a href="/contact" target="_blank"><button class="gradient-button" style="margin-top: 2em;">Contact Me</button></a>
+            <a href="/calinda/v1" target="_blank"><button style="margin-top: 2em;">Previous Experiment</button></a>
+            </div>
             <p class="anno" style="margin-top: 4em;">© Copyright 2024 <a href="/">Rongbin Fan</a>, All rights reserved.</p>
             <p class="anno" style="margin-top: 0.5em;">Built with ♥︎ in London</p>
         </section>
