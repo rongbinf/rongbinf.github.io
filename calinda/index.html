@@ -104,7 +104,6 @@
     .top-menu-bar {
         position: fixed;
         top: 0;
-        width: 100%;
         background-color: #ffffff70;
         backdrop-filter: blur(48px);
         text-align: center;
@@ -116,6 +115,7 @@
         justify-content: space-between;
         align-items: center;
         width: 72vw;
+        max-width: 1110px;
         border-radius: 40px;
         margin: 1ch;
         padding: 1ch 3ch;
@@ -401,6 +401,9 @@
     }
 
     @media (max-width: 700px) {
+        div.top-menu-bar {
+            width: 90vw;
+        }
         div.feature {
             padding: 1em 0;
         }
@@ -645,7 +648,7 @@
             <a href="/calinda/v1" target="_blank"><button style="margin-top: 2em;">Previous Experiment</button></a>
             </div>
             <p class="anno" style="margin-top: 4em;">© <a href="/">Rongbin Fan</a>, All rights reserved.</p>
-            <p class="anno" style="margin-top: 0.5em;">Built with ♥︎ in London</br>November 2024</p>
+            <p class="anno" style="margin-top: 0.5em;">Built with ♥︎ and HTML energy in London</br>November 2024</p>
         </section>
 
     </main>
