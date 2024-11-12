@@ -105,8 +105,8 @@
         position: fixed;
         top: 0;
         background-color: #ffffff70;
-        backdrop-filter: blur(48px);
         -webkit-backdrop-filter: blur(48px);
+        backdrop-filter: blur(48px);
         text-align: center;
         padding: 10px;
         z-index: 10;
@@ -293,7 +293,8 @@
         gap: 1ch;
     }
 
-    div.footer-button>a, div.button-list>a  {
+    div.footer-button>a,
+    div.button-list>a {
         background: unset;
         color: unset;
         border-bottom: unset;
@@ -337,6 +338,7 @@
         section.more>div.feature-grid>div.feature {
             padding: 0.5em;
         }
+
         div.description {
             align-items: center;
         }
@@ -347,21 +349,25 @@
             flex-direction: column;
             width: 70vw;
         }
+
         section.calinda-v2>div.feature-grid>div.feature {
             flex-direction: row;
             width: unset !important;
             height: unset !important;
             gap: 2em;
         }
+
         section.calinda-v2>div.feature-grid>div.feature>img {
             width: 25vw;
         }
+
         .feature-vertical>.feature-vertical-img {
             /* height: 400px !important; */
             object-fit: cover;
             object-position: 100% 0;
             padding: 0;
         }
+
         .feature-vertical-de {
             position: unset !important;
             width: unset !important;
@@ -369,16 +375,19 @@
             top: unset !important;
             margin: unset !important;
             background: unset;
-            backdrop-filter: unset;
             -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
             padding: unset !important;
             border-radius: unset;
         }
 
-        div.share-details, div.share-details-2 {
+        div.share-details,
+        div.share-details-2 {
             flex-direction: column;
         }
-        div.share-details>img, div.share-details-2>img {
+
+        div.share-details>img,
+        div.share-details-2>img {
             width: 50vw !important;
         }
     }
@@ -387,16 +396,20 @@
         div.description {
             width: unset;
         }
+
         div.feature-grid {
             gap: 1em;
         }
+
         div.feature-3 {
             width: 26vw;
         }
+
         img.ai-popup {
             border-radius: 20px;
             width: 60%;
         }
+
         img.screenshot {
             border-radius: 15px;
         }
@@ -406,12 +419,20 @@
         div.top-menu-bar {
             width: 90vw;
         }
+
         div.feature {
             padding: 1em 0;
         }
-        div.feature-grid, div.share-details>img, img.screenshot, div.share-details-2>img, div.share-details, div.share-details-2 {
+
+        div.feature-grid,
+        div.share-details>img,
+        img.screenshot,
+        div.share-details-2>img,
+        div.share-details,
+        div.share-details-2 {
             width: 80vw !important;
         }
+
         section.third-party>img {
             width: 100vw !important;
             scale: 1.65;
@@ -419,11 +440,14 @@
             left: 1.8em;
             position: relative;
         }
+
         .main {
             margin: 2em 0;
             overflow: hidden;
         }
-        .banner>h1+p, .contact>p {
+
+        .banner>h1+p,
+        .contact>p {
             margin: 0 1em;
         }
     }
@@ -432,12 +456,16 @@
         img.ai-popup {
             width: 100%;
         }
-        img.ai-popup-1, img.ai-popup-2 {
+
+        img.ai-popup-1,
+        img.ai-popup-2 {
             left: 0;
         }
+
         div.feature-grid {
             flex-direction: column;
         }
+
         div.feature-3 {
             width: unset;
         }
@@ -452,11 +480,12 @@
             top: 5.5em;
             margin: 0 -5em;
             background: #ffffff4a;
-            backdrop-filter: blur(80px);
             -webkit-backdrop-filter: blur(80px);
+            backdrop-filter: blur(80px);
             padding: 2em;
             border-radius: 22px;
         }
+
         .feature-grid>.feature {
             box-shadow: none;
         }
@@ -476,12 +505,12 @@
     <!-- top menu bar -->
     <div id="top-menu-bar" class="top-menu-bar">
         <div class="icon-with-name">
-        <img src="https://img.fanrongbin.com/calinda-logo-v2.webp" width="30">
-        <p>Calinda</p>
+            <img src="https://img.fanrongbin.com/calinda-logo-v2.webp" width="30">
+            <p>Calinda</p>
         </div>
         <div class="button-list">
-        <a href="/"><button>Blog</button></a>
-        <a href="/contact"><button>Contact</button></a>
+            <a href="/"><button>Blog</button></a>
+            <a href="/contact"><button>Contact</button></a>
         </div>
     </div>
 
@@ -492,7 +521,8 @@
             <img src="https://img.fanrongbin.com/calinda-logo-v2.webp" width="90">
             <p class="app-title">Calinda</p>
             <h1 class="gradient-text">Sorted.</br>Never this easy.</h1>
-            <p>The ultimate calendar app for you and your team.</br>AI scheduling, tasks, booking time slots and more.</p>
+            <p>The ultimate calendar app for you and your team.</br>AI scheduling, tasks, booking time slots and more.
+            </p>
             <button class="disabled">Coming Soon</button>
         </section>
 
@@ -509,11 +539,12 @@
                 <div class="feature" style="width: 30vw;">
                     <img src="https://img.fanrongbin.com/heatmap-and-highlight.webp" class="feature-img">
                     <div class="feature-heatmap-de">
-                    <h3>Heatmap</h3>
-                    <p>Heavier the colour, busier that day. Just so intuitive and easy to check.</p>
-                    <h3>Highlight</h3>
-                    <p>Make some <em>really, really important</em> events stand out, so you see them, don't forget about them.
-                    </p>
+                        <h3>Heatmap</h3>
+                        <p>Heavier the colour, busier that day. Just so intuitive and easy to check.</p>
+                        <h3>Highlight</h3>
+                        <p>Make some <em>really, really important</em> events stand out, so you see them, don't forget
+                            about them.
+                        </p>
                     </div>
                 </div>
 
@@ -522,7 +553,8 @@
                         style="height: 90%;">
                     <div class="feature-vertical-de">
                         <h3>Today Panel</h3>
-                        <p>It's slim to fit your sidebar. You can make it a popup or a desktop widget to take beautiful glimpse.</p>
+                        <p>It's slim to fit your sidebar. You can make it a popup or a desktop widget to take beautiful
+                            glimpse.</p>
                     </div>
                 </div>
 
@@ -537,8 +569,10 @@
             </div>
             <img src="https://img.fanrongbin.com/ai-scheduling-updated.webp" class="screenshot ai-popup ai-popup-1">
             <img src="https://img.fanrongbin.com/ai-scheduling-2.webp" class="screenshot ai-popup ai-popup-2">
-            <p>You now have a personal assistant to align your team's schedule, and to check your availability when HR suddenly prompts you on the phone.</p>
-            <p class="anno">*We use open-source large language models and we run your data on your local device only.</p>
+            <p>You now have a personal assistant to align your team's schedule, and to check your availability when HR
+                suddenly prompts you on the phone.</p>
+            <p class="anno">*We use open-source large language models and we run your data on your local device only.
+            </p>
         </section>
 
         <!-- new-task -->
@@ -552,14 +586,16 @@
                     <h3>Built-in Task Management</h3>
                     <p style="text-align: left;">Tasks are defined by deadlines. Here we blend tasks / to-dos with your
                         calendar events so you can have a more general view of your schedules.</p>
-                        <h3>Auto "Check"</h3>
-                        <p style="text-align: left;">Sometimes you may just want a popup notification with a due time. Auto Check automatically
-                            marks your to-dos as finished when certain criteria are met. For example, arrived in the office, or received an email with keywords.
-                        </p>
+                    <h3>Auto "Check"</h3>
+                    <p style="text-align: left;">Sometimes you may just want a popup notification with a due time. Auto
+                        Check automatically
+                        marks your to-dos as finished when certain criteria are met. For example, arrived in the office,
+                        or received an email with keywords.
+                    </p>
                 </div>
             </div>
         </section>
-        
+
         <!-- share, available-time-slots, book-a-slot -->
         <section class="section share">
             <div class="description">
@@ -645,10 +681,12 @@
         <section class="section contact">
             <h1 class="gradient-text">Let's make it possible.</h1>
             <p style="width: 70vw; margin-top: 2em;">Whether you wanna start from building this app from scratch with
-                me, or you have an idea to integrate some features into your app, contact me to see how can we make this together.</p>
+                me, or you have an idea to integrate some features into your app, contact me to see how can we make this
+                together.</p>
             <div class="footer-button">
-            <a href="/contact" target="_blank"><button class="gradient-button" style="margin-top: 2em;">Contact Me</button></a>
-            <a href="/calinda/v1" target="_blank"><button style="margin-top: 2em;">Previous Experiment</button></a>
+                <a href="/contact" target="_blank"><button class="gradient-button" style="margin-top: 2em;">Contact
+                        Me</button></a>
+                <a href="/calinda/v1" target="_blank"><button style="margin-top: 2em;">Previous Experiment</button></a>
             </div>
             <p class="anno" style="margin-top: 4em;">© <a href="/">Rongbin Fan</a>, All rights reserved.</p>
             <p class="anno" style="margin-top: 0.5em;">Built with ♥︎ and HTML energy in London</br>November 2024</p>
@@ -658,21 +696,28 @@
 </body>
 
 <script>
-// JavaScript code to show/hide the top menu bar with a transition effect
-window.addEventListener('scroll', function () {
-    const appTitle = document.querySelector('.app-title');
-    const topMenuBar = document.getElementById('top-menu-bar');
+    let lastScrollTop = 0;
 
-    // Check if the appTitle is in view
-    const appTitlePosition = appTitle.getBoundingClientRect();
-    if (appTitlePosition.top < 0) {
-        // Add 'visible' class to make the top menu bar visible with animation
-        topMenuBar.classList.add('visible');
-    } else {
-        // Remove 'visible' class to hide the top menu bar with animation
-        topMenuBar.classList.remove('visible');
-    }
-});
+    window.addEventListener('scroll', function () {
+        const appTitle = document.querySelector('.app-title');
+        const topMenuBar = document.getElementById('top-menu-bar');
+
+        const appTitlePosition = appTitle.getBoundingClientRect();
+        const isAppTitleVisible = appTitlePosition.top >= 0 && appTitlePosition.bottom <= window.innerHeight;
+
+        if (isAppTitleVisible) {
+            topMenuBar.classList.remove('visible');
+            return;  // Stop further execution if app title is visible
+        }
+
+        let currentScrollTop = window.scrollY;
+        if (currentScrollTop < lastScrollTop) {
+            topMenuBar.classList.add('visible');
+        } else {
+            topMenuBar.classList.remove('visible');
+        }
+        lastScrollTop = currentScrollTop;  // Update last scroll position
+    });
 
 </script>
 
