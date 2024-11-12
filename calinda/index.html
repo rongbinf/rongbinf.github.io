@@ -101,6 +101,46 @@
         text-align: center;
     }
 
+    .top-menu-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff70;
+        backdrop-filter: blur(48px);
+        text-align: center;
+        padding: 10px;
+        z-index: 10;
+
+        display: flex;
+        opacity: 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 72vw;
+        border-radius: 40px;
+        margin: 1ch;
+        padding: 1ch 3ch;
+        transform: translateY(-100%);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .top-menu-bar.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .icon-with-name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1ch;
+    }
+
+    .icon-with-name>p {
+        margin: 0;
+        font-size: 1.2em;
+    }
+
     img.screenshot {
         width: 70vw;
         box-shadow: var(--shadow);
@@ -252,10 +292,19 @@
         gap: 1ch;
     }
 
-    div.footer-button>a {
+    div.footer-button>a, div.button-list>a  {
         background: unset;
         color: unset;
         border-bottom: unset;
+    }
+
+    .button-list>a>button {
+        background-color: transparent;
+    }
+
+    .button-list>a>button:hover {
+        background-color: #f0f0f0;
+        color: #383838;
     }
 
     button.disabled {
@@ -418,6 +467,18 @@
 
 <body>
 
+    <!-- top menu bar -->
+    <div id="top-menu-bar" class="top-menu-bar">
+        <div class="icon-with-name">
+        <img src="https://img.fanrongbin.com/calinda-logo-v2.webp" width="30">
+        <p>Calinda</p>
+        </div>
+        <div class="button-list">
+        <a href="/"><button>Blog</button></a>
+        <a href="/contact"><button>Contact</button></a>
+        </div>
+    </div>
+
     <main class="main">
 
         <!-- banner -->
@@ -428,6 +489,7 @@
             <p>The ultimate calendar app for you and your team.</br>AI scheduling, tasks, booking time slots and more.</p>
             <button class="disabled">Coming Soon</button>
         </section>
+
 
         <!-- calinda-v2 -->
         <section class="section calinda-v2">
@@ -589,6 +651,24 @@
     </main>
 </body>
 
+<script>
+// JavaScript code to show/hide the top menu bar with a transition effect
+window.addEventListener('scroll', function () {
+    const appTitle = document.querySelector('.app-title');
+    const topMenuBar = document.getElementById('top-menu-bar');
+
+    // Check if the appTitle is in view
+    const appTitlePosition = appTitle.getBoundingClientRect();
+    if (appTitlePosition.top < 0) {
+        // Add 'visible' class to make the top menu bar visible with animation
+        topMenuBar.classList.add('visible');
+    } else {
+        // Remove 'visible' class to hide the top menu bar with animation
+        topMenuBar.classList.remove('visible');
+    }
+});
+
+</script>
 
 <!-- disable viewport zooming on iOS -->
 <script defer>
@@ -610,7 +690,6 @@
             event.preventDefault();
         });
     }
-
 </script>
 <script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
