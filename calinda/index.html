@@ -14,10 +14,10 @@
     <meta property="og:description" content="Sorted. Never this easy." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://fanrongbin.com" />
-    <meta property="og:image" content="https://img.fanrongbin.com/Calinda%20Logo%20%403x.webp" />
+    <meta property="og:image" content="https://img.fanrongbin.com/calinda-cover-v2-compressed.webp" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://img.fanrongbin.com/Calinda%20Logo%20%403x.webp" />
+    <meta name="twitter:image" content="https://img.fanrongbin.com/calinda-cover-v2-compressed.webp" />
     <meta name="twitter:title" content="Calinda" />
     <meta name="twitter:description" content="Sorted. Never this easy." />
 
@@ -30,9 +30,10 @@
     <meta name="msvalidate.01" content="6DFC6C69D3CAC309F3ED39EA45B19F2A" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://img.fanrongbin.com/Calinda%20Logo%20%403x.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.fanrongbin.com/calinda-logo-v2.webp">
 
-    <link rel="icon" ref="https://img.fanrongbin.com/Calinda%20Logo%20%403x.webp">
+    <link rel="icon" ref="https://img.fanrongbin.com/calinda-logo-v2.webp">
+    <link rel="icon" ref="https://img.fanrongbin.com/calinda-logo-v2.png">
 
     <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
 
@@ -291,6 +292,7 @@
     div.footer-button {
         display: flex;
         gap: 1ch;
+        margin-top: 2em;
     }
 
     div.footer-button>a,
@@ -332,6 +334,16 @@
         -webkit-text-fill-color: transparent;
         -moz-background-clip: text;
         -moz-text-fill-color: transparent;
+    }
+
+    .project-board-mobile-left, .project-board-mobile-right {
+        display: none;
+        box-shadow: none !important;
+    }
+
+    .sync-img {
+        width: 45%;
+        margin-bottom: 2em;
     }
 
     @media (max-width: 1150px) {
@@ -381,6 +393,10 @@
             border-radius: unset;
         }
 
+        .sync-img {
+            width: 60%;
+        }
+
         div.share-details,
         div.share-details-2 {
             flex-direction: column;
@@ -389,6 +405,9 @@
         div.share-details>img,
         div.share-details-2>img {
             width: 50vw !important;
+        }
+        .project-board {
+            width: unset !important;
         }
     }
 
@@ -412,6 +431,22 @@
 
         img.screenshot {
             border-radius: 15px;
+        }
+        .project-board {
+            display: none;
+        }
+        .project-board-mobile-left {
+            display: block;
+            transform: scale(2.5) translateX(30%);
+            margin: 25% 0 60% 0;
+        }
+        .project-board-mobile-right {
+            display: block;
+            transform: scale(2.5) translateX(-23%);
+            margin: 0 0 35% 0;
+        }
+        .sync-img {
+            width: 70%;
         }
     }
 
@@ -449,6 +484,10 @@
         .banner>h1+p,
         .contact>p {
             margin: 0 1em;
+        }
+
+        img+p, img+p+p {
+            margin: 0 1em 2ch 1em;
         }
     }
 
@@ -509,7 +548,7 @@
             <p>Calinda</p>
         </div>
         <div class="button-list">
-            <a href="/"><button>Blog</button></a>
+            <a href="/story-behind-calinda"><button>The Story</button></a>
             <a href="/contact"><button>Contact</button></a>
         </div>
     </div>
@@ -532,11 +571,11 @@
             <div class="description">
                 <h2>Looks much elegant, right?</h2>
             </div>
-            <img src="https://img.fanrongbin.com/calinda-v2.webp" class="screenshot">
+            <img id="main-with-task" src="https://img.fanrongbin.com/main-with-task.webp" class="screenshot">
 
             <div class="feature-grid">
 
-                <div class="feature" style="width: 30vw;">
+                <div class="feature" style="width: 30vw; height: 60vh;">
                     <img src="https://img.fanrongbin.com/heatmap-and-highlight.webp" class="feature-img">
                     <div class="feature-heatmap-de">
                         <h3>Heatmap</h3>
@@ -548,7 +587,7 @@
                     </div>
                 </div>
 
-                <div class="feature feature-vertical" style="width: 38vw; height: 57vh;">
+                <div class="feature feature-vertical" style="width: 38vw; height: 60vh;">
                     <img src="https://img.fanrongbin.com/today-panel-3.webp" class="feature-vertical-img"
                         style="height: 90%;">
                     <div class="feature-vertical-de">
@@ -578,14 +617,28 @@
         <!-- new-task -->
         <section class="section task">
             <div class="description">
-                <h2>No need to switch between to-do apps and calendars.</h2>
+                <h2>End game's here. Project + Task (+ To-do) + Calendar.</h2>
             </div>
+            <div style="display: flex;
+            flex-direction: column;
+            align-items: center;">
+                <img src="https://img.fanrongbin.com/project-board-updated.webp" class="screenshot project-board" style="box-shadow: none;">
+                <div><img src="https://img.fanrongbin.com/project-board-updated.webp" class="screenshot project-board-mobile-left"></div>
+                <img src="https://img.fanrongbin.com/project-board-updated.webp" class="screenshot project-board-mobile-right">
+                <div style="display: flex; margin-top: 2em; flex-direction: column; align-items: flex-start; width: 70vw; text-align: left;">
+                <h3>Built-in Project and Task Management</h3>
+                <p>It's finally here. You can see your projects right on your calendar (see those <a href="#main-with-task">bars at the top of different days</a>?),
+                create tasks under each project (and sub-tasks), then drag and drop on your calendar to schedule them.</p>
+                <p>You may also use several time windows to complete one task, so you can drag and drop multiple times, and mark them as completed only when you indeed finish them.</p>
+                <p>With AI it's even better - we go through
+            your calendar, your work-life pattern, your task priorities and deadlines previously set, then share with you scheduling suggestions.</p>
+            </div>
+        </div>
             <div class="share-details">
                 <img src="https://img.fanrongbin.com/task-preview.webp" style="width: 30vw;">
                 <div style="display: flex; flex-direction: column; align-items: flex-start;">
-                    <h3>Built-in Task Management</h3>
-                    <p style="text-align: left;">Tasks are defined by deadlines. Here we blend tasks / to-dos with your
-                        calendar events so you can have a more general view of your schedules.</p>
+                    <h3>Handle Single To-dos</h3>
+                    <p style="text-align: left;">You can also create single to-dos that comes with a deadline and are not necessarily related to a project. No need to switch between to-do apps and calendar apps any more.</p>
                     <h3>Auto "Check"</h3>
                     <p style="text-align: left;">Sometimes you may just want a popup notification with a due time. Auto
                         Check automatically
@@ -648,6 +701,16 @@
 
         </section>
 
+        <!-- cross-platform and ics -->
+        <section class="section">
+            <div class="description">
+                <h2>Bring all to one.</h2>
+            </div>
+            <img class="sync-img" src="https://img.fanrongbin.com/calinda-sync.webp">
+            <p>To migrate from other platforms, we use ICS files so you keep track of your previous events, but enjoy a whole new experience solely on Calinda. Either you can export and import ICS files by yourself, or you can grant us access by SSO login.</p>
+            <p>Online calendar subscription is usually <strong>one-way read-only</strong>, so our solution is that we duplicate that calendar, then you can modify on it. We keep track of the original so if there's any change, we'll pop up notifications for you to choose whether to update.</p>
+        </section>
+
         <!-- more -->
         <section class="section more">
             <div class="description">
@@ -684,9 +747,9 @@
                 me, or you have an idea to integrate some features into your app, contact me to see how can we make this
                 together.</p>
             <div class="footer-button">
-                <a href="/contact" target="_blank"><button class="gradient-button" style="margin-top: 2em;">Contact
+                <a href="/story-behind-calinda" target="_blank"><button class="gradient-button">Read the Story</button></a>
+                <a href="/contact" target="_blank"><button>Contact
                         Me</button></a>
-                <a href="/calinda/v1" target="_blank"><button style="margin-top: 2em;">Previous Experiment</button></a>
             </div>
             <p class="anno" style="margin-top: 4em;">© <a href="/">Rongbin Fan</a>, All rights reserved.</p>
             <p class="anno" style="margin-top: 0.5em;">Built with ♥︎ and HTML energy in London</br>November 2024</p>

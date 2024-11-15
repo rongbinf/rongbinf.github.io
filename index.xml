@@ -6,8 +6,258 @@
     <description>Recent content  in Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 10 Oct 2024 12:04:42 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 13 Nov 2024 00:55:49 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Story behind Calinda</title>
+      <link>https://fanrongbin.com/story-behind-calinda/</link>
+      <pubDate>Wed, 13 Nov 2024 00:55:49 +0000</pubDate>
+      <guid>https://fanrongbin.com/story-behind-calinda/</guid>
+      <description>&lt;h2 id=&#34;i-have-always-wanted-a-perfect-calendar-app&#34;&gt;
+I have always wanted a perfect calendar app.
+&lt;a href=&#34;#i-have-always-wanted-a-perfect-calendar-app&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;I loved many features that &lt;a href=&#34;https://flexibits.com/fantastical&#34;&gt;Fantastical&lt;/a&gt; has, I like how I can arrange events by dragging from different days on the monthly view using &lt;a href=&#34;https://readdle.com/calendars&#34;&gt;Readdle Calendar&lt;/a&gt;, I&amp;rsquo;m fond of &lt;a href=&#34;https://www.thunderbird.net&#34;&gt;Thunderbird&lt;/a&gt; because it&amp;rsquo;s light.&lt;/p&gt;
+&lt;p&gt;But I really want something more intuitive, something that combines all these, something that can even offer help proactively.&lt;/p&gt;
+&lt;p&gt;I had an idea of building an AI-driven today panel when ChatGPT was first introduced. Basically, you can start your day with the app by looking at your schedule, weather, etc, with an intuitive timeline listing out all the events and tasks you have that day. You can interact with the app like it&amp;rsquo;s your personal assistant checking availability and managing your schedules. At night you keep a diary by answering some simple questions and recording your mood, and how you feel that day. So I made &lt;a href=&#34;https://fanrongbin.com/calinda/v1&#34;&gt;the first version of Calinda&lt;/a&gt;.&lt;/p&gt;
+&lt;details&gt;
+    &lt;summary&gt;My draft of Calinda v1&lt;/summary&gt;
+    &lt;img src=&#34;https://img.fanrongbin.com/calinda-draft.webp&#34; alt=&#34;My draft of Calinda v1&#34;&gt;
+&lt;/details&gt;
+&lt;p&gt;After I start my postgrad studies, things get piling up so easily and my calendar looks like a mess. I have auto updated calendar subscriptions from the school, need to sync across Windows and iOS, switch between to-dos and events&amp;hellip; It&amp;rsquo;s probably time to review Calinda.&lt;/p&gt;
+&lt;h2 id=&#34;i-listed-out-my-pain-points-and-what-kind-of-features-i-want-as-a-user&#34;&gt;
+I listed out my pain points and what kind of features I want as a user.
+&lt;a href=&#34;#i-listed-out-my-pain-points-and-what-kind-of-features-i-want-as-a-user&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112181815877.png&#34; alt=&#34;image-20241112181815877&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI assistant (which was already mentioned in v1)
+&lt;ul&gt;
+&lt;li&gt;e.g. I can just ask &amp;ldquo;Am I available next Friday afternoon? To schedule an interview?&amp;rdquo; and then the app responds yes or no with suggestions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manage tasks and events at the same time
+&lt;ul&gt;
+&lt;li&gt;In my opinion, tasks are like some time points but not necessarily time blocks because they usually come with deadlines. I know some people set up a five-minute or one-hour event to represent, but it&amp;rsquo;ll not be the case when we just combine them together.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Time Zones
+&lt;ul&gt;
+&lt;li&gt;If you work with a global team then you need this. Both for viewing and for scheduling.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Share your availability and view others&#39;
+&lt;ul&gt;
+&lt;li&gt;Basically, it&amp;rsquo;s what &lt;a href=&#34;https://www.when2meet.com/&#34;&gt;when2meet&lt;/a&gt; and Fantastical do, but I want it to be more hassle-free so your availability will be generated automatically according to the calendars you choose, and if the other persons are also using Calinda, it&amp;rsquo;ll be more automatic as you can see their availability right on the app, and get notified when adding them as attendees.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Multiple calendars
+&lt;ul&gt;
+&lt;li&gt;Related to the availability. Sometimes I want to share my calendar with others so they can see my availability, but most platforms (haven&amp;rsquo;t seen one can) only allow you to share one calendar per link. But I use multiple calendars (study, work, life, &amp;hellip;) and I want to share them in one link&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Combining events
+&lt;ul&gt;
+&lt;li&gt;Because my school has two calendar subscription links (one from Canvas so we have these timelines for assignments and exams, the other from the school calendar for events), both of them have my lectures and seminars so there are always two exact same events shown on the same time slot but from different calendars. Annoying, but I cannot simply give up one for another.&lt;/li&gt;
+&lt;li&gt;But this feature would probably be too specific so not needed by many people.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;i-wanna-know-what-others-think-and-whats-their-pain-point-so-i-first-went-to-reddit&#34;&gt;
+I wanna know what others think and what&amp;rsquo;s their pain point. So I first went to Reddit.
+&lt;a href=&#34;#i-wanna-know-what-others-think-and-whats-their-pain-point-so-i-first-went-to-reddit&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;From this  &lt;a href=&#34;https://www.reddit.com/r/productivity/comments/1ao630i/all_scheduling_apps_suck&#34;&gt;post&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112184205388.png&#34; alt=&#34;image-20241112184205388&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What this guy wants is more like a combination of Trello, Notion and a calendar. I&amp;rsquo;ll probably dive into how you can drag and drop stuff from the inbox to calendars in the future, but now probably focus on making the calendar right. Also since we are gonna combine tasks and events here, you don&amp;rsquo;t need to do this kind of drag-and-drop, no? And you of course can mark it done. Kill two pain points with one feature.&lt;/p&gt;
+&lt;p&gt;Anyways the basic drag-and-drop to reschedule events will definitely be there.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112184928875.png&#34; alt=&#34;image-20241112184928875&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I would say &amp;ldquo;task&amp;rdquo; should have a deadline, otherwise it&amp;rsquo;s a goal. Even though your team may assign you a task that can be done within a week, then the end of the week is your deadline of course. Probably I&amp;rsquo;ll consider a feature that allows you to break down a task into multiple steps for you to arrange like events.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112185337440.png&#34; alt=&#34;image-20241112185337440&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Again, task within the calendar view.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112185428312.png&#34; alt=&#34;image-20241112185428312&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m not gonna charge you 20 dollars a month, like this is insane.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112190330802.png&#34; alt=&#34;image-20241112190330802&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This actually inspires me to build a better printer.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112190503784.png&#34; alt=&#34;image-20241112190503784&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This sounds more like a project management feature. Probably use Omnifocus or a Gantt chart would be better. But sure we can add a tick box to skip weekends when adding a multiple-day event like this.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112190746005.png&#34; alt=&#34;image-20241112190746005&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Right, I should&amp;rsquo;ve thought about some users who would like to keep track of their time. Apps like Forest have been doing great in incentivising users, too.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112191009907.png&#34; alt=&#34;image-20241112191009907&#34;&gt;&lt;/p&gt;
+&lt;p&gt;True. Some users may put &amp;ldquo;go to gym&amp;rdquo;, &amp;ldquo;groceries&amp;rdquo; etc on the calendar, and they can be really periodic so you might wanna manage the schedule of similar events within one window.&lt;/p&gt;
+&lt;h2 id=&#34;i-also-went-to-v2ex-and-xiaohongshu&#34;&gt;
+I also went to v2ex and Xiaohongshu.
+&lt;a href=&#34;#i-also-went-to-v2ex-and-xiaohongshu&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;From this &lt;a href=&#34;https://www.v2ex.com/t/710513&#34;&gt;post&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112191606812.png&#34; alt=&#34;image-20241112191606812&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Translate:
+&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;If you have enough money just hire an assistant.&lt;/br&gt;
+I have to say all these features about automatically tracking the things you&amp;rsquo;ve done are highly personalised, so unless you&amp;rsquo;re gonna code it yourself, don&amp;rsquo;t expect too much to find a universal app. Even though you gonna develop it yourself, you might find that these demands won&amp;rsquo;t be very frequent in your daily life.&lt;/br&gt;
+And people don&amp;rsquo;t need to record everything they&amp;rsquo;ve done.&lt;/br&gt;
+It&amp;rsquo;s better not to automate the process of review, because what you did in 2 minutes probably can be more important than what you did in 2 hours.&lt;/br&gt;
+If you formed this habit to review it&amp;rsquo;ll be rather a quick process.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I agree that &lt;em&gt;reflection&lt;/em&gt; should be done by ourselves, cause it&amp;rsquo;s more of a mind-growth process. But with AI I do think everyone can have their own assistants. Simply put, calendars are just CSVs/tables, skim through the blanks, analyse life/work patterns, and create some tricky events, it should not be difficult to do so.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112191310562.png&#34; alt=&#34;image-20241112191310562&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Translate: &lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;The calendar we subscribe to cannot be modified because it&amp;rsquo;s single-way read-only. (second and third sentence not relevant, skipped)&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s what I&amp;rsquo;m saying about my school calendars. It&amp;rsquo;s read-only so I cannot modify them. And it&amp;rsquo;s relatively easy to achieve technically like just duplicate a version.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241112192240790.png&#34; alt=&#34;image-20241112192240790&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Translate:&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;In short:&lt;/br&gt;
+· Unable to distinguish between “scheduled task execution time” and “time spent on task”&lt;/br&gt;
+· Unable to assign multiple time slots to the same task&lt;/br&gt;
+The most common workflow I use with my task list is:&lt;/br&gt;
+· Jot down tasks briefly.&lt;/br&gt;
+· Drag tasks to the calendar by clicking “Schedule Task,” using time blocking.&lt;/br&gt;
+· Right-click on the current task to record focused time spent on it (and display it in the calendar as well).&lt;/br&gt;
+However, during this process, I encounter a problem: for a specific task, I can only assign one time slot. This means that if I drag a task to the calendar and mark it as “completed,” it will also disappear from the “Scheduled Tasks” sidebar. The next time I need to perform this task, it will show up as a “backlog” item, which disrupts the planning for repetitive tasks.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s more or less similar to project management as well. If users do want to manage the progress of tasks/projects, I should consider making it a main feature then.&lt;/p&gt;
+&lt;h2 id=&#34;i-reviewed-some-apps-on-the-market-to-see-how-they-fix-these-issues&#34;&gt;
+I reviewed some apps on the market to see how they fix these issues.
+&lt;a href=&#34;#i-reviewed-some-apps-on-the-market-to-see-how-they-fix-these-issues&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fantastical&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;They have this &lt;a href=&#34;https://flexibits.com/fantastical/scheduling&#34;&gt;&amp;ldquo;RSVP+Openings+Proposals&amp;rdquo;&lt;/a&gt; solution. But the thing is what if I don&amp;rsquo;t want to propose a time slot first? Also based on my experience with when2meet, it will be so rare to have our available time slots overlap so it&amp;rsquo;s also an issue if being done manually - you need to update your availability every time there&amp;rsquo;s any change.&lt;/li&gt;
+&lt;li&gt;I honestly was having trouble adding a task - it says I can type &amp;ldquo;todo&amp;rdquo; or &amp;ldquo;task&amp;rdquo; at the beginning when adding an event, but it prompts a full-day event and I cannot choose the list I want. (iOS)&lt;/li&gt;
+&lt;li&gt;Some other features like third-party calendars, time zones, and focus filters (kind of like different scenarios/scenes) are easy to describe and good to have.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Readdle Calendar&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;It has the best drag-and-drop experience on mobile devices. The monthly view even allows you to zoom in and out. It&amp;rsquo;s probably the best app. If they have this check availability and book time slot features I won&amp;rsquo;t develop mine though.&lt;/li&gt;
+&lt;li&gt;Task management is a premium feature. It gives you two buttons when creating a new event/task so you can choose. And it is quick basic.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Calendar&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;What they did is this &amp;ldquo;Check calendars for availability&amp;rdquo; feature that while you propose your available time window, it&amp;rsquo;ll automatically disable some because of conflicts. This works fine for me as well!&lt;/li&gt;
+&lt;li&gt;The task management here is basically the same as Readdle Calendar. So if I&amp;rsquo;d make my app differentiated I need to put some effort into this.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://sunsama.com&#34;&gt;Sunsama&lt;/a&gt;&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;What they do is this &amp;ldquo;timeboxing&amp;rdquo; so it&amp;rsquo;s task-oriented. You also plan how much time the task/step will take by dragging them to your calendar. It works fine if most of your scheduling is task-oriented.&lt;/li&gt;
+&lt;li&gt;They provide this 14-day free trial for ADHD, which is good and I think to some extent it makes sense because the app basically introduces a way/habit to do their scheduling, that is list out your tasks and then drag them to the calendar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://amie.so&#34;&gt;Amie.so&lt;/a&gt;&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Quite like Sunsama, but Sunsama is closer to Trello with the task board. Users can even drag emails to their calendars. I probably won&amp;rsquo;t consider combining email and calendar for now, maybe in the future.&lt;/li&gt;
+&lt;li&gt;Their website was too fancy and broke my Chrome.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://reclaim.ai&#34;&gt;Reclaim AI&lt;/a&gt;&lt;/strong&gt; (from Dropbox)
+&lt;ul&gt;
+&lt;li&gt;It basically has all that I want! AI scheduling, time slot booking, and the smart meeting to check team members&amp;rsquo; schedules. And they position themselves as a scheduling tool rather than another calendar app. So you can manage your tasks here and sync it with your own calendar app.&lt;/li&gt;
+&lt;li&gt;The workflow here is &amp;ldquo;Plan -&amp;gt; Prioritise -&amp;gt; Auto Schedule&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;You can customise how much time you need to stay focused, and you can even add time buffers for commuting.&lt;/li&gt;
+&lt;li&gt;A very interesting feature called &amp;ldquo;copy events&amp;rdquo;, more or like responding to the calendar sharing issue. It&amp;rsquo;ll show events on your personal calendar as &amp;ldquo;personal commitment&amp;rdquo; when you are sharing your whole availability with the team.&lt;/li&gt;
+&lt;li&gt;What they might wanna do next is to allow categorising tasks. So users can use it as an inbox or a place to plan the whole project and also each steps.&lt;/li&gt;
+&lt;li&gt;The Starter plan is $8/month/user billed yearly, kinda like in the middle.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://ticktick.com&#34;&gt;TickTick&lt;/a&gt;&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Also task-oriented. They offer various views including basic calendar views, kanban, timeline, and even Eisenhower matrix and sticky note. For me, I would rather not mix high-level project planning (like outlining the big steps, e.g. I wanna build a product, and I plan to do research first, then roll out surveys, then analyse data, prototype etc. It&amp;rsquo;s not necessarily related to certain time windows). So I was thinking maybe you can allow users to plan these steps ahead, but not necessarily shown on calendars, only if these steps were broken into detailed tasks with a deadline, like drafting questionnaires before Tuesday, then you&amp;rsquo;ll drag these tasks into your calendar.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Constant Reminder&amp;rdquo; is interesting cause the pop-up notifications for most to-do apps are not significant enough like an alarm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.notion.so/product/calendar&#34;&gt;Notion Calendar&lt;/a&gt; is too basic for now. &lt;a href=&#34;https://www.omnigroup.com/omnifocus/&#34;&gt;OmniFocus&lt;/a&gt; would be too complex and we probably won&amp;rsquo;t target that part of really pro users. Won&amp;rsquo;t dive into Outlook because the users who stick with Outlook probably will just keep using it&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;i-prioritised-what-should-be-studied-further-and-features-to-develop&#34;&gt;
+I prioritised what should be studied further and features to develop.
+&lt;a href=&#34;#i-prioritised-what-should-be-studied-further-and-features-to-develop&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Task management (and drag-and-drop experience) within calendars&lt;/li&gt;
+&lt;li&gt;Detailed logic behind AI scheduling and time slot booking&lt;/li&gt;
+&lt;li&gt;Cross-platform syncing and managing subscribed calendars&lt;/li&gt;
+&lt;li&gt;Other features
+&lt;ul&gt;
+&lt;li&gt;Time zones&lt;/li&gt;
+&lt;li&gt;Constant reminders&lt;/li&gt;
+&lt;li&gt;Time buffers&lt;/li&gt;
+&lt;li&gt;RSVPs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For the technical part, I think they are not difficult to the extent that no one has built before. It&amp;rsquo;s more like how we integrate all these features into one single app, and make things intuitive and logically connected to each other.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241113014953834.png&#34; alt=&#34;image-20241113014953834&#34;&gt;&lt;/p&gt;
+&lt;p&gt;So for task management, users can either add tasks directly, or they can create Kanban/Gantt chart first to manage a project on a higher level, then break the project down into separate steps and tasks. They can 1) drag and drop manually, 2) use AI to auto schedule, 3) prioritise some tasks first then use AI to auto schedule.&lt;/p&gt;
+&lt;p&gt;Tasks can be dragged to the calendar &amp;ndash;&amp;gt; So they become events. Or they can be assigned with deadlines &amp;ndash;&amp;gt; So they become &amp;ldquo;due items&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;You can also combine the Gantt chart with the calendar view if you wanna see the higher-level planning (e.g. from 1 August to 15 August we identify this as the &amp;ldquo;brainstorming phase&amp;rdquo; for a new project. It&amp;rsquo;s not a series of full-day events).&lt;/p&gt;
+&lt;p&gt;For AI scheduling, team and personal scenarios are actually quite similar. For teams, we&amp;rsquo;ll need to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Analyse everyone&amp;rsquo;s working patterns&lt;/li&gt;
+&lt;li&gt;Allow certain customisation (e.g. no weekends, at least one hour etc.)&lt;/li&gt;
+&lt;li&gt;Push notifications and give recommendations if a team member&amp;rsquo;s availability changed&lt;/li&gt;
+&lt;li&gt;If there&amp;rsquo;s no suitable slot, suggest some events for some members to be rescheduled (before that the app should check what events are not &amp;ldquo;locked&amp;rdquo; and also their priority preferences)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For booking slots, when displaying availability on the web, we should offer options that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Show availability only&lt;/li&gt;
+&lt;li&gt;Show events at the same time but users can hide details for certain events or calendars&lt;/li&gt;
+&lt;li&gt;Can compare with viewers&amp;rsquo; own calendars, or just give suggestions if they are all using this app&lt;/li&gt;
+&lt;li&gt;Time zone&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For cross-platform syncing and managing subscribed calendars:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;iCloud is a big issue because you need the user to generate an app-only password and go through the CalDAV configuration. Fantastical needs users to create a different account.
+&lt;ul&gt;
+&lt;li&gt;For Calinda, I was thinking to ease the pain of this account migration at the very beginning. Most people stick with iCloud, Google or Outlook because it&amp;rsquo;s time-consuming and difficult to migrate to other accounts.&lt;/li&gt;
+&lt;li&gt;Similar to what we manage subscribed calendars (will talk about this soon), duplicate.
+&lt;ul&gt;
+&lt;li&gt;iCloud calendars can be made public by generating &lt;code&gt;webcal://...&lt;/code&gt; which is fundamentally a &lt;code&gt;ics&lt;/code&gt; file.&lt;/li&gt;
+&lt;li&gt;Outlook and Google also support exporting calendars as &lt;code&gt;ics&lt;/code&gt; files.&lt;/li&gt;
+&lt;li&gt;If we can help doing this export-import by accessing the calendar (users grant us the access first), it&amp;rsquo;s probably more hassle-free because all they need to do is SSO login.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;For these one-way subscribed calendars, what Calinda does is duplicate that calendar, then users can edit on this duplicated version, and we keep detecting new changes on the original one. If there&amp;rsquo;s new changes we pop up notifications.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;i-started-to-build-the-prototype&#34;&gt;
+I started to build the prototype.
+&lt;a href=&#34;#i-started-to-build-the-prototype&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;I started with the main weekly view.&lt;span class=&#34;sidenote-number&#34;&gt;
+    &lt;span class=&#34;sidenote-box&#34;&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;Also I made a &amp;ldquo;Multi-size&amp;rdquo; button here so the height of each row is based on the busiest day of that week.&lt;/small&gt;
+        &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/span&gt; And then some components and pop-up windows, and some featured images for the landing page.&lt;/p&gt;
+&lt;p&gt;After I finished the first draft, I worked on the landing page. It&amp;rsquo;s probably 4 pm afternoon-ish, and I worked till 3 am the next day with no breaks - probably that&amp;rsquo;s what people call the flow of mind.&lt;/p&gt;
+&lt;p&gt;So here it is, &lt;a href=&#34;https://fanrongbin.com/calinda&#34;&gt;Calinda v2, desktop version.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/main-with-task.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;last-thing-i-wanna-see-if-its-commercially-acceptable-and-how-many-people-would-be-interested-in-it&#34;&gt;
+Last thing, I wanna see if it&amp;rsquo;s commercially acceptable, and how many people would be interested in it.
+&lt;a href=&#34;#last-thing-i-wanna-see-if-its-commercially-acceptable-and-how-many-people-would-be-interested-in-it&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Because this project is more or less like a productivity tool that I hope everyone can use, I really don&amp;rsquo;t care about margins if that&amp;rsquo;s the case so I did this &amp;ldquo;business&amp;rdquo; stuff at the very end - still, I need to know how to price it based on costs.&lt;/p&gt;
+&lt;p&gt;The major cost would be on APIs, charged according to tokens/words and API calls. Assuming that users usually input 100 words (directly chat with the app or start an AI scheduling) and we need 500-word outputs, and for each user on average they use 500 times the AI feature, that would be $5.20 for gpt-4o, $0.2 for gpt-4o-mini, $0.52 for gpt-3.5-turbo. It seems fine cause we definitely won&amp;rsquo;t use gpt-4o all the time.&lt;/p&gt;
+&lt;p&gt;Speaking of how it&amp;rsquo;s gonna work, after getting the prompt, the built-in model will check the time window we need, and then export the calendar within that time window as a CSV file, then we&amp;rsquo;ll send the file to the model. The size of our file will be calculated for the token we use as well, so if we assume that the number of total input characters is 10,000, the output characters ~2,000 (we only need a sentence about how we gonna schedule it to be used for our natural language scheduling function built-in, not a new CSV file or codes), and API calls still ~500, for gpt-4o-mini it&amp;rsquo;s $0.34. Seems also fine, will need to check the output quality later.&lt;/p&gt;
+&lt;p&gt;Go-to-market strategy would be firstly sending some invites on social media to productivity users, to gather reviews and to refine before going public. Then partner with them to do a bit marketing to create the word-of-mouth effect. Later some campaigns. The key is that this sector has already been well defined these years especially after the concept GTD was introduced, and we will be targeting all audience who&amp;rsquo;s interested in planning their schedules (whether they have formed this habit or not). We cover advanced features to attract pro users, and at the same time make them intuitive to stay close with general users.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Calinda is named after &amp;ldquo;Kalinda&amp;rdquo;, with &amp;ldquo;Cal&amp;rdquo; so you know it&amp;rsquo;s a calendar app.&lt;/p&gt;
+&lt;p&gt;Kalinda is a character in the CBS TV series &lt;em&gt;&lt;a href=&#34;https://www.imdb.com/title/tt1442462/&#34;&gt;The Good Wife&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>我毕业了</title>
       <link>https://fanrongbin.com/i-graduated/</link>
@@ -4242,11 +4492,12 @@ General
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Palatino&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino Linotype&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino LT STD&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Book Antiqua&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Times New Roman&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Biaodian Pro Serif&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Songti&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif KR&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Batang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--kai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Palatino&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino Linotype&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino LT STD&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Book Antiqua&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Times New Roman&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Biaodian Pro Serif&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Kaiti&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;STKaiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Kaiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Kaiti SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Kai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FZKaiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif KR&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Batang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;cursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--sans&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Helvetica Neue&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Helvetica&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Verdana&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apple-system&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BlinkMacSystemFont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Avenir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Segoe UI Variable&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Segoe UI&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Biaodian Pro Sans&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Heiti&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Heiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Hei&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;STHeiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;sans-serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--arrow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apple-system&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BlinkMacSystemFont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Calibri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Helvetica Neue&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Helvetica&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;system-ui&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Arial Unicode MS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;sans-serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Color Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--mono&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ui-monospace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SF&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mono&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Menlo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Monaco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Andale&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mono&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Consolas&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;monospace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c&#34;&gt;/* Updated: 2024-11-14 */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;--serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;et-book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Numeral LF Serif&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Songti GB&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif KR&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Batang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Palatino&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino Linotype&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino LT STD&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Book Antiqua&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	&lt;span class=&#34;nv&#34;&gt;--kai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;et-book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Numeral LF Serif&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Palatino&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino Linotype&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Palatino LT STD&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Book Antiqua&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Times New Roman&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Kaiti GB&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;STKaiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Kaiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Kaiti SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Kai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FZKaiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif SC&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Serif KR&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Batang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;cursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	&lt;span class=&#34;nv&#34;&gt;--sans&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apple-system&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BlinkMacSystemFont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Inter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Avenir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Helvetica Neue Book&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Helvetica&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Verdana&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Segoe UI Variable&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Segoe UI&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Biaodian Pro Sans&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Han Heiti&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Heiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Hei&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;STHeiti&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;sans-serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	&lt;span class=&#34;nv&#34;&gt;--arrow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apple-system&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BlinkMacSystemFont&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Calibri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Helvetica Neue&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Helvetica&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Arial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;system-ui&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Arial Unicode MS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;sans-serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Noto Color Emoji&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  	&lt;span class=&#34;nv&#34;&gt;--mono&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ui-monospace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SF&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mono&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Menlo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Monaco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Andale&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mono&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;monospace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This site is one of the &lt;a href=&#34;https://512kb.club/&#34;&gt;512kb.club&lt;/a&gt; and &lt;a href=&#34;https://1mb.club/&#34;&gt;1mb.club&lt;/a&gt; members.&lt;/p&gt;
 &lt;h2 id=&#34;stream-page&#34;&gt;
