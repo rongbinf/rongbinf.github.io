@@ -227,7 +227,7 @@ int main(){
 
 
 
-      <link rel="stylesheet" href="/css/main.min.8b0e12fac128ef3b1b51d008fa47c12b0bf807f308c4c57e389310ceff8c4e52.css" integrity="sha256-iw4S&#43;sEo7zsbUdAI&#43;kfBKwv4B/MIxMV&#43;OJMQzv&#43;MTlI=" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.min.022f0a450ad2ed6e06395a625a6a562e1bab854d3c4c8e42fdb788737aa8d17d.css" integrity="sha256-Ai8KRQrS7W4GOVpiWmpWLhurhU08TI5C/beIc3qo0X0=" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/han.min.css" type="text/css">
 
@@ -925,28 +925,58 @@ int main(){
     }
 
     function setupSidenotes() {
-        if (mainElement.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
-            const sidenoteLine = mainElement.querySelectorAll('.sidenote-line');
+    const sidenoteNumbers = mainElement.querySelectorAll('.sidenote-number');
 
-            sidenoteLine.forEach(element => {
-                element.style.border = 'none';
-            });
+    if (sidenoteNumbers.length >= 3 && window.innerWidth >= 1000) {
+        const sidenoteLine = mainElement.querySelectorAll('.sidenote-line');
+        sidenoteLine.forEach(element => {
+            element.style.border = 'none';
+        });
 
-            var jQueryScript = document.createElement('script');
-            jQueryScript.src = '/jquery-3.6.0.min.js';
-            document.head.appendChild(jQueryScript);
+        var jQueryScript = document.createElement('script');
+        jQueryScript.src = '/jquery-3.6.0.min.js';
+        document.head.appendChild(jQueryScript);
 
-            jQueryScript.onload = function () {
-                var jsPlumbScript = document.createElement('script');
-                jsPlumbScript.src = '/jsplumb.min.js';
-                document.head.appendChild(jsPlumbScript);
+        jQueryScript.onload = function () {
+            var jsPlumbScript = document.createElement('script');
+            jsPlumbScript.src = '/jsplumb.min.js';
+            document.head.appendChild(jsPlumbScript);
 
-                jsPlumbScript.onload = function () {
-                    initJsPlumb();
-                };
+            jsPlumbScript.onload = function () {
+                initJsPlumb();
             };
+        };
+    }
+
+    function applySidenoteMargins() {
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth <= 1000) {
+            sidenoteNumbers.forEach(sidenoteNumber => {
+                const sidenoteBox = sidenoteNumber.querySelector('.sidenote-box');
+                const afterSidenoteContent = sidenoteNumber.nextSibling;
+
+                if (sidenoteBox) {
+                    if (afterSidenoteContent && afterSidenoteContent.textContent.trim() !== "") {
+                        sidenoteBox.style.marginBottom = "0"; 
+                    }
+                }
+            });
+        } else {
+            sidenoteNumbers.forEach(sidenoteNumber => {
+                const sidenoteBox = sidenoteNumber.querySelector('.sidenote-box');
+                if (sidenoteBox) {
+                    sidenoteBox.style.marginBottom = "";  
+                }
+            });
         }
     }
+
+    applySidenoteMargins();
+
+    window.addEventListener('resize', applySidenoteMargins);
+}
+
 
     function initJsPlumb() {
         var jsPlumbCSS = document.createElement('link');
