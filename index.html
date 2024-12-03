@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta name="generator" content="Hugo 0.138.0">
+	<meta name="generator" content="Hugo 0.139.3">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -32,14 +33,16 @@
     <script
         type="application/ld+json"> { "@context" : "https://schema.org", "@type" : "WebSite", "name" : "Rongbin FAN", "url" : "https://fanrongbin.com/" } </script>
     <link rel="webmention" href="https://webmention.io/username/webmention" />
-    <div class="h-card" style="display:none;"> #nobridgy <p class="nobridge" id="nobridge" #nobridge>#nobridge</p> <span class="p-name">Rongbin Fan</span> <span
-            class="p-given-name">Rongbin</span> <span class="p-family-name">Fan</span> <img class="u-photo"
-            src="//fanrongbin.com/apple-touch-icon.png" alt="Rongbin's Avatar"/> <abbr class="u-pronoun" title="he/him/his">he/him/his</abbr>
+    <div class="h-card" style="display:none;"> #nobridgy <p class="nobridge" id="nobridge" #nobridge>#nobridge</p> <span
+            class="p-name">Rongbin Fan</span> <span class="p-given-name">Rongbin</span> <span
+            class="p-family-name">Fan</span> <img class="u-photo" src="//fanrongbin.com/apple-touch-icon.png"
+            alt="Rongbin's Avatar" /> <abbr class="u-pronoun" title="he/him/his">he/him/his</abbr>
         <a class="u-url" rel="me" href="//fanrongbin.com">w</a>, <a class="u-email"
             href="mailto:hi@fanrongbin.com">e</a>, <a class="u-email" href="mailto:fanrongbin0201@gmail.com">e-gmail</a>
         <span class="p-locality">Beijing</span>, <div class="p-category">human</div>. <div class="p-note">Are you
             willing to, able to, imagine an alternative reality?</div> <img class="u-featured"
-            src="//fanrongbin.com/blank-white.jpeg" alt="Rongbin's Fediverse Profile Photo"/> </div>
+            src="//fanrongbin.com/blank-white.jpeg" alt="Rongbin's Fediverse Profile Photo" />
+    </div>
     <link href="https://github.com/rongbinf" rel="me">
     <link href="mailto:hi@fanrongbin.com" rel="me">
     <link href="mailto:fanrongbin0201@gmail.com" rel="me">
@@ -60,40 +63,46 @@
         
         
         <section class="prototype">
-            <a href="/calinda/" target="_blank"><img src="https://img.fanrongbin.com/calinda-cover-v2-compressed.webp" width="300"></a>
-            <a href="/a-better-weixin/" target="_blank"><img src="https://img.fanrongbin.com/a-better-wechat-cover.webp" width="300"></a>
+            <a href="/calinda/" target="_blank"><img src="https://img.fanrongbin.com/calinda-cover-v2-compressed.webp"
+                    width="300"></a>
+            <a href="/a-better-weixin/" target="_blank"><img src="https://img.fanrongbin.com/a-better-wechat-cover.webp"
+                    width="300"></a>
         </section>
-        <section class="context"> 
+        <section class="context">
             
             <a href="/posts">
                 <div class="block block-link">
                     <h2>Blog posts</h2>
                 </div>
-                <div><p style="padding:0 0 0 2ch;margin:1ch 0 1ch 0;font-style:italic;font-size:90%;">Recent</p></div>
-            </a> <a href="">
+                <div>
+                    <p style="padding:0 0 0 2ch;margin:1ch 0 1ch 0;font-style:italic;font-size:90%;">Recent</p>
+                </div>
+            </a> 
+            <a href="">
                 <div id="post-1" class="block blog-title">
                     <h3 class="h3-blog-title placeholder">Placeholder</h3>
                     <p class="blog-date placeholder">Placeholder</p>
                 </div>
-            </a> <a href="">
+            </a> 
+            <a href="">
                 <div id="post-2" class="block blog-title">
                     <h3 class="h3-blog-title placeholder">Placeholder</h3>
                     <p class="blog-date placeholder">Placeholder</p>
                 </div>
-            </a> <a href="">
+            </a> 
+            <a href="">
                 <div id="post-3" class="block blog-title">
                     <h3 class="h3-blog-title placeholder">Placeholder</h3>
                     <p class="blog-date placeholder">Placeholder</p>
                 </div>
-            </a> <a href="/work" target="_self">
-                <div class="block block-link">
-                    <h2>Work with me</h2>
-                </div>
-            </a> <a href="/contact" target="_self">
+            </a> 
+            
+            <a href="/contact" target="_self">
                 <div class="block block-link">
                     <h2>Contact</h2>
                 </div>
-            </a></section>
+            </a>
+        </section>
         <section id="footer" class="footer">
             
             
@@ -114,34 +123,34 @@
 </body>
 
 <script>
-function htmlDecode(input){
-  var doc = new DOMParser().parseFromString(input, "text/html");
-  return doc.documentElement.textContent;
-}
-
-function updatePosts(data) {
-  data.forEach((post, index) => {
-    const postDiv = document.getElementById(`post-${index + 1}`);
-    if (postDiv) {
-      const titleElement = postDiv.querySelector('.h3-blog-title');
-      const dateElement = postDiv.querySelector('.blog-date');
-
-      titleElement.textContent = htmlDecode(post.title);
-      titleElement.classList.remove('placeholder');
-      dateElement.textContent = htmlDecode(post.date);
-      dateElement.classList.remove('placeholder');
-
-      postDiv.parentNode.href = post.url;
+    function htmlDecode(input) {
+        var doc = new DOMParser().parseFromString(input, "text/html");
+        return doc.documentElement.textContent;
     }
-  });
-}
 
-document.addEventListener('DOMContentLoaded', function () {
-  fetch('https://post-fetch.fanrongbin.com')
-    .then(response => response.json())
-    .then(data => updatePosts(data))
-    .catch(error => console.error('Error fetching posts:', error));
-});
+    function updatePosts(data) {
+        data.forEach((post, index) => {
+            const postDiv = document.getElementById(`post-${index + 1}`);
+            if (postDiv) {
+                const titleElement = postDiv.querySelector('.h3-blog-title');
+                const dateElement = postDiv.querySelector('.blog-date');
+
+                titleElement.textContent = htmlDecode(post.title);
+                titleElement.classList.remove('placeholder');
+                dateElement.textContent = htmlDecode(post.date);
+                dateElement.classList.remove('placeholder');
+
+                postDiv.parentNode.href = post.url;
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('https://post-fetch.fanrongbin.com')
+            .then(response => response.json())
+            .then(data => updatePosts(data))
+            .catch(error => console.error('Error fetching posts:', error));
+    });
 </script>
 
 
@@ -149,4 +158,5 @@ document.addEventListener('DOMContentLoaded', function () {
 <script
     defer> window.onload = function () { document.addEventListener('touchstart', function (event) { if (event.touches.length > 1) { event.preventDefault(); } }); var lastTouchEnd = 0; document.addEventListener('touchend', function (event) { var now = (new Date()).getTime(); if (now - lastTouchEnd <= 300) { event.preventDefault(); } lastTouchEnd = now; }, false); document.addEventListener('gesturestart', function (event) { event.preventDefault(); }); }</script>
 <script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
 </html>
