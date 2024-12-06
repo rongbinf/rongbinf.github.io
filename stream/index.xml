@@ -6,8 +6,73 @@
     <description>Recent content on Stream  in Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 10 Oct 2024 12:04:42 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2024 22:21:26 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/stream/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://fanrongbin.com/stream/no-one-clicks-those-links/</link>
+      <pubDate>Fri, 06 Dec 2024 22:21:26 +0000</pubDate>
+      <guid>https://fanrongbin.com/stream/no-one-clicks-those-links/</guid>
+      <description>
+        
+
+        
+
+        
+
+        
+  
+        &lt;p&gt;I am afraid that readers today are not willing to jump from one hyperlink to another.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.nytimes.com/interactive/2024/11/02/opinion/vote-harris-2024-election.html&#34;&gt;This&lt;/a&gt; only could be called a good practice when readers is in their spirit of open-minded exploration mood. If I&amp;rsquo;m being lazy, I&amp;rsquo;ll probably skip the whole text if the main subject you are talking about is &lt;em&gt;hidden&lt;/em&gt; behind a blue, underlined single word - I do not know what&amp;rsquo;s coming after clicking the &lt;em&gt;word&lt;/em&gt; so you are forcing me to click (Just like this &lt;em&gt;This&lt;/em&gt; at the beginning).&lt;/p&gt;
+&lt;p&gt;而且，&lt;a href=&#34;https://blog.yitianshijie.net/2024/11/07/hypertextual-writing/&#34;&gt;有沒有一種可能：鏈接會爛掉&lt;/a&gt;。所以最近在写带外部链接的文本时，往往都会用 The Wayback Machine 把网页存一下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;javascript&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://web.archive.org/save/&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;寄托在 Internet Archive 能存活下去的前提。&lt;/p&gt;
+
+      </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://fanrongbin.com/stream/data-centers-power-grids/</link>
+      <pubDate>Fri, 06 Dec 2024 18:21:57 +0000</pubDate>
+      <guid>https://fanrongbin.com/stream/data-centers-power-grids/</guid>
+      <description>
+        
+
+        
+
+        
+
+        
+  
+        &lt;p&gt;&lt;a href=&#34;https://www.bloomberg.com/graphics/2024-ai-data-centers-power-grids&#34;&gt;Globally&lt;/a&gt;, there are more than 7,000 data centers built or in various stages of development, up from 3,600 in 2015.&lt;/p&gt;
+&lt;p&gt;These data centers have the capacity to consume a combined 508 terawatt hours of electricity per year if they were to run constantly. That’s greater than the total annual electricity production for Italy or Australia.&lt;/p&gt;
+&lt;p&gt;By 2034, global energy consumption by data centers is expected to top 1,580 TWh, about as much as is used by all of India.&lt;/p&gt;
+&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
+&lt;p&gt;“This is far outside of the normal, safe operating protocol,” Dominion told regulators.&lt;/p&gt;
+
+      </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://fanrongbin.com/stream/we-should-not-use-ai-image-if-its-bad/</link>
+      <pubDate>Fri, 06 Dec 2024 18:05:01 +0000</pubDate>
+      <guid>https://fanrongbin.com/stream/we-should-not-use-ai-image-if-its-bad/</guid>
+      <description>
+        
+
+        
+
+        
+
+        
+  
+        &lt;p&gt;We really should not use AI images if they&amp;rsquo;re bad and creating uncanny-valley-ish feeling:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241206180446054.png&#34; alt=&#34;image-20241206180446054&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/image-20241206180436783.png&#34; alt=&#34;image-20241206180436783&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The thing is not everyone has the intuition not to include &lt;em&gt;everything&lt;/em&gt; they try to convey in a single image.&lt;/p&gt;
+
+      </description>
+    </item>
     <item>
       <title></title>
       <link>https://fanrongbin.com/stream/ds_store/</link>
