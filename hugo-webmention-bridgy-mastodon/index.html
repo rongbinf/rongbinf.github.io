@@ -282,7 +282,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="sd">          ALL_CHANGED_FILES=&#34;${{ steps.changed-files.outputs.all_changed_files }}&#34;
 </span></span></span><span class="line"><span class="cl"><span class="sd">          for file in $ALL_CHANGED_FILES; do
 </span></span></span><span class="line"><span class="cl"><span class="sd">            echo &#34;$file was changed&#34;
-</span></span></span><span class="line"><span class="cl"><span class="sd">          done</span><span class="w">          
+</span></span></span><span class="line"><span class="cl"><span class="sd">          done</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">send webmentions</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">steps.changed-files.outputs.all_changed_files != &#39;&#39;</span><span class="w"> </span><span class="c"># 判断不为空才运行</span><span class="w">
@@ -295,7 +295,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="sd">              echo &#34;Sending Webmention for $POST_URL&#34;
 </span></span></span><span class="line"><span class="cl"><span class="sd">              curl -i -d source=${POST_URL} -d target=https://fed.brid.gy https://fed.brid.gy/webmention
 </span></span></span><span class="line"><span class="cl"><span class="sd">            fi
-</span></span></span><span class="line"><span class="cl"><span class="sd">          done</span><span class="w">          
+</span></span></span><span class="line"><span class="cl"><span class="sd">          done</span><span class="w">
 </span></span></span></code></pre></div><p>你还可以接着使用<code>${POST_URL}</code>trigger webmention.app的webhook。</p>
 <hr>
 <p>最初是看到IndieWeb上关于webmention的介绍，于是想着要不要自己也折腾一下，搜索到<a href="https://aaronparecki.com/2018/06/30/11/your-first-webmention">Aaron Parecki的博文</a>，以及<a href="https://www.jayeless.net/2021/02/integrating-webmentions-into-hugo.html">Jayeless.net的博文</a>后，觉得配置起来也不是很难嘛，然后就开始了……用第三方服务接收很简单，主要是一直卡在Bridgy这边。我新建了一个<a href="https://fanrongbin.com/stream">Stream</a>页面，相当于有了自己的一条时间轴，为了传上联邦宇宙，需要把每条小note以锚点<code>#id</code>的方式传到Bridgy。但，用webmention.app或者是telegraph.p3k.io始终没法发现到<code>https://fed.brid.gy/</code>这条链接，导致我没法API传出去，后来：</p>
