@@ -191,10 +191,14 @@ section.prototype>a>img:hover {
     padding-bottom: 3vh;
 }
 
+.block-link:hover {
+    cursor: pointer;
+}
+
 .block-link:hover, .block-link:active, .block-link:focus, .block-link:focus-visible {
     background: var(--link-color);
     color: #fff;
-    cursor: default;
+    /* cursor: default; */
 }
 
 .blog-title:hover, .blog-title:active, .blog-title:focus, .blog-title:focus-visible {

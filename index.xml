@@ -6,7 +6,7 @@
     <description>Recent content  in Rongbin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 18 Jan 2025 21:55:34 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2025 00:16:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024年终：在无知的森林里，喊出空旷的再见</title>
@@ -446,8 +446,7 @@ Last thing, I wanna see if it&amp;rsquo;s commercially acceptable, and how many 
 &lt;ul&gt;
 &lt;li&gt;Active: (regardless of login status, as long as identifiable)
 &lt;blockquote&gt;
-&lt;p&gt;We define a daily active unique (“DAUq”) as a user whom we can identify with a unique identifier who has visited a page on the Reddit website, &lt;a href=&#34;https://www.reddit.com&#34;&gt;www.reddit.com&lt;/a&gt;, or opened a Reddit application at least once during a 24-hour period.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;We define a daily active unique (“DAUq”) as a user whom we can identify with a unique identifier who has visited a page on the Reddit website, &lt;a href=&#34;https://www.reddit.com&#34;&gt;www.reddit.com&lt;/a&gt;, or opened a Reddit application at least once during a 24-hour period.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Daily active uniques&lt;/strong&gt;, DAUq (active): 73.1m (reached 60m in Q1 2023, jumped by 7.1m in Q4)&lt;span class=&#34;sidenote-number&#34;&gt;
     &lt;span class=&#34;sidenote-box&#34;&gt;
@@ -484,8 +483,7 @@ Last thing, I wanna see if it&amp;rsquo;s commercially acceptable, and how many 
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;ARPU&lt;/strong&gt;: quarterly revenue in a given place, divided by the average DAUq in that region for the quarter
 &lt;blockquote&gt;
-&lt;p&gt;We define average revenue per unique (“ARPU”) as quarterly revenue in a given geography divided by the average DAUq in that geography.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;We define average revenue per unique (“ARPU”) as quarterly revenue in a given geography divided by the average DAUq in that geography.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;2023 Q4: all users $3.43, US $5.51, excl. US $1.34&lt;/li&gt;
 &lt;li&gt;Seasonality: Q4 the highest, Q1 the lowest (contributed to the seasonality in ad business, holiday season and promotion), with 2022 total revenue at ~$667m and 2023 at ~$804m&lt;/li&gt;
@@ -540,8 +538,7 @@ Data Licensing and User Economy
 &lt;ul&gt;
 &lt;li&gt;对活跃的定义：（登不登录都算，只要能够识别）
 &lt;blockquote&gt;
-&lt;p&gt;We define a daily active unique (“DAUq”) as a user whom we can identify with a unique identifier who has visited a page on the Reddit website, &lt;a href=&#34;https://www.reddit.com&#34;&gt;www.reddit.com&lt;/a&gt;, or opened a Reddit application at least once during a 24-hour period.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;We define a daily active unique (“DAUq”) as a user whom we can identify with a unique identifier who has visited a page on the Reddit website, &lt;a href=&#34;https://www.reddit.com&#34;&gt;www.reddit.com&lt;/a&gt;, or opened a Reddit application at least once during a 24-hour period.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;日活&lt;/strong&gt; DAUq (active)：73.1m（23年Q1破60m，23年Q4突然较Q3涨7.1m）&lt;span class=&#34;sidenote-number&#34;&gt;
     &lt;span class=&#34;sidenote-box&#34;&gt;
@@ -578,8 +575,7 @@ Data Licensing and User Economy
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;ARPU&lt;/strong&gt;：给定地区的季度收入，除以给定地区该季度的平均DAUq
 &lt;blockquote&gt;
-&lt;p&gt;We define average revenue per unique (“ARPU”) as quarterly revenue in a given geography divided by the average DAUq in that geography.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;We define average revenue per unique (“ARPU”) as quarterly revenue in a given geography divided by the average DAUq in that geography.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;23年Q4全体$3.43：美国$5.51、美国以外$1.34&lt;/li&gt;
 &lt;li&gt;收入有明显季节特征：Q1-Q4递增（来自广告业务的季节特征，Q4年末促销冲单等等，广告做的多） ，22年总营收$~6.67亿，23年$~8.04亿。&lt;/li&gt;
@@ -1022,13 +1018,11 @@ Why I leave platforms
 &lt;p&gt;1980年初，Eno在接受Charles Amirkhanian采访时说道：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The Oblique Strategies evolved from me being in a number of working situations when the panic of the situation - particularly in studios - tended to make me quickly forget that there were others ways of working and that there were tangential ways of attacking problems that were in many senses more interesting than the direct head-on approach. If you&amp;rsquo;re in a panic, you tend to take the head-on approach because it seems to be the one that&amp;rsquo;s going to yield the best results Of course, that often isn&amp;rsquo;t the case - it&amp;rsquo;s just the most obvious and - apparently - reliable method. The function of the Oblique Strategies was, initially, to serve as a series of prompts which said, &amp;ldquo;Don&amp;rsquo;t forget that you could adopt &lt;em&gt;this&lt;/em&gt; attitude,&amp;rdquo; or &amp;ldquo;Don&amp;rsquo;t forget you could adopt &lt;em&gt;that&lt;/em&gt; attitude.&lt;/p&gt;
-&lt;p&gt;The first Oblique Strategy said &amp;ldquo;Honour thy error as a hidden intention.&amp;rdquo; And, in fact, Peter&amp;rsquo;s first Oblique Strategy - done quite independently and before either of us had become conscious that the other was doing that - was &amp;hellip;I think it was &amp;ldquo;Was it really a mistake?&amp;rdquo; which was, of course, much the same kind of message. Well, I collected about fifteen or twenty of these and then I put them onto cards. At the same time, Peter had been keeping a little book of messages to himself as regards painting, and he&amp;rsquo;d kept those in a notebook. We were both very surprised to find the other not only using a similar system but also many of the messages being absolutely overlapping, you know&amp;hellip;there was a complete correspondence between the messages. So subsequently we decided to try to work out a way of making that available to other people, which we did; we published them as a pack of cards, and they&amp;rsquo;re now used by quite a lot of different people, I think.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;The first Oblique Strategy said &amp;ldquo;Honour thy error as a hidden intention.&amp;rdquo; And, in fact, Peter&amp;rsquo;s first Oblique Strategy - done quite independently and before either of us had become conscious that the other was doing that - was &amp;hellip;I think it was &amp;ldquo;Was it really a mistake?&amp;rdquo; which was, of course, much the same kind of message. Well, I collected about fifteen or twenty of these and then I put them onto cards. At the same time, Peter had been keeping a little book of messages to himself as regards painting, and he&amp;rsquo;d kept those in a notebook. We were both very surprised to find the other not only using a similar system but also many of the messages being absolutely overlapping, you know&amp;hellip;there was a complete correspondence between the messages. So subsequently we decided to try to work out a way of making that available to other people, which we did; we published them as a pack of cards, and they&amp;rsquo;re now used by quite a lot of different people, I think.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;我们也可以从这组卡片的第一个版本中，得到他们的初衷：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;These cards evolved from our separate observations on the principles underlying what we were doing. Sometimes they were recognized in retrospect (intellect catching up with intuition), sometimes they were identified as they were happening, sometimes they were formulated.&lt;/p&gt;
-&lt;p&gt;They can be used as a pack (a set of possibilities being continuously reviewed in the mind) or by drawing a single card from the shuffled pack when a dilemma occurs in a working situation. In this case, the card is trusted even if its appropriateness is quite unclear. They are not final, as new ideas will present themselves, and others will become self-evident.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;They can be used as a pack (a set of possibilities being continuously reviewed in the mind) or by drawing a single card from the shuffled pack when a dilemma occurs in a working situation. In this case, the card is trusted even if its appropriateness is quite unclear. They are not final, as new ideas will present themselves, and others will become self-evident.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;观察我们日常的创作，他们背后大多衍生于：回顾（智力追随直觉）、识别、公式。这些卡片可以作为一组，也可以随机抽出一张来使用。不论卡片上的prompt是否完全适合，既然我们有所判断，ideas本身就能得到自我确证。&lt;/p&gt;
 &lt;p&gt;（参考自 &lt;a href=&#34;http://www.rtqe.net/ObliqueStrategies/OSintro.html&#34;&gt;&lt;em&gt;A Primer on Oblique Strategizing&lt;/em&gt;&lt;/a&gt; by Gregory Taylor 1997）&lt;/p&gt;
 &lt;h2 id=&#34;卡片列表&#34;&gt;
@@ -1295,66 +1289,51 @@ Why I leave platforms
 &lt;a href=&#34;#%e6%91%98%e5%bd%95&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;It took me a long time to figure out why founders don&amp;rsquo;t listen. At first I thought it was mere stubbornness. That&amp;rsquo;s part of the reason, but another and probably more important reason is that so much about startups is &lt;a href=&#34;http://www.paulgraham.com/before.html&#34;&gt;counterintuitive&lt;/a&gt;. And when you tell someone something counterintuitive, what it sounds to them is wrong. So the reason founders don&amp;rsquo;t listen to us is that they don&amp;rsquo;t &lt;em&gt;believe&lt;/em&gt; us. At least not till experience teaches them otherwise.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;It took me a long time to figure out why founders don&amp;rsquo;t listen. At first I thought it was mere stubbornness. That&amp;rsquo;s part of the reason, but another and probably more important reason is that so much about startups is &lt;a href=&#34;http://www.paulgraham.com/before.html&#34;&gt;counterintuitive&lt;/a&gt;. And when you tell someone something counterintuitive, what it sounds to them is wrong. So the reason founders don&amp;rsquo;t listen to us is that they don&amp;rsquo;t &lt;em&gt;believe&lt;/em&gt; us. At least not till experience teaches them otherwise.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.paulgraham.com/users.html&#34;&gt;What I&amp;rsquo;ve Learned from Users -  Paul Graham&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;My shortest short stories are like little dreams I’m having—I forgive myself for not totally knowing the place, not totally knowing the people, and not even totally knowing their exact problems or the exact problem of the place. Did I convey the feeling I wanted? Great. We out.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;My shortest short stories are like little dreams I’m having—I forgive myself for not totally knowing the place, not totally knowing the people, and not even totally knowing their exact problems or the exact problem of the place. Did I convey the feeling I wanted? Great. We out.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://thecreativeindependent.com/people/writer-bud-smith-on-putting-in-the-work/&#34;&gt;Writer Bud Smith on putting in the work – The Creative Independent&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;It got me thinking that way as well. I was always obsessed with the Saturn return idea—the age between 27 and 32, where basically you enter a certain kind of space of criticality where life can be super challenging, but it allows you to figure out who your true self is. I also have a lot of references to home in my own work, so one thing that was really interesting about collaborating in that way was that in a way we both had similar issues. There are formulas that think about the geometry of space and light and textures and the way that they align with our own personal metaphors, our own personal mythologies. And she was centering her frame line, her obsession with the black rodeo culture in the South. We’re both from the South, but I feel like she had more experience with that than I did.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;It got me thinking that way as well. I was always obsessed with the Saturn return idea—the age between 27 and 32, where basically you enter a certain kind of space of criticality where life can be super challenging, but it allows you to figure out who your true self is. I also have a lot of references to home in my own work, so one thing that was really interesting about collaborating in that way was that in a way we both had similar issues. There are formulas that think about the geometry of space and light and textures and the way that they align with our own personal metaphors, our own personal mythologies. And she was centering her frame line, her obsession with the black rodeo culture in the South. We’re both from the South, but I feel like she had more experience with that than I did.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://thecreativeindependent.com/people/artist-jacolby-satterwhite-on-trusting-your-own-process/&#34;&gt;Artist Jacolby Satterwhite on trusting your own process – The Creative Independent&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;When I let myself be permeated by this thought – that I might be stuck with certain inner disturbances forever – I definitely feel a bit of peevishness in response: &amp;ldquo;Wait, I&amp;rsquo;m never going to get to the problem-free phase? That&amp;rsquo;s not what I signed up for!&amp;rdquo; But then comes the sense of a heavy burden having been lifted. The pressure&amp;rsquo;s off. I get to unclench, relax, and fall back into the life I&amp;rsquo;m living. Far from this being dispiriting, I find myself much more motivated to get stuck in. It turns out my really big problem was thinking I might one day get rid of all my problems, when the truth is that there&amp;rsquo;s no escaping the mucky, malodorous compost-heap of this reality. Which is OK, actually. Compost is the stuff that helps things grow.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;When I let myself be permeated by this thought – that I might be stuck with certain inner disturbances forever – I definitely feel a bit of peevishness in response: &amp;ldquo;Wait, I&amp;rsquo;m never going to get to the problem-free phase? That&amp;rsquo;s not what I signed up for!&amp;rdquo; But then comes the sense of a heavy burden having been lifted. The pressure&amp;rsquo;s off. I get to unclench, relax, and fall back into the life I&amp;rsquo;m living. Far from this being dispiriting, I find myself much more motivated to get stuck in. It turns out my really big problem was thinking I might one day get rid of all my problems, when the truth is that there&amp;rsquo;s no escaping the mucky, malodorous compost-heap of this reality. Which is OK, actually. Compost is the stuff that helps things grow.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.oliverburkeman.com/never&#34;&gt;What if you never sort your life out? | Oliver Burkeman&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在台灣教育長大的學生常常會覺得追求頂尖是天才才要考慮的事情，但其實我覺得頂尖和平庸往往是一種自我實現的預言。覺得自己平庸的人一直在做很普通的事情，最終自然會趨於平庸；追求頂尖的人則會因為一直在做困難的事而不斷接近頂尖。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;在台灣教育長大的學生常常會覺得追求頂尖是天才才要考慮的事情，但其實我覺得頂尖和平庸往往是一種自我實現的預言。覺得自己平庸的人一直在做很普通的事情，最終自然會趨於平庸；追求頂尖的人則會因為一直在做困難的事而不斷接近頂尖。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;最後補充一下，我並不是在說頂尖人才都沒學歷，也不是在說沒學歷代表你更有機會成為頂尖人才。我想表達的是：對於追求頂尖的人來說，要不要拿那個學歷大多數時候是個性問題，而不是能力問題。有些人就是極度厭惡浪費時間在沒意義的事情上，特別是當你有更困難、更有趣的事情想做的時候。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;最後補充一下，我並不是在說頂尖人才都沒學歷，也不是在說沒學歷代表你更有機會成為頂尖人才。我想表達的是：對於追求頂尖的人來說，要不要拿那個學歷大多數時候是個性問題，而不是能力問題。有些人就是極度厭惡浪費時間在沒意義的事情上，特別是當你有更困難、更有趣的事情想做的時候。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://sheracaolity.ghost.io/degree/&#34;&gt;論學歷 - Sheracaolity&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我犹豫入群的原因就是如此，从一个沉默的群，加到一个新群，新群刚开始热闹一阵后很快就陷入了沉默。毕竟毕业将近 20年了，还能保持联系的同学寥寥无几，我们能聊的话题，翻来覆去还是关于高中时期短暂的交集。
 ⋯⋯
-为了弥合人与人之间的距离，为了找到失去的附近性，我们应该减少屏幕时间，多出去走走。去和那些生气腾腾的人交谈，去跟久未谋面的朋友联系，重新找回丢掉的中圈友谊。&lt;/p&gt;
-&lt;/blockquote&gt;
+为了弥合人与人之间的距离，为了找到失去的附近性，我们应该减少屏幕时间，多出去走走。去和那些生气腾腾的人交谈，去跟久未谋面的朋友联系，重新找回丢掉的中圈友谊。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://rigeng100.com/post/dayone/ooawr5yscr46c7hnvt4jhsqex2tg/2022-02-13&#34;&gt;找回丢掉的中圈友谊 - 日更100&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;过去和现在的原因都一样：太懒——以前嫌麻烦，后来有一段时间觉得找起来真方便于是就满足了；太傲慢——以为在技术加持下可以一年完成原本需要十年的浸润；太庸俗——分不清获取信息与学习。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;过去和现在的原因都一样：太懒——以前嫌麻烦，后来有一段时间觉得找起来真方便于是就满足了；太傲慢——以为在技术加持下可以一年完成原本需要十年的浸润；太庸俗——分不清获取信息与学习。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.yitianshijie.net/2022/07/13/why-cant-we-find-good-information-now/&#34;&gt;为什么现在找不到好信息 - 一天世界&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;But today, it seems that the term web2 is being perpetuated as a strawman to encompass all the follies of human nature and civilisation with some vague underpinning of centralised finance and some blockchain integrations in the fold. A marketing and PR effort to rewrite history and to redefine the internet and the WWW with an arbitrary hard line—before and after blockchain. The implication is that everything in this world, software or otherwise, that isn’t somehow connected to a distributed cryptographic ledger, is web2, and that it is bad.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;But today, it seems that the term web2 is being perpetuated as a strawman to encompass all the follies of human nature and civilisation with some vague underpinning of centralised finance and some blockchain integrations in the fold. A marketing and PR effort to rewrite history and to redefine the internet and the WWW with an arbitrary hard line—before and after blockchain. The implication is that everything in this world, software or otherwise, that isn’t somehow connected to a distributed cryptographic ledger, is web2, and that it is bad.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://nadh.in/blog/web2-web3/&#34;&gt;But, aren&amp;rsquo;t you folks web2? - nadh.in&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这似乎又开始了让人熟悉的老剧情。场景的吸引力，模式的吸引力，大过一切，对入局的紧张大过一切，喊出做中国OpenAI的口号大过一切，小圈子的互相鼓掌也大过了一切，包括对OpenAI究竟怎么成了今天的样子的讨论。&lt;/p&gt;
 &lt;p&gt;在这些热闹的朋友圈之外，关于OpenAI的各种研究也都在那里放着：&lt;/p&gt;
 &lt;p&gt;OpenAI起始于一群在通用人工智能备受怀疑时仍然相信它能成的人，而非起始于着急“做另一个DeepMind”；它在屡屡碰钉子后设计了针对性极强的新的投资回报协议，而非单纯的有钱就上；它有一个提供着源源不断算力并可以从中获利的互联网巨头的支持，甚至亲身证明了没有这种支持只靠有钱有闲的大佬是做不成这个事的；甚至，它已经在暴露出只被一小群人来掌控一个通用大模型、一个所谓未来的互联网基础的问题所在。&lt;/p&gt;
 &lt;p&gt;而这些可能才是后发者更应该提前考虑的问题。&lt;/p&gt;
-&lt;p&gt;有些果实很高，有些果实已经落到低处。王慧文想上船，可能需要先从朋友圈出来。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;有些果实很高，有些果实已经落到低处。王慧文想上船，可能需要先从朋友圈出来。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.pingwest.com/a/277269&#34;&gt;着急要上ChatGPT这艘船的王慧文，被他的朋友们当成了船票 - 品玩&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;I used to blame advertisers for that restlessness and dissatisfaction, but I don’t think that’s right. We were already restless; we always have been. The advertisers just figured out how to nurture, tend, exacerbate, and capitalize on the pre-existing condition, that innate restlessness, promising that something new is going to set all to rights. When the flashing sidebar connects that hand lotion, those hiking boots, a beach vacation, or some rugged SUV with satisfaction, joy, and inner peace, it sure feels like we’d be suckers not to buy it. And when that thing inevitably disappoints, we hardly even notice. There’s always something new to buy. That narrative of elusive satisfaction isn’t just something we’re repeatedly being told; it is a story we’re literally buying into all the time. No surprise, then, that when our beloved to whom we once upon a time “pledged our troth” inevitably disappoints, we start thinking it might be time to get a new beloved.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;I used to blame advertisers for that restlessness and dissatisfaction, but I don’t think that’s right. We were already restless; we always have been. The advertisers just figured out how to nurture, tend, exacerbate, and capitalize on the pre-existing condition, that innate restlessness, promising that something new is going to set all to rights. When the flashing sidebar connects that hand lotion, those hiking boots, a beach vacation, or some rugged SUV with satisfaction, joy, and inner peace, it sure feels like we’d be suckers not to buy it. And when that thing inevitably disappoints, we hardly even notice. There’s always something new to buy. That narrative of elusive satisfaction isn’t just something we’re repeatedly being told; it is a story we’re literally buying into all the time. No surprise, then, that when our beloved to whom we once upon a time “pledged our troth” inevitably disappoints, we start thinking it might be time to get a new beloved.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://comment.org/repair-and-remain/&#34;&gt;Repair and Remain - Comment Magazine&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;And like the small towns of Sinclair Lewis’ day, these vertical communities have the ability to use social ostracism to punish those who deviate from consensus norms and political objectives.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;And like the small towns of Sinclair Lewis’ day, these vertical communities have the ability to use social ostracism to punish those who deviate from consensus norms and political objectives.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;We now live in a world where our communities exist in three dimensions — the familiar hodgepodge of local humanity in two dimensions, and our self-sorted online spaces in a third.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;We now live in a world where our communities exist in three dimensions — the familiar hodgepodge of local humanity in two dimensions, and our self-sorted online spaces in a third.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;So for now and for the foreseeable future, our public goods are provided locally, but our social interaction happens in the cloud. In theory, this could be a dangerous recipe.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;So for now and for the foreseeable future, our public goods are provided locally, but our social interaction happens in the cloud. In theory, this could be a dangerous recipe.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;So I’m worried about the future of our public goods. I’m worried that the online space will fragment and degrade horizontal communities, but will never manage to fully replace them either. We need to find some way to get along with the human beings who live within physical proximity to us, even as we continue to spend much of our time online. Vertical communities must make their peace with horizontal communities…somehow.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;So I’m worried about the future of our public goods. I’m worried that the online space will fragment and degrade horizontal communities, but will never manage to fully replace them either. We need to find some way to get along with the human beings who live within physical proximity to us, even as we continue to spend much of our time online. Vertical communities must make their peace with horizontal communities…somehow.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://noahpinion.substack.com/p/vertical-communities&#34;&gt;Vertical communities - by Noah Smith - Noahpinion&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;其他&#34;&gt;
 其他
@@ -1440,8 +1419,7 @@ tl;dr 小结
 &lt;ul&gt;
 &lt;li&gt;할아버지: 네 어머니를 &lt;strong&gt;데리고&lt;/strong&gt; 시장에 가라.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;할아버지: 네 어머니를 &lt;strong&gt;모시고&lt;/strong&gt; 시장에 가라.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;对听者상대相對-높임법&#34;&gt;
 对听者：상대(相對) 높임법
 &lt;a href=&#34;#%e5%af%b9%e5%90%ac%e8%80%85%ec%83%81%eb%8c%80%e7%9b%b8%e5%b0%8d-%eb%86%92%ec%9e%84%eb%b2%95&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -1501,20 +1479,17 @@ tl;dr 小结
 &lt;li&gt;할아버지, 어머니&lt;u&gt;가&lt;/u&gt; 진지 잡수시라고 &lt;u&gt;하였습니다&lt;/u&gt;. (✅)&lt;/li&gt;
 &lt;li&gt;할아버지, 어머니&lt;u&gt;가&lt;/u&gt; 진지 잡수시라고 &lt;u&gt;하셨습니다&lt;/u&gt;. (✅)&lt;/li&gt;
 &lt;li&gt;할아버지, 어머니&lt;u&gt;께서&lt;/u&gt; 진지 잡수시라고 하셨습니다. (❌)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;扩展사물존칭事物尊稱&#34;&gt;
 扩展：사물존칭(事物尊稱)
 &lt;a href=&#34;#%e6%89%a9%e5%b1%95%ec%82%ac%eb%ac%bc%ec%a1%b4%ec%b9%ad%e4%ba%8b%e7%89%a9%e5%b0%8a%e7%a8%b1&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;事物尊称指的是“所属物”本身作为句子主语时，其跟随的谓词被加上了“-(으)시-”，是一种敬语的滥用。因为这个现象大概是伴随着20世纪末百货公司、服务业的兴起而来，现代韩语中已经非常熟悉这种用法，所以如果不这么使用，反而会觉得奇怪。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;고객님, 주무하신 &lt;strong&gt;피자(가)&lt;/strong&gt; &lt;u&gt;나오셨습니다&lt;/u&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;고객님, 주무하신 &lt;strong&gt;피자(가)&lt;/strong&gt; &lt;u&gt;나오셨습니다&lt;/u&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;避免的方法一般是转换主语为人。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;고객님&lt;/strong&gt;, 주무하신 피자(를) 가져가세요.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;고객님&lt;/strong&gt;, 주무하신 피자(를) 가져가세요.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;关于这个话题的讨论还涉及到尊重的“直接或间接”、韩语的“大小主语”等等，有兴趣的读者可以再搜索一下。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;참고&#34;&gt;
@@ -1677,8 +1652,7 @@ A가/는 B에게/한테 N을 &lt;u&gt;주다&lt;/u&gt;
 &lt;li&gt;平辈之间&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;그는 생일 선물로 친구에게 책을 줬다.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;그는 생일 선물로 친구에게 책을 줬다.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;a가는-c께-n을-u드리다u&#34;&gt;
 A가/는 C께 N을 &lt;u&gt;드리다&lt;/u&gt;
 &lt;a href=&#34;#a%ea%b0%80%eb%8a%94-c%ea%bb%98-n%ec%9d%84-u%eb%93%9c%eb%a6%ac%eb%8b%a4u&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -1688,8 +1662,7 @@ A가/는 C께 N을 &lt;u&gt;드리다&lt;/u&gt;
 &lt;li&gt;&lt;strong&gt;C为需要尊敬的人（下同）&lt;/strong&gt;，如长辈或陌生人，对“给长辈”使用敬语：께, 주다 -&amp;gt; 드리다，类似“献上”“奉上”&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;저는 생일 선물로 선생님께 책을 드렸다.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;저는 생일 선물로 선생님께 책을 드렸다.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;c께서-a에게한테-n을-u주시다u&#34;&gt;
 C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;a href=&#34;#c%ea%bb%98%ec%84%9c-a%ec%97%90%ea%b2%8c%ed%95%9c%ed%85%8c-n%ec%9d%84-u%ec%a3%bc%ec%8b%9c%eb%8b%a4u&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -1699,8 +1672,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;li&gt;对C“长辈给”使用敬语：주다 -&amp;gt; 주시다，类似“赐予”&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;선생님께서 생일 선물로 저에게 책을 주셨다.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;선생님께서 생일 선물로 저에게 책을 주셨다.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;例v아어여-주다드리다&#34;&gt;
 例：V아/어/여 주다/드리다
 &lt;a href=&#34;#%e4%be%8bv%ec%95%84%ec%96%b4%ec%97%ac-%ec%a3%bc%eb%8b%a4%eb%93%9c%eb%a6%ac%eb%8b%a4&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -1770,8 +1742,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;p&gt;&lt;strong&gt;창문을 열어 달라고 부탁했어.&lt;/strong&gt;&lt;br&gt;
 &lt;ruby&gt;성규가&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;성환이&lt;rt&gt;B&lt;/rt&gt;&lt;/ruby&gt;한테 &lt;ruby&gt;물을&lt;rt&gt;N을&lt;/rt&gt;&lt;/ruby&gt; 좀 &lt;ruby&gt;달라고&lt;rt&gt;for A, themselves&lt;/rt&gt;&lt;/ruby&gt; 부탁했어.&lt;br&gt;
 &lt;ruby&gt;성규가&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;성환이&lt;rt&gt;B&lt;/rt&gt;&lt;/ruby&gt;한테 창문을 열어 &lt;ruby&gt;달라고&lt;rt&gt;for A, themselves&lt;/rt&gt;&lt;/ruby&gt; 부탁했어.&lt;br&gt;
-&lt;ruby&gt;어머니께서&lt;rt&gt;C&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;나한테&lt;rt&gt;B&lt;/rt&gt;&lt;/ruby&gt; 방 좀 청소해 &lt;ruby&gt;달라고&lt;rt&gt;for C, themselves&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;하셨다&lt;rt&gt;honorific&lt;/rt&gt;&lt;/ruby&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ruby&gt;어머니께서&lt;rt&gt;C&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;나한테&lt;rt&gt;B&lt;/rt&gt;&lt;/ruby&gt; 방 좀 청소해 &lt;ruby&gt;달라고&lt;rt&gt;for C, themselves&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;하셨다&lt;rt&gt;honorific&lt;/rt&gt;&lt;/ruby&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;2-当初始说话者和接受者不同时仍使用-주다&#34;&gt;
 2. 当初始说话者和接受者不同时，仍使用 주다
 &lt;a href=&#34;#2-%e5%bd%93%e5%88%9d%e5%a7%8b%e8%af%b4%e8%af%9d%e8%80%85%e5%92%8c%e6%8e%a5%e5%8f%97%e8%80%85%e4%b8%8d%e5%90%8c%e6%97%b6%e4%bb%8d%e4%bd%bf%e7%94%a8-%ec%a3%bc%eb%8b%a4&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -1784,8 +1755,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;ruby&gt;내 반 친구는&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;나한테&lt;rt&gt;B&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;선물을&lt;rt&gt;N을&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;다른 반 친구한테&lt;rt&gt;D&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;주라고&lt;rt&gt;for D&lt;/rt&gt;&lt;/ruby&gt; 했다.&lt;br&gt;
 &lt;ruby&gt;내 반 친구는&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;나한테&lt;rt&gt;B&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;다른 반 친구를&lt;rt&gt;D&lt;/rt&gt;&lt;/ruby&gt; 도와 &lt;ruby&gt;주라고&lt;rt&gt;for D&lt;/rt&gt;&lt;/ruby&gt; 했다.&lt;br&gt;
-&lt;ruby&gt;내 반 친구는&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;나한테&lt;rt&gt;B&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;선생님을&lt;rt&gt;C&lt;/rt&gt;&lt;/ruby&gt; 도와 &lt;ruby&gt;드리라고&lt;rt&gt;for C, honorific&lt;/rt&gt;&lt;/ruby&gt; 했다.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ruby&gt;내 반 친구는&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;나한테&lt;rt&gt;B&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;선생님을&lt;rt&gt;C&lt;/rt&gt;&lt;/ruby&gt; 도와 &lt;ruby&gt;드리라고&lt;rt&gt;for C, honorific&lt;/rt&gt;&lt;/ruby&gt; 했다.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;转述者转述初始说话者C的话：加上对C说话的动作使用敬语&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;u&gt;&lt;strong&gt;C说&lt;/strong&gt;&lt;/u&gt;（让A）&lt;u&gt;给D&lt;/u&gt;某物：N을 주라고 하시다&lt;/li&gt;
@@ -1794,8 +1764,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;ruby&gt;어머니께서&lt;rt&gt;C&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;나더러&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;동생&lt;rt&gt;D&lt;/rt&gt;&lt;/ruby&gt; 방 좀 청소해 &lt;ruby&gt;주라고&lt;rt&gt;for D&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;하셨다&lt;rt&gt;honorific&lt;/rt&gt;&lt;/ruby&gt;.&lt;br&gt;
 &lt;ruby&gt;어머니는&lt;rt&gt;C&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;동생에게&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;할아버지께&lt;rt&gt;E&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;선물을&lt;rt&gt;N을&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;드리라고&lt;rt&gt;for E, honorific&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;하셨다&lt;rt&gt;honorific&lt;/rt&gt;&lt;/ruby&gt;.&lt;br&gt;
-&lt;ruby&gt;어머니는&lt;rt&gt;C&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;나한테&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;할아버지를&lt;rt&gt;E&lt;/rt&gt;&lt;/ruby&gt; 방 청소해 &lt;ruby&gt;드리라고&lt;rt&gt;for E, honorific&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;하셨다&lt;rt&gt;honorific&lt;/rt&gt;&lt;/ruby&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ruby&gt;어머니는&lt;rt&gt;C&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;나한테&lt;rt&gt;A&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;할아버지를&lt;rt&gt;E&lt;/rt&gt;&lt;/ruby&gt; 방 청소해 &lt;ruby&gt;드리라고&lt;rt&gt;for E, honorific&lt;/rt&gt;&lt;/ruby&gt; &lt;ruby&gt;하셨다&lt;rt&gt;honorific&lt;/rt&gt;&lt;/ruby&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;为什么-주다---달다&#34;&gt;
 为什么 주다 -&amp;gt; 달다？
 &lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88-%ec%a3%bc%eb%8b%a4---%eb%8b%ac%eb%8b%a4&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -1805,8 +1774,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;dl&gt;
 &lt;dt&gt;주다, 달다&lt;/dt&gt;
 &lt;dd&gt;‘주다’는 말하는 이가 무언가를 남에게 건네는 것을 요청하는 경우에 쓴다. 이에 비해 ‘달다’는 자기에게 건네기를 요청할 때 쓴다.&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/blockquote&gt;
+&lt;/dl&gt;&lt;/blockquote&gt;
 &lt;p&gt;都表示“给”的意思，但“给别人”用“주다”，&lt;strong&gt;“给自己”用“달다”&lt;/strong&gt;。即先确定“到底给谁？”&lt;/p&gt;
 &lt;p&gt;其次，“달다”属于不完全动词(불완전 동사)，&lt;strong&gt;只有&lt;/strong&gt;在해라체与하라체&lt;span class=&#34;sidenote-number&#34;&gt;
     &lt;span class=&#34;sidenote-box&#34;&gt;
@@ -1840,8 +1808,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;p&gt;使用주다：&lt;span class=&#34;sidenote-number&#34;&gt;
     &lt;span class=&#34;sidenote-box&#34;&gt;
         &lt;small class=&#34;sidenote&#34;&gt;&lt;a href=&#34;https://sgsg.hankyung.com/article/2020103066721&#34;&gt;[홍성호 기자의 열려라! 우리말] &amp;lsquo;달다&amp;rsquo; 자리 넘보는 &amp;lsquo;주다&amp;rsquo;&lt;/a&gt;&lt;/small&gt;
@@ -1853,8 +1820,7 @@ C께서 A에게/한테 N을 &lt;u&gt;주시다&lt;/u&gt;
 하오체: ~ 집어 주오.&lt;br&gt;
 하게체: ~ 집어 주게.&lt;br&gt;
 해요체: ~ 집어 줘요.&lt;br&gt;
-해체: ~ 집어 줘.&lt;/p&gt;
-&lt;/blockquote&gt;
+해체: ~ 집어 줘.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;上述间接引语命令文（(으)라고 하다）中&lt;a href=&#34;#1-%E5%BD%93%E5%88%9D%E5%A7%8B%E8%AF%B4%E8%AF%9D%E8%80%85%E5%92%8C%E6%8E%A5%E5%8F%97%E8%80%85%E4%B8%BA%E5%90%8C%E4%B8%80%E4%BA%BA%E6%97%B6%EC%A3%BC%EB%8B%A4---%EB%8B%AC%EB%8B%A4&#34;&gt;“달라고 하다”的例子&lt;/a&gt;其实就属于하라체(명령법)。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;참고&#34;&gt;
@@ -1954,8 +1920,7 @@ On sharing the magic of the creative process, w/ Serbest Salih,  The Creative In
 &lt;blockquote&gt;
 &lt;p&gt;They see the world from different levels. It’s a very innocent perspective because it’s without editing—it is a free moment without any pressure. When they see any moment that inspires them, they capture it. Their work is about the celebration of childhood; about seeing the world through the eyes of children, not as adults.
 &amp;hellip;
-When I teach them photography composition, I don’t tell them what they should do. I tell them that photography doesn’t have rules—that when you shoot, you just have to feel it. I try to make sure not to pressure them. [Even though] it’s analog photography, and it’s a limited [medium], I tell them, “You have just to feel it, you can shoot whatever you want.”&lt;/p&gt;
-&lt;/blockquote&gt;
+When I teach them photography composition, I don’t tell them what they should do. I tell them that photography doesn’t have rules—that when you shoot, you just have to feel it. I try to make sure not to pressure them. [Even though] it’s analog photography, and it’s a limited [medium], I tell them, “You have just to feel it, you can shoot whatever you want.”&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://thecreativeindependent.com/people/artist-and-educator-serbest-salih-on-sharing-the-magic-of-the-creative-process/&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;教学是另一种获取灵感的途径：新手们未受打磨的灵感、眼光、视角，过程中前后对比体会差异和利弊。&lt;/p&gt;
 &lt;h3 id=&#34;quoted-from-a-psalm-for-the-wild-built-by-becky-chambers-how-websites-die-by-wesley&#34;&gt;
@@ -1965,9 +1930,7 @@ Quoted from &lt;em&gt;A Psalm for the Wild-Built&lt;/em&gt; by Becky Chambers, &
 &lt;blockquote&gt;
 &lt;p&gt;&amp;hellip; And I also included this lovely quote from A Psalm for the Wild-Built by Becky Chambers:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;It is difficult for anyone born and raised in human infrastructure to truly internalize the fact that your view of the world is backward. Even if you fully know that you live in a natural world that existed before you and will continue long after, even if you know that the wilderness is the default state of things, and that nature is not something that only happens in carefully curated enclaves between towns, something that pops up in empty spaces if you ignore them for a while, even if you spend your whole life believing yourself to be deeply in touch with the ebb and flow, the cycle, the ecosystem as it actually is, you will still have trouble picturing an untouched world. You will still struggle to understand that human constructs are carved out and overlaid, that these are the places that are the in-between, not the other way around.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;It is difficult for anyone born and raised in human infrastructure to truly internalize the fact that your view of the world is backward. Even if you fully know that you live in a natural world that existed before you and will continue long after, even if you know that the wilderness is the default state of things, and that nature is not something that only happens in carefully curated enclaves between towns, something that pops up in empty spaces if you ignore them for a while, even if you spend your whole life believing yourself to be deeply in touch with the ebb and flow, the cycle, the ecosystem as it actually is, you will still have trouble picturing an untouched world. You will still struggle to understand that human constructs are carved out and overlaid, that these are the places that are the in-between, not the other way around.&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://notebook.wesleyac.com/how-websites-die/&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;interview-vitalik-buterin-creator-of-ethereum-noahpinion&#34;&gt;
 Interview: Vitalik Buterin, creator of Ethereum, Noahpinion
@@ -1976,16 +1939,14 @@ Interview: Vitalik Buterin, creator of Ethereum, Noahpinion
 &lt;blockquote&gt;
 &lt;p&gt;I definitely think that in the medium-term future cryptocurrencies will settle down and be only about as volatile as gold or the stock market. The main question is just what level the prices will settle down at.
 &amp;hellip;
-There&amp;rsquo;s a few pro- proof of work arguments. In my view the strongest argument is the &amp;ldquo;costless simulation&amp;rdquo; issue. Basically, the idea is that in a proof of stake chain, an attacker could reach out to the owners of the coins at some point many years ago, buy up their old keys for a very low price (because those coins have since been moved to addresses controlled by different keys), and use those coins to create a different chain that forks off from that point and, in a vacuum, looks like a valid history. A node that knows only the protocol rules, connecting to the network from scratch, would not be able to tell the difference between the actual chain and this simulated chain provided by an attacker. In PoW, on the other hand, creating such a simulated alternate chain requires redoing an equal amount of proof of work.&lt;/p&gt;
-&lt;/blockquote&gt;
+There&amp;rsquo;s a few pro- proof of work arguments. In my view the strongest argument is the &amp;ldquo;costless simulation&amp;rdquo; issue. Basically, the idea is that in a proof of stake chain, an attacker could reach out to the owners of the coins at some point many years ago, buy up their old keys for a very low price (because those coins have since been moved to addresses controlled by different keys), and use those coins to create a different chain that forks off from that point and, in a vacuum, looks like a valid history. A node that knows only the protocol rules, connecting to the network from scratch, would not be able to tell the difference between the actual chain and this simulated chain provided by an attacker. In PoW, on the other hand, creating such a simulated alternate chain requires redoing an equal amount of proof of work.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://noahpinion.substack.com/p/interview-vitalik-buterin-creator&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;an-interview-with-venture-capitalist-bill-gurley-mba-93&#34;&gt;
 An Interview with Venture Capitalist Bill Gurley, MBA ’93
 &lt;a href=&#34;#an-interview-with-venture-capitalist-bill-gurley-mba-93&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;One of the things that’s really important about venture is you have to conceptualize ideas that have lots of running room, and where the incumbents aren’t going to play.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;One of the things that’s really important about venture is you have to conceptualize ideas that have lots of running room, and where the incumbents aren’t going to play.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://medium.com/texas-mccombs-news/venture-capitalist-bill-gurley-975e59758592&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;白板报两只眼睛看到的-cmkids-大地艺术&#34;&gt;
 白板报：两只眼睛看到的 CMkids 大地艺术
@@ -1996,8 +1957,7 @@ An Interview with Venture Capitalist Bill Gurley, MBA ’93
 &lt;p&gt;「我明白了，我们应当用两只眼睛看世界。」&lt;/p&gt;
 &lt;p&gt;「是哪两只眼睛呢？」&lt;/p&gt;
 &lt;p&gt;我启发式地提问，很期待他说：「一只是眼睛叫科学，一只眼睛叫艺术。」&lt;/p&gt;
-&lt;p&gt;然而，他回答：「一只是自己的眼睛，一只是朋友的眼睛。」&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;然而，他回答：「一只是自己的眼睛，一只是朋友的眼睛。」&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;http://wangpei.net/2022/07/07/cmkids-arts-on-earth/&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;人很难想象超出自己认知范围的事物，带来的要求是人与人，或者人与机器之间的交流。&lt;/p&gt;
 &lt;h3 id=&#34;陈先发稀粥颂&#34;&gt;
@@ -2039,8 +1999,7 @@ An Interview with Venture Capitalist Bill Gurley, MBA ’93
 &lt;p&gt;无多少差异的底层逻辑，用工文化、专业求职市场买卖方在未来转变的可能&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;⋯⋯最後，Legalist 是一個員工數 50 人且全遠距協作的團隊。Shang 表示這讓他們得以獵取到一些不想在傳統對沖基金文化中工作、但本身具備很強專業技能與市場嗅覺的人才。上述這點讓我印象非常深刻。過去人們常提的「破壞」是技術、商業模式上的突破，如今一種新型態的破壞或許是從更根本的地方下手：人才。畢竟，無法吸引人才的公司，都終將被超越。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://mailchi.mp/manny-li.com/063-15684649&#34;&gt;曼報 #149&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://mailchi.mp/manny-li.com/063-15684649&#34;&gt;曼報 #149&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;从订户身上挖钱，而少见从片商和广告商身上挖钱：&lt;strong&gt;能&lt;/strong&gt;撬得动、搅得浑的池子，谁比较深？&lt;/p&gt;
@@ -2050,11 +2009,9 @@ An Interview with Venture Capitalist Bill Gurley, MBA ’93
 &lt;blockquote&gt;
 &lt;p&gt;Adner 在本書中替生態系下了一個我認為夠精簡的定義：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;一個生態系就是「合作夥伴」透過「價值結構」相互作用，向「終端客戶」傳遞「價值主張」。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;一個生態系就是「合作夥伴」透過「價值結構」相互作用，向「終端客戶」傳遞「價值主張」。&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;⋯⋯柯達的失敗不在於它沒有轉型，而是它只在不變的生態系假設下轉型，只關注傳統分析框架下的競爭對手（例如：富士），而忽略合作夥伴才是真正可能帶來破壞的角色。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://mailchi.mp/manny-li.com/063-15893597&#34;&gt;曼報 #154&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://mailchi.mp/manny-li.com/063-15893597&#34;&gt;曼報 #154&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;一个好的例子（Alexa），一个滥用或者缺失的例子（微软）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -2144,16 +2101,14 @@ Essaouira, Marokko, 2019 © Lea Verholen
 &lt;blockquote&gt;
 &lt;p&gt;⋯⋯第三，承接以上所言，公共生活總意味著我們與他人在一起。我們在一起討論，一起行動，一起感受，也在一起改變。我們雖然有不同的身分，卻總希望在公共生活中彼此尊重，沒有人會因為出身、階級、性別、信仰等差異而受到歧視。公共生活很重要的一點，是看到和承認他人與你是平等的存在，享有同樣的權利。我們因此要學會聆聽、容忍和尊重不同的觀點。 公共性總是和開放、多元、民主這些價值聯結在一起。&lt;/p&gt;
 &lt;p&gt;以上三點，都是規範性的，反映我們對公共生活的期望，而不是說現實已經如此。我們正是見到現實的不理想，才特別提出這些面向，希望我們一起努力創造條件去實現這樣的公共生活。&lt;/p&gt;
-&lt;p&gt;⋯⋯公共生活是有力量的，當人與人走在一起，當人開始獨立思考，體制就會恐慌，因為他們知道自己那套東西早已經不起理性檢視。現在的社會控制，就是要將人趕回私人領域，把人變成耽於消費的經濟動物，從而令我們忽略、甚至忘記人同時也是社會存有和政治存有。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;⋯⋯公共生活是有力量的，當人與人走在一起，當人開始獨立思考，體制就會恐慌，因為他們知道自己那套東西早已經不起理性檢視。現在的社會控制，就是要將人趕回私人領域，把人變成耽於消費的經濟動物，從而令我們忽略、甚至忘記人同時也是社會存有和政治存有。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://theinitium.com/article/20200927-opinion-notes-public-life/&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;王小波积极的结论&#34;&gt;
 王小波：积极的结论
 &lt;a href=&#34;#%e7%8e%8b%e5%b0%8f%e6%b3%a2%e7%a7%af%e6%9e%81%e7%9a%84%e7%bb%93%e8%ae%ba&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;我的积极结论是这样的：真理直率无比，坚硬无比，但凡有一点柔顺，也算不了真理。安徒生有一篇童话(光荣的荆棘路)，就是献给这些直率、坚硬的人，不过他提到的全是外国人。作为中国的知识分子，理应有自己的榜样。此刻我脑子里浮现出一系列名字：陈寅格教授，冯友兰教授，等等。说到陈教授，我们知道，他穷毕生精力，考据了一篇很不重要的话本，《再生缘》。想到这件事，我并不感到有多振奋，只是有点伤感。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;我的积极结论是这样的：真理直率无比，坚硬无比，但凡有一点柔顺，也算不了真理。安徒生有一篇童话(光荣的荆棘路)，就是献给这些直率、坚硬的人，不过他提到的全是外国人。作为中国的知识分子，理应有自己的榜样。此刻我脑子里浮现出一系列名字：陈寅格教授，冯友兰教授，等等。说到陈教授，我们知道，他穷毕生精力，考据了一篇很不重要的话本，《再生缘》。想到这件事，我并不感到有多振奋，只是有点伤感。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;真理一定是坚硬的，但坚硬的不一定是真理，被视作坚不可摧的往往亦不过是玩物尔尔。不过，还有人最大的乐观主义，时间和死亡。既然知道至多是一场大火或迎来冰河，至少也有生死在这之中轮替，再无力时也多了一份安定。&lt;/p&gt;
 &lt;h3 id=&#34;the-verge-with-matt-mullenweg-how-wordpress-and-tumblr-are-keeping-the-internet-weird&#34;&gt;
 The Verge with Matt Mullenweg, &lt;em&gt;How WordPress and Tumblr are keeping the internet weird&lt;/em&gt;
@@ -2161,8 +2116,7 @@ The Verge with Matt Mullenweg, &lt;em&gt;How WordPress and Tumblr are keeping th
 &lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;hellip;There’s people that are sharing. That’s really, really exciting to me because it’s kind of like the personal web&amp;hellip;I go to a Medium article, or even a Substack article, and I read the article and I just remember Medium or Substack. I actually forget the author because the sites all kind of look the same. How do you bring that — not just the editorial voice, but also the visual personalization — that you can really have your own home on the web?&lt;/p&gt;
-&lt;p&gt;&amp;hellip;I don’t think creators getting paid is dependent on blockchain technology. That’s a separate trend that’s happening that is part of the disintermediation of distributors. Essentially, what the social networks did was they allowed people to go more direct than before&amp;hellip;The power is in the hands of creators. I love that salaries are going up for writers and editors and all these sorts of things.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&amp;hellip;I don’t think creators getting paid is dependent on blockchain technology. That’s a separate trend that’s happening that is part of the disintermediation of distributors. Essentially, what the social networks did was they allowed people to go more direct than before&amp;hellip;The power is in the hands of creators. I love that salaries are going up for writers and editors and all these sorts of things.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Automattic 一直给人感觉非常社区化、非常团结，从雇人的理念上就比较不同，更希望在对公司和产品真正感兴趣的人中招贤纳士。而且公司以及产品都非常注重社区的维护，例如 WordPress 的本地化，贡献者名单存放有序，而且 fully accessible。在开源和闭源、非盈利和盈利之间的微妙平衡，依然跟社区的形成不无关系，健康的用户社区自己就能把雪球越滚越大。&lt;/p&gt;
 &lt;p&gt;最近对「平台与个人」的问题也有所感触。文字载体、加入智能推荐算法的平台，往往存在「平台大于个人」的倾向。以 Medium 为例自然不用说，也可以从 Twitter 的发展中看到（尤其是时间线上智能推荐的加入）。读者能不能记得创作者这个人，一个是创作者的名字要绝对 show up，像 RSS 阅读器里订阅博客，博客的名字/作者的名字作 label。另一个是用户 discover 的参与度，通过内容溯及创作者和通过创作者溯及内容是完全不同的，后者第一印象就建立在创作者本身，而且参与度更高。&lt;/p&gt;
 &lt;p&gt;像 Matters 一直在说要做去中心化的写作社群，加入种种 web3 的技术和理念，如果没能扭转读者「认为平台大于个人」的倾向，那给写作者再多的工具也于事无补。&lt;/p&gt;
@@ -2174,8 +2128,7 @@ Cho Hae-joang, &lt;em&gt;The Spec Generation Who Can’t Say &amp;ldquo;No&amp;r
 &lt;blockquote&gt;
 &lt;p&gt;&amp;hellip;It seems that to them, kindness is something to be purchased. Since they do not expect kindness without financial compensation, they tend to be moved by a little kindness and caring by professors..They have deeply internalized the principle of the “survival of the fittest,” while having little sense of “deserving inalienable rights” as students, as children, or as members of society.&lt;/p&gt;
 &lt;p&gt;&amp;hellip;I found the enlightening distinction Michel Feher draws between the free laborer of liberal capitalism and the labor subjectivity of neoliberal capitalism that is generated and maintained through an endless process of human capital development&amp;hellip;To Feher, liberal capitalism draws on the concept of the free laborer, which is understood as a social being&amp;hellip;Free laborers think of their labor power as commodity but believe that they themselves are not commodities.&lt;/p&gt;
-&lt;p&gt;&amp;hellip;A student confirmed her observation, saying, &amp;ldquo;I feel bad thinking that I have to feel guilty for not getting involved.&amp;rdquo; In fact, many of my students work hard to block reality out of their lives so that they could avoid being disrupted and disturbed.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&amp;hellip;A student confirmed her observation, saying, &amp;ldquo;I feel bad thinking that I have to feel guilty for not getting involved.&amp;rdquo; In fact, many of my students work hard to block reality out of their lives so that they could avoid being disrupted and disturbed.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;韩语中有个外来词叫 &amp;lsquo;스펙&amp;rsquo;（specification），意思为「各种能证明自己能力和履历的证书、文凭、资格证等」。英语里 specification 往往作「规格；说明书」等义更常见，就像一场语言上的巧合，嵌入人被物化的简单事实。延世大名誉教授趙韓惠貞在 2015 年发表的这篇论文，关注的焦点在于韩国的「过度教育」问题、年轻人在校的「冷感」以及进入社会后的「半失业」状态。她认为这样一场对学历的追逐、对（阶层上的）安稳的希望以及衍生出对自我与社会的冷漠（特别是与轰轰烈烈的上世纪 80-90 年代相比而言），与自由资本主义向新自由主义的转型不无关系。&lt;/p&gt;
 &lt;p&gt;她引 Michel Feher 的观点，Feher 首先区分出新自由主义的产生和维持依赖于无休止的人力资本。进而关注微观个人，认为诞生出一种新的劳动主体即新自由主义主体，他们并不拥有人力资本，却要对人力资本进行投资，结合经济学，劳动者应当追求投资的收益最大化，同时收益应该具有一定的可测度性，进而无可奈何地适应资本导向，放弃在自我、社会与政治方面的边界与分寸。韩国教育市场在进入千禧年后私人化程度已经臻于成熟，所以家庭在这场主体转型中也扮演着格外重要的角色。&lt;/p&gt;
 &lt;p&gt;趙韓惠貞教授结合新闻与授课中的实际案例，在文中给出了多个放弃或模糊了社会再生产与自我成就、社会责任之间边界的侧面。这里再具体拿「政治冷感」说，学生们格外认同「避免不必要麻烦」的这个出发点，希望努力把社会现实阻挡在自己的生活之外，不希望再被「侵蚀」。政治家在这场「进化」中也顺利通过合作，把自己从人人皆应承担的责任转变为多数人趋于回避的生活麻烦。&lt;/p&gt;
@@ -2196,8 +2149,7 @@ Casey Winters, &lt;em&gt;Feature/Product Fit&lt;/em&gt;
 &lt;li&gt;Mistake #1: Email your entire user base about your new feature&lt;/li&gt;
 &lt;li&gt;Mistake #2: Put a banner at the top of the product for all users introducing the new feature&lt;/li&gt;
 &lt;li&gt;Mistake #3: Launch with a lot of press about the new feature&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;p&gt;原文拿 Pinterest 举例，非常精准：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Like 和 Pin 同时存在，高频/一级按钮定义的不明，用户到底该用哪个？&lt;/li&gt;
@@ -2217,8 +2169,7 @@ Wesley Aptekar-Cassels, &lt;em&gt;A few things that could be poetry&lt;/em&gt;
 &lt;li&gt;Overheard words, drifting along, liberated from their initial context&lt;/li&gt;
 &lt;li&gt;A form, at first appearing bureaucratic, revealing humanity on deeper reflection&lt;/li&gt;
 &lt;li&gt;An idea, if you consider it divine enough&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://notebook.wesleyac.com/could-be-poetry/&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Hybrid 是一个内容摘录计划。&lt;/p&gt;
@@ -2358,8 +2309,7 @@ The Optimism of Possibility © Phillip Reed
 &lt;a href=&#34;#%e6%9e%97%e5%ae%8f%e4%bf%a1%e6%af%8d%e8%aa%9e%e8%80%85%e5%bf%83%e6%85%8b&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;「母語者心態」是無法為他人帶來幫助的，然而這不容易避免，畢竟每個人都有這麼多差異，大家都可能是某方面的「母語者」，難以去理解他人所面臨到的困難。我想首先要察覺到自己與別人的不同，建立正確的認知，才能真正幫助到他人。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;「母語者心態」是無法為他人帶來幫助的，然而這不容易避免，畢竟每個人都有這麼多差異，大家都可能是某方面的「母語者」，難以去理解他人所面臨到的困難。我想首先要察覺到自己與別人的不同，建立正確的認知，才能真正幫助到他人。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;自主、自然的学习往往需要前期有一定程度的投入，未起步的人即使对这些所谓的学习方式有所认知，也极大可能仍在原地踏步。每个人都可能在某个领域存在一定投入，是这个领域的「精通者」，或多或少在遇到来自新手的提问时感到有些疑惑，「为什么他就不能想到我所想到的呢？」，无法先站在对方的角度理解其全程经历的困难，这便是母语者心态了。除了察觉不同、建立认知外，我想还需要把对方的问题不断细化，才能一点一点重新来过。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.wancat.cc/post/native-speaker/&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;马华灵身份自由主义的困境&#34;&gt;
@@ -2367,8 +2317,7 @@ The Optimism of Possibility © Phillip Reed
 &lt;a href=&#34;#%e9%a9%ac%e5%8d%8e%e7%81%b5%e8%ba%ab%e4%bb%bd%e8%87%aa%e7%94%b1%e4%b8%bb%e4%b9%89%e7%9a%84%e5%9b%b0%e5%a2%83&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;身份政治的大麻烦是去公民政治。但是，公共自由主义并不排斥身份政治。这是因为身份自由主义一败涂地，表面上根源于身份政治，而实质上根源于去公民政治。如果美国自由派能够从身份政治走向公民政治，那么身份政治依旧可以从分裂的政治走向团结的政治。身份自由主义是排他性的（exclusive），它以自我为中心，只关心跟自己的身份息息相关的事务，而不关心跟自己的身份毫无干系的事务。但是，公共自由主义却是包容性的（inclusive），它不仅仅关心跟自己的身份息息相关的事务，而且还从自己的身份出发走向更广大的公民同胞。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;身份政治的大麻烦是去公民政治。但是，公共自由主义并不排斥身份政治。这是因为身份自由主义一败涂地，表面上根源于身份政治，而实质上根源于去公民政治。如果美国自由派能够从身份政治走向公民政治，那么身份政治依旧可以从分裂的政治走向团结的政治。身份自由主义是排他性的（exclusive），它以自我为中心，只关心跟自己的身份息息相关的事务，而不关心跟自己的身份毫无干系的事务。但是，公共自由主义却是包容性的（inclusive），它不仅仅关心跟自己的身份息息相关的事务，而且还从自己的身份出发走向更广大的公民同胞。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;身份政治的一大弊病是其无穷无尽分裂的特性，走到最后人人视对方为异己、形同陌路，个人主义的实质决定其自身被终结的命运。从身份政治走向公民政治，亦正是从分裂走向团结，从诉诸运动转向诉诸选举。在冲突中进化，但最终只得在包容中收获。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://matters.news/@ififififif/%E9%A9%AC%E5%8D%8E%E7%81%B5-%E8%BA%AB%E4%BB%BD%E8%87%AA%E7%94%B1%E4%B8%BB%E4%B9%89%E7%9A%84%E5%9B%B0%E5%A2%83-bafyreihw65m2deos74iaxxjis75j2kierk252khpxqvbdmfesunleq2seq&#34;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;paul-graham-what-youll-wish-youd-known&#34;&gt;
@@ -2376,8 +2325,7 @@ Paul Graham, &lt;em&gt;What You&amp;rsquo;ll Wish You&amp;rsquo;d Known&lt;/em&g
 &lt;a href=&#34;#paul-graham-what-youll-wish-youd-known&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
 &lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The only real difference between adults and high school kids is that adults realize they need to get things done, and high school kids don&amp;rsquo;t. That realization hits most people around 23. But I&amp;rsquo;m letting you in on the secret early. So get to work. Maybe you can be the first generation whose greatest regret from high school isn&amp;rsquo;t how much time you wasted.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;The only real difference between adults and high school kids is that adults realize they need to get things done, and high school kids don&amp;rsquo;t. That realization hits most people around 23. But I&amp;rsquo;m letting you in on the secret early. So get to work. Maybe you can be the first generation whose greatest regret from high school isn&amp;rsquo;t how much time you wasted.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;做那些能在未来带来更多选择的选择&lt;/li&gt;
 &lt;li&gt;叛逆和服从一样愚蠢&lt;/li&gt;
@@ -2536,8 +2484,7 @@ David Rand, &lt;em&gt;The Psychology of Misinformation&lt;/em&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;什么是蹲下起身时眼前的洁白，什么是动物园的房间。不当一切真的命中注定，指认所有被构造的一切，要声称自己是罪人，在跌落旧关卡时搜集证据。这会是水的流动，这会是卡在鞋底细缝中风干的叶片碎末，这会是酸胀的小腿和脉冲。这就是真的，这就是假的，这一直是一场戏，我一直在剧院里走走停停。很多个分成好几段陆续死去，有些是谋杀，有些是自杀，有些出于意外，一个死了，另一个被迫接着出现，不是任何人的错，新的来了。草丛里经常种下过去拯救自己的毒药，送给兔子，他们就能帮忙消化成脚印，铺在路上，以至于再试图向前爬去时，手指所沾上的只是兔子的粪便、毒药的沉淀，膝盖磨出来的血就不会看得见，路看上去也不会太远。以至于又是一种曼妙的错觉，支撑这生死的流变。&lt;/p&gt;
-&lt;p class=&#34;right-date&#34; align=&#34;right&#34;&gt;2021 年 12 月 20 日&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p class=&#34;right-date&#34; align=&#34;right&#34;&gt;2021 年 12 月 20 日&lt;/p&gt;&lt;/blockquote&gt;
 </description>
     </item>
     <item>
@@ -2762,8 +2709,7 @@ David Rand, &lt;em&gt;The Psychology of Misinformation&lt;/em&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Nov 1 (Reuters) - Wall Street&amp;rsquo;s main &lt;strong&gt;indexes&lt;/strong&gt; notched record closing highs on Monday as Tesla shares surged and the energy sector gained while investors looked ahead to a major Federal Reserve meeting later in the week.&lt;/p&gt;
 &lt;p&gt;The Dow Jones Industrial Average (.DJI) &lt;strong&gt;eclipsed&lt;/strong&gt; 36,000 points for the first time ever during intraday trading, ending just shy of that level.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.reuters.com/business/wall-street-hits-records-tesla-surges-focus-fed-meeting-2021-11-01/&#34;&gt;Reuters&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.reuters.com/business/wall-street-hits-records-tesla-surges-focus-fed-meeting-2021-11-01/&#34;&gt;Reuters&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;eclipse&#34;&gt;
 eclipse?
 &lt;a href=&#34;#eclipse&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -2774,8 +2720,7 @@ eclipse?
 &lt;p&gt;&lt;strong&gt;to become greater in amount or level than something else:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The increased consumer spending from new businesses has already helped shopping, dining, and real estate &lt;strong&gt;eclipse&lt;/strong&gt; oil revenues.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Their stock is up 50% so far this year, as their profit growth is expected to &lt;strong&gt;eclipse&lt;/strong&gt; that of larger companies.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;(Definition of eclipse from &lt;a href=&#34;https://dictionary.cambridge.org/dictionary/english/eclipse&#34;&gt;the Cambridge Business English Dictionary&lt;/a&gt; © Cambridge University Press)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;(Definition of eclipse from &lt;a href=&#34;https://dictionary.cambridge.org/dictionary/english/eclipse&#34;&gt;the Cambridge Business English Dictionary&lt;/a&gt; © Cambridge University Press)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;indices-或-indexes&#34;&gt;
 indices 或 indexes?
 &lt;a href=&#34;#indices-%e6%88%96-indexes&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -2918,8 +2863,7 @@ indices 或 indexes?
       <guid>https://fanrongbin.com/engadget-cn-closed/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;2021 年 11 月 1 日起，用户无法从中国大陆使用 Yahoo 的产品与服务。这并不影响 Yahoo 在全球其他地方的产品及服务。&lt;/p&gt;
-&lt;p&gt;Yahoo 中国&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Yahoo 中国&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;同时，Yahoo Weather（雅虎天气）宣布停止中国大陆服务，Engadget 简体中文版亦宣布停止更新。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/11/03/jPrXI5bDLf1yzal.png&#34; alt=&#34;cn-engadget-closed&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Engadget 简体中文版（瘾科技）于 2005 年 10 月 1 日正式开站，触角广泛，文字亦精炼扼要。记得最初是在 Flipboard 或者 Zaker 上偶然订阅了 Engadget 中文版，它是我所接触到的第一个科技资讯媒体。后来陆陆续续地还订阅了 The Verge、TechCrunch，还有 LiveSino、月光博客。它们构成我的很多回忆。中间编辑团队一度更换，希望了解更多的话，可见文末。&lt;/p&gt;
@@ -2979,8 +2923,7 @@ T+2 交易规则
 &lt;p&gt;相应地，&lt;strong&gt;份额更新延迟&lt;/strong&gt;，&lt;strong&gt;收益更新延迟&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在 2021 年 10 月 25 日周一 14:00（第一天盘前或交易时间内）买入某 QDII 基金，以 10 月 26 日周二 4:00（第二天）美股收盘价计算买入份额，在 10 月 27 日周三（第三天）更新净值，确认买入份额。在 10 月 28 日周四（第四天）可查看 T+1 日收益。赎回同理。
-实际在周一看到的净值，是根据周日的行情。&lt;/p&gt;
-&lt;/blockquote&gt;
+实际在周一看到的净值，是根据周日的行情。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;低门槛高费率&#34;&gt;
 低门槛、高费率
 &lt;a href=&#34;#%e4%bd%8e%e9%97%a8%e6%a7%9b%e9%ab%98%e8%b4%b9%e7%8e%87&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;
@@ -3052,13 +2995,11 @@ T+2 交易规则
 &lt;p&gt;更多地去阅读 Newsletter，虽然不是那个「一期一会」，但这种「一期」看「一会」也让我对早起（以阅读和做点自己的事）有了更大的兴趣和信心。方便 Archive，可以复制粘贴，也可以直接在收件箱标签。有的作者还设置了读者信箱，多好，这都是人与人的关系。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;But I have more of a life than I once did. I have a wife, a busy career, aging parents and a large family. I have more physical mobility and, in turn, more interest in being active and out in the world. I now spend most of my time with people who are not Very Online. When I talk to them about some weird or frustrating internet conflagration, they tend to look at me as if I am speaking a foreign language from a distant land. And, I suppose, I am.&lt;/p&gt;
-&lt;p&gt;Roxane Gay&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Roxane Gay&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;听 Solar Power，看乐评人批 Lorde 逃离现实又没有完全逃离。苛刻是他们的工作。我觉得这种微妙的、游走于这之间的平衡，太难找了。Lorde 找了几年，有了一点苗头，先跟大家说道说道，所以整张专辑显得文学性大过音乐性，一首接一首听起来不很连贯。（不过在这个时代，我们还那么讲究连贯吗？）我想我也应该寻找这属于我的平衡。&lt;/p&gt;
 &lt;p&gt;自知做不了太多，连家人有时都无法坐下来和平聊天。那也要做啊。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Update: 2021/08/28&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Update: 2021/08/28&lt;/p&gt;&lt;/blockquote&gt;
 </description>
     </item>
     <item>
@@ -3067,8 +3008,7 @@ T+2 交易规则
       <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/winslow-homer/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;发布于 &lt;a href=&#34;https://matters.news/@laefan/%E7%9C%8B%E7%95%AB-winslow-homer-%E6%BA%AB%E6%96%AF%E6%B4%9B-%E9%9C%8D%E9%BB%98-bafyreifjxdssns3s6xkf6t7lgk6jaxjrpxg4semolhembefe4o3mi2n4ja&#34;&gt;Matters.news&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;发布于 &lt;a href=&#34;https://matters.news/@laefan/%E7%9C%8B%E7%95%AB-winslow-homer-%E6%BA%AB%E6%96%AF%E6%B4%9B-%E9%9C%8D%E9%BB%98-bafyreifjxdssns3s6xkf6t7lgk6jaxjrpxg4semolhembefe4o3mi2n4ja&#34;&gt;Matters.news&lt;/a&gt;。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/wh-1.webp&#34; alt=&#34;Prout&amp;rsquo;s Neck, Breakers&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Prout&amp;rsquo;s Neck, Breakers&lt;/em&gt;, 1883, Winslow Homer, Painting, watercolor on wove paper&lt;/p&gt;
@@ -3119,8 +3059,7 @@ T+2 交易规则
 &lt;p&gt;当时的评论对这幅画赞赏有加，多为与霍默之前的画作相比认为要出色。但我初见这幅画作时并不懂它为何得以成为「最有名」。是船与船帆的动态感吗？是船与浪之间精妙的推移和被搅乱的倒影吗？是它各方面都很平衡恰当？想来，或是因为其被解读的意义要大于其本身吗？乘风破浪的 19 世纪美国人。在艺术上，他们应该怎么在大杂烩中「孕育本土」、在本土中「重建本土」？&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Even the critic from the &lt;em&gt;Art Journal&lt;/em&gt;, who thought the picture typical of Homer&amp;rsquo;s &amp;ldquo;hasty mode of treatment,&amp;rdquo; found it winning nevertheless: &amp;ldquo;It may be accepted as the most spirited of his works; the waves roll, the boat flies swiftly before the wind, and the group of happy boys are felicitous in every pose.&amp;rdquo; Two others concurred: &amp;ldquo;It is painted in his customary coarse and negligé style, but suggests with unmistakable force the life and motion of a breezy summer day off the coast&amp;hellip;.There is no truer or heatier work in the present exhibition.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.nga.gov/content/dam/ngaweb/research/publications/pdfs/american-paintings-19th-century-part-1.pdf&#34;&gt;American Paintings of the Nineteenth Century, Part I&lt;/a&gt;&lt;/em&gt;, pages 312-318, National Gallery of Art, In-gallery publication, free to download online&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.nga.gov/content/dam/ngaweb/research/publications/pdfs/american-paintings-19th-century-part-1.pdf&#34;&gt;American Paintings of the Nineteenth Century, Part I&lt;/a&gt;&lt;/em&gt;, pages 312-318, National Gallery of Art, In-gallery publication, free to download online&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/wh-11.webp&#34; alt=&#34;Blackboard&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Blackboard&lt;/em&gt;, 1877, Winslow Homer, Painting, watercolor on wove paper&lt;/p&gt;
 &lt;p&gt;Source: &lt;a href=&#34;https://www.nga.gov/collection/art-object-page.71552.html&#34;&gt;National Gallery of Art&lt;/a&gt;&lt;/p&gt;
@@ -3547,8 +3486,7 @@ Exec=/home/pi/test.sh
 &lt;li&gt;&lt;strong&gt;Addition phase&lt;/strong&gt;: This leads you to more complexity, as you explore, buy things, read more and more, find new inspirations and ideas. This is the addition phase.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Contemplation phase&lt;/strong&gt;: At some point, you might pause to consider the bigger picture of what you’re doing. Is this the best way? Is this really important? If it is, what’s the most essential part of it? Can you pare down? Many people skip this phase (and the next) and just keep doing the first two phases.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Paring Down phase&lt;/strong&gt;: If you decided that you want to pare down, this is where you start to let go of things. You figure out what’s essential to what you have been doing and learning, and if you don’t scrap the entire thing completely (which can happen), you might just keep a few key things. For example, if you start learning about chess, you might buy a set (or two) and a bunch of books and apps and go on a bunch of websites. But in the paring down phase, you might decide that chess isn’t important enough to keep in your life, or if it is, you only need one chess set, two really key books, and one website or app. The rest you let go of. Again, many people skip this step.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;它分成四个阶段：探索阶段、深入阶段、思考阶段和削减阶段。在前两个阶段，你大量的获取和收集感兴趣的信息，并且进行了一定的拓宽。例如在偶然一则热带风暴的新闻中，记者提到了风眼这个名词，由此你上网查找资料以了解这个天气的成因、结构等等。单个天气系统不足以满足好奇心，你转而寻找能够集合这类资讯和推送给你的信息源，久而久之，你可能就拥有了一定数量该领域的信息源。这两个阶段是你好奇心和能力拓展的主要阶段，但在前两个阶段我们做的工作可能会比较盲目，你可能不常会回看这些订阅关注的信息源，而这些信息源在之后也许会因为各种各样的原因停用，或是转为其他内容。为了让自己获取的信息更有价值、阅读更高效，我们要做的并非一开始就抑制自己收集信息的想法，而是收集之后再简化。就像 GTD 中 Inbox 的概念一样，在这里我们也需要一个无形的 Inbox 把它们收集起来。&lt;/p&gt;
 &lt;p&gt;思考阶段则是你对获得的这些信息的分类筛选。这些信息我真的需要吗？我对这个真的感兴趣吗？例如你只是想知道热带风暴的成因和防灾的方法，而不想再去了解它是怎么被预报之类的，你很自然地开始了思考阶段并作出了判断——针对性的收集信息。并且开始削减阶段——削减之前收集到的不感兴趣的内容。&lt;/p&gt;
 &lt;p&gt;上述模式，核心是给我们营造了「回归」的条件，也即思考我们实际的需求是什么，回归到这上来。任何事情都需要一个目的、存在某种需求以驱使我们行动，回归需求即给予我们动力，并且避免了不必要事情的干扰，最终达到趋于平静的一种状态。&lt;/p&gt;
@@ -3856,8 +3794,7 @@ Light (光)
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/m-2.webp&#34; alt=&#34;2040_VRG0158.jpg&#34; title=&#34;via The Verge&#34;&gt;&lt;/p&gt;
 &lt;p&gt;利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;引用部分是微软官方的定义。&lt;/p&gt;
 &lt;p&gt;光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。&lt;/p&gt;
 &lt;h2 id=&#34;depth-深&#34;&gt;
@@ -3869,8 +3806,7 @@ Depth (深)
 &lt;p&gt;不同高度下(Z 值)的阴影。&lt;/p&gt;
 &lt;p&gt;Fluent Design System 的出现就是为了打破原有仅适用于平面的设计语言 (Metro UI)，引入三维空间的设计理念便于在今后发展 VR/AR/MR，实现统一可操作的设计规范。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Think about the frame that contains your information. Now break it apart, and reinvent how things relate to each other within a more layered, physical environment. This is how we’ll keep people in their flow – by giving them more space.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Think about the frame that contains your information. Now break it apart, and reinvent how things relate to each other within a more layered, physical environment. This is how we’ll keep people in their flow – by giving them more space.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;打破原有二维框架，在层次区分度更高的物理环境（三维空间）中重新思考事物中的联系。&lt;/p&gt;
 &lt;h2 id=&#34;motion-动&#34;&gt;
 Motion (动)
@@ -3878,8 +3814,7 @@ Motion (动)
 &lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/m-4.webp&#34; alt=&#34;2040_VRG0159.jpg&#34; title=&#34;via The Verge&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Think of motion design like a movie. Seamless transitions keep you focused on the story, and bring experiences to life. We can invite that feeling into our designs, leading people from one task to the next with cinematic ease.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Think of motion design like a movie. Seamless transitions keep you focused on the story, and bring experiences to life. We can invite that feeling into our designs, leading people from one task to the next with cinematic ease.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;微软认为，动效的作用在于带给用户如同观看电影般的沉浸感，做到无缝过渡、由虚转实，使用户轻松、愉快地完成多项任务。在我看来，动效一词需要分真假。「真动效」无限接近生活，能够唤起用户对物理环境下该操作引起动效的感知，因此也可叫「拟物动效」。「假动效」即对二维动画进行空间上的拓展，主要作用是提示用户完成了某一操作，并且能通过细节优化给予愉悦感。&lt;/p&gt;
 &lt;h2 id=&#34;material-材&#34;&gt;
 Material (材)
@@ -3887,8 +3822,7 @@ Material (材)
 &lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/m-5.webp&#34; alt=&#34;2040_VRG0160.jpg&#34; title=&#34;via The Verge&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The things that surround us in the real world are sensory and invigorating. They bend, stretch, bounce, shatter, and glide. Those material qualities translate to digital environments, making people want to reach out and touch our designs.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;The things that surround us in the real world are sensory and invigorating. They bend, stretch, bounce, shatter, and glide. Those material qualities translate to digital environments, making people want to reach out and touch our designs.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;真实世界中存在着「感知」和「活力」。在数字环境中运用恰当的材料，带给用户想去触碰的想法，增加了操作的可能性，是和 Light 一样体现着以自然为设计基础的理念。&lt;/p&gt;
 &lt;h2 id=&#34;scale-维&#34;&gt;
 Scale (维)
@@ -3896,8 +3830,7 @@ Scale (维)
 &lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/m-6.webp&#34; alt=&#34;2040_VRG0161.jpg&#34; title=&#34;via The Verge&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;之所以把 Scale 译作「维」，是因为这一点集中体现了 Fluent Design System 最终的作用——实现从零维到三维的，多种场景适用的设计规范，利用设备提供并拓展面向多维度的体验。&lt;/p&gt;
 </description>
     </item>
@@ -4066,8 +3999,7 @@ Scale (维)
       <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
       <guid>https://fanrongbin.com/running-productive-design-critiques/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;注：本文译自 &lt;cite lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.intercom.com/running-productive-design-critiques/&#34;&gt;Running productive design critiques&lt;/a&gt;&lt;/cite&gt;，作者是 &lt;a href=&#34;http://twitter.com/gustavscirulis&#34;&gt;Gustavs Cirults&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;注：本文译自 &lt;cite lang=&#34;en&#34;&gt;&lt;a href=&#34;https://blog.intercom.com/running-productive-design-critiques/&#34;&gt;Running productive design critiques&lt;/a&gt;&lt;/cite&gt;，作者是 &lt;a href=&#34;http://twitter.com/gustavscirulis&#34;&gt;Gustavs Cirults&lt;/a&gt;。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/critic-1.webp&#34; alt=&#34;Slack-for-iOS-Upload-5-2.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;设计不分对错，只分适合与否。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;要做到在正确的设计道路上持续产出，你需要做的是真正地去了解和探究目前需要处理的问题，并且通过某种渠道不断地获得用户反馈。获得用户反馈的渠道很多，例如使用聊天应用、发送邮件等等。但即使是设计师能够与用户进行直接对话，设计师也很容易会被自己本身的认知所限制，从而陷入设计的僵局。&lt;/p&gt;
@@ -4079,8 +4011,7 @@ Scale (维)
 &lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在展现设计案例前，确保每个人都清楚地了解问题本身与所在。
-进行设计批评，将需要 1-5 人对问题提供&lt;a href=&#34;https://blog.intercom.com/unflattening-design/&#34;&gt;不同视角&lt;/a&gt;（如设计师、工程师、服务支持代表等）。在开始设计批评前，确定批评的目标并对他人提供指引是至关重要的。你需要做些什么改进才能推动作品进步？需要哪种类型的、针对哪些问题的反馈呢？一场合理的设计批评，应由设计师自己进行领导和指引，帮助同事（或其他提供不同视角的角色）理解问题的复杂性，或正确的思维过程，并一起确定设计和批评的目标、目前需要解决的问题，以及可能需要的解决方案。&lt;/p&gt;
-&lt;/blockquote&gt;
+进行设计批评，将需要 1-5 人对问题提供&lt;a href=&#34;https://blog.intercom.com/unflattening-design/&#34;&gt;不同视角&lt;/a&gt;（如设计师、工程师、服务支持代表等）。在开始设计批评前，确定批评的目标并对他人提供指引是至关重要的。你需要做些什么改进才能推动作品进步？需要哪种类型的、针对哪些问题的反馈呢？一场合理的设计批评，应由设计师自己进行领导和指引，帮助同事（或其他提供不同视角的角色）理解问题的复杂性，或正确的思维过程，并一起确定设计和批评的目标、目前需要解决的问题，以及可能需要的解决方案。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;在这方面，可以把问题的描述和提出的解决方案打印下来，贴在墙上供大家参考使用。这能让每个人都理清整个设计作品与问题的关系和解决的程序流程，并且提供针对性的观点。至此，你将永远与「你能滚动回上一张设计页面吗？」「不对，是另外一张」这些原型测试中可能出现的问题说再见。不过在我们需要讨论交互上的设计时，原型测试（interaction design）仍是一个不可或缺的环节。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/critic-2.webp&#34; alt=&#34;poster-design-critique.jpg&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;set-the-scene-做好开始前的准备&#34;&gt;
@@ -4090,8 +4021,7 @@ Set the scene 做好开始前的准备
 &lt;p&gt;在展现设计案例前，确保每个人都清楚地了解问题本身与所在，以及问题出现的前因后果。如果问题没有了解明白，对设计案例的批评也会出现偏颇，在过程中也很容易出现误解。因此，请针对性地给问题起一个名字，用较小的篇幅（最好是一段话）简洁明了、通俗易懂地描述问题。下面是一段示例：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Inviting colleagues&lt;/strong&gt;
-Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve seen that users who invite their colleagues tend to be more active and stick around longer.&lt;/p&gt;
-&lt;/blockquote&gt;
+Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve seen that users who invite their colleagues tend to be more active and stick around longer.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;如果问题能够以可视化的方式呈现，通过绘制图表或者使用案例的 screenshots 是不错的选择。（我们用 &lt;a href=&#34;https://blog.intercom.io/using-job-stories-design-features-ui-ux/&#34;&gt;Job Stories&lt;/a&gt; 了解用户的动机，也推荐你采用。）&lt;/p&gt;
 &lt;h2 id=&#34;让批评人员团队参与进你的解决方案&#34;&gt;
 让批评人员团队参与进你的解决方案
@@ -4148,8 +4078,7 @@ Only 5% of new sign ups invite their colleagues in the first 7 days. We’ve see
 &lt;p&gt;当新的事物出现在我们面前时，我们总是想办法排斥。经过了这段「磨合期」，又像是热恋中的情侣一样久久不能分离。别人偶然间的一句话，让你和恋人果断分了手。最后又开始思考旁人是一家之言，即使不无道理，但却不一定需要去采纳。一来二去，终于明白自己是一个纠结的矛盾体，能做的只有一次又一次反思，提出新的解决方案，修修补补。&lt;/p&gt;
 &lt;p&gt;信息已经在爆炸，只要不被粉尘淹没。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;我们所反对的碎片化阅读，指的是浮浅和无视语境的阅读。这和长短无关，和读者有没有整体性的视角有关。- &lt;a href=&#34;https://blog.yitianshijie.net/2016/07/05/what-is-fragmented-reading/&#34;&gt;李如一&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;我们所反对的碎片化阅读，指的是浮浅和无视语境的阅读。这和长短无关，和读者有没有整体性的视角有关。- &lt;a href=&#34;https://blog.yitianshijie.net/2016/07/05/what-is-fragmented-reading/&#34;&gt;李如一&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 </description>
     </item>
     <item>
@@ -4165,9 +4094,9 @@ General
 &lt;li&gt;&lt;strong&gt;Homepage&lt;/strong&gt;: Pure HTML, CSS, and JavaScript.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Blog:&lt;/strong&gt; &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, typography framework &lt;a href=&#34;https://github.com/ethantw/Han&#34;&gt;Han&lt;/a&gt;, theme by me.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Host:&lt;/strong&gt; &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github&lt;/a&gt;, automatically deployed by &lt;a href=&#34;https://pages.cloudflare.com/&#34;&gt;Cloudflare Pages&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Font:&lt;/strong&gt; Mostly Helvetica Neue, Helvetica, Arial.
+&lt;li&gt;&lt;strong&gt;Font:&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;Use default or pre-installed fonts to save more resources and load faster.&lt;/li&gt;
+&lt;li&gt;Use commonly installed, default or pre-installed fonts to save more resources and load faster.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.babelstone.co.uk/Fonts/Shapes.html&#34;&gt;BabelStone Shapes&lt;/a&gt; to display &amp;ldquo;half stars&amp;rdquo; on my stream page.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -4189,7 +4118,7 @@ Stream Page
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Webmention&lt;/strong&gt;: &lt;a href=&#34;https://fed.brid.gy&#34;&gt;Bridgy&lt;/a&gt;, &lt;a href=&#34;https://webmention.io&#34;&gt;webmention.io&lt;/a&gt;, Github Actions to automate &lt;span class=&#34;sidenote-number&#34;&gt;
     &lt;span class=&#34;sidenote-box&#34;&gt;
-        &lt;small class=&#34;sidenote&#34;&gt;&lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;&gt;I&amp;rsquo;ve written a post&lt;/a&gt; about what&amp;rsquo;s webmention, how to enable your site to receive it, and how to integrate Mastodon (add your site to the fediverse). The post is in Chinese but I&amp;rsquo;m sure you can handle it with any translation machine.&lt;/small&gt;
+        &lt;small class=&#34;sidenote&#34;&gt;&lt;a href=&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;&gt;I wrote a post&lt;/a&gt; about what&amp;rsquo;s webmention, how to enable your site to receive it, and how to integrate Mastodon (add your site to the fediverse). The post is in Chinese but I&amp;rsquo;m sure you can handle it with any translation machine.&lt;/small&gt;
         &lt;span class=&#34;sidenote-line&#34;&gt;&lt;/span&gt;
     &lt;/span&gt;
 &lt;/span&gt;&lt;/li&gt;
@@ -4209,7 +4138,7 @@ Software and Service
 &lt;li&gt;One of the best desktop Markdown editors, cheaper than iA writer, and charges one-time.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Code Editor: Visual Studio Code, Sublime Text&lt;/li&gt;
+&lt;li&gt;Code Editor: Visual Studio Code, Sublime Text, Cursor&lt;/li&gt;
 &lt;li&gt;Reading: &lt;a href=&#34;https://netnewswire.com/?ref=fanrongbin.com&#34;&gt;NetNewsWire&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;Good old RSS.&lt;/li&gt;

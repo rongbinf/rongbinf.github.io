@@ -62,6 +62,7 @@ body {
             <option value="movie">Movie</option>
             <option value="tv">TV</option>
             <option value="book">Book</option>
+            <option value="product">Product</option>
             <option value="reply">Reply</option>
             <option value="like">Like</option>
             <option value="repost">Repost</option>
@@ -135,6 +136,13 @@ body {
                     <label for="streamurl">Stream URL:</label>
                     <input type="url" id="streamurl" name="streamurl" required><br><br>
                 `;
+            } else if (type === 'product') {
+                typeSpecificFields.innerHTML = `
+                    <label for="productname">Product Name:</label>
+                    <input type="text" id="productname" name="productname" required><br><br>
+                    <label for="producturl">Product URL:</label>
+                    <input type="url" id="producturl" name="producturl" required><br><br>
+                `;
             }
         }
 
@@ -179,6 +187,9 @@ body {
                 frontMatter += `bookname: ${document.getElementById('bookname').value}\n`;
                 frontMatter += `author: ${document.getElementById('author').value}\n`;
                 frontMatter += `rating: ${document.getElementById('bookrating').value}\n`;
+            } else if (type === 'product') {
+                frontMatter += `productname: ${document.getElementById('productname').value}\n`;
+                frontMatter += `producturl: ${document.getElementById('producturl').value}\n`;
             } else if (['reply', 'like', 'repost', 'follow'].includes(type)) {
                 frontMatter += `streamurl: ${document.getElementById('streamurl').value}\n`;
             }
