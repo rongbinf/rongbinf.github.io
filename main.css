@@ -102,6 +102,7 @@ div.indie-webring>a::after {
 
 em {
     /* font-family: var(--serif); */
+    /* font-style: italic; */
 }
 
 .main {
@@ -152,7 +153,7 @@ section.prototype>a>img {
 }
 
 section.prototype>a>img:hover {
-    outline: 5px solid #000;
+    outline: 5px solid var(--text-color);
     border-radius: 26px;
 }
 
@@ -398,12 +399,30 @@ textarea:focus, textarea:focus-visible, textarea:focus-within {
     padding: 2vw;
 }
 
+.stream-inner>p>a, .stream-inner>p>em>a, .stream-inner>p>time>a {
+    pointer-events: none;
+    filter: grayscale(100%);
+}
+
+.stream:hover {
+    pointer-events: unset;
+    cursor: pointer;
+    /* outline: 5px solid var(--text-color); */
+    /* background: var(--link-color); */
+    /* color: #fff; */
+    background: #a2a2a21c;
+}
+
 .stream-inner {
     margin: 1rem 0;
     margin-inline-start: 2rem;
     font-size: 1.1em;
     font-style: initial;
     font-family: var(--sans);
+}
+
+.stream-external {
+    font-family: var(--serif);
 }
 
 .stream-meta {
@@ -470,5 +489,23 @@ a.stream-time:hover {
     width: 1.5ch;
     display: block;
     left: -1.5rem;
-    top: 0.4rem; /* 0.8 */
+    top: .8rem;
+}
+
+@media (max-width: 500px) {
+    .stream{
+        margin: 5vw;
+        padding: 2ch 2ch 5vw;
+    }
+}
+
+@media (max-width: 950px) {
+    .stream{
+        margin: 0 5vw;
+    }
+}
+
+p>a, ul>a, ol>a, li>a, span>a, strong>a, i>a, em>a, code>a, small>a, div>a, time>a {
+    border-bottom: 1px solid var(--link-color);
+    word-break: break-word;
 }
