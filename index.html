@@ -69,10 +69,13 @@
                     width="300"></a>
         </section>
         <section class="context">
-            
+            <a href="/stream"><div class="block block-link"><h2>Stream</h2></div></a>
+            <div id="stream-placeholder" class="block stream-entry">
+                <p class="placeholder">Placeholder</p>
+            </div>
             <a href="/posts">
                 <div class="block block-link">
-                    <h2>Blog posts</h2>
+                    <h2>Blog post</h2>
                 </div>
                 <div>
                     <p style="padding:0 0 0 2ch;margin:1ch 0 1ch 0;font-style:italic;font-size:90%;">Recent</p>
@@ -123,35 +126,51 @@
 </body>
 
 <script>
-    function htmlDecode(input) {
-        var doc = new DOMParser().parseFromString(input, "text/html");
-        return doc.documentElement.textContent;
-    }
+function htmlDecode(input) {
+    var doc = new DOMParser().parseFromString(input, "text/html");
+    return doc.documentElement.innerHTML;
+}
 
-    function updatePosts(data) {
-        data.forEach((post, index) => {
+function updatePosts(data) {
+    if (Array.isArray(data.articles)) {
+        data.articles.forEach((post, index) => {
             const postDiv = document.getElementById(`post-${index + 1}`);
             if (postDiv) {
                 const titleElement = postDiv.querySelector('.h3-blog-title');
                 const dateElement = postDiv.querySelector('.blog-date');
 
-                titleElement.textContent = htmlDecode(post.title);
+                titleElement.innerHTML = htmlDecode(post.title);
                 titleElement.classList.remove('placeholder');
-                dateElement.textContent = htmlDecode(post.date);
+                dateElement.innerHTML = htmlDecode(post.date);
                 dateElement.classList.remove('placeholder');
 
                 postDiv.parentNode.href = post.url;
             }
         });
+    } else {
+        console.error("Error: data.articles is not an array", data);
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        fetch('https://post-fetch.fanrongbin.com')
-            .then(response => response.json())
-            .then(data => updatePosts(data))
-            .catch(error => console.error('Error fetching posts:', error));
-    });
+    if (data.streamEntry && data.streamEntry.content) {
+        const streamPlaceholder = document.getElementById('stream-placeholder');
+        if (streamPlaceholder) {
+            streamPlaceholder.innerHTML = htmlDecode(data.streamEntry.content);
+            streamPlaceholder.classList.remove('placeholder');
+            streamPlaceholder.classList.add('stream');
+        }
+    } else {
+        console.error("Error: No streamEntry found", data);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('https://post-fetch.fanrongbin.com')
+        .then(response => response.json())
+        .then(data => updatePosts(data))
+        .catch(error => console.error('Error fetching posts:', error));
+});
 </script>
+
 
 
 

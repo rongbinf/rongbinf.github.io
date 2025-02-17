@@ -101,7 +101,7 @@ div.indie-webring>a::after {
 }
 
 em {
-    font-family: var(--serif);
+    /* font-family: var(--serif); */
 }
 
 .main {
@@ -386,4 +386,89 @@ textarea:focus, textarea:focus-visible, textarea:focus-within {
 
 .indie-webring>a, .footer>p>a {
     border: none;
+}
+
+/* stream */
+
+.stream {
+    /* display: inline; */
+    font-size: 85%;
+    /* font-style: italic; */
+    font-family: var(--serif);
+    padding: 2vw;
+}
+
+.stream-inner {
+    margin: 1rem 0;
+    margin-inline-start: 2rem;
+    font-size: 1.1em;
+    font-style: initial;
+    font-family: var(--sans);
+}
+
+.stream-meta {
+    text-align: right;
+    font-size: 80%;
+    padding-bottom: 1rem;
+    text-transform: lowercase;
+}
+
+.stream-time {
+    opacity: 0.4;
+    font-style: initial;
+    font-family: var(--sans);
+    border: none;
+}
+
+a.stream-time::after {
+    content: none;
+}
+
+a.stream-time:hover {
+    border: none;
+    cursor: wait;
+}
+
+.stream-media {
+    display: inline;
+    font-size: 90%;
+    font-family: var(--serif);
+    top: -1rem;
+    position: relative;
+    margin-inline-start: -2rem;
+}
+
+.stream-media-search {
+    font-style: normal;
+    text-align: right;
+    opacity: 0.6;
+    font-family: var(--sans);
+    padding-top: 0.5ch;
+    display: block;
+}
+
+.stream-media-search:hover {
+    opacity: 1;
+}
+
+.stream>a[href*="//"],
+.stream-inner>a[href*="//"] {
+    /* color: var(--highlight); */
+    /* display: inline; */
+    /* border: unset; */
+}
+
+.stream>a[href*="//"]::after,
+.stream-inner>a[href*="//"]::after {
+    /* top: -5px; */
+}
+
+.stream::before {
+    content: "";
+    border-top: 1px solid var(--text-color);
+    position: relative;
+    width: 1.5ch;
+    display: block;
+    left: -1.5rem;
+    top: 0.4rem; /* 0.8 */
 }
