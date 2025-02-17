@@ -22,7 +22,7 @@
 
         
   
-        &lt;p&gt;Track everything you would like to track, such as your emotion, medication, weight. Can integrate with Weather app, Apple Health, Oura and Whoop. It reminds me of &lt;a href=&#34;https://aaronparecki.com/2013/10/10/6/low-friction-personal-data-collection&#34;&gt;Quantified Self&lt;/a&gt;. You can create formulas to combine different metrics, plots, timers (track at the same time!), and the app also generates insights and reports. &lt;a href=&#34;https://aaronparecki.com/&#34;&gt;Aaron Parecki&lt;/a&gt; has been tracking various aspects of this life for years – specifically location, weight, and sleep. The format of the backup file is JSON and it supports iCloud automated backup, which means it is possible to update your stats to the web automatically.&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&#34;https://ntl.ai/reflect/&#34;&gt;Reflect&lt;/a&gt; allows you to track everything you would like to track, such as your emotion, medication, weight. Can integrate with Weather app, Apple Health, Oura and Whoop. It reminds me of &lt;a href=&#34;https://aaronparecki.com/2013/10/10/6/low-friction-personal-data-collection&#34;&gt;Quantified Self&lt;/a&gt;. You can create formulas to combine different metrics, plots, timers (track at the same time!), and the app also generates insights and reports. &lt;a href=&#34;https://aaronparecki.com/&#34;&gt;Aaron Parecki&lt;/a&gt; has been tracking various aspects of this life for years – specifically location, weight, and sleep. The format of the backup file is JSON and it supports iCloud automated backup, which means it is possible to update your stats to the web automatically.&lt;/p&gt;
 
       </description>
     </item>
