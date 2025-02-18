@@ -3920,7 +3920,7 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
         background: greenyellow;
         color: black;
         position: relative;
-        top: -5px;
+         
         height: fit-content;
     }
 
@@ -4064,7 +4064,7 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
         min-width: 2.5em;
     }
     
-    .buttons > button:hover {
+    .buttons > button:hover, .buttons > button.active {
         background: var(--text-color);
         color: var(--bgcolor);
          
@@ -4121,10 +4121,9 @@ There&rsquo;s no place with perfect mountains, waters, and nice pavilions.</p>
         <div class="lastfm">
             <img src="" class="lastfm-cover">
             <div class="lastfm-name">
-                <p class="lastfm-name-p"><span class="lastfm-track" style="margin-right:2ch;font-weight:bold;">Track
-                        Name</span><span class="lastfm-time"
-                        style="opacity:0.6;font-size:85%;font-style:italic;margin-right:2ch;">Time</span></p>
-                <p class="lastfm-name-p"><span class="lastfm-album">Album Name</span></p>
+                <p class="lastfm-name-p"><span class="lastfm-track" style="margin-right:2ch;font-weight:bold;"></span><span class="lastfm-time"
+                        style="opacity:0.6;font-size:85%;font-style:italic;margin-right:2ch;"></span></p>
+                <p class="lastfm-name-p"><span class="lastfm-album"></span></p>
             </div>
         </div>
     </a>
@@ -4518,13 +4517,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var allButton = document.getElementById('all-button');
 
     function showEntries(type) {
+        document.querySelectorAll('.buttons > button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        const activeButton = document.getElementById(type + '-button') || document.getElementById('all-button');
+        if (activeButton) activeButton.classList.add('active');
         entries.forEach(function(entry) {
             if (type === 'all') {
                 entry.classList.remove('hidden');
             } else if (type === 'no-type') {
                 if (!entry.classList.contains('stream-music') && 
                     !entry.classList.contains('stream-tv') && 
-                    !entry.classList.contains('stream-movie')) {
+                    !entry.classList.contains('stream-movie') &&
+                    !entry.classList.contains('stream-product')) {
                     entry.classList.remove('hidden');
                 } else {
                     entry.classList.add('hidden');
@@ -4576,6 +4581,8 @@ document.addEventListener('DOMContentLoaded', function() {
     allButton.addEventListener('click', function() {
         showEntries('all');
     });
+
+    document.getElementById('all-button').classList.add('active');
 });
 
 </script>
