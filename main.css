@@ -11,6 +11,7 @@
   --bgcolor: rgb(255, 255, 255);
   --bg-color: var(--bgcolor);
   --highlight: rgb(0, 38, 255);
+  --item-hover-bg: rgba(162, 162, 162, 0.11);
 
   /* --color-block-bg-color: #f6ff00; */
   --color-block-text-color: #000;
@@ -202,8 +203,14 @@ section.prototype>a>img:hover {
     /* cursor: default; */
 }
 
-.blog-title:hover, .blog-title:active, .blog-title:focus, .blog-title:focus-visible {
-    outline: 5px solid var(--text-color);
+.blog-title:hover, .blog-title:active, .blog-title:focus, .blog-title:focus-visible, .stream:hover, .stream:active, .stream:focus, .stream:focus-visible {
+    /* outline: 5px solid var(--text-color); */
+    pointer-events: unset;
+    cursor: pointer;
+    /* outline: 5px solid var(--text-color); */
+    /* background: var(--link-color); */
+    /* color: #fff; */
+    background: var(--item-hover-bg);
 }
 
 .block-button {
@@ -402,15 +409,6 @@ textarea:focus, textarea:focus-visible, textarea:focus-within {
 .stream-inner>p>a, .stream-inner>p>em>a, .stream-inner>p>time>a {
     pointer-events: none;
     filter: grayscale(100%);
-}
-
-.stream:hover {
-    pointer-events: unset;
-    cursor: pointer;
-    /* outline: 5px solid var(--text-color); */
-    /* background: var(--link-color); */
-    /* color: #fff; */
-    background: #a2a2a21c;
 }
 
 .stream-inner {
