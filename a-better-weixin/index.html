@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>A Better Weixin.</title>
+    <meta name="description" content="其实更想知道微信团队设计（与不设计）某功能或逻辑的缘由——">
+    <meta name="author" content="Rongbin FAN">
+
+    <meta property="og:title" content="A Better Weixin." />
+    <meta property="og:description" content="其实更想知道微信团队设计（与不设计）某功能或逻辑的缘由——" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fanrongbin.com" />
+    <meta property="og:image" content="https://img.fanrongbin.com/a-better-wechat.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://img.fanrongbin.com/a-better-wechat.webp" />
+    <meta name="twitter:title" content="A Better Weixin." />
+    <meta name="twitter:description" content="其实更想知道微信团队设计（与不设计）某功能或逻辑的缘由——" />
+
+    <meta name="application-name" content="A Better Weixin.">
+    <meta name="apple-mobile-web-app-title" content="A Better Weixin.">
+    <meta name="theme-color" content="#fff">
+    <meta name="msapplication-TileColor" content="#fff">
+
+    <meta name="google-site-verification" content="f9S1PcORQC1rTiGZYbp79oBJ-nNHN_CBQ8yGhW_rufs" />
+    <meta name="msvalidate.01" content="6DFC6C69D3CAC309F3ED39EA45B19F2A" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.fanrongbin.com/a-better-wechat.webp">
+
+    <link rel="icon" ref="https://img.fanrongbin.com/a-better-wechat.webp">
+
+    <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
+
+    <link rel="stylesheet" href="/main.css">
+    <!-- <script src="/clipboard.min.js"></script> -->
+
+    <script type="application/ld+json">
+      {
+        "@context" : "https://schema.org",
+        "@type" : "WebSite",
+        "name" : "Rongbin FAN",
+        "url" : "https://fanrongbin.com/"
+      }
+    </script>
+</head>
+
+<style>
+    * {
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Source Sans", "思源黑体", "Source Han Sans", system-ui, "Helvetica Neue Book", Helvetica, Arial, Verdana, Avenir, "Segoe UI Variable", "Segoe UI", "Biaodian Pro Sans", "Han Heiti", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji";
+        --link-color: #2cae62;
+    }
+
+    h2 {
+        margin-bottom: 3em;
+    }
+
+    .heading-title {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .context {
+        grid-column: 1 / -1;
+    }
+
+    .container {
+        grid-column: 1 / -1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page {
+        width: 100%;
+        padding: 2ch;
+        cursor: pointer;
+        z-index: 50;
+        opacity: 0;
+        /* Initially hidden */
+    }
+
+    .block {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: var(--link-color);
+        color: white;
+        z-index: 100;
+    }
+
+    .toc {
+        display: flex;
+        flex-direction: column;
+        width: 10em;
+        border: none;
+        padding: 2ch;
+        margin-bottom: 5ch;
+        position: relative;
+        left: 16.67%;
+    }
+
+    a {
+        border: none !important;
+    }
+
+    div.container.link>div.block {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    div.container.link>div.block:hover {
+        background-color: var(--link-color);
+        color: #fff;
+    }
+
+    .no-pointer-event {
+        pointer-events: none;
+    }
+
+    .number {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        width: 4ch;
+        height: 5ch;
+        background: var(--text-color);
+        color: var(--bg-color);
+        font-size: 150%;
+        z-index: 150;
+    }
+
+    .footer {
+        position: fixed;
+        padding-left: 1ch;
+        bottom: 1ch;
+        z-index: 500;
+        flex-direction: column;
+    }
+
+    .footer>a:hover {
+        background-color: var(--highlight);
+        color: var(--bg-color);
+    }
+
+    .footer>a>p {
+        margin-bottom: 0;
+    }
+
+    .page-comment {
+        padding: 2ch;
+        max-width: 800px;
+        margin-bottom: 5rem;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal.show {
+        display: flex;
+    }
+
+    .modal-content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        overflow: hidden;
+        padding: 2ch;
+    }
+
+    .modal-content {
+        max-height: 100%;
+        height: auto;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .modal-content.show {
+        opacity: 1;
+    }
+
+    .modal .close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .modal .close:hover,
+    .modal .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loader-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5ch;
+        background-color: var(--bg-color);
+        opacity: 0.5;
+        color: var(--text-color);
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 80;
+    }
+
+    @media (min-width: 1280px) {
+        html {
+            width: 75%;
+            margin: auto;
+        }
+    }
+
+    @media (min-width: 1920px) {
+        .page {
+            max-width: 1920px;
+        }
+    }
+
+    @media (max-width: 780px) {
+        h2 {
+            margin-bottom: 2em;
+        }
+
+        .modal-content-wrapper {
+            height: 100vh;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            justify-content: flex-start;
+        }
+
+        .modal-content {
+            height: 100vh;
+            width: auto;
+            max-width: unset;
+            object-fit: contain;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .heading-title {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<body>
+
+    <main class="main">
+
+        <section class="heading heading-name">
+            <p id="backtotop">Prototype #2</p>
+            <p>August 2024</p>
+        </section>
+
+        <section class="heading heading-general" style="display:flex;flex-direction:column;gap:2em;">
+            <img src="https://img.fanrongbin.com/a-better-wechat.webp" loading="eager">
+            <div class="heading-title">
+                <h1 style="font-size:2em;">A Better Weixin.</h1>
+                <p style="margin:2ch 0 0 0;">其实更想知道微信团队设计（与不设计）某功能或逻辑的缘由——</p>
+            </div>
+        </section>
+
+        <!-- <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content-wrapper">
+                <img class="modal-content" id="modalImage">
+            </div>
+        </div> -->
+
+        <section class="context">
+
+            <div class="toc">
+                <p style="opacity: 0.5;">TOC</p>
+                <a href="#cluster">对聊天会话分组</a>
+                <a href="#scenario">情景分类</a>
+                <a href="#discover">发现页</a>
+                <a href="#me">“我”页面</a>
+            </div>
+
+            <div class="container">
+                <p style="opacity:0.5;"><strong>点击图片可放大</strong></p>
+            </div>
+
+            <div class="container">
+                <div class="block no-pointer-event">
+                    <h2 id="cluster">对聊天会话分组</h2>
+                    <div class="number">
+                        <h1>1</h1>
+                    </div>
+                    <p>版本 1 类似折叠群聊，允许用户自行选择多个会话并组合到一个 item 里。
+                    </br>新建分组时允许自定义分组头像，方便识别
+                    </br>版本 2 类似置顶，通过展开折叠显示组内会话。</p>
+                </div>
+                <div class="image-container">
+                    <img class="page" src="https://img.fanrongbin.com/cluster-1-compressed.webp" loading="eager">
+                    <div class="loader-overlay">Loading</div>
+                </div>
+                <div class="image-container">
+                    <img class="page" src="https://img.fanrongbin.com/cluster-2-compressed.webp" loading="lazy">
+                    <div class="loader-overlay">Loading</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="block no-pointer-event">
+                    <h2 id="scenario">情景分类</h2>
+                    <div class="number">
+                        <h1>2</h1>
+                    </div>
+                    <p>分组的再上一层级分类，可自行选择，或 App 自动根据聊天类型分类。如服务号、企业微信群聊等。</p>
+                </div>
+                <div class="image-container">
+                    <img class="page" src="https://img.fanrongbin.com/Scenario-compressed.webp" loading="lazy">
+                    <div class="loader-overlay">Loading</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="block no-pointer-event">
+                    <h2 id="discover">发现页</h2>
+                    <div class="number">
+                        <h1>3</h1>
+                    </div>
+                    <p>最大的改动为将订阅号挪至发现页，在发现页聚合所有<strong>强流式媒体属性</strong>的入口。</br>
+                    以及将“状态”挪至发现页，采用类似 Instagram Stories 做法，头像右下角为状态图标，仍设置“所有”以访问按照状态类型（而非以用户）进行分类的页面。</br>
+                    允许显示扩充内容、快捷访问。</p>
+                </div>
+                <div class="image-container">
+                    <img class="page" src="https://img.fanrongbin.com/Discover-compressed.webp" loading="lazy">
+                    <div class="loader-overlay">Loading</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="block no-pointer-event">
+                    <h2 id="me">“我”页面 & 云同步</h2>
+                    <div class="number">
+                        <h1>4</h1>
+                    </div>
+                    <p>将服务、卡包放在一块儿比较符合逻辑，虽然卡包可能不是微信支付团队做。</br>
+                    把用户的二维码从单纯 icon 做成按钮。</br>
+                    云同步是一个我知道微信不会做，但还依旧画出来的理想主义……</p>
+                </div>
+                <div class="image-container">
+                    <img class="page" src="https://img.fanrongbin.com/Me-compressed.webp" loading="lazy">
+                    <div class="loader-overlay">Loading</div>
+                </div>
+            </div>
+
+            <a href="#backtotop">
+                <div class="container link">
+                    <div class="block">
+                        <h2>回到页面顶部</h2>
+                    </div>
+                </div>
+            </a>
+
+            <div class="page-comment">
+                <h2 class="comment-title">Comment</h2>
+                <details class="comment-box">
+                    <summary>Login via Github</summary>
+                    <div id="giscus">
+                        <script id="giscus-script" src="https://giscus.app/client.js"
+                            data-repo="rongbinf/giscus-comment" data-repo-id="R_kgDOK3UYzw"
+                            data-category="Announcements" data-category-id="DIC_kwDOK3UYz84Cbl2R"
+                            data-mapping="pathname" data-strict="0" data-reactions-enabled="0" data-emit-metadata="0"
+                            data-input-position="top" data-theme="https://fanrongbin.com/giscus.css" data-lang="en"
+                            data-loading="lazy" crossorigin="anonymous" defer>
+                            </script>
+                    </div>
+                </details>
+
+                <details class="comment-box">
+                    <summary>No Login</summary>
+                    <div id="tcomment"></div>
+                    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js"
+                        integrity="sha384-4KfOjEinLSkv1i1J8TzlkC/RTnuiLoR1OLerVgjEKoH5djYtbf7mzEFsz9p3nfuA"
+                        crossorigin="anonymous" onload="initTwikoo()" defer></script>
+                    <script>
+                        function initTwikoo() {
+                            twikoo.init({
+                                envId: 'https://twikoo.fanrongbin.com',
+                                el: '#tcomment',
+                                lang: 'en',
+                            });
+                        }
+                    </script>
+                    <style>
+                        .twikoo svg {
+                            margin: 0;
+                        }
+
+                        .tk-avatar .tk-avatar-img {
+                            margin: 0;
+                        }
+
+                        .el-input-group__append,
+                        .el-input-group__prepend {
+                            background-color: unset !important;
+                            border: unset !important;
+                        }
+
+                        .el-input__inner,
+                        .el-textarea__inner {
+                            border: 0;
+                            border-bottom: 1px solid var(--text-color);
+                            border-radius: 0;
+                        }
+
+                        .el-input.is-active .el-input__inner,
+                        .el-input__inner:focus,
+                        .twikoo .el-input__inner:focus,
+                        .twikoo .el-textarea__inner:focus {
+                            border-color: var(--text-color) !important;
+                        }
+
+                        .el-button--primary {
+                            background-color: var(--highlight) !important;
+                        }
+
+                        .el-button--primary.is-disabled {
+                            background-color: var(--highlight) !important;
+                            border: 0 !important;
+                            opacity: 0.5 !important;
+                        }
+
+                        .twikoo .el-button:not(.el-button--primary):not(.el-button--text):hover {
+                            border-color: white !important;
+                            background-color: var(--highlight) !important;
+                            color: white !important;
+                        }
+
+                        .tk-submit-action-icon.__markdown {
+                            border: none;
+                        }
+
+                        .tk-submit-action-icon.__markdown::after {
+                            content: none;
+                        }
+
+                        .tk-icon.__comments {
+                            color: var(--highlight);
+                        }
+                    </style>
+                </details>
+            </div>
+
+        </section>
+
+        <section class="footer" style="">
+            <!-- <p style="font-style: italic;">Are you willing to, able to, imagine an alternative reality?</p> -->
+            <a href="/">
+                <p>All rights reserved. © Rongbin FAN</p>
+            </a>
+            <a href="https://www.figma.com/community/file/892976858322777290/le-wagon-ux-wechat-ux-kit" target="_blank">
+                <p>Special thanks to Le Wagon.</p>
+            </a>
+        </section>
+
+    </main>
+</body>
+
+<script>
+    document.querySelectorAll('.page').forEach(function (img) {
+        img.addEventListener('click', function () {
+            const modal = document.createElement('div');
+            modal.classList.add('modal', 'show');
+            
+            const closeButton = document.createElement('span');
+            closeButton.classList.add('close');
+            closeButton.textContent = '×';
+            modal.appendChild(closeButton);
+            
+            const modalContentWrapper = document.createElement('div');
+            modalContentWrapper.classList.add('modal-content-wrapper');
+            modal.appendChild(modalContentWrapper);
+
+            const loaderOverlay = document.createElement('div');
+            loaderOverlay.classList.add('loader-overlay');
+            loaderOverlay.textContent = 'Loading';
+            modalContentWrapper.appendChild(loaderOverlay);
+
+            const modalImg = document.createElement('img');
+            modalImg.src = this.src;
+            modalImg.classList.add('modal-content');
+            modalContentWrapper.appendChild(modalImg);
+
+            document.body.appendChild(modal);
+
+            modalImg.onload = function () {
+                loaderOverlay.style.display = 'none';
+                modalImg.classList.add('show');
+            };
+
+            if (modalImg.complete) {
+                modalImg.dispatchEvent(new Event('load'));
+            }
+
+            closeButton.addEventListener('click', function () {
+                modal.remove();
+            });
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    modal.remove();
+                }
+            });
+        });
+    });
+
+    document.querySelectorAll('img.page').forEach(function (img) {
+        img.addEventListener('load', function () {
+            var loaderOverlay = this.nextElementSibling;
+            if (loaderOverlay && loaderOverlay.classList.contains('loader-overlay')) {
+                loaderOverlay.style.display = 'none'; // 隐藏加载器overlay
+            }
+            img.style.opacity = '1'; // 使图片完全显示
+        });
+
+        if (img.complete) {
+            img.dispatchEvent(new Event('load'));
+        }
+    });
+</script>
+
+
+
+
+<!-- disable viewport zooming on iOS -->
+<!-- <script defer>
+    window.onload = function () {
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    }
+</script> -->
+
+<script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</html>

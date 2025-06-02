@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Guestbook - Rongbin FAN</title>
+  <meta name="description" content="Thoughts and ideas.">
+  <meta name="author" content="Rongbin FAN">
+
+  <meta property="og:title" content="Rongbin FAN" />
+  <meta property="og:description" content="Thoughts and ideas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fanrongbin.com" />
+  <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+  <meta name="twitter:title" content="Rongbin FAN" />
+  <meta name="twitter:description" content="Thoughts and ideas." />
+
+  <meta name="application-name" content="Rongbin FAN">
+  <meta name="apple-mobile-web-app-title" content="Rongbin FAN">
+  <!-- <meta name="theme-color" content="#f8f8f8"> -->
+  <meta name="msapplication-TileColor" content="#fff">
+
+  <meta name="google-site-verification" content="f9S1PcORQC1rTiGZYbp79oBJ-nNHN_CBQ8yGhW_rufs" />
+  <meta name="msvalidate.01" content="6DFC6C69D3CAC309F3ED39EA45B19F2A" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <link rel="icon" ref="/favicon.svg">
+  <link rel="mask-icon" href=”/favicon.svg” color="#000">
+
+  <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
+
+  <script src="/clipboard.min.js"></script>
+  <script src="/fetch.umd.min.js"></script>
+
+  <link rel="preload" fetchpriority="high" as="image" href="/dithered-guestbook-white.webp" type="image/webp"
+    media="(prefers-color-scheme: dark)">
+  <link rel="preload" fetchpriority="high" as="image" href="/dithered-guestbook.webp" type="image/webp"
+    media="(prefers-color-scheme: light)">
+    
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Color scheme */
+
+    --textcolor: #121212;
+    --bgcolor: #fff;
+    --highlight: #009ba0;
+
+  }
+
+  @media (prefers-color-scheme: dark) {
+    * {
+      --textcolor: #dadada;
+      --bgcolor: #141414;
+      --highlight: #009ba0;
+    }
+  }
+
+  @font-face {
+    font-family: 'Route 159';
+    font-style: normal;
+    font-display: swap;
+    src: url(/font/route159/Route159-Regular.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Route 159';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(/font/route159/Route159-Bold.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* @font-face {
+    font-family: 'Route 159';
+    font-style: italic;
+    font-display: swap;
+    src: url(/font/route159/Route159-Italic.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;  }
+
+  @font-face {
+    font-family: 'Route 159';
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: url(/font/route159/Route159-BoldItalic.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;  }
+   */
+
+  body {
+    font-size: 16px;
+    font-family: "Route 159", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
+    line-height: 1.4;
+    color: var(--textcolor);
+    background: var(--bgcolor);
+    position: relative;
+    max-width: 64em;
+    /* remove this for a full-width layout */
+    margin: 0 auto;
+    /* centers the layout */
+  }
+
+  /* ------- Sections ------- */
+
+  section {
+    padding: calc(6em + 5vw) 5vw 8vw 5vw;
+    /* ! Everything below is needed ! */
+    display: none;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: var(--bgcolor);
+  }
+
+  section:target {
+    /* Show section */
+    display: block;
+  }
+
+  section#home {
+    /* Show #home by default */
+    display: block;
+  }
+
+  /* ------- Header ------- */
+
+  header {
+    padding: 5vw 5vw 0 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  header h1 {
+    font-size: 1em;
+    flex: 1;
+    /* pushes nav to the right */
+    white-space: nowrap;
+    padding: 0 5vw .5em 0;
+  }
+
+  nav a:not(:last-of-type) {
+    margin-right: 1.5vw;
+  }
+
+  /* ------- General ------- */
+
+  a {
+    text-decoration: none;
+    color: var(--highlight);
+  }
+
+  a:hover {
+    border-bottom: 1px solid;
+  }
+
+  section h1 {
+    font-size: 1em;
+    margin: 0 0 1em 0;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 1.6em 0 .6em 0;
+  }
+
+  p,
+  ul,
+  ol,
+  article {
+    max-width: 60ch;
+    /* Limit line-length to 60 characters */
+    margin-bottom: 1em;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  ul li::marker {
+    content: "\2022   ";
+  }
+
+  li {
+    margin-bottom: .2em;
+  }
+
+  ul,
+  ol {
+    padding-left: 2ch;
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+
+  small {
+    font-size: .85em;
+    opacity: 0.6;
+  }
+
+  small:hover {
+    opacity: 1;
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+    background: currentColor;
+    opacity: .1;
+    margin: 1.2em 0;
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  abbr[title]:hover {
+    opacity: .7;
+    cursor: help;
+  }
+
+  blockquote {
+    padding-left: 2ch;
+    opacity: .7;
+    margin-bottom: .6em;
+    position: relative;
+  }
+
+  blockquote:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .3em;
+    bottom: .3em;
+    background: currentColor;
+    width: 1px;
+    opacity: .2;
+  }
+
+  img,
+  svg,
+  video,
+  audio {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    fill: currentColor;
+  }
+
+  code,
+  textarea {
+    font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+    font-size: 1em;
+    opacity: .7;
+  }
+
+  a code {
+    opacity: 1;
+  }
+
+  pre,
+  textarea {
+    /* for code samples */
+    font-size: .9em;
+    color: inherit;
+    line-height: inherit;
+    padding: .6em .9em;
+    margin: .8em 0 1em 0;
+    position: relative;
+    display: block;
+    width: 100%;
+    white-space: pre;
+    border: 0;
+    border-radius: 4px;
+    background: rgba(255, 255, 100, .075);
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .2), inset -1px -1px 0 rgba(0, 0, 0, .04);
+  }
+
+  /* Inline footnotes */
+
+  label {
+    cursor: pointer;
+    vertical-align: super;
+    line-height: 1;
+    font-size: .75em;
+    padding-left: .1em;
+  }
+
+  label:hover {
+    color: var(--highlight);
+  }
+
+  label:before {
+    content: "[";
+  }
+
+  label:after {
+    content: "]";
+  }
+
+  label+input,
+  label+input+small {
+    display: none;
+  }
+
+  input:checked+small {
+    display: block;
+    padding: .8em 0 1em 2.5vw;
+    ;
+  }
+
+  /* Figures */
+
+  figure {
+    margin: 2em 0 1.5em 0;
+  }
+
+  figure figcaption {
+    margin: 0.8em 0 0 0;
+    font-size: .85em;
+    opacity: .7;
+  }
+
+  /* Responsive video embeds */
+
+  figure.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+
+  figure.video iframe,
+  figure.video object,
+  figure.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    visibility: hidden;
+    /* so loading="lazy" should work? */
+  }
+
+  section:target iframe {
+    visibility: visible;
+  }
+
+  /* External links */
+
+  a[href*="//"]:after {
+    font-weight: 300;
+    font-size: .85em;
+    content: "\2197";
+    /* top right arrow: â†— */
+    color: var(--textcolor);
+    opacity: .4;
+  }
+
+  a[href*="//"]:hover:after {
+    color: var(--highlight);
+    opacity: 1;
+  }
+
+  /* File links */
+
+  a:before {
+    font-size: .7em;
+    margin-right: .4em;
+  }
+
+  /* Add more filetypes here if you want */
+
+  a[href$=".pdf"]:before {
+    content: "PDF";
+  }
+
+  a[href$=".txt"]:before {
+    content: "TXT";
+  }
+
+  a[href$=".mp3"]:before {
+    content: "MP3";
+  }
+
+  a[href$=".zip"]:before {
+    content: "ZIP";
+  }
+
+  a[href$=".rar"]:before {
+    content: "RAR";
+  }
+
+  a[href$=".jpeg"]:before,
+  a[href$=".jpg"]:before,
+  a[href$=".gif"]:before,
+  a[href$=".png"]:before {
+    content: "IMG";
+  }
+
+  /* ------- News ------- */
+
+  article+article {
+    margin-top: 4.5em;
+  }
+
+  article h2 {
+    font-weight: 700;
+    margin: 0 0 1em 0;
+  }
+
+  article time {
+    margin-left: .6em;
+    font-size: .8em;
+    font-weight: 400;
+    opacity: .7;
+  }
+
+  /* ------- Images Grid ------- */
+
+  .grid {
+    display: grid;
+    grid-gap: 5vmin;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /* 150px = minimum image size */
+    grid-auto-flow: dense;
+    padding: 2em 0;
+  }
+
+  .grid a {
+    position: relative;
+    border: 0;
+  }
+
+  .grid a:hover {
+    transform: scale(.975);
+  }
+
+  /* For a square ratio */
+  .grid a:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  .grid a img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* ------- Slideshow ------- */
+
+  .slides {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+
+  .slides figure {
+    height: 100vh;
+    padding: 0 5vw;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    scroll-snap-align: center;
+  }
+
+  .slides figure img {
+    max-height: 88vh;
+    /* Adjust if needed */
+  }
+
+  .slides figure.cover {
+    padding: 0;
+  }
+
+  .slides figure.cover img {
+    max-height: none;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  /* ------- Lightbox ------- */
+
+  .lightbox {
+    display: none;
+    color: var(--textcolor);
+  }
+
+  .lightbox:target {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    background: var(--bgcolor);
+    border: 0;
+    z-index: 3;
+  }
+
+  .lightbox img {
+    max-height: 100vh;
+    z-index: 4;
+  }
+
+  .lightbox:target:before {
+    /* Loading spinner */
+    content: "";
+    height: 2em;
+    width: 2em;
+    animation: spin .8s infinite linear;
+    border: 1px solid;
+    border-right-color: transparent;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: .25;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .lightbox:target:after {
+    /* Ã— to close */
+    content: "\00D7";
+    position: fixed;
+    font-size: 2em;
+    font-weight: 200;
+    line-height: 0;
+    top: .75em;
+    right: .5em;
+    z-index: 4;
+  }
+
+  /* ------- Smaller screens ------- */
+
+  @media only screen and (max-width: 680px) {
+    body {
+      font-size: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 540px) {
+    nav {
+      width: 100%;
+    }
+
+    /* Fix for older webkit versions */
+  }
+
+  /* ------- Print ------- */
+
+  @media print {
+
+    nav,
+    .lightbox:target:after {
+      display: none;
+    }
+
+    article,
+    figure,
+    img {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* Inline footnotes */
+
+    label+input+small {
+      display: inline;
+    }
+
+    label+input+small:before {
+      content: "[";
+    }
+
+    label+input+small:after {
+      content: "]";
+    }
+
+    /* Slides */
+
+    .slides,
+    .slides figure {
+      position: relative;
+      height: auto;
+      padding: 0;
+    }
+
+    .slides figure img,
+    .slides figure.cover img {
+      max-height: auto;
+      position: relative;
+      z-index: 1;
+      width: auto;
+      height: 100vh;
+      object-fit: contain;
+    }
+
+  }
+
+  /* ------- Additional Custom CSS ------- */
+
+  .serif {
+    font-family: et-book, "Biaodian Pro Serif GB", "Numeral LF Serif", "EB Garamond", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, 楷体, cursive, serif;
+  }
+
+  .name {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding-top: 2rem;
+    line-height: 1.5;
+  }
+
+  .eazy-button {
+    margin: 0 5px;
+    font-size: 1rem;
+  }
+
+  .opacity-6 {
+    opacity: 0.6;
+  }
+
+  .opacity-6:hover {
+    opacity: 1;
+  }
+
+  a[href*="//"]:after { 
+    font-family: Calibri, "Route 159", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, system-ui, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
+    font-size: 0.7em;
+    position: relative;
+    top: -0.35em;
+  }
+
+  /* links.html */
+
+  .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    max-width: 60ch;
+  }
+
+  .profile {
+    /* backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-blend-mode: exclusion;
+    background: rgba(255, 255, 255, 0.35); */
+    padding: 2rem;
+    /* box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.1); */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+  }
+
+  .profile:hover {
+    box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.25);
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+  }
+
+  .avatar {
+    overflow: hidden;
+    border-radius: 9999px;
+    box-shadow: 0 0 10px 1px rgb(170 170 170 / 25%);
+    background: #bcbcbc8a;
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-8831 {
+    transform: rotate(-20deg);
+    background-repeat: space;
+  }
+
+  .name-tag {
+    margin-top: 1rem;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .online {
+    height: 8px;
+    width: 8px;
+    background-color: #bbb;
+    border-radius: 9999px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .profile-tag {
+    padding: 2px;
+    border: none;
+    color: white;
+    margin-bottom: 0.5em;
+    font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+    font-size: .8rem;
+  }
+
+  .the-link {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @media only screen and (max-width: 830px) {
+    .profile-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 1.5rem;
+      grid-column-gap: 1.5rem;
+    }
+
+    .profile {
+      padding: 1.5rem;
+    }
+
+    .avatar {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    .name {
+      font-size: 1.5rem;
+    }
+
+    .profile-tag {
+      font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 630px) {
+    .profile-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 1rem;
+      grid-column-gap: 1rem;
+    }
+
+    .profile {
+      padding: 1rem;
+    }
+  }
+</style>
+
+<body>
+
+  <header>
+    <h1 id="back-home">
+      <a href="/index.html#home">Rongbin FAN</a>
+    </h1>
+    <nav>
+      <a href="/index.html#hello">Hello</a>
+      <a href="/posts">Blog</a>
+      <a href="/links" style="font-weight: bold;">Guestbook</a>
+      <!-- <a href="https://www.are.na/rongbin-fan/brackets-and-comma" target="_blank">Are.na</a> -->
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home">
+      <div style="display: inline-flex; align-items: flex-end; margin-bottom: 2rem;">
+        <picture>
+          <source srcset="dithered-guestbook-white.webp" media="(prefers-color-scheme:dark)">
+          <img alt="guestbook" src="dithered-guestbook.webp" width="120px" height="120px" style="padding-bottom: 10px">
+        </picture>
+      </div>
+
+      <div class="profile-grid">
+        <div class="profile" id="miang">
+          <div class="avatar"><img src="https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg"></div>
+          <span class="status">
+            <p class="name-tag">Miang</p><span class="online"></span>
+          </span>
+          <button class="profile-tag" style="background: #ea4c89;">#anime</button>
+          <p><a class="button is-pill is-outline profile-button the-link" href="https://bgm.tv/anime/list/miang"
+              target="_blank">Bangumi</a></p>
+        </div>
+        <div class="profile" id="anzifan">
+          <div class="avatar"><img src="https://avatars.githubusercontent.com/u/38721913?v=4"></div>
+          <span class="status">
+            <p class="name-tag">An Zifan</p><span class="online"></span>
+          </span>
+          <button class="profile-tag" style="background: #ffe100; color: #000;">#front-end</button>
+          <p><a class="button is-pill is-outline profile-button the-link" href="https://www.anzifan.com"
+              target="_blank">Website</a></p>
+        </div>
+        <div class="profile" id="zhheo">
+          <div class="avatar"><img src="https://bu.dusays.com/2022/12/28/63ac2812183aa.png"></div>
+          <span class="status">
+            <p class="name-tag">张洪Heo</p><span class="online"></span>
+          </span>
+          <button class="profile-tag" style="background: #3797ff;">#tech</button>
+          <p><a class="button is-pill is-outline profile-button the-link" href="https://blog.zhheo.com/"
+              target="_blank">Blog</a></p>
+        </div>
+        <div class="profile" id="foreverlikethis">
+          <div class="avatar avatar-8831" style="background-image: url(https://img.fanrongbin.com/foreverliketh.is.png);"></div>
+          <span class="status">
+            <p class="name-tag">foreverliketh.is</p><span class="online"></span>
+          </span>
+          <button class="profile-tag" style="background: #aa42ff;">#creative</button>
+          <p><a class="button is-pill is-outline profile-button the-link" href="https://foreverliketh.is/"
+              target="_blank">Website</a></p>
+        </div>
+        <div class="profile" id="placeholder">
+          <div class="avatar"></div>
+          <span class="status">
+            <p class="name-tag">Your site</p><span class="online"></span>
+          </span>
+          <button class="profile-tag" style="background: #7e7e7e;">#label</button>
+          <p><a class="button is-pill is-outline profile-button the-link" href="http://none.none"
+              target="_blank">Link</a></p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <p>
+          Leave a comment:
+        </p>
+        <div id="giscus" style="max-width: 85ch;">
+          <script id="giscus-script"
+                  src="https://giscus.app/client.js"
+                  data-repo="rongbinf/giscus-comment"
+                  data-repo-id="R_kgDOK3UYzw"
+                  data-category="Announcements"
+                  data-category-id="DIC_kwDOK3UYz84Cbl2R"
+                  data-mapping="title"
+                  data-strict="0"
+                  data-reactions-enabled="0"
+                  data-emit-metadata="0"
+                  data-input-position="top"
+                  data-theme="https://fanrongbin.com/giscus.css"
+                  data-lang="en"
+                  data-loading="lazy"
+                  crossorigin="anonymous"
+                  async>
+          </script>        
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+<!-- detect website status -->
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('https://website-status.fanrongbin.com')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(item => {
+          // 找到对应 URL 的链接元素
+          const link = document.querySelector(`a[href="${item.url}"]`);
+          if (link) {
+            const profile = link.closest('.profile');
+            if (profile) {
+              // 获取对应的 <span class="online"> 元素
+              const onlineIndicator = profile.querySelector('.online');
+              if (onlineIndicator) {
+                // 根据状态设置背景颜色
+                onlineIndicator.style.backgroundColor = item.status === 200 ? '#00df07' : 'red';
+              }
+
+              // 找到对应的 .the-link 按钮
+              const theLinkButton = profile.querySelector('.the-link');
+              if (theLinkButton) {
+                // 设置动画
+                theLinkButton.style.opacity = '0';
+                theLinkButton.style.visibility = 'hidden';
+                theLinkButton.style.transition = 'all .2s ease-in-out';
+
+                // 状态处理
+                if (item.status === 200) {
+                  // 显示按钮
+                  theLinkButton.style.opacity = '1';
+                  theLinkButton.style.visibility = 'visible';
+                } else {
+                  // 显示 "Offline" 并隐藏链接
+                  theLinkButton.textContent = 'Offline';
+                  theLinkButton.removeAttribute('href');
+                  theLinkButton.style.opacity = '0.5';
+                  theLinkButton.style.visibility = 'visible';
+                }
+              }
+            }
+          }
+        });
+      })
+      .catch(error => console.error('Error:', error));
+  });
+</script>
+
+<!-- disable viewport zooming on iOS -->
+<script defer>
+  window.onload = function () {
+    document.addEventListener('touchstart', function (event) {
+      if (event.touches.length > 1) {
+        event.preventDefault();
+      }
+    });
+    var lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+      var now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+    document.addEventListener('gesturestart', function (event) {
+      event.preventDefault();
+    });
+  }
+</script>
+
+</html>

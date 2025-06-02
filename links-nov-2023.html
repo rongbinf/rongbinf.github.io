@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=0">
+
+    <title>Guestbook 🙋‍</title>
+    <meta name="description" content="Thoughts and ideas.">
+    <meta name="author" content="Rongbin FAN">
+
+    <meta property="og:title" content="Guestbook - Rongbin FAN" />
+    <meta property="og:description" content="Thoughts and ideas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fanrongbin.com" />
+    <meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+    <meta name="twitter:title" content="Rongbin FAN" />
+    <meta name="twitter:description" content="Thoughts and ideas." />
+
+    <meta name="application-name" content="Rongbin FAN">
+    <meta name="apple-mobile-web-app-title" content="Rongbin FAN">
+    <!-- <meta name="theme-color" content="#f8f8f8"> -->
+    <meta name="msapplication-TileColor" content="#fff">
+
+    <meta name="google-site-verification" content="f9S1PcORQC1rTiGZYbp79oBJ-nNHN_CBQ8yGhW_rufs" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon.svg">
+    <link rel="icon shortcut" type="image/png" href="favicon.svg">
+    <link rel="icon" type="image/svg" href="favicon.svg">
+    <link rel="icon shortcut" type="image/svg" href="favicon.svg">
+
+    <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
+
+    <link rel="stylesheet" href="skelet.min.css">
+    <!-- <link href="https://google-fonts.mirrors.sjtug.sjtu.edu.cn/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Color+Emoji&display=swap" rel="stylesheet"> -->
+    <script src="clipboard.min.js"></script>
+    <script src="fetch.umd.min.js"></script>
+
+    <style>
+        :root {
+            --fontSize: calc(100vw / 80);
+            --hHeading: 5vw;
+            --siteMarg: 5rem;
+            --fontFamily: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Segoe UI Variable", "Segoe UI", Arial, "Arial Unicode MS", sans-serif, "Noto Color Emoji";
+            --linkColor: #009ba0;
+            --linkHover: #000;
+            --buttonBg: var(--linkColor);
+        }
+
+        #app {
+            max-width: 1600px;
+            margin: 0 auto;
+            z-index: 100;
+            padding: 4rem;
+        }
+
+        main {
+            z-index: 500;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --linkHover: #fff;
+            }
+
+            body[data-mode="dark"] .black-svg-medium {
+                background-color: #fff;
+                border-right: 1.5px #fff solid;
+                border-left: 1px #fff solid;
+            }
+
+            body[data-mode="dark"] .black-svg-arena {
+                background-color: #fff;
+            }
+
+            body[data-mode="dark"] a.info {
+                color: #fff;
+                border-bottom: 1.25px #d9d9d9 solid;
+            }
+
+            body[data-mode="dark"] .source {
+                color: #d9d9d9;
+            }
+
+            body[data-mode="dark"] .number {
+                font-weight: 800;
+                color: #fff;
+            }
+
+            body[data-mode="dark"] .profile {
+                background-color: rgba(0, 0, 0, 0.5) !important;
+            }
+            
+            body[data-mode="dark"] .profile:hover {
+                box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.25);
+            }
+
+            body[data-mode="dark"] a.hover:hover {
+                border-bottom: none;
+                background-color: white;
+                color: #000;
+                padding: 5px;
+                text-decoration: none;
+                box-shadow: #c4c4c4 0px 0px 30px 0px, rgb(255 255 255 / 12%) 0px 0px 30px 0px;
+            }
+
+            body[data-mode="dark"] a.button.is-pill.is-outline {
+                background: #000000c4;
+            }
+
+            body[data-mode="dark"] a.button.is-pill.is-outline:hover {
+                background: var(--buttonBg);
+            }
+
+            body[data-mode="dark"] a.button.is-pill.is-outline.profile-button {
+                color: #ffffffcc;
+                --buttonBorderColor: #ffffffcc;
+                --buttonBg: #ffffffcc;
+            }
+
+            body[data-mode="dark"] a.button.is-pill.is-outline.profile-button:hover {
+                color: #000000cc;
+            }
+        }
+
+        .source {
+            font-size: 1.3rem;
+            color: #888;
+        }
+
+        .text-end {
+            font-size: 1.3rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #000;
+            text-decoration: line-through;
+        }
+
+        a.close {
+            color: red;
+        }
+
+        a.info {
+            color: #000;
+            font-weight: 600;
+            border-bottom: 1.2px #525252 solid;
+            transition: all .13s ease-in-out;
+        }
+
+        a.hover:hover {
+            /* border-bottom: none; */
+            background-color: transparent;
+            padding: 5px;
+            text-decoration: none;
+            box-shadow: #c4c4c4 0px 0px 15px 0px, rgb(255 255 255 / 12%) 0px 0px 15px 0px;
+        }
+
+        a.hover:active,
+        a.hover:focus {
+            box-shadow: #c4c4c4 0px 0px 30px 0px, rgb(255 255 255 / 12%) 0px 0px 30px 0px;
+        }
+
+        em {
+            color: #888;
+        }
+
+        .heavier {
+            font-weight: 600;
+        }
+
+        .larger {
+            font-size: 150%;
+        }
+
+        .serif {
+            font-family: et-book, "Biaodian Pro Serif GB", "Numeral LF Serif", "EB Garamond", "Minion Pro", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", STKaiti, "STKaiti SC", "Huawen Kaiti", "Huawenkaiti", "Han Kaiti GB", Kaiti, "Han Kaiti", Kai, 楷体, cursive, serif;
+        }
+
+        .space4 {
+            display: block;
+            width: 100%;
+            margin: 2vw auto;
+        }
+
+        .space5 {
+            display: block;
+            width: 100%;
+            margin: 3.5vw auto;
+        }
+
+        .question {
+            margin-left: 3px;
+            position: absolute;
+            font-size: 0.7em;
+        }
+
+        .number {
+            font-weight: 800;
+            color: #000;
+        }
+
+        .external {
+            top: -0.5rem;
+            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, calibri, sans-serif;
+            font-weight: 400;
+            font-size: 0.8em;
+            padding-left: 2px;
+            opacity: 0.8;
+        }
+
+        img.avatar {
+            max-width: 12rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            user-select: none;
+        }
+
+        .brand-head {
+            max-width: 20rem;
+        }
+
+        svg {
+            max-width: 16px;
+            display: inline;
+            margin-bottom: 3px;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+        }
+
+        .profile {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-blend-mode: exclusion;
+            background: rgba(255, 255, 255, 0.35);
+            padding: 2rem;
+            box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.1);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            transition: box-shadow .2s,-webkit-box-shadow .2s;
+        }
+
+        .profile:hover {
+            background: rgba(255, 255, 255, .5);
+            box-shadow: 0 0 10px 1px rgba(170, 170, 170, 0.25);
+
+            transition: box-shadow .2s,-webkit-box-shadow .2s;
+        }
+
+        .avatar {
+            overflow: hidden;
+            border-radius: 9999px;
+            box-shadow: 0 0 10px 1px rgb(170 170 170 / 25%);
+            width: 10rem;
+            height: 10rem;
+            background: #bcbcbc8a;
+        }
+
+        .name {
+            margin-bottom: 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .online {
+            height: 8px;
+            width: 8px;
+            background-color: #bbb;
+            border-radius: 9999px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .profile-tag {
+            padding: 5px;
+            font-size: 1.3rem;
+            /* font-weight: 400; */
+            border: none;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .profile-tag:hover {
+            opacity: unset;
+            cursor: default;
+        }
+
+        .the-link {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        a.button.is-pill.is-outline.profile-button {
+            color: #000000cc;
+            font-size: 1.44rem;
+            --buttonBorderColor: #000000cc;
+            --buttonBg: #000000cc;
+        }
+
+        a.button.is-pill.is-outline.profile-button:hover {
+            color: #fff;
+        }
+
+        /* a.button.is-pill.is-outline {
+            background: #ffffffc4;
+        } */
+
+        a.button.is-pill.is-outline:hover {
+            background: var(--buttonBg);
+        }
+
+        @media (max-width: 1400px) {
+            :root {
+                --fontSize: 1.5rem;
+                --hHeading: 2.8rem;
+                --siteMarg: 2rem;
+            }
+
+            x-flex>x-col {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .source {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (min-width: 950px) {
+            #app {
+                margin: 0 3rem;
+            }
+        }
+        
+        @media (max-width: 750px) {
+            .profile-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 580px) {
+            .profile-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 380px) {
+            .profile-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .button {
+            z-index: 500;
+            transform: translateZ(0) scale(1);
+            transition: box-shadow .13s ease-in-out;
+            background: #ffffff82;
+        }
+
+        .button:hover {
+            text-decoration: none;
+            /*transform: scale(1.05);*/
+            border: 1px solid rgba(255, 255, 255, .25);
+            box-shadow: var(--buttonBg) 0px 0px 15px 0px, rgb(255 255 255 / 10%) 0px 0px 15px 0px;
+        }
+
+        .button:active {
+            border: 1px solid rgba(255, 255, 255, .5);
+            box-shadow: var(--buttonBg) 0px 0px 45px 0px, rgb(255 255 255 / 10%) 0px 0px 45px 0px;
+        }
+        
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+    </style>
+</head>
+
+
+<body data-mode="light">
+
+    <div id="app">
+
+        <main>
+
+            <x-grid columns="1">
+                <x-col span="1">
+                    <div style="height: 15rem; z-index: 1;position: sticky;">
+                        <picture class="brand-head">
+                          <source srcset="dithered-guestbook-white.webp" media="(prefers-color-scheme:dark)">
+                          <img class="brand-head" alt="Rongbin's Blog" src="dithered-guestbook.webp">
+                        </picture>
+                    </div>
+                        <!-- <p class="larger"><span class="serif heavier">Guestbook</span></p> -->
+                </x-col>
+            </x-grid>
+
+            <span class="space5"></span>
+
+            <x-grid loading="lazy" columns="1" start animation=fadein-up ease=easeInOutCubic
+                style="--delay: 0.4s; --duration: 0.6s; max-width: 800px;">
+                <x-col span="1">
+                    <div class="profile-grid">
+                        <div class="profile" id="miang">
+                            <div class="avatar"><img src="https://img.fanrongbin.com/d00fa8388fadee0d9ffe737d5c3d8fea_1.jpg"></div>
+                            <span class="status"><p class="name">Miang</p><span class="online"></span></span>
+                            <button class="profile-tag" style="background: #ea4c89;">#anime</button>
+                            <p><a class="button is-pill is-outline profile-button the-link" href="https://bgm.tv/anime/list/miang" target="_blank">Bangumi<span class="external">↗</span></a></p>
+                        </div>
+                        <div class="profile" id="anzifan">
+                            <div class="avatar"><img src="https://avatars.githubusercontent.com/u/38721913?v=4"></div>
+                            <span class="status"><p class="name">An Zifan</p><span class="online"></span></span>
+                            <button class="profile-tag" style="background: #ffe100; color: #000;">#front-end</button>
+                            <p><a class="button is-pill is-outline profile-button the-link" href="https://www.anzifan.com" target="_blank">Website<span class="external">↗</span></a></p>
+                        </div>
+                        <div class="profile" id="zhheo">
+                            <div class="avatar"><img src="https://bu.dusays.com/2022/12/28/63ac2812183aa.png"></div>
+                            <span class="status"><p class="name">张洪Heo</p><span class="online"></span></span>
+                            <button class="profile-tag" style="background: #3797ff;">#tech</button>
+                            <p><a class="button is-pill is-outline profile-button the-link" href="https://blog.zhheo.com/" target="_blank">Blog<span class="external">↗</span></a></p>
+                        </div>
+                        <div class="profile" id="placeholder">
+                            <div class="avatar"></div>
+                            <span class="status"><p class="name">Placeholder</p><span class="online"></span></span>
+                            <button class="profile-tag" style="background: #7e7e7e;">#label</button>
+                            <p><a class="button is-pill is-outline profile-button the-link" href="http://none.none" target="_blank">Link</a></p>
+                        </div>
+                    </div>
+                </x-col>
+            </x-grid>
+
+            <span class="space5"></span>
+
+            <x-grid loading="lazy" columns="2">
+                <x-col class="right-corner-button" span="2+1" start animation=fadein-up ease=easeInOutCubic
+                    style="--delay: 0.4s; --duration: 0.6s">
+                    <p>
+                        <a class="button is-pill is-outline" href="mailto:rongbin.fan@outlook.com?subject=Hey! Let's exchange links&body=(You can also leave a comment on the Guestbook if you have a Github account) Name: / Url: / Tag(s): / Brief Introduction (1 sentence): ">➕ Add your link<span class="external">↗</span></a>
+                    </p>
+                    <p>
+                        <a class="button is-pill is-outline" href="/posts">📜 中文博客</a>
+                    </p>
+
+                    <p><a class="button is-pill is-outline" href="/">👤 About</a></p>
+                </x-col>
+            </x-grid>
+
+            <x-grid columns="1" loading="lazy" style="padding-top: 3.5vh;" start animation=fadein-up ease=easeInOutCubic
+            style="--delay: 0.4s; --duration: 0.6s">
+                <x-col span="1">
+                    <div class="profile" id="giscus" style="max-width: 850px;">
+                        <script src="https://giscus.app/client.js"
+                            data-repo="rongbinf/giscus-comment"
+                            data-repo-id="R_kgDOK3UYzw"
+                            data-category="Announcements"
+                            data-category-id="DIC_kwDOK3UYz84Cbl2R"
+                            data-mapping="title"
+                            data-strict="0"
+                            data-reactions-enabled="0"
+                            data-emit-metadata="0"
+                            data-input-position="top"
+                            data-theme="preferred_color_scheme"
+                            data-lang="en"
+                            data-loading="lazy"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                    </div>
+                </x-col>
+            </x-grid>
+
+        </main>
+
+        <footer class="text-end" start animation=fadein ease=easeInOutCubic
+            style="--delay: 0.5s; --duration: 0.5s;margin-top:5rem">
+            <x-grid columns="2">
+                <x-col span="2">
+                    <p class="source"><a href="https://html.energy/" target="_blank">HTML Energy</a>, <a
+                            href="https://github.com/Selekkt/skelet" target="_blank">Skelet.css</a>, <a
+                            href="https://pages.github.com" target="_blank">Github Pages</a></br>Nov 2023
+                    </p>
+                </x-col>
+            </x-grid>
+            <!-- <a id="toggle-mode" onclick="toggleMode()">☀🌙</a> -->
+            <!-- <x-col span="2">
+                Since 2002, Paused <a target="_blank" href="https://dimsum.eu.org/covid-19.html">2020</a>, Rebooting 2023.
+            </x-col> -->
+        </footer>
+
+    </div>
+
+    <div class="blob-cont">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+</body>
+
+<!-- background blob -->
+<style>
+    .blob-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: -100;
+        /* position: relative; */
+    }
+
+    .blob {
+        border-radius: 100px;
+        filter: blur(90px);
+    }
+
+    .blob1 {
+        background-color: #d264fe1c;
+        position: fixed;
+        height: 30%;
+        width: 30%;
+
+        animation: move1 6s infinite ease;
+    }
+
+    .blob2 {
+        background-color: #1cc3b31c;
+        position: fixed;
+        height: 30%;
+        width: 30%;
+
+        animation: move2 6s infinite ease;
+    }
+
+    .blob3 {
+        background-color: #36bfff1c;
+        position: fixed;
+        height: 30%;
+        width: 30%;
+
+        animation: move3 6s infinite linear;
+    }
+
+    @keyframes move1 {
+        0% {
+            background-color: #d264fe1c;
+            bottom: 5%;
+            left: 10%;
+            transform: scale(1);
+        }
+
+        30% {
+            background-color: #d264fe82;
+            bottom: 3%;
+            left: 15%;
+            transform: scale(1.2);
+        }
+
+        60% {
+            background-color: #d264fe9a;
+            bottom: 7%;
+            left: 20%;
+            transform: scale(1.3);
+        }
+
+        100% {
+            background-color: #d264fe1c;
+            bottom: 5%;
+            left: 10%;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes move2 {
+        0% {
+            background-color: #1cc3b21c;
+            bottom: 4%;
+            left: 2%;
+            transform: scale(1.2);
+        }
+
+        30% {
+            background-color: #1cc3b382;
+            bottom: 20%;
+            left: 10%;
+            transform: scale(1);
+        }
+
+        60% {
+            background-color: #1cc3b39a;
+            bottom: 15%;
+            left: 15%;
+            transform: scale(1);
+        }
+
+        100% {
+            background-color: #1cc3b21c;
+            bottom: 4%;
+            left: 2%;
+            transform: scale(1.2);
+        }
+    }
+
+    @keyframes move3 {
+        0% {
+            background-color: #36bfff1c;
+            bottom: 5%;
+            left: 35%;
+            transform: scale(1);
+        }
+
+        30% {
+            background-color: #36bfff82;
+            bottom: 10%;
+            left: 15%;
+            transform: scale(1.4);
+        }
+
+        60% {
+            background-color: #36bfff9a;
+            bottom: 15%;
+            left: 10%;
+            transform: scale(1);
+        }
+
+        100% {
+            background-color: #36bfff1c;
+            bottom: 5%;
+            left: 35%;
+            transform: scale(1);
+        }
+    }
+</style>
+
+
+<!-- color mode -->
+<script>
+    // function toggleMode() {
+    //     const body = document.body;
+    //     if (body.getAttribute("data-mode") === "light") {
+    //         body.setAttribute("data-mode", "dark");
+    //     } else {
+    //         body.setAttribute("data-mode", "light");
+    //     }
+    // }
+
+    // Function to handle system color scheme changes
+    function handleSystemColorSchemeChange(event) {
+        const body = document.body;
+        if (event.matches) {
+            body.setAttribute("data-mode", "dark");
+        } else {
+            body.setAttribute("data-mode", "light");
+        }
+    }
+
+    // Check system color scheme and set data-mode accordingly
+    if (window.matchMedia) {
+        const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        systemColorScheme.addListener(handleSystemColorSchemeChange);
+        handleSystemColorSchemeChange(systemColorScheme);
+    }
+</script>
+
+<!-- clipboard.js -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function (e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });
+</script>
+
+<!-- toggle display -->
+<script defer>
+    function toggleDisplay(id) {
+        const element = document.getElementById(id);
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+<!-- disable viewport zooming on iOS -->
+<script>
+    window.onload = function () {
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    }
+</script>
+
+<!-- detect website status -->
+<script defer>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('https://website-status.fanrongbin.com')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(item => {
+            // 找到对应 URL 的链接元素
+            const link = document.querySelector(`a[href="${item.url}"]`);
+            if (link) {
+                const profile = link.closest('.profile');
+                if (profile) {
+                    // 获取对应的 <span class="online"> 元素
+                    const onlineIndicator = profile.querySelector('.online');
+                    if (onlineIndicator) {
+                        // 根据状态设置背景颜色
+                        onlineIndicator.style.backgroundColor = item.status === 200 ? '#00df07' : 'red';
+                    }
+
+                    // 找到对应的 .the-link 按钮
+                    const theLinkButton = profile.querySelector('.the-link');
+                    if (theLinkButton) {
+                        // 设置动画
+                        theLinkButton.style.opacity = '0';
+                        theLinkButton.style.visibility = 'hidden';
+                        theLinkButton.style.transition = 'all .2s ease-in-out';
+
+                        // 状态处理
+                        if (item.status === 200) {
+                            // 显示按钮
+                            theLinkButton.style.opacity = '1';
+                            theLinkButton.style.visibility = 'visible';
+                        } else {
+                            // 显示 "Offline" 并隐藏链接
+                            theLinkButton.textContent = 'Offline';
+                            theLinkButton.removeAttribute('href');
+                            theLinkButton.style.opacity = '1';
+                            theLinkButton.style.visibility = 'visible';
+                        }
+                    }
+                }
+            }
+        });
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+    
+</html>

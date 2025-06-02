@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Calinda | Sorted. Never this easy.</title>
+    <meta name="description" content="Sorted. Never this easy.">
+    <meta name="author" content="Rongbin FAN">
+
+    <meta property="og:title" content="Calinda" />
+    <meta property="og:description" content="Sorted. Never this easy." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fanrongbin.com" />
+    <meta property="og:image" content="https://img.fanrongbin.com/calinda-cover-v2-compressed.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://img.fanrongbin.com/calinda-cover-v2-compressed.webp" />
+    <meta name="twitter:title" content="Calinda" />
+    <meta name="twitter:description" content="Sorted. Never this easy." />
+
+    <meta name="application-name" content="Calinda">
+    <meta name="apple-mobile-web-app-title" content="Calinda">
+    <meta name="theme-color" content="#fff">
+    <meta name="msapplication-TileColor" content="#fff">
+
+    <meta name="google-site-verification" content="f9S1PcORQC1rTiGZYbp79oBJ-nNHN_CBQ8yGhW_rufs" />
+    <meta name="msvalidate.01" content="6DFC6C69D3CAC309F3ED39EA45B19F2A" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.fanrongbin.com/calinda-logo-v2.webp">
+
+    <link rel="icon" ref="https://img.fanrongbin.com/calinda-logo-v2.webp">
+    <link rel="icon" ref="https://img.fanrongbin.com/calinda-logo-v2.png">
+
+    <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="Rongbin&#39;s Blog">
+
+    <link rel="stylesheet" href="/main.css">
+    <!-- <script src="/clipboard.min.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+      {
+        "@context" : "https://schema.org",
+        "@type" : "WebSite",
+        "name" : "Rongbin FAN",
+        "url" : "https://fanrongbin.com/"
+      }
+    </script>
+</head>
+
+<style>
+    * {
+        font-family: Outfit, Inter, -apple-system, BlinkMacSystemFont, "Source Sans", "思源黑体", "Source Han Sans", system-ui, "Helvetica Neue Book", Helvetica, Arial, Verdana, Avenir, "Segoe UI Variable", "Segoe UI", "Biaodian Pro Sans", "Han Heiti", Heiti, Hei, STHeiti, sans-serif, "Noto Emoji" !important;
+        --bg-blur-color: #ffffff70;
+        --shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        transition: all .2s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        * {
+            --bg-blur-color: #00000070;
+        }
+    }
+
+    body {
+        /* background: linear-gradient(180deg, #ffffff 0%, #ffffff 25%, #ffffff 85%, #aeaeae34); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main {
+        display: flex;
+        margin: 2em;
+        flex-direction: column;
+        max-width: 1100px;
+    }
+
+    .main * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1em;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .top-menu-bar {
+        position: fixed;
+        top: 0;
+        background-color: #ffffff70;
+        -webkit-backdrop-filter: blur(48px);
+        backdrop-filter: blur(48px);
+        border: 2px solid #ffffff66;
+        box-shadow: var(--shadow);
+        text-align: center;
+        padding: 10px;
+        z-index: 10;
+
+        display: flex;
+        opacity: 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 72vw;
+        max-width: 1110px;
+        border-radius: 40px;
+        margin: 1ch;
+        padding: 1ch 3ch;
+        transform: translateY(-100%);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .top-menu-bar.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .icon-with-name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1ch;
+    }
+
+    .icon-with-name>p {
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    img.screenshot {
+        width: 70vw;
+        box-shadow: var(--shadow);
+        border-radius: 22px;
+    }
+
+    img.feature-img {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    img.feature-vertical-img {
+        height: 100%;
+        padding: 2em 0;
+    }
+
+    img.ai-popup {
+        border-radius: 36px;
+        width: 45%;
+        position: relative;
+    }
+
+    img.ai-popup-1 {
+        margin-top: 2em;
+        rotate: -3deg;
+        left: -5em;
+    }
+
+    img.ai-popup-2 {
+        margin-bottom: 4em;
+        rotate: 4deg;
+        left: 5em;
+    }
+
+    section.third-party>img {
+        margin-bottom: 2em;
+    }
+
+    div.description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 70vw;
+        margin: 2em;
+    }
+
+    section.ai-scheduling {
+        margin: 2em;
+    }
+
+    div.feature-grid {
+        display: flex;
+        gap: 2em;
+        margin: 2em 0;
+        width: fit-content;
+    }
+
+    div.feature {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 2em;
+        border-radius: 22px;
+        background: #fff;
+        /* box-shadow: var(--shadow); */
+    }
+
+    div.feature-vertical {
+        flex-direction: row;
+        padding: 0 2em;
+        gap: 2em;
+        align-items: center;
+    }
+
+    div.feature-3 {
+        width: 22vw;
+    }
+
+    div.share-details {
+        display: flex;
+        width: 70vw;
+        gap: 2em;
+        align-items: center;
+        margin: 2em 0;
+    }
+
+    div.share-details-2 {
+        display: flex;
+        width: 70vw;
+        gap: 2em;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2em;
+    }
+
+    .contact {
+        border-top: 1px solid #ccc;
+        margin: 4em 0 0 0;
+        padding: 2em 0 1em 0;
+        /* background: #eee; */
+    }
+
+    .anno {
+        opacity: 0.6;
+    }
+
+    .app-title {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        scale: 1.1;
+    }
+
+    h2 {
+        margin-top: 2em;
+    }
+
+    button {
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        border-width: 0;
+        color: #383838;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 10px 16px;
+        text-align: center;
+        transition: all 200ms;
+        vertical-align: baseline;
+        white-space: nowrap;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    button:hover {
+        background-color: #dcdcdc;
+        color: #101010;
+    }
+
+    div.footer-button {
+        display: flex;
+        gap: 1ch;
+        margin-top: 2em;
+    }
+
+    div.footer-button>a,
+    div.button-list>a {
+        background: unset;
+        color: unset;
+        border-bottom: unset;
+    }
+
+    .button-list>a>button {
+        background-color: transparent;
+    }
+
+    .button-list>a>button:hover {
+        background-color: #f0f0f0;
+        color: #383838;
+    }
+
+    button.disabled {
+        opacity: 0.3;
+    }
+
+    .gradient-button {
+        background-image: linear-gradient(90deg, #7000ff, #00a1ff);
+        color: #fff;
+    }
+
+    .gradient-button:hover {
+        background-image: linear-gradient(90deg, #5100bc, #0072b4);
+        color: #fff;
+    }
+
+    .gradient-text {
+        background-color: var(--textcolor);
+        background-image: linear-gradient(90deg, #7000ff, #00a1ff);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+
+    .project-board-mobile-left, .project-board-mobile-right {
+        display: none;
+        box-shadow: none !important;
+    }
+
+    .sync-img {
+        width: 45%;
+        margin-bottom: 2em;
+    }
+
+    @media (max-width: 1150px) {
+        section.more>div.feature-grid>div.feature {
+            padding: 0.5em;
+        }
+
+        div.description {
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        section.calinda-v2>div.feature-grid {
+            flex-direction: column;
+            width: 70vw;
+        }
+
+        section.calinda-v2>div.feature-grid>div.feature {
+            flex-direction: row;
+            width: unset !important;
+            height: unset !important;
+            gap: 2em;
+        }
+
+        section.calinda-v2>div.feature-grid>div.feature>img {
+            width: 25vw;
+        }
+
+        .feature-vertical>.feature-vertical-img {
+            /* height: 400px !important; */
+            object-fit: cover;
+            object-position: 100% 0;
+            padding: 0;
+        }
+
+        .feature-vertical-de {
+            position: unset !important;
+            width: unset !important;
+            right: unset !important;
+            top: unset !important;
+            margin: unset !important;
+            background: unset;
+            -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+            padding: unset !important;
+            border-radius: unset;
+        }
+
+        .sync-img {
+            width: 60%;
+        }
+
+        div.share-details,
+        div.share-details-2 {
+            flex-direction: column;
+        }
+
+        div.share-details>img,
+        div.share-details-2>img {
+            width: 50vw !important;
+        }
+        .project-board {
+            width: unset !important;
+        }
+    }
+
+    @media (max-width: 800px) {
+        div.description {
+            width: unset;
+        }
+
+        div.feature-grid {
+            gap: 1em;
+        }
+
+        div.feature-3 {
+            width: 26vw;
+        }
+
+        img.ai-popup {
+            border-radius: 20px;
+            width: 60%;
+        }
+
+        img.screenshot {
+            border-radius: 15px;
+        }
+        .project-board {
+            display: none;
+        }
+        .project-board-mobile-left {
+            display: block;
+            transform: scale(2.5) translateX(30%);
+            margin: 25% 0 60% 0;
+        }
+        .project-board-mobile-right {
+            display: block;
+            transform: scale(2.5) translateX(-23%);
+            margin: 0 0 35% 0;
+        }
+        .sync-img {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 700px) {
+        div.top-menu-bar {
+            width: 90vw;
+        }
+
+        div.feature {
+            padding: 1em 0;
+        }
+
+        div.feature-grid,
+        div.share-details>img,
+        img.screenshot,
+        div.share-details-2>img,
+        div.share-details,
+        div.share-details-2 {
+            width: 80vw !important;
+        }
+
+        section.third-party>img {
+            width: 100vw !important;
+            scale: 1.65;
+            margin: 4em 0 7em 0 !important;
+            left: 1.8em;
+            position: relative;
+        }
+
+        .main {
+            margin: 2em 0;
+            overflow: hidden;
+        }
+
+        .banner>h1+p,
+        .contact>p {
+            margin: 0 1em;
+        }
+
+        img+p, img+p+p {
+            margin: 0 1em 2ch 1em;
+        }
+    }
+
+    @media (max-width: 550px) {
+        img.ai-popup {
+            width: 100%;
+        }
+
+        img.ai-popup-1,
+        img.ai-popup-2 {
+            left: 0;
+        }
+
+        div.feature-grid {
+            flex-direction: column;
+        }
+
+        div.feature-3 {
+            width: unset;
+        }
+    }
+
+
+    @media (max-width: 1415px) {
+        .feature-vertical-de {
+            position: relative;
+            width: 20em;
+            right: 2em;
+            top: 5.5em;
+            margin: 0 -5em;
+            background: #ffffff4a;
+            -webkit-backdrop-filter: blur(80px);
+            backdrop-filter: blur(80px);
+            padding: 2em;
+            border-radius: 22px;
+        }
+
+        .feature-grid>.feature {
+            box-shadow: none;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        * {
+            /* dark scheme disabled */
+            --textcolor: #000;
+            --bgcolor: #fff;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- top menu bar -->
+    <div id="top-menu-bar" class="top-menu-bar">
+        <div class="icon-with-name">
+            <img src="https://img.fanrongbin.com/calinda-logo-v2.webp" width="30">
+            <p>Calinda</p>
+        </div>
+        <div class="button-list">
+            <a href="/story-behind-calinda"><button>Story</button></a>
+            <a href="/contact"><button>Contact</button></a>
+        </div>
+    </div>
+
+    <main class="main">
+
+        <!-- banner -->
+        <section class="banner">
+            <img src="https://img.fanrongbin.com/calinda-logo-v2.webp" width="90">
+            <p class="app-title">Calinda</p>
+            <h1 class="gradient-text">Sorted.</br>Never this easy.</h1>
+            <p>The ultimate calendar app for you and your team.</br>AI scheduling, tasks, booking time slots and more.
+            </p>
+            <button class="disabled">Coming Soon</button>
+        </section>
+
+
+        <!-- calinda-v2 -->
+        <section class="section calinda-v2">
+            <div class="description">
+                <h2>Looks much elegant, right?</h2>
+            </div>
+            <img id="main-with-task" src="https://img.fanrongbin.com/main-with-task.webp" class="screenshot">
+
+            <div class="feature-grid">
+
+                <div class="feature" style="width: 30vw; height: 60vh;">
+                    <img src="https://img.fanrongbin.com/heatmap-and-highlight.webp" class="feature-img">
+                    <div class="feature-heatmap-de">
+                        <h3>Heatmap</h3>
+                        <p>Heavier the colour, busier that day. Just so intuitive and easy to check.</p>
+                        <h3>Highlight</h3>
+                        <p>Make some <em>really, really important</em> events stand out, so you see them, don't forget
+                            about them.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature feature-vertical" style="width: 38vw; height: 60vh;">
+                    <img src="https://img.fanrongbin.com/today-panel-3.webp" class="feature-vertical-img"
+                        style="height: 90%;">
+                    <div class="feature-vertical-de">
+                        <h3>Today Panel</h3>
+                        <p>It's slim to fit your sidebar. You can make it a popup or a desktop widget to take beautiful
+                            glimpse.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ai-scheduling -->
+        <section class="section ai-scheduling">
+            <div class="description">
+                <h2>Use natural language to schedule, and handle complex requests with AI.</h2>
+            </div>
+            <img src="https://img.fanrongbin.com/ai-scheduling-updated.webp" class="screenshot ai-popup ai-popup-1">
+            <img src="https://img.fanrongbin.com/ai-scheduling-2.webp" class="screenshot ai-popup ai-popup-2">
+            <p>You now have a personal assistant to align your team's schedule, and to check your availability when HR
+                suddenly prompts you on the phone.</p>
+            <p class="anno">*We use open-source large language models and we run your data on your local device only.
+            </p>
+        </section>
+
+        <!-- new-task -->
+        <section class="section task">
+            <div class="description">
+                <h2>End game's here. Project + Task (+ To-do) + Calendar.</h2>
+            </div>
+            <div style="display: flex;
+            flex-direction: column;
+            align-items: center;">
+                <img src="https://img.fanrongbin.com/project-board-updated-2.webp" class="screenshot project-board" style="box-shadow: none;">
+                <div><img src="https://img.fanrongbin.com/project-board-updated-2.webp" class="screenshot project-board-mobile-left"></div>
+                <img src="https://img.fanrongbin.com/project-board-updated-2.webp" class="screenshot project-board-mobile-right">
+                <div style="display: flex; margin-top: 2em; flex-direction: column; align-items: flex-start; width: 70vw; text-align: left;">
+                <h3>Built-in Project and Task Management</h3>
+                <p>It's finally here. You can see your projects right on your calendar (see those <a href="#main-with-task">bars at the top of different days</a>?),
+                create tasks under each project (and sub-tasks), then drag and drop on your calendar to schedule them.</p>
+                <p>You may also use several time windows to complete one task, so you can drag and drop multiple times, and mark them as completed only when you indeed finish them.</p>
+                <p>With AI it's even better. We go through
+            your calendar, your work-life pattern, your task priorities and deadlines previously set, then share with you scheduling suggestions.</p>
+            </div>
+        </div>
+            <div class="share-details">
+                <img src="https://img.fanrongbin.com/task-preview.webp" style="width: 30vw;">
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <h3>Handle Single To-dos</h3>
+                    <p style="text-align: left;">You can also create a single to-do with a deadline and is not necessarily related to a project. No need to switch between to-do apps and calendar apps any more.</p>
+                    <h3>Auto "Check"</h3>
+                    <p style="text-align: left;">Sometimes you just want a popup notification with a due. Auto
+                        Check automatically
+                        marks your to-dos as finished when certain criteria are met. For example, arrived in the office,
+                        or received an email with keywords.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- share, available-time-slots, book-a-slot -->
+        <section class="section share">
+            <div class="description">
+                <h2>Share your calendars and available time slots. It's never ever this smooth.</h2>
+            </div>
+            <div class="share-details">
+                <img src="https://img.fanrongbin.com/share.webp" class="screenshot" style="width: 50%;">
+                <div style="text-align: left;">
+                    <h3>Share Multiple Calendars in One Link</h3>
+                    <p>Not just calendars, you can customise the date range and apply an expiry date.</p>
+                    <h3>Available Time Slots</h3>
+                    <p>For Calinda users, you can easily schedule events for each other as we'll automatically check
+                        mutual
+                        availability.</br>For external users, you can share your available time slots so they can view
+                        and choose.</p>
+                    <h3>Export Views</h3>
+                    <p>Sometimes you wanna print out your calendars. And we offer you a beautiful version for
+                        printing.</p>
+                </div>
+            </div>
+            <img src="https://img.fanrongbin.com/available-time-slots.webp" class="screenshot" style="width: 70vw;">
+            <div class="share-details-2">
+                <div style="text-align: left;">
+                    <h3>Busy / Available</h3>
+                    <p>Unlike sharing calendars, sharing time slots hides your event details by default and only shows
+                        your
+                        availability status.</p>
+                    <h3>Timezone</h3>
+                    <p>Tick <em>Show My Timezone</em> to compare and make wise proposals.</p>
+                    <h3>Exclude certain events</h3>
+                    <p>Some events on your calendar are <em>tentative</em> and can be rescheduled. You
+                        can
+                        <strong>exclude</strong> them to mark the according slots as available for others to choose.
+                    </p>
+                </div>
+                <img src="https://img.fanrongbin.com/book-a-slot-white.webp" class="screenshot" style="width: 40vw;">
+            </div>
+
+        </section>
+
+        <!-- third-party -->
+        <section class="section third-party">
+            <div class="description">
+                <h2>Third-party services all integrated.</h2>
+            </div>
+            <img src="https://img.fanrongbin.com/third-party.webp" style="width: 70vw;">
+            <p>One click to direct to your virtual meeting rooms.</br>Connect your favourite workplace and note apps to
+                streamline your workflow.</p>
+            <p class="anno">*Under construction, illustration purpose only</p>
+
+        </section>
+
+        <!-- cross-platform and ics -->
+        <section class="section">
+            <div class="description">
+                <h2>Bring all to one.</h2>
+            </div>
+            <img class="sync-img" src="https://img.fanrongbin.com/calinda-sync.webp">
+            <p>To migrate from other platforms, we use ICS files so you keep track of your previous events, but enjoy a whole new experience solely on Calinda. Either you can export and import ICS files by yourself, or you can grant us access by SSO login.</p>
+            <p>Online calendar subscription is usually <strong>one-way read-only</strong>, so our solution is that we duplicate that calendar, then you can modify on it. We keep track of the original so if there's any change, we'll pop up notifications for you to choose whether to update.</p>
+        </section>
+
+        <!-- more -->
+        <section class="section more">
+            <div class="description">
+                <h2>Some tiny features you seldom use, but cannot live without.</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature feature-3">
+                    <img src="https://img.fanrongbin.com/timezone-updated.webp" class="feature-img">
+                    <h3>Timezone</h3>
+                    <p>Select timezones for the starting and ending time of your events. Search it by location names or
+                        time differences.</p>
+                </div>
+
+                <div class="feature feature-3">
+                    <img src="https://img.fanrongbin.com/notification.webp" class="feature-img">
+                    <h3>Multiple Notifications</h3>
+                    <p>So you don't need to worry about forgetting your schedule. You can set a set of notifications by
+                        default for a certain calendar.</p>
+                </div>
+
+                <div class="feature feature-3">
+                    <img src="https://img.fanrongbin.com/repeat.webp" class="feature-img">
+                    <h3>Repeat</h3>
+                    <p>Repeat an event or a task on a daily, weekly, monthly, quarterly, ...or even biweekly, every two
+                        months etc.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section class="section contact">
+            <h1 class="gradient-text">Let's make it possible.</h1>
+            <p style="width: 70vw; margin-top: 2em;">Whether you wanna start from building this app from scratch with
+                me, or you have an idea to integrate some features into your app, contact me to see how can we make this
+                together.</p>
+            <div class="footer-button">
+                <a href="/story-behind-calinda" target="_blank"><button class="gradient-button">Read the Story</button></a>
+                <a href="/contact" target="_blank"><button>Contact
+                        Me</button></a>
+            </div>
+            <p class="anno" style="margin-top: 4em;">© <a href="/">Rongbin Fan</a>, All rights reserved.</p>
+            <p class="anno" style="margin-top: 0.5em;">Built with ♥︎ and HTML energy in London</br>November 2024</p>
+        </section>
+
+    </main>
+</body>
+
+<script>
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', function () {
+        const appTitle = document.querySelector('.app-title');
+        const topMenuBar = document.getElementById('top-menu-bar');
+
+        const appTitlePosition = appTitle.getBoundingClientRect();
+        const isAppTitleVisible = appTitlePosition.top >= 0 && appTitlePosition.bottom <= window.innerHeight;
+
+        if (isAppTitleVisible) {
+            topMenuBar.classList.remove('visible');
+            return;  // Stop further execution if app title is visible
+        }
+
+        let currentScrollTop = window.scrollY;
+        if (currentScrollTop < lastScrollTop) {
+            topMenuBar.classList.add('visible');
+        } else {
+            topMenuBar.classList.remove('visible');
+        }
+        lastScrollTop = currentScrollTop;  // Update last scroll position
+    });
+
+</script>
+
+<!-- disable viewport zooming on iOS -->
+<script defer>
+    window.onload = function () {
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    }
+</script>
+<script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans"  dir="ltr"
+
+>
+
+<head>
+  <title class="p-name">english - Rongbin&#39;s Blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="description"
+    content=" ">
+<meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
+
+<meta property="og:title" content="english - Rongbin&#39;s Blog" />
+<meta property="og:description" content=" " />
+<meta property="og:url" content="https://fanrongbin.com/tags/english/" />
+<meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+<meta name="twitter:title" content="english - Rongbin&#39;s Blog" />
+<meta name="twitter:description" content=" " />
+
+<link rel="canonical" href="https://fanrongbin.com/tags/english/" />
+
+
+
+
+
+
+      <link rel="stylesheet" href="/css/main.min.6024310b0ee49c54d14111b7c7497879eb7b973c84977df6ff0d2e8392871e55.css" integrity="sha256-YCQxCw7knFTRQRG3x0l4eet7lzyEl332/w0ug5KHHlU=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/han.min.css" type="text/css">
+
+      <script src="/js/main.f2979a93a325fecf9605263bd141398a311c8e23388ed7dcff74f92f7e632866.js" integrity="sha256-8peak6Ml/s&#43;WBSY70UE5ijEcjiM4jtfc/3T5L35jKGY=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://fanrongbin.com/tags/english/index.xml" title="Rongbin's Blog">
+
+
+
+<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/tags/english/">
+
+<link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
+
+<script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body class="han-init-context">
+
+  <section class="navbar">
+    <span class="header-name">
+    <a href="/" class="header-link h-card p-name p-author u-url u-uid">Rongbin FAN</a>
+     / <a href="/posts" class="header-link">Blog</a>
+    <br>
+    <a href="/links" class="header-link header-guestbook">◩ Guestbook</a>
+    <a href="/stream" class="header-link header-guestbook">ϟ Stream</a>
+    <a href="/flow" class="header-link header-guestbook">~Flow~</a>
+</span>
+
+
+  </section>
+
+  <article class="article-entry h-entry">
+      
+      <div class="color"></div>
+      
+      
+      <main class="e-content">
+      
+      
+<h2>english</h2>
+
+
+<a href="/blog-theme-changed/"><div class="item">
+    <h3 class="list-title">更换了博客主题 Blog Theme Changed</h3>
+    <p class="list-date">5 Jan 2024</p>
+  </div></a>
+
+
+          
+      
+          <a class="u-url" href="https://fanrongbin.com/tags/english/" style="display:none;"></a>
+      
+      
+      <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy/" style="display:none;"></a>
+
+      </main>
+  
+  
+  </article>
+  
+
+  
+  
+  
+  
+
+  <footer class="opacity-6">
+    <p><a href="/colophon">Colophon</a></p><p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+  </footer>
+
+</body>
+
+<script src="/han.min.js" defer></script>
+
+
+
+<script type="application/json" class="js-hypothesis-config" defer>
+{
+    "sideBySide": {
+        "mode": "manual"
+    }
+}
+</script>    
+
+<script defer>
+    var mainElement = document.querySelector('main');
+    var contentHeader = document.querySelector('section.content-header');
+    const headers = mainElement.querySelectorAll('h2, h3');
+    document.addEventListener('DOMContentLoaded', function () {
+
+        if (contentHeader) {
+            contentHeader.querySelector('#show-hypo').style.display = 'flex';
+        }
+        
+        handleScrollEvents();
+
+        applyBreakAllClass();
+
+        setupSidenotes();
+
+        initializeMutationObserver();
+
+        initializeTOCFeatures();
+
+        preventMultiTouchGestures();
+
+        setExternalLinksToOpenInNewTab();
+    });
+
+    function updateHHangableBehavior() {
+        var sidenoteHangables = mainElement.querySelectorAll('.sidenote-number + h-hangable');
+        sidenoteHangables.forEach(function (hHangable) {
+            var sidenoteNumber = hHangable.previousElementSibling;
+            var sidenoteBox = sidenoteNumber.querySelector('.sidenote-box');
+            if (sidenoteBox) {
+                sidenoteNumber.insertBefore(hHangable, sidenoteBox);
+            }
+        });
+    }
+
+    function initializeMutationObserver() {
+        var observer = new MutationObserver(function (mutations) {
+            var shouldUpdate = false;
+            mutations.forEach(function (mutation) {
+                mutation.addedNodes.forEach(function (node) {
+                    if (node.nodeType === 1 && node.matches('h-hangable')) {
+                        var previousSibling = node.previousElementSibling;
+                        if (previousSibling && previousSibling.matches('.sidenote-number')) {
+                            shouldUpdate = true;
+                        }
+                    }
+                });
+            });
+            if (shouldUpdate) {
+                setTimeout(updateHHangableBehavior, 1200);
+            }
+        });
+
+        var config = { childList: true, subtree: true };
+        if (mainElement) {
+            observer.observe(mainElement, config);
+        }
+    }
+
+    function applyBreakAllClass() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if (screenWidth <= 960) {
+            var codeElements = mainElement.querySelectorAll('code');
+            codeElements.forEach(function (element) {
+                if (element.textContent.length > 10) {
+                    element.classList.add('break-all');
+                }
+            });
+        }
+    }
+
+    function handleScrollEvents() {
+        if (contentHeader) {
+            let lastScrollTop = 0;
+            let isScrolling = false;
+            const addnDiv = contentHeader.querySelector('.addn');
+            const topScrollBar = contentHeader.querySelector('.top-scroll-bar');
+
+            window.addEventListener('scroll', function () {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function () {
+                        if (topScrollBar) {
+                            const scrollPercent = (currentScroll / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                            topScrollBar.style.width = scrollPercent + '%';
+                            topScrollBar.style.display = 'block';
+                        }
+                        if (addnDiv) {
+                            if (currentScroll > lastScrollTop && currentScroll > 50) {
+                                addnDiv.classList.remove('visible');
+                            } else {
+                                addnDiv.classList.add('visible');
+                            }
+                        }
+                        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            }, false);
+        }
+    }
+
+    function showHypo() {
+        var existingScript = document.getElementById('hypothes-script');
+        var button = contentHeader.querySelector('#show-hypo');
+
+        if (!existingScript) {
+            button.textContent = 'Loading';
+
+            var script = document.createElement('script');
+            script.id = 'hypothes-script';
+            script.src = 'https://hypothes.is/embed.js';
+
+            script.onload = () => {
+                button.textContent = 'Hypothes.is';
+            };
+
+            script.onerror = () => {
+                button.style.color = 'red';
+                button.textContent = 'Failed';
+            };
+
+            
+            document.body.appendChild(script);
+        } else {
+            toggleHypothesisElementsVisibility();
+            button.style.color = 'var(--text-color)';
+        }
+    }
+
+    function toggleHypothesisElementsVisibility() {
+        const elementsToToggle = [
+            'hypothesis-sidebar',
+            'hypothesis-notebook',
+            'hypothesis-profile',
+            'hypothesis-adder',
+            'hypothesis-highlight-cluster-toolbar'
+        ];
+
+        elementsToToggle.forEach(function (element) {
+            var el = document.querySelector(element);
+            if (el) {
+                if (el.style.display === 'none') {
+                    el.style.display = '';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        });
+    }
+
+
+    function initializeTOCFeatures() {
+        if (contentHeader) {
+            const contentsFixedDiv = contentHeader.querySelector('#contents-fixed');
+            const tocContainer = contentHeader.querySelector('#contents-toc');
+            if (contentsFixedDiv && headers.length > 1) {
+                contentsFixedDiv.style.display = 'flex';
+                contentsFixedDiv.addEventListener('click', (event) => {
+                    toggleTOC();
+                    event.stopPropagation();
+                });
+            }
+            if (tocContainer && !tocContainer.dataset.initialized) {
+                const throttledHighlight = throttle(highlightAppropriateHeader, 250);
+                window.addEventListener('scroll', throttledHighlight);
+                tocContainer.dataset.initialized = 'true';
+            }
+        }
+    }
+
+    function highlightAppropriateHeader() {
+        let highlightedHeader = null;
+        let foundHeaderInView = false;
+
+        
+        for (let i = 0; i < headers.length; i++) {
+            const header = headers[i];
+            const bounding = header.getBoundingClientRect();
+
+            if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+                highlightedHeader = header; 
+                foundHeaderInView = true;
+                break;
+            }
+        }
+
+        
+        if (!foundHeaderInView) {
+            for (let i = 0; i < headers.length; i++) {
+                const header = headers[i];
+                let nextHeader = headers[i + 1];
+                let endOfSection = nextHeader ? nextHeader.getBoundingClientRect().top : Infinity;
+
+                const startOfSection = header.getBoundingClientRect().bottom;
+
+                if (startOfSection < window.innerHeight && endOfSection > 0) {
+                    highlightedHeader = header;
+                    break;
+                }
+            }
+        }
+
+        
+        contentHeader.querySelectorAll('nav#TableOfContents a').forEach(link => {
+            link.classList.remove('toc-highlight');
+        });
+
+        
+        if (highlightedHeader) {
+            const link = contentHeader.querySelector(`nav#TableOfContents a[href="#${highlightedHeader.id}"]`);
+            if (link) {
+                link.classList.add('toc-highlight');
+            }
+        }
+    }
+
+    function toggleTOC() {
+        const tocContainer = contentHeader.querySelector('#contents-toc');
+        const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
+        tocContainer.style.display = isDisplayed ? 'none' : 'flex';
+    }
+
+
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function () {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function () {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    }
+
+    function setExternalLinksToOpenInNewTab() {
+        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url)');
+        links.forEach(function (link) {
+            link.setAttribute('target', '_blank');
+        });
+    }
+
+    function setupSidenotes() {
+        if (mainElement.querySelectorAll('.sidenote-number').length >= 3 && window.innerWidth >= 1000) {
+            const sidenoteLine = mainElement.querySelectorAll('.sidenote-line');
+
+            sidenoteLine.forEach(element => {
+                element.style.border = 'none';
+            });
+
+            var jQueryScript = document.createElement('script');
+            jQueryScript.src = '/jquery-3.6.0.min.js';
+            document.head.appendChild(jQueryScript);
+
+            jQueryScript.onload = function () {
+                var jsPlumbScript = document.createElement('script');
+                jsPlumbScript.src = '/jsplumb.min.js';
+                document.head.appendChild(jsPlumbScript);
+
+                jsPlumbScript.onload = function () {
+                    initJsPlumb();
+                };
+            };
+        }
+    }
+
+    function initJsPlumb() {
+        var jsPlumbCSS = document.createElement('link');
+        jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
+        jsPlumbCSS.rel = 'stylesheet';
+        document.head.appendChild(jsPlumbCSS);
+
+        jQuery(document).ready(function () {
+            jsPlumb.importDefaults({
+                ConnectionsDetachable: false,
+                ReattachConnections: false,
+                Endpoint: "Blank",
+                Connector: ["Straight"],
+                PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 }
+            });
+
+            createConnections();
+            var resizeObserver = new ResizeObserver(function () {
+                createConnections();
+            });
+            resizeObserver.observe(document.body);
+        });
+    }
+
+    function createConnections() {
+        jsPlumb.deleteEveryEndpoint();
+        jQuery('.sidenote-number').each(function () {
+            var sidenoteNumber = jQuery(this);
+            var sidenote = sidenoteNumber.find('.sidenote');
+
+            if (sidenote.length) {
+                jsPlumb.connect({
+                    source: sidenoteNumber[0],
+                    target: sidenote[0],
+                    anchors: ["Center", "RightMiddle"],
+                    cssClass: "jsplumb-line"
+                });
+            }
+        });
+    }
+
+
+    function preventMultiTouchGestures() {
+        window.onload = function () {
+            document.addEventListener('touchstart', function (event) {
+                if (event.touches.length > 1) {
+                    event.preventDefault();
+                }
+            }, false);
+            var lastTouchEnd = 0;
+            document.addEventListener('touchend', function (event) {
+                var now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+            document.addEventListener('gesturestart', function (event) {
+                event.preventDefault();
+            }, false);
+        }
+    }
+</script>
+
+
+
+
+
+
+
+</html>

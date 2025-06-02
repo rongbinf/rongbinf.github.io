@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on Rongbin&#39;s Blog</title>
+    <link>https://fanrongbin.com/tags/javascript/</link>
+    <description>Recent content in JavaScript on Rongbin&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Thu, 06 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://fanrongbin.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在使用 Clipboard.js 中学一点 JavaScript</title>
+      <link>https://fanrongbin.com/clipboard-js-errors/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://fanrongbin.com/clipboard-js-errors/</guid>
+      <description>&lt;p&gt;在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。&#xA;我的组合是：Bootstrap（CSS 框架）+ Clipboard.js&lt;/p&gt;&#xA;&lt;h2 id=&#34;第一次报错uncaught-typeerror-illegal-constructor&#34;&gt;&#xA;第一次报错：Uncaught TypeError: Illegal constructor&#xA;&lt;a href=&#34;#%e7%ac%ac%e4%b8%80%e6%ac%a1%e6%8a%a5%e9%94%99uncaught-typeerror-illegal-constructor&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;new Clipboard(&amp;#39;.btn&amp;#39;);&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;new ClipboardJS(&amp;#39;.btn&amp;#39;);&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;问题解决。一开始所参照的中文教程比较久远，语句更新为 &lt;code&gt;ClipboardJS&lt;/code&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;第二次报错uncaught-typeerror-cannot-read-property-addeventlistener-of-null&#34;&gt;&#xA;第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null&#xA;&lt;a href=&#34;#%e7%ac%ac%e4%ba%8c%e6%ac%a1%e6%8a%a5%e9%94%99uncaught-typeerror-cannot-read-property-addeventlistener-of-null&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;var clipboard = new ClipboardJS(&amp;#39;.btn&amp;#39;);&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;该语句是为了使用 DOM 选择器。&lt;/p&gt;&#xA;&lt;h3 id=&#34;为什么在这里要使用-dom-选择器dom-selector&#34;&gt;&#xA;为什么在这里要使用 DOM 选择器(DOM SELECTOR)&#xA;&lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%9c%a8%e8%bf%99%e9%87%8c%e8%a6%81%e4%bd%bf%e7%94%a8-dom-%e9%80%89%e6%8b%a9%e5%99%a8dom-selector&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;为了在页面上快速找到引号内（在此为&lt;code&gt;.btn&lt;/code&gt;）元素，然后进行下一步。报错原因：调用 JavaScript 时，DOM 选择器还没有渲染完。反映为在使用 DOM 选择器时，没找到或没找完该元素。在我的页面中，因为一开始把&lt;code&gt;&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;都放在&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;标签之内，所以在&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;没渲染之前就加载了 DOM 选择器，当然什么都找不到了。&lt;/p&gt;&#xA;&lt;p&gt;问题解决：把该段 JS 放到到本来调用 Clipboard.js 那一段之后。&lt;/p&gt;&#xA;&lt;h2 id=&#34;第三次报错tooltip-is-not-a-function&#34;&gt;&#xA;第三次报错：.tooltip() is not a function&#xA;&lt;a href=&#34;#%e7%ac%ac%e4%b8%89%e6%ac%a1%e6%8a%a5%e9%94%99tooltip-is-not-a-function&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

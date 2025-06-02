@@ -1,0 +1,32 @@
+<svg id="fav" data-name="fav" xmlns="http://www.w3.org/2000/svg" width="1036" height="867" viewBox="0 0 1036 867">
+  <defs>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .cls-1, .cls-2, .cls-3 {
+          fill: #fff;
+        }
+      }
+
+      .cls-1 {
+        font-size: 951.125px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        text-anchor: middle;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        font-size: 465.237px;
+      }
+
+      .cls-3 {
+        font-size: 300.224px;
+      }
+    </style>
+  </defs>
+  <text id="_" data-name="[" class="cls-1" x="94.511" y="694.724">[</text>
+  <text id="_2" data-name="," class="cls-2" transform="translate(457.979 621.674) scale(3.17)">,</text>
+  <text id="_3" data-name="]" class="cls-3" transform="translate(941.483 695.066) scale(3.168)">]</text>
+</svg>
