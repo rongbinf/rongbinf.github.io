@@ -5,10 +5,8 @@
     <link>https://fanrongbin.com/</link>
     <description>Are you willing to, able to, imagine an alternative reality?</description>
     <language>en</language>
-    
-      <managingEditor>hi@fanrongbin.com (Rongbin Fan)</managingEditor>
-      <webMaster>hi@fanrongbin.com (Rongbin Fan)</webMaster>
-    
+      <managingEditor>Rongbin Fan</managingEditor>
+      <webMaster>Rongbin Fan</webMaster>
     
       <lastBuildDate>Thu, 12 Jun 2025 00:00:00 &#43;0000</lastBuildDate>
     
@@ -23,9 +21,7 @@
         <link>https://fanrongbin.com/hugo-admonitions-test/</link>
         <guid>https://fanrongbin.com/hugo-admonitions-test/</guid>
         <pubDate>Thu, 12 Jun 2025 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>以主题的形式引入了 Hugo-admonitions</description>
       </item>
     
@@ -35,9 +31,7 @@
         <link>https://fanrongbin.com/markdown-test/</link>
         <guid>https://fanrongbin.com/markdown-test/</guid>
         <pubDate>Thu, 12 Jun 2025 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>来自 PaperMod 的 Markdown 语法示例页面</description>
       </item>
     
@@ -47,18 +41,8 @@
         <link>https://fanrongbin.com/thoughts/2024-in-the-midst-of-voidness/</link>
         <guid>https://fanrongbin.com/thoughts/2024-in-the-midst-of-voidness/</guid>
         <pubDate>Tue, 31 Dec 2024 23:32:17 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;有时忘了说再见，也是一种再见。意识到忘了说再见的瞬间，这句再见也早已说不上了。不知从哪里说起，也不知道以何种方式说起。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;大多数时候我们没忘，却选择不说——好一个开放式结局，以为不说，就有“退路”。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;跟一个人说再见，跟一栋楼房说再见，跟一棵树、一株草说再见，跟一本书说再见，跟一首歌说再见，像脱下一件又一件穿在身上的地图写满了从南到北、从东到西的答案，流亡在无所谓的年代。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;怔怔站在这无知的森林里，喊出空旷的再见。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;那回音传不到山和海的对岸，行囊里塞着的几件毛衣是否就成了最后的暖？&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;今年听到最喜欢的新专辑有：林強《The Realm of Otherness》、Jacek Sienkiewicz《Directions: Meaning &amp;amp;amp; Truth》、宇多田ヒカル《SCIENCE FICTION》、Flore Laurentienne《8 tableaux》。&amp;lt;/p&amp;gt;
-&amp;lt;p class=&amp;#34;right-date&amp;#34; align=&amp;#34;right&amp;#34;&amp;gt;2024 年 12 月 31 日&amp;lt;/p&amp;gt;
-&amp;lt;iframe allow=&amp;#34;autoplay *; encrypted-media *; fullscreen *; clipboard-write&amp;#34; frameborder=&amp;#34;0&amp;#34; height=&amp;#34;175&amp;#34; style=&amp;#34;width:100%;max-width:660px;overflow:hidden;border-radius:10px;&amp;#34; sandbox=&amp;#34;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&amp;#34; src=&amp;#34;https://embed.music.apple.com/cn/album/water-play/1759953391?i=1759953405&amp;amp;l=en-GB&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -67,9 +51,7 @@
         <link>https://fanrongbin.com/hybrid-5/</link>
         <guid>https://fanrongbin.com/hybrid-5/</guid>
         <pubDate>Fri, 06 Dec 2024 20:29:16 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>创造带来持续价值的产品、“推荐文化”、在母语里流浪、当你离开的时候，以及一些旅游建议等</description>
       </item>
     
@@ -79,33 +61,8 @@
         <link>https://fanrongbin.com/hugo-markdownify-generate-p-tag/</link>
         <guid>https://fanrongbin.com/hugo-markdownify-generate-p-tag/</guid>
         <pubDate>Wed, 07 Feb 2024 11:25:24 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;在尝试为&amp;lt;a href=&amp;#34;/stream&amp;#34;&amp;gt;Stream&amp;lt;/a&amp;gt;页面利用&amp;lt;a href=&amp;#34;https://gohugo.io/content-management/shortcodes/&amp;#34;&amp;gt;Hugo Shortcodes&amp;lt;/a&amp;gt;添加新的&amp;lt;code&amp;gt;movie&amp;lt;/code&amp;gt;和&amp;lt;code&amp;gt;tv&amp;lt;/code&amp;gt;标签时，使用&amp;lt;code&amp;gt;{{ .Inner | Markdownify }}&amp;lt;/code&amp;gt;无法正确对Markdown文本生成HTML&amp;lt;code&amp;gt;&amp;amp;lt;p&amp;amp;gt;&amp;lt;/code&amp;gt;tag。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;例如：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-go&amp;#34; data-lang=&amp;#34;go&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;text&amp;lt;/span&amp;gt; .= &amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;What a *nice* day!&amp;amp;#34;&amp;lt;/span&amp;gt; }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;text&amp;lt;/span&amp;gt; | &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;Markdownify&amp;lt;/span&amp;gt;}} &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;-&amp;lt;/span&amp;gt;&amp;amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;What&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;a&amp;lt;/span&amp;gt; &amp;amp;lt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;em&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;nice&amp;lt;/span&amp;gt;&amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;em&amp;lt;/span&amp;gt;&amp;amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;day&amp;lt;/span&amp;gt;!
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;但我预期生成的应是：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-go&amp;#34; data-lang=&amp;#34;go&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;text&amp;lt;/span&amp;gt; | &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;Markdownify&amp;lt;/span&amp;gt; }} &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;-&amp;lt;/span&amp;gt;&amp;amp;gt; &amp;amp;lt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;p&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;What&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;a&amp;lt;/span&amp;gt; &amp;amp;lt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;em&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;nice&amp;lt;/span&amp;gt;&amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;em&amp;lt;/span&amp;gt;&amp;amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;day&amp;lt;/span&amp;gt;!&amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;p&amp;lt;/span&amp;gt;&amp;amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;这是个&amp;lt;a href=&amp;#34;https://github.com/gohugoio/hugo/issues/3040&amp;#34;&amp;gt;老问题&amp;lt;/a&amp;gt;：&amp;lt;code&amp;gt;Markdownify&amp;lt;/code&amp;gt;最主要被用来生成标题之类的&amp;lt;em&amp;gt;inline&amp;lt;/em&amp;gt;元素，而不是类似段落的&amp;lt;em&amp;gt;blocks&amp;lt;/em&amp;gt;。但很多Hugo主题都在使用&amp;lt;code&amp;gt;Markdownify&amp;lt;/code&amp;gt;，所以一时想要用&amp;lt;a href=&amp;#34;https://gohugo.io/methods/page/renderstring/&amp;#34;&amp;gt;&amp;lt;code&amp;gt;RenderString&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;取代&amp;lt;a href=&amp;#34;https://discourse.gohugo.io/t/deprecate-markdownify/37789/&amp;#34;&amp;gt;也不太可能&amp;lt;/a&amp;gt;。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;在我的情况中，&amp;lt;a href=&amp;#34;https://github.com/gohugoio/hugo/issues/3040#issuecomment-352190818&amp;#34;&amp;gt;先识别是否存在&amp;lt;code&amp;gt;&amp;amp;lt;p&amp;amp;gt;&amp;lt;/code&amp;gt;tag&amp;lt;/a&amp;gt;的方式：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-go&amp;#34; data-lang=&amp;#34;go&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdown&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:=&amp;lt;/span&amp;gt; .&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;intro&amp;lt;/span&amp;gt; | &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdownify&amp;lt;/span&amp;gt; }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;if&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;not&amp;lt;/span&amp;gt; ( &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;strings&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;Contains&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdown&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;&amp;amp;lt;p&amp;amp;gt;&amp;amp;#34;&amp;lt;/span&amp;gt; ) }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;amp;lt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;p&amp;lt;/span&amp;gt;&amp;amp;gt;{{ &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdown&amp;lt;/span&amp;gt; }}&amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;p&amp;lt;/span&amp;gt;&amp;amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;else&amp;lt;/span&amp;gt; }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    {{ &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdown&amp;lt;/span&amp;gt; }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;end&amp;lt;/span&amp;gt; }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;或&amp;lt;a href=&amp;#34;https://github.com/gohugoio/hugo/issues/3040#issuecomment-539296048&amp;#34;&amp;gt;进一步&amp;lt;/a&amp;gt;匹配以&amp;lt;code&amp;gt;h&amp;lt;/code&amp;gt;、&amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt;开头的tag都可以：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-go&amp;#34; data-lang=&amp;#34;go&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdown&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:=&amp;lt;/span&amp;gt; .&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;text&amp;lt;/span&amp;gt; | &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdownify&amp;lt;/span&amp;gt; }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;if&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;not&amp;lt;/span&amp;gt; ( &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;findRE&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;&amp;amp;lt;[h|p][^&amp;amp;gt;]*&amp;amp;gt;&amp;amp;#34;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdown&amp;lt;/span&amp;gt; ) }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;amp;lt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;p&amp;lt;/span&amp;gt;&amp;amp;gt;{{ &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdown&amp;lt;/span&amp;gt; }}&amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;/&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;p&amp;lt;/span&amp;gt;&amp;amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;else&amp;lt;/span&amp;gt; }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    {{ &amp;lt;span style=&amp;#34;color:#960050;background-color:#1e0010&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;markdown&amp;lt;/span&amp;gt; }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;{{ &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;end&amp;lt;/span&amp;gt; }}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -114,9 +71,7 @@
         <link>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</link>
         <guid>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</guid>
         <pubDate>Sat, 06 Jan 2024 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化</description>
       </item>
     
@@ -126,15 +81,8 @@
         <link>https://fanrongbin.com/thoughts/2023-my-time-is-like-water/</link>
         <guid>https://fanrongbin.com/thoughts/2023-my-time-is-like-water/</guid>
         <pubDate>Sun, 31 Dec 2023 01:45:30 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;时间过得越来越快，但我越来越不去想着要抓住它，而是任凭它流过我，所以无法包裹我。面对高楼大厦，面对空无一人的房间，面对攒动的人群，面对自己，这些时刻里真实与臆造的界限那么清晰，像几条线拉下我耸着肩的心脏，呼吸才能沉住气。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;这是好还是坏呢？听上去，像是一种主动的麻木。但这毕竟不是我的任务，这就是一种中性的“状态”，一种持续的动感，不是什么姿态。更不应该是什么习惯，那时我会把它摔个粉碎。现在我们还相安无事。没有强加的判断，没有好坏，也没有强加在判断之上的循环自证。有结论了再寻找因果，挺偷懒的，或许抛弃结论中的好坏就是一种没办法的有办法。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;它也顺便帮我带走了很多东西，时间就是水，水也就是时间，这是第一个意思。水一水，一天又过去了，这也是一种意思。反正，我确实在这之中变得轻盈了。而轻盈一定会让人变得肤浅。总之，人是一块儿——面包，靠吞食自己饱腹，边吃边拉，当然变得越来越轻。沾上水，有的部分就变重了，久而久之它也变质了、化了。那些填满了水的气孔。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;车轱辘话说完了，希望你没明白！反正，今年听到最喜欢的新专辑有：yeule《softscars》、Olivia Dean《Messy》、Kelena《Raven》、Moby《Ambient 23》、Laufey &amp;amp;amp; Iceland Symphony Orchestra《A Night At The Symphony》、Complete Mountain Almanac《Folk》、Victoria Monét《JAGUAR II》。&amp;lt;/p&amp;gt;
-&amp;lt;p class=&amp;#34;right-date&amp;#34; align=&amp;#34;right&amp;#34;&amp;gt;2023 年 12 月 31 日&amp;lt;/p&amp;gt;
-&amp;lt;iframe allow=&amp;#34;autoplay *; encrypted-media *; fullscreen *; clipboard-write&amp;#34; frameborder=&amp;#34;0&amp;#34; height=&amp;#34;175&amp;#34; style=&amp;#34;width:100%;max-width:660px;overflow:hidden;border-radius:10px;&amp;#34; sandbox=&amp;#34;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&amp;#34; src=&amp;#34;https://embed.music.apple.com/cn/album/unconventional-mornings/1647124261?i=1647124728&amp;amp;l=en-GB&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -143,144 +91,8 @@
         <link>https://fanrongbin.com/oblique-strategies/</link>
         <guid>https://fanrongbin.com/oblique-strategies/</guid>
         <pubDate>Wed, 22 Nov 2023 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;被我们落下的想象力，以什么挽留他？&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Brian Eno和Peter Schmidt设计了超过一百个prompt，写在卡片上，来帮你打破寻找创意的障碍。这里有英文版本的&amp;lt;a href=&amp;#34;https://matt-rickard.com/list-of-all-oblique-strategies&amp;#34;&amp;gt;完整列表&amp;lt;/a&amp;gt;。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;这组卡片叫Oblique Strategies，有人翻译成迂回策略或间接策略。我喜欢叫它“斜交策略”。因素分析中，你会遇到“正交旋转”与“斜交旋转”，激发创造力，就像从这些卡片中寻找能联动我们潜意识的相关因素。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;当创作的&amp;lt;strong&amp;gt;工作&amp;lt;/strong&amp;gt;属性变强、时间压力变重时，Eno和Schmidt意识到这会让他们偏离思考和创作的本质。于是他们都写下一些要旨，帮助保持思维活跃，提醒自己不要忘记那些能从侧面推进的有趣方法，整合成了这组卡片。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;1980年初，Eno在接受Charles Amirkhanian采访时说道：&amp;lt;/p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;The Oblique Strategies evolved from me being in a number of working situations when the panic of the situation - particularly in studios - tended to make me quickly forget that there were others ways of working and that there were tangential ways of attacking problems that were in many senses more interesting than the direct head-on approach. If you&amp;amp;rsquo;re in a panic, you tend to take the head-on approach because it seems to be the one that&amp;amp;rsquo;s going to yield the best results Of course, that often isn&amp;amp;rsquo;t the case - it&amp;amp;rsquo;s just the most obvious and - apparently - reliable method. The function of the Oblique Strategies was, initially, to serve as a series of prompts which said, &amp;amp;ldquo;Don&amp;amp;rsquo;t forget that you could adopt &amp;lt;em&amp;gt;this&amp;lt;/em&amp;gt; attitude,&amp;amp;rdquo; or &amp;amp;ldquo;Don&amp;amp;rsquo;t forget you could adopt &amp;lt;em&amp;gt;that&amp;lt;/em&amp;gt; attitude.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;The first Oblique Strategy said &amp;amp;ldquo;Honour thy error as a hidden intention.&amp;amp;rdquo; And, in fact, Peter&amp;amp;rsquo;s first Oblique Strategy - done quite independently and before either of us had become conscious that the other was doing that - was &amp;amp;hellip;I think it was &amp;amp;ldquo;Was it really a mistake?&amp;amp;rdquo; which was, of course, much the same kind of message. Well, I collected about fifteen or twenty of these and then I put them onto cards. At the same time, Peter had been keeping a little book of messages to himself as regards painting, and he&amp;amp;rsquo;d kept those in a notebook. We were both very surprised to find the other not only using a similar system but also many of the messages being absolutely overlapping, you know&amp;amp;hellip;there was a complete correspondence between the messages. So subsequently we decided to try to work out a way of making that available to other people, which we did; we published them as a pack of cards, and they&amp;amp;rsquo;re now used by quite a lot of different people, I think.&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;我们也可以从这组卡片的第一个版本中，得到他们的初衷：&amp;lt;/p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;These cards evolved from our separate observations on the principles underlying what we were doing. Sometimes they were recognized in retrospect (intellect catching up with intuition), sometimes they were identified as they were happening, sometimes they were formulated.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;They can be used as a pack (a set of possibilities being continuously reviewed in the mind) or by drawing a single card from the shuffled pack when a dilemma occurs in a working situation. In this case, the card is trusted even if its appropriateness is quite unclear. They are not final, as new ideas will present themselves, and others will become self-evident.&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;观察我们日常的创作，他们背后大多衍生于：回顾（智力追随直觉）、识别、公式。这些卡片可以作为一组，也可以随机抽出一张来使用。不论卡片上的prompt是否完全适合，既然我们有所判断，ideas本身就能得到自我确证。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;（参考自 &amp;lt;a href=&amp;#34;http://www.rtqe.net/ObliqueStrategies/OSintro.html&amp;#34;&amp;gt;&amp;lt;em&amp;gt;A Primer on Oblique Strategizing&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt; by Gregory Taylor 1997）&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;卡片列表&amp;#34;&amp;gt;卡片列表&amp;lt;/h2&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;Abandon normal instruments&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Accept advice&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Accretion&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;A line has two sides&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Allow an easement (an easement is the abandonment of a stricture)&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Are there sections? Consider transitions&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Ask people to work against their better judgment&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Ask your body&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Assemble some of the instruments in a group and treat the group&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Balance the consistency principle with the inconsistency principle&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Be dirty&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Breathe more deeply&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Bridges -build -burn&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Cascades&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Change instrument roles&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Change nothing and continue with immaculate consistency&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Children&amp;amp;rsquo;s voices -speaking -singing&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Cluster analysis&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Consider different fading systems&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Consult other sources -promising -unpromising&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Convert a melodic element into a rhythmic element&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Courage!&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Cut a vital connection&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Decorate, decorate&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Define an area as `safe&amp;amp;rsquo; and use it as an anchor&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Destroy -nothing -the most important thing&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Discard an axiom&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Disconnect from desire&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Discover the recipes you are using and abandon them&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Distorting time&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Do nothing for as long as possible&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Don&amp;amp;rsquo;t be afraid of things because they&amp;amp;rsquo;re easy to do&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Don&amp;amp;rsquo;t be frightened of cliches&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Don&amp;amp;rsquo;t be frightened to display your talents&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Don&amp;amp;rsquo;t break the silence&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Don&amp;amp;rsquo;t stress one thing more than another&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Do something boring&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Do the washing up&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Do the words need changing?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Do we need holes?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Emphasize differences&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Emphasize repetitions&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Emphasize the flaws&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Faced with a choice, do both (given by Dieter Roth)&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Feedback recordings into an acoustic situation&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Fill every beat with something&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Get your neck massaged&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Ghost echoes&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Give the game away&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Give way to your worst impulse&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Go slowly all the way round the outside&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Honor thy error as a hidden intention&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;How would you have done it?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Humanize something free of error&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Imagine the music as a moving chain or caterpillar&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Imagine the music as a set of disconnected events&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Infinitesimal gradations&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Intentions -credibility of -nobility of -humility of&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Into the impossible&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Is it finished?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Is there something missing?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Is the tuning appropriate?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Just carry on&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Left channel, right channel, center channel&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Listen in total darkness, or in a very large room, very quietly&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Listen to the quiet voice&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Look at a very small object; look at its center&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Look at the order in which you do things&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Look closely at the most embarrassing details and amplify them&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Lowest common denominator check -single beat -single note -single&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;riff&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Make a blank valuable by putting it in an exquisite frame&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Make an exhaustive list of everything you might do and do the last&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;thing on the list&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Make a sudden, destructive, unpredictable action; incorporate&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Mechanicalize something idiosyncratic&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Mute and continue&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Only one element of each kind&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;(Organic) machinery&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Overtly resist change&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Put in earplugs&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Remember those quiet evenings&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Remove ambiguities and convert to specifics&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Remove specifics and convert to ambiguities&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Repetition is a form of change&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Reverse&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Short circuit&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;improve his virility shovels them straight into his lap)&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Shut the door and listen from outside&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Simple subtraction&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Spectrum analysis&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Take a break&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Take away the elements in order of apparent non-importance&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Tape your mouth (given by Ritva Saarikko)&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;The inconsistency principle&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;The tape is now the music&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Think of the radio&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Tidy up&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Trust in the you of now&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Turn it upside down&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Twist the spine&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Use an old idea&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Use an unacceptable color&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Use fewer notes&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Use filters&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Use &amp;amp;ldquo;unqualified&amp;amp;rdquo; people&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Water&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;What are you really thinking about just now? Incorporate&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;What is the reality of the situation?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;What mistakes did you make last time?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;What would your closest friend do?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;What wouldn&amp;amp;rsquo;t you do?&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Work at a different speed&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;You are an engineer&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;You can only make one dot at a time&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;You don&amp;amp;rsquo;t have to be ashamed of using your own ideas&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;[blank white card]&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;style&amp;gt;ul{width:unset;max-width:85%;font-family:var(--sans);}&amp;lt;/style&amp;gt;</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -289,116 +101,8 @@
         <link>https://fanrongbin.com/github-actions-deploy-hugo/</link>
         <guid>https://fanrongbin.com/github-actions-deploy-hugo/</guid>
         <pubDate>Sat, 18 Nov 2023 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;回应痛点：&amp;lt;/p&amp;gt;
-&amp;lt;ol&amp;gt;
-&amp;lt;li&amp;gt;写作所用的设备不带环境，没有Git，必须换回原来用的设备&amp;lt;code&amp;gt;hugo&amp;lt;/code&amp;gt;生成网页并部署&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;只想好好写东西，不想再管我的终端/命令行&amp;lt;/li&amp;gt;
-&amp;lt;/ol&amp;gt;
-&amp;lt;p&amp;gt;本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经&amp;lt;code&amp;gt;push&amp;lt;/code&amp;gt;到了&amp;lt;code&amp;gt;username/username.github.io&amp;lt;/code&amp;gt;这个仓库。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;1-把源仓库传到一个新库&amp;#34;&amp;gt;1. 把源仓库传到一个新库&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库&amp;lt;code&amp;gt;clone&amp;lt;/code&amp;gt;下来，也可以通过上传单个&amp;lt;code&amp;gt;.md&amp;lt;/code&amp;gt;文件到&amp;lt;code&amp;gt;content/posts&amp;lt;/code&amp;gt;文件夹的手动&amp;lt;code&amp;gt;push&amp;lt;/code&amp;gt;方式来自动部署，而这都不需要重新搭建Hugo环境。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;在这里我们使用Github Desktop：&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;点击菜单栏File，选择Create a new repository。&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（&amp;lt;code&amp;gt;config.toml&amp;lt;/code&amp;gt;所在的整个文件夹和子文件夹）复制进来。&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;h2 id=&amp;#34;2-将新库和github-pages仓库串起来&amp;#34;&amp;gt;2. 将新库和Github Pages仓库串起来&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;在&amp;lt;code&amp;gt;username/username.github.io&amp;lt;/code&amp;gt;下是&amp;lt;code&amp;gt;public&amp;lt;/code&amp;gt;文件夹内生成的静态网页（你一定记得的，在本地我们需要&amp;lt;code&amp;gt;cd public&amp;lt;/code&amp;gt;），而我们希望通过添加或修改源仓库的&amp;lt;code&amp;gt;.md&amp;lt;/code&amp;gt;来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;网页版，点击头像，进入Github个人的Settings：&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;
-&amp;lt;p&amp;gt;边栏最下方Developer Settings，&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;选择Personal access tokens下的Tokens (classic)
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;点击右方Generate a new token (classic)&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;
-&amp;lt;p&amp;gt;输入密码后进入设置，在Note框中填写方便识别的名字，如&amp;lt;code&amp;gt;Deploy&amp;lt;/code&amp;gt;，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow&amp;lt;/p&amp;gt;
-&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;
-&amp;lt;p&amp;gt;点击生成后token即出现，注意它只会出现这唯一的一次，将其复制保存下来&amp;lt;/p&amp;gt;
-&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;p&amp;gt;得到token后，进入源仓库的Settings：&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;选择Secrets and variables下的Actions，在右侧选择New repository secret&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;在Name中填入&amp;lt;code&amp;gt;PERSONAL_TOKEN&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;在Secret中填入刚才生成的token，点击Add secret保存&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;h2 id=&amp;#34;3-设置好github-actions&amp;#34;&amp;gt;3. 设置好Github Actions&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;重命名&amp;lt;code&amp;gt;.yml&amp;lt;/code&amp;gt;为方便识别的名字，如&amp;lt;code&amp;gt;deploy.yml&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;修改编辑框内容如下：&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-yaml&amp;#34; data-lang=&amp;#34;yaml&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;name&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;deploy &amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# 这个 action 的名字&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;on&amp;lt;/span&amp;gt;:
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;push&amp;lt;/span&amp;gt;: 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# 代表每次 push 都会 turn on action&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;workflow_dispatch&amp;lt;/span&amp;gt;: 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# 代表我们也可以手动 turn on&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;jobs&amp;lt;/span&amp;gt;:
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;build&amp;lt;/span&amp;gt;:
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;runs-on&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;ubuntu-latest&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;steps&amp;lt;/span&amp;gt;:
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;            - &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;name&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;checkout&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;              &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;uses&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;actions/checkout@v2&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;              &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;with&amp;lt;/span&amp;gt;:
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;submodules&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;true&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;fetch-depth&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;0&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;            - &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;name&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;setup&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;              &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;uses&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;peaceiris/actions-hugo@v2.6.0&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;              &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;with&amp;lt;/span&amp;gt;:
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;hugo-version&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;latest&amp;amp;#34;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;extended&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;true&amp;lt;/span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# 按需选择是否使用 hugo-extended&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;            - &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;name&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;build&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;              &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;run&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;hugo&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;            - &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;name&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;deploy&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;              &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;uses&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;peaceiris/actions-gh-pages@v3&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;              &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;with&amp;lt;/span&amp;gt;:
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;PERSONAL_TOKEN&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;${{ secrets.PERSONAL_TOKEN }} &amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# 生成的 token 就用在这里，因为下面用到 external repository&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;EXTERNAL_REPOSITORY&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;username/username.github.io &amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# 修改为你的 Github Pages 仓库&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;PUBLISH_BRANCH&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;main &amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# 以及对应的分支 main/master&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;PUBLISH_DIR&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;./public &amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# 指定将自动部署得到的 public 文件夹 push 上去&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;                  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;commit_message&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;${{ github.event.head_commit.message }}&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;若点击保存，则将自动完成第一次commit，注意提前备份原Github Pages仓库里的内容。（没备份也可以通过历史commit找到啦，哈哈）&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;4-如果你还希望刷新-cloudflare-缓存&amp;#34;&amp;gt;4. 如果你还希望刷新 Cloudflare 缓存&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;我还使用Cloudflare Pages来加速访问。为了在更新博文后刷新&amp;lt;code&amp;gt;posts&amp;lt;/code&amp;gt;页面的缓存，可以借助&amp;lt;a href=&amp;#34;https://github.com/marketplace/actions/cloudflare-purge-cache&amp;#34;&amp;gt;Cloudflare Purge Cache&amp;lt;/a&amp;gt;，或者&amp;lt;a href=&amp;#34;https://github.com/marketplace/actions/cloudflare-cache-purge-action&amp;#34;&amp;gt;Cloudflare Cache Purge Action&amp;lt;/a&amp;gt;等。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;以后者为例，在&amp;lt;code&amp;gt;deploy&amp;lt;/code&amp;gt;之后加入：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-yaml&amp;#34; data-lang=&amp;#34;yaml&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;- &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;name&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;Purge cache&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;uses&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;nathanvaughn/actions-cloudflare-purge@master&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;with&amp;lt;/span&amp;gt;:
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;      &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;cf_zone&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;${{ secrets.CLOUDFLARE_ZONE }}&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;      &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;cf_auth&amp;lt;/span&amp;gt;: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;${{ secrets.CLOUDFLARE_AUTH_KEY }}&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;      &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;files&amp;lt;/span&amp;gt;: |&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;         https://fanrongbin.com/posts/index.html
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;         https://fanrongbin.com/index.html
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;         https://fanrongbin.com/main.css&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;需要新增两个&amp;lt;code&amp;gt;secret&amp;lt;/code&amp;gt;：&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;code&amp;gt;CLOUDFLARE_ZONE&amp;lt;/code&amp;gt;：在Cloudflare的Dashboard取得，即&amp;lt;code&amp;gt;Zone ID&amp;lt;/code&amp;gt;（区域ID）&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;code&amp;gt;CLOUDFLARE_AUTH_KEY&amp;lt;/code&amp;gt;：在&amp;lt;a href=&amp;#34;https://dash.cloudflare.com/profile/api-tokens&amp;#34;&amp;gt;API页面&amp;lt;/a&amp;gt;配置一个专用于刷新缓存的API，具体可以参考&amp;lt;a href=&amp;#34;https://github.com/marketplace/actions/cloudflare-cache-purge-action&amp;#34;&amp;gt;Action页面教程&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -407,64 +111,8 @@
         <link>https://fanrongbin.com/hugo-hanzi-pro/</link>
         <guid>https://fanrongbin.com/hugo-hanzi-pro/</guid>
         <pubDate>Sat, 18 Nov 2023 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;blockquote&amp;gt;
-
-
-&amp;lt;p lang=&amp;#34;zh-Hans&amp;#34;&amp;gt;&amp;lt;h-char unicode=&amp;#34;300c&amp;#34; class=&amp;#34;biaodian cjk bd-open&amp;#34;&amp;gt;&amp;lt;h-cs hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-cs&amp;gt;&amp;lt;h-inner&amp;gt;「&amp;lt;/h-inner&amp;gt;&amp;lt;/h-char&amp;gt;&amp;lt;a href=&amp;#34;https://github.com/ethantw/Han&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;汉字标准格式&amp;lt;/a&amp;gt;&amp;lt;h-char unicode=&amp;#34;300d&amp;#34; class=&amp;#34;biaodian cjk bd-close bd-end&amp;#34;&amp;gt;&amp;lt;h-inner&amp;gt;」&amp;lt;/h-inner&amp;gt;&amp;lt;h-cs hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-cs&amp;gt;&amp;lt;/h-char&amp;gt;是一套支援各种印刷效果的&amp;lt;!--
---&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;Sass &#43; JavaScript&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;排版框架&amp;lt;h-hangable&amp;gt;&amp;lt;h-cs&amp;gt;&amp;lt;h-inner hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-inner&amp;gt;&amp;lt;h-char class=&amp;#34;biaodian bd-close bd-end cjk&amp;#34;&amp;gt;，&amp;lt;/h-char&amp;gt;&amp;lt;/h-cs&amp;gt;&amp;lt;/h-hangable&amp;gt;包含&amp;lt;!--
---&amp;gt;&amp;lt;u&amp;gt;相邻&amp;lt;/u&amp;gt;&amp;lt;u class=&amp;#34;adjacent&amp;#34;&amp;gt;文字装饰线&amp;lt;/u&amp;gt;&amp;lt;u class=&amp;#34;adjacent&amp;#34;&amp;gt;跳脱&amp;lt;/u&amp;gt;&amp;lt;h-hangable&amp;gt;&amp;lt;h-cs&amp;gt;&amp;lt;h-inner hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-inner&amp;gt;&amp;lt;h-char class=&amp;#34;biaodian bd-close bd-end cjk&amp;#34;&amp;gt;、&amp;lt;/h-char&amp;gt;&amp;lt;/h-cs&amp;gt;&amp;lt;/h-hangable&amp;gt;&amp;lt;h-ruby class=&amp;#34;rightangle complex&amp;#34; rightangle=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;h-ru class=&amp;#34;rightangle complex&amp;#34; span=&amp;#34;2&amp;#34; order=&amp;#34;0&amp;#34; annotation=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;h-ru zhuyin=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;汉&amp;lt;/rb&amp;gt;&amp;lt;h-zhuyin length=&amp;#34;2&amp;#34; diao=&amp;#34;ˋ&amp;#34;&amp;gt;&amp;lt;h-yin&amp;gt;ㄏㄢ&amp;lt;/h-yin&amp;gt;&amp;lt;h-diao&amp;gt;ˋ&amp;lt;/h-diao&amp;gt;&amp;lt;/h-zhuyin&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;h-ru zhuyin=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;字&amp;lt;/rb&amp;gt;&amp;lt;h-zhuyin length=&amp;#34;1&amp;#34; diao=&amp;#34;ˋ&amp;#34;&amp;gt;&amp;lt;h-yin&amp;gt;ㄗ&amp;lt;/h-yin&amp;gt;&amp;lt;h-diao&amp;gt;ˋ&amp;lt;/h-diao&amp;gt;&amp;lt;/h-zhuyin&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;rt rbspan=&amp;#34;2&amp;#34;&amp;gt;hànzì&amp;lt;/rt&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;h-ru class=&amp;#34;rightangle complex&amp;#34; span=&amp;#34;2&amp;#34; order=&amp;#34;0&amp;#34; annotation=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;h-ru zhuyin=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;标&amp;lt;/rb&amp;gt;&amp;lt;h-zhuyin length=&amp;#34;3&amp;#34; diao=&amp;#34;&amp;#34;&amp;gt;&amp;lt;h-yin&amp;gt;ㄅㄧㄠ&amp;lt;/h-yin&amp;gt;&amp;lt;h-diao&amp;gt;&amp;lt;/h-diao&amp;gt;&amp;lt;/h-zhuyin&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;h-ru zhuyin=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;音&amp;lt;/rb&amp;gt;&amp;lt;h-zhuyin length=&amp;#34;2&amp;#34; diao=&amp;#34;&amp;#34;&amp;gt;&amp;lt;h-yin&amp;gt;ㄧㄣ&amp;lt;/h-yin&amp;gt;&amp;lt;h-diao&amp;gt;&amp;lt;/h-diao&amp;gt;&amp;lt;/h-zhuyin&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;rt rbspan=&amp;#34;2&amp;#34;&amp;gt;biāoyīn&amp;lt;/rt&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;/h-ruby&amp;gt;&amp;lt;h-hangable&amp;gt;&amp;lt;h-cs&amp;gt;&amp;lt;h-inner hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-inner&amp;gt;&amp;lt;h-char class=&amp;#34;biaodian bd-close bd-end cjk&amp;#34;&amp;gt;、&amp;lt;/h-char&amp;gt;&amp;lt;/h-cs&amp;gt;&amp;lt;/h-hangable&amp;gt;&amp;lt;em style=&amp;#34;-moz-text-emphasis: filled circle;
- -webkit-text-emphasis: filled circle;
- text-emphasis: filled circle;
- -moz-text-emphasis-position: under;
- -webkit-text-emphasis-position: under;
- text-emphasis-position: under;
- font-style: inherit;
- border-bottom: 2px dotted;
- padding-bottom: 0.05em;
- border-bottom-width: -webkit-calc(0px);
- padding-bottom: -webkit-calc(0px);&amp;#34;&amp;gt;着重号&amp;lt;/em&amp;gt;&amp;lt;h-hangable&amp;gt;&amp;lt;h-cs&amp;gt;&amp;lt;h-inner hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-inner&amp;gt;&amp;lt;h-char class=&amp;#34;biaodian bd-close bd-end cjk&amp;#34;&amp;gt;、&amp;lt;/h-char&amp;gt;&amp;lt;/h-cs&amp;gt;&amp;lt;/h-hangable&amp;gt;&amp;lt;!--
---&amp;gt;标点符号修正&amp;lt;h-hangable&amp;gt;&amp;lt;h-cs&amp;gt;&amp;lt;h-inner hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-inner&amp;gt;&amp;lt;h-char class=&amp;#34;biaodian bd-close bd-end cjk&amp;#34;&amp;gt;、&amp;lt;/h-char&amp;gt;&amp;lt;/h-cs&amp;gt;&amp;lt;/h-hangable&amp;gt;&amp;lt;abbr title=&amp;#34;黑、宋、楷、仿宋&amp;#34;&amp;gt;中文四大印刷体&amp;lt;/abbr&amp;gt;&amp;lt;h-hangable&amp;gt;&amp;lt;h-cs&amp;gt;&amp;lt;h-inner hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-inner&amp;gt;&amp;lt;h-char class=&amp;#34;biaodian bd-close bd-end cjk&amp;#34;&amp;gt;、&amp;lt;/h-char&amp;gt;&amp;lt;/h-cs&amp;gt;&amp;lt;/h-hangable&amp;gt;汉字&amp;lt;h-char unicode=&amp;#34;ff0d&amp;#34; class=&amp;#34;biaodian cjk &amp;#34;&amp;gt;－&amp;lt;/h-char&amp;gt;西文&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;mixed&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;间隙&amp;lt;h-hangable&amp;gt;&amp;lt;h-cs&amp;gt;&amp;lt;h-inner hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-inner&amp;gt;&amp;lt;h-char class=&amp;#34;biaodian bd-close bd-end cjk&amp;#34;&amp;gt;、&amp;lt;/h-char&amp;gt;&amp;lt;/h-cs&amp;gt;&amp;lt;/h-hangable&amp;gt;&amp;lt;h-char-group class=&amp;#34;biaodian cjk portion&amp;#34;&amp;gt;&amp;lt;h-char unicode=&amp;#34;300c&amp;#34; class=&amp;#34;biaodian cjk bd-open&amp;#34;&amp;gt;&amp;lt;h-cs hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-cs&amp;gt;&amp;lt;h-inner&amp;gt;「&amp;lt;/h-inner&amp;gt;&amp;lt;/h-char&amp;gt;&amp;lt;/h-char-group&amp;gt;标点&amp;lt;h-char unicode=&amp;#34;300e&amp;#34; class=&amp;#34;biaodian cjk bd-open&amp;#34;&amp;gt;&amp;lt;h-cs hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-cs&amp;gt;&amp;lt;h-inner&amp;gt;『&amp;lt;/h-inner&amp;gt;&amp;lt;/h-char&amp;gt;挤压&amp;lt;h-char unicode=&amp;#34;300f&amp;#34; class=&amp;#34;biaodian cjk bd-close bd-end&amp;#34;&amp;gt;&amp;lt;h-inner&amp;gt;』&amp;lt;/h-inner&amp;gt;&amp;lt;h-cs hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-cs&amp;gt;&amp;lt;/h-char&amp;gt;与&amp;lt;h-char unicode=&amp;#34;300e&amp;#34; class=&amp;#34;biaodian cjk bd-open&amp;#34;&amp;gt;&amp;lt;h-cs hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-cs&amp;gt;&amp;lt;h-inner&amp;gt;『&amp;lt;/h-inner&amp;gt;&amp;lt;/h-char&amp;gt;悬挂&amp;lt;h-hangable&amp;gt;&amp;lt;h-char unicode=&amp;#34;300f&amp;#34; class=&amp;#34;biaodian cjk bd-close bd-end&amp;#34;&amp;gt;&amp;lt;h-inner&amp;gt;』&amp;lt;/h-inner&amp;gt;&amp;lt;h-cs hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-cs&amp;gt;&amp;lt;/h-char&amp;gt;&amp;lt;h-char unicode=&amp;#34;300d&amp;#34; class=&amp;#34;biaodian cjk bd-close bd-end&amp;#34;&amp;gt;&amp;lt;h-inner&amp;gt;」&amp;lt;/h-inner&amp;gt;&amp;lt;h-cs hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-cs&amp;gt;&amp;lt;/h-char&amp;gt;&amp;lt;h-cs&amp;gt;&amp;lt;h-inner hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-inner&amp;gt;&amp;lt;h-char class=&amp;#34;biaodian bd-close bd-end cjk&amp;#34;&amp;gt;、&amp;lt;/h-char&amp;gt;&amp;lt;/h-cs&amp;gt;&amp;lt;/h-hangable&amp;gt;章节边界调整&amp;lt;h-char unicode=&amp;#34;2026&amp;#34; class=&amp;#34;biaodian cjk bd-liga&amp;#34;&amp;gt;……&amp;lt;/h-char&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;首先要引入两个源文件：&amp;lt;code&amp;gt;han.min.css&amp;lt;/code&amp;gt;与&amp;lt;code&amp;gt;han.min.js&amp;lt;/code&amp;gt;，最简便的方式，可以通过&amp;lt;a href=&amp;#34;https://hanzi.pro/manual/anzhuang_yu_qiyong#cdn&amp;#34;&amp;gt;CDN&amp;lt;/a&amp;gt;或直接下载后（访问两条代码中的对应链接，另存至本地）放入Hugo博客系统下的&amp;lt;code&amp;gt;/static&amp;lt;/code&amp;gt;文件夹中。建议使用后者，以方便我们在本地调整样式上的冲突。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;这两种方式，都需要在HTML对应处汇入。为了让Hugo在生成页面时自动汇入，以我所使用的&amp;lt;code&amp;gt;hugo-tufte&amp;lt;/code&amp;gt;主题为例：&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;1-添加hanmincss&amp;#34;&amp;gt;1. 添加&amp;lt;code&amp;gt;han.min.css&amp;lt;/code&amp;gt;&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;修改&amp;lt;code&amp;gt;/themes/hugo-tufte&amp;lt;/code&amp;gt;主题文件夹内的&amp;lt;code&amp;gt;/layouts/partials/header.includes.html&amp;lt;/code&amp;gt;（核心即找到&amp;lt;code&amp;gt;/layouts&amp;lt;/code&amp;gt;中哪个&amp;lt;code&amp;gt;.html&amp;lt;/code&amp;gt;对应&amp;lt;code&amp;gt;&amp;amp;lt;head&amp;amp;gt;&amp;lt;/code&amp;gt;的生成），在末尾对应加入：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-html&amp;#34; data-lang=&amp;#34;html&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;link&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;rel&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;stylesheet&amp;amp;#34;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;media&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;all&amp;amp;#34;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;href&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;amp;lt;!-- 如果使用 CDN，直接复制官网给出的那条 link rel... --&amp;amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-html&amp;#34; data-lang=&amp;#34;html&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;link&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;rel&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;stylesheet&amp;amp;#34;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;href&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;/han.min.css&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;amp;lt;!-- 如果为本地汇入 --&amp;amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;h2 id=&amp;#34;2-添加hanminjs&amp;#34;&amp;gt;2. 添加&amp;lt;code&amp;gt;han.min.js&amp;lt;/code&amp;gt;&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;在&amp;lt;code&amp;gt;/layouts/_default/baseof.html&amp;lt;/code&amp;gt;中&amp;lt;code&amp;gt;&amp;amp;lt;/body&amp;amp;gt;&amp;lt;/code&amp;gt;到&amp;lt;code&amp;gt;&amp;amp;lt;/html&amp;amp;gt;&amp;lt;/code&amp;gt;的中间，对应加入：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-html&amp;#34; data-lang=&amp;#34;html&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;script&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.js&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;script&amp;lt;/span&amp;gt;&amp;amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;amp;lt;!-- 如果使用 CDN，直接复制官网给出的那条 link rel... --&amp;amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-html&amp;#34; data-lang=&amp;#34;html&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;amp;lt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;script&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;src&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;/han.min.js&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;amp;lt;/&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;script&amp;lt;/span&amp;gt;&amp;amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;amp;lt;!-- 如果为本地汇入 --&amp;amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;h2 id=&amp;#34;3-启动脚本渲染&amp;#34;&amp;gt;3. 启动脚本渲染&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;如果你只希望对于文章内容进行渲染，不影响菜单栏等，在&amp;lt;code&amp;gt;/layouts/_default/single.html&amp;lt;/code&amp;gt;中找到对应你文章内容部分的&amp;lt;code&amp;gt;label&amp;lt;/code&amp;gt;，如&amp;lt;code&amp;gt;&amp;amp;lt;article id=&amp;amp;quot;main&amp;amp;quot;&amp;amp;gt;&amp;lt;/code&amp;gt;，加入&amp;lt;code&amp;gt;class=&amp;amp;quot;han-init-context&amp;amp;quot;&amp;lt;/code&amp;gt;属性即可。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;到此我们已完成两个文件的汇入和启动渲染，&amp;lt;code&amp;gt;hugo server&amp;lt;/code&amp;gt;查看，大部分情况下你会发现页面许多处的错乱，以及原&amp;lt;code&amp;gt;&amp;amp;lt;em&amp;amp;gt;&amp;lt;/code&amp;gt;的强调样式变成了陌生的着重号等。同时，你也会惊讶地发现在中英文混排时，中英文之间自动加上了间距，且标点符号的显示有明显的优化。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;接下来，你需要根据自身需要调整&amp;lt;code&amp;gt;han.min.css&amp;lt;/code&amp;gt;或override冲突的地方，这是我们最关键的工作。&amp;lt;code&amp;gt;css&amp;lt;/code&amp;gt;文件下载下来是没有缩进的，你可以通过一些工具标准化，看得会清楚一点。 一般来说，解决冲突最方便的方式是：哪里看不顺眼就&amp;lt;strong&amp;gt;注释&amp;lt;/strong&amp;gt;掉哪里。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;测试范例&amp;#34;&amp;gt;测试范例&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;测试省略号：……&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;文章引用区块内的重点：&amp;lt;/p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;不做则中心与的说很笔分士：&amp;lt;strong&amp;gt;校此诉平是里春家善客总外公；做南多中。&amp;lt;/strong&amp;gt; 足酒脸理特指第常三紧资现工们家化民，公政我热良，中以家是。&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;字级语意类：&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;a href=&amp;#34;#&amp;#34; pcked=&amp;#34;1&amp;#34;&amp;gt;超连结元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;u&amp;gt;注记元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;u&amp;lt;/u&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;u&amp;gt;注记元素甲&amp;lt;/u&amp;gt;&amp;lt;u class=&amp;#34;adjacent&amp;#34;&amp;gt;注记元素乙&amp;lt;/u&amp;gt;一般文字节点&amp;lt;!--
---&amp;gt;&amp;lt;u&amp;gt;注记元素丙&amp;lt;/u&amp;gt;一般文字节点&amp;lt;!--
---&amp;gt;&amp;lt;u&amp;gt;注记元素丁&amp;lt;/u&amp;gt;&amp;lt;h-char unicode=&amp;#34;3002&amp;#34; class=&amp;#34;biaodian cjk bd-end bd-cop bd-jiya bd-hangable&amp;#34;&amp;gt;&amp;lt;h-inner&amp;gt;。&amp;lt;/h-inner&amp;gt;&amp;lt;/h-char&amp;gt;&amp;lt;br&amp;gt;&amp;lt;cite&amp;gt;来源元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;cite&amp;lt;/cite&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;strong&amp;gt;重点元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;strong&amp;lt;/strong&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;dfn&amp;gt;术语元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;dfn&amp;lt;/dfn&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;关键字元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;b&amp;lt;/b&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;em&amp;gt;强调元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;em&amp;lt;/em&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;i&amp;gt;变音文字元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;i&amp;lt;/i&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;var&amp;gt;变数元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;var&amp;lt;/var&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;q&amp;gt;引用元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;q&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;及&amp;lt;q&amp;gt;子引用&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;q&amp;lt;/q&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;元素示例&amp;lt;/q&amp;gt;&amp;lt;br&amp;gt;&amp;lt;s&amp;gt;讹讯元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;s&amp;lt;/s&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;s&amp;gt;讹讯元素甲&amp;lt;/s&amp;gt;&amp;lt;s class=&amp;#34;adjacent&amp;#34;&amp;gt;讹讯元素乙&amp;lt;/s&amp;gt;一般文字节点&amp;lt;!--
---&amp;gt;&amp;lt;s&amp;gt;讹讯元素丙&amp;lt;/s&amp;gt;一般文字节点&amp;lt;!--
---&amp;gt;&amp;lt;s&amp;gt;讹讯元素丁&amp;lt;/s&amp;gt;&amp;lt;h-char unicode=&amp;#34;3002&amp;#34; class=&amp;#34;biaodian cjk bd-end bd-cop bd-jiya bd-hangable&amp;#34;&amp;gt;&amp;lt;h-inner&amp;gt;。&amp;lt;/h-inner&amp;gt;&amp;lt;/h-char&amp;gt;&amp;lt;br&amp;gt;&amp;lt;code&amp;gt;代码元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;code&amp;lt;/code&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;kbd&amp;gt;输入键元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;kbd&amp;lt;/kbd&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;samp&amp;gt;计算机输出示例元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;samp&amp;lt;/samp&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;ruby&amp;gt;行间注元素&amp;lt;rt&amp;gt;ruby annotation&amp;lt;/rt&amp;gt;&amp;lt;/ruby&amp;gt;示例&amp;lt;br&amp;gt;复合式&amp;lt;h-ruby class=&amp;#34;complex&amp;#34; doubleline=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;h-ru class=&amp;#34;complex&amp;#34; span=&amp;#34;2&amp;#34; order=&amp;#34;1&amp;#34; annotation=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;h-ru class=&amp;#34;complex&amp;#34; span=&amp;#34;1&amp;#34; order=&amp;#34;0&amp;#34; annotation=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;行间注&amp;lt;/rb&amp;gt;&amp;lt;rt rbspan=&amp;#34;1&amp;#34;&amp;gt;hángjiānzhù&amp;lt;/rt&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;h-ru class=&amp;#34;complex&amp;#34; span=&amp;#34;1&amp;#34; order=&amp;#34;0&amp;#34; annotation=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;元素&amp;lt;/rb&amp;gt;&amp;lt;rt rbspan=&amp;#34;1&amp;#34;&amp;gt;yuansu&amp;lt;/rt&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;rt rbspan=&amp;#34;3&amp;#34;&amp;gt;ruby annotation&amp;lt;/rt&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;/h-ruby&amp;gt;&amp;lt;br&amp;gt;直角&amp;lt;h-ruby class=&amp;#34;rightangle complex&amp;#34; rightangle=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;h-ru class=&amp;#34;rightangle complex&amp;#34; span=&amp;#34;3&amp;#34; order=&amp;#34;0&amp;#34; annotation=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;h-ru zhuyin=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;行&amp;lt;/rb&amp;gt;&amp;lt;h-zhuyin length=&amp;#34;2&amp;#34; diao=&amp;#34;ˊ&amp;#34;&amp;gt;&amp;lt;h-yin&amp;gt;ㄏㄤ&amp;lt;/h-yin&amp;gt;&amp;lt;h-diao&amp;gt;ˊ&amp;lt;/h-diao&amp;gt;&amp;lt;/h-zhuyin&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;h-ru zhuyin=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;间&amp;lt;/rb&amp;gt;&amp;lt;h-zhuyin length=&amp;#34;3&amp;#34; diao=&amp;#34;&amp;#34;&amp;gt;&amp;lt;h-yin&amp;gt;ㄐㄧㄢ&amp;lt;/h-yin&amp;gt;&amp;lt;h-diao&amp;gt;&amp;lt;/h-diao&amp;gt;&amp;lt;/h-zhuyin&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;h-ru zhuyin=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;注&amp;lt;/rb&amp;gt;&amp;lt;h-zhuyin length=&amp;#34;2&amp;#34; diao=&amp;#34;ˋ&amp;#34;&amp;gt;&amp;lt;h-yin&amp;gt;ㄓㄨ&amp;lt;/h-yin&amp;gt;&amp;lt;h-diao&amp;gt;ˋ&amp;lt;/h-diao&amp;gt;&amp;lt;/h-zhuyin&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;rt rbspan=&amp;#34;3&amp;#34;&amp;gt;hángjiānzhù&amp;lt;/rt&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;h-ru class=&amp;#34;rightangle complex&amp;#34; span=&amp;#34;2&amp;#34; order=&amp;#34;0&amp;#34; annotation=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;h-ru zhuyin=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;元&amp;lt;/rb&amp;gt;&amp;lt;h-zhuyin length=&amp;#34;2&amp;#34; diao=&amp;#34;ˊ&amp;#34;&amp;gt;&amp;lt;h-yin&amp;gt;ㄩㄢ&amp;lt;/h-yin&amp;gt;&amp;lt;h-diao&amp;gt;ˊ&amp;lt;/h-diao&amp;gt;&amp;lt;/h-zhuyin&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;h-ru zhuyin=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;rb&amp;gt;素&amp;lt;/rb&amp;gt;&amp;lt;h-zhuyin length=&amp;#34;2&amp;#34; diao=&amp;#34;ˋ&amp;#34;&amp;gt;&amp;lt;h-yin&amp;gt;ㄙㄨ&amp;lt;/h-yin&amp;gt;&amp;lt;h-diao&amp;gt;ˋ&amp;lt;/h-diao&amp;gt;&amp;lt;/h-zhuyin&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;rt rbspan=&amp;#34;2&amp;#34;&amp;gt;yuánsù&amp;lt;/rt&amp;gt;&amp;lt;/h-ru&amp;gt;&amp;lt;/h-ruby&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;abbr&amp;gt;缩写元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;abbr&amp;lt;/abbr&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;及&amp;lt;abbr title=&amp;#34;abbreviation&amp;#34;&amp;gt;包含标题属性的缩写元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;abbr&amp;lt;/abbr&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;mark&amp;gt;凸显元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;mark&amp;lt;/mark&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;small&amp;gt;批注元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;small&amp;lt;/small&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;span&amp;gt;文字范围元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;span&amp;lt;/span&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;sub&amp;gt;下标元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;sub&amp;lt;/sub&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;sup&amp;gt;上标元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;sup&amp;lt;/sup&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;/section&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;修订类：&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;ins&amp;gt;增订元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;ins&amp;lt;/ins&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;ins&amp;gt;增订元素甲&amp;lt;/ins&amp;gt;&amp;lt;ins class=&amp;#34;adjacent&amp;#34;&amp;gt;增订元素乙&amp;lt;/ins&amp;gt;一般文字节点&amp;lt;!--
---&amp;gt;&amp;lt;ins&amp;gt;增订元素丙&amp;lt;/ins&amp;gt;一般文字节点&amp;lt;!--
---&amp;gt;&amp;lt;ins&amp;gt;增订元素丁&amp;lt;/ins&amp;gt;&amp;lt;h-char unicode=&amp;#34;3002&amp;#34; class=&amp;#34;biaodian cjk bd-end bd-cop bd-jiya bd-hangable&amp;#34;&amp;gt;&amp;lt;h-inner&amp;gt;。&amp;lt;/h-inner&amp;gt;&amp;lt;/h-char&amp;gt;&amp;lt;br&amp;gt;&amp;lt;del&amp;gt;删订元素&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;del&amp;lt;/del&amp;gt;&amp;lt;h-hws hidden=&amp;#34;&amp;#34;&amp;gt; &amp;lt;/h-hws&amp;gt;示例&amp;lt;br&amp;gt;&amp;lt;del&amp;gt;删订元素甲&amp;lt;/del&amp;gt;&amp;lt;del class=&amp;#34;adjacent&amp;#34;&amp;gt;删订元素乙&amp;lt;/del&amp;gt;一般文字节点&amp;lt;!--
---&amp;gt;&amp;lt;del&amp;gt;删订元素丙&amp;lt;/del&amp;gt;一般文字节点&amp;lt;!--
---&amp;gt;&amp;lt;del&amp;gt;删订元素丁&amp;lt;/del&amp;gt;&amp;lt;h-char unicode=&amp;#34;3002&amp;#34; class=&amp;#34;biaodian cjk bd-end bd-cop bd-jiya bd-hangable&amp;#34;&amp;gt;&amp;lt;h-inner&amp;gt;。&amp;lt;/h-inner&amp;gt;&amp;lt;/h-char&amp;gt;&amp;lt;/section&amp;gt;&amp;lt;/p&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -473,9 +121,7 @@
         <link>https://fanrongbin.com/hybrid-4/</link>
         <guid>https://fanrongbin.com/hybrid-4/</guid>
         <pubDate>Thu, 16 Feb 2023 00:00:00 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>向用户学习、生活没法厘清、丢掉的中圈友谊，以及消失的互联网垂直社群等</description>
       </item>
     
@@ -485,9 +131,7 @@
         <link>https://fanrongbin.com/honorific-ko/</link>
         <guid>https://fanrongbin.com/honorific-ko/</guid>
         <pubDate>Tue, 17 Jan 2023 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>主体敬语法、客体敬语法、相对敬语法、压尊法以及事物尊称</description>
       </item>
     
@@ -497,9 +141,7 @@
         <link>https://fanrongbin.com/give-ko/</link>
         <guid>https://fanrongbin.com/give-ko/</guid>
         <pubDate>Thu, 12 Jan 2023 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>“给”的敬语变化，以及在间接引语命令文（-(으)라고 하다）中引入“달다”</description>
       </item>
     
@@ -509,23 +151,8 @@
         <link>https://fanrongbin.com/thoughts/jam-on-road/</link>
         <guid>https://fanrongbin.com/thoughts/jam-on-road/</guid>
         <pubDate>Sat, 31 Dec 2022 01:00:00 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;这一年我新得到，也复习了许多的“告诫”，它们来自每一天、每个生活的日子。好像是四年前一个夏天下午，彭美问我们为什么总是急匆匆地，赶着下课、赶着体锻、赶着回宿舍、赶着回教室。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;“因为要生活啊。”&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;那时比现在要懂得什么叫生活：一边洗衣服一边哼歌，一边吃饭一边跟朋友闲聊，或者在教室小阳台写日记，在自习的间隙看会儿闲书。生活特别简单。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;简单的生活一下子摔得支离破碎，现在妄想一下子拾掇好——“告别 2022，告别疫情吧！”，给这场生活送第二次终，多希望这盛大的追悼会开得圆满，实际上连该埋葬的是什么都不知道。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;善良的人们，每一天、每个生活的日子里，化身躺倒在沥青路上的一滩果酱，又甜，又脏：生活在离开了“生活”时才诞生。许多的蚂蚁背着这许多的告诫，像倒芝麻一样从化身中涌出。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;于是果酱又变成了扛着告诫的蚂蚁，躲闪着一双双黑色的皮鞋，不留神，告诫就会又被落下。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;好在这之中至少尝过了甜滋味，那忘了要抓住的一切渺小的东西，至少抓住过一些。被踩死之前靠着这念想，靠着舔吮善良的人们留下的果酱、扛着的告诫——&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;和善良的人们站在一起，把拥有生活的洁白祝愿，也留给善良的人们。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;今年听到最喜欢的新专辑有：FELIVAND《Ties》、The Comet Is Coming《Hyper-Dimensional Expansion Beam》、Sabrina Claudio《Based On A Feeling》、Steve Lacy《Gemini Rights》、Brian Eno《FOREVERANDEVERNOMORE》、Rad Museum《RAD》、Night Swimmer《Xia Ye》、NewJeans《New Jeans》。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;今年听播客的频率大幅下降，原因主要有二：通勤时间减少，以及自顾不暇，听不得太多说教。&amp;lt;/p&amp;gt;
-&amp;lt;p class=&amp;#34;right-date&amp;#34; align=&amp;#34;right&amp;#34;&amp;gt;2022 年 12 月 31 日&amp;lt;/p&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;iframe id=&amp;#34;embedPlayer&amp;#34; src=&amp;#34;https://embed.music.apple.com/us/album/ties/1625027792?app=music&amp;amp;amp;itsct=music_box_player&amp;amp;amp;itscg=30200&amp;amp;amp;ls=1&amp;amp;amp;theme=auto&amp;#34; height=&amp;#34;450px&amp;#34; frameborder=&amp;#34;0&amp;#34; sandbox=&amp;#34;allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation&amp;#34; allow=&amp;#34;autoplay *; encrypted-media *; clipboard-write&amp;#34; style=&amp;#34;width: 100%;  overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -534,9 +161,7 @@
         <link>https://fanrongbin.com/hybrid-3/</link>
         <guid>https://fanrongbin.com/hybrid-3/</guid>
         <pubDate>Sun, 04 Sep 2022 00:00:00 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>教学是另一种获取灵感的途径、网站是怎么死的、加密货币的 costless simulation、稀粥颂，以及随感</description>
       </item>
     
@@ -546,9 +171,7 @@
         <link>https://fanrongbin.com/hybrid-2/</link>
         <guid>https://fanrongbin.com/hybrid-2/</guid>
         <pubDate>Mon, 02 May 2022 00:00:00 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>公共生活的意义、真理的直率、平台与个人、过度教育、Feature/Product Fit，以及能成为诗的一切</description>
       </item>
     
@@ -558,16 +181,8 @@
         <link>https://fanrongbin.com/segoe-ui-variable/</link>
         <guid>https://fanrongbin.com/segoe-ui-variable/</guid>
         <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 &amp;lt;a href=&amp;#34;https://blogs.windows.com/windows-insider/2021/05/06/announcing-windows-10-insider-preview-build-21376/&amp;#34;&amp;gt;发布&amp;lt;/a&amp;gt;了 Segoe UI 的可变字体版本：Segoe UI Variable，&amp;lt;a href=&amp;#34;https://docs.microsoft.com/en-us/windows/apps/design/signature-experiences/typography&amp;#34;&amp;gt;在 Windows 11 &amp;lt;/a&amp;gt;正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/segoe-ui-v-vdisplay.webp&amp;#34;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/segoe-ui-v-vdisplay-2.webp&amp;#34;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，&amp;lt;del&amp;gt;看起来也更像 Product Sans 了。&amp;lt;/del&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/segoe-ui-v-vdisplay-3.webp&amp;#34;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;可以通过 Windows 的&amp;lt;a href=&amp;#34;https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts&amp;#34;&amp;gt;官方文档&amp;lt;/a&amp;gt;，或直接访问&amp;lt;a href=&amp;#34;https://aka.ms/SegoeUIVariable&amp;#34;&amp;gt;此链接&amp;lt;/a&amp;gt;下载 Segoe UI Variable。&amp;lt;/p&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -576,9 +191,7 @@
         <link>https://fanrongbin.com/hybrid-1/</link>
         <guid>https://fanrongbin.com/hybrid-1/</guid>
         <pubDate>Sat, 05 Feb 2022 00:00:00 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
+          <author>Rongbin Fan</author>
         <description>母语者心态、身份政治，以及三个促使我们相信假新闻的要素</description>
       </item>
     
@@ -588,12 +201,8 @@
         <link>https://fanrongbin.com/thoughts/bakery/</link>
         <guid>https://fanrongbin.com/thoughts/bakery/</guid>
         <pubDate>Fri, 28 Jan 2022 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;实习，住在团结湖，附近有一家糕点铺，晚上下班总要路过它。门口常常排着不长不短的队，几乎每次我都会装作心不在焉地往亮堂堂的橱窗一瞥，看看今天是绿豆酥饼卖得好，还是有新面包出炉。暗地里，我也决定找个时间也去排排队，买一盒试试看。今天是这个月最后一天班，坐上公交，想象那条刚认识没多久的路，先过路口，拐弯，直行，再走到对面，就能到糕点铺了。刷卡下车后我抬起头走路，可劲儿往对面瞧，却怎么也看不到那面墨绿色的招牌，一时以为是自己搞混了。怀疑的脚步越来越近，才发现关了灯、拉了铁门，赖以辨认的人群四散。今天已经是廿六了，后天回家，节后总要再过来。“所以总有机会吧”，这么想着，埋头往别处走了。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;过去好像也是这么想的，以为是沙子，总在那里。以为像钱，攒起来当然就越攒越多。现在，恍惚间意识到自己再回来买酥饼的希望过分渺茫，被这样一份不可知不可触的酥饼想象击碎。我化成饮食大欲碎在地上，拼不成什么要“把握住机会”和“活在当下”的道理戒律，如此这般活，由着很多事情错过。&amp;lt;/p&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -602,96 +211,8 @@
         <link>https://fanrongbin.com/cpp-template-friend/</link>
         <guid>https://fanrongbin.com/cpp-template-friend/</guid>
         <pubDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;在 C&#43;&#43; 中只能通过友元函数来重载流输入输出运算符 &amp;lt;code&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/code&amp;gt; &amp;lt;code&amp;gt;&amp;amp;gt;&amp;amp;gt;&amp;lt;/code&amp;gt;。由于搭配模板类的使用，编译器可能在对应编译友元函数时&amp;lt;strong&amp;gt;无法确定&amp;lt;/strong&amp;gt;其为模版，需要事先声明。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;方法-1提前声明并使用--确认&amp;#34;&amp;gt;方法 1：提前声明并使用 &amp;amp;lt;&amp;amp;gt; 确认&amp;lt;/h2&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-cpp&amp;#34; data-lang=&amp;#34;cpp&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;#include&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;amp;lt;iostream&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;using&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;namespace&amp;lt;/span&amp;gt; std;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;//需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;template&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;A&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;complex&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;template&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;A&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;operator&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt; (ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;newout, &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;const&amp;lt;/span&amp;gt; complex&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;A&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;m);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;template&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;A&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;complex&amp;lt;/span&amp;gt;{ &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;//以复数类为例
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;  &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;private&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  	A real, image;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;public&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		complex(A a, A b)&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;real(a),image(b){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;//在运算符 &amp;amp;lt;&amp;amp;lt; 后加入 &amp;amp;lt;&amp;amp;gt; 以帮助编译器进一步确定该友元函数为模板函数
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;		&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;friend&amp;lt;/span&amp;gt; ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;operator&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;gt;&amp;lt;/span&amp;gt;(ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;newout, &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;const&amp;lt;/span&amp;gt; complex&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;A&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;m); 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;}; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;template&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;A&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;operator&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt; (ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;newout, &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;const&amp;lt;/span&amp;gt; complex&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;A&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;m){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	newout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;(&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;m.real&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;,&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;m.image&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;)&amp;amp;#34;&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;return&amp;lt;/span&amp;gt; newout;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;main&amp;lt;/span&amp;gt;(){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	complex&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; a(&amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;1&amp;lt;/span&amp;gt;,&amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;2&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	cout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;a&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;endl;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;return&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;0&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;} 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;h2 id=&amp;#34;方法-2在声明友元函数的同时定义友元函数&amp;#34;&amp;gt;方法 2：在声明友元函数的同时定义友元函数&amp;lt;/h2&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-cpp&amp;#34; data-lang=&amp;#34;cpp&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;#include&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;amp;lt;iostream&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;using&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;namespace&amp;lt;/span&amp;gt; std;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;template&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;A&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;complex&amp;lt;/span&amp;gt;{
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;private&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		A real, image;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;public&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		complex(A a, A b)&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;real(a),image(b){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;//在声明友元函数的同时定义友元函数
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;		&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;friend&amp;lt;/span&amp;gt; ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;operator&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt; (ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;newout, &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;const&amp;lt;/span&amp;gt; complex&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;A&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;m){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;			newout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;(&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;m.real&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;,&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;m.image&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;)&amp;amp;#34;&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;			&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;return&amp;lt;/span&amp;gt; newout;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;}; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;main&amp;lt;/span&amp;gt;(){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	complex&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; a(&amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;1&amp;lt;/span&amp;gt;,&amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;2&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	cout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;a&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;endl;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;return&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;0&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;} 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;h2 id=&amp;#34;如果可以不使用友元函数&amp;#34;&amp;gt;如果可以不使用友元函数&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;如果模板类中的成员为公有，则完全不需要在模板类中声明友元。&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-cpp&amp;#34; data-lang=&amp;#34;cpp&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;#include&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;amp;lt;iostream&amp;amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;using&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;namespace&amp;lt;/span&amp;gt; std;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;template&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;A&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;complex&amp;lt;/span&amp;gt;{
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;public&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		A real, image; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;//成员为公有
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;		complex(A a, A b)&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;real(a),image(b){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;//		friend ostream &amp;amp;amp; operator &amp;amp;lt;&amp;amp;lt; &amp;amp;lt;&amp;amp;gt;(ostream &amp;amp;amp;newout, const complex&amp;amp;lt;A&amp;amp;gt; &amp;amp;amp;m);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;//友元在此是不必要的
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;}; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;template&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;A&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;operator&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt; (ostream &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;newout, &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;const&amp;lt;/span&amp;gt; complex&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;A&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;m){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	newout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;(&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;m.real&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;,&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;m.image&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;)&amp;amp;#34;&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;return&amp;lt;/span&amp;gt; newout;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;main&amp;lt;/span&amp;gt;(){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	complex&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; a(&amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;1&amp;lt;/span&amp;gt;,&amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;2&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	cout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;a&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;endl;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;	&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;return&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;0&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;} 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;h2 id=&amp;#34;参考文章&amp;#34;&amp;gt;参考文章&amp;lt;/h2&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;https://isocpp.org/wiki/faq/templates#template-friends&amp;#34;&amp;gt;Why do I get linker errors when I use template friends? - Standard C&#43;&#43;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -700,27 +221,8 @@
         <link>https://fanrongbin.com/thoughts/yesterday-is-today-is-tomorrow/</link>
         <guid>https://fanrongbin.com/thoughts/yesterday-is-today-is-tomorrow/</guid>
         <pubDate>Fri, 31 Dec 2021 20:51:59 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;我想了很久，因为两年过得像一年。翻了翻手机相册，还是放弃了理顺今年“所作所为”的念头，意义不大。明天开始的新一年，似乎也将和过去的十二个月，在巨大的混凝土运送车里保持匀速搅拌，作为一大团不至于凝固的泥巴。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;已经对新冠脱敏，指不论是日增或新变种的消息，或者突然的封校封城，在生理和心理上不为所动。其实也不仅是疫情，整体上对很多事物都看开了很多，离开了很多过去被动或主动设下的困境，或者说从源头开始避免。现在常是这样的状态，在不相调和时，我先选择离开，停止消耗，这样才能更好地拥抱自己。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;但这种改变的确是懦弱的、畏怯的，是不能也不值得美化的。总不是束手无策的，必须承认。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;很恍然，对明年原来没有什么特别的期待，这样的一个好处是对目标和进度的把控拉得更近了，就像在触控板上将拇指和食指收拢再分开。还有是继续向内走。我觉得这个不仅仅是我，也是这两年之后许多人或多或少都会有的行动，面对自身的时间多了，出现从复杂往简单调转的诉求。另一个好处是停止对自己预期看涨，幻想多头，这个应该是影响最大的。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;困扰我许久的那种感受，在接连读了项飙老师的访谈录《把自己作为方法》以及《正午故事 1》中另一篇对谈后有了新的把握，“悬浮”与“错置”，都在慢慢展开的脱敏中渐渐从裹挟里剥离。还有就是大概保持着每三个月跟家人吵一次架的频率，把话讲开了。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;这么看来，今年的收获还挺大。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;今年听到比较有启发的播客节目有《新闻实验室》关于非虚构写作的第 17 期（《正午故事》郭玉洁，端传媒张洁平）和第 19 期（《正面连接》梁鸣），以及《晚风说》智堡 Mikko 和 Yachak 来的两期。无意中发现的《暮酒朝谈》，也给我很多帮助。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;今年听到最喜欢的新专辑有：Yu Su《Yellow River Blue》、Mndsgn《Rare Pleasure》、Daniel Avery《Together in Static》、Ultraísta《Sister》、hikaru yamada and metal casting jazz ensemble《moon》、李遐怡《4 ONLY》、Leon Bridges《Gold-Diggers Sound》、Tinashe《333》。&amp;lt;/p&amp;gt;
-&amp;lt;p class=&amp;#34;right-date&amp;#34;  align=&amp;#34;right&amp;#34;&amp;gt;2021 年 12 月 31 日&amp;lt;/p&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;iframe src=&amp;#34;https://embed.podcasts.apple.com/cn/podcast/%E6%9A%AE%E9%85%92%E6%9C%9D%E8%B0%88/id1521684443?itsct=podcast_box_player&amp;amp;amp;itscg=30200&amp;amp;amp;ls=1&amp;amp;amp;theme=auto&amp;#34; height=&amp;#34;450px&amp;#34; frameborder=&amp;#34;0&amp;#34; sandbox=&amp;#34;allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation&amp;#34; allow=&amp;#34;autoplay *; encrypted-media *;&amp;#34; style=&amp;#34;width: 100%;  overflow: hidden; border-radius: 10px; background: transparent;&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;iframe allow=&amp;#34;autoplay *; encrypted-media *; fullscreen *&amp;#34; frameborder=&amp;#34;0&amp;#34; height=&amp;#34;450&amp;#34; style=&amp;#34;width:100%;overflow:hidden;background:transparent;&amp;#34; sandbox=&amp;#34;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&amp;#34; src=&amp;#34;https://embed.music.apple.com/cn/album/yellow-river-blue/1546173813&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;什么是蹲下起身时眼前的洁白，什么是动物园的房间。不当一切真的命中注定，指认所有被构造的一切，要声称自己是罪人，在跌落旧关卡时搜集证据。这会是水的流动，这会是卡在鞋底细缝中风干的叶片碎末，这会是酸胀的小腿和脉冲。这就是真的，这就是假的，这一直是一场戏，我一直在剧院里走走停停。很多个分成好几段陆续死去，有些是谋杀，有些是自杀，有些出于意外，一个死了，另一个被迫接着出现，不是任何人的错，新的来了。草丛里经常种下过去拯救自己的毒药，送给兔子，他们就能帮忙消化成脚印，铺在路上，以至于再试图向前爬去时，手指所沾上的只是兔子的粪便、毒药的沉淀，膝盖磨出来的血就不会看得见，路看上去也不会太远。以至于又是一种曼妙的错觉，支撑这生死的流变。&amp;lt;/p&amp;gt;
-&amp;lt;p class=&amp;#34;right-date&amp;#34; align=&amp;#34;right&amp;#34;&amp;gt;2021 年 12 月 20 日&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -729,128 +231,8 @@
         <link>https://fanrongbin.com/cpp-copy-constructor/</link>
         <guid>https://fanrongbin.com/cpp-copy-constructor/</guid>
         <pubDate>Mon, 29 Nov 2021 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;h2 id=&amp;#34;什么时候会调用拷贝构造函数&amp;#34;&amp;gt;什么时候会调用拷贝构造函数&amp;lt;/h2&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;一个对象以&amp;lt;strong&amp;gt;值传递&amp;lt;/strong&amp;gt;的方式&amp;lt;strong&amp;gt;传入函数体&amp;lt;/strong&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;一个对象以&amp;lt;strong&amp;gt;值传递&amp;lt;/strong&amp;gt;的方式&amp;lt;strong&amp;gt;从函数返回&amp;lt;/strong&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;一个对象&amp;lt;strong&amp;gt;通过另一个对象&amp;lt;/strong&amp;gt;以进行&amp;lt;strong&amp;gt;初始化&amp;lt;/strong&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;h2 id=&amp;#34;默认拷贝构造函数浅拷贝&amp;#34;&amp;gt;默认拷贝构造函数：浅拷贝&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;即：将被拷贝对象的数据成员的值一一赋值给新创建的对象&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;如果数据成员中有指针成员
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;浅拷贝只是增加了一个指针指向已经存在的内存&amp;lt;/strong&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;则&amp;lt;strong&amp;gt;新对象的指针所指向的地址&amp;lt;/strong&amp;gt;与&amp;lt;strong&amp;gt;被拷贝对象的指针所指向的地址&amp;lt;/strong&amp;gt;相同&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;则析构 delete 对象时会重复 delete 两次同一个内存空间而出错&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;h3 id=&amp;#34;实例&amp;#34;&amp;gt;实例&amp;lt;/h3&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-cpp&amp;#34; data-lang=&amp;#34;cpp&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;Rect&amp;lt;/span&amp;gt;{
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;private&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;*&amp;lt;/span&amp;gt;p;     &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 一指针成员
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;public&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    Rect(){      &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 构造函数，p 指向堆中分配的一内存
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;        p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;100&amp;lt;/span&amp;gt;); &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// new 动态分配
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;    }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;~&amp;lt;/span&amp;gt;Rect(){     &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 析构函数，释放动态分配的内存
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;        &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;if&amp;lt;/span&amp;gt;(p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;!=&amp;lt;/span&amp;gt; NULL){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;            &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;delete&amp;lt;/span&amp;gt; p; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// delete 释放 p 所指向的内存
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;        }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;};
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;main&amp;lt;/span&amp;gt;(){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    Rect rect1;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    Rect rect2(rect1);   &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 拷贝 rect1 来构造 rect2
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;		&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 也即： Rect rect2 = rect1;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;		&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 浅拷贝，将成员的值进行拷贝 rect2.p = rect1.p （地址 = 地址）
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;		&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 会出现错误
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;		&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 在 delete 时既要 delete rect2.p 指向的空间，又要 delete rect1.p 指向的内存。但这是同一个内存（地址 = 地址），导致同一个内存被释放两次
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;return&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;0&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;同时还造成另外两个错误：&amp;lt;/p&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;code&amp;gt;rect2.p&amp;lt;/code&amp;gt; 在初始化时新建的 &amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt; 所指向的内存没被释放（因为构造函数新建之后，又直接值传递换了地址），造成内存泄漏&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;code&amp;gt;rect2.p&amp;lt;/code&amp;gt;（指针） 和 &amp;lt;code&amp;gt;rect1.p&amp;lt;/code&amp;gt;（指针）指向同一块内存（同一个地址），任何一方的变动都会影响另一方&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&amp;lt;h2 id=&amp;#34;自行新建拷贝构造函数并使用深拷贝&amp;#34;&amp;gt;自行新建拷贝构造函数：并使用深拷贝&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;新增加一个指针，并申请一个新的内存。新指针指向新内存。&amp;lt;/p&amp;gt;
-&amp;lt;h3 id=&amp;#34;实例-1&amp;#34;&amp;gt;实例&amp;lt;/h3&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-cpp&amp;#34; data-lang=&amp;#34;cpp&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;Rect&amp;lt;/span&amp;gt;{
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;public&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;*&amp;lt;/span&amp;gt;p;			&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 一指针成员
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;    Rect(){     &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 构造函数，p指向堆中分配的一内存
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;        p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;100&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    Rect(&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;const&amp;lt;/span&amp;gt; Rect &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;r){ &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 自行新建拷贝构造函数
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;        p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt;;     &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 为新对象重新动态分配内存
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;        &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;*&amp;lt;/span&amp;gt;p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;*&amp;lt;/span&amp;gt;r.p;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 或带括号 *p = *(r.p);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;    }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;~&amp;lt;/span&amp;gt;Rect(){    &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 析构函数，释放动态分配的内存
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;        &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;if&amp;lt;/span&amp;gt;(p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;!=&amp;lt;/span&amp;gt; NULL){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;            &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;delete&amp;lt;/span&amp;gt; p;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;};
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;main&amp;lt;/span&amp;gt;(){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    Rect rect1;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    Rect rect2(rect1);		&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 拷贝 rect1 来构造 rect2
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;		&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 也即： Rect rect2 = rect1;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;    &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 深拷贝，创建新的 p 以及其所指向的空间，然后把值赋过去 *r.p = *rect1.p; 然后 *rect2.p = *r.p;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;return&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;0&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;不妨输出地址比对一下：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-cpp&amp;#34; data-lang=&amp;#34;cpp&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;Rect&amp;lt;/span&amp;gt;{
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;public&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;*&amp;lt;/span&amp;gt;p;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    Rect(){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;100&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        cout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;start new: &amp;amp;#34;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;p&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;endl; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 无参的新构造（初始化）时创建的内存空间
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;    }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    Rect(&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;const&amp;lt;/span&amp;gt; Rect &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;amp;&amp;lt;/span&amp;gt;r){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        cout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;copy: &amp;amp;#34;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;p&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;endl; 			&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 拷贝构造时创建的内存空间
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;        &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;*&amp;lt;/span&amp;gt;p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;*&amp;lt;/span&amp;gt;r.p;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;~&amp;lt;/span&amp;gt;Rect(){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;if&amp;lt;/span&amp;gt;(p &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;!=&amp;lt;/span&amp;gt; NULL){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;            cout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;de: &amp;amp;#34;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;p&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;endl; 		&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 所析构掉的内存空间
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;            &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;delete&amp;lt;/span&amp;gt; p;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;        }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    }
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;};
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;int&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;main&amp;lt;/span&amp;gt;(){
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    Rect rect1;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    cout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;rect1.p&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;endl;		&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// rect1.p 指向的内存空间
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;    Rect rect2(rect1);			&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// 拷贝 rect1 来构造 rect2
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;    cout&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;rect2.p&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;&amp;amp;lt;&amp;amp;lt;&amp;lt;/span&amp;gt;endl;		&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// rect2.p 指向的内存空间
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;    &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;return&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;0&amp;lt;/span&amp;gt;;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;输出得：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-shell&amp;#34; data-lang=&amp;#34;shell&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;start new: 0x10582d930
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;0x10582d930
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;copy: 0x10582f220
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;0x10582f220
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;de: 0x10582f220
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;de: 0x10582d930
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;Program ended with exit code: &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;0&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;h2 id=&amp;#34;参考&amp;#34;&amp;gt;参考&amp;lt;/h2&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;https://blog.csdn.net/xunye_dream/article/details/77547438&amp;#34;&amp;gt;C语言中的位拷贝与值拷贝浅谈 - CSDN&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;https://blog.csdn.net/lwbeyond/article/details/6202256&amp;#34;&amp;gt;C&#43;&#43;拷贝构造函数详解 - CSDN&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -859,24 +241,8 @@
         <link>https://fanrongbin.com/thoughts/middle-zone/</link>
         <guid>https://fanrongbin.com/thoughts/middle-zone/</guid>
         <pubDate>Sun, 12 Sep 2021 00:00:00 &#43;0800</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;有一块 R 总试图从中用手抠出贝壳来的空地，过去那上面总是留下许多干脆的血迹和笑嘻嘻的淤青。空地的周围，或者再把填成它的海沙化开一点，就成了一片永远的中间地带。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;那天明明是台风天，R 却说：“我要去散步。”于是他真的先从海边出发，踩上两脚的沙子，然后往那片空地走去。R 过去在这片中间地带上走过的路，大都单纯而寡淡，今天他走的这段路，还没一半，就让他的小腿有些发麻。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;R 又拐了一个弯，故意错过一个路口。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;再过不久台风好像就要到了，燥热烦闷的空气已经挨家挨户提醒海边的人们关好门窗，R 还有最后大概一百米左右的路，于是他停了下来，开始环顾四周，就像谷歌地图里那个黄色的街景小人。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;这里是卖祭祀用品的，对面是银行，前面是学校，右边就是公园，本来在银行旁边的书店搬到了后面，小区里的菜摊和肉摊不知道还在不在，再往前面就是那条修了好几百年的四车道，通往 R 的南方地带。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;“南方的南方地带，不知道是在哪里。”&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;台风到了，R 就坐在路口凭空出现的石质长椅上。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;“燥热烦闷的空气终于要过去了。”&amp;lt;/p&amp;gt;
-&amp;lt;hr&amp;gt;
-&amp;lt;p&amp;gt;另一块空地上，竖着很多墓碑，不管底下的墓是否已经建成。这块空地是 R 留给自己的，他先在自己这块空地上埋葬一些人，之后才能在世界的周围送他们离开。那空地上的墓碑越来越多，以至于它已经不再像是树林中突然出现的一块平地，而像是树林本身。于是它成了一片永远的中间地带。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;R 知道今天已经快要来了，所以昨天就打包好了行李，给保温杯装上水，换上另一双鞋，戴好帽子。他坐在屋里的木凳上等着今天到来，方便他出发。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;今天到来后，他开始往那片空地走去。这条路已经变得再熟悉不过了。夏天他其实不常来，因为山路会变得泥泞。往往是秋天或者冬天，反正这里气温并不会很低，R 只需要关心路况。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;到了空地之后，R 把行李放下，在靠近东边的一块碑上刻好名字。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;在 R 刻完之后，今天就结束了。&amp;lt;/p&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -885,97 +251,8 @@
         <link>https://fanrongbin.com/winslow-homer/</link>
         <guid>https://fanrongbin.com/winslow-homer/</guid>
         <pubDate>Sun, 08 Aug 2021 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;发布于 &amp;lt;a href=&amp;#34;https://matters.news/@laefan/%E7%9C%8B%E7%95%AB-winslow-homer-%E6%BA%AB%E6%96%AF%E6%B4%9B-%E9%9C%8D%E9%BB%98-bafyreifjxdssns3s6xkf6t7lgk6jaxjrpxg4semolhembefe4o3mi2n4ja&amp;#34;&amp;gt;Matters.news&amp;lt;/a&amp;gt;。&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-1.webp&amp;#34; alt=&amp;#34;Prout&amp;amp;rsquo;s Neck, Breakers&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Prout&amp;amp;rsquo;s Neck, Breakers&amp;lt;/em&amp;gt;, 1883, Winslow Homer, Painting, watercolor on wove paper&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://www.artic.edu/artworks/16815/prout-s-neck-breakers&amp;#34;&amp;gt;The Art Institute of Chicago&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;很偶然，从这幅画初次得知霍默大名，之后开始继续寻找他的画作，感叹于他融会贯通的技艺和想法。我其实不曾在阴天见过这样蓝的海浪，也许最接近画中景象的一次是在乔伊斯博物馆前的海角处。大概是被这种未曾见过的模样吸引着。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;除了十分显然的深蓝、亮蓝叠加使用以塑造前后关系，还能看到他多利用了纸张本身的白色，例如下半部分近礁石的部分。这也是水彩常用的方法。整幅画也给我一种非常轻快的感觉，倒不是因为画面主体的海浪，而是它前侧用或大或小的色块柔和铺排开的、礁石上附着的细浪。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-2.webp&amp;#34; alt=&amp;#34;Paul Morphy, the Chess Champion&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Paul Morphy, the Chess Champion&amp;lt;/em&amp;gt;, 1859, Winslow Homer, Print, wood engraving&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Credit line: The Museum of Fine Arts, Houston, The Mavis P. and Mary Wilson Kelsey Collection of Winslow Homer Graphics&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://artsandculture.google.com/asset/paul-morphy-the-chess-champion-winslow-homer/6AE0gmpNUzDrzA&amp;#34;&amp;gt;Google Arts &amp;amp;amp; Culture&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;温斯洛·霍默（Winslow Homer, 1836-1910）出生于波士顿，童年在剑桥长大，父母皆为新英格兰移民。父亲是典型的商人，而母亲有着画水彩的天赋异禀，顺理成章地成为霍默的“第一任老师”。19 岁高中毕业，父亲安排他去做广告平板印刷。就这样重复进行日常工作近两年后，他开始为一些杂志刊物制作插画，在当时那个年代也意味着就是木版画。霍默的线条感和对黑白分明的把握很好，不几笔就能把最鲜明的特点勾勒出来，如上图。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-3.webp&amp;#34; alt=&amp;#34;Mounted Bugler&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Mounted Bugler&amp;lt;/em&amp;gt;,1862, Winslow Homer, Graphite, brush and gray wash on off-white paper&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Credit line: Gift of Charles Savage Homer, Jr.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://artsandculture.google.com/asset/mounted-bugler-winslow-homer-american-1836%E2%80%931910/FgF0ghbzo-z6dw&amp;#34;&amp;gt;Google Arts &amp;amp;amp; Culture&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-4.webp&amp;#34; alt=&amp;#34;Home, Sweet Home&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Home, Sweet Home&amp;lt;/em&amp;gt;, 1863, Winslow Homer, Painting, oil on canvas&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Copyright: Patrons&amp;amp;rsquo; Permanent Fund&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://artsandculture.google.com/asset/home-sweet-home/RwErgtlB6qAFTg&amp;#34;&amp;gt;Google Arts &amp;amp;amp; Culture&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;直到 1863 年他才正式进入国家设计学院（现国家学院博物馆和学校，National Academy Museum and School）学习绘画基础。美国内战期间，他被长期供图的一家报社送去前线，留下了许多战地场景与人物的插画手稿，除战争中的将士名人肖像，也有纷乱中的妇女儿童和留下的残迹。这一段时期以及之后的五到十年，也是霍默从单纯的插画师拓展成画家的时期，我们可以看见其绘画的个人风格已经渐趋成熟，例如选材的角度比起激烈、冲突的场景而言，更常描绘日常与闲暇，主题和所传达的态度也更为暧昧和难以捉摸。画面用色和明暗的对比十分优雅，线条的运用也更加果敢，构图更加简练。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-5.webp&amp;#34; alt=&amp;#34;Croquet Scene&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Croquet Scene&amp;lt;/em&amp;gt;, 1866, Winslow Homer, Painting, oil on canvas&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Credit Line: The Art Institute of Chicago, Friends of American Art Collection; Goodman Fund, 1942.35&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://artsandculture.google.com/asset/croquet-scene-winslow-homer-american-1836%E2%80%931910/xgGjRZZn3Qn5nA&amp;#34;&amp;gt;Google Arts &amp;amp;amp; Culture&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-6.webp&amp;#34; alt=&amp;#34;Art-Students and Copyists in the Louvre Gallery, Paris&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Art-Students and Copyists in the Louvre Gallery, Paris&amp;lt;/em&amp;gt;, 1868, Winslow Homer, Print, wood engraving on wove paper&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Object Credit Line: Davison Art Center, Wesleyan University. Purchase funds, 1958&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Image Credit Line: &amp;lt;a href=&amp;#34;http://www.wesleyan.edu/dac/openaccess&amp;#34;&amp;gt;Open Access Image from the Davison Art Center, Wesleyan University (http://www.wesleyan.edu/dac/openaccess)&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://artsandculture.google.com/asset/art-students-and-copyists-in-the-louvre-gallery-paris-winslow-homer/qwFCQK-sxPsOGQ&amp;#34;&amp;gt;Google Arts &amp;amp;amp; Culture&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-7.webp&amp;#34; alt=&amp;#34;Study for Eagle Head, Manchester, Massachusetts&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Study for Eagle Head, Manchester, Massachusetts&amp;lt;/em&amp;gt;, 1869, Winslow Homer, Painting, oil on wood&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;http://www.metmuseum.org/art/collection/search/11142&amp;#34;&amp;gt;The Metropolitan Museum of Art&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-8.webp&amp;#34; alt=&amp;#34;Eagle Head, Manchester, Massachusetts (High Tide)&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Eagle Head, Manchester, Massachusetts (High Tide)&amp;lt;/em&amp;gt;, 1870, Winslow Homer, Painting, oil on canvas&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://www.metmuseum.org/art/collection/search/11117&amp;#34;&amp;gt;The Metropolitan Museum of Art&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;1867-1868 年他在巴黎短住一年，这段期间他仍继续为报社供图，主题转向描述巴黎人的生活，同时作风景绘画的练习。此时亦正值印象派兴起之初，他也展示出如何更好用绘画表现自然光影的探讨，在用笔上也更加放松。但是否能够确证其受到如马奈、莫内等印象派画家的影响，我们无从得知。他的绘画风格，大角度来说是站在写实的基础上去展示光线。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;在上两幅画作的比较中，我们可以发现霍默对阳光和天气的捕捉，这反映在浅滩处蓝色与绿色海浪和远处海面的对比，以及三个人物身上向阳处背阳处的色彩。高度饱和、反差明显、边缘轮廓准确充实，这样的用色和线条风格从一至终，也是最吸引我的地方。中部正在拧水的女子在强日光的照射下，衣服变湿的重量感也有一定体现。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;我们还可以从 &amp;lt;em&amp;gt;Eagle Head, Manchester, Massachusetts (High Tide), 1870&amp;lt;/em&amp;gt; 创作的时代背景中窥见霍默关注的主题。正在快步工业化的美国，到海滩游泳、晒太阳是当时工人们的新潮休闲。三位女子身着如此厚重的衣物下水走了一遭，前两位亦未注意社会所定义的「仪态」，掀开长裙、露出小腿，当时即有评论称「exceedingly red-legged and ungainly」。但我们在绘画中难道不能呈现这样的人物吗？她们是如此的鲜活。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;大都会博物馆的播客中，&amp;lt;a href=&amp;#34;https://itunesu.itunes.apple.com/feed/id430943000&amp;#34;&amp;gt;有一期&amp;lt;/a&amp;gt;（Author Elizabeth Strout Discusses Two Paintings by Winslow Homer）邀请到了普利策小说奖得主伊丽莎白·斯特劳特（Elizabeth Strout, 1956-）分享她在这幅画中所想象出的故事。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-9.webp&amp;#34; alt=&amp;#34;The Country School&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;The Country School&amp;lt;/em&amp;gt;, 1871, Winslow Homer, Painting, oil on canvas&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Country_School.jpg&amp;#34;&amp;gt;Wikimedia Commons&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;1870 年代，霍默致力于描绘田园农村的质朴生活，例如小孩子的童趣嬉闹、年轻人的热恋和大人们的劳作。可不去关注工业化又到什么阶段了，逆行。我们可以在上副画作中捕捉许多细节，例如学生神色中的专注、讲台上的鲜花、挂在黑板边上的帽子、窗布的轻盈和透过窗栅的光影。中部偏左翘起腿的、讲台右侧合看一本书的、画面右部正哭泣着的小男孩和望着他的小女孩，实在是形形色色。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;1875 年后他不再作商业插画，希望能凭绘制油画和水彩维持生计。他最有名的作品 &amp;lt;em&amp;gt;Breezing Up (A Fair Wind), 1873-1876&amp;lt;/em&amp;gt; 亦在这期间绘成。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-10.webp&amp;#34; alt=&amp;#34;Breezing Up (A Fair Wind)&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Breezing Up (A Fair Wind)&amp;lt;/em&amp;gt;, 1873-1876, Winslow Homer, Painting, oil on canvas&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://commons.wikimedia.org/wiki/File:Winslow_Homer,_Breezing_Up_(A_Fair_Wind),_1873-1876,_NGA_30228.jpg&amp;#34;&amp;gt;Wikimedia Commons&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;当时的评论对这幅画赞赏有加，多为与霍默之前的画作相比认为要出色。但我初见这幅画作时并不懂它为何得以成为「最有名」。是船与船帆的动态感吗？是船与浪之间精妙的推移和被搅乱的倒影吗？是它各方面都很平衡恰当？想来，或是因为其被解读的意义要大于其本身吗？乘风破浪的 19 世纪美国人。在艺术上，他们应该怎么在大杂烩中「孕育本土」、在本土中「重建本土」？&amp;lt;/p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;Even the critic from the &amp;lt;em&amp;gt;Art Journal&amp;lt;/em&amp;gt;, who thought the picture typical of Homer&amp;amp;rsquo;s &amp;amp;ldquo;hasty mode of treatment,&amp;amp;rdquo; found it winning nevertheless: &amp;amp;ldquo;It may be accepted as the most spirited of his works; the waves roll, the boat flies swiftly before the wind, and the group of happy boys are felicitous in every pose.&amp;amp;rdquo; Two others concurred: &amp;amp;ldquo;It is painted in his customary coarse and negligé style, but suggests with unmistakable force the life and motion of a breezy summer day off the coast&amp;amp;hellip;.There is no truer or heatier work in the present exhibition.&amp;amp;rdquo;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;&amp;lt;a href=&amp;#34;https://www.nga.gov/content/dam/ngaweb/research/publications/pdfs/american-paintings-19th-century-part-1.pdf&amp;#34;&amp;gt;American Paintings of the Nineteenth Century, Part I&amp;lt;/a&amp;gt;&amp;lt;/em&amp;gt;, pages 312-318, National Gallery of Art, In-gallery publication, free to download online&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-11.webp&amp;#34; alt=&amp;#34;Blackboard&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Blackboard&amp;lt;/em&amp;gt;, 1877, Winslow Homer, Painting, watercolor on wove paper&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://www.nga.gov/collection/art-object-page.71552.html&amp;#34;&amp;gt;National Gallery of Art&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-12.webp&amp;#34; alt=&amp;#34;Schooner At Sunset&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Schooner at Sunset&amp;lt;/em&amp;gt;, 1880, Winslow Homer, Painting, watercolor on wove paper&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://hvrd.art/o/299942&amp;#34;&amp;gt;Harvard Art Museum&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;1873 年夏之后他开始将水彩作为常用工具，笔触有的放矢，画面易读。有关注细节的如 &amp;lt;em&amp;gt;Blackboard, 1877&amp;lt;/em&amp;gt;，衣着上的格子花纹、布面的褶皱、后背的绑带以及教师并不愉悦的神情。有非常印象派的如 &amp;lt;em&amp;gt;Schooner at Sunset, 1880&amp;lt;/em&amp;gt;，落日与即将入夜的天空互相切开，水面上的波光与涟漪处理得精致。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-13.webp&amp;#34; alt=&amp;#34;Two Figures by the Sea&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Two Figures by the Sea&amp;lt;/em&amp;gt;, 1882, Winslow Homer, Painting, oil on canvas&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://artsandculture.google.com/asset/two-figures-by-the-sea-winslow-homer/IQGb5h7OYzTtrw&amp;#34;&amp;gt;Google Arts &amp;amp;amp; Culture&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;1881-1882 年，霍默在英格兰东北部的一个海边小镇度过。他更多关注劳动人民个体身上的英雄主义。抛开过于宏大的集体叙事后，反而打开了更加广阔的天地。其画作变得更加沉静，思考也更加深邃。这样的风格一直延续到之后。过去常作为题材的衣着时尚女子，如今更多转向塑造无私无畏的妇女。1883 年他搬到缅因州海边，整个 1880 年代中期都把精力放在海边景象与人物的创作上，除油画和水彩，他还尝试制作蚀刻版画。（更多关于他的蚀刻版画信息&amp;lt;a href=&amp;#34;http://oldprintshop.com/artists/3931&amp;#34;&amp;gt;可见此&amp;lt;/a&amp;gt;）&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-14.webp&amp;#34; alt=&amp;#34;Undertow&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Undertow&amp;lt;/em&amp;gt;, 1886, Winslow Homer, Painting, oil on canvas&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://www.clarkart.edu/artpiece/detail/undertow&amp;#34;&amp;gt;The Clark Art Institute&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;这幅画戏剧性很足，在人物动作中格外显著，肌肉线条和人物比例上俨然是古希腊雕塑的架势。这样夸张的手法，无法让人忽略身体中蕴含的力量。水光与迸溅处的浪花刻画已臻于完美，占画面三分之二的海浪背景也形成了一定的压抑感，以突出海的力量意志。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;一连串的海边主题绘画，评论家们称其为「带着画笔的隐士（a hermit with a brush）」，但商业上不为大众所服，画作售价未达预期。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-15.webp&amp;#34; alt=&amp;#34;A Garden in Nassau&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;A Garden in Nassau&amp;lt;/em&amp;gt;, 1885, Winslow Homes, Painting, watercolor on wove paper&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;1884-1885 年的冬季，霍默在佛州、古巴和巴哈马群岛度过。受世纪杂志（Century Magazine）所托，完成了一系列的具有热带风情的水彩画。色彩更为明亮，所体现的情感也更显欢快。和他早年的作品相比，色彩在冷暖上更加分明，而不是一味的偏向于符合日光的暖，表达场景上也就有了更多语言。有人比喻道，他的这次旅程如同高更去往塔希提岛那般，给自己带来陌生与新奇。而在阿第伦达克山脉附近村庄的夏日之旅，也给他的绘画增添不少豁达与奔放。经此几行，他更像是找到了在冷静与轻快转换的滚轮开关。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-16.webp&amp;#34; alt=&amp;#34;Fox Hunt&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Fox Hunt&amp;lt;/em&amp;gt;, 1893, Winslow Homer, Painting, oil on canvas&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://www.pafa.org/museum/collection/item/fox-hunt&amp;#34;&amp;gt;Pennsylvania Academy of the Fine Arts&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;1890 年后霍默创作了许多与自然中「捕猎」相关的作品，除人类的捕猎外，也包含着动物间的捕猎。正值达尔文进化论阐发、兴盛，时人称其画作表达的便是「物竞天择」。上幅画作中即一场老鹰对狐狸的捕猎，刚上架就被宾夕法尼亚美术学院买下，这也是他的画作首次藏录于主要博物馆。情节性解读这里姑且略去。值得注意的还有他所选择的视角和构图。起初我以为是选取了一个像是几乎卧倒在远处拿长焦推前去拍摄的视角，但我们能够看见老鹰的背部，说明其实是俯视。这在西方绘画里并不常见，更像是他对日本浮世绘的借鉴。1900 年后他的经济来源渐趋稳定。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;霍默的晚年依然热衷于创作海景画，毕竟，他可是这个领域的能者。能者多劳。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-17.webp&amp;#34; alt=&amp;#34;The Bather&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;The Bather&amp;lt;/em&amp;gt;, 1899, Winslow Homer, 1899, Painting, watercolor on wove paper&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://www.metmuseum.org/art/collection/search/11109&amp;#34;&amp;gt;The Metropolitan Museum&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;好的作品为什么能给人以震慑力？为什么能被人口耳相传、收藏至今？大都离不开对那些纯粹的、美好的事物进行追问。这种追问可以是现实主义的无限观察，可以是现代主义的打破重构，它可以是无数的一切，但它一定基于非常高的人文起点。平白展示也好，挖掘黑暗也罢，当创作想要去往「能使更多人都接受和同意」的路径时，就要自己权衡好该怎么去体现「美中不足」，就要在情趣和意味上，探讨如何才能做到先进而不造成疏离感。在这中间地带如鱼得水的霍默，无疑是成功的。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-18.webp&amp;#34; alt=&amp;#34;Taking on Wet Provisions (Schooner Marked Newport, K. W.)&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Taking on Wet Provisions (Schooner Marked Newport, K. W.)&amp;lt;/em&amp;gt;, 1903, Winslow Homer, Painting, watercolor on wove paper&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://www.metmuseum.org/art/collection/search/11143&amp;#34;&amp;gt;The Metropolitan Museum&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/wh-19.webp&amp;#34; alt=&amp;#34;Rocky Shore, Bermuda&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Rocky Shore, Bermuda&amp;lt;/em&amp;gt;, 1900, Winslow Homer, Painting, watercolor on wove paper&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Source: &amp;lt;a href=&amp;#34;https://collections.mfa.org/objects/5016&amp;#34;&amp;gt;Museum of Fine Arts Boston&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -984,15 +261,8 @@
         <link>https://fanrongbin.com/thoughts/first-of-all-dont-forget/</link>
         <guid>https://fanrongbin.com/thoughts/first-of-all-dont-forget/</guid>
         <pubDate>Mon, 13 Jul 2020 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;在床上坐下，挺起腰板直起背，“清理公众号列表”的念头忽的一闪，立即抓住，生怕又让它溜了过去，成为日后躺在 Inbox 里安稳过日子的“有空再做”。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;于是有意无意的发现自己还关注着初中一位语文老师的公众号，但上次发文已经是六年前了，一段不长不短的轨迹，我走完初高中，但他却在中途永久地被揉成零散的碎片，散落在它生活过的痕迹和仍存留着记忆的人们身上。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;高中的杂乱的确把我欢笑着度过的初中记忆冲淡了很多，而且我没有拼命留下什么记忆的习惯。如果记忆还准确的话，应该是在初三时很短暂地上了几周他的语文培优课。他不高的个子，风趣又真挚的讲课方式，踏实的内容，以及有条理的阐述。培优课很快结束了，但他却被我列进了心里那一撮神圣得不可替代的人里。不过，我想他是不大记得有这样一个皮肤很黑，上课总爱托着下巴的小同学曾经很刻苦地在他课上做笔记。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;当我得知他罹患白血病时是怎样的一番惊讶和伤感，现在也很模糊了，但此时我又在这之中的确触碰着他过去不过十分简单就留下的印痕。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;我从来没有像此时一样如此害怕忘记，即使我一直很擅长忘记和被忘记。&amp;lt;/p&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -1001,84 +271,8 @@
         <link>https://fanrongbin.com/clipboard-js-errors/</link>
         <guid>https://fanrongbin.com/clipboard-js-errors/</guid>
         <pubDate>Thu, 06 Feb 2020 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。
-我的组合是：Bootstrap（CSS 框架）&#43; Clipboard.js&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;第一次报错uncaught-typeerror-illegal-constructor&amp;#34;&amp;gt;第一次报错：Uncaught TypeError: Illegal constructor&amp;lt;/h2&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-js&amp;#34; data-lang=&amp;#34;js&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;Clipboard&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;.btn&amp;amp;#39;&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-js&amp;#34; data-lang=&amp;#34;js&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;ClipboardJS&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;.btn&amp;amp;#39;&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;问题解决。一开始所参照的中文教程比较久远，语句更新为 &amp;lt;code&amp;gt;ClipboardJS&amp;lt;/code&amp;gt;。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;第二次报错uncaught-typeerror-cannot-read-property-addeventlistener-of-null&amp;#34;&amp;gt;第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null&amp;lt;/h2&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-js&amp;#34; data-lang=&amp;#34;js&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;var&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;clipboard&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;ClipboardJS&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;.btn&amp;amp;#39;&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;该语句是为了使用 DOM 选择器。&amp;lt;/p&amp;gt;
-&amp;lt;h3 id=&amp;#34;为什么在这里要使用-dom-选择器dom-selector&amp;#34;&amp;gt;为什么在这里要使用 DOM 选择器(DOM SELECTOR)&amp;lt;/h3&amp;gt;
-&amp;lt;p&amp;gt;为了在页面上快速找到引号内（在此为&amp;lt;code&amp;gt;.btn&amp;lt;/code&amp;gt;）元素，然后进行下一步。报错原因：调用 JavaScript 时，DOM 选择器还没有渲染完。反映为在使用 DOM 选择器时，没找到或没找完该元素。在我的页面中，因为一开始把&amp;lt;code&amp;gt;&amp;amp;lt;script&amp;amp;gt;&amp;amp;lt;/script&amp;amp;gt;&amp;lt;/code&amp;gt;都放在&amp;lt;code&amp;gt;&amp;amp;lt;head&amp;amp;gt;&amp;lt;/code&amp;gt;标签之内，所以在&amp;lt;code&amp;gt;&amp;amp;lt;body&amp;amp;gt;&amp;lt;/code&amp;gt;没渲染之前就加载了 DOM 选择器，当然什么都找不到了。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;问题解决：把该段 JS 放到到本来调用 Clipboard.js 那一段之后。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;第三次报错tooltip-is-not-a-function&amp;#34;&amp;gt;第三次报错：.tooltip() is not a function&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-javascript&amp;#34; data-lang=&amp;#34;javascript&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;var&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;clipboard&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;ClipboardJS&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;.btn&amp;amp;#39;&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;clipboard&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;on&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;success&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;function&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;) {
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;console&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;info&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;Action:&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;action&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;console&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;info&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;Text:&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;text&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;console&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;info&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;Trigger:&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;trigger&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;clearSelection&amp;lt;/span&amp;gt;();
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;});
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;clipboard&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;on&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;error&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;function&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;) {
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;console&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;error&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;Action:&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;action&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;console&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;error&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;Trigger:&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;trigger&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;});
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;为了监听是否触发自定义事件，也就是获得用户是否成功复制内容的反馈，加载了这一段代码进行监听。如果成功，则回复 success，失败回复 error。结合 Tooltip.js 的教程，可以直接改为：&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre tabindex=&amp;#34;0&amp;#34; style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-js&amp;#34; data-lang=&amp;#34;js&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// Tooltip
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;button&amp;amp;#39;&amp;lt;/span&amp;gt;).&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;tooltip&amp;lt;/span&amp;gt;({
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;trigger&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;click&amp;amp;#39;&amp;lt;/span&amp;gt;,
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;placement&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;bottom&amp;amp;#39;&amp;lt;/span&amp;gt;
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;});
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;function&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;setTooltip&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;message&amp;lt;/span&amp;gt;) {
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;button&amp;amp;#39;&amp;lt;/span&amp;gt;).&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;tooltip&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;hide&amp;amp;#39;&amp;lt;/span&amp;gt;)
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    .&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;attr&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;data-original-title&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;message&amp;lt;/span&amp;gt;)
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    .&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;tooltip&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;show&amp;amp;#39;&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;function&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;hideTooltip&amp;lt;/span&amp;gt;() {
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;setTimeout&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;function&amp;lt;/span&amp;gt;() {
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;    &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;$&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;button&amp;amp;#39;&amp;lt;/span&amp;gt;).&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;tooltip&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;hide&amp;amp;#39;&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  }, &amp;lt;span style=&amp;#34;color:#ae81ff&amp;#34;&amp;gt;1000&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;}
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;// Clipboard
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;&amp;lt;/span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;var&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;clipboard&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;new&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;Clipboard&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;button&amp;amp;#39;&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;clipboard&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;on&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;success&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;function&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;) {
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;setTooltip&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;Copied!&amp;amp;#39;&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;hideTooltip&amp;lt;/span&amp;gt;();
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;});
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt; 
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;clipboard&amp;lt;/span&amp;gt;.&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;on&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;error&amp;amp;#39;&amp;lt;/span&amp;gt;, &amp;lt;span style=&amp;#34;color:#66d9ef&amp;#34;&amp;gt;function&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;e&amp;lt;/span&amp;gt;) {
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;setTooltip&amp;lt;/span&amp;gt;(&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#39;Failed!&amp;amp;#39;&amp;lt;/span&amp;gt;);
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;  &amp;lt;span style=&amp;#34;color:#a6e22e&amp;#34;&amp;gt;hideTooltip&amp;lt;/span&amp;gt;();
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;display:flex;&amp;#34;&amp;gt;&amp;lt;span&amp;gt;});
-&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;p&amp;gt;在对应的按钮加入标签即可。但报错找不到 tooltip 的函数。应该还是加载问题。
-问题解决：Tooltip.js 依赖 jQuery，需要先调用 jQuery 再调用 tooltip.js（也就是 bootstrap.min.js），在&amp;lt;code&amp;gt;&amp;amp;lt;head&amp;amp;gt;&amp;lt;/code&amp;gt;内将调用 jquery.js 一行置于 bootstrap.min.js 之前。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;到底学了什么&amp;#34;&amp;gt;到底学了什么？&amp;lt;/h2&amp;gt;
-&amp;lt;ol&amp;gt;
-&amp;lt;li&amp;gt;注意渲染顺序。&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;注意版本更新。&amp;lt;/li&amp;gt;
-&amp;lt;/ol&amp;gt;
-&amp;lt;h2 id=&amp;#34;参考&amp;#34;&amp;gt;参考&amp;lt;/h2&amp;gt;
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;https://www.liaoxuefeng.com/wiki/1022910821149312/1023023555539648&amp;#34;&amp;gt;选择器 – 廖雪峰的官方网站&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;https://stackoverflow.com/questions/9394390/tooltip-is-not-a-function&amp;#34;&amp;gt;Stack Overflow 上关于 tooltip is not a function 的讨论&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
 
@@ -1087,44 +281,8 @@
         <link>https://fanrongbin.com/glimpse-of-fluent-design/</link>
         <guid>https://fanrongbin.com/glimpse-of-fluent-design/</guid>
         <pubDate>Sun, 14 May 2017 00:00:00 &#43;0000</pubDate>
-        
-          <author>hi@fanrongbin.com (Rongbin Fan)</author>
-        
-        <description>&amp;lt;p&amp;gt;微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/m-1.webp&amp;#34; alt=&amp;#34;microsoft-fluent-design-elements.png&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;宣传视频&amp;#34;&amp;gt;宣传视频&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;a href=&amp;#34;http://fluent.microsoft.com&amp;#34;&amp;gt;官方网页&amp;lt;/a&amp;gt; （无法在以中文为界面语言的 Chrome 正常浏览）| &amp;lt;a href=&amp;#34;http://v.youku.com/v_show/id_XMjc1ODYzMjcwMA==.html&amp;#34;&amp;gt;优酷&amp;lt;/a&amp;gt; (来自 Livesino)&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;light-光&amp;#34;&amp;gt;Light (光)&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/m-2.webp&amp;#34; alt=&amp;#34;2040_VRG0158.jpg&amp;#34; title=&amp;#34;via The Verge&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。&amp;lt;/p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;引用部分是微软官方的定义。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;depth-深&amp;#34;&amp;gt;Depth (深)&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/m-3.webp&amp;#34; alt=&amp;#34;whatismaterial_3d_elevation1-1024x647.png&amp;#34; title=&amp;#34;via Android Developers&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;不同高度下(Z 值)的阴影。&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Fluent Design System 的出现就是为了打破原有仅适用于平面的设计语言 (Metro UI)，引入三维空间的设计理念便于在今后发展 VR/AR/MR，实现统一可操作的设计规范。&amp;lt;/p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;Think about the frame that contains your information. Now break it apart, and reinvent how things relate to each other within a more layered, physical environment. This is how we’ll keep people in their flow – by giving them more space.&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;打破原有二维框架，在层次区分度更高的物理环境（三维空间）中重新思考事物中的联系。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;motion-动&amp;#34;&amp;gt;Motion (动)&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/m-4.webp&amp;#34; alt=&amp;#34;2040_VRG0159.jpg&amp;#34; title=&amp;#34;via The Verge&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;Think of motion design like a movie. Seamless transitions keep you focused on the story, and bring experiences to life. We can invite that feeling into our designs, leading people from one task to the next with cinematic ease.&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;微软认为，动效的作用在于带给用户如同观看电影般的沉浸感，做到无缝过渡、由虚转实，使用户轻松、愉快地完成多项任务。在我看来，动效一词需要分真假。「真动效」无限接近生活，能够唤起用户对物理环境下该操作引起动效的感知，因此也可叫「拟物动效」。「假动效」即对二维动画进行空间上的拓展，主要作用是提示用户完成了某一操作，并且能通过细节优化给予愉悦感。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;material-材&amp;#34;&amp;gt;Material (材)&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/m-5.webp&amp;#34; alt=&amp;#34;2040_VRG0160.jpg&amp;#34; title=&amp;#34;via The Verge&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;The things that surround us in the real world are sensory and invigorating. They bend, stretch, bounce, shatter, and glide. Those material qualities translate to digital environments, making people want to reach out and touch our designs.&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;真实世界中存在着「感知」和「活力」。在数字环境中运用恰当的材料，带给用户想去触碰的想法，增加了操作的可能性，是和 Light 一样体现着以自然为设计基础的理念。&amp;lt;/p&amp;gt;
-&amp;lt;h2 id=&amp;#34;scale-维&amp;#34;&amp;gt;Scale (维)&amp;lt;/h2&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;img src=&amp;#34;https://img.fanrongbin.com/m-6.webp&amp;#34; alt=&amp;#34;2040_VRG0161.jpg&amp;#34; title=&amp;#34;via The Verge&amp;#34;&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.&amp;lt;/p&amp;gt;&amp;lt;/blockquote&amp;gt;
-&amp;lt;p&amp;gt;之所以把 Scale 译作「维」，是因为这一点集中体现了 Fluent Design System 最终的作用——实现从零维到三维的，多种场景适用的设计规范，利用设备提供并拓展面向多维度的体验。&amp;lt;/p&amp;gt;
-</description>
+          <author>Rongbin Fan</author>
+        <description></description>
       </item>
     
   </channel>

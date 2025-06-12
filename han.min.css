@@ -1,5 +1,8 @@
 @charset "UTF-8"; /*! 漢字標準格式 v3.2.7 | MIT License | css.hanzi.co */
 /*! Han.css: the CSS typography framework optimised for Hanzi */
+
+/* Modified by Rongbin Fan for Hugo Theme Twenty */
+
 /* img,legend {
     border: 0
 } */
@@ -222,7 +225,8 @@ em:lang(ja) {
 }*/
 
 b,dfn:lang(ja),dfn:lang(zh),strong {
-    font-weight: bolder
+    font-weight: bolder;
+    font-family: var(--sans)
 }
 
 q,q:lang(en),q:lang(zh-CN) {
