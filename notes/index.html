@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+<title>
+  
+    Notes | Rongbin Fan
+  
+</title>
+
+
+
+  
+
+
+<meta name="description" content="" />
+<meta name="author p-author" content="Rongbin Fan" href="" />
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" media="all" href="/han.min.css" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+
+<meta property="og:title" content="Notes" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://fanrongbin.com/notes/" />
+<meta property="og:image" content="/apple-touch-icon.png" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="/apple-touch-icon.png" />
+<meta name="twitter:title" content="Notes" />
+<meta name="twitter:description" content="" />
+
+<script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</head>
+<body class="han-init-context">
+  <header>
+    
+  <p><a href="/">Rongbin Fan</a></p>
+
+  <p>
+    <small>
+      <time datetime="2025-06-12T00:00:00&#43;00:00">
+        2025-06-12
+      </time>
+    </small>
+
+    
+  </p>
+
+  </header>
+  <main>
+    
+  <h1>Notes</h1>
+  
+  
+    <h2><a href="/hugo-admonitions-test/">Hugo-admonitions 测试</a></h2>
+    <h2 id="error-test">Error Test</h2>
+
+            <link rel="stylesheet" href="/css/vendors/admonitions.5c21d3611305826ca76e50bf22bdda6ed74f2f81d26216e9166f9ae104f2e27a.css" integrity="sha256-XCHTYRMFgmynblC/Ir3abtdPL4HSYhbpFm&#43;a4QTy4no=" crossorigin="anonymous">
+    <div class="admonition note">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+        <span>Note</span>
+      </div>
+      <div class="admonition-content">
+        <p>Helpful advice for doing things better or more easily.</p>
+  
+    <h2><a href="/markdown-test/">Markdown 语法测试</a></h2>
+    <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+  
+    <h2><a href="/hugo-markdownify-generate-p-tag/">Hugo Markdownify 无法生成 &lt;p&gt; tag</a></h2>
+    <p>在尝试为<a href="/stream">Stream</a>页面利用<a href="https://gohugo.io/content-management/shortcodes/">Hugo Shortcodes</a>添加新的<code>movie</code>和<code>tv</code>标签时，使用<code>{{ .Inner | Markdownify }}</code>无法正确对Markdown文本生成HTML<code>&lt;p&gt;</code>tag。</p>
+<p>例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> .= <span style="color:#e6db74">&#34;What a *nice* day!&#34;</span> }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">Markdownify</span>}} <span style="color:#f92672">-</span>&gt; <span style="color:#a6e22e">What</span> <span style="color:#a6e22e">a</span> &lt;<span style="color:#a6e22e">em</span>&gt;<span style="color:#a6e22e">nice</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">em</span>&gt; <span style="color:#a6e22e">day</span>!
+</span></span></code></pre></div><p>但我预期生成的应是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">Markdownify</span> }} <span style="color:#f92672">-</span>&gt; &lt;<span style="color:#a6e22e">p</span>&gt;<span style="color:#a6e22e">What</span> <span style="color:#a6e22e">a</span> &lt;<span style="color:#a6e22e">em</span>&gt;<span style="color:#a6e22e">nice</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">em</span>&gt; <span style="color:#a6e22e">day</span>!&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
+</span></span></code></pre></div><p>这是个<a href="https://github.com/gohugoio/hugo/issues/3040">老问题</a>：<code>Markdownify</code>最主要被用来生成标题之类的<em>inline</em>元素，而不是类似段落的<em>blocks</em>。但很多Hugo主题都在使用<code>Markdownify</code>，所以一时想要用<a href="https://gohugo.io/methods/page/renderstring/"><code>RenderString</code></a>取代<a href="https://discourse.gohugo.io/t/deprecate-markdownify/37789/">也不太可能</a>。</p>
+<p>在我的情况中，<a href="https://github.com/gohugoio/hugo/issues/3040#issuecomment-352190818">先识别是否存在<code>&lt;p&gt;</code>tag</a>的方式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">intro</span> | <span style="color:#a6e22e">markdownify</span> }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">not</span> ( <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Contains</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> <span style="color:#e6db74">&#34;&lt;p&gt;&#34;</span> ) }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">p</span>&gt;{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
+</span></span><span style="display:flex;"><span>{{ <span style="color:#66d9ef">else</span> }}
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><p>或<a href="https://github.com/gohugoio/hugo/issues/3040#issuecomment-539296048">进一步</a>匹配以<code>h</code>、<code>p</code>开头的tag都可以：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">markdownify</span> }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">not</span> ( <span style="color:#a6e22e">findRE</span> <span style="color:#e6db74">&#34;&lt;[h|p][^&gt;]*&gt;&#34;</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> ) }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">p</span>&gt;{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
+</span></span><span style="display:flex;"><span>{{ <span style="color:#66d9ef">else</span> }}
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div>
+  
+    <h2><a href="/hugo-webmention-bridgy-mastodon/">用 Webmention 接收 Mastodon 互动</a></h2>
+    <link rel="stylesheet" href="/css/vendors/admonitions.5c21d3611305826ca76e50bf22bdda6ed74f2f81d26216e9166f9ae104f2e27a.css" integrity="sha256-XCHTYRMFgmynblC/Ir3abtdPL4HSYhbpFm&#43;a4QTy4no=" crossorigin="anonymous">
+    <div class="admonition note">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+        <span>Note</span>
+      </div>
+      <div class="admonition-content">
+        <p>更新于2024-07-09：我其实准备删掉这个功能了。</p>
+<p>原因：</p>
+<ul>
+<li>维护麻烦（大改了一下Stream页面后，没法正常同步fediverse上回应，跟<a href="https://github.com/aaronpk/webmention.io/issues/187">这个issue</a>差不多）</li>
+<li>用的人少（well, that&rsquo;s what we called <em>indie</em>）</li>
+<li>确实有一些<a href="https://shkspr.mobi/blog/2022/12/the-ethics-of-syndicating-comments-using-webmentions/">ethical problem</a></li>
+</ul>
+      </div>
+    </div><h2 id="什么是-webmention">什么是 webmention</h2>
+<p>Webmention是由<a href="https://indieweb.org">IndieWeb</a>发起的W3C标准，用来实现网页间相互提及，不必借助平台或引入评论系统。它的工作流程如下：</p>
+  
+    <h2><a href="/oblique-strategies/">斜交策略 Oblique Strategies</a></h2>
+    <p>被我们落下的想象力，以什么挽留他？</p>
+<p>Brian Eno和Peter Schmidt设计了超过一百个prompt，写在卡片上，来帮你打破寻找创意的障碍。这里有英文版本的<a href="https://matt-rickard.com/list-of-all-oblique-strategies">完整列表</a>。</p>
+<p>这组卡片叫Oblique Strategies，有人翻译成迂回策略或间接策略。我喜欢叫它“斜交策略”。因素分析中，你会遇到“正交旋转”与“斜交旋转”，激发创造力，就像从这些卡片中寻找能联动我们潜意识的相关因素。</p>
+<p>当创作的<strong>工作</strong>属性变强、时间压力变重时，Eno和Schmidt意识到这会让他们偏离思考和创作的本质。于是他们都写下一些要旨，帮助保持思维活跃，提醒自己不要忘记那些能从侧面推进的有趣方法，整合成了这组卡片。</p>
+<p>1980年初，Eno在接受Charles Amirkhanian采访时说道：</p>
+<blockquote>
+<p>The Oblique Strategies evolved from me being in a number of working situations when the panic of the situation - particularly in studios - tended to make me quickly forget that there were others ways of working and that there were tangential ways of attacking problems that were in many senses more interesting than the direct head-on approach. If you&rsquo;re in a panic, you tend to take the head-on approach because it seems to be the one that&rsquo;s going to yield the best results Of course, that often isn&rsquo;t the case - it&rsquo;s just the most obvious and - apparently - reliable method. The function of the Oblique Strategies was, initially, to serve as a series of prompts which said, &ldquo;Don&rsquo;t forget that you could adopt <em>this</em> attitude,&rdquo; or &ldquo;Don&rsquo;t forget you could adopt <em>that</em> attitude.</p>
+  
+    <h2><a href="/github-actions-deploy-hugo/">使用 Github Actions 自动部署 Hugo</a></h2>
+    <p>回应痛点：</p>
+<ol>
+<li>写作所用的设备不带环境，没有Git，必须换回原来用的设备<code>hugo</code>生成网页并部署</li>
+<li>只想好好写东西，不想再管我的终端/命令行</li>
+</ol>
+<p>本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经<code>push</code>到了<code>username/username.github.io</code>这个仓库。</p>
+<h2 id="1-把源仓库传到一个新库">1. 把源仓库传到一个新库</h2>
+<p>整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库<code>clone</code>下来，也可以通过上传单个<code>.md</code>文件到<code>content/posts</code>文件夹的手动<code>push</code>方式来自动部署，而这都不需要重新搭建Hugo环境。</p>
+<p>在这里我们使用Github Desktop：</p>
+<ul>
+<li>点击菜单栏File，选择Create a new repository。</li>
+<li>为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（<code>config.toml</code>所在的整个文件夹和子文件夹）复制进来。</li>
+<li>复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。</li>
+</ul>
+<h2 id="2-将新库和github-pages仓库串起来">2. 将新库和Github Pages仓库串起来</h2>
+<p>在<code>username/username.github.io</code>下是<code>public</code>文件夹内生成的静态网页（你一定记得的，在本地我们需要<code>cd public</code>），而我们希望通过添加或修改源仓库的<code>.md</code>来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。</p>
+<p>网页版，点击头像，进入Github个人的Settings：</p>
+<ul>
+<li>
+<p>边栏最下方Developer Settings，</p>
+<ul>
+<li>选择Personal access tokens下的Tokens (classic)
+<ul>
+<li>点击右方Generate a new token (classic)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>输入密码后进入设置，在Note框中填写方便识别的名字，如<code>Deploy</code>，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow</p>
+</li>
+<li>
+<p>点击生成后token即出现，注意它只会出现这唯一的一次，将其复制保存下来</p>
+</li>
+</ul>
+<p>得到token后，进入源仓库的Settings：</p>
+<ul>
+<li>选择Secrets and variables下的Actions，在右侧选择New repository secret</li>
+<li>在Name中填入<code>PERSONAL_TOKEN</code></li>
+<li>在Secret中填入刚才生成的token，点击Add secret保存</li>
+</ul>
+<h2 id="3-设置好github-actions">3. 设置好Github Actions</h2>
+<p>接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：</p>
+<ul>
+<li>重命名<code>.yml</code>为方便识别的名字，如<code>deploy.yml</code></li>
+<li>修改编辑框内容如下：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">deploy </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 这个 action 的名字</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">push</span>: 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 代表每次 push 都会 turn on action</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">workflow_dispatch</span>: 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 代表我们也可以手动 turn on</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">checkout</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">setup</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2.6.0</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#34;latest&#34;</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span> 
+</span></span><span style="display:flex;"><span>                  <span style="color:#75715e"># 按需选择是否使用 hugo-extended</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">deploy</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">PERSONAL_TOKEN</span>: <span style="color:#ae81ff">${{ secrets.PERSONAL_TOKEN }} </span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#75715e"># 生成的 token 就用在这里，因为下面用到 external repository</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">EXTERNAL_REPOSITORY</span>: <span style="color:#ae81ff">username/username.github.io </span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#75715e"># 修改为你的 Github Pages 仓库</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">PUBLISH_BRANCH</span>: <span style="color:#ae81ff">main </span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#75715e"># 以及对应的分支 main/master</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">PUBLISH_DIR</span>: <span style="color:#ae81ff">./public </span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#75715e"># 指定将自动部署得到的 public 文件夹 push 上去</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">commit_message</span>: <span style="color:#ae81ff">${{ github.event.head_commit.message }}</span>
+</span></span></code></pre></div><p>若点击保存，则将自动完成第一次commit，注意提前备份原Github Pages仓库里的内容。（没备份也可以通过历史commit找到啦，哈哈）</p>
+  
+    <h2><a href="/hugo-hanzi-pro/">汉字标准格式</a></h2>
+    <blockquote>
+
+
+<p lang="zh-Hans"><h-char unicode="300c" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>「</h-inner></h-char><a href="https://github.com/ethantw/Han" target="_blank">汉字标准格式</a><h-char unicode="300d" class="biaodian cjk bd-close bd-end"><h-inner>」</h-inner><h-cs hidden=""> </h-cs></h-char>是一套支援各种印刷效果的<!--
+--><h-hws hidden=""> </h-hws>Sass + JavaScript<h-hws hidden=""> </h-hws>排版框架<h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">，</h-char></h-cs></h-hangable>包含<!--
+--><u>相邻</u><u class="adjacent">文字装饰线</u><u class="adjacent">跳脱</u><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><h-ruby class="rightangle complex" rightangle="true"><h-ru class="rightangle complex" span="2" order="0" annotation="true"><h-ru zhuyin="true"><rb>汉</rb><h-zhuyin length="2" diao="ˋ"><h-yin>ㄏㄢ</h-yin><h-diao>ˋ</h-diao></h-zhuyin></h-ru><h-ru zhuyin="true"><rb>字</rb><h-zhuyin length="1" diao="ˋ"><h-yin>ㄗ</h-yin><h-diao>ˋ</h-diao></h-zhuyin></h-ru><rt rbspan="2">hànzì</rt></h-ru><h-ru class="rightangle complex" span="2" order="0" annotation="true"><h-ru zhuyin="true"><rb>标</rb><h-zhuyin length="3" diao=""><h-yin>ㄅㄧㄠ</h-yin><h-diao></h-diao></h-zhuyin></h-ru><h-ru zhuyin="true"><rb>音</rb><h-zhuyin length="2" diao=""><h-yin>ㄧㄣ</h-yin><h-diao></h-diao></h-zhuyin></h-ru><rt rbspan="2">biāoyīn</rt></h-ru></h-ruby><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><em style="-moz-text-emphasis: filled circle;
+ -webkit-text-emphasis: filled circle;
+ text-emphasis: filled circle;
+ -moz-text-emphasis-position: under;
+ -webkit-text-emphasis-position: under;
+ text-emphasis-position: under;
+ font-style: inherit;
+ border-bottom: 2px dotted;
+ padding-bottom: 0.05em;
+ border-bottom-width: -webkit-calc(0px);
+ padding-bottom: -webkit-calc(0px);">着重号</em><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><!--
+-->标点符号修正<h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><abbr title="黑、宋、楷、仿宋">中文四大印刷体</abbr><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable>汉字<h-char unicode="ff0d" class="biaodian cjk ">－</h-char>西文<h-hws hidden=""> </h-hws>mixed<h-hws hidden=""> </h-hws>间隙<h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><h-char-group class="biaodian cjk portion"><h-char unicode="300c" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>「</h-inner></h-char></h-char-group>标点<h-char unicode="300e" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>『</h-inner></h-char>挤压<h-char unicode="300f" class="biaodian cjk bd-close bd-end"><h-inner>』</h-inner><h-cs hidden=""> </h-cs></h-char>与<h-char unicode="300e" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>『</h-inner></h-char>悬挂<h-hangable><h-char unicode="300f" class="biaodian cjk bd-close bd-end"><h-inner>』</h-inner><h-cs hidden=""> </h-cs></h-char><h-char unicode="300d" class="biaodian cjk bd-close bd-end"><h-inner>」</h-inner><h-cs hidden=""> </h-cs></h-char><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable>章节边界调整<h-char unicode="2026" class="biaodian cjk bd-liga">……</h-char></p>
+  
+    <h2><a href="/honorific-ko/">높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理</a></h2>
+    <h2 id="tldr-小结">tl;dr 小结</h2>
+<ol>
+<li><strong>说的是谁？</strong>：主体敬语法（对其人的尊敬 + 对其动作的尊敬）</li>
+<li><strong>句中是否涉及第三人/各种所属物？</strong>：客体敬语法</li>
+<li><strong>对谁说？</strong>：对听者的尊敬与否：相对敬语法</li>
+<li><strong>主语和听者之间谁更“大”？</strong>：压尊法</li>
+<li>（主体如果是尊敬的人的所属事物：事物尊称）</li>
+</ol>
+<p>“该尊敬谁？”“什么场合？”等因人而异的话题，本文不做过多讨论。</p>
+<h2 id="对句中主体主语주체主體-높임법">对句中主体/主语：주체(主體) 높임법</h2>
+<p>主要有三：</p>
+<ol>
+<li>谓词：添加“-(으)시-”</li>
+</ol>
+<ul>
+<li>以及需要换用的情况，如：(잠을) 자다→주무시다, 먹다→드시다, 주다→드리다, 있다→계시다(be; be located)</li>
+<li>注意계시다只表示있다中“在”的意思，不表示“有”的意思，如：
+<ul>
+<li>선생님께서는 교실에 계시다.</li>
+<li>선생님의 따님이 있으시다.</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>助词：主格助词께서（以及再附加“는”“도”等），与格助词께</li>
+<li>人名/称呼：在之后添加“님”</li>
+</ol>
+<h3 id="对第三人各种所属物객체客體-높임법">对第三人/各种所属物：객체(客體) 높임법</h3>
+<ul>
+<li>对于第三人（即客体，此时他作为句子中的目的语(목적어)或副词语(부사어)）
+<ul>
+<li>所跟的谓词需要换用
+<ul>
+<li>例如：데리다→모시다, 주다→드리다, 뵈다(보이다)/만나다→뵙다, 묻다→여쭈다→여쭙다（主要是这四个）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对于各种所属物
+<ul>
+<li>名词的换用
+<ul>
+<li>例如：밥→진지, 집→댁, 생일→생신, 나이→연세, 이름→성함, 딸→따님, 아들→아드님</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>不过，在说话人身份高于客体时，可选择性使用：</p>
+<blockquote>
+<ul>
+<li>할아버지: 네 어머니를 <strong>데리고</strong> 시장에 가라.</li>
+<li>할아버지: 네 어머니를 <strong>모시고</strong> 시장에 가라.</li>
+</ul></blockquote>
+<h2 id="对听者상대相對-높임법">对听者：상대(相對) 높임법</h2>
+<p>关注划分的两大层次：</p>
+<ul>
+<li>正式性（formality）：格式体、非格式体</li>
+<li>礼貌程度（politeness）：尊敬阶、卑阶</li>
+</ul>
+<p>两张表：<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p><img src="https://img.fanrongbin.com/honorific-ko-1.png" alt=""></p>
+<p><img src="https://img.fanrongbin.com/honorific-ko-2.png" alt=""></p>
+<p>对应的英文如下<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>：</p>
+  
+    <h2><a href="/give-ko/">주다, 드리다, 주시다 &#43; 간접인용 명령문</a></h2>
+    <h2 id="tldr-小结">tl;dr 小结</h2>
+<h3 id="주다-드리다-주시다">주다, 드리다, 주시다</h3>
+<p><img src="https://img.fanrongbin.com/give-ko-1.webp" alt=""></p>
+<h3 id="在间接引语命令文quoted-imperative中的变化">在间接引语命令文（Quoted Imperative）中的变化</h3>
+<p><img src="https://img.fanrongbin.com/give-ko-2.webp" alt=""></p>
+<h2 id="주다-주시다-드리다">주다, 주시다, 드리다</h2>
+<h3 id="a가는-b에게한테-n을-주다">A가/는 B에게/한테 N을 <u>주다</u></h3>
+<ul>
+<li>A给B某物</li>
+<li>平辈之间</li>
+</ul>
+<blockquote>
+<p>그는 생일 선물로 친구에게 책을 줬다.</p></blockquote>
+<h3 id="a가는-c께-n을-드리다">A가/는 C께 N을 <u>드리다</u></h3>
+<ul>
+<li>A<strong>给C</strong>某物</li>
+<li><strong>C为需要尊敬的人（下同）</strong>，如长辈或陌生人，对“给长辈”使用敬语：께, 주다 -&gt; 드리다，类似“献上”“奉上”</li>
+</ul>
+<blockquote>
+<p>저는 생일 선물로 선생님께 책을 드렸다.</p></blockquote>
+<h3 id="c께서-a에게한테-n을-주시다">C께서 A에게/한테 N을 <u>주시다</u></h3>
+<ul>
+<li><strong>C给</strong>A某物</li>
+<li>对C“长辈给”使用敬语：주다 -&gt; 주시다，类似“赐予”</li>
+</ul>
+<blockquote>
+<p>선생님께서 생일 선물로 저에게 책을 주셨다.</p></blockquote>
+<h3 id="例v아어여-주다드리다">例：V아/어/여 주다/드리다</h3>
+<p>以“帮助”（돕다）为例：</p>
+<p>A为B做某事：</p>
+<ul>
+<li>A主动：
+<ul>
+<li>A给予B帮助：A 도와 줄까?</li>
+<li>B接受A的给予：B 응, 도와 줘.</li>
+</ul>
+</li>
+<li>B主动：（反写问答）
+<ul>
+<li>B请求A的帮助：B 도와 줄래?</li>
+<li>A答应B，给予B帮助：A 응, 도와 줄게.</li>
+</ul>
+</li>
+</ul>
+<p>A为C做某事：</p>
+  
+    <h2><a href="/segoe-ui-variable/">Windows 11 的新字体：Segoe UI Variable</a></h2>
+    <p>微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 <a href="https://blogs.windows.com/windows-insider/2021/05/06/announcing-windows-10-insider-preview-build-21376/">发布</a>了 Segoe UI 的可变字体版本：Segoe UI Variable，<a href="https://docs.microsoft.com/en-us/windows/apps/design/signature-experiences/typography">在 Windows 11 </a>正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。</p>
+<p><img src="https://img.fanrongbin.com/segoe-ui-v-vdisplay.webp"></img></p>
+<p><img src="https://img.fanrongbin.com/segoe-ui-v-vdisplay-2.webp"></img></p>
+<p>风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，<del>看起来也更像 Product Sans 了。</del></p>
+<p><img src="https://img.fanrongbin.com/segoe-ui-v-vdisplay-3.webp"></img></p>
+<p>可以通过 Windows 的<a href="https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts">官方文档</a>，或直接访问<a href="https://aka.ms/SegoeUIVariable">此链接</a>下载 Segoe UI Variable。</p>
+  
+    <h2><a href="/cpp-template-friend/">C&#43;&#43; 模版类重载流输入输出运算符</a></h2>
+    <p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
+<h2 id="方法-1提前声明并使用--确认">方法 1：提前声明并使用 &lt;&gt; 确认</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>{ <span style="color:#75715e">//以复数类为例
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  	A real, image;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		complex(A a, A b)<span style="color:#f92672">:</span>real(a),image(b){
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//在运算符 &lt;&lt; 后加入 &lt;&gt; 以帮助编译器进一步确定该友元函数为模板函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">&lt;&gt;</span>(ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m); 
+</span></span><span style="display:flex;"><span>}; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
+</span></span><span style="display:flex;"><span>	newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;)&#34;</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> newout;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	complex<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> a(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>	cout<span style="color:#f92672">&lt;&lt;</span>a<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><h2 id="方法-2在声明友元函数的同时定义友元函数">方法 2：在声明友元函数的同时定义友元函数</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		A real, image;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		complex(A a, A b)<span style="color:#f92672">:</span>real(a),image(b){
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//在声明友元函数的同时定义友元函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
+</span></span><span style="display:flex;"><span>			newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;)&#34;</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> newout;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>}; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	complex<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> a(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>	cout<span style="color:#f92672">&lt;&lt;</span>a<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><h2 id="如果可以不使用友元函数">如果可以不使用友元函数</h2>
+<p>如果模板类中的成员为公有，则完全不需要在模板类中声明友元。</p>
+  
+    <h2><a href="/cpp-copy-constructor/">C&#43;&#43; 中的拷贝构造函数：浅拷贝、深拷贝</a></h2>
+    <h2 id="什么时候会调用拷贝构造函数">什么时候会调用拷贝构造函数</h2>
+<ul>
+<li>一个对象以<strong>值传递</strong>的方式<strong>传入函数体</strong></li>
+<li>一个对象以<strong>值传递</strong>的方式<strong>从函数返回</strong></li>
+<li>一个对象<strong>通过另一个对象</strong>以进行<strong>初始化</strong></li>
+</ul>
+<h2 id="默认拷贝构造函数浅拷贝">默认拷贝构造函数：浅拷贝</h2>
+<p>即：将被拷贝对象的数据成员的值一一赋值给新创建的对象</p>
+<ul>
+<li>如果数据成员中有指针成员
+<ul>
+<li><strong>浅拷贝只是增加了一个指针指向已经存在的内存</strong></li>
+<li>则<strong>新对象的指针所指向的地址</strong>与<strong>被拷贝对象的指针所指向的地址</strong>相同</li>
+<li>则析构 delete 对象时会重复 delete 两次同一个内存空间而出错</li>
+</ul>
+</li>
+</ul>
+<h3 id="实例">实例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rect</span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>p;     <span style="color:#75715e">// 一指针成员
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    Rect(){      <span style="color:#75715e">// 构造函数，p 指向堆中分配的一内存
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        p <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>(<span style="color:#ae81ff">100</span>); <span style="color:#75715e">// new 动态分配
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">~</span>Rect(){     <span style="color:#75715e">// 析构函数，释放动态分配的内存
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(p <span style="color:#f92672">!=</span> NULL){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">delete</span> p; <span style="color:#75715e">// delete 释放 p 所指向的内存
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    Rect rect1;
+</span></span><span style="display:flex;"><span>    Rect rect2(rect1);   <span style="color:#75715e">// 拷贝 rect1 来构造 rect2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 也即： Rect rect2 = rect1;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 浅拷贝，将成员的值进行拷贝 rect2.p = rect1.p （地址 = 地址）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 会出现错误
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 在 delete 时既要 delete rect2.p 指向的空间，又要 delete rect1.p 指向的内存。但这是同一个内存（地址 = 地址），导致同一个内存被释放两次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>同时还造成另外两个错误：</p>
+  
+    <h2><a href="/winslow-homer/">Winslow Homer 温斯洛·霍默</a></h2>
+    <blockquote>
+<p>发布于 <a href="https://matters.news/@laefan/%E7%9C%8B%E7%95%AB-winslow-homer-%E6%BA%AB%E6%96%AF%E6%B4%9B-%E9%9C%8D%E9%BB%98-bafyreifjxdssns3s6xkf6t7lgk6jaxjrpxg4semolhembefe4o3mi2n4ja">Matters.news</a>。</p></blockquote>
+<p>首要的是，关注你自己最真实、直观冒出来的想法与情感。花上哪怕只是三五秒钟，先去观看和感受作品的本身。</p>
+<p><img src="https://img.fanrongbin.com/wh-1.webp" alt="Prout&rsquo;s Neck, Breakers"></p>
+<p><em>Prout&rsquo;s Neck, Breakers</em>, 1883, Winslow Homer, Painting, watercolor on wove paper</p>
+<p>Source: <a href="https://www.artic.edu/artworks/16815/prout-s-neck-breakers">The Art Institute of Chicago</a></p>
+<p>很偶然，从这幅画初次得知霍默大名，之后开始继续寻找他的画作，感叹于他融会贯通的技艺和想法。我其实不曾在阴天见过这样蓝的海浪，也许最接近画中景象的一次是在乔伊斯博物馆前的海角处。大概是被这种未曾见过的模样吸引着。</p>
+<p>除了十分显然的深蓝、亮蓝叠加使用以塑造前后关系，还能看到他多利用了纸张本身的白色，例如下半部分近礁石的部分。这也是水彩常用的方法。整幅画也给我一种非常轻快的感觉，倒不是因为画面主体的海浪，而是它前侧用或大或小的色块柔和铺排开的、礁石上附着的细浪。</p>
+<p><img src="https://img.fanrongbin.com/wh-2.webp" alt="Paul Morphy, the Chess Champion"></p>
+<p><em>Paul Morphy, the Chess Champion</em>, 1859, Winslow Homer, Print, wood engraving</p>
+<p>Credit line: The Museum of Fine Arts, Houston, The Mavis P. and Mary Wilson Kelsey Collection of Winslow Homer Graphics</p>
+<p>Source: <a href="https://artsandculture.google.com/asset/paul-morphy-the-chess-champion-winslow-homer/6AE0gmpNUzDrzA">Google Arts &amp; Culture</a></p>
+<p>温斯洛·霍默（Winslow Homer, 1836-1910）出生于波士顿，童年在剑桥长大，父母皆为新英格兰移民。父亲是典型的商人，而母亲有着画水彩的天赋异禀，顺理成章地成为霍默的“第一任老师”。19 岁高中毕业，父亲安排他去做广告平板印刷。就这样重复进行日常工作近两年后，他开始为一些杂志刊物制作插画，在当时那个年代也意味着就是木版画。霍默的线条感和对黑白分明的把握很好，不几笔就能把最鲜明的特点勾勒出来，如上图。</p>
+<p><img src="https://img.fanrongbin.com/wh-3.webp" alt="Mounted Bugler"></p>
+  
+    <h2><a href="/clipboard-js-errors/">在使用 Clipboard.js 中学一点 JavaScript</a></h2>
+    <p>在更新个人页面时，为方便快速复制邮箱地址，使用 Clipboard.js 一插件。之前未接触过 JavaScript，所以从零开始。
+我的组合是：Bootstrap（CSS 框架）+ Clipboard.js</p>
+<h2 id="第一次报错uncaught-typeerror-illegal-constructor">第一次报错：Uncaught TypeError: Illegal constructor</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Clipboard</span>(<span style="color:#e6db74">&#39;.btn&#39;</span>);
+</span></span></code></pre></div><p>一开始初始化调用 Clipboard.js 就出错？回到官方文档中比对：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ClipboardJS</span>(<span style="color:#e6db74">&#39;.btn&#39;</span>);
+</span></span></code></pre></div><p>问题解决。一开始所参照的中文教程比较久远，语句更新为 <code>ClipboardJS</code>。</p>
+<h2 id="第二次报错uncaught-typeerror-cannot-read-property-addeventlistener-of-null">第二次报错：Uncaught TypeError: Cannot read property ‘addEventListener’ of null</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">clipboard</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ClipboardJS</span>(<span style="color:#e6db74">&#39;.btn&#39;</span>);
+</span></span></code></pre></div><p>该语句是为了使用 DOM 选择器。</p>
+<h3 id="为什么在这里要使用-dom-选择器dom-selector">为什么在这里要使用 DOM 选择器(DOM SELECTOR)</h3>
+<p>为了在页面上快速找到引号内（在此为<code>.btn</code>）元素，然后进行下一步。报错原因：调用 JavaScript 时，DOM 选择器还没有渲染完。反映为在使用 DOM 选择器时，没找到或没找完该元素。在我的页面中，因为一开始把<code>&lt;script&gt;&lt;/script&gt;</code>都放在<code>&lt;head&gt;</code>标签之内，所以在<code>&lt;body&gt;</code>没渲染之前就加载了 DOM 选择器，当然什么都找不到了。</p>
+<p>问题解决：把该段 JS 放到到本来调用 Clipboard.js 那一段之后。</p>
+<h2 id="第三次报错tooltip-is-not-a-function">第三次报错：.tooltip() is not a function</h2>
+<p>在正常调用 Clipboard.js 后，希望在点击复制后弹出复制成功或失败的提示语，而且 Bootstrap 集成了类似的 Tooltip.js 插件。在官方文档中找到相关代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">clipboard</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ClipboardJS</span>(<span style="color:#e6db74">&#39;.btn&#39;</span>);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">clipboard</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;success&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#39;Action:&#39;</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">action</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#39;Text:&#39;</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">text</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#39;Trigger:&#39;</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">trigger</span>);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">clearSelection</span>();
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">clipboard</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;error&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Action:&#39;</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">action</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Trigger:&#39;</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">trigger</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>为了监听是否触发自定义事件，也就是获得用户是否成功复制内容的反馈，加载了这一段代码进行监听。如果成功，则回复 success，失败回复 error。结合 Tooltip.js 的教程，可以直接改为：</p>
+  
+    <h2><a href="/glimpse-of-fluent-design/">初探 Fluent Design System</a></h2>
+    <p>微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。</p>
+<p><img src="https://img.fanrongbin.com/m-1.webp" alt="microsoft-fluent-design-elements.png"></p>
+<h2 id="宣传视频">宣传视频</h2>
+<p><a href="http://fluent.microsoft.com">官方网页</a> （无法在以中文为界面语言的 Chrome 正常浏览）| <a href="http://v.youku.com/v_show/id_XMjc1ODYzMjcwMA==.html">优酷</a> (来自 Livesino)</p>
+<h2 id="light-光">Light (光)</h2>
+<p><img src="https://img.fanrongbin.com/m-2.webp" alt="2040_VRG0158.jpg" title="via The Verge"></p>
+<p>利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。</p>
+<blockquote>
+<p>Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.</p></blockquote>
+<p>引用部分是微软官方的定义。</p>
+<p>光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。</p>
+<h2 id="depth-深">Depth (深)</h2>
+<p>Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。</p>
+  
+
+  </main>
+  <footer>
+    
+<p>© 2025</p>
+      
+<p><small><a href="#">Back to top ↑</a></small></p>
+
+  </footer>
+</body>
+
+<script src="/han.min.js"></script>
+
+</html>

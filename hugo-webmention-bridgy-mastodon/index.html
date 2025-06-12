@@ -1,76 +1,199 @@
 <!DOCTYPE html>
-
-<html lang="zh-Hans"  dir="ltr"
-
->
-
+<html lang="en" dir="ltr">
 <head>
-  <title class="p-name">用 Webmention 接收 Mastodon 互动 - Rongbin&#39;s Blog</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<meta name="description"
-    content="变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化。 ">
-<meta name="author p-author" content="Rongbin FAN" href="https://fanrongbin.com">
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
-<meta property="og:title" content='用 Webmention 接收 Mastodon 互动 - Rongbin&#39;s Blog' />
-<meta property="og:description" content="变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化。 " />
+<title>
+  
+    用 Webmention 接收 Mastodon 互动 | Rongbin Fan
+  
+</title>
+
+
+
+  
+
+
+<meta name="description" content="变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化" />
+<meta name="author p-author" content="Rongbin Fan" href="" />
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" media="all" href="/han.min.css" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+
+<meta property="og:title" content="用 Webmention 接收 Mastodon 互动" />
+<meta property="og:description" content="变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化" />
 <meta property="og:url" content="https://fanrongbin.com/hugo-webmention-bridgy-mastodon/" />
-<meta property="og:image" content="https://fanrongbin.com/apple-touch-icon.png" />
+<meta property="og:image" content="/apple-touch-icon.png" />
+
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://fanrongbin.com/apple-touch-icon.png" />
-<meta name="twitter:title" content='用 Webmention 接收 Mastodon 互动 - Rongbin&#39;s Blog' />
-<meta name="twitter:description" content="变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化。 " />
-
-<link rel="canonical" href="https://fanrongbin.com/hugo-webmention-bridgy-mastodon/" />
-
-
-
-
-
-
-      <link rel="stylesheet" href="/css/main.min.7154fca98a197f082c4a1ebc1e6ac393acd86e4855b1bd5fe96cdc9e33524de8.css" integrity="sha256-cVT8qYoZfwgsSh68HmrDk6zYbkhVsb1f6WzcnjNSTeg=" crossorigin="anonymous">
-
-<link rel="stylesheet" href="/han.min.css" type="text/css">
-
-
-
-
-
-<link rel="alternate" type="application/activity+json" href="https://fed.brid.gy/r/https://fanrongbin.com/hugo-webmention-bridgy-mastodon/">
-
-<link rel="webmention" href="https://webmention.io/fanrongbin.com/webmention" />
+<meta name="twitter:image" content="/apple-touch-icon.png" />
+<meta name="twitter:title" content="用 Webmention 接收 Mastodon 互动" />
+<meta name="twitter:description" content="变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化" />
 
 <script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
 </head>
-
 <body class="han-init-context">
-
-  <section class="navbar">
-    <span class="header-name">
-    <a href="/" class="header-link h-card p-name p-author u-url u-uid">Rongbin FAN</a>
-     / <a href="/posts" class="header-link">Blog</a>
-    <br>
-    <a href="/stream" class="header-link header-guestbook">ϟ Stream</a>
+  <header>
     
-    <a href="/links" class="header-link header-guestbook">◩ Guestbook</a>
+  <p><a href="/">Rongbin Fan</a></p>
+
+  <p>
+    <small>
+      <time datetime="2024-01-06T00:00:00&#43;00:00">
+        2024-01-06
+      </time>
+    </small>
+
     
-</span>
+  </p>
 
+  </header>
+  <main>
+    
+  <h1 class="title">用 Webmention 接收 Mastodon 互动</h1>
+  <p class="description">变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化</p>
 
-  </section>
+  
 
-  <article class="article-entry h-entry">
-      
+  
+            <link rel="stylesheet" href="/css/vendors/admonitions.5c21d3611305826ca76e50bf22bdda6ed74f2f81d26216e9166f9ae104f2e27a.css" integrity="sha256-XCHTYRMFgmynblC/Ir3abtdPL4HSYhbpFm&#43;a4QTy4no=" crossorigin="anonymous">
+    <div class="admonition note">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+        <span>Note</span>
+      </div>
+      <div class="admonition-content">
+        <p>更新于2024-07-09：我其实准备删掉这个功能了。</p>
+<p>原因：</p>
+<ul>
+<li>维护麻烦（大改了一下Stream页面后，没法正常同步fediverse上回应，跟<a href="https://github.com/aaronpk/webmention.io/issues/187">这个issue</a>差不多）</li>
+<li>用的人少（well, that&rsquo;s what we called <em>indie</em>）</li>
+<li>确实有一些<a href="https://shkspr.mobi/blog/2022/12/the-ethics-of-syndicating-comments-using-webmentions/">ethical problem</a></li>
+</ul>
+      </div>
+    </div><h2 id="什么是-webmention">什么是 webmention</h2>
+<p>Webmention是由<a href="https://indieweb.org">IndieWeb</a>发起的W3C标准，用来实现网页间相互提及，不必借助平台或引入评论系统。它的工作流程如下：</p>
+<ol>
+<li>我上传了一篇文章</li>
+<li>文章被你引用</li>
+<li>你向我的网站发送带有引用处url的webmention</li>
+<li>我通过<a href="https://webmention.io">webmention.io</a>等服务或自行挂载，接收到你的webmention</li>
+</ol>
+<p>现在你就可以试试，在自己的页面提及此页url，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;</span>&gt;I&#39;m trying webmention!&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span></code></pre></div><p>然后把你的页面url在文末输入框提交，大约一分钟后刷新此页，就会看到你的webmention。</p>
+<h2 id="接收-webmention">接收 webmention</h2>
+<p>这里给出使用webmention.io的步骤，你也可以自行挂载：</p>
+<h3 id="1-用-indieauth-标识你的身份">1. 用 IndieAuth 标识你的身份</h3>
+<p>Webmention.io使用<a href="https://indieweb.org/IndieAuth">IndieAuth</a>登录，所以需要先设置IndieAuth。在<code>index.html</code>中，对自己的帐号说明为<code>rel=&quot;me&quot;</code>，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;me&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:your_email@email.com&#34;</span>&gt;Send me an email&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p>或者以隐藏的方式在<code>&lt;head&gt;</code>说明：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;me&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:your_email@email.com&#34;</span>&gt;
+</span></span></code></pre></div><p>这样一来，采用IndieAuth登录的地方，会通过这些方式验证你的身份，例如向邮箱发送邮件，或跳转Github登录。</p>
+<h3 id="2-使用-webmentionio-挂载">2. 使用 webmention.io 挂载</h3>
+<p>在webmention.io登录后，你会看到一个Settings-Setup页面，给出了需要你在<code>&lt;head&gt;</code>加入的tag：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;webmention&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://webmention.io/your_domain/webmention&#34;</span> /&gt;
+</span></span></code></pre></div><p>这条tag说明你的页面能够<strong>接受</strong>别人的提及，你可以通过<a href="https://webmention.rocks/receive/1">webmention.rocks</a>测试能否接收到。</p>
+<p><strong>到此，你已经实现了webmention的接收。</strong></p>
+<p>你可以在webmention.io的Dashboard，或它提供的Mentions Feed，查看他人提及。</p>
+<h3 id="3-借助-webmentionjs-在博文页面显示-webmention">3. 借助 webmention.js 在博文页面显示 webmention</h3>
+<p>Webmention.io提供API返回你接受到的具体内容，这里我们借助前人造好的轮子<a href="https://github.com/PlaidWeb/webmention.js/">webmention.js</a>，根据readme，在你的网站存放<code>webmention.min.js</code>文件并用<code>&lt;script src=&quot;&quot;&gt;&lt;/script&gt;</code>引入，在需要展示webmention列表的地方插入：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;webmentions&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>你可以新建一个测试页面，用来提及目标页，以测试是否能正常发出和显示。也可以在连接Mastodon后，通过发toot和回复的方式测试。webmention列表的样式可通过<code>css</code>自定义。</p>
+<h2 id="发送-webmention">发送 webmention</h2>
+<p>很多支持webmention的站点，都会给出一个form方便你手动提交自己的链接。</p>
+<p>你也可以用<a href="https://indieweb.org/webmention-implementation-guide#One-liner_webmentions"><code>curl</code></a>发出webmention，发送前需检查对方收不收得到webmention，下面这条指令会进行检查。<code>$your_url</code>替换为你自己的引用页，<code>$target_url</code>替换为目标页。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -i -d <span style="color:#e6db74">&#34;source=</span>$your_url<span style="color:#e6db74">&amp;target=</span>$target_url<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">`</span>curl -i -s $target_url | grep <span style="color:#e6db74">&#39;rel=&#34;http://webmention.org/&#34;&#39;</span> | sed <span style="color:#e6db74">&#39;s/rel=&#34;webmention&#34;//&#39;</span> | grep -o -E <span style="color:#e6db74">&#39;https?://[^ &#34;&gt;]+&#39;</span> | sort | uniq<span style="color:#e6db74">`</span>
+</span></span></code></pre></div><p>也可以用<a href="https://telegraph.p3k.io/">telegraph.p3k.io</a>（需要IndieAuth登录），或<a href="http://mention-tech.appspot.com/">mention.tech</a>（不需要登录）的在线服务。</p>
+<h3 id="使用-webmentionapp-自动发送">使用 webmention.app 自动发送</h3>
+<p>你可能一次在博文中引用多个网页，但是不想再进行繁琐的手动发送webmention。<a href="https://webmention.app/">Webmention.app</a>可以读取页面<a href="https://microformats.org/wiki/h-entry"><code>class=&quot;h-entry&quot;</code></a>中的链接，帮你一键发送。</p>
+<p>可以使用<a href="https://webmention.app/check">Test页面</a>检查（只会检查前10个<code>h-entry</code>），也可以通过API。登录服务获得token后没有request限制。具体请参见官网。</p>
+<h2 id="将你的博文发送到社交平台">将你的博文发送到社交平台</h2>
+<h3 id="连接到-bridgy">连接到 Bridgy</h3>
+<p><a href="https://brid.gy/">Bridgy</a>可将网站和社交平台相联，使得没有个人页面的用户，也能通过支持的平台进行回复，Bridgy会帮助进行webmention。</p>
+<p>进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可。如果cross-post，你需要用验证过的帐号publish带有博文链接的toot，在这条toot下的回复、转发、喜爱才会作为webmention传过来。</p>
+<p>如果直接连接（也就是我目前的做法），你会以<code>@your-domain.com@your-domain.com</code>加入联邦宇宙，向Bridgy的每次update都会对应更新这个账号下的toot。</p>
+<h3 id="使用-github-actions-自动化">使用 Github Actions 自动化</h3>
+<p>我使用Hugo作为博客系统，希望实现根据我是否上传或更新<code>.md</code>，自动发出webmention。<a href="https://github.com/marketplace/actions/changed-files">tj-actions/changed-files</a>能够找到repo下文件的修改情况，故可以先寻找是否有文件被修改，之后发出 <code>curl</code>命令即可。</p>
+<p>在<a href="/github-actions-deploy-hugo">之前的博文</a>里，我设置了<code>deploy.yml</code>用来自动部署Hugo、生成静态文件。故对应在此设置为在<code>deploy</code>后才运行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">send webmentions to bridgy according to md changes</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_run</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">workflows</span>: [<span style="color:#e6db74">&#34;deploy&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">types</span>: 
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">completed</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">changed_files_send_webmention</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">send webmentions according to md changes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">get changed files</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">changed-files</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">tj-actions/changed-files@v41</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">files</span>: <span style="color:#ae81ff">content/posts/*.md</span> <span style="color:#75715e"># 注意这里根据实际需要修改目录位置</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">list all changed files</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          ALL_CHANGED_FILES=&#34;${{ steps.changed-files.outputs.all_changed_files }}&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          for file in $ALL_CHANGED_FILES; do
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            echo &#34;$file was changed&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">send webmentions</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">if</span>: <span style="color:#ae81ff">steps.changed-files.outputs.all_changed_files != &#39;&#39;</span> <span style="color:#75715e"># 判断不为空才运行</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          CHANGED_FILES=$(echo &#34;${{ steps.changed-files.outputs.all_changed_files }}&#34; | tr &#39;,&#39; &#39;\n&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          for FILE in $CHANGED_FILES; do
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            if [[ $FILE == content/posts/*.md ]]; then
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              POST_NAME=$(basename &#34;$FILE&#34; .md)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              POST_URL=&#34;https://your-domain.com/${POST_NAME}&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              echo &#34;Sending Webmention for $POST_URL&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              curl -i -d source=${POST_URL} -d target=https://fed.brid.gy https://fed.brid.gy/webmention
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            fi
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          done</span>
+</span></span></code></pre></div><p>你还可以接着使用<code>${POST_URL}</code>trigger webmention.app的webhook。</p>
+<hr>
+<p>最初是看到IndieWeb上关于webmention的介绍，于是想着要不要自己也折腾一下，搜索到<a href="https://aaronparecki.com/2018/06/30/11/your-first-webmention">Aaron Parecki的博文</a>，以及<a href="https://www.jayeless.net/2021/02/integrating-webmentions-into-hugo.html">Jayeless.net的博文</a>后，觉得配置起来也不是很难嘛，然后就开始了……用第三方服务接收很简单，主要是一直卡在Bridgy这边。我新建了一个<a href="https://fanrongbin.com/stream">Stream</a>页面，相当于有了自己的一条时间轴，为了传上联邦宇宙，需要把每条小note以锚点<code>#id</code>的方式传到Bridgy。但，用webmention.app或者是telegraph.p3k.io始终没法发现到<code>https://fed.brid.gy/</code>这条链接，导致我没法API传出去，后来：</p>
+<ol>
+<li>尝试以<code>&lt;a href=&quot;https://fed.brid.gy&quot; hidden=&quot;from-humans&quot;&gt;&lt;/a&gt;</code>的方式，加到带<code>class=&quot;e-content&quot;</code>的元素里面。但如果note不包含其他url，具有Link Preview功能的地方，还是会显示出<code>fed.brid.gy</code>的链接卡片。</li>
+<li>在对Stream页面部署自动化时，分成了三个部分：
+<ul>
+<li>固定以<code>url#id</code>作为source并以Bridgy作为target、</li>
+<li>检查这条note的类型并以相关url作为target（例如reply、like）</li>
+<li>检查这条note的内容并以相关url作为target（里面所有的<code>&lt;a href=&quot;...&quot;</code>）</li>
+</ul>
+</li>
+</ol>
+<h2 id="一些遗留的问题">一些遗留的问题</h2>
+<ol>
+<li>如果fediverse上对博文的回应（回复、转发、喜爱）被修改或删除，无法触发Bridgy自动更新，即以回应为source，以博文为target重新发一次webmention</li>
+<li>如果发出回应的用户更改了自己的个人信息，也无法触发Bridgy自动更新，这个应该更没法解决了。</li>
+</ol>
 
-<section class="content-header">
+  
 
-  <div class="top-scroll-bar"></div>
-<div class="addn visible">
-<a onclick="showHypo()" style="color:var(--textcolor);text-decoration:none;border:none;"><div id="show-hypo" class="header-button no-select">Hypothes.is</div></a>
-<a onclick="toggleTOC()" style="color:var(--textcolor);text-decoration:none;border:none;"><div id="contents-fixed" class="header-button no-select">Contents</div></a>
-</div>
-<div id="contents-toc" class="no-select">
+  
+  <details class="toc">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#什么是-webmention">什么是 webmention</a></li>
@@ -95,827 +218,24 @@
     <li><a href="#一些遗留的问题">一些遗留的问题</a></li>
   </ul>
 </nav>
-</div>
-
+    <summary>Table of Contents</summary>
+    </details>
   
 
-  <div id="single-header">
-    <h1 class="p-name content-h1">用 Webmention 接收 Mastodon 互动</h1>
+  </main>
+  <footer>
     
-
-    
-      
-      
+<p>© 2025</p>
       
         
-        <p class="content-time"><time class="dt-published" datetime="2024-01-06T00:00:00&#43;00:00">06 January 2024</time></p>
-        
-      
-    
-
-    <a rel="author" class="p-name h-card" href="https://fanrongbin.com" style="display:none;">Rongbin Fan</a>
-  </div>
-
-  
-
-</section>
-
-
-
-
-
-<style>
-  .navbar, footer, .footer-nav, .webmentions-how, .comment-box, .comment-title {
-    opacity: 0.35 !important;
-  }
-  .navbar:hover, footer:hover, .footer-nav:hover, .webmentions-how:hover, .comment-box:hover {
-    opacity: 1 !important;
-  }
-</style>
-
-
-
-<div class="link-display"></div>
-
-
-      
-      <p class="p-summary" style="display:none;">变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化。</p>
-      
-      <main class="e-content">
+      <small># <a href="/tags/static-blog/">static-blog</a></small>
       
       
+<p><small><a href="#">Back to top ↑</a></small></p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-
-    
-
-    
-
-<div class="callout ">
-    <div></div>
-      <div class="callout-inner">
-      <p>更新于2024-07-09：我其实准备删掉这个功能了。</p>
-<p>原因：</p>
-<ul>
-<li>维护麻烦（大改了一下Stream页面后，没法正常同步fediverse上回应，跟<a href="https://github.com/aaronpk/webmention.io/issues/187">这个issue</a>差不多）</li>
-<li>用的人少（well, that&rsquo;s what we called <em>indie</em>）</li>
-<li>确实有一些<a href="https://shkspr.mobi/blog/2022/12/the-ethics-of-syndicating-comments-using-webmentions/">ethical problem</a></li>
-</ul>
-
-    </div>
-  </div>
-<h2 id="什么是-webmention">
-什么是 webmention
-<a href="#%e4%bb%80%e4%b9%88%e6%98%af-webmention" class="heading-anchor">#</a>
-</h2>
-<p>Webmention是由<a href="https://indieweb.org">IndieWeb</a>发起的W3C标准，用来实现网页间相互提及，不必借助平台或引入评论系统。它的工作流程如下：</p>
-<ol>
-<li>我上传了一篇文章</li>
-<li>文章被你引用</li>
-<li>你向我的网站发送带有引用处url的webmention</li>
-<li>我通过<a href="https://webmention.io">webmention.io</a>等服务或自行挂载，接收到你的webmention</li>
-</ol>
-<p>现在你就可以试试，在自己的页面提及此页url，例如：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://fanrongbin.com/hugo-webmention-bridgy-mastodon&#34;</span><span class="p">&gt;</span>I&#39;m trying webmention!<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>然后把你的页面url在文末输入框提交，大约一分钟后刷新此页，就会看到你的webmention。</p>
-<h2 id="接收-webmention">
-接收 webmention
-<a href="#%e6%8e%a5%e6%94%b6-webmention" class="heading-anchor">#</a>
-</h2>
-<p>这里给出使用webmention.io的步骤，你也可以自行挂载：</p>
-<h3 id="1-用-indieauth-标识你的身份">
-1. 用 IndieAuth 标识你的身份
-<a href="#1-%e7%94%a8-indieauth-%e6%a0%87%e8%af%86%e4%bd%a0%e7%9a%84%e8%ba%ab%e4%bb%bd" class="heading-anchor">#</a>
-</h3>
-<p>Webmention.io使用<a href="https://indieweb.org/IndieAuth">IndieAuth</a>登录，所以需要先设置IndieAuth。在<code>index.html</code>中，对自己的帐号说明为<code>rel=&quot;me&quot;</code>，例如：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;me&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:your_email@email.com&#34;</span><span class="p">&gt;</span>Send me an email<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>或者以隐藏的方式在<code>&lt;head&gt;</code>说明：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;me&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:your_email@email.com&#34;</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>这样一来，采用IndieAuth登录的地方，会通过这些方式验证你的身份，例如向邮箱发送邮件，或跳转Github登录。</p>
-<h3 id="2-使用-webmentionio-挂载">
-2. 使用 webmention.io 挂载
-<a href="#2-%e4%bd%bf%e7%94%a8-webmentionio-%e6%8c%82%e8%bd%bd" class="heading-anchor">#</a>
-</h3>
-<p>在webmention.io登录后，你会看到一个Settings-Setup页面，给出了需要你在<code>&lt;head&gt;</code>加入的tag：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;webmention&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://webmention.io/your_domain/webmention&#34;</span> <span class="p">/&gt;</span>
-</span></span></code></pre></div><p>这条tag说明你的页面能够<strong>接受</strong>别人的提及，你可以通过<a href="https://webmention.rocks/receive/1">webmention.rocks</a>测试能否接收到。</p>
-<p><strong>到此，你已经实现了webmention的接收。</strong></p>
-<p>你可以在webmention.io的Dashboard，或它提供的Mentions Feed，查看他人提及。</p>
-<h3 id="3-借助-webmentionjs-在博文页面显示-webmention">
-3. 借助 webmention.js 在博文页面显示 webmention
-<a href="#3-%e5%80%9f%e5%8a%a9-webmentionjs-%e5%9c%a8%e5%8d%9a%e6%96%87%e9%a1%b5%e9%9d%a2%e6%98%be%e7%a4%ba-webmention" class="heading-anchor">#</a>
-</h3>
-<p>Webmention.io提供API返回你接受到的具体内容，这里我们借助前人造好的轮子<a href="https://github.com/PlaidWeb/webmention.js/">webmention.js</a>，根据readme，在你的网站存放<code>webmention.min.js</code>文件并用<code>&lt;script src=&quot;&quot;&gt;&lt;/script&gt;</code>引入，在需要展示webmention列表的地方插入：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;webmentions&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>你可以新建一个测试页面，用来提及目标页，以测试是否能正常发出和显示。也可以在连接Mastodon后，通过发toot和回复的方式测试。webmention列表的样式可通过<code>css</code>自定义。</p>
-<h2 id="发送-webmention">
-发送 webmention
-<a href="#%e5%8f%91%e9%80%81-webmention" class="heading-anchor">#</a>
-</h2>
-<p>很多支持webmention的站点，都会给出一个form方便你手动提交自己的链接。</p>
-<p>你也可以用<a href="https://indieweb.org/webmention-implementation-guide#One-liner_webmentions"><code>curl</code></a>发出webmention，发送前需检查对方收不收得到webmention，下面这条指令会进行检查。<code>$your_url</code>替换为你自己的引用页，<code>$target_url</code>替换为目标页。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -i -d <span class="s2">&#34;source=</span><span class="nv">$your_url</span><span class="s2">&amp;target=</span><span class="nv">$target_url</span><span class="s2">&#34;</span> <span class="sb">`</span>curl -i -s <span class="nv">$target_url</span> <span class="p">|</span> grep <span class="s1">&#39;rel=&#34;http://webmention.org/&#34;&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/rel=&#34;webmention&#34;//&#39;</span> <span class="p">|</span> grep -o -E <span class="s1">&#39;https?://[^ &#34;&gt;]+&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq<span class="sb">`</span>
-</span></span></code></pre></div><p>也可以用<a href="https://telegraph.p3k.io/">telegraph.p3k.io</a>（需要IndieAuth登录），或<a href="http://mention-tech.appspot.com/">mention.tech</a>（不需要登录）的在线服务。</p>
-<h3 id="使用-webmentionapp-自动发送">
-使用 webmention.app 自动发送
-<a href="#%e4%bd%bf%e7%94%a8-webmentionapp-%e8%87%aa%e5%8a%a8%e5%8f%91%e9%80%81" class="heading-anchor">#</a>
-</h3>
-<p>你可能一次在博文中引用多个网页，但是不想再进行繁琐的手动发送webmention。<a href="https://webmention.app/">Webmention.app</a>可以读取页面<a href="https://microformats.org/wiki/h-entry"><code>class=&quot;h-entry&quot;</code></a>中的链接，帮你一键发送。</p>
-<p>可以使用<a href="https://webmention.app/check">Test页面</a>检查（只会检查前10个<code>h-entry</code>），也可以通过API。登录服务获得token后没有request限制。具体请参见官网。</p>
-<h2 id="将你的博文发送到社交平台">
-将你的博文发送到社交平台
-<a href="#%e5%b0%86%e4%bd%a0%e7%9a%84%e5%8d%9a%e6%96%87%e5%8f%91%e9%80%81%e5%88%b0%e7%a4%be%e4%ba%a4%e5%b9%b3%e5%8f%b0" class="heading-anchor">#</a>
-</h2>
-<h3 id="连接到-bridgy">
-连接到 Bridgy
-<a href="#%e8%bf%9e%e6%8e%a5%e5%88%b0-bridgy" class="heading-anchor">#</a>
-</h3>
-<p><a href="https://brid.gy/">Bridgy</a>可将网站和社交平台相联，使得没有个人页面的用户，也能通过支持的平台进行回复，Bridgy会帮助进行webmention。</p>
-<p>进入主页选择Mastodon，使用cross-post或直接连接联邦宇宙的方式均可。如果cross-post，你需要用验证过的帐号publish带有博文链接的toot，在这条toot下的回复、转发、喜爱才会作为webmention传过来。</p>
-<p>如果直接连接（也就是我目前的做法），你会以<code>@your-domain.com@your-domain.com</code>加入联邦宇宙，向Bridgy的每次update都会对应更新这个账号下的toot。</p>
-<h3 id="使用-github-actions-自动化">
-使用 Github Actions 自动化
-<a href="#%e4%bd%bf%e7%94%a8-github-actions-%e8%87%aa%e5%8a%a8%e5%8c%96" class="heading-anchor">#</a>
-</h3>
-<p>我使用Hugo作为博客系统，希望实现根据我是否上传或更新<code>.md</code>，自动发出webmention。<a href="https://github.com/marketplace/actions/changed-files">tj-actions/changed-files</a>能够找到repo下文件的修改情况，故可以先寻找是否有文件被修改，之后发出 <code>curl</code>命令即可。</p>
-<p>在<a href="/github-actions-deploy-hugo">之前的博文</a>里，我设置了<code>deploy.yml</code>用来自动部署Hugo、生成静态文件。故对应在此设置为在<code>deploy</code>后才运行。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">send webmentions to bridgy according to md changes</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">workflow_run</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">workflows</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;deploy&#34;</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">types</span><span class="p">:</span><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">completed</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">changed_files_send_webmention</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">send webmentions according to md changes</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">get changed files</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">changed-files</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">tj-actions/changed-files@v41</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="l">content/posts/*.md</span><span class="w"> </span><span class="c"># 注意这里根据实际需要修改目录位置</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">list all changed files</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
-</span></span></span><span class="line"><span class="cl"><span class="sd">          ALL_CHANGED_FILES=&#34;${{ steps.changed-files.outputs.all_changed_files }}&#34;
-</span></span></span><span class="line"><span class="cl"><span class="sd">          for file in $ALL_CHANGED_FILES; do
-</span></span></span><span class="line"><span class="cl"><span class="sd">            echo &#34;$file was changed&#34;
-</span></span></span><span class="line"><span class="cl"><span class="sd">          done</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">send webmentions</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">steps.changed-files.outputs.all_changed_files != &#39;&#39;</span><span class="w"> </span><span class="c"># 判断不为空才运行</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
-</span></span></span><span class="line"><span class="cl"><span class="sd">          CHANGED_FILES=$(echo &#34;${{ steps.changed-files.outputs.all_changed_files }}&#34; | tr &#39;,&#39; &#39;\n&#39;)
-</span></span></span><span class="line"><span class="cl"><span class="sd">          for FILE in $CHANGED_FILES; do
-</span></span></span><span class="line"><span class="cl"><span class="sd">            if [[ $FILE == content/posts/*.md ]]; then
-</span></span></span><span class="line"><span class="cl"><span class="sd">              POST_NAME=$(basename &#34;$FILE&#34; .md)
-</span></span></span><span class="line"><span class="cl"><span class="sd">              POST_URL=&#34;https://your-domain.com/${POST_NAME}&#34;
-</span></span></span><span class="line"><span class="cl"><span class="sd">              echo &#34;Sending Webmention for $POST_URL&#34;
-</span></span></span><span class="line"><span class="cl"><span class="sd">              curl -i -d source=${POST_URL} -d target=https://fed.brid.gy https://fed.brid.gy/webmention
-</span></span></span><span class="line"><span class="cl"><span class="sd">            fi
-</span></span></span><span class="line"><span class="cl"><span class="sd">          done</span><span class="w">
-</span></span></span></code></pre></div><p>你还可以接着使用<code>${POST_URL}</code>trigger webmention.app的webhook。</p>
-<hr>
-<p>最初是看到IndieWeb上关于webmention的介绍，于是想着要不要自己也折腾一下，搜索到<a href="https://aaronparecki.com/2018/06/30/11/your-first-webmention">Aaron Parecki的博文</a>，以及<a href="https://www.jayeless.net/2021/02/integrating-webmentions-into-hugo.html">Jayeless.net的博文</a>后，觉得配置起来也不是很难嘛，然后就开始了……用第三方服务接收很简单，主要是一直卡在Bridgy这边。我新建了一个<a href="https://fanrongbin.com/stream">Stream</a>页面，相当于有了自己的一条时间轴，为了传上联邦宇宙，需要把每条小note以锚点<code>#id</code>的方式传到Bridgy。但，用webmention.app或者是telegraph.p3k.io始终没法发现到<code>https://fed.brid.gy/</code>这条链接，导致我没法API传出去，后来：</p>
-<ol>
-<li>尝试以<code>&lt;a href=&quot;https://fed.brid.gy&quot; hidden=&quot;from-humans&quot;&gt;&lt;/a&gt;</code>的方式，加到带<code>class=&quot;e-content&quot;</code>的元素里面。但如果note不包含其他url，具有Link Preview功能的地方，还是会显示出<code>fed.brid.gy</code>的链接卡片。</li>
-<li>在对Stream页面部署自动化时，分成了三个部分：
-<ul>
-<li>固定以<code>url#id</code>作为source并以Bridgy作为target、</li>
-<li>检查这条note的类型并以相关url作为target（例如reply、like）</li>
-<li>检查这条note的内容并以相关url作为target（里面所有的<code>&lt;a href=&quot;...&quot;</code>）</li>
-</ul>
-</li>
-</ol>
-<h2 id="一些遗留的问题">
-一些遗留的问题
-<a href="#%e4%b8%80%e4%ba%9b%e9%81%97%e7%95%99%e7%9a%84%e9%97%ae%e9%a2%98" class="heading-anchor">#</a>
-</h2>
-<ol>
-<li>如果fediverse上对博文的回应（回复、转发、喜爱）被修改或删除，无法触发Bridgy自动更新，即以回应为source，以博文为target重新发一次webmention</li>
-<li>如果发出回应的用户更改了自己的个人信息，也无法触发Bridgy自动更新，这个应该更没法解决了。</li>
-</ol>
-
-
-
-          
-      
-          <a class="u-url" href="https://fanrongbin.com/hugo-webmention-bridgy-mastodon/" hidden="from-humans" style="display:none;"></a>
-      
-
-      </main>
-      
-      
-      <a class="u-bridgy-fed" rel="bridgy" href="https://fed.brid.gy/" hidden="from-humans" style="display:none;"></a>
-
-  
-  </article>
-  
-
-  
-  
-
-
-
-<div class="footer-nav">
-
-
-
-
-<div class="previous-post" style="display:inline-block;">
-  
-    
-      <a class="no-external" href="/blog-theme-changed/"><span class="arrow">←</span> 更换了博客主题 Blog Theme Changed</a>
-    
-  
-</div>
-
-
-
-
-  <div class="Tags">
-    <ul style="list-style-type: none;margin:0;">
-      <li class="label">TAGS</li>
-        <li><a href="/tags/static-blog/">Static-Blog</a></li>
-    </ul>
-  </div>
-
-<div class="next-post" style="display:inline-block;float:right;">
-  
-    
-      <a class="no-external" href="/set-up-your-thunderbird-on-windows/">Set up your Thunderbird on Windows <span class="arrow">→</span></a>
-    
-  
-</div>
-
-</div>
-
-
-
-
-
-
-  
-
-<h2 class="comment-title">Comment</h2>
-
-<details class="comment-box">
-  <summary>Login via Github</summary>
-<div id="giscus">
-  <script id="giscus-script" src="https://giscus.app/client.js" data-repo="rongbinf/giscus-comment"
-      data-repo-id="R_kgDOK3UYzw" data-category="Announcements"
-      data-category-id="DIC_kwDOK3UYz84Cbl2R" data-mapping="pathname" data-strict="0"
-      data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top"
-      data-theme="https://fanrongbin.com/giscus.css" data-lang="en" data-loading="lazy"
-      crossorigin="anonymous" defer>
-      </script>
-</div>
-</details>
-
-
-<details class="comment-box">
-  <summary>No Login</summary>
-  <div id="tcomment"></div>
-  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js" integrity="sha384-4KfOjEinLSkv1i1J8TzlkC/RTnuiLoR1OLerVgjEKoH5djYtbf7mzEFsz9p3nfuA" crossorigin="anonymous" onload="initTwikoo()" defer></script>
-  <script>
-  function initTwikoo() {
-    twikoo.init({
-      envId: 'https://twikoo.fanrongbin.com',
-      el: '#tcomment',
-      lang: 'en',
-    });
-  }
-  </script>
-  <style>
-    .twikoo svg{
-      margin: 0;
-    }
-    .tk-avatar .tk-avatar-img {
-      margin: 0;
-    }
-    .el-input-group__append, .el-input-group__prepend {
-      background-color: unset !important;
-      border: unset !important;
-    }
-    .el-input__inner, .el-textarea__inner {
-      border: 0;
-      border-bottom: 1px solid var(--text-color);
-      border-radius: 0;
-    }
-    .el-input.is-active .el-input__inner, .el-input__inner:focus,
-    .twikoo .el-input__inner:focus, .twikoo .el-textarea__inner:focus {
-      border-color: var(--text-color) !important;
-    }
-    .el-button--primary {
-      background-color: var(--highlight) !important;
-    }
-    .el-button--primary.is-disabled {
-      background-color: var(--highlight) !important;
-      border: 0 !important;
-      opacity: 0.5 !important;
-    }
-    .twikoo .el-button:not(.el-button--primary):not(.el-button--text):hover {
-      border-color: white !important;
-      background-color: var(--highlight) !important;
-      color: white !important;
-    }
-    .tk-submit-action-icon.__markdown {
-      border: none;
-    }
-    .tk-submit-action-icon.__markdown::after {
-      content: none;
-    }
-    .tk-icon.__comments {
-      color: var(--highlight);
-    }
-  </style>
-</details>
-
-<details class="comment-box">
-  <summary>Webmention</summary>
-  <script src="/webmention.min.js" defer></script>
-  <div id="webmentions"></div>
-  <div>
-    <p>
-      
-      What is <a
-    href="/hugo-webmention-bridgy-mastodon">Webmention</a>?</p>
-    <form class="webmention-form" action="https://webmention.io/fanrongbin.com/webmention" method="post" style="margin: 2ch 0;">
-          <input type="url" name="source" class="url" placeholder="Your URL" required="">
-          <input type="hidden" name="target" value="https://fanrongbin.com/hugo-webmention-bridgy-mastodon/">
-          <input type="submit" value="Send" style="background:var(--bg-color);">
-    </form>
-  </div>
-</details>
-
-<details class="comment-box" onclick="showHypo();">
-  <summary><a id="commenthypo" onclick="showHypo();">Hypothes.is</a></summary>
-  </details>
-
-
-
-  
-
-  <footer class="opacity-6">
-    <p><a href="/colophon">Colophon</a></p><p><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
   </footer>
-
 </body>
 
-<script src="/han.min.js" defer></script>
-
-
-
-<script type="application/json" class="js-hypothesis-config" defer>
-{
-    "sideBySide": {
-        "mode": "manual"
-    }
-}
-</script>
-
-<script defer>
-    var mainElement = document.querySelector('main');
-    var contentHeader = document.querySelector('section.content-header');
-    const headers = mainElement.querySelectorAll('h2, h3');
-    document.addEventListener('DOMContentLoaded', function () {
-
-        if (contentHeader) {
-            contentHeader.querySelector('#show-hypo').style.display = 'flex';
-        }
-
-        handleScrollEvents();
-
-        applyBreakAllClass();
-
-        setupSidenotes();
-
-        initializeMutationObserver();
-
-        initializeTOCFeatures();
-
-        preventMultiTouchGestures();
-
-        setExternalLinksToOpenInNewTab();
-    });
-
-    function updateHHangableBehavior() {
-        var sidenoteHangables = mainElement.querySelectorAll('.sidenote-number + h-hangable');
-        sidenoteHangables.forEach(function (hHangable) {
-            var sidenoteNumber = hHangable.previousElementSibling;
-            var sidenoteBox = sidenoteNumber.querySelector('.sidenote-box');
-            if (sidenoteBox) {
-                sidenoteNumber.insertBefore(hHangable, sidenoteBox);
-            }
-        });
-    }
-
-    function initializeMutationObserver() {
-        var observer = new MutationObserver(function (mutations) {
-            var shouldUpdate = false;
-            mutations.forEach(function (mutation) {
-                mutation.addedNodes.forEach(function (node) {
-                    if (node.nodeType === 1 && node.matches('h-hangable')) {
-                        var previousSibling = node.previousElementSibling;
-                        if (previousSibling && previousSibling.matches('.sidenote-number')) {
-                            shouldUpdate = true;
-                        }
-                    }
-                });
-            });
-            if (shouldUpdate) {
-                setTimeout(updateHHangableBehavior, 1200);
-            }
-        });
-
-        var config = { childList: true, subtree: true };
-        if (mainElement) {
-            observer.observe(mainElement, config);
-        }
-    }
-
-    function applyBreakAllClass() {
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var codeElements = mainElement.querySelectorAll('code');
-
-        codeElements.forEach(function (element) {
-            if (screenWidth <= 960) {
-                if (element.textContent.length > 10) {
-                    element.classList.add('break-all');
-                }
-            }
-            else {
-                if (element.textContent.length > 30) {
-                    element.classList.add('break-all');
-                }
-            }
-        });
-    }
-
-    function handleScrollEvents() {
-        if (contentHeader) {
-            let lastScrollTop = 0;
-            let isScrolling = false;
-            const addnDiv = contentHeader.querySelector('.addn');
-            const topScrollBar = contentHeader.querySelector('.top-scroll-bar');
-
-            window.addEventListener('scroll', function () {
-                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                if (!isScrolling) {
-                    window.requestAnimationFrame(function () {
-                        if (topScrollBar) {
-                            const scrollPercent = (currentScroll / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                            topScrollBar.style.width = scrollPercent + '%';
-                            topScrollBar.style.display = 'block';
-                        }
-                        if (addnDiv) {
-                            if (currentScroll > lastScrollTop && currentScroll > 50) {
-                                addnDiv.classList.remove('visible');
-                            } else {
-                                addnDiv.classList.add('visible');
-                            }
-                        }
-                        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-                        isScrolling = false;
-                    });
-                    isScrolling = true;
-                }
-                if (window.innerWidth >= 1600) {
-                    toggleTOCOnScroll();
-                }
-            }, false);
-        }
-    }
-
-    function showHypo() {
-        var existingScript = document.getElementById('hypothes-script');
-        var button = contentHeader.querySelector('#show-hypo');
-
-        var commentHypo = document.getElementById("commenthypo");
-
-        if (!existingScript) {
-            button.textContent = 'Loading';
-            commentHypo.textContent = 'Loading'
-
-            var script = document.createElement('script');
-            script.id = 'hypothes-script';
-            script.src = 'https://hypothes.is/embed.js';
-
-            script.onload = () => {
-                button.textContent = 'Hypothes.is';
-                commentHypo.textContent = 'You can now select texts to highlight or note.'
-            };
-
-            script.onerror = () => {
-                button.style.color = 'red';
-                button.textContent = 'Failed';
-                commentHypo.textContent = 'Network error. Please refresh and try again.'
-            };
-
-            
-            document.body.appendChild(script);
-        } else {
-            toggleHypothesisElementsVisibility();
-            button.style.color = 'var(--text-color)';
-        }
-    }
-
-    function toggleHypothesisElementsVisibility() {
-        const elementsToToggle = [
-            'hypothesis-sidebar',
-            'hypothesis-notebook',
-            'hypothesis-profile',
-            'hypothesis-adder',
-            'hypothesis-highlight-cluster-toolbar'
-        ];
-
-        elementsToToggle.forEach(function (element) {
-            var el = document.querySelector(element);
-            if (el) {
-                if (el.style.display === 'none') {
-                    el.style.display = '';
-                } else {
-                    el.style.display = 'none';
-                }
-            }
-        });
-    }
-
-
-    function initializeTOCFeatures() {
-        if (contentHeader) {
-            const contentsFixedDiv = contentHeader.querySelector('#contents-fixed');
-            const tocContainer = contentHeader.querySelector('#contents-toc');
-            if (contentsFixedDiv && headers.length > 1) {
-                contentsFixedDiv.style.display = 'flex';
-                contentsFixedDiv.addEventListener('click', (event) => {
-                    toggleTOC();
-                    event.stopPropagation();
-                });
-            }
-            if (tocContainer && !tocContainer.dataset.initialized) {
-                const throttledHighlight = throttle(highlightAppropriateHeader, 250);
-                window.addEventListener('scroll', throttledHighlight);
-                tocContainer.dataset.initialized = 'true';
-            }
-        }
-    }
-
-    function highlightAppropriateHeader() {
-        let highlightedHeader = null;
-        let foundHeaderInView = false;
-
-        
-        for (let i = 0; i < headers.length; i++) {
-            const header = headers[i];
-            const bounding = header.getBoundingClientRect();
-
-            if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
-                highlightedHeader = header; 
-                foundHeaderInView = true;
-                break;
-            }
-        }
-
-        
-        if (!foundHeaderInView) {
-            for (let i = 0; i < headers.length; i++) {
-                const header = headers[i];
-                let nextHeader = headers[i + 1];
-                let endOfSection = nextHeader ? nextHeader.getBoundingClientRect().top : Infinity;
-
-                const startOfSection = header.getBoundingClientRect().bottom;
-
-                if (startOfSection < window.innerHeight && endOfSection > 0) {
-                    highlightedHeader = header;
-                    break;
-                }
-            }
-        }
-
-        
-        contentHeader.querySelectorAll('nav#TableOfContents a').forEach(link => {
-            link.classList.remove('toc-highlight');
-        });
-
-        
-        if (highlightedHeader) {
-            const link = contentHeader.querySelector(`nav#TableOfContents a[href="#${highlightedHeader.id}"]`);
-            if (link) {
-                link.classList.add('toc-highlight');
-            }
-        }
-    }
-
-    function toggleTOC() {
-        const tocContainer = contentHeader.querySelector('#contents-toc');
-        const isDisplayed = window.getComputedStyle(tocContainer).display !== 'none';
-        tocContainer.style.display = isDisplayed ? 'none' : 'flex';
-    }
-
-    function toggleTOCOnScroll() {
-        const tocContainer = document.querySelector('#TableOfContents');
-        const footerNav = document.querySelector('.footer-nav');
-
-        if (!tocContainer || !footerNav) return;
-
-        const footerNavTop = footerNav.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        
-        if (footerNavTop <= windowHeight) {
-            tocContainer.style.display = 'none';
-        } else {
-            tocContainer.style.display = 'flex';
-        }
-    }
-
-    function throttle(func, limit) {
-        let lastFunc;
-        let lastRan;
-        return function () {
-            const context = this;
-            const args = arguments;
-            if (!lastRan) {
-                func.apply(context, args);
-                lastRan = Date.now();
-            } else {
-                clearTimeout(lastFunc);
-                lastFunc = setTimeout(function () {
-                    if ((Date.now() - lastRan) >= limit) {
-                        func.apply(context, args);
-                        lastRan = Date.now();
-                    }
-                }, limit - (Date.now() - lastRan));
-            }
-        }
-    }
-
-    function setExternalLinksToOpenInNewTab() {
-        const links = document.querySelectorAll('.e-content a[href*="//"]:not(.stream-url):not(.stream-time)');
-        const linkDisplay = document.querySelector('.link-display');
-
-        links.forEach(function (link) {
-            link.setAttribute('target', '_blank');
-
-            link.addEventListener('mouseover', function () {
-                const url = new URL(this.href);
-                const rootDomain = url.hostname.replace(/^www\./, '');
-                const boldDomain = `<span class="bold-domain">${rootDomain}</span>`;
-                const displayUrl = this.href.replace(rootDomain, boldDomain);
-
-                linkDisplay.innerHTML = displayUrl;
-                linkDisplay.style.display = 'block';
-                const linkRect = this.getBoundingClientRect();
-                linkDisplay.style.top = `${linkRect.bottom + window.scrollY}px`;
-                linkDisplay.style.left = `${linkRect.left + window.scrollX}px`;
-            });
-
-            link.addEventListener('mouseout', function () {
-                linkDisplay.style.display = 'none';
-            });
-        });
-    }
-
-    function setupSidenotes() {
-    const sidenoteNumbers = mainElement.querySelectorAll('.sidenote-number');
-
-    if (sidenoteNumbers.length >= 3 && window.innerWidth >= 1000) {
-        const sidenoteLine = mainElement.querySelectorAll('.sidenote-line');
-        sidenoteLine.forEach(element => {
-            element.style.border = 'none';
-        });
-
-        var jQueryScript = document.createElement('script');
-        jQueryScript.src = '/jquery-3.6.0.min.js';
-        document.head.appendChild(jQueryScript);
-
-        jQueryScript.onload = function () {
-            var jsPlumbScript = document.createElement('script');
-            jsPlumbScript.src = '/jsplumb.min.js';
-            document.head.appendChild(jsPlumbScript);
-
-            jsPlumbScript.onload = function () {
-                initJsPlumb();
-            };
-        };
-    }
-
-    function applySidenoteMargins() {
-        const screenWidth = window.innerWidth;
-
-        if (screenWidth <= 1000) {
-            sidenoteNumbers.forEach(sidenoteNumber => {
-                const sidenoteBox = sidenoteNumber.querySelector('.sidenote-box');
-                const afterSidenoteContent = sidenoteNumber.nextSibling;
-
-                if (sidenoteBox) {
-                    if (afterSidenoteContent && afterSidenoteContent.textContent.trim() !== "") {
-                        sidenoteBox.style.marginBottom = "0"; 
-                    }
-                }
-            });
-        } else {
-            sidenoteNumbers.forEach(sidenoteNumber => {
-                const sidenoteBox = sidenoteNumber.querySelector('.sidenote-box');
-                if (sidenoteBox) {
-                    sidenoteBox.style.marginBottom = "";  
-                }
-            });
-        }
-    }
-
-    applySidenoteMargins();
-
-    window.addEventListener('resize', applySidenoteMargins);
-}
-
-
-    function initJsPlumb() {
-        var jsPlumbCSS = document.createElement('link');
-        jsPlumbCSS.href = '/jsplumbtoolkit-defaults.min.css';
-        jsPlumbCSS.rel = 'stylesheet';
-        document.head.appendChild(jsPlumbCSS);
-
-        jQuery(document).ready(function () {
-            jsPlumb.importDefaults({
-                ConnectionsDetachable: false,
-                ReattachConnections: false,
-                Endpoint: "Blank",
-                Connector: ["Straight"],
-                PaintStyle: { stroke: "var(--text-color)", strokeWidth: 1 }
-            });
-
-            createConnections();
-            var resizeObserver = new ResizeObserver(function () {
-                createConnections();
-            });
-            resizeObserver.observe(document.body);
-        });
-    }
-
-    function createConnections() {
-        jsPlumb.deleteEveryEndpoint();
-        jQuery('.sidenote-number').each(function () {
-            var sidenoteNumber = jQuery(this);
-            var sidenote = sidenoteNumber.find('.sidenote');
-
-            if (sidenote.length) {
-                jsPlumb.connect({
-                    source: sidenoteNumber[0],
-                    target: sidenote[0],
-                    anchors: ["Center", "RightMiddle"],
-                    cssClass: "jsplumb-line"
-                });
-            }
-        });
-    }
-
-
-    function preventMultiTouchGestures() {
-        window.onload = function () {
-            document.addEventListener('touchstart', function (event) {
-                if (event.touches.length > 1) {
-                    event.preventDefault();
-                }
-            }, false);
-            var lastTouchEnd = 0;
-            document.addEventListener('touchend', function (event) {
-                var now = (new Date()).getTime();
-                if (now - lastTouchEnd <= 300) {
-                    event.preventDefault();
-                }
-                lastTouchEnd = now;
-            }, false);
-            document.addEventListener('gesturestart', function (event) {
-                event.preventDefault();
-            }, false);
-        }
-    }
-</script>
+<script src="/han.min.js"></script>
 
 </html>
