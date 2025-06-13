@@ -1,0 +1,24 @@
+@import "variables";
+@import "components";
+@import "custom";
+
+body {
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: var(--sans);
+  line-height: 1.5;
+  margin: 1rem auto 5em auto;
+  max-width: 640px !important;
+  padding: 0 20px;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
