@@ -1693,7 +1693,7 @@ h-hangable:lang(ja)>h-cs h-char.bd-end,h-hangable:lang(zh-CN)>h-cs h-char.bd-end
     left: 0;
     top: 0;
     display: inline-block;
-    line-height: 1.1
+    line-height: 1.2
 }
 
 h-ru h-hangable:lang(ja)>h-cs h-char.bd-end,h-ru h-hangable:lang(zh-CN)>h-cs h-char.bd-end,h-ru h-hangable:lang(zh-Hans)>h-cs h-char.bd-end,ruby h-hangable:lang(ja)>h-cs h-char.bd-end,ruby h-hangable:lang(zh-CN)>h-cs h-char.bd-end,ruby h-hangable:lang(zh-Hans)>h-cs h-char.bd-end {
