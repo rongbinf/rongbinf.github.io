@@ -22,28 +22,47 @@
 25年6月再次毕业前夕，“大扫除”了一下。这个博客之前长什么样子，可从这里查看。
 依然使用Hugo，手搓了现在这个主题，大概过几个星期会发出来。
 引入了汉字标准格式。
-基本的字体设置如下：
-@font-face { /* 为了用 SimSun 来显示中文省略号 */
+基本的字体设置如下。主要对于中文省略号（……）和指定繁体中文内容的标点换用了居中样式的字体。英文字体为Figtree。
+@font-face {
   font-family: &#34;SC Ellipsis&#34;;
-  src: local(&#34;SimSun&#34;);
+  src: 
+    local(&#34;STKaiti&#34;), 
+    local(&#34;STSong&#34;),
+    local(&#34;SimSun&#34;),
+    url(&#34;/font/STKaiti.woff2&#34;)format(&#34;woff2&#34;),
+    url(&#34;/font/STKaiti.woff&#34;)format(&#34;woff&#34;),
+    url(&#34;https://db.onlinewebfonts.com/t/1ee9941f1b8c128110ca4307dda59917.woff2&#34;)format(&#34;woff2&#34;),
+    url(&#34;https://db.onlinewebfonts.com/t/1ee9941f1b8c128110ca4307dda59917.woff&#34;)format(&#34;woff&#34;);
   unicode-range: U&#43;2026; 
 }
 
+@font-face {
+  font-family: &#34;TC Biaodian Serif&#34;;
+  src: 
+    local(&#34;Zhuyin Kaiti&#34;),
+    local(&#34;DFKai-SB&#34;),
+    local(&#34;BiauKai&#34;),
+    local(&#34;LiSung&#34;);
+  unicode-range: U&#43;FF00-FFEF, U&#43;3000-303F, U&#43;FE10-FE1F;
+}
+
 :root {
-  --sans: &#34;SC Ellipsis&#34;, Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, &#34;Noto Sans SC&#34;, system-ui, sans-serif;
-  --serif: &#34;SC Ellipsis&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, &#34;Han Kaiti&#34;, cursive, serif;
+  --sans: &#34;SC Ellipsis&#34;, Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, system-ui, sans-serif;
+  --serif: &#34;SC Ellipsis&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, cursive, serif;
   --arrow: apple-system, BlinkMacSystemFont, Calibri, &#34;Helvetica Neue&#34;, Helvetica, Arial, system-ui, &#34;Arial Unicode MS&#34;, sans-serif;
 }
-我的设备和云服务
-我的MacBook历经进水、进水后主板生锈、主板充电充爆之后，在25年4月寿终正寝了。现在我唯一的主力机是ThinkPad P1 Gen 5。
-云服务或软件推荐：
 
-Typora
-NetNewsWire
-Obsidian &#43; Obsidian Sync
-Thunderbird
-Arixcel：用来查询单元格引用的Excel插件
-" />
+[lang=zh-hans], [lang=zh-hans] * {
+  --sans: &#34;SC Ellipsis&#34;, Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, &#34;Noto Sans SC&#34;, system-ui, sans-serif;
+  --serif: &#34;SC Ellipsis&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, &#34;Han Kaiti&#34;, STKaiti, cursive, serif;
+}
+
+[lang=zh-hant], [lang=zh-hant] * {
+  --sans: Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, &#34;Noto Sans TC&#34;, system-ui, sans-serif;
+  --serif: &#34;TC Biaodian Serif&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, &#34;Zhuyin Kaiti&#34;, STKaiti, FZKai-Z03, cursive, serif;
+}
+我的设备和云服务
+我的MacBook历经进水、进水后主板生锈、OpenCore刷到Sonoma支撑了一段时间Xcode，以及最终主板充电充爆后，在25年4月寿终正寝了。现在我唯一的主力机是ThinkPad P1 Gen 5。" />
 <meta name="author p-author" content="Rongbin Fan" href="" />
 
 
@@ -66,28 +85,47 @@ Arixcel：用来查询单元格引用的Excel插件
 25年6月再次毕业前夕，“大扫除”了一下。这个博客之前长什么样子，可从这里查看。
 依然使用Hugo，手搓了现在这个主题，大概过几个星期会发出来。
 引入了汉字标准格式。
-基本的字体设置如下：
-@font-face { /* 为了用 SimSun 来显示中文省略号 */
+基本的字体设置如下。主要对于中文省略号（……）和指定繁体中文内容的标点换用了居中样式的字体。英文字体为Figtree。
+@font-face {
   font-family: &#34;SC Ellipsis&#34;;
-  src: local(&#34;SimSun&#34;);
+  src: 
+    local(&#34;STKaiti&#34;), 
+    local(&#34;STSong&#34;),
+    local(&#34;SimSun&#34;),
+    url(&#34;/font/STKaiti.woff2&#34;)format(&#34;woff2&#34;),
+    url(&#34;/font/STKaiti.woff&#34;)format(&#34;woff&#34;),
+    url(&#34;https://db.onlinewebfonts.com/t/1ee9941f1b8c128110ca4307dda59917.woff2&#34;)format(&#34;woff2&#34;),
+    url(&#34;https://db.onlinewebfonts.com/t/1ee9941f1b8c128110ca4307dda59917.woff&#34;)format(&#34;woff&#34;);
   unicode-range: U&#43;2026; 
 }
 
+@font-face {
+  font-family: &#34;TC Biaodian Serif&#34;;
+  src: 
+    local(&#34;Zhuyin Kaiti&#34;),
+    local(&#34;DFKai-SB&#34;),
+    local(&#34;BiauKai&#34;),
+    local(&#34;LiSung&#34;);
+  unicode-range: U&#43;FF00-FFEF, U&#43;3000-303F, U&#43;FE10-FE1F;
+}
+
 :root {
-  --sans: &#34;SC Ellipsis&#34;, Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, &#34;Noto Sans SC&#34;, system-ui, sans-serif;
-  --serif: &#34;SC Ellipsis&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, &#34;Han Kaiti&#34;, cursive, serif;
+  --sans: &#34;SC Ellipsis&#34;, Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, system-ui, sans-serif;
+  --serif: &#34;SC Ellipsis&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, cursive, serif;
   --arrow: apple-system, BlinkMacSystemFont, Calibri, &#34;Helvetica Neue&#34;, Helvetica, Arial, system-ui, &#34;Arial Unicode MS&#34;, sans-serif;
 }
-我的设备和云服务
-我的MacBook历经进水、进水后主板生锈、主板充电充爆之后，在25年4月寿终正寝了。现在我唯一的主力机是ThinkPad P1 Gen 5。
-云服务或软件推荐：
 
-Typora
-NetNewsWire
-Obsidian &#43; Obsidian Sync
-Thunderbird
-Arixcel：用来查询单元格引用的Excel插件
-" />
+[lang=zh-hans], [lang=zh-hans] * {
+  --sans: &#34;SC Ellipsis&#34;, Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, &#34;Noto Sans SC&#34;, system-ui, sans-serif;
+  --serif: &#34;SC Ellipsis&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, &#34;Han Kaiti&#34;, STKaiti, cursive, serif;
+}
+
+[lang=zh-hant], [lang=zh-hant] * {
+  --sans: Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, &#34;Noto Sans TC&#34;, system-ui, sans-serif;
+  --serif: &#34;TC Biaodian Serif&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, &#34;Zhuyin Kaiti&#34;, STKaiti, FZKai-Z03, cursive, serif;
+}
+我的设备和云服务
+我的MacBook历经进水、进水后主板生锈、OpenCore刷到Sonoma支撑了一段时间Xcode，以及最终主板充电充爆后，在25年4月寿终正寝了。现在我唯一的主力机是ThinkPad P1 Gen 5。" />
 <meta property="og:url" content="https://fanrongbin.com/colophon/" />
 <meta property="og:image" content="/apple-touch-icon.png" />
 
@@ -102,28 +140,47 @@ Arixcel：用来查询单元格引用的Excel插件
 25年6月再次毕业前夕，“大扫除”了一下。这个博客之前长什么样子，可从这里查看。
 依然使用Hugo，手搓了现在这个主题，大概过几个星期会发出来。
 引入了汉字标准格式。
-基本的字体设置如下：
-@font-face { /* 为了用 SimSun 来显示中文省略号 */
+基本的字体设置如下。主要对于中文省略号（……）和指定繁体中文内容的标点换用了居中样式的字体。英文字体为Figtree。
+@font-face {
   font-family: &#34;SC Ellipsis&#34;;
-  src: local(&#34;SimSun&#34;);
+  src: 
+    local(&#34;STKaiti&#34;), 
+    local(&#34;STSong&#34;),
+    local(&#34;SimSun&#34;),
+    url(&#34;/font/STKaiti.woff2&#34;)format(&#34;woff2&#34;),
+    url(&#34;/font/STKaiti.woff&#34;)format(&#34;woff&#34;),
+    url(&#34;https://db.onlinewebfonts.com/t/1ee9941f1b8c128110ca4307dda59917.woff2&#34;)format(&#34;woff2&#34;),
+    url(&#34;https://db.onlinewebfonts.com/t/1ee9941f1b8c128110ca4307dda59917.woff&#34;)format(&#34;woff&#34;);
   unicode-range: U&#43;2026; 
 }
 
+@font-face {
+  font-family: &#34;TC Biaodian Serif&#34;;
+  src: 
+    local(&#34;Zhuyin Kaiti&#34;),
+    local(&#34;DFKai-SB&#34;),
+    local(&#34;BiauKai&#34;),
+    local(&#34;LiSung&#34;);
+  unicode-range: U&#43;FF00-FFEF, U&#43;3000-303F, U&#43;FE10-FE1F;
+}
+
 :root {
-  --sans: &#34;SC Ellipsis&#34;, Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, &#34;Noto Sans SC&#34;, system-ui, sans-serif;
-  --serif: &#34;SC Ellipsis&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, &#34;Han Kaiti&#34;, cursive, serif;
+  --sans: &#34;SC Ellipsis&#34;, Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, system-ui, sans-serif;
+  --serif: &#34;SC Ellipsis&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, cursive, serif;
   --arrow: apple-system, BlinkMacSystemFont, Calibri, &#34;Helvetica Neue&#34;, Helvetica, Arial, system-ui, &#34;Arial Unicode MS&#34;, sans-serif;
 }
-我的设备和云服务
-我的MacBook历经进水、进水后主板生锈、主板充电充爆之后，在25年4月寿终正寝了。现在我唯一的主力机是ThinkPad P1 Gen 5。
-云服务或软件推荐：
 
-Typora
-NetNewsWire
-Obsidian &#43; Obsidian Sync
-Thunderbird
-Arixcel：用来查询单元格引用的Excel插件
-" />
+[lang=zh-hans], [lang=zh-hans] * {
+  --sans: &#34;SC Ellipsis&#34;, Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, &#34;Noto Sans SC&#34;, system-ui, sans-serif;
+  --serif: &#34;SC Ellipsis&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, &#34;Han Kaiti&#34;, STKaiti, cursive, serif;
+}
+
+[lang=zh-hant], [lang=zh-hant] * {
+  --sans: Figtree, apple-system, BlinkMacSystemFont, &#34;Noto Sans&#34;, &#34;Noto Sans TC&#34;, system-ui, sans-serif;
+  --serif: &#34;TC Biaodian Serif&#34;, &#34;Minion Pro&#34;, Minion, &#34;Times New Roman&#34;, Georgia, &#34;Zhuyin Kaiti&#34;, STKaiti, FZKai-Z03, cursive, serif;
+}
+我的设备和云服务
+我的MacBook历经进水、进水后主板生锈、OpenCore刷到Sonoma支撑了一段时间Xcode，以及最终主板充电充爆后，在25年4月寿终正寝了。现在我唯一的主力机是ThinkPad P1 Gen 5。" />
 
 
 
@@ -160,20 +217,47 @@ Arixcel：用来查询单元格引用的Excel插件
 <p>25年6月再次毕业前夕，“大扫除”了一下。这个博客之前长什么样子，可从<a href="https://web.archive.org/web/*/https://fanrongbin.com/blog-theme-changed">这里</a>查看。</p>
 <p>依然使用<a href="https://gohugo.io/">Hugo</a>，手搓了现在这个主题，大概过几个星期会发出来。</p>
 <p>引入了<a href="/hugo-hanzi-pro">汉字标准格式</a>。</p>
-<p>基本的字体设置如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#66d9ef">font-face</span> { <span style="color:#75715e">/* 为了用 SimSun 来显示中文省略号 */</span>
+<p>基本的字体设置如下。主要对于中文省略号（……）和指定繁体中文内容的标点换用了居中样式的字体。英文字体为Figtree。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#66d9ef">font-face</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;SC Ellipsis&#34;</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">src</span><span style="color:#f92672">:</span> <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;SimSun&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">src</span><span style="color:#f92672">:</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;STKaiti&#34;</span><span style="color:#f92672">),</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;STSong&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;SimSun&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/font/STKaiti.woff2&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;woff2&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/font/STKaiti.woff&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;woff&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;https://db.onlinewebfonts.com/t/1ee9941f1b8c128110ca4307dda59917.woff2&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;woff2&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;https://db.onlinewebfonts.com/t/1ee9941f1b8c128110ca4307dda59917.woff&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;woff&#34;</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">unicode-range</span><span style="color:#f92672">:</span> <span style="color:#f92672">U</span><span style="color:#f92672">+</span><span style="color:#f92672">2026</span><span style="color:#f92672">;</span> 
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">font-face</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;TC Biaodian Serif&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">src</span><span style="color:#f92672">:</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Zhuyin Kaiti&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;DFKai-SB&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;BiauKai&#34;</span><span style="color:#f92672">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;LiSung&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">unicode-range</span><span style="color:#f92672">:</span> <span style="color:#f92672">U</span><span style="color:#f92672">+</span><span style="color:#f92672">FF00-FFEF</span><span style="color:#f92672">,</span> <span style="color:#f92672">U</span><span style="color:#f92672">+</span><span style="color:#f92672">3000-303F</span><span style="color:#f92672">,</span> <span style="color:#f92672">U</span><span style="color:#f92672">+</span><span style="color:#f92672">FE10-FE1F</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>:<span style="color:#a6e22e">root</span> {
-</span></span><span style="display:flex;"><span>  --sans: <span style="color:#e6db74">&#34;SC Ellipsis&#34;</span>, Figtree, apple-system, BlinkMacSystemFont, <span style="color:#e6db74">&#34;Noto Sans&#34;</span>, <span style="color:#e6db74">&#34;Noto Sans SC&#34;</span>, system-ui, <span style="color:#66d9ef">sans-serif</span>;
-</span></span><span style="display:flex;"><span>  --serif: <span style="color:#e6db74">&#34;SC Ellipsis&#34;</span>, <span style="color:#e6db74">&#34;Minion Pro&#34;</span>, Minion, <span style="color:#e6db74">&#34;Times New Roman&#34;</span>, Georgia, <span style="color:#e6db74">&#34;Han Kaiti&#34;</span>, <span style="color:#66d9ef">cursive</span>, <span style="color:#66d9ef">serif</span>;
+</span></span><span style="display:flex;"><span>  --sans: <span style="color:#e6db74">&#34;SC Ellipsis&#34;</span>, Figtree, apple-system, BlinkMacSystemFont, <span style="color:#e6db74">&#34;Noto Sans&#34;</span>, system-ui, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>  --serif: <span style="color:#e6db74">&#34;SC Ellipsis&#34;</span>, <span style="color:#e6db74">&#34;Minion Pro&#34;</span>, Minion, <span style="color:#e6db74">&#34;Times New Roman&#34;</span>, Georgia, <span style="color:#66d9ef">cursive</span>, <span style="color:#66d9ef">serif</span>;
 </span></span><span style="display:flex;"><span>  --arrow: apple-system, BlinkMacSystemFont, Calibri, <span style="color:#e6db74">&#34;Helvetica Neue&#34;</span>, Helvetica, Arial, system-ui, <span style="color:#e6db74">&#34;Arial Unicode MS&#34;</span>, <span style="color:#66d9ef">sans-serif</span>;
 </span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span><span style="color:#f92672">lang</span><span style="color:#f92672">=</span><span style="color:#f92672">zh-hans</span><span style="color:#f92672">],</span> <span style="color:#f92672">[</span><span style="color:#f92672">lang</span><span style="color:#f92672">=</span><span style="color:#f92672">zh-hans</span><span style="color:#f92672">]</span> <span style="color:#f92672">*</span> {
+</span></span><span style="display:flex;"><span>  --sans: <span style="color:#e6db74">&#34;SC Ellipsis&#34;</span>, Figtree, apple-system, BlinkMacSystemFont, <span style="color:#e6db74">&#34;Noto Sans&#34;</span>, <span style="color:#e6db74">&#34;Noto Sans SC&#34;</span>, system-ui, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>  --serif: <span style="color:#e6db74">&#34;SC Ellipsis&#34;</span>, <span style="color:#e6db74">&#34;Minion Pro&#34;</span>, Minion, <span style="color:#e6db74">&#34;Times New Roman&#34;</span>, Georgia, <span style="color:#e6db74">&#34;Han Kaiti&#34;</span>, STKaiti, <span style="color:#66d9ef">cursive</span>, <span style="color:#66d9ef">serif</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span><span style="color:#f92672">lang</span><span style="color:#f92672">=</span><span style="color:#f92672">zh-hant</span><span style="color:#f92672">],</span> <span style="color:#f92672">[</span><span style="color:#f92672">lang</span><span style="color:#f92672">=</span><span style="color:#f92672">zh-hant</span><span style="color:#f92672">]</span> <span style="color:#f92672">*</span> {
+</span></span><span style="display:flex;"><span>  --sans: Figtree, apple-system, BlinkMacSystemFont, <span style="color:#e6db74">&#34;Noto Sans&#34;</span>, <span style="color:#e6db74">&#34;Noto Sans TC&#34;</span>, system-ui, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>  --serif: <span style="color:#e6db74">&#34;TC Biaodian Serif&#34;</span>, <span style="color:#e6db74">&#34;Minion Pro&#34;</span>, Minion, <span style="color:#e6db74">&#34;Times New Roman&#34;</span>, Georgia, <span style="color:#e6db74">&#34;Zhuyin Kaiti&#34;</span>, STKaiti, FZKai-Z03, <span style="color:#66d9ef">cursive</span>, <span style="color:#66d9ef">serif</span>;
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="我的设备和云服务">我的设备和云服务</h2>
-<p>我的MacBook历经进水、进水后主板生锈、主板充电充爆之后，在25年4月寿终正寝了。现在我唯一的主力机是ThinkPad P1 Gen 5。</p>
+<p>我的MacBook历经进水、进水后主板生锈、OpenCore刷到Sonoma支撑了一段时间Xcode，以及最终主板充电充爆后，在25年4月寿终正寝了。现在我唯一的主力机是ThinkPad P1 Gen 5。</p>
 <p>云服务或软件推荐：</p>
 <ul>
 <li>Typora</li>
