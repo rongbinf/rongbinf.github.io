@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech on Rongbin Fan</title>
-    <link>https://fanrongbin.com/tags/tech/</link>
+    <link>http://localhost:1313/tags/tech/</link>
     <description>Recent content in Tech on Rongbin Fan</description>
     <generator>Hugo</generator>
     <language>zh-hans</language>
     <managingEditor>hi@fanrongbin.com (Rongbin Fan)</managingEditor>
     <webMaster>hi@fanrongbin.com (Rongbin Fan)</webMaster>
     <lastBuildDate>Wed, 30 Mar 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://fanrongbin.com/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows 11 的新字体：Segoe UI Variable</title>
-      <link>https://fanrongbin.com/segoe-ui-variable/</link>
+      <link>http://localhost:1313/segoe-ui-variable/</link>
       <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate><author>hi@fanrongbin.com (Rongbin Fan)</author>
-      <guid>https://fanrongbin.com/segoe-ui-variable/</guid>
+      <guid>http://localhost:1313/segoe-ui-variable/</guid>
       <description>&lt;p&gt;微软在 2021 年 5 月 6 日于 Windows 10 Insider Preview Build 21376 &lt;a href=&#34;https://blogs.windows.com/windows-insider/2021/05/06/announcing-windows-10-insider-preview-build-21376/&#34;&gt;发布&lt;/a&gt;了 Segoe UI 的可变字体版本：Segoe UI Variable，&lt;a href=&#34;https://docs.microsoft.com/en-us/windows/apps/design/signature-experiences/typography&#34;&gt;在 Windows 11 &lt;/a&gt;正式作为系统默认字体。得益于可变字体特性，Segoe UI Variable 可以根据不同的字重选择做出调整，在低分屏下也具有较高可读性。此次还同步推出了 Text 和 Display 两个版本，前者常用于内文，后者的装饰性元素或字体的风格更加突出，所以更常用于标题。Text 版本增加字重，x-字高更高，字母的开口以及间距更大。Display 版本字母尾部曲度更大，字间距对应缩紧，存在感更强。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/segoe-ui-v-vdisplay.webp&#34;&gt;&lt;/img&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/segoe-ui-v-vdisplay-2.webp&#34;&gt;&lt;/img&gt;&lt;/p&gt;&#xA;&lt;p&gt;风格上与旧 Segoe UI 相比，Segoe UI Variable 更圆，字母尾部增加曲度并切平，同时去掉了字母 I 和数字 1 的 crossbars，字母 Q 的小尾巴缩短改平直，整体更干练和紧凑，&lt;del&gt;看起来也更像 Product Sans 了。&lt;/del&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/segoe-ui-v-vdisplay-3.webp&#34;&gt;&lt;/img&gt;&lt;/p&gt;&#xA;&lt;p&gt;可以通过 Windows 的&lt;a href=&#34;https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts&#34;&gt;官方文档&lt;/a&gt;，或直接访问&lt;a href=&#34;https://aka.ms/SegoeUIVariable&#34;&gt;此链接&lt;/a&gt;下载 Segoe UI Variable。&lt;/p&gt;</description>
     </item>
   </channel>

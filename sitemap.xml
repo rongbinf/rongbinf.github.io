@@ -35,7 +35,7 @@
     <loc>https://fanrongbin.com/colophon/</loc>
     <lastmod>2025-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://fanrongbin.com/thoughts/2024-in-the-midst-of-voidness/</loc>
+    <loc>https://fanrongbin.com/2024-in-the-midst-of-voidness/</loc>
     <lastmod>2024-12-31T23:32:17+00:00</lastmod>
   </url><url>
     <loc>https://fanrongbin.com/thoughts/</loc>
@@ -53,7 +53,7 @@
     <loc>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</loc>
     <lastmod>2024-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://fanrongbin.com/thoughts/2023-my-time-is-like-water/</loc>
+    <loc>https://fanrongbin.com/2023-my-time-is-like-water/</loc>
     <lastmod>2023-12-31T01:45:30+08:00</lastmod>
   </url><url>
     <loc>https://fanrongbin.com/oblique-strategies/</loc>
@@ -77,7 +77,7 @@
     <loc>https://fanrongbin.com/give-ko/</loc>
     <lastmod>2023-01-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://fanrongbin.com/thoughts/jam-on-road/</loc>
+    <loc>https://fanrongbin.com/jam-on-road/</loc>
     <lastmod>2022-12-31T01:00:00+08:00</lastmod>
   </url><url>
     <loc>https://fanrongbin.com/hybrid-3/</loc>
@@ -86,16 +86,13 @@
     <loc>https://fanrongbin.com/hybrid-2/</loc>
     <lastmod>2022-05-02T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://fanrongbin.com/tags/tech/</loc>
-    <lastmod>2022-03-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://fanrongbin.com/segoe-ui-variable/</loc>
     <lastmod>2022-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fanrongbin.com/hybrid-1/</loc>
     <lastmod>2022-02-05T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://fanrongbin.com/thoughts/bakery/</loc>
+    <loc>https://fanrongbin.com/bakery/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fanrongbin.com/tags/c&#43;&#43;/</loc>
@@ -104,19 +101,22 @@
     <loc>https://fanrongbin.com/cpp-template-friend/</loc>
     <lastmod>2021-12-31T22:48:59+08:00</lastmod>
   </url><url>
-    <loc>https://fanrongbin.com/thoughts/yesterday-is-today-is-tomorrow/</loc>
+    <loc>https://fanrongbin.com/yesterday-is-today-is-tomorrow/</loc>
     <lastmod>2021-12-31T20:51:59+08:00</lastmod>
   </url><url>
     <loc>https://fanrongbin.com/cpp-copy-constructor/</loc>
     <lastmod>2021-11-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://fanrongbin.com/thoughts/middle-zone/</loc>
+    <loc>https://fanrongbin.com/middle-zone/</loc>
     <lastmod>2021-09-12T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://fanrongbin.com/winslow-homer/</loc>
     <lastmod>2021-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://fanrongbin.com/thoughts/first-of-all-dont-forget/</loc>
+    <loc>https://fanrongbin.com/snow-2/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fanrongbin.com/first-of-all-dont-forget/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fanrongbin.com/glimpse-of-fluent-design/</loc>
