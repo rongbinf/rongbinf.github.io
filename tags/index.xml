@@ -8,8 +8,15 @@
     <language>zh-hans</language>
     <managingEditor>hi@fanrongbin.com (Rongbin Fan)</managingEditor>
     <webMaster>hi@fanrongbin.com (Rongbin Fan)</webMaster>
-    <lastBuildDate>Thu, 12 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Jun 2025 10:41:41 +0100</lastBuildDate>
     <atom:link href="https://fanrongbin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Static-Blog</title>
+      <link>https://fanrongbin.com/tags/static-blog/</link>
+      <pubDate>Sat, 14 Jun 2025 10:41:41 +0100</pubDate><author>hi@fanrongbin.com (Rongbin Fan)</author>
+      <guid>https://fanrongbin.com/tags/static-blog/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Front-End</title>
       <link>https://fanrongbin.com/tags/front-end/</link>
@@ -22,13 +29,6 @@
       <link>https://fanrongbin.com/tags/hybrid/</link>
       <pubDate>Fri, 06 Dec 2024 20:29:16 +0000</pubDate><author>hi@fanrongbin.com (Rongbin Fan)</author>
       <guid>https://fanrongbin.com/tags/hybrid/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Static-Blog</title>
-      <link>https://fanrongbin.com/tags/static-blog/</link>
-      <pubDate>Wed, 07 Feb 2024 11:25:24 +0800</pubDate><author>hi@fanrongbin.com (Rongbin Fan)</author>
-      <guid>https://fanrongbin.com/tags/static-blog/</guid>
       <description></description>
     </item>
     <item>

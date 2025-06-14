@@ -8,12 +8,22 @@
       <managingEditor>Rongbin Fan</managingEditor>
       <webMaster>Rongbin Fan</webMaster>
     
-      <lastBuildDate>Sat, 14 Jun 2025 01:44:32 &#43;0100</lastBuildDate>
+      <lastBuildDate>Sat, 14 Jun 2025 10:41:41 &#43;0100</lastBuildDate>
     
     
       <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+
+      <item>
+        <title>Github Actions &#43; fonttools 拉取字符并创建中文字体子集</title>
+        <link>https://fanrongbin.com/hugo-font-subsetting/</link>
+        <guid>https://fanrongbin.com/hugo-font-subsetting/</guid>
+        <pubDate>Sat, 14 Jun 2025 10:41:41 &#43;0100</pubDate>
+          <author>Rongbin Fan</author>
+        <description>帮助解决中文字体体积过大的问题</description>
+      </item>
     
 
       <item>
@@ -62,7 +72,7 @@
         <guid>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</guid>
         <pubDate>Sat, 06 Jan 2024 00:00:00 &#43;0000</pubDate>
           <author>Rongbin Fan</author>
-        <description>变相等于用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化</description>
+        <description>变相用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化</description>
       </item>
     
 

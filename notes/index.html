@@ -16,7 +16,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.016c877a04bb6cb236af73978cc7507b90ba23d853f02dfb193f326866daadad.css" integrity="sha256-AWyHegS7bLI2r3OXjMdQe5C6I9hT8C37GT8yaGbara0=">
+<link rel="stylesheet" href="/css/main.60c13973fce21f1fcdbb8ea17fd70966fdf508d7c5cf1bc1222708d422b89512.css" integrity="sha256-YME5c/ziHx/Nu46hf9cJZv31CNfFzxvBIicI1CK4lRI=">
 
 
 
@@ -51,8 +51,8 @@
 
   <p>
     <small>
-      <time datetime="2024-02-07T11:25:24&#43;08:00">
-        2024-02-07
+      <time datetime="2025-06-14T10:41:41&#43;01:00">
+        2025-06-14
       </time>
     </small>
 
@@ -64,6 +64,33 @@
     
   <h1>Notes</h1>
   
+  
+    <h2><a href="/hugo-font-subsetting/">Github Actions &#43; fonttools 拉取字符并创建中文字体子集</a></h2>
+    <p>创建子集部分参考自谢益辉老师的<a href="https://github.com/yihui/yihui.org/discussions/1547">做法</a>。如果你需要的中文字体在<a href="https://chinese-font.netlify.app/zh-cn/cdn/">字图CDN</a>有覆盖，用这个也能一定程度上提升性能。</p>
+<p>本文将通过解释写好的workflow文件来展开，完整代码见最下方。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_run</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">workflows</span>: [<span style="color:#e6db74">&#34;deploy&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">types</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">completed</span>
+</span></span></code></pre></div><p>告诉Github Actions什么时候自动运行，<code>workflow_dispatch:</code>使得这个workflow能在对应页面手动点击运行，<code>workflow_run:</code>这里我定义了使其在名字为<code>deploy</code>的workflow完成后运行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout repository</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v3</span>
+</span></span></code></pre></div><p><code>checkout</code>把仓库的代码从Github克隆到workflow构建的运行环境中。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install fonttools</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">run</span>: <span style="color:#ae81ff">sudo apt-get update &amp;&amp; sudo apt-get install -y fonttools</span>
+</span></span></code></pre></div><p>安装<a href="https://github.com/fonttools/fonttools"><code>fonttools</code></a>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Extract used characters from content</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      mkdir -p font
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      find . -name &#39;*.md&#39; -o -name &#39;*.html&#39; | xargs cat \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        | grep -oP &#39;[\x{3000}-\x{30FF}\x{31F0}-\x{31FF}\x{4E00}-\x{9FFF}\x{AC00}-\x{D7AF}\x{FF00}-\x{FFEF}\x{FE10}-\x{FE1F}]&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        | sort | uniq &gt; used-chars.txt</span>
+</span></span></code></pre></div><p>从所在项目的<code>.md</code>和<code>.html</code>提取出出现过的中日韩字符（CJK）：在工作环境创建<code>/font</code>文件夹，查找当前目录及子目录下所有以<code>.md</code>或<code>.html</code>结尾的文件，用<code>cat</code>拼接成一个文件，用<code>grep</code>来匹配字符范围（Unicode区间可自行重新设定），<code>sort</code>排序，<code>uniq</code>去重，<code>&gt; used-chars.txt</code>保存到一个文本文件。</p>
   
     <h2><a href="/hugo-markdownify-generate-p-tag/">Hugo Markdownify 无法生成 &lt;p&gt; tag</a></h2>
     <p>在尝试为<a href="/stream">Stream</a>页面利用<a href="https://gohugo.io/content-management/shortcodes/">Hugo Shortcodes</a>添加新的<code>movie</code>和<code>tv</code>标签时，使用<code>{{ .Inner | Markdownify }}</code>无法正确对Markdown文本生成HTML<code>&lt;p&gt;</code>tag。</p>
@@ -503,6 +530,11 @@
 <p><small><a href="#">Back to top ↑</a></small></p>
 
   </footer>
+  
+  
+  
+    <div id="progress"></div>
+  
 </body>
 
 
