@@ -4053,14 +4053,48 @@
   document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("record-grid");
     const records = Array.from(container.children);
+
+    
     for (let i = records.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [records[i], records[j]] = [records[j], records[i]];
     }
+
     container.innerHTML = "";
     records.forEach(el => container.appendChild(el));
+
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    records.forEach(record => {
+      const toggleInfo = (e) => {
+        e.stopPropagation();
+        const isShown = record.classList.contains('show-info');
+        document.querySelectorAll('.record.show-info').forEach(r => r.classList.remove('show-info'));
+        if (!isShown) {
+          record.classList.add('show-info');
+        }
+      };
+
+      if (isTouchDevice) {
+        record.addEventListener('touchend', toggleInfo);
+      } else {
+        record.addEventListener('click', toggleInfo);
+      }
+    });
+
+    const hideAllInfo = () => {
+      document.querySelectorAll('.record.show-info').forEach(r => r.classList.remove('show-info'));
+    };
+
+    if (isTouchDevice) {
+      document.addEventListener('touchend', hideAllInfo);
+    } else {
+      document.addEventListener('click', hideAllInfo);
+    }
   });
 </script>
+
+
 
 
   </main>
