@@ -60,8 +60,8 @@
 
   <p>
     <small>
-      <time datetime="2025-06-14T10:41:41&#43;01:00">
-        2025-06-14
+      <time datetime="2025-06-27T14:21:00&#43;01:00">
+        2025-06-27
       </time>
     </small>
 
@@ -73,6 +73,31 @@
     
   <h1>Notes</h1>
   
+  
+    <h2><a href="/qgis-get-started/">快速上手 QGIS</a></h2>
+    <p>使用<a href="https://qgis.org/">QGIS</a>可以很方便地对地图做样式处理。例如高亮某条马路、标记某个位置、圈出某个园区等等。</p>
+<p>下载安装后，首先点击菜单栏<code>Plugins</code>，搜索安装QuickMapServices（<a href="https://nextgis.com/blog/quickmapservices/">官网</a>）以在线使用包括Google Maps在内的底图。</p>
+<p>新建一个project后，从菜单栏<code>Web</code>中找到安装好的QuickMapServices，点击所需的底图即加载，在左下角Layers窗口就能看到。</p>
+<p>这些底图中有带labels的，有的不带。如果需要自己做样式处理（如下图，把高速公路做成了绿色），需要加载无labels的底图（如Google Satellite），再用QuickOSM下载需要的路网、建筑等。</p>
+<p><img src="https://img.fanrongbin.com/aeb45a2e3d026e03351e3e28a2633f2.png" alt=""></p>
+<h2 id="使用quickosm下载路网等">使用QuickOSM下载路网等</h2>
+<p>搜索安装QuickOSM插件（<a href="https://github.com/3liz/QuickOSM">Github</a>）以连接Overpass和Nominatim API，从OpenStreetMap（OSM）下载道路、基础设施等objects。</p>
+<p>从菜单栏<code>Vector</code>或者顶栏绿色背景的放大镜图标即可进入QuickOSM。使用<code>Quick query</code>来筛选并下载需要的objects。</p>
+<p><img src="https://img.fanrongbin.com/20250627143621.png" alt=""></p>
+<p><code>Preset</code>里有很多已经设定好的objects可以使用，例如<code>Buildings/House</code>、<code>Highways/Barriers/Toll Booth</code>等等。你也可以自行键入<code>Key</code>和<code>Value</code>。</p>
+<p>以高速公路为例，<code>Key</code>为<code>highway</code>，<code>Value</code>为<code>motorway</code>。</p>
+<p>随后需要输入范围，如<code>In = Jeddah, Saudi Arabia</code>。</p>
+<p>你可以在<code>Advanced</code>部分规定需要下载的类型，建议都下载，因为之后如果需要显示labels，不一定都有存放（例如可能港口的labels会存在polygons里而不是lines里）。</p>
+<p>点击<code>Run query</code>开始下载，完成后自动加载图层。</p>
+<p>如果网络环境不好，可以尝试在边栏<code>Parameters</code>里更换API地址。</p>
+
+            <link rel="stylesheet" href="/css/vendors/admonitions.02779140835f452cb4ca8e7db2ae0343d32da5f75cd96f68d9c5d7d655d622a1.css" integrity="sha256-AneRQINfRSy0yo59sq4DQ9Mtpfdc2W9o2cXX1lXWIqE=" crossorigin="anonymous">
+    <div class="admonition info">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+        <span>注意QuickOSM不会自动保存下载的图层</span>
+      </div>
+      <div class="admonition-content">
+        <p>如果你希望下次继续使用，请在<code>Quick query - Advanced</code>中编辑好<code>Directory</code>。<a href="https://www.reddit.com/r/QGIS/comments/13v3zux/recovering_lost_scratch_layers_from_quickosm/">可能也可以使用Memory Layer Saver插件</a>，但我个人没尝试过。</p>
   
     <h2><a href="/hugo-font-subsetting/">Github Actions &#43; fonttools 拉取字符并创建中文字体子集</a></h2>
     <p>创建子集部分参考自谢益辉老师的<a href="https://github.com/yihui/yihui.org/discussions/1547">做法</a>。如果你需要的中文字体在<a href="https://chinese-font.netlify.app/zh-cn/cdn/">字图CDN</a>有覆盖，用这个也能一定程度上提升性能。</p>

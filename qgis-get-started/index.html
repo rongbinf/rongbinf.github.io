@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-hans" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+<title>快速上手 QGIS | Rongbin Fan</title>
+
+
+
+  
+
+
+<meta name="description" content="一款开源、流畅、多插件的地图软件" />
+<meta name="author p-author" content="Rongbin Fan" href="https://fanrongbin.com" />
+
+
+
+<link rel="stylesheet" href="/css/main.88751ca9e43423ab0caac576540299c97899b93f82d48fc6b41715c044458dd3.css" integrity="sha256-iHUcqeQ0I6sMqsV2VAKZyXiZuT&#43;C1I/GtBcVwERFjdM=">
+
+
+
+<link rel="stylesheet" href="/han.min.af364198a0ab39a240e1dde3eda66a4ba1d6c2c84bc39390ff405727d367ddab.css" integrity="sha256-rzZBmKCrOaJA4d3j7aZqS6HWwshLw5OQ/0BXJ9Nn3as=">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+
+<meta property="og:title" content="快速上手 QGIS | Rongbin Fan" />
+<meta property="og:description" content="一款开源、流畅、多插件的地图软件" />
+<meta property="og:url" content="https://fanrongbin.com/qgis-get-started/" />
+<meta property="og:image" content="/apple-touch-icon.png" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="/apple-touch-icon.png" />
+<meta name="twitter:title" content="快速上手 QGIS | Rongbin Fan" />
+<meta name="twitter:description" content="一款开源、流畅、多插件的地图软件" />
+
+
+<section style="display: none;" class="h-card">
+  <span class="p-name">Rongbin Fan</span>
+  <span class="p-note">Are you willing to, able to, imagine an alternative reality?</span>
+  <img class="u-photo" src="/apple-touch-icon.png"/>
+  <a class="u-url u-uid" href="https://fanrongbin.com"></a>
+  <a class="u-email" rel="me" href="mailto:hi@fanrongbin.com"></a>
+</section>
+
+
+
+<script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</head>
+<body class="han-init-context">
+  <header>
+    
+  <p><a href="/">Rongbin Fan</a></p>
+
+  <p>
+    <small>
+      <time datetime="2025-06-27T14:21:00&#43;01:00">
+        2025-06-27
+      </time>
+    </small>
+
+    
+  </p>
+
+  </header>
+  <main>
+    
+  <h1 class="title">快速上手 QGIS</h1>
+  <p class="description">一款开源、流畅、多插件的地图软件</p>
+
+  
+
+  <p>使用<a href="https://qgis.org/">QGIS</a>可以很方便地对地图做样式处理。例如高亮某条马路、标记某个位置、圈出某个园区等等。</p>
+<p>下载安装后，首先点击菜单栏<code>Plugins</code>，搜索安装QuickMapServices（<a href="https://nextgis.com/blog/quickmapservices/">官网</a>）以在线使用包括Google Maps在内的底图。</p>
+<p>新建一个project后，从菜单栏<code>Web</code>中找到安装好的QuickMapServices，点击所需的底图即加载，在左下角Layers窗口就能看到。</p>
+<p>这些底图中有带labels的，有的不带。如果需要自己做样式处理（如下图，把高速公路做成了绿色），需要加载无labels的底图（如Google Satellite），再用QuickOSM下载需要的路网、建筑等。</p>
+<p><img src="https://img.fanrongbin.com/aeb45a2e3d026e03351e3e28a2633f2.png" alt=""></p>
+<h2 id="使用quickosm下载路网等">使用QuickOSM下载路网等</h2>
+<p>搜索安装QuickOSM插件（<a href="https://github.com/3liz/QuickOSM">Github</a>）以连接Overpass和Nominatim API，从OpenStreetMap（OSM）下载道路、基础设施等objects。</p>
+<p>从菜单栏<code>Vector</code>或者顶栏绿色背景的放大镜图标即可进入QuickOSM。使用<code>Quick query</code>来筛选并下载需要的objects。</p>
+<p><img src="https://img.fanrongbin.com/20250627143621.png" alt=""></p>
+<p><code>Preset</code>里有很多已经设定好的objects可以使用，例如<code>Buildings/House</code>、<code>Highways/Barriers/Toll Booth</code>等等。你也可以自行键入<code>Key</code>和<code>Value</code>。</p>
+<p>以高速公路为例，<code>Key</code>为<code>highway</code>，<code>Value</code>为<code>motorway</code>。</p>
+<p>随后需要输入范围，如<code>In = Jeddah, Saudi Arabia</code>。</p>
+<p>你可以在<code>Advanced</code>部分规定需要下载的类型，建议都下载，因为之后如果需要显示labels，不一定都有存放（例如可能港口的labels会存在polygons里而不是lines里）。</p>
+<p>点击<code>Run query</code>开始下载，完成后自动加载图层。</p>
+<p>如果网络环境不好，可以尝试在边栏<code>Parameters</code>里更换API地址。</p>
+
+            <link rel="stylesheet" href="/css/vendors/admonitions.02779140835f452cb4ca8e7db2ae0343d32da5f75cd96f68d9c5d7d655d622a1.css" integrity="sha256-AneRQINfRSy0yo59sq4DQ9Mtpfdc2W9o2cXX1lXWIqE=" crossorigin="anonymous">
+    <div class="admonition info">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+        <span>注意QuickOSM不会自动保存下载的图层</span>
+      </div>
+      <div class="admonition-content">
+        <p>如果你希望下次继续使用，请在<code>Quick query - Advanced</code>中编辑好<code>Directory</code>。<a href="https://www.reddit.com/r/QGIS/comments/13v3zux/recovering_lost_scratch_layers_from_quickosm/">可能也可以使用Memory Layer Saver插件</a>，但我个人没尝试过。</p>
+      </div>
+    </div><h2 id="标出特定坐标">标出特定坐标</h2>
+<p>要在地图上标示出某些坐标，可以将坐标先存放在表格文件如<code>*.csv</code>中（<code>*.xlsx</code>尽量记得<code>UTF-8</code>保存，避免乱码）。</p>
+<p>快捷键<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd>或者在菜单栏选择<code>Layer</code>-&gt;<code>Add Layer</code>-&gt;<code>Add Delimited Text Layer</code>，点击<code>File name</code>右侧按钮选择保存好的表格文件（或直接输入文件路径）。</p>
+<p>需要配置File Format。如果文件是tab分隔的，需要用<code>Custom delimiters</code>并选择<code>Tab</code>。配置到下方的预览符合你的需要即可。</p>
+<p>还要配置好经纬度对应的列并设置坐标系。<code>X field</code>为经度（longitude），<code>Y field</code>为纬度（latitude）。设置<code>Geometry CRS</code>为<code>EPSG:4326 - WGS 84</code>。</p>
+<p>点击<code>Add</code>即导入图层。</p>
+<h2 id="更改图层样式">更改图层样式</h2>
+<p>要更改样式，在左下角<code>Layers</code>里双击某个图层，或右键进入<code>Properties</code>即可。进入后在<code>Symbology</code>界面修改。</p>
+<p>如果要添加<code>Labels</code>则进<code>Labels</code>，选择<code>Single Labels</code>后找到需要的值，如<code>name:en</code>。</p>
+<p><img src="https://img.fanrongbin.com/20250627145913.png" alt=""></p>
+
+  
+
+  
+  <details class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#使用quickosm下载路网等">使用QuickOSM下载路网等</a></li>
+    <li><a href="#标出特定坐标">标出特定坐标</a></li>
+    <li><a href="#更改图层样式">更改图层样式</a></li>
+  </ul>
+</nav>
+    <summary>Table of Contents</summary>
+    </details>
+  
+
+  </main>
+  <footer>
+    
+<p>© 2025</p>
+      
+<p><small><a href="#">Back to top ↑</a></small></p>
+
+  </footer>
+  
+  
+  
+    <div id="progress"></div>
+  
+</body>
+
+
+
+<script src="/han.min.831f27db02c9bac7a1d42a0f46d9b947f346d8c989ef1bda95eae9d01ba5ad8d.js" integrity="sha256-gx8n2wLJuseh1CoPRtm5R/NG2MmJ7xvalerp0BulrY0="></script>
+
+
+
+
+</html>

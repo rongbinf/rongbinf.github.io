@@ -8,12 +8,22 @@
       <managingEditor>Rongbin Fan</managingEditor>
       <webMaster>Rongbin Fan</webMaster>
     
-      <lastBuildDate>Sat, 14 Jun 2025 10:41:41 &#43;0100</lastBuildDate>
+      <lastBuildDate>Fri, 27 Jun 2025 14:21:00 &#43;0100</lastBuildDate>
     
     
       <atom:link href="https://fanrongbin.com/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+
+      <item>
+        <title>快速上手 QGIS</title>
+        <link>https://fanrongbin.com/qgis-get-started/</link>
+        <guid>https://fanrongbin.com/qgis-get-started/</guid>
+        <pubDate>Fri, 27 Jun 2025 14:21:00 &#43;0100</pubDate>
+          <author>Rongbin Fan</author>
+        <description>一款开源、流畅、多插件的地图软件</description>
+      </item>
     
 
       <item>
