@@ -11,30 +11,7 @@
   
 
 
-<meta name="description" content="在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&lt;p&gt;tag。
-例如：
-{{ $text .= &#34;What a *nice* day!&#34; }}
-{{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day!
-但我预期生成的应是：
-{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt;
-这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
-在我的情况中，先识别是否存在&lt;p&gt;tag的方式：
-{{ $markdown := .intro | markdownify }}
-
-{{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }}
-    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
-{{ else }}
-    {{ $markdown }}
-{{ end }}
-或进一步匹配以h、p开头的tag都可以：
-{{ $markdown := .text | markdownify }}
-
-{{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }}
-    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
-{{ else }}
-    {{ $markdown }}
-{{ end }}
-" />
+<meta name="description" content="加个条件判断" />
 <meta name="author p-author" content="Rongbin Fan" href="https://fanrongbin.com" />
 
 
@@ -52,30 +29,7 @@
 
 
 <meta property="og:title" content="Hugo Markdownify 无法生成 &lt;p&gt; tag | Rongbin Fan" />
-<meta property="og:description" content="在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&lt;p&gt;tag。
-例如：
-{{ $text .= &#34;What a *nice* day!&#34; }}
-{{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day!
-但我预期生成的应是：
-{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt;
-这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
-在我的情况中，先识别是否存在&lt;p&gt;tag的方式：
-{{ $markdown := .intro | markdownify }}
-
-{{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }}
-    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
-{{ else }}
-    {{ $markdown }}
-{{ end }}
-或进一步匹配以h、p开头的tag都可以：
-{{ $markdown := .text | markdownify }}
-
-{{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }}
-    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
-{{ else }}
-    {{ $markdown }}
-{{ end }}
-" />
+<meta property="og:description" content="加个条件判断" />
 <meta property="og:url" content="https://fanrongbin.com/hugo-markdownify-generate-p-tag/" />
 <meta property="og:image" content="/apple-touch-icon.png" />
 
@@ -83,30 +37,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="/apple-touch-icon.png" />
 <meta name="twitter:title" content="Hugo Markdownify 无法生成 &lt;p&gt; tag | Rongbin Fan" />
-<meta name="twitter:description" content="在尝试为Stream页面利用Hugo Shortcodes添加新的movie和tv标签时，使用{{ .Inner | Markdownify }}无法正确对Markdown文本生成HTML&lt;p&gt;tag。
-例如：
-{{ $text .= &#34;What a *nice* day!&#34; }}
-{{ $text | Markdownify}} -&gt; What a &lt;em&gt;nice&lt;/em&gt; day!
-但我预期生成的应是：
-{{ $text | Markdownify }} -&gt; &lt;p&gt;What a &lt;em&gt;nice&lt;/em&gt; day!&lt;/p&gt;
-这是个老问题：Markdownify最主要被用来生成标题之类的inline元素，而不是类似段落的blocks。但很多Hugo主题都在使用Markdownify，所以一时想要用RenderString取代也不太可能。
-在我的情况中，先识别是否存在&lt;p&gt;tag的方式：
-{{ $markdown := .intro | markdownify }}
-
-{{ if not ( strings.Contains $markdown &#34;&lt;p&gt;&#34; ) }}
-    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
-{{ else }}
-    {{ $markdown }}
-{{ end }}
-或进一步匹配以h、p开头的tag都可以：
-{{ $markdown := .text | markdownify }}
-
-{{ if not ( findRE &#34;&lt;[h|p][^&gt;]*&gt;&#34; $markdown ) }}
-    &lt;p&gt;{{ $markdown }}&lt;/p&gt;
-{{ else }}
-    {{ $markdown }}
-{{ end }}
-" />
+<meta name="twitter:description" content="加个条件判断" />
 
 
 <section style="display: none;" class="h-card">
@@ -136,17 +67,18 @@
   <main>
     
   <h1 class="title">Hugo Markdownify 无法生成 &lt;p&gt; tag</h1>
-  <p class="description"></p>
+  <p class="description">加个条件判断</p>
 
   
 
-  <p>在尝试为<a href="/stream">Stream</a>页面利用<a href="https://gohugo.io/content-management/shortcodes/">Hugo Shortcodes</a>添加新的<code>movie</code>和<code>tv</code>标签时，使用<code>{{ .Inner | Markdownify }}</code>无法正确对Markdown文本生成HTML<code>&lt;p&gt;</code>tag。</p>
+  <p>在尝试为<a href="https://web.archive.org/web/*/fanrongbin.com/stream">Stream</a>页面利用<a href="https://gohugo.io/content-management/shortcodes/">Hugo Shortcodes</a>添加新的<code>movie</code>和<code>tv</code>标签时，使用<code>{{ .Inner | Markdownify }}</code>无法正确对Markdown文本生成HTML<code>&lt;p&gt;</code>tag。</p>
 <p>例如：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> .= <span style="color:#e6db74">&#34;What a *nice* day!&#34;</span> }}
 </span></span><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">Markdownify</span>}} <span style="color:#f92672">-</span>&gt; <span style="color:#a6e22e">What</span> <span style="color:#a6e22e">a</span> &lt;<span style="color:#a6e22e">em</span>&gt;<span style="color:#a6e22e">nice</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">em</span>&gt; <span style="color:#a6e22e">day</span>!
 </span></span></code></pre></div><p>但我预期生成的应是：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">Markdownify</span> }} <span style="color:#f92672">-</span>&gt; &lt;<span style="color:#a6e22e">p</span>&gt;<span style="color:#a6e22e">What</span> <span style="color:#a6e22e">a</span> &lt;<span style="color:#a6e22e">em</span>&gt;<span style="color:#a6e22e">nice</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">em</span>&gt; <span style="color:#a6e22e">day</span>!&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
 </span></span></code></pre></div><p>这是个<a href="https://github.com/gohugoio/hugo/issues/3040">老问题</a>：<code>Markdownify</code>最主要被用来生成标题之类的<em>inline</em>元素，而不是类似段落的<em>blocks</em>。但很多Hugo主题都在使用<code>Markdownify</code>，所以一时想要用<a href="https://gohugo.io/methods/page/renderstring/"><code>RenderString</code></a>取代<a href="https://discourse.gohugo.io/t/deprecate-markdownify/37789/">也不太可能</a>。</p>
+<h2 id="解决方法">解决方法</h2>
 <p>在我的情况中，<a href="https://github.com/gohugoio/hugo/issues/3040#issuecomment-352190818">先识别是否存在<code>&lt;p&gt;</code>tag</a>的方式：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">intro</span> | <span style="color:#a6e22e">markdownify</span> }}
 </span></span><span style="display:flex;"><span>
