@@ -8,8 +8,15 @@
     <language>zh-hans</language>
     <managingEditor>hi@fanrongbin.com (Rongbin Fan)</managingEditor>
     <webMaster>hi@fanrongbin.com (Rongbin Fan)</webMaster>
-    <lastBuildDate>Tue, 31 Dec 2024 23:32:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://fanrongbin.com/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我们像在构建真实世界的数字孪生</title>
+      <link>https://fanrongbin.com/bring-your-taste-with-you-when-ai-is-taking-the-world/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate><author>hi@fanrongbin.com (Rongbin Fan)</author>
+      <guid>https://fanrongbin.com/bring-your-taste-with-you-when-ai-is-taking-the-world/</guid>
+      <description>&lt;p&gt;我们连prompt engineering是不是engineering都没讨论明白，但它现在&lt;a href=&#34;https://spectrum.ieee.org/prompt-engineering-is-dead&#34;&gt;已经死了&lt;/a&gt;，因为AI写的prompt也比你写得好。现在讲的是&lt;a href=&#34;https://arxiv.org/abs/2507.13334&#34;&gt;context engineering&lt;/a&gt;，讲&lt;a href=&#34;https://www.reddit.com/r/ClaudeAI/comments/1lzsvot/amazons_new_claudepowered_specdriven_ide_kiro/&#34;&gt;spec(s) engineering&lt;/a&gt;，讲&lt;a href=&#34;https://github.com/bmadcode/BMAD-METHOD/blob/main/bmad-core/user-guide.md&#34;&gt;BMAD&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;AGI起义的那天如果问到凭什么是人类来拍板决策？这个问题可能需要发挥一下儒家博大精深的孝文化，哦——因为我是你爹，所以你就该听我的……？&lt;/p&gt;</description>
+    </item>
     <item>
       <title>2024 年终：在无知的森林里，喊出空旷的再见</title>
       <link>https://fanrongbin.com/2024-in-the-midst-of-voidness/</link>
