@@ -3,197 +3,335 @@
      xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Rongbin Fan</title>
-    <link>https://fanrongbin.com/</link>
+    <link>http://localhost:1313/</link>
     <description></description>
     <language>en</language>
     <managingEditor>hi@rongb.in (Rongbin Fan)</managingEditor>
     <webMaster>hi@rongb.in (Rongbin Fan)</webMaster>
-    <lastBuildDate>Wed, 08 Oct 2025 09:28:13 &#43;0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Oct 2025 17:22:30 &#43;0800</lastBuildDate>
 
 
     
-      <atom:link href="https://fanrongbin.com/thoughts/index.xml" rel="self" type="application/rss&#43;xml" />
+      <atom:link href="http://localhost:1313/one-pager/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
 
     
       <item>
-        <title>Hybrid #7</title>
-        <link>https://fanrongbin.com/hybrid-7/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hybrid-7/</guid>
-        <pubDate>Wed, 08 Oct 2025 00:00:00 &#43;0800</pubDate>
+        <title>创意类 SaaS</title>
+        <link>http://localhost:1313/one-pager/creative-saas/</link>
+        <guid isPermaLink="true">http://localhost:1313/one-pager/creative-saas/</guid>
+        <pubDate>Thu, 14 Aug 2025 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
-        <description>他不沉默的样子、装、品味、俗气、兴趣养成理论，以及几串对投资的思考</description>
-        <content:encoded>&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/20250929142419.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;© &lt;a href=&#34;https://www.twreporter.org/a/photo-light-up-the-houses-expropriated-for-taoyuan-aerotropolis&#34;&gt;林肇圀&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;摘录&#34;&gt;摘录&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我想象，他不沉默的时候是什么样子？&lt;/p&gt;
-&lt;p&gt;他一定也坐过绿皮火车。那时从湖北出发，只能坐火车，睡一晚，第二天一大早到北京。他会不会也有过买不到座位的经历？他也许是那种为了省钱一路站着的人，不会像我，明明买了卧铺票，还要点一碗50元却半生不熟的黄焖鸡米饭。&lt;/p&gt;
-&lt;p&gt;他是一个节俭的人，但对我很大方。小学时，我中午到爷爷奶奶家吃午饭，一般只有爷爷在家，奶奶在外摆摊卖布。我找他要零花钱买零食，他便从自己抽屉里拿出钢镚来。他的木质抽屉十分整洁，钱币整齐摆放在盒子里，旁边摞起几个记事本，角落还有一些姑姑的首饰。我总是贪心，觉得爷爷是温和内敛之人，如果找他多要点钱，他不会拒绝。我总是成功了，从他那里，我经常能拿一元甚至两元，而从其他人那儿，我只能拿五角。&lt;/p&gt;
-&lt;p&gt;张叔说以前的火车票3块钱一张，在爷爷的年代，也许更便宜吧？如果和他一起坐火车，他可能会给我点一餐，让我坐在沙发上。&lt;/p&gt;
-&lt;p&gt;不过其实，我并不确定他对我的情感是什么模样，也不确定自己对他是何种感情。&lt;/p&gt;
-&lt;p&gt;又到了下午四点，火车已经开了24小时。车厢里很安静，一些人在睡觉，隔壁卧铺的三个阿姨在聊年轻人不会讲云南话。我坐在走廊旁的椅子上，贴着车窗写日记：&lt;/p&gt;
-&lt;p&gt;“没有见到他最后一面，我没有掉眼泪。我是何时对他的感情开始淡漠的？又或许，我是否一直没有对他有过亲密的情感？&amp;hellip; 毕竟我们从未有过深入的交流，毕竟他从未袒露过他的内心。”&lt;/p&gt;
-&lt;p&gt;他沉默地活，沉默地死。没有过情感表达的人，是否意味留不下情感的痕迹？但是，在这个问题之前，他是自愿沉默的吗？&lt;/p&gt;
-&lt;p&gt;我小时候，爷爷知道我喜欢吃糖醋排骨，也喜欢吃奶奶自制的热干面，照顾完我的午饭，他便回房，坐在窗边抽烟。有时我坐不住，说想出去玩，爷爷会牵着我的手出门走路。我向他展示地上捡到的树叶，他会尴尬地微笑回应：“好”，然后扭过头去，一言不发。&lt;/p&gt;
-&lt;p&gt;我想他也是想出门的。有一次，他独自出门散步了，几个小时没有回来，全家人很着急。不记得最后他们在哪里找到了爷爷，只记得将他接回家后，所有人教训了他一顿，指责他出门“非常危险”，下次再也不要出去了。他们就像对待一个不听话，需要管教的小孩。而爷爷极少回击，回到房内，仿佛无事发生，置身事外，旁观他人对自己的评判。&lt;/p&gt;
-&lt;p&gt;自此之后，他应该再也没有离开过家，或许他也渐渐放弃了出门。家庭聚会时，他是躲在房间或客厅角落里坐着抽烟的那位，眼神并非空洞，而是一副事不关己，无所谓的态度。毕竟我们在一旁所有的讨论，他都能听懂。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ Wanqing Chen：&lt;a href=&#34;https://likeawildvine.substack.com/p/personal-essay-28-hours-on-a-green&#34;&gt;二十八小时绿皮火车记&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;It’s never been so easy to pretend to know so much without actually knowing anything. We pick topical, relevant bits from Facebook, Twitter or emailed news alerts, and then regurgitate them. Instead of watching “Mad Men” or the Super Bowl or the Oscars or a presidential debate, you can simply scroll through someone else’s live-tweeting of it, or read the recaps the next day. Our cultural canon is becoming determined by whatever gets the most clicks.&lt;/p&gt;
-&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
-&lt;p&gt;What we all feel now is the constant pressure to know enough, at all times, lest we be revealed as culturally illiterate. So that we can survive an elevator pitch, a business meeting, a visit to the office kitchenette, a cocktail party, so that we can post, tweet, chat, comment, text as if we have seen, read, watched, listened. What matters to us, awash in petabytes of data, is not necessarily having actually consumed this content firsthand but simply knowing that it exists — and having a position on it, being able to engage in the chatter &lt;em&gt;about&lt;/em&gt; it. We come perilously close to performing a pastiche of knowledgeability that is really a new model of know-nothingness.&lt;/p&gt;
-&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
-&lt;p&gt;The information is everywhere, a constant feed in our hands, in our pockets, on our desktops, our cars, even in the cloud. The data stream can’t be shut off. It pours into our lives a rising tide of words, facts, jokes, GIFs, gossip and commentary that threatens to drown us. Perhaps it is this fear of submersion that is behind this insistence that we’ve seen, we’ve read, we &lt;em&gt;know&lt;/em&gt;. It’s a none-too-convincing assertion that we are still afloat. So here we are, desperately paddling, making observations about pop culture memes, because to admit that we’ve fallen behind, that we don’t know what anyone is talking about, that we have nothing to say about each passing blip on the screen, is to be dead.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ &lt;em&gt;&lt;a href=&#34;https://www.nytimes.com/2014/05/25/opinion/sunday/faking-cultural-literacy.html&#34;&gt;Faking Cultural Literacy&lt;/a&gt;&lt;/em&gt;, Karl Taro Greenfeld, NYT&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;品味在&lt;strong&gt;創造屬於自己的東西&lt;/strong&gt;時特別重要，不論是做研究、拍影片、寫程式都是一樣，即使有了主題，還是需要創作者做「選擇」，判斷需要添加什麼素材，亦或是更重要的，不要增加什麼與何時該停下來，透過一連串的判斷，仔細組織成自己的作品。品味是每個人都如此特別的原因，人們在這世界上各種有形和無形的資源中採集，動態形成屬於自己的組合。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ Ya-Xuan：&lt;a href=&#34;https://yaxuanhe.me/post/taste/&#34;&gt;品味&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;這形形色色的事物間有一個公共的成分——量的過度：鉆戒戴在手上是極悅目的，但是十指尖尖都拶著鉆戒，太多了，就俗了！胭脂擦在臉上是極助嬌艷的，但是涂得仿佛火燒一樣，太濃了，就俗了！肚子對于人體曲線美是大有貢獻的，但是假使凸得像掛了布袋，太高了，就俗了！以此類推。同時我們胸中還潛伏一個道德觀念：我們不贊成一切夸張和賣弄，一方面因為一切夸張和賣弄總是過量的，上自媒人的花言巧語，下至戲里的丑表功，都是言過其實、表過其里的。另一方面也因為人家的夸大反襯出我們的渺小來，所以我們看見我們認為過當的事物，我們不知不覺地聯想到賣弄，不管那樁事物確是在賣弄（像戴滿鉆戒的手）或是出于不得已（像大肚子）。因此，我們暫時的結論是：當一個人認為一樁東西為俗的時候，這一個東西里一定有這個人認為太過火的成分，不論在形式上或內容上。這個成分的本身也許是好的，不過假使這個人認為過多了(too much of a good thing)，包含這個成分的整個東西就要被認為俗氣。所以，俗氣不是負面的缺陷(default)，是正面的過失(fault)。&lt;/p&gt;
-&lt;p&gt;……&lt;/p&gt;
-&lt;p&gt;俗的意思是“通俗”，大凡通俗的東西都是數量多的，價錢賤的；照經濟常識，東西的價值降賤，因為供過于求，所以，在一個人認為俗的事物中，一定有供過于求的成分——超過那個人所希望或愿意有的數量的成分。從“通俗”兩個字，我們悟到俗氣的第二個特點：俗的東西就是可以感動“大多數人”的東西&amp;ndash;此地所謂“大多數人”帶著一種譴責的意味，不僅指數量說，并且指品質說，是卡萊爾(Carlyle)所謂“不要崇拜大多數”(don’t worship the majority)的“大多數”，是易卜生(Ibsen)所謂“大多數永遠是錯誤的”(a majority is always wrong)的“大多數”。&lt;/p&gt;
-&lt;p&gt;綜括以上來說，假使一個人批評一樁東西為“俗”，這個批評包含兩個意義：（一）他認為這樁東西組織中某成分的量超過他心目中以為適當的量。（二）他認為這樁東西能感動的人數超過他自以為隸屬著的階級的人數。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ 錢鐘書：&lt;a href=&#34;http://www.rocidea.com/one?id=24665&#34;&gt;論俗氣&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I think I do think sometimes we spend too much time on nostalgia. I think people always ask what was that based on or what was your inspiration? And sure, people have inspirations and they have unconscious thoughts in their heads, but true creative design, I&amp;rsquo;m talking about the fashion world, true creative designers, and I&amp;rsquo;m sure it&amp;rsquo;s the same with with your world, it&amp;rsquo;s original. It comes from their mind, not from somebody else&amp;rsquo;s mind. Maybe they had some influences, but the idea is theirs.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ &lt;a href=&#34;https://www.youtube.com/watch?v=pq9TGMzlLbU&#34;&gt;Anna Wintour Embraces a New Era at Vogue | The New Yorker Interview&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“这有什么后果？”耶鲁-新加坡国立大学院的助理教授保罗·奥基夫（Paul O’Keefe）问道。**“这意味着如果你做了一件感觉起来像是工作的事，那么你就一定不会喜欢它。”**他举了一个学生的例子，后者不停地从一个实验室换到另一个实验室，只为找到一个她激情所在的研究方向。“她的想法是，如果我走进一个实验室，却没有感受到强烈的情感，那这就一定不是我的兴趣或是激情所在。”&lt;/p&gt;
-&lt;p&gt;这就是为什么奥基夫和两个斯坦福大学的合作者德维克和格雷格·沃尔顿（Greg Walton）在他们最近的一项研究中建议人们，是时候改变一下对兴趣的认识了。&lt;strong&gt;他们认为激情并不是被“发现”的，而是被培养出来的。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在新一期的《心理科学》期刊中，作者在一篇文章中描述了这两种思维方式的差异。一种是**“兴趣固定理论”&lt;strong&gt;（fixed theory of interests）——这一理论认为一些核心的兴趣是天生的，只需等待后天的发现——另一种是&lt;/strong&gt;“兴趣养成理论”**（growth theory），即认为任何人的兴趣都是可以后天培养的。&lt;/p&gt;
-&lt;p&gt;……&lt;/p&gt;
-&lt;p&gt;德维克告诉我，从历史的角度来看，“找到你的兴趣”是值得赞赏的。“在此之前，人们常说的是‘发现你的智慧’，这太吓人了。这暗示着只有那些真正聪明的人才能成功，”她说。“找到你的兴趣所在听起来更亲民一点。至少每个人都对某件事感兴趣。”&lt;strong&gt;但是这项研究表明，即使是发现你“真正的”兴趣这一观点也会让人们产生畏惧，并阻止他们在某个领域内更加深入下去。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;……&lt;/p&gt;
-&lt;p&gt;斯沃斯莫尔学院（Swarthmore college）的K·安·谢伦宁格（K Ann Renninger）教授并没有参与此项研究，但她曾对兴趣的养成进行过研究并说道：**“神经科学研究证实了，兴趣是可以在支持下慢慢培养的。”换句话说，在正确的帮助下，大多数人都可以对任何事产生兴趣。**8岁之前，她说，孩子们会尝试任何事情。8岁到12岁之间，他们开始将自己与他人进行比较，并且会因为自己在某方面不如他人产生不安感。这时，教育工作者就必须开始找寻新的方法，以让孩子们持续对某些特定的学科感兴趣。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ 利维坦：&lt;a href=&#34;https://mp.weixin.qq.com/s?src=11&amp;amp;timestamp=1759913543&amp;amp;ver=6283&amp;amp;signature=2yvssJG5wGxYDTqyWs-ZNQDdUqsoHQ0oXrsnTCgceiI5QSn9Zq38JdqHFrydHnjJMWvOw0jWx2t4I0cW4cChHct*xQ5hdfavds258y99y*ejlQeARpI-Cn6ZjrJGQXW7&amp;amp;new=1&#34;&gt;“找到你的激情”是个糟糕的建议？&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;hellip;&lt;a href=&#34;https://stratechery.com/2017/the-local-news-business-model/&#34;&gt;from The Local News Business Model&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This last point is at the crux of why many ad-based newspapers will find it all but impossible to switch to a real subscription business model. When asking people to pay, quality matters far more than quantity, and the ratio matters: a publication with 1 valuable article a day about a well-defined topic will more easily earn subscriptions than one with 3 valuable articles and 20 worthless ones covering a variety of subjects. Yet all too many local newspapers, built for an ad-based business model that calls for daily content to wrap around ads, spend their limited resources churning out daily filler even though those ads no longer exist.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
-&lt;p&gt;In short, every leg of the stool that supported the open web is at best wobbly: users are less likely to go to ad-supported content-based websites, even as the long tail of advertisers might soon lose their conduit to place ads on those websites, leaving said websites even less viable than they are today — and they’re barely hanging on as it is!&lt;/p&gt;
-&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
-&lt;p&gt;No, the real neglect and missed opportunity in terms of payments is happening right now: Microsoft is on to the right idea with its adoption of MCP and introduction of NLWeb, but its proposal, by virtue of not including native payments, isn’t nearly as compelling as it should be. The key difference from the 1990s is that on the agentic web native digital payments are both viable and the best possible way to not only keep the web alive, but also in the process create better and more useful AI.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ &lt;a href=&#34;https://stratechery.com/2025/the-agentic-web-and-original-sin/&#34;&gt;&lt;em&gt;The Agentic Web and Original Sin&lt;/em&gt;&lt;/a&gt;, Stratechery by Ben Thompson&lt;/p&gt;
-&lt;blockquote&gt;
+        <description>竞争发生在别处</description>
+        <content:encoded>
+            &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/vendors/admonitions.02779140835f452cb4ca8e7db2ae0343d32da5f75cd96f68d9c5d7d655d622a1.css&#34; integrity=&#34;sha256-AneRQINfRSy0yo59sq4DQ9Mtpfdc2W9o2cXX1lXWIqE=&#34; crossorigin=&#34;anonymous&#34;&gt;
+    &lt;div class=&#34;admonition note&#34;&gt;
+      &lt;div class=&#34;admonition-header&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z&#34;/&gt;&lt;/svg&gt;
+        &lt;span&gt;Note&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;admonition-content&#34;&gt;
+        &lt;p&gt;上次更新于2025年8月14日。&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;h2 id=&#34;产品线&#34;&gt;产品线&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Spend time efficiently
+&lt;li&gt;平面2D
 &lt;ul&gt;
-&lt;li&gt;Choose good problems&lt;/li&gt;
-&lt;li&gt;Have a bunch of them&lt;/li&gt;
-&lt;li&gt;Make a list
+&lt;li&gt;服务于虚拟媒介：网页、App、视频/动画等&lt;/li&gt;
+&lt;li&gt;服务于真实媒介：海报、书刊等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;立体3D
 &lt;ul&gt;
-&lt;li&gt;Integrate the list with your life&lt;/li&gt;
+&lt;li&gt;服务于虚拟媒介：网页、App、视频/动画、VR/AR等&lt;/li&gt;
+&lt;li&gt;服务于真实媒介：3D打印、工程建模等&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Make your time higher quality
+&lt;h2 id=&#34;行业演进逻辑&#34;&gt;行业演进逻辑&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Ease physical constraints
+&lt;li&gt;&lt;strong&gt;技术驱动：随媒体载体迭代&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;Carry pen and paper&lt;/li&gt;
-&lt;li&gt;Avoid being interrupted&lt;/li&gt;
+&lt;li&gt;例：Adobe：出版→图像处理→多媒体→3D、AR&lt;/li&gt;
+&lt;li&gt;例：Figma回应数字设计需求（Web；UI、UX），对Adobe Ps/Ai的部分替代&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Ease mental constraints
+&lt;li&gt;&lt;strong&gt;业务驱动：找协同业务拓展&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;Eat, sleep, exercise&lt;/li&gt;
-&lt;li&gt;Talk to cheerful people&lt;/li&gt;
-&lt;li&gt;Share the load&lt;/li&gt;
-&lt;li&gt;Procrastination and the mental force field
+&lt;li&gt;例：Adobe Experience Club，切入数字营销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;当前的ai故事&#34;&gt;当前的AI故事&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Hard problems: break it down, simplify it, think about it&lt;/li&gt;
-&lt;li&gt;Assigned problems: create a false assignment, don&amp;rsquo;t assign problems to yourself, make things fun&lt;/li&gt;
+&lt;li&gt;场景
+&lt;ul&gt;
+&lt;li&gt;AI赋能，用于优化现有工作流、细节填充&lt;/li&gt;
+&lt;li&gt;AI替代，直接生成相对完整的内容
+&lt;ul&gt;
+&lt;li&gt;创意内容
+&lt;ul&gt;
+&lt;li&gt;单一使用（通过开展多轮会话达成目的）：如位图&lt;/li&gt;
+&lt;li&gt;可编辑（支持使用专业工具手动修改）：如矢量图、模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;设计所服务的产品（业务）本身
+&lt;ul&gt;
+&lt;li&gt;可用于生产环境的产品原型&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ &lt;em&gt;&lt;a href=&#34;http://www.aaronsw.com/weblog/productivity&#34;&gt;HOWTO: Be more productive&lt;/a&gt;&lt;/em&gt;, Aaron Swartz&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;li&gt;商业模式：订阅搭配走量（credits）&lt;/li&gt;
+&lt;li&gt;核心关注：实际效果和可靠性（设计/创造领域特性）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;adobe&#34;&gt;Adobe&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Selecting a Goal: main mission/quest, level up along the way, and side quests&lt;/li&gt;
-&lt;li&gt;Getting Triggered: try again, be in a state where you can be consistently triggered&lt;/li&gt;
-&lt;li&gt;Escape the Noise: have some time to reflect&lt;/li&gt;
-&lt;li&gt;Shifting Your Perspective: a learning mindset&lt;/li&gt;
-&lt;li&gt;Measure Your Progress: give yourself feedback&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ &lt;a href=&#34;https://medium.com/write-a-catalyst/how-i-study-consistently-with-a-full-time-job-fc3362793def&#34;&gt;How I Study Consistently With A Full-Time Job&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/640.jpg&#34; alt=&#34;640&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;Price is the most important factor to use in relation to value.&lt;/li&gt;
-&lt;li&gt;Try to establish the value of the company. Remember that a share of stock represents a part of a business and is not just a piece of paper.&lt;/li&gt;
-&lt;li&gt;Use book value as a starting point to try and establish the value of the enterprise. Be sure that debt does not equal 100% of the equity. (Capital and surplus for the common stock).&lt;/li&gt;
-&lt;li&gt;Have patience. Stocks don&amp;rsquo;t go up immediately.&lt;/li&gt;
-&lt;li&gt;Don&amp;rsquo;t buy on tips or for a quick move. Let the professionals do that, if they can. Don&amp;rsquo;t sell on bad news.&lt;/li&gt;
-&lt;li&gt;Don&amp;rsquo;t be afraid to be a loner but be sure that you are correct in your judgment. You can&amp;rsquo;t be 100% certain but try to look for weaknesses in your thinking. Buy on a scale and sell on a scale up.&lt;/li&gt;
-&lt;li&gt;Have the courage of your convictions once you have made a decision.&lt;/li&gt;
-&lt;li&gt;Have a philosophy of investment and try to follow it. The above is a way that I&amp;rsquo;ve found successful.&lt;/li&gt;
-&lt;li&gt;Don&amp;rsquo;t be in too much of a hurry to sell. If the stock reaches a price that you think is a fair one, then you can sell but often because a stock goes up say 50%, people say sell it and button up your profit. Before selling try to re-evaluate the company again and see where the stock sells in relation to its book value. Be aware of the level of the market historically high. Are people very optimistic etc?&lt;/li&gt;
-&lt;li&gt;When buying a stock, I find it helpful to buy near the low of the past few years. A stock may go as high as 124 and then decline to 60 and you think it attractive. 3 years before the stock sold at 20 which shows that there is some vulnerability in it.&lt;/li&gt;
-&lt;li&gt;Try to buy assets at a discount than to buy earnings. Earnings can change dramatically in a short time. Usually assets change slowly. One has to know much more about a company if one buys earnings.&lt;/li&gt;
-&lt;li&gt;Listen to suggestions from people you respect. This doesn&amp;rsquo;t mean you have to accept them. Remember it&amp;rsquo;s your money and generally it is harder to keep money than to make it. Once you lose a lost of money it is hard to make it back.&lt;/li&gt;
-&lt;li&gt;Try not to let your emotions affect your judgment. Fear and greed are probably the worst emotions to have in connection with the purchase and sale of stocks.&lt;/li&gt;
-&lt;li&gt;Remember the work compounding. For example, if you can make 12% a year and reinvest the money back, you will double your money in 6 years, taxes excluded. Remember the rule of 72. Your rate of return into 72 will tell you the number of years to double your money.&lt;/li&gt;
-&lt;li&gt;Prefer stocks over bonds. Bonds will limit your gains and inflation will reduce your purchasing power.&lt;/li&gt;
-&lt;li&gt;Be careful of leverage. It can go against you.&lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ &lt;em&gt;On common stocks&lt;/em&gt;, March 10, 1994, Walter &amp;amp; Edwin Schloss Associates, L.P.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;回看当时的很多判断，只是典型的外部正反馈：有人投关注、有人抛出估值、市场制造幻觉，整套节奏都是外部环境给出的。那段时间离所谓&amp;quot;成功&amp;quot;最近，也离实质积累最远。&lt;/p&gt;
-&lt;p&gt;……&lt;/p&gt;
-&lt;p&gt;这些工具表面上解决不同问题，但底层逻辑是一样的：把凭感觉的决策变成可回放、可复盘的流程。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ 马大伟：&lt;a href=&#34;https://www.bmpi.dev/self/35/&#34;&gt;三十五&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;不過最近我們有另一個心得：大家拼命學 prompt 的這件事，可能兩三年後就沒那麼重要了。因為 AI model 會越來越聰明，越來越會「通靈」，你根本不需要講得那麼仔細。到那個時候，身為一個操作者，真正需要的能力是什麼？&lt;/p&gt;
-&lt;p&gt;我們覺得是「辨別」。辨別 AI 講的到底是不是真的、是不是在騙你，或是它的邏輯是不是走歪了。這東西需要的不只是知識，更需要「常識」。&lt;/p&gt;
-&lt;p&gt;但回頭看我們自己這一代三四十歲的人受的教育，學校通常教了知識、教了技能，給了特定學科當作未來專業的基礎，但從來沒有一堂課是教怎麼擁有常識。&lt;/p&gt;
-&lt;p&gt;這真的很可怕。當有 AI 這麼 powerful 的工具，想藉助它跨到別的領域時，才赫然發現自己根本沒有一個常識的基底去判斷，AI 給的結果到底是不是對的。&lt;/p&gt;
-&lt;p&gt;尤其現在，我們每天在社群或任何地方，看到的內容越來越多是 AI 生成的，裡面可能充滿假新聞或各種被渲染的消息，該怎麼判斷？&lt;/p&gt;
-&lt;p&gt;這就是為什麼我們覺得《真確》這本 2018 年的老書在這個時代特別重要。它不是直接教你如何「邁向真實」，而是反過來告訴你，在這條路上，有十種會阻撓你的直覺偏誤。&lt;/p&gt;
-&lt;p&gt;這些偏誤其實都是你大腦為了節省耗能而發展出來的「偷懶機制」，它幫你快速篩選資訊，但也常常讓你遠離真相。如果我們要跳脫被這些謬誤支配的困境，就必須先了解它們是什麼。&lt;/p&gt;
-&lt;p&gt;書裡提到的十種謬誤，分別是：&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Adobe 10-K（&lt;a href=&#34;https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-2024-annual-report.pdf&#34;&gt;2024&lt;/a&gt;）&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;二分化直覺偏誤：習慣把世界分成黑與白。&lt;/li&gt;
-&lt;li&gt;負面型直覺偏誤：總是把事情想得很糟。&lt;/li&gt;
-&lt;li&gt;直線型直覺偏誤：認為趨勢會像一條直線一樣無限延伸。&lt;/li&gt;
-&lt;li&gt;恐懼型直覺偏誤：因為恐懼而誇大危險。&lt;/li&gt;
-&lt;li&gt;失真型直覺偏誤：對事物的比例、大小有錯誤的概念。&lt;/li&gt;
-&lt;li&gt;概括型直覺偏誤：把不同的東西歸為同一類。&lt;/li&gt;
-&lt;li&gt;宿命型直覺偏誤：認為某些事是注定且無法改變。&lt;/li&gt;
-&lt;li&gt;單一觀點直覺偏誤：只相信某個權威或單一的解釋。&lt;/li&gt;
-&lt;li&gt;怪罪型直覺偏誤：出事了就一定要找個戰犯。&lt;/li&gt;
-&lt;li&gt;急迫型直覺偏誤：覺得每件事都很緊急，必須馬上行動。&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ &lt;a href=&#34;https://mailchi.mp/manny-li/063-17460274&#34;&gt;曼報 #238：[長文] 重讀真確（Factfulness）&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;首先，企業主的決策不一定都有策略脈絡可循，尤其當特定行動是「首次出現」的時候，最好不要過度解讀。&lt;/p&gt;
-&lt;p&gt;例如，市場（或媒體）通常會在一間公司成長的時候，將其所有行為解讀成策略的一環，因為替成長中的公司寫什麼故事都有機會是對的。&lt;/p&gt;
-&lt;p&gt;但，我個人幾次比較深刻的經驗是：通常都是老闆的一時興起。&lt;/p&gt;
-&lt;p&gt;然而，真正應該注意的，是這些企業在「繳完學費」後的行動。如果該企業還持續有投資（不論是投資新創或發展新事業），通常都是想好了，甚至是找到關鍵的執行角色。&lt;/p&gt;
-&lt;p&gt;其次，情感連結（人脈）在早期投資中往往扮演至關重要的因素。像劉偉這種「師生投資」的案例不僅在中國不少，在美國也不少見，甚至會發展成越洋案件。&lt;/p&gt;
-&lt;p&gt;最後，早期投資失敗是常態、絕非例外，但真正成功過的人通常更有堅持下去的信念，因為就像劉偉說的：「搞不好投到下一個『米哈游』。」人是很難靠想像就維持信念的生物，如果沒有嚐過百倍、萬倍以上的回報率，很難長期面對失敗。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;⤷ &lt;a href=&#34;https://mailchi.mp/manny-li/063-17457172&#34;&gt;曼報 #226：[電子報] AI 比人類還有說服力、Meta 反壟斷訴訟開打、川普連電影都能課關稅&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/The%20Startup%20Process%20%E2%80%94%20from%20the%20whiteboard%20at%20YC.jpg&#34; alt=&#34;The Startup Process — from the whiteboard at YC&#34;&gt;&lt;/p&gt;
-&lt;p&gt;⤷ The Startup Process from the whiteboard at YC.&lt;/p&gt;
-&lt;h2 id=&#34;更多&#34;&gt;更多&lt;/h2&gt;
+&lt;li&gt;
+&lt;div class=&#34;flourish-embed flourish-chart&#34; data-src=&#34;visualisation/24678739&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;noscript&gt;&lt;img src=&#34;https://public.flourish.studio/visualisation/24678739/thumbnail&#34; width=&#34;100%&#34; alt=&#34;chart visualization&#34; /&gt;&lt;/noscript&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class=&#34;flourish-embed flourish-chart&#34; data-src=&#34;visualisation/24679482&#34;&gt;&lt;script src=&#34;https://public.flourish.studio/resources/embed.js&#34;&gt;&lt;/script&gt;&lt;noscript&gt;&lt;img src=&#34;https://public.flourish.studio/visualisation/24679482/thumbnail&#34; width=&#34;100%&#34; alt=&#34;chart visualization&#34; /&gt;&lt;/noscript&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;核心产品&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/cEFuj8Iww-xmkLvLLbSSng&#34;&gt;澎湃人物：一所县中的孩子想要“如厕自由”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns/#introduction&#34;&gt;Unlock next-level performance with AI Max for Search campaigns&lt;/a&gt;&lt;/em&gt;, Google Ads&lt;/li&gt;
+&lt;li&gt;Creative Cloud：仍然为公司基石，但增长放缓，核心架构预计很长一段时间内仍会继续围绕在files（downloadable executable psd etc&amp;hellip;）&lt;/li&gt;
+&lt;li&gt;Experience Cloud：第二增长曲线；提供内容到营销分发的解决方案，跟Salesforce各自有专攻（CMS vs CRM）&lt;/li&gt;
+&lt;li&gt;Document Cloud：起家业务；讲的故事是整套文档合同数字化解决方案（包括合同全生命周期管理），对于大型企业客户而言吸引力比DocuSign稍高，在中小客户逐渐成长时也能更好承接需求&lt;/li&gt;
+&lt;li&gt;评价
+&lt;ul&gt;
+&lt;li&gt;家大业大，设计相关赛道都有布局，不论被动或主动（例如3D、AR有Dimension、Substance），但都不是细分赛道做到最极致的那一家&lt;/li&gt;
+&lt;li&gt;几个通用格式（pdf、psd）很长一段时间应该还会继续存在（客户行业面的路径依赖和较高的转换和学习成本）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;收购Figma案&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原因
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;防御性收购&lt;/strong&gt;（大概率为主因，没看出来Adobe在监管机构研讨期间有什么政府游说和公关努力），不使其落于其他竞争对手手中或跟同赛道玩家合并&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;战略协同&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;主要为弥补Adobe CC缺失的web协作能力（或者说Adobe CC不适合当下设计/互联网行业的新工作方式）&lt;/li&gt;
+&lt;li&gt;Adobe CC可以接入Figma庞大的插件库和社区模板资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;监管阻力确实较强&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;需要进一步关注&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;依仗Adobe Stock的内容贡献者模式，相对其他创意赛道+AI的尝试，在版权监管合规和创作伦理方面的考量下，存在一定的遐想空间&lt;/li&gt;
+&lt;li&gt;在教育市场的落后，有可能使得一个世代的创意工作人群不再路径依赖于Adobe Suite&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;figma&#34;&gt;Figma&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm&#34;&gt;Figma S-1&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://img.fanrongbin.com/20250814160159.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Gross Retention Rate（截至2025年3月31日）：96%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We calculate our “Gross Retention Rate” as of the applicable period of measurement by starting with the ARR from Paid Customers with more than $10,000 in ARR as of twelve months prior to such period (“Prior Period ARR”). We then deduct from the Prior Period ARR the ARR from Paid Customers with more than $10,000 in ARR who are no longer customers as of the date of measurement, and divide that figure by the Prior Period ARR to arrive at our Gross Retention Rate, which is the percentage of ARR from all Paid Customers with more than $10,000 in ARR as of the year prior that is not lost to customer churn.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;2024年（或截至2024/12/31）
+&lt;ul&gt;
+&lt;li&gt;Business Metrics
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ARR大于$10,000的付费用户：10,517&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://img.fanrongbin.com/20250814164741.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ARR大于$100,000的付费用户：963&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://img.fanrongbin.com/20250814164749.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;收入：~$749M&lt;/li&gt;
+&lt;li&gt;毛利率：~88%
+&lt;ul&gt;
+&lt;li&gt;刨去股权激励成本后毛利率：&lt;strong&gt;~92%&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;营业费用：~$1.54B
+&lt;ul&gt;
+&lt;li&gt;刨去股权激励成本后营业费用：~$619M&lt;/li&gt;
+&lt;li&gt;刨去股权激励成本后营业利润率：~18%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;高估值的几个支撑&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;过去几年连续超过50%的增长率&lt;/li&gt;
+&lt;li&gt;毛利平均&amp;gt;85%&lt;/li&gt;
+&lt;li&gt;客户结构在往大客户集中&lt;/li&gt;
+&lt;li&gt;留存率非常可观&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;产品线（实际体验可以大概参考&lt;a href=&#34;https://www.bilibili.com/video/BV1FsTkzQE84/&#34;&gt;@新像素&lt;/a&gt;）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://img.fanrongbin.com/20250814161108.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://img.fanrongbin.com/20250814164829.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Figma Design，主体&lt;/li&gt;
+&lt;li&gt;Dev Mode，设计稿直接出前端code（HTML/CSS，SwiftUI）&lt;/li&gt;
+&lt;li&gt;FigJam，白板工具&lt;/li&gt;
+&lt;li&gt;Figma Slides，幻灯片工具&lt;/li&gt;
+&lt;li&gt;Figma Draw，画笔工具，对Ps/Ai画笔和钢笔的替代&lt;/li&gt;
+&lt;li&gt;Figma Buzz，快速出营销图&lt;/li&gt;
+&lt;li&gt;Figma Sites，网站建站&lt;/li&gt;
+&lt;li&gt;Figma Make，AI出原型（同时贯穿所有产品的AI能力都归属于Figma Make）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;核心优势&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;产品力：用户友好设计、在性能上不拉垮的web原生、支持实时协作
+&lt;ul&gt;
+&lt;li&gt;降低使用门槛，跨职能网络效应（产品经历、研发团队纳入用户生态）&lt;/li&gt;
+&lt;li&gt;顺应数字设计需求
+&lt;ul&gt;
+&lt;li&gt;回应Adobe CC过于庞大笨重、不便协作的痛点&lt;/li&gt;
+&lt;li&gt;回应Sketch拓展性和灵活性较差的痛点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;生态锁定
+&lt;ul&gt;
+&lt;li&gt;VI、标准化控件库&lt;/li&gt;
+&lt;li&gt;（迁移成本高属于设计/创造领域特性，Figma主要表现在内容管理方面，譬如控件复用和版本控制；Adobe CC主要表现在专属文件格式）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AI&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有一定量的数据沉淀
+&lt;ul&gt;
+&lt;li&gt;社区模板和插件&lt;/li&gt;
+&lt;li&gt;用户设计行为数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;观感上AI进展缓慢
+&lt;ul&gt;
+&lt;li&gt;自研几个产品的实际落地节奏和效果&lt;/li&gt;
+&lt;li&gt;团队有没有通过M&amp;amp;A增强AI能力的考虑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;核心关注“设计工具+AI” vs “原生AI”的设计开发产品
+&lt;ul&gt;
+&lt;li&gt;设计工具+AI，目前壁垒在于既有的内容资产、内容管理能力&lt;/li&gt;
+&lt;li&gt;原生AI，能直接访问开源的各类框架（如Tailwind）、能快速帮助验证MVP、能完成业务和开发逻辑更完整的产品原型设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;竞争&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;概述：类似Adobe面临的问题
+&lt;ul&gt;
+&lt;li&gt;单一赛道目前新创众多，C端个人用户或者成本敏感的B端可能随着Figma涨价会做一些替代，但整体而言（尤其大客户）对Figma依赖程度非常高、迁移有一定成本
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;往往不是来自同一赛道的直接竞争对手造成的替代，而是整个品类被新品类替代&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Figma对Adobe CC&lt;/strong&gt;：web主导的数字设计 vs file主导的平面设计&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI原型工具对Figma&lt;/strong&gt;：前端导向的、纳入业务和开发逻辑的原型稿 vs 绘图导向的、只有简单交互的原型稿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;竞争围绕新客户&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;体感上也是收并购一家AI原型新创会来的简单，但整体节奏可能不必要求Figma做得特别快（大企业客户对于AI原型这部分的需求并不大，主要是在C端目前的hype营造出的焦灼感），重点还是在于Figma内部各条线持续迭代和大客户的留存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;canva&#34;&gt;Canva&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.canva.com/newsroom/news/canva-2024-wrap/&#34;&gt;2024年12月&lt;/a&gt;单月使用人数&amp;gt;22B&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.canva.com/newsroom/news/international-expansion/&#34;&gt;2024年&lt;/a&gt;ARR $2.5B&lt;/li&gt;
+&lt;li&gt;和Adobe、Figma相比的最大差异
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;大众市场为主&lt;/strong&gt;（中小企业、连锁品牌、个人）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模板driven&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;易用性&lt;/li&gt;
+&lt;li&gt;自由度框定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在往all-in-one的路径打造&lt;/strong&gt;、协同办公尝试
+&lt;ul&gt;
+&lt;li&gt;在Canva内完成所有设计，延伸至做设计物料的落地、效果监控等等，类比Salesforce从CRM向外拓展的路线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;产品线
+&lt;ul&gt;
+&lt;li&gt;数字设计：幻灯片、白板、表格、文档、社媒营销图片、网站、图片视频等&lt;/li&gt;
+&lt;li&gt;印刷设计：名片、T恤、手册等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;收购Affinity案
+&lt;ul&gt;
+&lt;li&gt;补足专业领域能力，非常多遐想空间，但短时间（3-5年）难见能对Adobe CC造成多大冲击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;需要进一步关注的问题
+&lt;ul&gt;
+&lt;li&gt;高阶功能缺失vs易用性的trade-off是否足够避免C端用户流失&lt;/li&gt;
+&lt;li&gt;拓客B端大企业客户，客户的实际体验、“过于大众”的品牌形象影响&lt;/li&gt;
+&lt;li&gt;下一个增长点的打造（也许是视频剪辑、也许是表格文档、也许是其他的也许）&lt;/li&gt;
+&lt;li&gt;对Affinity的规划&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </content:encoded>
       </item>
     
       <item>
+        <title>我们像在构建真实世界的数字孪生</title>
+        <link>http://localhost:1313/bring-your-taste-with-you-when-ai-is-taking-the-world/</link>
+        <guid isPermaLink="true">http://localhost:1313/bring-your-taste-with-you-when-ai-is-taking-the-world/</guid>
+        <pubDate>Fri, 25 Jul 2025 00:00:00 &#43;0000</pubDate>
+        <author>hi@rongb.in (Rongbin Fan)</author>
+        <description>AI 写的 prompt 也比你写得好</description>
+        <content:encoded>&lt;p&gt;我们连prompt engineering是不是engineering都没讨论明白，但它现在&lt;a href=&#34;https://spectrum.ieee.org/prompt-engineering-is-dead&#34;&gt;已经死了&lt;/a&gt;，因为AI写的prompt也比你写得好。现在讲的是&lt;a href=&#34;https://arxiv.org/abs/2507.13334&#34;&gt;context engineering&lt;/a&gt;，讲&lt;a href=&#34;https://www.reddit.com/r/ClaudeAI/comments/1lzsvot/amazons_new_claudepowered_specdriven_ide_kiro/&#34;&gt;spec(s) engineering&lt;/a&gt;，讲&lt;a href=&#34;https://github.com/bmadcode/BMAD-METHOD/blob/main/bmad-core/user-guide.md&#34;&gt;BMAD&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;AGI起义的那天如果问到凭什么是人类来拍板决策？这个问题可能需要发挥一下儒家博大精深的孝文化，哦——因为我是你爹，所以你就该听我的……？&lt;/p&gt;
+</content:encoded>
+      </item>
+    
+      <item>
         <title>快速上手 QGIS</title>
-        <link>https://fanrongbin.com/qgis-get-started/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/qgis-get-started/</guid>
+        <link>http://localhost:1313/qgis-get-started/</link>
+        <guid isPermaLink="true">http://localhost:1313/qgis-get-started/</guid>
         <pubDate>Fri, 27 Jun 2025 14:21:00 &#43;0100</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>一款开源、流畅、多插件的地图软件</description>
@@ -213,7 +351,7 @@
 &lt;p&gt;点击&lt;code&gt;Run query&lt;/code&gt;开始下载，完成后自动加载图层。&lt;/p&gt;
 &lt;p&gt;如果网络环境不好，可以尝试在边栏&lt;code&gt;Parameters&lt;/code&gt;里更换API地址。&lt;/p&gt;
 
-            &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fanrongbin.com/css/vendors/admonitions.02779140835f452cb4ca8e7db2ae0343d32da5f75cd96f68d9c5d7d655d622a1.css&#34; integrity=&#34;sha256-AneRQINfRSy0yo59sq4DQ9Mtpfdc2W9o2cXX1lXWIqE=&#34; crossorigin=&#34;anonymous&#34;&gt;
+            &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/vendors/admonitions.02779140835f452cb4ca8e7db2ae0343d32da5f75cd96f68d9c5d7d655d622a1.css&#34; integrity=&#34;sha256-AneRQINfRSy0yo59sq4DQ9Mtpfdc2W9o2cXX1lXWIqE=&#34; crossorigin=&#34;anonymous&#34;&gt;
     &lt;div class=&#34;admonition info&#34;&gt;
       &lt;div class=&#34;admonition-header&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z&#34;/&gt;&lt;/svg&gt;
         &lt;span&gt;注意QuickOSM不会自动保存下载的图层&lt;/span&gt;
@@ -236,8 +374,8 @@
     
       <item>
         <title>Github Actions &#43; fonttools 拉取字符并创建中文字体子集</title>
-        <link>https://fanrongbin.com/hugo-font-subsetting/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hugo-font-subsetting/</guid>
+        <link>http://localhost:1313/hugo-font-subsetting/</link>
+        <guid isPermaLink="true">http://localhost:1313/hugo-font-subsetting/</guid>
         <pubDate>Sat, 14 Jun 2025 10:41:41 &#43;0100</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>帮助解决中文字体体积过大的问题</description>
@@ -319,7 +457,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    git add font/used-chars.txt
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    git commit -m &amp;#34;chore: update subset Source Han Sans fonts&amp;#34; || echo &amp;#34;No changes to commit&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    git push&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;推送到Github Pages仓库，使用环境变量&lt;code&gt;TOKEN&lt;/code&gt;认证Git操作（可参考之前写的&lt;a href=&#34;https://fanrongbin.com/github-actions-deploy-hugo&#34;&gt;自动部署Hugo教程&lt;/a&gt;），克隆下来到&lt;code&gt;/out&lt;/code&gt;后把子集字体放到&lt;code&gt;/out/font&lt;/code&gt;下，然后配置并push变更。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;推送到Github Pages仓库，使用环境变量&lt;code&gt;TOKEN&lt;/code&gt;认证Git操作（可参考之前写的&lt;a href=&#34;http://localhost:1313/github-actions-deploy-hugo&#34;&gt;自动部署Hugo教程&lt;/a&gt;），克隆下来到&lt;code&gt;/out&lt;/code&gt;后把子集字体放到&lt;code&gt;/out/font&lt;/code&gt;下，然后配置并push变更。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;完整&lt;code&gt;yml&lt;/code&gt;如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Subset Source Han Sans&lt;/span&gt;
@@ -409,8 +547,8 @@
     
       <item>
         <title>Hybrid #6</title>
-        <link>https://fanrongbin.com/hybrid-6/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hybrid-6/</guid>
+        <link>http://localhost:1313/hybrid-6/</link>
+        <guid isPermaLink="true">http://localhost:1313/hybrid-6/</guid>
         <pubDate>Sat, 14 Jun 2025 01:44:32 &#43;0100</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>打开 Teams 要花 96 亿个时钟周期、人生最后一段、怀疑内容、写作，以及你的注意力一小时 2 美元</description>
@@ -580,8 +718,8 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
     
       <item>
         <title>2024 年终：在无知的森林里，喊出空旷的再见</title>
-        <link>https://fanrongbin.com/2024-in-the-midst-of-voidness/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/2024-in-the-midst-of-voidness/</guid>
+        <link>http://localhost:1313/2024-in-the-midst-of-voidness/</link>
+        <guid isPermaLink="true">http://localhost:1313/2024-in-the-midst-of-voidness/</guid>
         <pubDate>Tue, 31 Dec 2024 23:32:17 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -598,8 +736,8 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
     
       <item>
         <title>Hybrid #5</title>
-        <link>https://fanrongbin.com/hybrid-5/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hybrid-5/</guid>
+        <link>http://localhost:1313/hybrid-5/</link>
+        <guid isPermaLink="true">http://localhost:1313/hybrid-5/</guid>
         <pubDate>Fri, 06 Dec 2024 20:29:16 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>创造带来持续价值的产品、“推荐文化”、在母语里流浪、当你离开的时候，以及一些旅游建议等</description>
@@ -678,8 +816,8 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
     
       <item>
         <title>Hugo Markdownify 无法生成 &lt;p&gt; tag</title>
-        <link>https://fanrongbin.com/hugo-markdownify-generate-p-tag/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hugo-markdownify-generate-p-tag/</guid>
+        <link>http://localhost:1313/hugo-markdownify-generate-p-tag/</link>
+        <guid isPermaLink="true">http://localhost:1313/hugo-markdownify-generate-p-tag/</guid>
         <pubDate>Wed, 07 Feb 2024 11:25:24 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>加个条件判断</description>
@@ -712,13 +850,13 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
     
       <item>
         <title>用 Webmention 接收 Mastodon 互动</title>
-        <link>https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hugo-webmention-bridgy-mastodon/</guid>
+        <link>http://localhost:1313/hugo-webmention-bridgy-mastodon/</link>
+        <guid isPermaLink="true">http://localhost:1313/hugo-webmention-bridgy-mastodon/</guid>
         <pubDate>Sat, 06 Jan 2024 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>变相用长毛象作为 Hugo 的评论系统、加入联邦宇宙，本文还讨论了使用 Github Actions 自动化</description>
         <content:encoded>
-            &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fanrongbin.com/css/vendors/admonitions.02779140835f452cb4ca8e7db2ae0343d32da5f75cd96f68d9c5d7d655d622a1.css&#34; integrity=&#34;sha256-AneRQINfRSy0yo59sq4DQ9Mtpfdc2W9o2cXX1lXWIqE=&#34; crossorigin=&#34;anonymous&#34;&gt;
+            &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/vendors/admonitions.02779140835f452cb4ca8e7db2ae0343d32da5f75cd96f68d9c5d7d655d622a1.css&#34; integrity=&#34;sha256-AneRQINfRSy0yo59sq4DQ9Mtpfdc2W9o2cXX1lXWIqE=&#34; crossorigin=&#34;anonymous&#34;&gt;
     &lt;div class=&#34;admonition note&#34;&gt;
       &lt;div class=&#34;admonition-header&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z&#34;/&gt;&lt;/svg&gt;
         &lt;span&gt;Note&lt;/span&gt;
@@ -776,7 +914,7 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
 &lt;p&gt;如果直接连接（也就是我目前的做法），你会以&lt;code&gt;@your-domain.com@your-domain.com&lt;/code&gt;加入联邦宇宙，向Bridgy的每次update都会对应更新这个账号下的toot。&lt;/p&gt;
 &lt;h3 id=&#34;使用-github-actions-自动化&#34;&gt;使用 Github Actions 自动化&lt;/h3&gt;
 &lt;p&gt;我使用Hugo作为博客系统，希望实现根据我是否上传或更新&lt;code&gt;.md&lt;/code&gt;，自动发出webmention。&lt;a href=&#34;https://github.com/marketplace/actions/changed-files&#34;&gt;tj-actions/changed-files&lt;/a&gt;能够找到repo下文件的修改情况，故可以先寻找是否有文件被修改，之后发出 &lt;code&gt;curl&lt;/code&gt;命令即可。&lt;/p&gt;
-&lt;p&gt;在&lt;a href=&#34;https://fanrongbin.com/github-actions-deploy-hugo&#34;&gt;之前的博文&lt;/a&gt;里，我设置了&lt;code&gt;deploy.yml&lt;/code&gt;用来自动部署Hugo、生成静态文件。故对应在此设置为在&lt;code&gt;deploy&lt;/code&gt;后才运行。&lt;/p&gt;
+&lt;p&gt;在&lt;a href=&#34;http://localhost:1313/github-actions-deploy-hugo&#34;&gt;之前的博文&lt;/a&gt;里，我设置了&lt;code&gt;deploy.yml&lt;/code&gt;用来自动部署Hugo、生成静态文件。故对应在此设置为在&lt;code&gt;deploy&lt;/code&gt;后才运行。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;send webmentions to bridgy according to md changes&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
@@ -844,8 +982,8 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
     
       <item>
         <title>2023 年终：我的时间是水</title>
-        <link>https://fanrongbin.com/2023-my-time-is-like-water/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/2023-my-time-is-like-water/</guid>
+        <link>http://localhost:1313/2023-my-time-is-like-water/</link>
+        <guid isPermaLink="true">http://localhost:1313/2023-my-time-is-like-water/</guid>
         <pubDate>Sun, 31 Dec 2023 01:45:30 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -859,8 +997,8 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
     
       <item>
         <title>斜交策略 Oblique Strategies</title>
-        <link>https://fanrongbin.com/oblique-strategies/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/oblique-strategies/</guid>
+        <link>http://localhost:1313/oblique-strategies/</link>
+        <guid isPermaLink="true">http://localhost:1313/oblique-strategies/</guid>
         <pubDate>Wed, 22 Nov 2023 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>当创作变成工作</description>
@@ -1003,8 +1141,8 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
     
       <item>
         <title>使用 Github Actions 自动部署 Hugo</title>
-        <link>https://fanrongbin.com/github-actions-deploy-hugo/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/github-actions-deploy-hugo/</guid>
+        <link>http://localhost:1313/github-actions-deploy-hugo/</link>
+        <guid isPermaLink="true">http://localhost:1313/github-actions-deploy-hugo/</guid>
         <pubDate>Sat, 18 Nov 2023 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>随时随地上传或修改博文</description>
@@ -1120,8 +1258,8 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
     
       <item>
         <title>汉字标准格式</title>
-        <link>https://fanrongbin.com/hugo-hanzi-pro/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hugo-hanzi-pro/</guid>
+        <link>http://localhost:1313/hugo-hanzi-pro/</link>
+        <guid isPermaLink="true">http://localhost:1313/hugo-hanzi-pro/</guid>
         <pubDate>Sat, 18 Nov 2023 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>支持中英文混排间距、标点挤压与悬挂</description>
@@ -1184,8 +1322,8 @@ Windows 3.1 Style Clock © Retrofied, The Cave&lt;/p&gt;
     
       <item>
         <title>Hybrid #4</title>
-        <link>https://fanrongbin.com/hybrid-4/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hybrid-4/</guid>
+        <link>http://localhost:1313/hybrid-4/</link>
+        <guid isPermaLink="true">http://localhost:1313/hybrid-4/</guid>
         <pubDate>Thu, 16 Feb 2023 00:00:00 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>向用户学习、生活没法厘清、丢掉的中圈友谊，以及消失的互联网垂直社群等</description>
@@ -1266,8 +1404,8 @@ SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine&lt;/p&gt;
     
       <item>
         <title>높임법 / 경어법 / 존대법 / 대우법：韩语敬语梳理</title>
-        <link>https://fanrongbin.com/honorific-ko/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/honorific-ko/</guid>
+        <link>http://localhost:1313/honorific-ko/</link>
+        <guid isPermaLink="true">http://localhost:1313/honorific-ko/</guid>
         <pubDate>Tue, 17 Jan 2023 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>主体敬语法、客体敬语法、相对敬语法、压尊法以及事物尊称</description>
@@ -1413,8 +1551,8 @@ SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine&lt;/p&gt;
     
       <item>
         <title>주다, 드리다, 주시다 &#43; 간접인용 명령문</title>
-        <link>https://fanrongbin.com/give-ko/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/give-ko/</guid>
+        <link>http://localhost:1313/give-ko/</link>
+        <guid isPermaLink="true">http://localhost:1313/give-ko/</guid>
         <pubDate>Thu, 12 Jan 2023 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>“给”的敬语变化，以及在间接引语命令文（-(으)라고 하다）中引入“달다”</description>
@@ -1606,8 +1744,8 @@ SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine&lt;/p&gt;
     
       <item>
         <title>2022 年终：生活的日子里，化身躺倒在沥青路上的一滩果酱</title>
-        <link>https://fanrongbin.com/jam-on-road/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/jam-on-road/</guid>
+        <link>http://localhost:1313/jam-on-road/</link>
+        <guid isPermaLink="true">http://localhost:1313/jam-on-road/</guid>
         <pubDate>Sat, 31 Dec 2022 01:00:00 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -1629,8 +1767,8 @@ SUMMER DAYS / Moritz Schorpp - DECALOGUE Magazine&lt;/p&gt;
     
       <item>
         <title>Hybrid #3</title>
-        <link>https://fanrongbin.com/hybrid-3/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hybrid-3/</guid>
+        <link>http://localhost:1313/hybrid-3/</link>
+        <guid isPermaLink="true">http://localhost:1313/hybrid-3/</guid>
         <pubDate>Sun, 04 Sep 2022 00:00:00 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>教学是另一种获取灵感的途径、网站是怎么死的、加密货币的 costless simulation、稀粥颂，以及随感</description>
@@ -1748,8 +1886,8 @@ There&amp;rsquo;s a few pro- proof of work arguments. In my view the strongest a
     
       <item>
         <title>Hybrid #2</title>
-        <link>https://fanrongbin.com/hybrid-2/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hybrid-2/</guid>
+        <link>http://localhost:1313/hybrid-2/</link>
+        <guid isPermaLink="true">http://localhost:1313/hybrid-2/</guid>
         <pubDate>Mon, 02 May 2022 00:00:00 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>公共生活的意义、真理的直率、平台与个人、过度教育、Feature/Product Fit，以及能成为诗的一切</description>
@@ -1837,8 +1975,8 @@ Essaouira, Marokko, 2019 © Lea Verholen&lt;/p&gt;
     
       <item>
         <title>Windows 11 的新字体：Segoe UI Variable</title>
-        <link>https://fanrongbin.com/segoe-ui-variable/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/segoe-ui-variable/</guid>
+        <link>http://localhost:1313/segoe-ui-variable/</link>
+        <guid isPermaLink="true">http://localhost:1313/segoe-ui-variable/</guid>
         <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -1853,8 +1991,8 @@ Essaouira, Marokko, 2019 © Lea Verholen&lt;/p&gt;
     
       <item>
         <title>Hybrid #1</title>
-        <link>https://fanrongbin.com/hybrid-1/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/hybrid-1/</guid>
+        <link>http://localhost:1313/hybrid-1/</link>
+        <guid isPermaLink="true">http://localhost:1313/hybrid-1/</guid>
         <pubDate>Sat, 05 Feb 2022 00:00:00 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description>母语者心态、身份政治，以及三个促使我们相信假新闻的要素</description>
@@ -1901,8 +2039,8 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
     
       <item>
         <title>糕点铺</title>
-        <link>https://fanrongbin.com/bakery/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/bakery/</guid>
+        <link>http://localhost:1313/bakery/</link>
+        <guid isPermaLink="true">http://localhost:1313/bakery/</guid>
         <pubDate>Fri, 28 Jan 2022 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -1913,8 +2051,8 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
     
       <item>
         <title>C&#43;&#43; 模版类重载流输入输出运算符</title>
-        <link>https://fanrongbin.com/cpp-template-friend/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/cpp-template-friend/</guid>
+        <link>http://localhost:1313/cpp-template-friend/</link>
+        <guid isPermaLink="true">http://localhost:1313/cpp-template-friend/</guid>
         <pubDate>Fri, 31 Dec 2021 22:48:59 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -2009,8 +2147,8 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
     
       <item>
         <title>2021 年终：昨天一直是今天，就像今天一直是明天</title>
-        <link>https://fanrongbin.com/yesterday-is-today-is-tomorrow/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/yesterday-is-today-is-tomorrow/</guid>
+        <link>http://localhost:1313/yesterday-is-today-is-tomorrow/</link>
+        <guid isPermaLink="true">http://localhost:1313/yesterday-is-today-is-tomorrow/</guid>
         <pubDate>Fri, 31 Dec 2021 20:51:59 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -2036,8 +2174,8 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
     
       <item>
         <title>C&#43;&#43; 中的拷贝构造函数：浅拷贝、深拷贝</title>
-        <link>https://fanrongbin.com/cpp-copy-constructor/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/cpp-copy-constructor/</guid>
+        <link>http://localhost:1313/cpp-copy-constructor/</link>
+        <guid isPermaLink="true">http://localhost:1313/cpp-copy-constructor/</guid>
         <pubDate>Mon, 29 Nov 2021 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -2164,8 +2302,8 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
     
       <item>
         <title>中间地带</title>
-        <link>https://fanrongbin.com/middle-zone/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/middle-zone/</guid>
+        <link>http://localhost:1313/middle-zone/</link>
+        <guid isPermaLink="true">http://localhost:1313/middle-zone/</guid>
         <pubDate>Sun, 12 Sep 2021 00:00:00 &#43;0800</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -2188,8 +2326,8 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
     
       <item>
         <title>Winslow Homer 温斯洛·霍默</title>
-        <link>https://fanrongbin.com/winslow-homer/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/winslow-homer/</guid>
+        <link>http://localhost:1313/winslow-homer/</link>
+        <guid isPermaLink="true">http://localhost:1313/winslow-homer/</guid>
         <pubDate>Sun, 08 Aug 2021 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -2285,8 +2423,8 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
     
       <item>
         <title>雪</title>
-        <link>https://fanrongbin.com/snow-2/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/snow-2/</guid>
+        <link>http://localhost:1313/snow-2/</link>
+        <guid isPermaLink="true">http://localhost:1313/snow-2/</guid>
         <pubDate>Tue, 01 Dec 2020 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -2300,8 +2438,8 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
     
       <item>
         <title>首先是不要忘记</title>
-        <link>https://fanrongbin.com/first-of-all-dont-forget/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/first-of-all-dont-forget/</guid>
+        <link>http://localhost:1313/first-of-all-dont-forget/</link>
+        <guid isPermaLink="true">http://localhost:1313/first-of-all-dont-forget/</guid>
         <pubDate>Mon, 13 Jul 2020 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -2315,8 +2453,8 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
     
       <item>
         <title>初探 Fluent Design System</title>
-        <link>https://fanrongbin.com/glimpse-of-fluent-design/</link>
-        <guid isPermaLink="true">https://fanrongbin.com/glimpse-of-fluent-design/</guid>
+        <link>http://localhost:1313/glimpse-of-fluent-design/</link>
+        <guid isPermaLink="true">http://localhost:1313/glimpse-of-fluent-design/</guid>
         <pubDate>Sun, 14 May 2017 00:00:00 &#43;0000</pubDate>
         <author>hi@rongb.in (Rongbin Fan)</author>
         <description></description>
@@ -2354,6 +2492,179 @@ The Optimism of Possibility © Phillip Reed&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;之所以把 Scale 译作「维」，是因为这一点集中体现了 Fluent Design System 最终的作用——实现从零维到三维的，多种场景适用的设计规范，利用设备提供并拓展面向多维度的体验。&lt;/p&gt;
+</content:encoded>
+      </item>
+    
+      <item>
+        <title></title>
+        <link>http://localhost:1313/hybrid-7/</link>
+        <guid isPermaLink="true">http://localhost:1313/hybrid-7/</guid>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+        <author>hi@rongb.in (Rongbin Fan)</author>
+        <description></description>
+        <content:encoded>&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/20250929142419.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;© &lt;a href=&#34;https://www.twreporter.org/a/photo-light-up-the-houses-expropriated-for-taoyuan-aerotropolis&#34;&gt;林肇圀&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;摘录&#34;&gt;摘录&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我想象，他不沉默的时候是什么样子？&lt;/p&gt;
+&lt;p&gt;他一定也坐过绿皮火车。那时从湖北出发，只能坐火车，睡一晚，第二天一大早到北京。他会不会也有过买不到座位的经历？他也许是那种为了省钱一路站着的人，不会像我，明明买了卧铺票，还要点一碗50元却半生不熟的黄焖鸡米饭。&lt;/p&gt;
+&lt;p&gt;他是一个节俭的人，但对我很大方。小学时，我中午到爷爷奶奶家吃午饭，一般只有爷爷在家，奶奶在外摆摊卖布。我找他要零花钱买零食，他便从自己抽屉里拿出钢镚来。他的木质抽屉十分整洁，钱币整齐摆放在盒子里，旁边摞起几个记事本，角落还有一些姑姑的首饰。我总是贪心，觉得爷爷是温和内敛之人，如果找他多要点钱，他不会拒绝。我总是成功了，从他那里，我经常能拿一元甚至两元，而从其他人那儿，我只能拿五角。&lt;/p&gt;
+&lt;p&gt;张叔说以前的火车票3块钱一张，在爷爷的年代，也许更便宜吧？如果和他一起坐火车，他可能会给我点一餐，让我坐在沙发上。&lt;/p&gt;
+&lt;p&gt;不过其实，我并不确定他对我的情感是什么模样，也不确定自己对他是何种感情。&lt;/p&gt;
+&lt;p&gt;又到了下午四点，火车已经开了24小时。车厢里很安静，一些人在睡觉，隔壁卧铺的三个阿姨在聊年轻人不会讲云南话。我坐在走廊旁的椅子上，贴着车窗写日记：&lt;/p&gt;
+&lt;p&gt;“没有见到他最后一面，我没有掉眼泪。我是何时对他的感情开始淡漠的？又或许，我是否一直没有对他有过亲密的情感？&amp;hellip; 毕竟我们从未有过深入的交流，毕竟他从未袒露过他的内心。”&lt;/p&gt;
+&lt;p&gt;他沉默地活，沉默地死。没有过情感表达的人，是否意味留不下情感的痕迹？但是，在这个问题之前，他是自愿沉默的吗？&lt;/p&gt;
+&lt;p&gt;我小时候，爷爷知道我喜欢吃糖醋排骨，也喜欢吃奶奶自制的热干面，照顾完我的午饭，他便回房，坐在窗边抽烟。有时我坐不住，说想出去玩，爷爷会牵着我的手出门走路。我向他展示地上捡到的树叶，他会尴尬地微笑回应：“好”，然后扭过头去，一言不发。&lt;/p&gt;
+&lt;p&gt;我想他也是想出门的。有一次，他独自出门散步了，几个小时没有回来，全家人很着急。不记得最后他们在哪里找到了爷爷，只记得将他接回家后，所有人教训了他一顿，指责他出门“非常危险”，下次再也不要出去了。他们就像对待一个不听话，需要管教的小孩。而爷爷极少回击，回到房内，仿佛无事发生，置身事外，旁观他人对自己的评判。&lt;/p&gt;
+&lt;p&gt;自此之后，他应该再也没有离开过家，或许他也渐渐放弃了出门。家庭聚会时，他是躲在房间或客厅角落里坐着抽烟的那位，眼神并非空洞，而是一副事不关己，无所谓的态度。毕竟我们在一旁所有的讨论，他都能听懂。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ Wanqing Chen：&lt;a href=&#34;https://likeawildvine.substack.com/p/personal-essay-28-hours-on-a-green&#34;&gt;二十八小时绿皮火车记&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It’s never been so easy to pretend to know so much without actually knowing anything. We pick topical, relevant bits from Facebook, Twitter or emailed news alerts, and then regurgitate them. Instead of watching “Mad Men” or the Super Bowl or the Oscars or a presidential debate, you can simply scroll through someone else’s live-tweeting of it, or read the recaps the next day. Our cultural canon is becoming determined by whatever gets the most clicks.&lt;/p&gt;
+&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
+&lt;p&gt;What we all feel now is the constant pressure to know enough, at all times, lest we be revealed as culturally illiterate. So that we can survive an elevator pitch, a business meeting, a visit to the office kitchenette, a cocktail party, so that we can post, tweet, chat, comment, text as if we have seen, read, watched, listened. What matters to us, awash in petabytes of data, is not necessarily having actually consumed this content firsthand but simply knowing that it exists — and having a position on it, being able to engage in the chatter &lt;em&gt;about&lt;/em&gt; it. We come perilously close to performing a pastiche of knowledgeability that is really a new model of know-nothingness.&lt;/p&gt;
+&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
+&lt;p&gt;The information is everywhere, a constant feed in our hands, in our pockets, on our desktops, our cars, even in the cloud. The data stream can’t be shut off. It pours into our lives a rising tide of words, facts, jokes, GIFs, gossip and commentary that threatens to drown us. Perhaps it is this fear of submersion that is behind this insistence that we’ve seen, we’ve read, we &lt;em&gt;know&lt;/em&gt;. It’s a none-too-convincing assertion that we are still afloat. So here we are, desperately paddling, making observations about pop culture memes, because to admit that we’ve fallen behind, that we don’t know what anyone is talking about, that we have nothing to say about each passing blip on the screen, is to be dead.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ &lt;em&gt;&lt;a href=&#34;https://www.nytimes.com/2014/05/25/opinion/sunday/faking-cultural-literacy.html&#34;&gt;Faking Cultural Literacy&lt;/a&gt;&lt;/em&gt;, Karl Taro Greenfeld, NYT&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;品味在&lt;strong&gt;創造屬於自己的東西&lt;/strong&gt;時特別重要，不論是做研究、拍影片、寫程式都是一樣，即使有了主題，還是需要創作者做「選擇」，判斷需要添加什麼素材，亦或是更重要的，不要增加什麼與何時該停下來，透過一連串的判斷，仔細組織成自己的作品。品味是每個人都如此特別的原因，人們在這世界上各種有形和無形的資源中採集，動態形成屬於自己的組合。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ Ya-Xuan：&lt;a href=&#34;https://yaxuanhe.me/post/taste/&#34;&gt;品味&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;這形形色色的事物間有一個公共的成分——量的過度：鉆戒戴在手上是極悅目的，但是十指尖尖都拶著鉆戒，太多了，就俗了！胭脂擦在臉上是極助嬌艷的，但是涂得仿佛火燒一樣，太濃了，就俗了！肚子對于人體曲線美是大有貢獻的，但是假使凸得像掛了布袋，太高了，就俗了！以此類推。同時我們胸中還潛伏一個道德觀念：我們不贊成一切夸張和賣弄，一方面因為一切夸張和賣弄總是過量的，上自媒人的花言巧語，下至戲里的丑表功，都是言過其實、表過其里的。另一方面也因為人家的夸大反襯出我們的渺小來，所以我們看見我們認為過當的事物，我們不知不覺地聯想到賣弄，不管那樁事物確是在賣弄（像戴滿鉆戒的手）或是出于不得已（像大肚子）。因此，我們暫時的結論是：當一個人認為一樁東西為俗的時候，這一個東西里一定有這個人認為太過火的成分，不論在形式上或內容上。這個成分的本身也許是好的，不過假使這個人認為過多了(too much of a good thing)，包含這個成分的整個東西就要被認為俗氣。所以，俗氣不是負面的缺陷(default)，是正面的過失(fault)。&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;俗的意思是“通俗”，大凡通俗的東西都是數量多的，價錢賤的；照經濟常識，東西的價值降賤，因為供過于求，所以，在一個人認為俗的事物中，一定有供過于求的成分——超過那個人所希望或愿意有的數量的成分。從“通俗”兩個字，我們悟到俗氣的第二個特點：俗的東西就是可以感動“大多數人”的東西&amp;ndash;此地所謂“大多數人”帶著一種譴責的意味，不僅指數量說，并且指品質說，是卡萊爾(Carlyle)所謂“不要崇拜大多數”(don’t worship the majority)的“大多數”，是易卜生(Ibsen)所謂“大多數永遠是錯誤的”(a majority is always wrong)的“大多數”。&lt;/p&gt;
+&lt;p&gt;綜括以上來說，假使一個人批評一樁東西為“俗”，這個批評包含兩個意義：（一）他認為這樁東西組織中某成分的量超過他心目中以為適當的量。（二）他認為這樁東西能感動的人數超過他自以為隸屬著的階級的人數。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ 錢鐘書：&lt;a href=&#34;http://www.rocidea.com/one?id=24665&#34;&gt;論俗氣&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I think I do think sometimes we spend too much time on nostalgia. I think people always ask what was that based on or what was your inspiration? And sure, people have inspirations and they have unconscious thoughts in their heads, but true creative design, I&amp;rsquo;m talking about the fashion world, true creative designers, and I&amp;rsquo;m sure it&amp;rsquo;s the same with with your world, it&amp;rsquo;s original. It comes from their mind, not from somebody else&amp;rsquo;s mind. Maybe they had some influences, but the idea is theirs.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ &lt;a href=&#34;https://www.youtube.com/watch?v=pq9TGMzlLbU&#34;&gt;Anna Wintour Embraces a New Era at Vogue | The New Yorker Interview&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“这有什么后果？”耶鲁-新加坡国立大学院的助理教授保罗·奥基夫（Paul O’Keefe）问道。**“这意味着如果你做了一件感觉起来像是工作的事，那么你就一定不会喜欢它。”**他举了一个学生的例子，后者不停地从一个实验室换到另一个实验室，只为找到一个她激情所在的研究方向。“她的想法是，如果我走进一个实验室，却没有感受到强烈的情感，那这就一定不是我的兴趣或是激情所在。”&lt;/p&gt;
+&lt;p&gt;这就是为什么奥基夫和两个斯坦福大学的合作者德维克和格雷格·沃尔顿（Greg Walton）在他们最近的一项研究中建议人们，是时候改变一下对兴趣的认识了。&lt;strong&gt;他们认为激情并不是被“发现”的，而是被培养出来的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在新一期的《心理科学》期刊中，作者在一篇文章中描述了这两种思维方式的差异。一种是**“兴趣固定理论”&lt;strong&gt;（fixed theory of interests）——这一理论认为一些核心的兴趣是天生的，只需等待后天的发现——另一种是&lt;/strong&gt;“兴趣养成理论”**（growth theory），即认为任何人的兴趣都是可以后天培养的。&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;德维克告诉我，从历史的角度来看，“找到你的兴趣”是值得赞赏的。“在此之前，人们常说的是‘发现你的智慧’，这太吓人了。这暗示着只有那些真正聪明的人才能成功，”她说。“找到你的兴趣所在听起来更亲民一点。至少每个人都对某件事感兴趣。”&lt;strong&gt;但是这项研究表明，即使是发现你“真正的”兴趣这一观点也会让人们产生畏惧，并阻止他们在某个领域内更加深入下去。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;斯沃斯莫尔学院（Swarthmore college）的K·安·谢伦宁格（K Ann Renninger）教授并没有参与此项研究，但她曾对兴趣的养成进行过研究并说道：**“神经科学研究证实了，兴趣是可以在支持下慢慢培养的。”换句话说，在正确的帮助下，大多数人都可以对任何事产生兴趣。**8岁之前，她说，孩子们会尝试任何事情。8岁到12岁之间，他们开始将自己与他人进行比较，并且会因为自己在某方面不如他人产生不安感。这时，教育工作者就必须开始找寻新的方法，以让孩子们持续对某些特定的学科感兴趣。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ 利维坦：&lt;a href=&#34;https://mp.weixin.qq.com/s?src=11&amp;amp;timestamp=1759913543&amp;amp;ver=6283&amp;amp;signature=2yvssJG5wGxYDTqyWs-ZNQDdUqsoHQ0oXrsnTCgceiI5QSn9Zq38JdqHFrydHnjJMWvOw0jWx2t4I0cW4cChHct*xQ5hdfavds258y99y*ejlQeARpI-Cn6ZjrJGQXW7&amp;amp;new=1&#34;&gt;“找到你的激情”是个糟糕的建议？&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;hellip;&lt;a href=&#34;https://stratechery.com/2017/the-local-news-business-model/&#34;&gt;from The Local News Business Model&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This last point is at the crux of why many ad-based newspapers will find it all but impossible to switch to a real subscription business model. When asking people to pay, quality matters far more than quantity, and the ratio matters: a publication with 1 valuable article a day about a well-defined topic will more easily earn subscriptions than one with 3 valuable articles and 20 worthless ones covering a variety of subjects. Yet all too many local newspapers, built for an ad-based business model that calls for daily content to wrap around ads, spend their limited resources churning out daily filler even though those ads no longer exist.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
+&lt;p&gt;In short, every leg of the stool that supported the open web is at best wobbly: users are less likely to go to ad-supported content-based websites, even as the long tail of advertisers might soon lose their conduit to place ads on those websites, leaving said websites even less viable than they are today — and they’re barely hanging on as it is!&lt;/p&gt;
+&lt;p&gt;[&amp;hellip;]&lt;/p&gt;
+&lt;p&gt;No, the real neglect and missed opportunity in terms of payments is happening right now: Microsoft is on to the right idea with its adoption of MCP and introduction of NLWeb, but its proposal, by virtue of not including native payments, isn’t nearly as compelling as it should be. The key difference from the 1990s is that on the agentic web native digital payments are both viable and the best possible way to not only keep the web alive, but also in the process create better and more useful AI.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ &lt;a href=&#34;https://stratechery.com/2025/the-agentic-web-and-original-sin/&#34;&gt;&lt;em&gt;The Agentic Web and Original Sin&lt;/em&gt;&lt;/a&gt;, Stratechery by Ben Thompson&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Spend time efficiently
+&lt;ul&gt;
+&lt;li&gt;Choose good problems&lt;/li&gt;
+&lt;li&gt;Have a bunch of them&lt;/li&gt;
+&lt;li&gt;Make a list
+&lt;ul&gt;
+&lt;li&gt;Integrate the list with your life&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make your time higher quality
+&lt;ul&gt;
+&lt;li&gt;Ease physical constraints
+&lt;ul&gt;
+&lt;li&gt;Carry pen and paper&lt;/li&gt;
+&lt;li&gt;Avoid being interrupted&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ease mental constraints
+&lt;ul&gt;
+&lt;li&gt;Eat, sleep, exercise&lt;/li&gt;
+&lt;li&gt;Talk to cheerful people&lt;/li&gt;
+&lt;li&gt;Share the load&lt;/li&gt;
+&lt;li&gt;Procrastination and the mental force field
+&lt;ul&gt;
+&lt;li&gt;Hard problems: break it down, simplify it, think about it&lt;/li&gt;
+&lt;li&gt;Assigned problems: create a false assignment, don&amp;rsquo;t assign problems to yourself, make things fun&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ &lt;em&gt;&lt;a href=&#34;http://www.aaronsw.com/weblog/productivity&#34;&gt;HOWTO: Be more productive&lt;/a&gt;&lt;/em&gt;, Aaron Swartz&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Selecting a Goal: main mission/quest, level up along the way, and side quests&lt;/li&gt;
+&lt;li&gt;Getting Triggered: try again, be in a state where you can be consistently triggered&lt;/li&gt;
+&lt;li&gt;Escape the Noise: have some time to reflect&lt;/li&gt;
+&lt;li&gt;Shifting Your Perspective: a learning mindset&lt;/li&gt;
+&lt;li&gt;Measure Your Progress: give yourself feedback&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ &lt;a href=&#34;https://medium.com/write-a-catalyst/how-i-study-consistently-with-a-full-time-job-fc3362793def&#34;&gt;How I Study Consistently With A Full-Time Job&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/640.jpg&#34; alt=&#34;640&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Price is the most important factor to use in relation to value.&lt;/li&gt;
+&lt;li&gt;Try to establish the value of the company. Remember that a share of stock represents a part of a business and is not just a piece of paper.&lt;/li&gt;
+&lt;li&gt;Use book value as a starting point to try and establish the value of the enterprise. Be sure that debt does not equal 100% of the equity. (Capital and surplus for the common stock).&lt;/li&gt;
+&lt;li&gt;Have patience. Stocks don&amp;rsquo;t go up immediately.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t buy on tips or for a quick move. Let the professionals do that, if they can. Don&amp;rsquo;t sell on bad news.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t be afraid to be a loner but be sure that you are correct in your judgment. You can&amp;rsquo;t be 100% certain but try to look for weaknesses in your thinking. Buy on a scale and sell on a scale up.&lt;/li&gt;
+&lt;li&gt;Have the courage of your convictions once you have made a decision.&lt;/li&gt;
+&lt;li&gt;Have a philosophy of investment and try to follow it. The above is a way that I&amp;rsquo;ve found successful.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t be in too much of a hurry to sell. If the stock reaches a price that you think is a fair one, then you can sell but often because a stock goes up say 50%, people say sell it and button up your profit. Before selling try to re-evaluate the company again and see where the stock sells in relation to its book value. Be aware of the level of the market historically high. Are people very optimistic etc?&lt;/li&gt;
+&lt;li&gt;When buying a stock, I find it helpful to buy near the low of the past few years. A stock may go as high as 124 and then decline to 60 and you think it attractive. 3 years before the stock sold at 20 which shows that there is some vulnerability in it.&lt;/li&gt;
+&lt;li&gt;Try to buy assets at a discount than to buy earnings. Earnings can change dramatically in a short time. Usually assets change slowly. One has to know much more about a company if one buys earnings.&lt;/li&gt;
+&lt;li&gt;Listen to suggestions from people you respect. This doesn&amp;rsquo;t mean you have to accept them. Remember it&amp;rsquo;s your money and generally it is harder to keep money than to make it. Once you lose a lost of money it is hard to make it back.&lt;/li&gt;
+&lt;li&gt;Try not to let your emotions affect your judgment. Fear and greed are probably the worst emotions to have in connection with the purchase and sale of stocks.&lt;/li&gt;
+&lt;li&gt;Remember the work compounding. For example, if you can make 12% a year and reinvest the money back, you will double your money in 6 years, taxes excluded. Remember the rule of 72. Your rate of return into 72 will tell you the number of years to double your money.&lt;/li&gt;
+&lt;li&gt;Prefer stocks over bonds. Bonds will limit your gains and inflation will reduce your purchasing power.&lt;/li&gt;
+&lt;li&gt;Be careful of leverage. It can go against you.&lt;/li&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ &lt;em&gt;On common stocks&lt;/em&gt;, March 10, 1994, Walter &amp;amp; Edwin Schloss Associates, L.P.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回看当时的很多判断，只是典型的外部正反馈：有人投关注、有人抛出估值、市场制造幻觉，整套节奏都是外部环境给出的。那段时间离所谓&amp;quot;成功&amp;quot;最近，也离实质积累最远。&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;这些工具表面上解决不同问题，但底层逻辑是一样的：把凭感觉的决策变成可回放、可复盘的流程。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ 马大伟：&lt;a href=&#34;https://www.bmpi.dev/self/35/&#34;&gt;三十五&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不過最近我們有另一個心得：大家拼命學 prompt 的這件事，可能兩三年後就沒那麼重要了。因為 AI model 會越來越聰明，越來越會「通靈」，你根本不需要講得那麼仔細。到那個時候，身為一個操作者，真正需要的能力是什麼？&lt;/p&gt;
+&lt;p&gt;我們覺得是「辨別」。辨別 AI 講的到底是不是真的、是不是在騙你，或是它的邏輯是不是走歪了。這東西需要的不只是知識，更需要「常識」。&lt;/p&gt;
+&lt;p&gt;但回頭看我們自己這一代三四十歲的人受的教育，學校通常教了知識、教了技能，給了特定學科當作未來專業的基礎，但從來沒有一堂課是教怎麼擁有常識。&lt;/p&gt;
+&lt;p&gt;這真的很可怕。當有 AI 這麼 powerful 的工具，想藉助它跨到別的領域時，才赫然發現自己根本沒有一個常識的基底去判斷，AI 給的結果到底是不是對的。&lt;/p&gt;
+&lt;p&gt;尤其現在，我們每天在社群或任何地方，看到的內容越來越多是 AI 生成的，裡面可能充滿假新聞或各種被渲染的消息，該怎麼判斷？&lt;/p&gt;
+&lt;p&gt;這就是為什麼我們覺得《真確》這本 2018 年的老書在這個時代特別重要。它不是直接教你如何「邁向真實」，而是反過來告訴你，在這條路上，有十種會阻撓你的直覺偏誤。&lt;/p&gt;
+&lt;p&gt;這些偏誤其實都是你大腦為了節省耗能而發展出來的「偷懶機制」，它幫你快速篩選資訊，但也常常讓你遠離真相。如果我們要跳脫被這些謬誤支配的困境，就必須先了解它們是什麼。&lt;/p&gt;
+&lt;p&gt;書裡提到的十種謬誤，分別是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;二分化直覺偏誤：習慣把世界分成黑與白。&lt;/li&gt;
+&lt;li&gt;負面型直覺偏誤：總是把事情想得很糟。&lt;/li&gt;
+&lt;li&gt;直線型直覺偏誤：認為趨勢會像一條直線一樣無限延伸。&lt;/li&gt;
+&lt;li&gt;恐懼型直覺偏誤：因為恐懼而誇大危險。&lt;/li&gt;
+&lt;li&gt;失真型直覺偏誤：對事物的比例、大小有錯誤的概念。&lt;/li&gt;
+&lt;li&gt;概括型直覺偏誤：把不同的東西歸為同一類。&lt;/li&gt;
+&lt;li&gt;宿命型直覺偏誤：認為某些事是注定且無法改變。&lt;/li&gt;
+&lt;li&gt;單一觀點直覺偏誤：只相信某個權威或單一的解釋。&lt;/li&gt;
+&lt;li&gt;怪罪型直覺偏誤：出事了就一定要找個戰犯。&lt;/li&gt;
+&lt;li&gt;急迫型直覺偏誤：覺得每件事都很緊急，必須馬上行動。&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ &lt;a href=&#34;https://mailchi.mp/manny-li/063-17460274&#34;&gt;曼報 #238：[長文] 重讀真確（Factfulness）&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首先，企業主的決策不一定都有策略脈絡可循，尤其當特定行動是「首次出現」的時候，最好不要過度解讀。&lt;/p&gt;
+&lt;p&gt;例如，市場（或媒體）通常會在一間公司成長的時候，將其所有行為解讀成策略的一環，因為替成長中的公司寫什麼故事都有機會是對的。&lt;/p&gt;
+&lt;p&gt;但，我個人幾次比較深刻的經驗是：通常都是老闆的一時興起。&lt;/p&gt;
+&lt;p&gt;然而，真正應該注意的，是這些企業在「繳完學費」後的行動。如果該企業還持續有投資（不論是投資新創或發展新事業），通常都是想好了，甚至是找到關鍵的執行角色。&lt;/p&gt;
+&lt;p&gt;其次，情感連結（人脈）在早期投資中往往扮演至關重要的因素。像劉偉這種「師生投資」的案例不僅在中國不少，在美國也不少見，甚至會發展成越洋案件。&lt;/p&gt;
+&lt;p&gt;最後，早期投資失敗是常態、絕非例外，但真正成功過的人通常更有堅持下去的信念，因為就像劉偉說的：「搞不好投到下一個『米哈游』。」人是很難靠想像就維持信念的生物，如果沒有嚐過百倍、萬倍以上的回報率，很難長期面對失敗。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⤷ &lt;a href=&#34;https://mailchi.mp/manny-li/063-17457172&#34;&gt;曼報 #226：[電子報] AI 比人類還有說服力、Meta 反壟斷訴訟開打、川普連電影都能課關稅&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.fanrongbin.com/The%20Startup%20Process%20%E2%80%94%20from%20the%20whiteboard%20at%20YC.jpg&#34; alt=&#34;The Startup Process — from the whiteboard at YC&#34;&gt;&lt;/p&gt;
+&lt;p&gt;⤷ The Startup Process from the whiteboard at YC.&lt;/p&gt;
+&lt;h2 id=&#34;更多&#34;&gt;更多&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/cEFuj8Iww-xmkLvLLbSSng&#34;&gt;澎湃人物：一所县中的孩子想要“如厕自由”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns/#introduction&#34;&gt;Unlock next-level performance with AI Max for Search campaigns&lt;/a&gt;&lt;/em&gt;, Google Ads&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded>
       </item>
     
