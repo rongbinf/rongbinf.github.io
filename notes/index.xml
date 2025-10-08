@@ -8,7 +8,7 @@
     <language>en</language>
     <managingEditor>hi@rongb.in (Rongbin Fan)</managingEditor>
     <webMaster>hi@rongb.in (Rongbin Fan)</webMaster>
-    <lastBuildDate>Wed, 08 Oct 2025 09:34:15 &#43;0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Oct 2025 16:18:18 &#43;0000</lastBuildDate>
 
 
     
@@ -207,6 +207,331 @@
 &lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/cEFuj8Iww-xmkLvLLbSSng&#34;&gt;澎湃人物：一所县中的孩子想要“如厕自由”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns/#introduction&#34;&gt;Unlock next-level performance with AI Max for Search campaigns&lt;/a&gt;&lt;/em&gt;, Google Ads&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded>
+      </item>
+    
+      <item>
+        <title>商业计划书</title>
+        <link>https://fanrongbin.com/evergreen/bp/</link>
+        <guid isPermaLink="true">https://fanrongbin.com/evergreen/bp/</guid>
+        <pubDate>Wed, 08 Oct 2025 00:00:00 &#43;0800</pubDate>
+        <author>hi@rongb.in (Rongbin Fan)</author>
+        <description></description>
+        <content:encoded>
+            &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fanrongbin.com/css/vendors/admonitions.02779140835f452cb4ca8e7db2ae0343d32da5f75cd96f68d9c5d7d655d622a1.css&#34; integrity=&#34;sha256-AneRQINfRSy0yo59sq4DQ9Mtpfdc2W9o2cXX1lXWIqE=&#34; crossorigin=&#34;anonymous&#34;&gt;
+    &lt;div class=&#34;admonition note&#34;&gt;
+      &lt;div class=&#34;admonition-header&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 576 512&#34;&gt;&lt;path d=&#34;M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z&#34;/&gt;&lt;/svg&gt;
+        &lt;span&gt;Note&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;admonition-content&#34;&gt;
+        &lt;p&gt;Also works for pitch deck while &lt;a href=&#34;https://www.alumni.hbs.edu/Documents/events/NVCPitchDeckTemplate.pdf&#34;&gt;the goal for a pitch deck&lt;/a&gt; is to give a snapshot of your investment opportunity, taking into consideration your impact, growth potential, viability, the ability of your team to execute your plan. And the product/service is your &lt;a href=&#34;https://www.dfc.gov/sites/default/files/2019-08/Key_Elements_of_a_Pitch_Book_for_IFIP.pdf&#34;&gt;portfolio/investment strategy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What to include in a fund pitch deck, examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kkrreit.com/~/media/Files/K/KKR-V2/reports-and-presentations/kref-1q25-investor-presentation.pdf&#34;&gt;KREF 1Q&#39;25 Investor Presentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.blackstonemortgagetrust.com/wp-content/uploads/sites/14/2025/04/BXMT-1Q-2025-Company-Presentation.pdf&#34;&gt;BXMT 1Q&#39;25 Company Presentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://shareholders.tpg.com/static-files/0b993935-3e48-4ec3-bb89-3565fe7cdad8&#34;&gt;TPG Investor Presentation, November 2022&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://investor.capitaland.com/newsroom/20210729_172002_C31_Y5STFXO4R106A0GN.1.pdf&#34;&gt;Strategic Restructuring of CapitaLand Limited and Listing of CapitaLand Investment, July 2021&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.10xebitda.com/investment-banking-presentations/&#34;&gt;10xebitda&lt;/a&gt; has some IB presentations.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pitchdeckguy.beehiiv.com/&#34;&gt;PitchDeckGuy&lt;/a&gt; gives weekly analyses.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;h2 id=&#34;整体&#34;&gt;整体&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;问题/机会从何而来，什么需求没被解决（市场背景、需求痛点）&lt;/li&gt;
+&lt;li&gt;问题被我们解决、机会被我们把握（业务/产品介绍、团队介绍）
+&lt;ul&gt;
+&lt;li&gt;而不是被别人解决（竞争对手分析、进入壁垒）&lt;/li&gt;
+&lt;li&gt;而且我们能够做大做强（商业模式和GTM策略，飞轮，scalable）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我们能达到什么高度（收入测算、市场规模测算、未来前景）&lt;/li&gt;
+&lt;li&gt;我们需要多少资源的投入（成本测算、投资条款、后续规划）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;目的&#34;&gt;目的&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;帮助创业者梳理自己的想法、梳理故事线&lt;/li&gt;
+&lt;li&gt;帮助创业者以务实和市场/商业的眼光看待自己的产品，思考商业化的模式&lt;/li&gt;
+&lt;li&gt;帮助创业者理解市场、从全局的角度去看目前市场的发展状况，从而和自己公司的现状和未来规划做对比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;分项商业模式&#34;&gt;分项：商业模式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;三种传统模式
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;生产——销售&lt;/strong&gt;：一次性交易，价值在于产品本身
+&lt;ul&gt;
+&lt;li&gt;直销货品、服务、空间&lt;/li&gt;
+&lt;li&gt;直销内容、App买断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;批发贸易——零售&lt;/strong&gt;：低买高卖，信息不对称或渠道价值
+&lt;ul&gt;
+&lt;li&gt;分销货品，买卖价差、佣金
+&lt;ul&gt;
+&lt;li&gt;超市卖可乐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;分销内容或App等虚拟商品，买卖价差、佣金
+&lt;ul&gt;
+&lt;li&gt;iTunes买电影&lt;/li&gt;
+&lt;li&gt;数字荔枝（源头厂商不支持部分支付方式或某地区未开展运营）&lt;/li&gt;
+&lt;li&gt;代发货（不做库存只做运营，供营商直接发货）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;服务收费&lt;/strong&gt;，价值在于服务或时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;平台/连接/市场(marketplace)，抽佣&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;B2B、B2C、网络效应：多个群体撮合，例如亚马逊&lt;/li&gt;
+&lt;li&gt;共享经济、P2P：非商家的个人作为交易主体，例如Uber、Airbnb&lt;/li&gt;
+&lt;li&gt;按需服务：根据数量的即时性交付，例如Deliveroo、Uber&lt;/li&gt;
+&lt;li&gt;O2O、线上到线下，例如Deliveroo、Ticketmaster&lt;/li&gt;
+&lt;li&gt;C2B，例如广告联盟（SHEIN推广大使）、众筹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;订阅——无法买断&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;按是否存在paywall分类
+&lt;ul&gt;
+&lt;li&gt;必须付费解锁&lt;/li&gt;
+&lt;li&gt;有免费tier（freemium）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;按产品服务属性分类
+&lt;ul&gt;
+&lt;li&gt;内容，例如Apple TV+&lt;/li&gt;
+&lt;li&gt;SaaS（工具、功能）
+&lt;ul&gt;
+&lt;li&gt;纯虚拟，例如ChatGPT Plus&lt;/li&gt;
+&lt;li&gt;虚拟+物理，例如Plaud&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;权利（特权/优先级、优惠、便利），例如BFI优先购票&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用量——实际消耗或效果&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;API
+&lt;ul&gt;
+&lt;li&gt;调用次数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据
+&lt;ul&gt;
+&lt;li&gt;调用次数&lt;/li&gt;
+&lt;li&gt;授权时限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;空间/时间
+&lt;ul&gt;
+&lt;li&gt;可增量订购的虚拟存储空间，例如网盘&lt;/li&gt;
+&lt;li&gt;按面积或小时计价的实际物理空间，例如WeWork&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;广告
+&lt;ul&gt;
+&lt;li&gt;曝光次数&lt;/li&gt;
+&lt;li&gt;成功点击次数&lt;/li&gt;
+&lt;li&gt;注意力经济&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;特许经营
+&lt;ul&gt;
+&lt;li&gt;加盟费&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;分项设计商业模式&#34;&gt;分项：设计商业模式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;从客户角度出发&lt;strong&gt;定价&lt;/strong&gt;，盈利属于内含前提
+&lt;ul&gt;
+&lt;li&gt;你的价值主张 + 解决客户实际需求 → 议价能力，base
+&lt;ul&gt;
+&lt;li&gt;产品服务内含的价值、开发的成本cover&lt;/li&gt;
+&lt;li&gt;价值主张有人买单，符合决策人的利益&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;你的差异性 + 定位客群的付费能力 → 溢价水平，premium
+&lt;ul&gt;
+&lt;li&gt;客户选择你的理由&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;你希望维持的客户关系 → 正/负方向的溢价调整&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;价值如何交付（&lt;strong&gt;渠道和价值转化的通路&lt;/strong&gt;）
+&lt;ol&gt;
+&lt;li&gt;价值主张被传达&lt;/li&gt;
+&lt;li&gt;价值主张被认知&lt;/li&gt;
+&lt;li&gt;价值主张被认可&lt;/li&gt;
+&lt;li&gt;价值主张转化为实际价值
+&lt;ul&gt;
+&lt;li&gt;市场教育情况、客户接受程度&lt;/li&gt;
+&lt;li&gt;内部偏好、内部具备的资源能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;商业模式需要不断验证和优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;分项设计价值主张&#34;&gt;分项：设计价值主张&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;本质：在用户心智中，你的产品服务占据什么位置&lt;/li&gt;
+&lt;li&gt;形式：差异化表述&lt;/li&gt;
+&lt;li&gt;入手
+&lt;ol&gt;
+&lt;li&gt;明确市场和目标用户
+&lt;ul&gt;
+&lt;li&gt;进入的行业和品类（做什么和不做什么）&lt;/li&gt;
+&lt;li&gt;谁最可能买单&lt;/li&gt;
+&lt;li&gt;从大到小思考
+&lt;ul&gt;
+&lt;li&gt;例如定位to B：快消大企业？&lt;/li&gt;
+&lt;li&gt;例如定位to C：细分人口学社会学特征？&lt;/li&gt;
+&lt;li&gt;例如定位to Gov/School/Hospital&amp;hellip;：细分地域/服务对象收入水平等？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;寻找竞品和替代品
+&lt;ul&gt;
+&lt;li&gt;直接&lt;/li&gt;
+&lt;li&gt;间接（替代）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;确定自己的差异化表述
+&lt;ul&gt;
+&lt;li&gt;别人没有抓住，但用户格外在意的点（竞争者感知图）&lt;/li&gt;
+&lt;li&gt;产品服务本身具备的差异价值&lt;/li&gt;
+&lt;li&gt;产品服务之上再叠加的价值，例如售后、私有化部署技术团队、本地团队等&lt;/li&gt;
+&lt;li&gt;使用场景差异&lt;/li&gt;
+&lt;li&gt;价格差异&lt;/li&gt;
+&lt;li&gt;品牌差异&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;（以一种statement/slogan，在用户心智中反复强化）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;分项使用场景挖掘&#34;&gt;分项：使用场景挖掘&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;什么用户在什么情况（场景）下会想到你、使用你、愿意为你买单&lt;/li&gt;
+&lt;li&gt;入手
+&lt;ol&gt;
+&lt;li&gt;从用户需求出发
+&lt;ul&gt;
+&lt;li&gt;用户要完成什么任务&lt;/li&gt;
+&lt;li&gt;用户为什么要完成这个任务（背后动机和痛点）&lt;/li&gt;
+&lt;li&gt;如果没有我的产品，他现在会怎么做（替代方案）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;确定场景三个要素
+&lt;ul&gt;
+&lt;li&gt;人物（正推或反推）&lt;/li&gt;
+&lt;li&gt;时间地点&lt;/li&gt;
+&lt;li&gt;动机（选择原因）&lt;/li&gt;
+&lt;li&gt;例子：爱喝品质咖啡的上班族、早上9点在地铁口、需要快速带走一杯比办公室咖啡机出品更好的咖啡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;调研和验证场景的合理性
+&lt;ul&gt;
+&lt;li&gt;用户访谈、用户日记、实际观察（行为或数据）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;优先聚焦高价值场景
+&lt;ul&gt;
+&lt;li&gt;选择标准
+&lt;ul&gt;
+&lt;li&gt;频率高&lt;/li&gt;
+&lt;li&gt;痛点强烈&lt;/li&gt;
+&lt;li&gt;转化付费可能性高&lt;/li&gt;
+&lt;li&gt;单次付费或生命价值高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;场景驱动产品服务设计和营销&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;欢迎大家&lt;a href=&#34;https://fanrongbin.com/contact&#34;&gt;补充&lt;/a&gt;。&lt;/p&gt;
+</content:encoded>
+      </item>
+    
+      <item>
+        <title>邮件检查</title>
+        <link>https://fanrongbin.com/evergreen/email/</link>
+        <guid isPermaLink="true">https://fanrongbin.com/evergreen/email/</guid>
+        <pubDate>Wed, 08 Oct 2025 00:00:00 &#43;0800</pubDate>
+        <author>hi@rongb.in (Rongbin Fan)</author>
+        <description></description>
+        <content:encoded>&lt;h2 id=&#34;格式&#34;&gt;格式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Word编辑，复制到邮件系统发出&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 重点内容划线+加粗，不滥用&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 超过3个bullet，改用数字有序列表（并且考虑是否过多事项？）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;礼节&#34;&gt;礼节&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 名字：所有的人名、组织名、项目名、地名（复制粘贴替代手动输入）正确&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 称呼、头衔、职级正确&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 人称代词、特殊用词（专业词汇、简称等）：前后一致、表义准确、不混用&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 有开头有结尾，第一次往来写全，后续视往来频率可简略&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 谦辞（若有）：确认是否为下对上&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 如果存在历史往来，开头结尾、代词、称呼、头衔等与历史往来保持一致&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;内容&#34;&gt;内容&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 开门见山：先给答案，后给论述，论述简要谈及论据&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 简练：在保证完整和准确的前提下，越短越好；每句话都有它背后的目的&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 逻辑：按照人脑读取的顺序思路，安排内容&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 段落：篇幅合适、错落合理&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 讲好该讲的事：不要发散、不要提及没有要求develop的新内容&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 前后一致：提到的答案和论述，与其他渠道的讨论、附件内容保持一致&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 英文邮件请避免被动语态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;内容检查&#34;&gt;内容检查&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 定性文字、定量数据，double check（数值、单位、来源等）&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 附件：文件是否正确、是否为当前最终版本（使用邮件系统内的预览查看）、文件命名&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 敏感处理：是否有需要隐去的信息（删除或替换为占位符）&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 语法和拼写错误&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;发出&#34;&gt;发出&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 邮件主题：简洁明了&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 收件人邮件地址（复制粘贴替代手动输入/自动联想），留在最后写，避免误点发送键&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 抄送、密送：排列从上到下、从外到内；询问supervisor需要loop in哪些人&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 签名：第一次往来完整，后续简略&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 免责声明：是否需要包含&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 定时：日期时间是否正确（注意邮件系统时区）、是否为对方工作时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;回复转发&#34;&gt;回复/转发&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 一般不使用reply all&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 删除多余的Re:和Fw:&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 内外部，往来是否需要删除&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 是否开启新loop，视是否需要讨论新的主题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;further-reading&#34;&gt;Further Reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://www.law.georgetown.edu/wp-content/uploads/2021/04/Handout_7-Thau_Kelley_EmailingProfessionallyHandout.pdf&#34;&gt;Emailing Professionally&lt;/a&gt;&lt;/em&gt;, The Writing Center at Georgetown University Law Center&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.law.georgetown.edu/wp-content/uploads/2018/07/checklistclient_000.pdf&#34;&gt;&lt;em&gt;Checklist for the Client Letter or Memo&lt;/em&gt;&lt;/a&gt;, The Writing Center at Georgetown University Law Center&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.law.columbia.edu/sites/default/files/2022-08/WC%20Memo%20Checklist.pdf&#34;&gt;&lt;em&gt;Memo Writing Checklist&lt;/em&gt;&lt;/a&gt;, Columbia Law School Writing Center&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.csb.gov.hk/tc_chi/publications_stat/publication/2707.html&#34;&gt;政府公文寫作手冊（第三版）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iso.cuhk.edu.hk/chinese/documents/resource/useful-ref/style-guide-c.pdf&#34;&gt;大學刊物編輯指引（中文）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=F3CC9BEF482524C895FDA7A08BB4A70E&#34;&gt;党政机关公文格式（GB/T 9704-2012）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=22EA6D162E4110E752259661E1A0D0A8&#34;&gt;标点符号用法（GB/T 15834-2011）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;欢迎大家&lt;a href=&#34;https://fanrongbin.com/contact&#34;&gt;补充&lt;/a&gt;。&lt;/p&gt;
 </content:encoded>
       </item>
     
