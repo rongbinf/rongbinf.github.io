@@ -88,6 +88,7 @@
  border-bottom-width: -webkit-calc(0px);
  padding-bottom: -webkit-calc(0px);">着重号</em><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><!--
 -->标点符号修正<h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><abbr title="黑、宋、楷、仿宋">中文四大印刷体</abbr><h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable>汉字<h-char unicode="ff0d" class="biaodian cjk ">－</h-char>西文<h-hws hidden=""> </h-hws>mixed<h-hws hidden=""> </h-hws>间隙<h-hangable><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable><h-char-group class="biaodian cjk portion"><h-char unicode="300c" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>「</h-inner></h-char></h-char-group>标点<h-char unicode="300e" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>『</h-inner></h-char>挤压<h-char unicode="300f" class="biaodian cjk bd-close bd-end"><h-inner>』</h-inner><h-cs hidden=""> </h-cs></h-char>与<h-char unicode="300e" class="biaodian cjk bd-open"><h-cs hidden=""> </h-cs><h-inner>『</h-inner></h-char>悬挂<h-hangable><h-char unicode="300f" class="biaodian cjk bd-close bd-end"><h-inner>』</h-inner><h-cs hidden=""> </h-cs></h-char><h-char unicode="300d" class="biaodian cjk bd-close bd-end"><h-inner>」</h-inner><h-cs hidden=""> </h-cs></h-char><h-cs><h-inner hidden=""> </h-inner><h-char class="biaodian bd-close bd-end cjk">、</h-char></h-cs></h-hangable>章节边界调整<h-char unicode="2026" class="biaodian cjk bd-liga">……</h-char></p>
+
 </blockquote>
 <p>首先要引入两个源文件：<code>han.min.css</code>与<code>han.min.js</code>，最简便的方式，可以通过<a href="https://hanzi.pro/manual/anzhuang_yu_qiyong#cdn">CDN</a>或直接下载后（访问两条代码中的对应链接，另存至本地）放入Hugo博客系统下的<code>/static</code>文件夹中。建议使用后者，以方便我们在本地调整样式上的冲突。</p>
 <p>这两种方式，都需要在HTML对应处汇入。为了让Hugo在生成页面时自动汇入，以我所使用的<code>hugo-tufte</code>主题为例：</p>
@@ -111,7 +112,8 @@
 <p>测试省略号：……</p>
 <p>文章引用区块内的重点：</p>
 <blockquote>
-<p>不做则中心与的说很笔分士：<strong>校此诉平是里春家善客总外公；做南多中。</strong> 足酒脸理特指第常三紧资现工们家化民，公政我热良，中以家是。</p></blockquote>
+<p>不做则中心与的说很笔分士：<strong>校此诉平是里春家善客总外公；做南多中。</strong> 足酒脸理特指第常三紧资现工们家化民，公政我热良，中以家是。</p>
+</blockquote>
 <p>字级语意类：</p>
 <p><a href="#" pcked="1">超连结元素<h-hws hidden=""> </h-hws>a</a><h-hws hidden=""> </h-hws>示例<br><u>注记元素<h-hws hidden=""> </h-hws>u</u><h-hws hidden=""> </h-hws>示例<br><u>注记元素甲</u><u class="adjacent">注记元素乙</u>一般文字节点<!--
 --><u>注记元素丙</u>一般文字节点<!--
