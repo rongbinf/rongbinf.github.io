@@ -73,7 +73,7 @@ int main(){
 
 
 
-<link rel="stylesheet" href="/css/main.5c7d1d4a53e4f9def8ea33683a6b5d17b1aa0a3c0d54e86a03676917aa02fa5a.css" integrity="sha256-XH0dSlPk&#43;d746jNoOmtdF7GqCjwNVOhqA2dpF6oC&#43;lo=">
+<link rel="stylesheet" href="/css/main.26edff854d51c13c95995f26c4ff87b78cc7734d504b1e00613f8b50b8b55aa0.css" integrity="sha256-Ju3/hU1RwTyVmV8mxP&#43;Ht4zHc01QSx4AYT&#43;LULi1WqA=">
 
 
 
@@ -245,22 +245,22 @@ int main(){
   <p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
 <h2 id="方法-1提前声明并使用--确认">方法 1：提前声明并使用 &lt;&gt; 确认</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>{ <span style="color:#75715e">//以复数类为例
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>  	A real, image;
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>		complex(A a, A b)<span style="color:#f92672">:</span>real(a),image(b){
 </span></span><span style="display:flex;"><span>		}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//在运算符 &lt;&lt; 后加入 &lt;&gt; 以帮助编译器进一步确定该友元函数为模板函数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">&lt;&gt;</span>(ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m); 
+</span></span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">&lt;&gt;</span>(ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m); 
 </span></span><span style="display:flex;"><span>}; 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
@@ -276,7 +276,7 @@ int main(){
 </span></span><span style="display:flex;"><span>} 
 </span></span></code></pre></div><h2 id="方法-2在声明友元函数的同时定义友元函数">方法 2：在声明友元函数的同时定义友元函数</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>{
@@ -287,7 +287,7 @@ int main(){
 </span></span><span style="display:flex;"><span>		}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//在声明友元函数的同时定义友元函数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
+</span></span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
 </span></span><span style="display:flex;"><span>			newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;)&#34;</span>;
 </span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> newout;
 </span></span><span style="display:flex;"><span>		}
@@ -301,17 +301,17 @@ int main(){
 </span></span></code></pre></div><h2 id="如果可以不使用友元函数">如果可以不使用友元函数</h2>
 <p>如果模板类中的成员为公有，则完全不需要在模板类中声明友元。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>		A real, image; <span style="color:#75715e">//成员为公有
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		complex(A a, A b)<span style="color:#f92672">:</span>real(a),image(b){
+</span></span></span><span style="display:flex;"><span>		complex(A a, A b)<span style="color:#f92672">:</span>real(a),image(b){
 </span></span><span style="display:flex;"><span>		}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//		friend ostream &amp; operator &lt;&lt; &lt;&gt;(ostream &amp;newout, const complex&lt;A&gt; &amp;m);
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">//友元在此是不必要的
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}; 
+</span></span></span><span style="display:flex;"><span>}; 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
@@ -336,7 +336,7 @@ int main(){
   </main>
   <footer>
     
-<p>© 2025</p>
+<p>© 2026</p>
       
         
       <small># <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a></small>
@@ -354,7 +354,7 @@ int main(){
 
 
 
-<script src="/han.min.831f27db02c9bac7a1d42a0f46d9b947f346d8c989ef1bda95eae9d01ba5ad8d.js" integrity="sha256-gx8n2wLJuseh1CoPRtm5R/NG2MmJ7xvalerp0BulrY0=" defer></script>
+<script src="/han.min.4d8411065a29db5126de2fe148b086140843a2472114d920ba6a99530412fb02.js" integrity="sha256-TYQRBlop21Em3i/hSLCGFAhDokchFNkgumqZUwQS&#43;wI=" defer></script>
 
 
 

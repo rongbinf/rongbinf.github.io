@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-hans" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+<title>Excel礼仪 | Rongbin Fan</title>
+
+
+
+  
+
+
+<meta name="description" content="
+    
+      
+        Note
+      
+      
+        推荐你试试：Arixcel（追踪单元格、自定义快捷键）、白描OCR、UiPath Clipboard AI、以及Quicker。
+此外还有老牌的Macabacus、世外数豆人的IBD Tools、方方格子等VBA插件。
+还可以试试Tracelight，注意合规。
+      
+    格式
+
+input：蓝色
+reference：绿色
+formula：黑色
+for edit：边框（&#43;米黄色）
+pending/emphasis：黄色高亮
+
+Excel
+快捷键
+
+行列
+
+选中行：Shift&#43;空格
+往上插入行/左插入列：选中后，Ctrl&#43;Shift&#43;&#43;
+删除行列：选中后，Ctrl&#43;-
+
+
+快速填充
+
+向下：Ctrl&#43;D
+向右：Ctrl&#43;R
+到行末/列末注意需要最末输入内容占位，或者选择隐藏空白行列
+
+
+隐藏列：Ctrl&#43;0
+切换工作表：Ctrl&#43;PgUp或PgDn
+快速求和：Alt&#43;=
+
+现金流出项目，把减号做进单元格里
+
+
+单元格格式：Ctrl&#43;1
+
+整数：Ctrl&#43;Shift&#43;1
+日期：Ctrl&#43;Shift&#43;3
+百分号：Ctrl&#43;Shift&#43;5
+加小数位：Alt&#43;H&#43;0
+减小数位：Alt&#43;H&#43;9
+
+
+单元格加边框：Ctrl&#43;Shift&#43;7
+
+去掉边框：Ctrl&#43;Shift&#43;-
+
+
+只粘贴值：
+
+Ctrl&#43;Shift&#43;V
+Alt&#43;H&#43;V&#43;V
+
+
+重复执行上一步操作：F4
+加批注：Shift&#43;F2
+Go to Special：Ctrl&#43;G
+建议发出前完成：
+
+缩放到100%：Alt&#43;W&#43;J
+选中A1单元格：Ctrl&#43;Home
+自查名称管理器、宏，是否有重复/弃用/掉链接/报错，尽量不用range names
+自查空白单元格是否空白（带格式需要删掉，影响文件体积）
+公式里不出现任何hard-coded的数值，包括换算单位、天数等
+
+
+
+建议跨列居中代替合并单元格
+
+理由
+
+可调整，不会提示“无法对合并单元格执行此操作”
+不改变单元格值的位置
+
+
+
+锁定或解锁受保护区域
+
+锁定或解除锁定受保护工作表的特定区域 - Microsoft 支持
+
+模拟运算表
+
+双因素
+
+引用行：横向变化范围
+引用列：竖向变化范围
+模拟运算表和输入单元格，必须在同一张sheet
+
+
+单因素
+
+引用行：横向变化范围
+
+
+超过二维以及多个项目处理
+
+多情景
+
+灵活使用=CHOOSE()和=SWITCH()
+
+VBA
+
+模块命名使用英文，避免不同语言系统打不开文件
+
+Modelling相关
+
+常量假设（constant input，fixed）和动态假设（dynamic input，time-variable，带timeline）分开
+先做时间线和flag
+
+=SEQUENCE()
+
+
+先根据一般假设做清楚draft版本（勾稽正确），然后再逐个item去拆
+所有增长率/trend的假设，线性或指数，都需要backup解释
+假设建议引两次，一次在工作表前面，一次在使用的item前面
+item分层，建议缩小前面几列，按照层级放置，方便Ctrl&#43;↑或↓跳转
+如果用到=NPV()，注意第0期手动加回
+一个不成文的做法是，sheet的排布从左到右派生，即逐个从右往左删掉sheet时，不会因此而改变前序sheet
+" />
+<meta name="author p-author" content="Rongbin Fan" href="https://fanrongbin.com" />
+
+
+
+<link rel="stylesheet" href="/css/main.26edff854d51c13c95995f26c4ff87b78cc7734d504b1e00613f8b50b8b55aa0.css" integrity="sha256-Ju3/hU1RwTyVmV8mxP&#43;Ht4zHc01QSx4AYT&#43;LULi1WqA=">
+
+
+
+<link rel="stylesheet" href="/han.min.85eccdac5b74d62fd6ecf8801df9347370a336931778f5436098342433b5cbb7.css" integrity="sha256-hezNrFt01i/W7PiAHfk0c3CjNpMXePVDYJg0JDO1y7c=">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+
+<meta property="og:title" content="Excel礼仪 | Rongbin Fan" />
+<meta property="og:description" content="
+    
+      
+        Note
+      
+      
+        推荐你试试：Arixcel（追踪单元格、自定义快捷键）、白描OCR、UiPath Clipboard AI、以及Quicker。
+此外还有老牌的Macabacus、世外数豆人的IBD Tools、方方格子等VBA插件。
+还可以试试Tracelight，注意合规。
+      
+    格式
+
+input：蓝色
+reference：绿色
+formula：黑色
+for edit：边框（&#43;米黄色）
+pending/emphasis：黄色高亮
+
+Excel
+快捷键
+
+行列
+
+选中行：Shift&#43;空格
+往上插入行/左插入列：选中后，Ctrl&#43;Shift&#43;&#43;
+删除行列：选中后，Ctrl&#43;-
+
+
+快速填充
+
+向下：Ctrl&#43;D
+向右：Ctrl&#43;R
+到行末/列末注意需要最末输入内容占位，或者选择隐藏空白行列
+
+
+隐藏列：Ctrl&#43;0
+切换工作表：Ctrl&#43;PgUp或PgDn
+快速求和：Alt&#43;=
+
+现金流出项目，把减号做进单元格里
+
+
+单元格格式：Ctrl&#43;1
+
+整数：Ctrl&#43;Shift&#43;1
+日期：Ctrl&#43;Shift&#43;3
+百分号：Ctrl&#43;Shift&#43;5
+加小数位：Alt&#43;H&#43;0
+减小数位：Alt&#43;H&#43;9
+
+
+单元格加边框：Ctrl&#43;Shift&#43;7
+
+去掉边框：Ctrl&#43;Shift&#43;-
+
+
+只粘贴值：
+
+Ctrl&#43;Shift&#43;V
+Alt&#43;H&#43;V&#43;V
+
+
+重复执行上一步操作：F4
+加批注：Shift&#43;F2
+Go to Special：Ctrl&#43;G
+建议发出前完成：
+
+缩放到100%：Alt&#43;W&#43;J
+选中A1单元格：Ctrl&#43;Home
+自查名称管理器、宏，是否有重复/弃用/掉链接/报错，尽量不用range names
+自查空白单元格是否空白（带格式需要删掉，影响文件体积）
+公式里不出现任何hard-coded的数值，包括换算单位、天数等
+
+
+
+建议跨列居中代替合并单元格
+
+理由
+
+可调整，不会提示“无法对合并单元格执行此操作”
+不改变单元格值的位置
+
+
+
+锁定或解锁受保护区域
+
+锁定或解除锁定受保护工作表的特定区域 - Microsoft 支持
+
+模拟运算表
+
+双因素
+
+引用行：横向变化范围
+引用列：竖向变化范围
+模拟运算表和输入单元格，必须在同一张sheet
+
+
+单因素
+
+引用行：横向变化范围
+
+
+超过二维以及多个项目处理
+
+多情景
+
+灵活使用=CHOOSE()和=SWITCH()
+
+VBA
+
+模块命名使用英文，避免不同语言系统打不开文件
+
+Modelling相关
+
+常量假设（constant input，fixed）和动态假设（dynamic input，time-variable，带timeline）分开
+先做时间线和flag
+
+=SEQUENCE()
+
+
+先根据一般假设做清楚draft版本（勾稽正确），然后再逐个item去拆
+所有增长率/trend的假设，线性或指数，都需要backup解释
+假设建议引两次，一次在工作表前面，一次在使用的item前面
+item分层，建议缩小前面几列，按照层级放置，方便Ctrl&#43;↑或↓跳转
+如果用到=NPV()，注意第0期手动加回
+一个不成文的做法是，sheet的排布从左到右派生，即逐个从右往左删掉sheet时，不会因此而改变前序sheet
+" />
+<meta property="og:url" content="https://fanrongbin.com/evergreen/modelling/" />
+<meta property="og:image" content="/apple-touch-icon.png" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="/apple-touch-icon.png" />
+<meta name="twitter:title" content="Excel礼仪 | Rongbin Fan" />
+<meta name="twitter:description" content="
+    
+      
+        Note
+      
+      
+        推荐你试试：Arixcel（追踪单元格、自定义快捷键）、白描OCR、UiPath Clipboard AI、以及Quicker。
+此外还有老牌的Macabacus、世外数豆人的IBD Tools、方方格子等VBA插件。
+还可以试试Tracelight，注意合规。
+      
+    格式
+
+input：蓝色
+reference：绿色
+formula：黑色
+for edit：边框（&#43;米黄色）
+pending/emphasis：黄色高亮
+
+Excel
+快捷键
+
+行列
+
+选中行：Shift&#43;空格
+往上插入行/左插入列：选中后，Ctrl&#43;Shift&#43;&#43;
+删除行列：选中后，Ctrl&#43;-
+
+
+快速填充
+
+向下：Ctrl&#43;D
+向右：Ctrl&#43;R
+到行末/列末注意需要最末输入内容占位，或者选择隐藏空白行列
+
+
+隐藏列：Ctrl&#43;0
+切换工作表：Ctrl&#43;PgUp或PgDn
+快速求和：Alt&#43;=
+
+现金流出项目，把减号做进单元格里
+
+
+单元格格式：Ctrl&#43;1
+
+整数：Ctrl&#43;Shift&#43;1
+日期：Ctrl&#43;Shift&#43;3
+百分号：Ctrl&#43;Shift&#43;5
+加小数位：Alt&#43;H&#43;0
+减小数位：Alt&#43;H&#43;9
+
+
+单元格加边框：Ctrl&#43;Shift&#43;7
+
+去掉边框：Ctrl&#43;Shift&#43;-
+
+
+只粘贴值：
+
+Ctrl&#43;Shift&#43;V
+Alt&#43;H&#43;V&#43;V
+
+
+重复执行上一步操作：F4
+加批注：Shift&#43;F2
+Go to Special：Ctrl&#43;G
+建议发出前完成：
+
+缩放到100%：Alt&#43;W&#43;J
+选中A1单元格：Ctrl&#43;Home
+自查名称管理器、宏，是否有重复/弃用/掉链接/报错，尽量不用range names
+自查空白单元格是否空白（带格式需要删掉，影响文件体积）
+公式里不出现任何hard-coded的数值，包括换算单位、天数等
+
+
+
+建议跨列居中代替合并单元格
+
+理由
+
+可调整，不会提示“无法对合并单元格执行此操作”
+不改变单元格值的位置
+
+
+
+锁定或解锁受保护区域
+
+锁定或解除锁定受保护工作表的特定区域 - Microsoft 支持
+
+模拟运算表
+
+双因素
+
+引用行：横向变化范围
+引用列：竖向变化范围
+模拟运算表和输入单元格，必须在同一张sheet
+
+
+单因素
+
+引用行：横向变化范围
+
+
+超过二维以及多个项目处理
+
+多情景
+
+灵活使用=CHOOSE()和=SWITCH()
+
+VBA
+
+模块命名使用英文，避免不同语言系统打不开文件
+
+Modelling相关
+
+常量假设（constant input，fixed）和动态假设（dynamic input，time-variable，带timeline）分开
+先做时间线和flag
+
+=SEQUENCE()
+
+
+先根据一般假设做清楚draft版本（勾稽正确），然后再逐个item去拆
+所有增长率/trend的假设，线性或指数，都需要backup解释
+假设建议引两次，一次在工作表前面，一次在使用的item前面
+item分层，建议缩小前面几列，按照层级放置，方便Ctrl&#43;↑或↓跳转
+如果用到=NPV()，注意第0期手动加回
+一个不成文的做法是，sheet的排布从左到右派生，即逐个从右往左删掉sheet时，不会因此而改变前序sheet
+" />
+
+
+<section style="display: none;" class="h-card">
+  <span class="p-name">Rongbin Fan</span>
+  <span class="p-note">Are you willing to, able to, imagine an alternative reality?</span>
+  <img class="u-photo" src="/apple-touch-icon.png"/>
+  <a class="u-url u-uid" href="https://fanrongbin.com"></a>
+  <a class="u-email" rel="me" href="mailto:hi@fanrongbin.com"></a>
+</section>
+</head>
+<body class="han-init-context">
+  <header>
+    
+  <p><a href="/">Rongbin Fan</a></p>
+
+  <p>
+    <small>
+      <time datetime="2025-10-08T00:00:00&#43;08:00">
+        2025-10-08
+      </time>
+    </small>
+
+    
+  </p>
+
+  </header>
+  <main>
+    
+  <h1 class="title">Excel礼仪</h1>
+  <p class="description"></p>
+
+  
+
+  
+            <link rel="stylesheet" href="/css/vendors/admonitions.02779140835f452cb4ca8e7db2ae0343d32da5f75cd96f68d9c5d7d655d622a1.css" integrity="sha256-AneRQINfRSy0yo59sq4DQ9Mtpfdc2W9o2cXX1lXWIqE=" crossorigin="anonymous">
+    <div class="admonition note">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 125.7-86.8 86.8c-10.3 10.3-17.5 23.1-21 37.2l-18.7 74.9c-2.3 9.2-1.8 18.8 1.3 27.5L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+        <span>Note</span>
+      </div>
+      <div class="admonition-content">
+        <p>推荐你试试：Arixcel（追踪单元格、自定义快捷键）、白描OCR、UiPath Clipboard AI、以及Quicker。</p>
+<p>此外还有老牌的Macabacus、世外数豆人的IBD Tools、方方格子等VBA插件。</p>
+<p>还可以试试<a href="https://tracelight.ai/?src=fanrongbin.com">Tracelight</a>，注意合规。</p>
+      </div>
+    </div><h2 id="格式">格式</h2>
+<ul>
+<li>input：蓝色</li>
+<li>reference：绿色</li>
+<li>formula：黑色</li>
+<li>for edit：边框（+米黄色）</li>
+<li>pending/emphasis：黄色高亮</li>
+</ul>
+<h2 id="excel">Excel</h2>
+<h3 id="快捷键">快捷键</h3>
+<ul>
+<li>行列
+<ul>
+<li>选中行：<kbd>Shift</kbd>+<kbd>空格</kbd></li>
+<li>往上插入行/左插入列：选中后，<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>+</kbd></li>
+<li>删除行列：选中后，<kbd>Ctrl</kbd>+<kbd>-</kbd></li>
+</ul>
+</li>
+<li>快速填充
+<ul>
+<li>向下：<kbd>Ctrl</kbd>+<kbd>D</kbd></li>
+<li>向右：<kbd>Ctrl</kbd>+<kbd>R</kbd></li>
+<li>到行末/列末注意需要最末输入内容占位，或者选择隐藏空白行列</li>
+</ul>
+</li>
+<li>隐藏列：<kbd>Ctrl</kbd>+<kbd>0</kbd></li>
+<li>切换工作表：<kbd>Ctrl</kbd>+<kbd>PgUp</kbd>或<kbd>PgDn</kbd></li>
+<li>快速求和：<kbd>Alt</kbd>+<kbd>=</kbd>
+<ul>
+<li>现金流出项目，把减号做进单元格里</li>
+</ul>
+</li>
+<li>单元格格式：<kbd>Ctrl</kbd>+<kbd>1</kbd>
+<ul>
+<li>整数：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>1</kbd></li>
+<li>日期：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>3</kbd></li>
+<li>百分号：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>5</kbd></li>
+<li>加小数位：<kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>0</kbd></li>
+<li>减小数位：<kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>9</kbd></li>
+</ul>
+</li>
+<li>单元格加边框：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>7</kbd>
+<ul>
+<li>去掉边框：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd></li>
+</ul>
+</li>
+<li>只粘贴值：
+<ul>
+<li><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></li>
+<li><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>V</kbd>+<kbd>V</kbd></li>
+</ul>
+</li>
+<li>重复执行上一步操作：<kbd>F4</kbd></li>
+<li>加批注：<kbd>Shift</kbd>+<kbd>F2</kbd></li>
+<li>Go to Special：<kbd>Ctrl</kbd>+<kbd>G</kbd></li>
+<li><strong>建议发出前完成：</strong>
+<ul>
+<li>缩放到100%：<kbd>Alt</kbd>+<kbd>W</kbd>+<kbd>J</kbd></li>
+<li>选中A1单元格：<kbd>Ctrl</kbd>+<kbd>Home</kbd></li>
+<li>自查名称管理器、宏，是否有重复/弃用/掉链接/报错，尽量不用range names</li>
+<li>自查空白单元格是否空白（带格式需要删掉，影响文件体积）</li>
+<li>公式里不出现任何hard-coded的数值，包括换算单位、天数等</li>
+</ul>
+</li>
+</ul>
+<h3 id="建议跨列居中代替合并单元格">建议跨列居中代替合并单元格</h3>
+<ul>
+<li>理由
+<ul>
+<li>可调整，不会提示“无法对合并单元格执行此操作”</li>
+<li>不改变单元格值的位置</li>
+</ul>
+</li>
+</ul>
+<h3 id="锁定或解锁受保护区域">锁定或解锁受保护区域</h3>
+<ul>
+<li><a href="https://support.microsoft.com/zh-cn/office/%E9%94%81%E5%AE%9A%E6%88%96%E8%A7%A3%E9%99%A4%E9%94%81%E5%AE%9A%E5%8F%97%E4%BF%9D%E6%8A%A4%E5%B7%A5%E4%BD%9C%E8%A1%A8%E7%9A%84%E7%89%B9%E5%AE%9A%E5%8C%BA%E5%9F%9F-75481b72-db8a-4267-8c43-042a5f2cd93a">锁定或解除锁定受保护工作表的特定区域 - Microsoft 支持</a></li>
+</ul>
+<h3 id="模拟运算表">模拟运算表</h3>
+<ul>
+<li>双因素
+<ul>
+<li>引用行：横向变化范围</li>
+<li>引用列：竖向变化范围</li>
+<li>模拟运算表和输入单元格，必须在同一张sheet</li>
+</ul>
+</li>
+<li>单因素
+<ul>
+<li>引用行：横向变化范围</li>
+</ul>
+</li>
+<li><a href="https://mp.weixin.qq.com/s/AA8QoaowBZpGOIMvjCfvMA">超过二维以及多个项目处理</a></li>
+</ul>
+<h3 id="多情景">多情景</h3>
+<ul>
+<li>灵活使用<code>=CHOOSE()</code>和<code>=SWITCH()</code></li>
+</ul>
+<h3 id="vba">VBA</h3>
+<ul>
+<li>模块命名使用英文，避免不同语言系统打不开文件</li>
+</ul>
+<h2 id="modelling相关">Modelling相关</h2>
+<ul>
+<li>常量假设（constant input，fixed）和动态假设（dynamic input，time-variable，带timeline）分开</li>
+<li>先做时间线和flag
+<ul>
+<li><code>=SEQUENCE()</code></li>
+</ul>
+</li>
+<li>先根据一般假设做清楚draft版本（勾稽正确），然后再逐个item去拆</li>
+<li>所有增长率/trend的假设，线性或指数，都需要backup解释</li>
+<li>假设建议引两次，一次在工作表前面，一次在使用的item前面</li>
+<li>item分层，建议缩小前面几列，按照层级放置，方便<kbd>Ctrl</kbd>+<kbd>↑</kbd>或<kbd>↓</kbd>跳转</li>
+<li>如果用到<code>=NPV()</code>，注意第0期手动加回</li>
+<li>一个不成文的做法是，sheet的排布从左到右派生，即逐个从右往左删掉sheet时，不会因此而改变前序sheet</li>
+</ul>
+
+  
+
+  
+  <details class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#格式">格式</a></li>
+    <li><a href="#excel">Excel</a>
+      <ul>
+        <li><a href="#快捷键">快捷键</a></li>
+        <li><a href="#建议跨列居中代替合并单元格">建议跨列居中代替合并单元格</a></li>
+        <li><a href="#锁定或解锁受保护区域">锁定或解锁受保护区域</a></li>
+        <li><a href="#模拟运算表">模拟运算表</a></li>
+        <li><a href="#多情景">多情景</a></li>
+        <li><a href="#vba">VBA</a></li>
+      </ul>
+    </li>
+    <li><a href="#modelling相关">Modelling相关</a></li>
+  </ul>
+</nav>
+    <summary>Table of Contents</summary>
+    </details>
+  
+
+  </main>
+  <footer>
+    
+<p>© 2026</p>
+      
+<p><small><a href="#">Back to top ↑</a></small></p>
+
+  </footer>
+  
+  
+  
+</body>
+
+
+
+<script src="/han.min.4d8411065a29db5126de2fe148b086140843a2472114d920ba6a99530412fb02.js" integrity="sha256-TYQRBlop21Em3i/hSLCGFAhDokchFNkgumqZUwQS&#43;wI=" defer></script>
+
+
+
+
+
+
+<script data-goatcounter="https://ron.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+</html>

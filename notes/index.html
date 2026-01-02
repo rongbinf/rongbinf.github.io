@@ -16,7 +16,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.5c7d1d4a53e4f9def8ea33683a6b5d17b1aa0a3c0d54e86a03676917aa02fa5a.css" integrity="sha256-XH0dSlPk&#43;d746jNoOmtdF7GqCjwNVOhqA2dpF6oC&#43;lo=">
+<link rel="stylesheet" href="/css/main.26edff854d51c13c95995f26c4ff87b78cc7734d504b1e00613f8b50b8b55aa0.css" integrity="sha256-Ju3/hU1RwTyVmV8mxP&#43;Ht4zHc01QSx4AYT&#43;LULi1WqA=">
 
 
 
@@ -55,8 +55,8 @@
 
   <p>
     <small>
-      <time datetime="2025-06-27T14:21:00&#43;01:00">
-        2025-06-27
+      <time datetime="2025-11-25T00:00:00&#43;00:00">
+        2025-11-25
       </time>
     </small>
 
@@ -68,6 +68,49 @@
     
   <h1>Notes</h1>
   
+  
+    <h2><a href="/dps-statutory-declaration/">DPS退押金时的Statutory Declaration</a></h2>
+    <p>会搜索到这篇文章，一般是不走运需要raise a dispute了，希望你注意：</p>
+<ul>
+<li>假设中介未在DPS系统里开启流程，需要租客先行开启</li>
+<li>流程开启后，有14天的时间供双方在系统提交证据
+<ul>
+<li>在开启流程时<strong>需要选择nominated tenant来负责通信和证据提交等。请尽量选择在英国境内的租客</strong>，因为如果进入Statutory Declaration process，需要线下走一些程序（如下述）</li>
+</ul>
+</li>
+<li>如果中介装死，需要在<strong>14天过后主动</strong>申请进入<a href="https://www.depositprotection.com/repayments/statutory-declaration-process-tenants">Statutory Declaration process</a></li>
+</ul>
+<hr>
+<p>进入Statutory Declaration process：</p>
+<ul>
+<li>
+<p>需要下载一个系统生成的表格，填写打印后由nominated tenant在<strong>律师见证</strong>下签字，寄给DPS</p>
+<blockquote>
+<p>This must be witnessed by a Solicitor, a Commissioner for Oaths or a Magistrate.</p>
+</blockquote>
+</li>
+<li>
+<p>对这个表格的律师见证，在英国基本各律所都能够进门当场办理，费用一般小于10镑</p>
+</li>
+<li>
+<p>如果选择的nominated tenant不在英国，DPS也允许在其他国家地区作律师见证，发生的费用因各律所费率而不同</p>
+</li>
+</ul>
+<hr>
+<p>如果确实要修改nominated tenant：</p>
+<ul>
+<li>只能取消当前的claim，重新生成一个claim
+<ul>
+<li><strong>这意味着需要再等14天重新进入Statutory Declaration process</strong></li>
+</ul>
+</li>
+<li>也可以咨询DPS（邮件、电话、在线三种方式，建议不时存档对话避免后续纠纷）
+<ul>
+<li>我们在25年10月咨询得知，可以在不取消当前claim的情况下，授权另外一名租户来承担nominated tenant的责任，<strong>但这意味着如果之后需要递交证据材料，必须以线下邮寄的方式递交</strong>，不能线上提交</li>
+<li>也许有其他方法，但我们没问出来</li>
+</ul>
+</li>
+</ul>
   
     <h2><a href="/qgis-get-started/">快速上手 QGIS</a></h2>
     <p>使用<a href="https://qgis.org/">QGIS</a>可以很方便地对地图做样式处理。例如高亮某条马路、标记某个位置、圈出某个园区等等。</p>
@@ -434,22 +477,22 @@
     <p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
 <h2 id="方法-1提前声明并使用--确认">方法 1：提前声明并使用 &lt;&gt; 确认</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>{ <span style="color:#75715e">//以复数类为例
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>  	A real, image;
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>		complex(A a, A b)<span style="color:#f92672">:</span>real(a),image(b){
 </span></span><span style="display:flex;"><span>		}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//在运算符 &lt;&lt; 后加入 &lt;&gt; 以帮助编译器进一步确定该友元函数为模板函数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">&lt;&gt;</span>(ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m); 
+</span></span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">&lt;&gt;</span>(ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m); 
 </span></span><span style="display:flex;"><span>}; 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
@@ -465,7 +508,7 @@
 </span></span><span style="display:flex;"><span>} 
 </span></span></code></pre></div><h2 id="方法-2在声明友元函数的同时定义友元函数">方法 2：在声明友元函数的同时定义友元函数</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>{
@@ -476,7 +519,7 @@
 </span></span><span style="display:flex;"><span>		}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//在声明友元函数的同时定义友元函数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
+</span></span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
 </span></span><span style="display:flex;"><span>			newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;)&#34;</span>;
 </span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> newout;
 </span></span><span style="display:flex;"><span>		}
@@ -512,26 +555,26 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rect</span>{
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>p;     <span style="color:#75715e">// 一指针成员
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>    Rect(){      <span style="color:#75715e">// 构造函数，p 指向堆中分配的一内存
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        p <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>(<span style="color:#ae81ff">100</span>); <span style="color:#75715e">// new 动态分配
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span></span><span style="display:flex;"><span>        p <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>(<span style="color:#ae81ff">100</span>); <span style="color:#75715e">// new 动态分配
+</span></span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">~</span>Rect(){     <span style="color:#75715e">// 析构函数，释放动态分配的内存
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(p <span style="color:#f92672">!=</span> NULL){
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(p <span style="color:#f92672">!=</span> NULL){
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">delete</span> p; <span style="color:#75715e">// delete 释放 p 所指向的内存
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
 </span></span><span style="display:flex;"><span>    Rect rect1;
 </span></span><span style="display:flex;"><span>    Rect rect2(rect1);   <span style="color:#75715e">// 拷贝 rect1 来构造 rect2
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 也即： Rect rect2 = rect1;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 浅拷贝，将成员的值进行拷贝 rect2.p = rect1.p （地址 = 地址）
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 也即： Rect rect2 = rect1;
+</span></span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 浅拷贝，将成员的值进行拷贝 rect2.p = rect1.p （地址 = 地址）
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 会出现错误
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 在 delete 时既要 delete rect2.p 指向的空间，又要 delete rect1.p 指向的内存。但这是同一个内存（地址 = 地址），导致同一个内存被释放两次
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 在 delete 时既要 delete rect2.p 指向的空间，又要 delete rect1.p 指向的内存。但这是同一个内存（地址 = 地址），导致同一个内存被释放两次
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>同时还造成另外两个错误：</p>
@@ -574,7 +617,7 @@
   </main>
   <footer>
     
-<p>© 2025</p>
+<p>© 2026</p>
       
 <p><small><a href="#">Back to top ↑</a></small></p>
 
@@ -588,7 +631,7 @@
 
 
 
-<script src="/han.min.831f27db02c9bac7a1d42a0f46d9b947f346d8c989ef1bda95eae9d01ba5ad8d.js" integrity="sha256-gx8n2wLJuseh1CoPRtm5R/NG2MmJ7xvalerp0BulrY0=" defer></script>
+<script src="/han.min.4d8411065a29db5126de2fe148b086140843a2472114d920ba6a99530412fb02.js" integrity="sha256-TYQRBlop21Em3i/hSLCGFAhDokchFNkgumqZUwQS&#43;wI=" defer></script>
 
 
 
