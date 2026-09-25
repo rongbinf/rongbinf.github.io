@@ -16,11 +16,15 @@
 
 
 
-<link rel="stylesheet" href="/css/main.26edff854d51c13c95995f26c4ff87b78cc7734d504b1e00613f8b50b8b55aa0.css" integrity="sha256-Ju3/hU1RwTyVmV8mxP&#43;Ht4zHc01QSx4AYT&#43;LULi1WqA=">
+<link rel="stylesheet" href="/css/main.906a8fbaf20ab705538c2a062d6100cadf4776bcba97c74d199cd9ad063394fa.css" integrity="sha256-kGqPuvIKtwVTjCoGLWEAyt9Hdry6l8dNGZzZrQYzlPo=">
 
 
 
 <link rel="stylesheet" href="/han.min.85eccdac5b74d62fd6ecf8801df9347370a336931778f5436098342433b5cbb7.css" integrity="sha256-hezNrFt01i/W7PiAHfk0c3CjNpMXePVDYJg0JDO1y7c=">
+
+
+
+<link rel="stylesheet" href="/records.min.a6d31cccece2b391bb45a5b30287ad0a56d0cd4181d3664d5764378dc2a14abb.css">
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -8126,21 +8130,13 @@
   
 </div>
 
-<button id="fit-toggle" type="button" aria-pressed="false" hidden>
-  <svg class="icon-fit" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M1 1h6v6H1zM9 1h6v6H9zM1 9h6v6H1zM9 9h6v6H9z" fill="currentColor"/></svg>
-  <span>Show all</span>
-</button>
-
-
-
-<link rel="stylesheet" href="/records.min.a6d31cccece2b391bb45a5b30287ad0a56d0cd4181d3664d5764378dc2a14abb.css">
-
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  
+  
+  (() => {
     const container = document.getElementById("record-grid");
     const records = Array.from(container.children);
 
-    
     for (let i = records.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [records[i], records[j]] = [records[j], records[i]];
@@ -8148,6 +8144,24 @@
 
     container.innerHTML = "";
     records.forEach(el => container.appendChild(el));
+
+    const vh = window.innerHeight;
+    records
+      .filter(el => el.getBoundingClientRect().top < vh)
+      .forEach(el => { const img = el.querySelector("img.cover"); if (img) img.loading = "eager"; });
+  })();
+</script>
+
+<button id="fit-toggle" type="button" aria-pressed="false" hidden>
+  <svg class="icon-fit" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M1 1h6v6H1zM9 1h6v6H9zM1 9h6v6H1zM9 9h6v6H9z" fill="currentColor"/></svg>
+  <span>Show all</span>
+</button>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("record-grid");
+    const records = Array.from(container.children);
 
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
