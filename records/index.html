@@ -8133,7 +8133,7 @@
 
 
 
-<link rel="stylesheet" href="/records.min.0bb08de7b454fa314a7ee51742056bd2d253b4d5cb90a253dddf63481a2cec9d.css">
+<link rel="stylesheet" href="/records.min.4b185b71dabba81cdd7bac660c2fa1732162a5ee3a855cca1612cd57c8199883.css">
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -8312,6 +8312,8 @@
       const shift = panel.offsetHeight;
       const below = records.filter(r => r.offsetLeft === record.offsetLeft && r.offsetTop > record.offsetTop);
       record.classList.add("has-panel");
+      
+      record.style.zIndex = 2;
       container.style.paddingBottom = shift + "px";
 
       
@@ -8336,6 +8338,7 @@
       record.classList.remove("has-panel");
       const cleanup = () => {
         panel.remove();
+        if (!infoPanel || infoPanel.record !== record) record.style.zIndex = "";
         below.forEach(r => { r.style.transition = ""; });
         if (!infoPanel) container.style.paddingBottom = "";
       };
