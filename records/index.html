@@ -8133,7 +8133,7 @@
 
 
 
-<link rel="stylesheet" href="/records.min.89fb348cb5026676b4b15f853ee1427c987ae90bbc863e863000175d2338b974.css">
+<link rel="stylesheet" href="/records.min.3e03be48917bc021d22968fa03220693b239c7e53067321a4c0b4eae59a9a484.css">
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -8152,8 +8152,23 @@
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     
+    
+    
     const covers = Array.from(container.querySelectorAll("img.cover[srcset]"));
-    const setCoverSizes = (sizes) => covers.forEach(img => { img.sizes = sizes; });
+    let coverSizes = "200px";
+    const setCoverSizes = (sizes) => {
+      coverSizes = sizes;
+      const vh = window.innerHeight;
+      covers.forEach(img => {
+        if (img.sizes === sizes) return;
+        const r = img.getBoundingClientRect();
+        if (!r.width || r.bottom <= 0 || r.top >= vh || !img.decode) { img.sizes = sizes; return; }
+        const next = new Image();
+        next.sizes = sizes;
+        next.srcset = img.srcset;
+        next.decode().catch(() => {}).then(() => { if (coverSizes === sizes) img.sizes = sizes; });
+      });
+    };
 
     
     const preloadThumbs = () => covers.forEach(img => { new Image().src = img.dataset.thumb; });
@@ -8200,10 +8215,14 @@
     
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let animToken = 0;
+    let syncTimer = 0;
     const animateLayout = (change, onSettled) => {
+      
       const settle = () => {
-        syncCoverSizes();
-        if (onSettled) onSettled();
+        clearTimeout(syncTimer);
+        if (!onSettled) { syncCoverSizes(); return; }
+        onSettled();
+        syncTimer = setTimeout(() => { if (!isAnimating()) syncCoverSizes(); }, 400);
       };
       if (!Element.prototype.animate) { change(); settle(); return; }
       if (reduceMotion.matches) {
@@ -8234,20 +8253,18 @@
       records.forEach((el, i) => {
         const f = first[i];
         const l = el.getBoundingClientRect();
-        if (!l.width || (!visible(f) && !visible(l))) return;
         
-        const toTransform = (r) => {
-          if (r === l) return "none";
-          const dx = r.left + r.width / 2 - (l.left + l.width / 2);
-          const dy = r.top + r.width / 2 - (l.top + l.height / 2);
-          return `translate(${dx}px, ${dy}px) scale(${r.width / l.width})`;
-        };
-        const onScreenBoth = visible(f) && visible(l);
+        
+        if (!l.width || !visible(l)) return;
+        
+        const from = nearEdge(f);
+        const dx = from.left + from.width / 2 - (l.left + l.width / 2);
+        const dy = from.top + from.width / 2 - (l.top + l.height / 2);
         animations.push(el.animate([
-          { transform: toTransform(nearEdge(f)) },
-          { transform: toTransform(nearEdge(l)) }
+          { transform: `translate(${dx}px, ${dy}px) scale(${from.width / l.width})` },
+          { transform: "none" }
         ], {
-          duration: onScreenBoth ? 380 : 460,
+          duration: visible(f) ? 380 : 460,
           delay: Math.min(i * 0.6, 120),
           easing: "cubic-bezier(0.2, 1.05, 0.35, 1)",
           fill: "backwards"
@@ -8298,6 +8315,20 @@
     };
     const panelEvents = [["pointerdown", true], ["wheel", true], ["touchmove", true], ["keydown", false], ["resize", false]];
 
+    
+    
+    const slideCovers = (list, dy, transform) => {
+      const vh = window.innerHeight;
+      const glide = list.map(r => {
+        const b = r.getBoundingClientRect();
+        return !reduceMotion.matches && Math.max(b.bottom, b.bottom + dy) > 0 && Math.min(b.top, b.top + dy) < vh;
+      });
+      list.forEach((r, i) => {
+        r.style.transition = glide[i] ? "transform 0.35s cubic-bezier(0.2, 1, 0.35, 1)" : "none";
+        r.style.transform = transform;
+      });
+    };
+
     const openPanel = (record) => {
       closePanel(true);
       const panel = document.createElement("div");
@@ -8320,10 +8351,7 @@
       panel.getBoundingClientRect();
       panel.classList.add("is-open");
       panel.style.transform = "";
-      below.forEach(r => {
-        r.style.transition = reduceMotion.matches ? "none" : "transform 0.35s cubic-bezier(0.2, 1, 0.35, 1)";
-        r.style.transform = `translateY(${shift}px)`;
-      });
+      slideCovers(below, shift, `translateY(${shift}px)`);
 
       infoPanel = { panel, record, below, shift };
       panelEvents.forEach(([type, passive]) => window.addEventListener(type, closeOnInteraction, { capture: true, passive }));
@@ -8346,7 +8374,7 @@
         cleanup();
         return;
       }
-      below.forEach(r => { r.style.transform = ""; });
+      slideCovers(below, -shift, "");
       panel.classList.remove("is-open");
       panel.style.transform = `translateY(${-shift}px)`;
       setTimeout(cleanup, 400);
