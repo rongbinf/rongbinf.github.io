@@ -8133,7 +8133,7 @@
 
 
 
-<link rel="stylesheet" href="/records.min.fb0cf91e9ab3948c24d0524c257004f7df1aa6c758dcd8985e824dc10bb24ff4.css">
+<link rel="stylesheet" href="/records.min.e0893d4e2bc843e3f1140a2d2ad7aa1a0fb6d7fad49519c14c502b3ca0cc5652.css">
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -8165,6 +8165,10 @@
     
     const fitToggle = document.getElementById("fit-toggle");
     const isFit = () => document.body.classList.contains("records-fit");
+    const isAnimating = () => document.body.classList.contains("records-animating");
+    let fitSize = 0;
+    
+    const syncCoverSizes = () => setCoverSizes(isFit() ? fitSize + "px" : "200px");
 
     const layoutFit = () => {
       const n = records.length;
@@ -8189,18 +8193,24 @@
       container.style.setProperty("--fit-size", fit.size + "px");
       container.style.setProperty("--fit-gap", fit.gap + "px");
       container.style.setProperty("--fit-radius", Math.max(2, Math.round(fit.size * 0.08)) + "px");
-      setCoverSizes(fit.size + "px");
+      fitSize = fit.size;
+      if (!isAnimating()) syncCoverSizes();
     };
 
     
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let animToken = 0;
-    const animateLayout = (change) => {
-      if (!Element.prototype.animate) { change(); return; }
+    const animateLayout = (change, onSettled) => {
+      const settle = () => {
+        syncCoverSizes();
+        if (onSettled) onSettled();
+      };
+      if (!Element.prototype.animate) { change(); settle(); return; }
       if (reduceMotion.matches) {
         
         change();
         container.animate({ opacity: [0, 1] }, { duration: 200, easing: "ease-out" });
+        settle();
         return;
       }
       const first = records.map(el => el.getBoundingClientRect());
@@ -8247,31 +8257,74 @@
         document.querySelectorAll("header, main > h1").forEach(el => el.animate({ opacity: [0, 1] }, { duration: 250, easing: "ease-out" }));
       }
       Promise.allSettled(animations.map(a => a.finished)).then(() => {
-        if (token === animToken) document.body.classList.remove("records-animating");
+        if (token !== animToken) return;
+        document.body.classList.remove("records-animating");
+        settle();
       });
     };
 
-    const setFit = (on, afterChange) => {
+    const setFit = (on, afterChange, onSettled) => {
       animateLayout(() => {
         document.body.classList.toggle("records-fit", on);
         if (on) layoutFit();
-        else setCoverSizes("200px");
         if (afterChange) afterChange();
-      });
+      }, onSettled);
       fitToggle.setAttribute("aria-pressed", on);
+      if (!on) lockHover();
     };
 
+    
+    let hoverLockAt = null;
+    const lockHover = () => {
+      if (!lastPointer) return;
+      hoverLockAt = lastPointer;
+      document.body.classList.add("records-hover-lock");
+    };
+    let lastPointer = null;
+    window.addEventListener("pointerdown", (e) => { lastPointer = { x: e.clientX, y: e.clientY }; }, true);
+    window.addEventListener("mousemove", (e) => {
+      if (hoverLockAt && Math.hypot(e.clientX - hoverLockAt.x, e.clientY - hoverLockAt.y) > 4) {
+        hoverLockAt = null;
+        document.body.classList.remove("records-hover-lock");
+      }
+    });
+
     fitToggle.hidden = false;
+    let savedScroll = 0;
     fitToggle.addEventListener("click", (e) => {
       e.stopPropagation();
+      savedScroll = window.scrollY;
       setFit(true);
     });
+
+    
+    let closing = false;
+    const fadeOutFit = () => {
+      if (!isFit() || closing) return;
+      closing = true;
+      const pageChrome = Array.from(document.querySelectorAll("header, main > h1"));
+      pageChrome.forEach(el => { el.style.opacity = 0; });
+      const out = container.animate({ opacity: [1, 0] }, { duration: 150, easing: "ease-in", fill: "forwards" });
+      out.finished.catch(() => {}).then(() => {
+        records.forEach(el => el.getAnimations().forEach(a => a.cancel()));
+        document.body.classList.remove("records-fit");
+        syncCoverSizes();
+        fitToggle.setAttribute("aria-pressed", false);
+        lockHover();
+        window.scrollTo({ top: savedScroll, behavior: "instant" });
+        out.cancel();
+        pageChrome.forEach(el => { el.style.opacity = ""; });
+        [...pageChrome, container].forEach(el => el.animate({ opacity: [0, 1] }, { duration: 200, easing: "ease-out" }));
+        closing = false;
+      });
+    };
+
     
     container.addEventListener("click", (e) => {
-      if (isFit() && !e.target.closest(".record")) setFit(false);
+      if (isFit() && !e.target.closest(".record")) fadeOutFit();
     });
     window.addEventListener("resize", () => { if (isFit()) layoutFit(); });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && isFit()) setFit(false); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") fadeOutFit(); });
 
     records.forEach(record => {
       const toggleInfo = (e) => {
@@ -8280,8 +8333,10 @@
         if (isFit()) {
           e.preventDefault();
           document.querySelectorAll('.record.show-info').forEach(r => r.classList.remove('show-info'));
-          record.classList.add('show-info');
-          setFit(false, () => record.scrollIntoView({ block: "center" }));
+          setFit(false, () => record.scrollIntoView({ block: "center" }), () => {
+            
+            requestAnimationFrame(() => requestAnimationFrame(() => record.classList.add('show-info')));
+          });
           return;
         }
         const isShown = record.classList.contains('show-info');
