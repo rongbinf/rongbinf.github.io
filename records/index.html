@@ -8128,13 +8128,12 @@
 
 <button id="fit-toggle" type="button" aria-pressed="false" hidden>
   <svg class="icon-fit" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M1 1h6v6H1zM9 1h6v6H9zM1 9h6v6H1zM9 9h6v6H9z" fill="currentColor"/></svg>
-  <svg class="icon-close" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-  <span class="label">Show all</span>
+  <span>Show all</span>
 </button>
 
 
 
-<link rel="stylesheet" href="/records.min.4269199d12b5e5233e7bdd47e97169f3251cc62a67ff969ee313a9d54f42ff7b.css">
+<link rel="stylesheet" href="/records.min.fb0cf91e9ab3948c24d0524c257004f7df1aa6c758dcd8985e824dc10bb24ff4.css">
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -8165,7 +8164,6 @@
 
     
     const fitToggle = document.getElementById("fit-toggle");
-    const fitLabel = fitToggle.querySelector(".label");
     const isFit = () => document.body.classList.contains("records-fit");
 
     const layoutFit = () => {
@@ -8192,16 +8190,6 @@
       container.style.setProperty("--fit-gap", fit.gap + "px");
       container.style.setProperty("--fit-radius", Math.max(2, Math.round(fit.size * 0.08)) + "px");
       setCoverSizes(fit.size + "px");
-    };
-
-    
-    let idleTimer;
-    const revealToggle = () => {
-      clearTimeout(idleTimer);
-      fitToggle.classList.remove("is-idle");
-      if (isFit() && !fitToggle.matches(":hover")) {
-        idleTimer = setTimeout(() => fitToggle.classList.add("is-idle"), 2000);
-      }
     };
 
     
@@ -8249,14 +8237,14 @@
           { transform: toTransform(nearEdge(f)) },
           { transform: toTransform(nearEdge(l)) }
         ], {
-          duration: onScreenBoth ? 520 : 680,
-          delay: Math.min(i * 1.2, 240),
-          easing: "cubic-bezier(0.3, 1.2, 0.5, 1)",
+          duration: onScreenBoth ? 380 : 460,
+          delay: Math.min(i * 0.6, 120),
+          easing: "cubic-bezier(0.2, 1.05, 0.35, 1)",
           fill: "backwards"
         }));
       });
       if (!isFit()) {
-        document.querySelectorAll("header, main > h1").forEach(el => el.animate({ opacity: [0, 1] }, { duration: 400, easing: "ease-out" }));
+        document.querySelectorAll("header, main > h1").forEach(el => el.animate({ opacity: [0, 1] }, { duration: 250, easing: "ease-out" }));
       }
       Promise.allSettled(animations.map(a => a.finished)).then(() => {
         if (token === animToken) document.body.classList.remove("records-animating");
@@ -8271,23 +8259,17 @@
         if (afterChange) afterChange();
       });
       fitToggle.setAttribute("aria-pressed", on);
-      fitLabel.textContent = on ? "Close" : "Show all";
-      revealToggle();
     };
 
     fitToggle.hidden = false;
     fitToggle.addEventListener("click", (e) => {
       e.stopPropagation();
-      setFit(!isFit());
+      setFit(true);
     });
-    fitToggle.addEventListener("mouseenter", () => clearTimeout(idleTimer));
-    fitToggle.addEventListener("mouseleave", revealToggle);
-    fitToggle.addEventListener("focus", revealToggle);
+    
     container.addEventListener("click", (e) => {
-      if (isFit() && !e.target.closest(".record")) revealToggle();
+      if (isFit() && !e.target.closest(".record")) setFit(false);
     });
-    window.addEventListener("wheel", () => { if (isFit()) revealToggle(); }, { passive: true });
-    window.addEventListener("touchmove", () => { if (isFit()) revealToggle(); }, { passive: true });
     window.addEventListener("resize", () => { if (isFit()) layoutFit(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && isFit()) setFit(false); });
 
