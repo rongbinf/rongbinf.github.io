@@ -8133,7 +8133,7 @@
 
 
 
-<link rel="stylesheet" href="/records.min.3e03be48917bc021d22968fa03220693b239c7e53067321a4c0b4eae59a9a484.css">
+<link rel="stylesheet" href="/records.min.a6d31cccece2b391bb45a5b30287ad0a56d0cd4181d3664d5764378dc2a14abb.css">
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -8186,6 +8186,9 @@
     const syncCoverSizes = () => setCoverSizes(isFit() ? fitSize + "px" : "200px");
 
     const layoutFit = () => {
+      
+      container.style.setProperty("--fit-top", window.scrollY + "px");
+      container.style.setProperty("--fit-height", window.innerHeight + "px");
       const n = records.length;
       const cs = getComputedStyle(container);
       const W = container.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
@@ -8280,9 +8283,30 @@
       });
     };
 
+    
+    
+    const scrollKeys = [" ", "PageUp", "PageDown", "Home", "End", "ArrowUp", "ArrowDown"];
+    const blockScroll = (e) => {
+      if (e.type === "keydown" && !scrollKeys.includes(e.key)) return;
+      e.preventDefault();
+    };
+    const scrollEvents = ["touchmove", "wheel", "keydown"];
+
+    
+    
+    const main = container.parentElement;
+    const setFitClass = (on) => {
+      if (on === isFit()) return;
+      main.style.minHeight = on ? main.offsetHeight + "px" : "";
+      scrollEvents.forEach(type => on
+        ? window.addEventListener(type, blockScroll, { passive: false })
+        : window.removeEventListener(type, blockScroll));
+      document.body.classList.toggle("records-fit", on);
+    };
+
     const setFit = (on, afterChange, onSettled) => {
       animateLayout(() => {
-        document.body.classList.toggle("records-fit", on);
+        setFitClass(on);
         if (on) layoutFit();
         if (afterChange) afterChange();
       }, onSettled);
@@ -8399,7 +8423,7 @@
       const out = container.animate({ opacity: [1, 0] }, { duration: 150, easing: "ease-in", fill: "forwards" });
       out.finished.catch(() => {}).then(() => {
         records.forEach(el => el.getAnimations().forEach(a => a.cancel()));
-        document.body.classList.remove("records-fit");
+        setFitClass(false);
         syncCoverSizes();
         fitToggle.setAttribute("aria-pressed", false);
         lockHover();
