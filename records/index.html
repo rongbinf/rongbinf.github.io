@@ -8133,7 +8133,7 @@
 
 
 
-<link rel="stylesheet" href="/records.min.e0893d4e2bc843e3f1140a2d2ad7aa1a0fb6d7fad49519c14c502b3ca0cc5652.css">
+<link rel="stylesheet" href="/records.min.0bb08de7b454fa314a7ee51742056bd2d253b4d5cb90a253dddf63481a2cec9d.css">
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -8289,10 +8289,72 @@
       }
     });
 
+    
+    
+    let infoPanel = null;
+    const closeOnInteraction = (e) => {
+      if (e.type === "pointerdown" && infoPanel && infoPanel.panel.contains(e.target)) return;
+      closePanel(e.type === "resize");
+    };
+    const panelEvents = [["pointerdown", true], ["wheel", true], ["touchmove", true], ["keydown", false], ["resize", false]];
+
+    const openPanel = (record) => {
+      closePanel(true);
+      const panel = document.createElement("div");
+      panel.className = "record-panel";
+      panel.innerHTML = record.querySelector(".info").innerHTML;
+      panel.style.left = record.offsetLeft + "px";
+      panel.style.top = record.offsetTop + record.offsetHeight + "px";
+      panel.style.width = record.offsetWidth + "px";
+      container.appendChild(panel);
+
+      
+      const shift = panel.offsetHeight;
+      const below = records.filter(r => r.offsetLeft === record.offsetLeft && r.offsetTop > record.offsetTop);
+      record.classList.add("has-panel");
+      container.style.paddingBottom = shift + "px";
+
+      
+      panel.style.transform = `translateY(${-shift}px)`;
+      panel.getBoundingClientRect();
+      panel.classList.add("is-open");
+      panel.style.transform = "";
+      below.forEach(r => {
+        r.style.transition = reduceMotion.matches ? "none" : "transform 0.35s cubic-bezier(0.2, 1, 0.35, 1)";
+        r.style.transform = `translateY(${shift}px)`;
+      });
+
+      infoPanel = { panel, record, below, shift };
+      panelEvents.forEach(([type, passive]) => window.addEventListener(type, closeOnInteraction, { capture: true, passive }));
+    };
+
+    const closePanel = (immediate) => {
+      if (!infoPanel) return;
+      const { panel, record, below, shift } = infoPanel;
+      infoPanel = null;
+      panelEvents.forEach(([type]) => window.removeEventListener(type, closeOnInteraction, { capture: true }));
+      record.classList.remove("has-panel");
+      const cleanup = () => {
+        panel.remove();
+        below.forEach(r => { r.style.transition = ""; });
+        if (!infoPanel) container.style.paddingBottom = "";
+      };
+      if (immediate) {
+        below.forEach(r => { r.style.transition = "none"; r.style.transform = ""; });
+        cleanup();
+        return;
+      }
+      below.forEach(r => { r.style.transform = ""; });
+      panel.classList.remove("is-open");
+      panel.style.transform = `translateY(${-shift}px)`;
+      setTimeout(cleanup, 400);
+    };
+
     fitToggle.hidden = false;
     let savedScroll = 0;
     fitToggle.addEventListener("click", (e) => {
       e.stopPropagation();
+      closePanel(true);
       savedScroll = window.scrollY;
       setFit(true);
     });
@@ -8333,10 +8395,7 @@
         if (isFit()) {
           e.preventDefault();
           document.querySelectorAll('.record.show-info').forEach(r => r.classList.remove('show-info'));
-          setFit(false, () => record.scrollIntoView({ block: "center" }), () => {
-            
-            requestAnimationFrame(() => requestAnimationFrame(() => record.classList.add('show-info')));
-          });
+          setFit(false, () => record.scrollIntoView({ block: "center" }), () => openPanel(record));
           return;
         }
         const isShown = record.classList.contains('show-info');
