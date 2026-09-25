@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-hans" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
@@ -16,11 +16,13 @@
 
 
 
-<link rel="stylesheet" href="/css/main.26edff854d51c13c95995f26c4ff87b78cc7734d504b1e00613f8b50b8b55aa0.css" integrity="sha256-Ju3/hU1RwTyVmV8mxP&#43;Ht4zHc01QSx4AYT&#43;LULi1WqA=">
+<link rel="stylesheet" href="/css/main.906a8fbaf20ab705538c2a062d6100cadf4776bcba97c74d199cd9ad063394fa.css" integrity="sha256-kGqPuvIKtwVTjCoGLWEAyt9Hdry6l8dNGZzZrQYzlPo=">
 
 
 
-<link rel="stylesheet" href="/han.min.29854ce87dd26d28e810119b320457dfdf98d4287cd331319c9f3e854e269cb1.css" integrity="sha256-KYVM6H3SbSjoEBGbMgRX39&#43;Y1Ch80zExnJ8&#43;hU4mnLE=">
+<link rel="stylesheet" href="/han.min.85eccdac5b74d62fd6ecf8801df9347370a336931778f5436098342433b5cbb7.css" integrity="sha256-hezNrFt01i/W7PiAHfk0c3CjNpMXePVDYJg0JDO1y7c=">
+
+
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -30,7 +32,7 @@
 
 <meta property="og:title" content="Hugo Markdownify 无法生成 &lt;p&gt; tag | Rongbin Fan" />
 <meta property="og:description" content="加个条件判断" />
-<meta property="og:url" content="http://localhost:1313/hugo-markdownify-generate-p-tag/" />
+<meta property="og:url" content="https://fanrongbin.com/hugo-markdownify-generate-p-tag/" />
 <meta property="og:image" content="/apple-touch-icon.png" />
 
 
@@ -73,14 +75,14 @@
 
   <p>在尝试为<a href="https://web.archive.org/web/*/fanrongbin.com/stream">Stream</a>页面利用<a href="https://gohugo.io/content-management/shortcodes/">Hugo Shortcodes</a>添加新的<code>movie</code>和<code>tv</code>标签时，使用<code>{{ .Inner | Markdownify }}</code>无法正确对Markdown文本生成HTML<code>&lt;p&gt;</code>tag。</p>
 <p>例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> .= <span style="color:#e6db74">&#34;What a *nice* day!&#34;</span> }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> .= <span style="color:#e6db74">&#34;What a *nice* day!&#34;</span> }}
 </span></span><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">Markdownify</span>}} <span style="color:#f92672">-</span>&gt; <span style="color:#a6e22e">What</span> <span style="color:#a6e22e">a</span> &lt;<span style="color:#a6e22e">em</span>&gt;<span style="color:#a6e22e">nice</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">em</span>&gt; <span style="color:#a6e22e">day</span>!
 </span></span></code></pre></div><p>但我预期生成的应是：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">Markdownify</span> }} <span style="color:#f92672">-</span>&gt; &lt;<span style="color:#a6e22e">p</span>&gt;<span style="color:#a6e22e">What</span> <span style="color:#a6e22e">a</span> &lt;<span style="color:#a6e22e">em</span>&gt;<span style="color:#a6e22e">nice</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">em</span>&gt; <span style="color:#a6e22e">day</span>!&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">Markdownify</span> }} <span style="color:#f92672">-</span>&gt; &lt;<span style="color:#a6e22e">p</span>&gt;<span style="color:#a6e22e">What</span> <span style="color:#a6e22e">a</span> &lt;<span style="color:#a6e22e">em</span>&gt;<span style="color:#a6e22e">nice</span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">em</span>&gt; <span style="color:#a6e22e">day</span>!&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
 </span></span></code></pre></div><p>这是个<a href="https://github.com/gohugoio/hugo/issues/3040">老问题</a>：<code>Markdownify</code>最主要被用来生成标题之类的<em>inline</em>元素，而不是类似段落的<em>blocks</em>。但很多Hugo主题都在使用<code>Markdownify</code>，所以一时想要用<a href="https://gohugo.io/methods/page/renderstring/"><code>RenderString</code></a>取代<a href="https://discourse.gohugo.io/t/deprecate-markdownify/37789/">也不太可能</a>。</p>
 <h2 id="解决方法">解决方法</h2>
 <p>在我的情况中，<a href="https://github.com/gohugoio/hugo/issues/3040#issuecomment-352190818">先识别是否存在<code>&lt;p&gt;</code>tag</a>的方式：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">intro</span> | <span style="color:#a6e22e">markdownify</span> }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">intro</span> | <span style="color:#a6e22e">markdownify</span> }}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>{{ <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">not</span> ( <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Contains</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> <span style="color:#e6db74">&#34;&lt;p&gt;&#34;</span> ) }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">p</span>&gt;{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
@@ -88,7 +90,7 @@
 </span></span><span style="display:flex;"><span>    {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> }}
 </span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
 </span></span></code></pre></div><p>或<a href="https://github.com/gohugoio/hugo/issues/3040#issuecomment-539296048">进一步</a>匹配以<code>h</code>、<code>p</code>开头的tag都可以：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">markdownify</span> }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">text</span> | <span style="color:#a6e22e">markdownify</span> }}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>{{ <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">not</span> ( <span style="color:#a6e22e">findRE</span> <span style="color:#e6db74">&#34;&lt;[h|p][^&gt;]*&gt;&#34;</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> ) }}
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">p</span>&gt;{{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">markdown</span> }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
@@ -121,7 +123,7 @@
 
 
 
-<script src="/han.min.831f27db02c9bac7a1d42a0f46d9b947f346d8c989ef1bda95eae9d01ba5ad8d.js" integrity="sha256-gx8n2wLJuseh1CoPRtm5R/NG2MmJ7xvalerp0BulrY0=" defer></script>
+<script src="/han.min.4d8411065a29db5126de2fe148b086140843a2472114d920ba6a99530412fb02.js" integrity="sha256-TYQRBlop21Em3i/hSLCGFAhDokchFNkgumqZUwQS&#43;wI=" defer></script>
 
 
 

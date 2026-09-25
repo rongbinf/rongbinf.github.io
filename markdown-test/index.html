@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-hans" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
@@ -16,11 +16,13 @@
 
 
 
-<link rel="stylesheet" href="/css/main.26edff854d51c13c95995f26c4ff87b78cc7734d504b1e00613f8b50b8b55aa0.css" integrity="sha256-Ju3/hU1RwTyVmV8mxP&#43;Ht4zHc01QSx4AYT&#43;LULi1WqA=">
+<link rel="stylesheet" href="/css/main.906a8fbaf20ab705538c2a062d6100cadf4776bcba97c74d199cd9ad063394fa.css" integrity="sha256-kGqPuvIKtwVTjCoGLWEAyt9Hdry6l8dNGZzZrQYzlPo=">
 
 
 
-<link rel="stylesheet" href="/han.min.29854ce87dd26d28e810119b320457dfdf98d4287cd331319c9f3e854e269cb1.css" integrity="sha256-KYVM6H3SbSjoEBGbMgRX39&#43;Y1Ch80zExnJ8&#43;hU4mnLE=">
+<link rel="stylesheet" href="/han.min.85eccdac5b74d62fd6ecf8801df9347370a336931778f5436098342433b5cbb7.css" integrity="sha256-hezNrFt01i/W7PiAHfk0c3CjNpMXePVDYJg0JDO1y7c=">
+
+
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -30,7 +32,7 @@
 
 <meta property="og:title" content="Markdown 语法测试 | Rongbin Fan" />
 <meta property="og:description" content="参考自 PaperMod 的 Markdown 语法示例页面" />
-<meta property="og:url" content="http://localhost:1313/markdown-test/" />
+<meta property="og:url" content="https://fanrongbin.com/markdown-test/" />
 <meta property="og:image" content="/apple-touch-icon.png" />
 
 
@@ -89,47 +91,49 @@
 <h4 id="blockquote-without-attribution">Blockquote without attribution</h4>
 <blockquote>
 <p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
-<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p></blockquote>
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p>
+</blockquote>
 <h4 id="blockquote-with-attribution">Blockquote with attribution</h4>
 <blockquote>
 <p>Don&rsquo;t communicate by sharing memory, share memory by communicating.</p>
-<p>— <cite>Rob Pike<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite></p></blockquote>
+<p>— <cite>Rob Pike<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite></p>
+</blockquote>
 <h2 id="tables">Tables</h2>
 <p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports them out-of-the-box.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Name</th>
-          <th>Age</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Bob</td>
-          <td>27</td>
-      </tr>
-      <tr>
-          <td>Alice</td>
-          <td>23</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Name</th>
+					<th>Age</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Bob</td>
+					<td>27</td>
+			</tr>
+			<tr>
+					<td>Alice</td>
+					<td>23</td>
+			</tr>
+	</tbody>
 </table>
 <h4 id="inline-markdown-within-tables">Inline Markdown within tables</h4>
 <table>
-  <thead>
-      <tr>
-          <th>Italics</th>
-          <th>Bold</th>
-          <th>Code</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><em>italics</em></td>
-          <td><strong>bold</strong></td>
-          <td><code>code</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Italics</th>
+					<th>Bold</th>
+					<th>Code</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><em>italics</em></td>
+					<td><strong>bold</strong></td>
+					<td><code>code</code></td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="list-types">List Types</h2>
 <h4 id="ordered-list">Ordered List</h4>
@@ -190,7 +194,7 @@
 <p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.</p>
 <h2 id="katex">KaTeX</h2>
 <p>需要在文章头部加入：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>katex: true
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>katex: true
 </span></span></code></pre></div><p>$$
 \begin{aligned}
 KL(\hat{y} || y) &amp;= \sum_{c=1}^{M}\hat{y}_c \log{\frac{\hat{y}_c}{y_c}} \
@@ -198,10 +202,10 @@ JS(\hat{y} || y) &amp;= \frac{1}{2}(KL(y||\frac{y+\hat{y}}{2}) + KL(\hat{y}||\fr
 \end{aligned}
 $$</p>
 <p>对于包括<code>\</code>的情况，需要再加一条斜杠来转义，如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{pmatrix}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{pmatrix}
 </span></span><span style="display:flex;"><span>  a &amp; b <span style="color:#66d9ef">\\\ </span>
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">% 需要多一条斜杠
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      c &amp; d
+</span></span></span><span style="display:flex;"><span>      c &amp; d
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">\end</span>{pmatrix}
 </span></span></code></pre></div><p>$$
 \begin{pmatrix}
@@ -210,12 +214,12 @@ c &amp; d
 \end{pmatrix}
 $$</p>
 <p>对于包括<code>_</code>的情况，同样需要添加斜杠来转义，如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\underbrace</span>{a}<span style="color:#66d9ef">\_</span>{b} - <span style="color:#66d9ef">\underbrace</span>{c}<span style="color:#66d9ef">\_</span>{d}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\underbrace</span>{a}<span style="color:#66d9ef">\_</span>{b} - <span style="color:#66d9ef">\underbrace</span>{c}<span style="color:#66d9ef">\_</span>{d}
 </span></span></code></pre></div><p>$$
 \underbrace{a}_{b} - \underbrace{c}_{d}
 $$</p>
 <p>也可以在公式外用<code>{{&lt; rawhtml &gt;}}</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>包裹，则不需要添加斜杠：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">rawhtml</span> &gt;}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; rawhtml &gt;}}
 </span></span><span style="display:flex;"><span>$$
 </span></span><span style="display:flex;"><span>Y = 
 </span></span><span style="display:flex;"><span>\begin{bmatrix}
@@ -224,7 +228,7 @@ $$</p>
 </span></span><span style="display:flex;"><span>    \alpha_{N,1}\mathbf{x}_1 +...+ \alpha_{N,M}\mathbf{x}_M 
 </span></span><span style="display:flex;"><span>\end{bmatrix}
 </span></span><span style="display:flex;"><span>$$
-</span></span><span style="display:flex;"><span>{{&lt; /<span style="color:#f92672">rawhtml</span> &gt;}}
+</span></span><span style="display:flex;"><span>{{&lt; /rawhtml &gt;}}
 </span></span></code></pre></div>
 
 $$
@@ -270,7 +274,7 @@ $$
 
 
 
-<script src="/han.min.831f27db02c9bac7a1d42a0f46d9b947f346d8c989ef1bda95eae9d01ba5ad8d.js" integrity="sha256-gx8n2wLJuseh1CoPRtm5R/NG2MmJ7xvalerp0BulrY0=" defer></script>
+<script src="/han.min.4d8411065a29db5126de2fe148b086140843a2472114d920ba6a99530412fb02.js" integrity="sha256-TYQRBlop21Em3i/hSLCGFAhDokchFNkgumqZUwQS&#43;wI=" defer></script>
 
 
 <link
