@@ -1489,6 +1489,7 @@
       const track = stack.querySelector(".stack-track");
       const cards = [...track.children];
       const imgs = cards.map(a => a.firstElementChild);
+      const buttons = stack.querySelector(".stack-buttons");
       const captionBox = stack.querySelector(".stack-captions");
       const captions = [...captionBox.children];
       const gridToggle = document.getElementById("stack-grid");
@@ -1646,17 +1647,24 @@
       
       
       
+      
+      
       const still = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const fade = (el, opacity) => el.animate({ opacity }, { duration: 180, easing: "ease-out", fill: "forwards" });
+      const fade = (el, keys) => el.animate(keys, { duration: 180, easing: "ease-out", fill: "forwards" });
+      const fadeParts = (parts, on) => parts.map(el => fade(el, { opacity: on ? [0, 1] : [1, 0] }));
       const run = async on => {
         if (on === isOpen() || root.classList.contains("stack-fading")) return;
         if (still()) return set(on);
         root.classList.add("stack-fading");
         if (on) set(true);
-        const anim = fade(stack, on ? [0, 1] : [1, 0]);
-        await anim.finished;
+        const bg = getComputedStyle(stack).backgroundColor;
+        const anims = [
+          fade(stack, { backgroundColor: on ? ["transparent", bg] : [bg, "transparent"] }),
+          ...fadeParts([buttons, captionBox, ...cards], on)
+        ];
+        await anims[0].finished;
         if (!on) set(false);
-        anim.cancel();
+        anims.forEach(a => a.cancel());
         root.classList.remove("stack-fading");
       };
 
@@ -1678,7 +1686,7 @@
         if (dragged) return e.preventDefault();
         if (e.target.closest("#stack-grid")) {
           setGrid(!gridded);
-          if (!still()) [track, captionBox].forEach(el => fade(el, [0, 1]).finished.then(a => a.cancel()));
+          if (!still()) fadeParts([captionBox, ...cards], true).forEach(a => a.finished.then(() => a.cancel()));
           return;
         }
         const a = e.target.closest(".stack-track a");
