@@ -2,6 +2,7 @@
 <html lang="zh-hans" dir="ltr">
 <head>
   <meta charset="utf-8" />
+<script>window.CSS&&CSS.registerProperty||document.documentElement.classList.add("no-cjk-em")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
 <title>使用 Github Actions 自动部署 Hugo | Rongbin Fan</title>
@@ -16,8 +17,8 @@
 
 
 
-<link rel="stylesheet" href="/css/main.5ceb79f3bedf6a106b38e01f08481ff7e64f73c95327b7d0c44b1af1aff22906.css" integrity="sha256-XOt5877fahBrOOAfCEgf9&#43;ZPc8lTJ7fQxEsa8a/yKQY=">
-<style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-42a90009e2a0.woff2") format("woff2");unicode-range:U+3001-3002,U+300C-300D,U+4E00,U+4E2A,U+4E32,U+4ED3,U+4F20,U+4F60,U+5230,U+5237,U+548C,U+597D,U+5982,U+5B58,U+5C06,U+5E0C,U+5E93,U+628A,U+65B0,U+671B,U+6765,U+679C,U+6E90,U+7F13,U+7F6E,U+8BBE,U+8D77,U+8FD8,U+FF08-FF09,U+FF0C,U+FF1A-FF1B}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-38d10704b4d8.woff2") format("woff2");unicode-range:U+3001-3002,U+300C-300D,U+4E00,U+4E0A-4E0B,U+4E0D,U+4E13-4E14,U+4E1C,U+4E24,U+4E2A,U+4E2D,U+4E32,U+4E3A,U+4E4B,U+4E5F,U+4E71,U+4E86,U+4E8E,U+4EBA,U+4ED3,U+4EE4-4EE5,U+4EEC,U+4EF6,U+4EFB,U+4EFD,U+4F1A,U+4F20,U+4F53,U+4F5C,U+4F60,U+4F7F,U+4F8B,U+4FA7,U+4FBF,U+4FDD,U+4FEE,U+501F,U+5047,U+50CF,U+514D,U+5165,U+5176-5177,U+5185,U+518D,U+5199,U+51FA-51FB,U+5217,U+5219-521A,U+522B,U+5230,U+5236-5237,U+524D,U+52A0,U+52A8-52A9,U+533A,U+5355,U+535A,U+5373,U+5386,U+539F,U+53C2,U+53CA,U+53D6,U+53EA,U+53EF,U+53F2-53F3,U+540D-540E,U+547D,U+548C,U+54C8,U+552F,U+5566,U+56DE,U+56F4,U+5728,U+5730,U+57DF,U+586B,U+5883,U+589E,U+5907,U+590D,U+591A,U+5934,U+5939,U+597D,U+5982,U+59CB,U+5B50,U+5B57-5B58,U+5B83,U+5B8C,U+5B9A,U+5B9E,U+5BA2,U+5BB9,U+5BC6,U+5C06,U+5DE6,U+5DF2,U+5E0C,U+5E26,U+5E76,U+5E93-5E94,U+5EFA,U+5F00,U+5F0F,U+5F53,U+5F97,U+5FC5,U+6001,U+60F3,U+610F,U+6210-6211,U+6216,U+6240,U+624B,U+624D,U+627E,U+628A,U+62E5,U+62E9,U+6362,U+63A5,U+63A8,U+63D0,U+642D,U+6539,U+6548,U+6559,U+6574,U+6587,U+65B0,U+65B9,U+65E0,U+65E2,U+65F6,U+662F,U+66F4,U+6700,U+6709,U+671B,U+671F,U+672C,U+6765,U+679C,U+680F,U+6846,U+6B21,U+6C38,U+6CA1,U+6CE8,U+6D89,U+6DF7,U+6DFB,U+6E90,U+70B9,U+7136,U+7248,U+73AF-73B0,U+7406,U+751F,U+7528,U+75DB,U+7684,U+76D8,U+76F8,U+7801,U+7A0B,U+7AD9,U+7AEF,U+7B2C,U+7B49,U+7BA1,U+7CFB,U+7EC8,U+7ECF,U+7ED9,U+7EDF,U+7F13,U+7F16,U+7F51,U+7F6E,U+7F72,U+8003,U+8005,U+800C,U+8054,U+81EA,U+82E5,U+8303,U+8350,U+83DC,U+884C,U+897F,U+8981,U+8BA4,U+8BAE,U+8BB0,U+8BB8,U+8BBE-8BBF,U+8BC6,U+8D77,U+8DE8,U+8F91,U+8F93,U+8FB9,U+8FC7,U+8FD8-8FD9,U+8FDB,U+9009,U+901A,U+901F,U+907F,U+90E8,U+90FD,U+914D,U+91CC-91CD,U+95EE,U+968F,U+9700,U+9759,U+9762,U+9875,U+987B,U+9ED8,U+FF08-FF09,U+FF0C,U+FF1A-FF1B}</style>
+<link rel="stylesheet" href="/css/main.082a4083214a242eb8a0ed58b9b08f78b57e2086775e7067340afbdd5cb973d9.css" integrity="sha256-CCpAgyFKJC64oO1YubCPeLV&#43;IIZ3XnBnNAr73Vy5c9k=">
+<style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-f3be275c7789.woff2") format("woff2");unicode-range:U+4E00,U+4E2A,U+4E32,U+4ED3,U+4F20,U+4F60,U+5230,U+5237,U+548C,U+597D,U+5982,U+5B58,U+5C06,U+5E0C,U+5E93,U+628A,U+65B0,U+671B,U+6765,U+679C,U+6E90,U+7F13,U+7F6E,U+8BBE,U+8D77,U+8FD8}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-3b4e9b2c9185.woff2") format("woff2");unicode-range:U+3002,U+4E00,U+4E0A-4E0B,U+4E0D,U+4E13-4E14,U+4E1C,U+4E24,U+4E2A,U+4E2D,U+4E32,U+4E3A,U+4E4B,U+4E5F,U+4E71,U+4E86,U+4E8E,U+4EBA,U+4ED3,U+4EE4-4EE5,U+4EEC,U+4EF6,U+4EFB,U+4EFD,U+4F1A,U+4F20,U+4F53,U+4F5C,U+4F60,U+4F7F,U+4F8B,U+4FA7,U+4FBF,U+4FDD,U+4FEE,U+501F,U+5047,U+50CF,U+514D,U+5165,U+5176-5177,U+5185,U+518D,U+5199,U+51FA-51FB,U+5217,U+5219-521A,U+522B,U+5230,U+5236-5237,U+524D,U+52A0,U+52A8-52A9,U+533A,U+5355,U+535A,U+5373,U+5386,U+539F,U+53C2,U+53CA,U+53D6,U+53EA,U+53EF,U+53F2-53F3,U+540D-540E,U+547D,U+548C,U+54C8,U+552F,U+5566,U+56DE,U+56F4,U+5728,U+5730,U+57DF,U+586B,U+5883,U+589E,U+5907,U+590D,U+591A,U+5934,U+5939,U+597D,U+5982,U+59CB,U+5B50,U+5B57-5B58,U+5B83,U+5B8C,U+5B9A,U+5B9E,U+5BA2,U+5BB9,U+5BC6,U+5C06,U+5DE6,U+5DF2,U+5E0C,U+5E26,U+5E76,U+5E93-5E94,U+5EFA,U+5F00,U+5F0F,U+5F53,U+5F97,U+5FC5,U+6001,U+60F3,U+610F,U+6210-6211,U+6216,U+6240,U+624B,U+624D,U+627E,U+628A,U+62E5,U+62E9,U+6362,U+63A5,U+63A8,U+63D0,U+642D,U+6539,U+6548,U+6559,U+6574,U+6587,U+65B0,U+65B9,U+65E0,U+65E2,U+65F6,U+662F,U+66F4,U+6700,U+6709,U+671B,U+671F,U+672C,U+6765,U+679C,U+680F,U+6846,U+6B21,U+6C38,U+6CA1,U+6CE8,U+6D89,U+6DF7,U+6DFB,U+6E90,U+70B9,U+7136,U+7248,U+73AF-73B0,U+7406,U+751F,U+7528,U+75DB,U+7684,U+76D8,U+76F8,U+7801,U+7A0B,U+7AD9,U+7AEF,U+7B2C,U+7B49,U+7BA1,U+7CFB,U+7EC8,U+7ECF,U+7ED9,U+7EDF,U+7F13,U+7F16,U+7F51,U+7F6E,U+7F72,U+8003,U+8005,U+800C,U+8054,U+81EA,U+82E5,U+8303,U+8350,U+83DC,U+884C,U+897F,U+8981,U+8BA4,U+8BAE,U+8BB0,U+8BB8,U+8BBE-8BBF,U+8BC6,U+8D77,U+8DE8,U+8F91,U+8F93,U+8FB9,U+8FC7,U+8FD8-8FD9,U+8FDB,U+9009,U+901A,U+901F,U+907F,U+90E8,U+90FD,U+914D,U+91CC-91CD,U+95EE,U+968F,U+9700,U+9759,U+9762,U+9875,U+987B,U+9ED8,U+FF08-FF09,U+FF0C,U+FF1A-FF1B}</style>
 
 
 
@@ -76,25 +77,25 @@
 
   <p>回应痛点：</p>
 <ol>
-<li>写作所用的设备不带环境，没有Git，必须换回原来用的设备<code>hugo</code>生成网页并部署</li>
-<li>只想好好写东西，不想再管我的终端/命令行</li>
+<li>写作所用的设备不带环境<span class="hg">，</span><span class="hs"> </span>没有Git<span class="hg">，</span><span class="hs"> </span>必须换回原来用的设备<code>hugo</code>生成网页并部署</li>
+<li>只想好好写东西<span class="hg">，</span><span class="hs"> </span>不想再管我的终端/命令行</li>
 <li>随时随地上传或修改博文</li>
 </ol>
-<p>本文假设你已经在本地拥有一个用Hugo搭建的完整站点，且已经<code>push</code>到了<code>username/username.github.io</code>这个仓库。</p>
+<p>本文假设你已经在本地拥有一个用Hugo搭建的完整站点<span class="hg">，</span><span class="hs"> </span>且已经<code>push</code>到了<code>username/username.github.io</code>这个仓库<span class="hg">。</span><span class="hs"> </span></p>
 <h2 id="1-把源仓库传到一个新库">1. 把源仓库传到一个新库</h2>
-<p>整体上传到一个新库后，我们可以使用Git方便地进行管理，相当于把原本在本地的博客系统传到网盘。在设置好Github Actions后，既可以整个库<code>clone</code>下来，也可以通过上传单个<code>.md</code>文件到<code>content/posts</code>文件夹的手动<code>push</code>方式来自动部署，而这都不需要重新搭建Hugo环境。</p>
+<p>整体上传到一个新库后<span class="hg">，</span><span class="hs"> </span>我们可以使用Git方便地进行管理<span class="hg">，</span><span class="hs"> </span>相当于把原本在本地的博客系统传到网盘<span class="hg">。</span><span class="hs"> </span>在设置好Github Actions后<span class="hg">，</span><span class="hs"> </span>既可以整个库<code>clone</code>下来<span class="hg">，</span><span class="hs"> </span>也可以通过上传单个<code>.md</code>文件到<code>content/posts</code>文件夹的手动<code>push</code>方式来自动部署<span class="hg">，</span><span class="hs"> </span>而这都不需要重新搭建Hugo环境<span class="hg">。</span><span class="hs"> </span></p>
 <p>在这里我们使用Github Desktop：</p>
 <ul>
-<li>点击菜单栏File，选择Create a new repository。</li>
-<li>为了避免文件夹识别的混乱，在设置local path时，可以新建一个文件夹，之后再将博客系统文件（<code>config.toml</code>所在的整个文件夹和子文件夹）复制进来。</li>
-<li>复制后，回到Github Desktop，填写Summary，Commit to main，然后Push。</li>
+<li>点击菜单栏File<span class="hg">，</span><span class="hs"> </span>选择Create a new repository<span class="hg">。</span><span class="hs"> </span></li>
+<li>为了避免文件夹识别的混乱<span class="hg">，</span><span class="hs"> </span>在设置local path时<span class="hg">，</span><span class="hs"> </span>可以新建一个文件夹<span class="hg">，</span><span class="hs"> </span>之后再将博客系统文件<span class="ls"> </span><span class="jy l">（</span><code>config.toml</code>所在的整个文件夹和子文件夹）复制进来<span class="hg">。</span><span class="hs"> </span></li>
+<li>复制后<span class="hg">，</span><span class="hs"> </span>回到Github Desktop<span class="hg">，</span><span class="hs"> </span>填写Summary<span class="hg">，</span><span class="hs"> </span>Commit to main<span class="hg">，</span><span class="hs"> </span>然后Push<span class="hg">。</span><span class="hs"> </span></li>
 </ul>
 <h2 id="2-将新库和github-pages仓库串起来">2. 将新库和Github Pages仓库串起来</h2>
-<p>在<code>username/username.github.io</code>下是<code>public</code>文件夹内生成的静态网页（你一定记得的，在本地我们需要<code>cd public</code>），而我们希望通过添加或修改源仓库的<code>.md</code>来实现这一系列的生成和部署，这涉及到跨仓库的联动，需要通过token实现。</p>
-<p>网页版，点击头像，进入Github个人的Settings：</p>
+<p>在<code>username/username.github.io</code>下是<code>public</code>文件夹内生成的静态网页<span class="ls"> </span><span class="jy l">（</span>你一定记得的<span class="hg">，</span><span class="hs"> </span>在本地我们需要<code>cd public</code><span class="jy r">）</span><span class="hg">，</span><span class="hs"> </span>而我们希望通过添加或修改源仓库的<code>.md</code>来实现这一系列的生成和部署<span class="hg">，</span><span class="hs"> </span>这涉及到跨仓库的联动<span class="hg">，</span><span class="hs"> </span>需要通过token实现<span class="hg">。</span><span class="hs"> </span></p>
+<p>网页版<span class="hg">，</span><span class="hs"> </span>点击头像<span class="hg">，</span><span class="hs"> </span>进入Github个人的Settings：</p>
 <ul>
 <li>
-<p>边栏最下方Developer Settings，</p>
+<p>边栏最下方Developer Settings<span class="hg">，</span><span class="hs"> </span></p>
 <ul>
 <li>选择Personal access tokens下的Tokens (classic)
 <ul>
@@ -104,25 +105,25 @@
 </ul>
 </li>
 <li>
-<p>输入密码后进入设置，在Note框中填写方便识别的名字，如<code>Deploy</code>，有效期（Expiration）建议选择永不过期（No expiration），访问范围（Scopes）我们需要选中repo和workflow</p>
+<p>输入密码后进入设置<span class="hg">，</span><span class="hs"> </span>在Note框中填写方便识别的名字<span class="hg">，</span><span class="hs"> </span>如<code>Deploy</code><span class="hg">，</span><span class="hs"> </span>有效期<span class="ls"> </span><span class="jy l">（</span>Expiration）建议选择永不过期<span class="ls"> </span><span class="jy l">（</span>No expiration<span class="jy r">）</span><span class="hg">，</span><span class="hs"> </span>访问范围<span class="ls"> </span><span class="jy l">（</span>Scopes）我们需要选中repo和workflow</p>
 </li>
 <li>
-<p>点击生成后token即出现，注意它只会出现这唯一的一次，将其复制保存下来</p>
+<p>点击生成后token即出现<span class="hg">，</span><span class="hs"> </span>注意它只会出现这唯一的一次<span class="hg">，</span><span class="hs"> </span>将其复制保存下来</p>
 </li>
 </ul>
-<p>得到token后，进入源仓库的Settings：</p>
+<p>得到token后<span class="hg">，</span><span class="hs"> </span>进入源仓库的Settings：</p>
 <ul>
-<li>选择Secrets and variables下的Actions，在右侧选择New repository secret</li>
+<li>选择Secrets and variables下的Actions<span class="hg">，</span><span class="hs"> </span>在右侧选择New repository secret</li>
 <li>在Name中填入<code>PERSONAL_TOKEN</code></li>
-<li>在Secret中填入刚才生成的token，点击Add secret保存</li>
+<li>在Secret中填入刚才生成的token<span class="hg">，</span><span class="hs"> </span>点击Add secret保存</li>
 </ul>
 <h2 id="3-设置好github-actions">3. 设置好Github Actions</h2>
-<p>接下来我们进入源仓库的Actions，若之前有使用过，点击左侧New workflow；若无，默认会给出许多推荐，我们任选一个开始configure即可：</p>
+<p>接下来我们进入源仓库的Actions<span class="hg">，</span><span class="hs"> </span>若之前有使用过<span class="hg">，</span><span class="hs"> </span>点击左侧New workflow；若无<span class="hg">，</span><span class="hs"> </span>默认会给出许多推荐<span class="hg">，</span><span class="hs"> </span>我们任选一个开始configure即可：</p>
 <ul>
-<li>重命名<code>.yml</code>为方便识别的名字，如<code>deploy.yml</code></li>
+<li>重命名<code>.yml</code>为方便识别的名字<span class="hg">，</span><span class="hs"> </span>如<code>deploy.yml</code></li>
 <li>修改编辑框内容如下：</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">deploy </span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">deploy </span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 这个 action 的名字</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
@@ -144,7 +145,7 @@
 </span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">setup</span>
 </span></span><span style="display:flex;"><span>              <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2.6.0</span>
 </span></span><span style="display:flex;"><span>              <span style="color:#f92672">with</span>:
-</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#34;latest&#34;</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">"latest"</span>
 </span></span><span style="display:flex;"><span>                  <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span> 
 </span></span><span style="display:flex;"><span>                  <span style="color:#75715e"># 按需选择是否使用 hugo-extended</span>
 </span></span><span style="display:flex;"><span>
@@ -163,11 +164,11 @@
 </span></span><span style="display:flex;"><span>                  <span style="color:#f92672">PUBLISH_DIR</span>: <span style="color:#ae81ff">./public </span>
 </span></span><span style="display:flex;"><span>                  <span style="color:#75715e"># 指定将自动部署得到的 public 文件夹 push 上去</span>
 </span></span><span style="display:flex;"><span>                  <span style="color:#f92672">commit_message</span>: <span style="color:#ae81ff">${{ github.event.head_commit.message }}</span>
-</span></span></code></pre></div><p>若点击保存，则将自动完成第一次commit，注意提前备份原Github Pages仓库里的内容。（没备份也可以通过历史commit找到啦，哈哈）</p>
+</span></span></code></pre></div><p>若点击保存<span class="hg">，</span><span class="hs"> </span>则将自动完成第一次commit<span class="hg">，</span><span class="hs"> </span>注意提前备份原Github Pages仓库里的内容<span class="jy r">。</span><span class="ls"> </span><span class="jy l">（</span>没备份也可以通过历史commit找到啦<span class="hg">，</span><span class="hs"> </span>哈哈）</p>
 <h2 id="4-如果你还希望刷新-cloudflare-缓存">4. 如果你还希望刷新 Cloudflare 缓存</h2>
-<p>我还使用Cloudflare Pages来加速访问。为了在更新博文后刷新<code>posts</code>页面的缓存，可以借助<a href="https://github.com/marketplace/actions/cloudflare-purge-cache">Cloudflare Purge Cache</a>，或者<a href="https://github.com/marketplace/actions/cloudflare-cache-purge-action">Cloudflare Cache Purge Action</a>等。</p>
-<p>以后者为例，在<code>deploy</code>之后加入：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Purge cache</span>
+<p>我还使用Cloudflare Pages来加速访问<span class="hg">。</span><span class="hs"> </span>为了在更新博文后刷新<code>posts</code>页面的缓存<span class="hg">，</span><span class="hs"> </span>可以借助<a href="https://github.com/marketplace/actions/cloudflare-purge-cache">Cloudflare Purge Cache</a><span class="hg">，</span><span class="hs"> </span>或者<a href="https://github.com/marketplace/actions/cloudflare-cache-purge-action">Cloudflare Cache Purge Action</a>等<span class="hg">。</span><span class="hs"> </span></p>
+<p>以后者为例<span class="hg">，</span><span class="hs"> </span>在<code>deploy</code>之后加入：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Purge cache</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">nathanvaughn/actions-cloudflare-purge@master</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">with</span>:
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">cf_zone</span>: <span style="color:#ae81ff">${{ secrets.CLOUDFLARE_ZONE }}</span>
@@ -178,8 +179,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">         https://fanrongbin.com/main.css</span>
 </span></span></code></pre></div><p>需要新增两个<code>secret</code>：</p>
 <ul>
-<li><code>CLOUDFLARE_ZONE</code>：在Cloudflare的Dashboard取得，即<code>Zone ID</code>（区域ID）</li>
-<li><code>CLOUDFLARE_AUTH_KEY</code>：在<a href="https://dash.cloudflare.com/profile/api-tokens">API页面</a>配置一个专用于刷新缓存的API，具体可以参考<a href="https://github.com/marketplace/actions/cloudflare-cache-purge-action">Action页面教程</a></li>
+<li><code>CLOUDFLARE_ZONE</code>：在Cloudflare的Dashboard取得<span class="hg">，</span><span class="hs"> </span>即<code>Zone ID</code><span class="ls"> </span><span class="jy l">（</span>区域ID）</li>
+<li><code>CLOUDFLARE_AUTH_KEY</code>：在<a href="https://dash.cloudflare.com/profile/api-tokens">API页面</a>配置一个专用于刷新缓存的API<span class="hg">，</span><span class="hs"> </span>具体可以参考<a href="https://github.com/marketplace/actions/cloudflare-cache-purge-action">Action页面教程</a></li>
 </ul>
 
   
@@ -219,7 +220,6 @@
 
 
 
-<script src="/han.min.a102d8879f19e3a6202c9fbc3d7a45615ee9ac5c45721efa19b6684c9dff62cf.js" integrity="sha256-oQLYh58Z46YgLJ&#43;8PXpFYV7prFxFch76GbZoTJ3/Ys8=" defer></script>
 
 
 

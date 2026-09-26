@@ -2,6 +2,7 @@
 <html lang="zh-hans" dir="ltr">
 <head>
   <meta charset="utf-8" />
+<script>window.CSS&&CSS.registerProperty||document.documentElement.classList.add("no-cjk-em")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
 <title>Github Actions &#43; fonttools 拉取字符并创建中文字体子集 | Rongbin Fan</title>
@@ -16,8 +17,8 @@
 
 
 
-<link rel="stylesheet" href="/css/main.5ceb79f3bedf6a106b38e01f08481ff7e64f73c95327b7d0c44b1af1aff22906.css" integrity="sha256-XOt5877fahBrOOAfCEgf9&#43;ZPc8lTJ7fQxEsa8a/yKQY=">
-<style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-0422620e9530.woff2") format("woff2");unicode-range:U+3001-3002,U+300C-300D,U+4E00,U+4E0A-4E0B,U+4E0D,U+4E2A,U+4E2D,U+4E3A,U+4E48-4E49,U+4E4B,U+4E5F,U+4E86,U+4EC0,U+4ECE,U+4ED3,U+4EE3,U+4EE5,U+4EF6,U+4EFD,U+4F53,U+4F5C,U+4F60,U+4F7F,U+4FDD,U+4FE1,U+5019,U+505A,U+50A8,U+514B,U+5173,U+5176,U+5199,U+51B3,U+51C6,U+51FA-51FB,U+5206,U+5217,U+521B,U+5230,U+5236,U+524D,U+529F,U+52A8-52A9,U+5339-533A,U+5347,U+5386,U+53BB,U+53C2,U+53CA,U+53D6,U+53D8,U+53EA,U+53EF,U+540D-540E,U+544A,U+548C,U+56F4,U+56FE,U+5728,U+5883,U+5907,U+590D,U+591A,U+5927,U+5939,U+597D,U+5982,U+5B50,U+5B57-5B58,U+5B89,U+5B8C,U+5B9A,U+5BF9,U+5C06,U+5C3E,U+5C55,U+5DE5,U+5E08,U+5E2E,U+5E76,U+5E8F,U+5E93-5E94,U+5EA6,U+5EFA,U+5F00,U+5F0F,U+5F53,U+5F55,U+5F84,U+5F97,U+5FAA,U+6027,U+606F,U+6210-6211,U+6216,U+6240,U+624B,U+627E,U+628A,U+62C9,U+62D2,U+62FC,U+6307,U+6392,U+63A5,U+63A8,U+63D0,U+64CD,U+653E,U+6559,U+6570,U+6574,U+6587,U+65B0,U+65B9,U+65E5,U+65F6,U+66F4,U+6700,U+6709,U+672C,U+6765,U+6784,U+679C,U+67E5,U+683C,U+6B21,U+6B65,U+6BCF,U+6CD5,U+70B9,U+7136,U+73AF-73B0,U+751F,U+7528,U+7559,U+7684,U+76CA,U+76D6,U+76EE,U+7701,U+7801,U+79EF,U+79FB,U+7A0B,U+7B26,U+7EBF,U+7EC4,U+7ED3,U+7EDD,U+7F6E,U+7F72,U+8001,U+8003,U+8054,U+80FD,U+81EA,U+8303,U+884C,U+88AB,U+88C5,U+8981,U+8986,U+89C1,U+89E3,U+8BA4,U+8BBE-8BBF,U+8BC1,U+8BC9,U+8BD5,U+8BDD,U+8C22,U+8DEF,U+8F7D,U+8F89,U+8F93,U+8FC7,U+8FD0,U+8FD9,U+9001,U+901A,U+904D,U+90E8,U+914D,U+91CA,U+91CC-91CD,U+91CF,U+94FE,U+95EE,U+95F4,U+9686,U+96C6,U+9700,U+9762,U+97E9,U+9875,U+9879,U+9898,U+FF08-FF09,U+FF0C,U+FF1A-FF1B}</style>
+<link rel="stylesheet" href="/css/main.082a4083214a242eb8a0ed58b9b08f78b57e2086775e7067340afbdd5cb973d9.css" integrity="sha256-CCpAgyFKJC64oO1YubCPeLV&#43;IIZ3XnBnNAr73Vy5c9k=">
+<style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-5dbfc57a79f9.woff2") format("woff2");unicode-range:U+3002,U+4E00,U+4E0A-4E0B,U+4E0D,U+4E2A,U+4E2D,U+4E3A,U+4E48-4E49,U+4E4B,U+4E5F,U+4E86,U+4EC0,U+4ECE,U+4ED3,U+4EE3,U+4EE5,U+4EF6,U+4EFD,U+4F53,U+4F5C,U+4F60,U+4F7F,U+4FDD,U+4FE1,U+5019,U+505A,U+50A8,U+514B,U+5173,U+5176,U+5199,U+51B3,U+51C6,U+51FA-51FB,U+5206,U+5217,U+521B,U+5230,U+5236,U+524D,U+529F,U+52A8-52A9,U+5339-533A,U+5347,U+5386,U+53BB,U+53C2,U+53CA,U+53D6,U+53D8,U+53EA,U+53EF,U+540D-540E,U+544A,U+548C,U+56F4,U+56FE,U+5728,U+5883,U+5907,U+590D,U+591A,U+5927,U+5939,U+597D,U+5982,U+5B50,U+5B57-5B58,U+5B89,U+5B8C,U+5B9A,U+5BF9,U+5C06,U+5C3E,U+5C55,U+5DE5,U+5E08,U+5E2E,U+5E76,U+5E8F,U+5E93-5E94,U+5EA6,U+5EFA,U+5F00,U+5F0F,U+5F53,U+5F55,U+5F84,U+5F97,U+5FAA,U+6027,U+606F,U+6210-6211,U+6216,U+6240,U+624B,U+627E,U+628A,U+62C9,U+62D2,U+62FC,U+6307,U+6392,U+63A5,U+63A8,U+63D0,U+64CD,U+653E,U+6559,U+6570,U+6574,U+6587,U+65B0,U+65B9,U+65E5,U+65F6,U+66F4,U+6700,U+6709,U+672C,U+6765,U+6784,U+679C,U+67E5,U+683C,U+6B21,U+6B65,U+6BCF,U+6CD5,U+70B9,U+7136,U+73AF-73B0,U+751F,U+7528,U+7559,U+7684,U+76CA,U+76D6,U+76EE,U+7701,U+7801,U+79EF,U+79FB,U+7A0B,U+7B26,U+7EBF,U+7EC4,U+7ED3,U+7EDD,U+7F6E,U+7F72,U+8001,U+8003,U+8054,U+80FD,U+81EA,U+8303,U+884C,U+88AB,U+88C5,U+8981,U+8986,U+89C1,U+89E3,U+8BA4,U+8BBE-8BBF,U+8BC1,U+8BC9,U+8BD5,U+8BDD,U+8C22,U+8DEF,U+8F7D,U+8F89,U+8F93,U+8FC7,U+8FD0,U+8FD9,U+9001,U+901A,U+904D,U+90E8,U+914D,U+91CA,U+91CC-91CD,U+91CF,U+94FE,U+95EE,U+95F4,U+9686,U+96C6,U+9700,U+9762,U+97E9,U+9875,U+9879,U+9898,U+FF08-FF09,U+FF0C,U+FF1A}</style>
 
 
 
@@ -69,76 +70,76 @@
   </header>
   <main>
     
-  <h1 class="title">Github Actions &#43; fonttools 拉取字符并创建中文字体子集</h1>
+  <h1 class="title">Github Actions + fonttools 拉取字符并创建中文字体子集</h1>
   <p class="description">帮助解决中文字体体积过大的问题</p>
 
   
 
-  <p>创建子集部分参考自谢益辉老师的<a href="https://github.com/yihui/yihui.org/discussions/1547">做法</a>。如果你需要的中文字体在<a href="https://chinese-font.netlify.app/zh-cn/cdn/">字图CDN</a>有覆盖，用这个也能一定程度上提升性能。</p>
-<p>本文将通过解释写好的workflow文件来展开，完整代码见最下方。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+  <p>创建子集部分参考自谢益辉老师的<a href="https://github.com/yihui/yihui.org/discussions/1547">做法</a><span class="hg">。</span><span class="hs"> </span>如果你需要的中文字体在<a href="https://chinese-font.netlify.app/zh-cn/cdn/">字图CDN</a>有覆盖<span class="hg">，</span><span class="hs"> </span>用这个也能一定程度上提升性能<span class="hg">。</span><span class="hs"> </span></p>
+<p>本文将通过解释写好的workflow文件来展开<span class="hg">，</span><span class="hs"> </span>完整代码见最下方<span class="hg">。</span><span class="hs"> </span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">on</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_run</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">workflows</span>: [<span style="color:#e6db74">&#34;deploy&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">workflows</span>: [<span style="color:#e6db74">"deploy"</span>]
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">types</span>:
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">completed</span>
-</span></span></code></pre></div><p>告诉Github Actions什么时候自动运行，<code>workflow_dispatch:</code>使得这个workflow能在对应页面手动点击运行，<code>workflow_run:</code>这里我定义了使其在名字为<code>deploy</code>的workflow完成后运行。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
+</span></span></code></pre></div><p>告诉Github Actions什么时候自动运行<span class="hg">，</span><span class="hs"> </span><code>workflow_dispatch:</code>使得这个workflow能在对应页面手动点击运行<span class="hg">，</span><span class="hs"> </span><code>workflow_run:</code>这里我定义了使其在名字为<code>deploy</code>的workflow完成后运行<span class="hg">。</span><span class="hs"> </span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
 </span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout repository</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v3</span>
-</span></span></code></pre></div><p><code>checkout</code>把仓库的代码从Github克隆到workflow构建的运行环境中。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
+</span></span></code></pre></div><p><code>checkout</code>把仓库的代码从Github克隆到workflow构建的运行环境中<span class="hg">。</span><span class="hs"> </span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
 </span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install fonttools</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">run</span>: <span style="color:#ae81ff">sudo apt-get update &amp;&amp; sudo apt-get install -y fonttools</span>
-</span></span></code></pre></div><p>安装<a href="https://github.com/fonttools/fonttools"><code>fonttools</code></a>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
+</span></span></code></pre></div><p>安装<a href="https://github.com/fonttools/fonttools"><code>fonttools</code></a><span class="hg">。</span><span class="hs"> </span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
 </span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Extract used characters from content</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      mkdir -p font
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      find . -name &#39;*.md&#39; -o -name &#39;*.html&#39; | xargs cat \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        | grep -oP &#39;[\x{3000}-\x{30FF}\x{31F0}-\x{31FF}\x{4E00}-\x{9FFF}\x{AC00}-\x{D7AF}\x{FF00}-\x{FFEF}\x{FE10}-\x{FE1F}]&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      find . -name '*.md' -o -name '*.html' | xargs cat \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        | grep -oP '[\x{3000}-\x{30FF}\x{31F0}-\x{31FF}\x{4E00}-\x{9FFF}\x{AC00}-\x{D7AF}\x{FF00}-\x{FFEF}\x{FE10}-\x{FE1F}]' \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        | sort | uniq &gt; used-chars.txt</span>
-</span></span></code></pre></div><p>从所在项目的<code>.md</code>和<code>.html</code>提取出出现过的中日韩字符（CJK）：在工作环境创建<code>/font</code>文件夹，查找当前目录及子目录下所有以<code>.md</code>或<code>.html</code>结尾的文件，用<code>cat</code>拼接成一个文件，用<code>grep</code>来匹配字符范围（Unicode区间可自行重新设定），<code>sort</code>排序，<code>uniq</code>去重，<code>&gt; used-chars.txt</code>保存到一个文本文件。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
+</span></span></code></pre></div><p>从所在项目的<code>.md</code>和<code>.html</code>提取出出现过的中日韩字符<span class="ls"> </span><span class="jy l">（</span>CJK<span class="jy r">）</span>：在工作环境创建<code>/font</code>文件夹<span class="hg">，</span><span class="hs"> </span>查找当前目录及子目录下所有以<code>.md</code>或<code>.html</code>结尾的文件<span class="hg">，</span><span class="hs"> </span>用<code>cat</code>拼接成一个文件<span class="hg">，</span><span class="hs"> </span>用<code>grep</code>来匹配字符范围<span class="ls"> </span><span class="jy l">（</span>Unicode区间可自行重新设定<span class="jy r">）</span><span class="hg">，</span><span class="hs"> </span><code>sort</code>排序<span class="hg">，</span><span class="hs"> </span><code>uniq</code>去重<span class="hg">，</span><span class="hs"> </span><code>&gt; used-chars.txt</code>保存到一个文本文件<span class="hg">。</span><span class="hs"> </span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
 </span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Download fonts</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      mkdir -p font/raw
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      cd font/raw
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      declare -A urls
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      urls[&#34;SourceHanSansSC-Regular&#34;]=&#34;https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      urls["SourceHanSansSC-Regular"]="https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf"
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      ...
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      for name in &#34;${!urls[@]}&#34;; do
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        echo &#34;Downloading ${name}...&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        wget -nv --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 3 &#34;${urls[$name]}&#34; -O &#34;${name}.otf&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      for name in "${!urls[@]}"; do
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        echo "Downloading ${name}..."
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        wget -nv --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 3 "${urls[$name]}" -O "${name}.otf"
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      done
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      echo &#34;Copying local fonts STKaiti and DFKai-SB...&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      echo "Copying local fonts STKaiti and DFKai-SB..."
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      cp ../../resources/STKaiti.otf .
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      cp ../../resources/DFKai-SB.otf .</span>
-</span></span></code></pre></div><p>创建<code>/font/raw</code>目录来保存在线下载的中文字体文件（<code>.otf</code>格式）。定义了一个关联数组<code>urls</code>来储存字体名和链接。用<code>for</code>遍历，用<code>wget</code>下载每个字体（<code>--retry-connrefused</code>访问被拒绝的话自动重试，<code>--t 3</code>最多重试3次）并保存到<code>/font/raw</code>中。</p>
-<p>如果手动准备了字体（这里存储在仓库的<code>/resources</code>下），用<code>cp</code>也复制到<code>/font/raw</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Subset fonts</span>
+</span></span></code></pre></div><p>创建<code>/font/raw</code>目录来保存在线下载的中文字体文件<span class="ls"> </span><span class="jy l">（</span><code>.otf</code>格式<span class="jy r">）</span><span class="hg">。</span><span class="hs"> </span>定义了一个关联数组<code>urls</code>来储存字体名和链接<span class="hg">。</span><span class="hs"> </span>用<code>for</code>遍历<span class="hg">，</span><span class="hs"> </span>用<code>wget</code>下载每个字体<span class="ls"> </span><span class="jy l">（</span><code>--retry-connrefused</code>访问被拒绝的话自动重试<span class="hg">，</span><span class="hs"> </span><code>--t 3</code>最多重试3次）并保存到<code>/font/raw</code>中<span class="hg">。</span><span class="hs"> </span></p>
+<p>如果手动准备了字体<span class="ls"> </span><span class="jy l">（</span>这里存储在仓库的<code>/resources</code>下<span class="jy r">）</span><span class="hg">，</span><span class="hs"> </span>用<code>cp</code>也复制到<code>/font/raw</code><span class="hg">。</span><span class="hs"> </span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Subset fonts</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    mkdir -p font/woff2
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    for font in font/raw/*.otf; do
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      name=$(basename &#34;$font&#34; .otf)
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      pyftsubset &#34;$font&#34; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      name=$(basename "$font" .otf)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      pyftsubset "$font" \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        --text-file=used-chars.txt \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        --flavor=woff2 \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        --no-hinting \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        --layout-features=&#39;*&#39; \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        --output-file=&#34;font/woff2/${name}-subset.woff2&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        --layout-features='*' \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        --output-file="font/woff2/${name}-subset.woff2"
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    done</span>
-</span></span></code></pre></div><p>创建<code>/font/woff2</code>来存放生成的子集字体。</p>
-<p><code>for</code>循环遍历<code>.otf</code>字体，使用<code>pyftsubset</code>生成子集字体，只保留<code>used-chars.txt</code>列出的字符，输出格式为<code>woff2</code>，<code>--no-hinting</code>不保留字体hinting信息，<code>--layout-features=&quot;*&quot;</code>保留OpenType的功能，<code>--output-file</code>指定输出文件路径。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Move subset fonts to static/font</span>
+</span></span></code></pre></div><p>创建<code>/font/woff2</code>来存放生成的子集字体<span class="hg">。</span><span class="hs"> </span></p>
+<p><code>for</code>循环遍历<code>.otf</code>字体<span class="hg">，</span><span class="hs"> </span>使用<code>pyftsubset</code>生成子集字体<span class="hg">，</span><span class="hs"> </span>只保留<code>used-chars.txt</code>列出的字符<span class="hg">，</span><span class="hs"> </span>输出格式为<code>woff2</code><span class="hg">，</span><span class="hs"> </span><code>--no-hinting</code>不保留字体hinting信息<span class="hg">，</span><span class="hs"> </span><code>--layout-features="*"</code>保留OpenType的功能<span class="hg">，</span><span class="hs"> </span><code>--output-file</code>指定输出文件路径<span class="hg">。</span><span class="hs"> </span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Move subset fonts to static/font</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    mkdir -p static/font
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    mv font/woff2/*.woff2 static/font/</span>
-</span></span></code></pre></div><p>移动到仓库的<code>/static/font</code>目录下。（如果你不需要在这个仓库存一份，可以省去这一步）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Commit and push subset fonts to Github Pages</span>
+</span></span></code></pre></div><p>移动到仓库的<code>/static/font</code>目录下<span class="jy r">。</span><span class="ls"> </span><span class="jy l">（</span>如果你不需要在这个仓库存一份<span class="hg">，</span><span class="hs"> </span>可以省去这一步）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Commit and push subset fonts to Github Pages</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">env</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">TOKEN</span>: <span style="color:#ae81ff">${{ secrets.PERSONAL_TOKEN }}</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
@@ -150,17 +151,17 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git config user.email github-actions@github.com
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git add font/*.woff2
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git add font/used-chars.txt
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git commit -m &#34;chore: update subset Source Han Sans fonts&#34; || echo &#34;No changes to commit&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git commit -m "chore: update subset Source Han Sans fonts" || echo "No changes to commit"
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    git push</span>
-</span></span></code></pre></div><p>推送到Github Pages仓库，使用环境变量<code>TOKEN</code>认证Git操作（可参考之前写的<a href="/github-actions-deploy-hugo">自动部署Hugo教程</a>），克隆下来到<code>/out</code>后把子集字体放到<code>/out/font</code>下，然后配置并push变更。</p>
-<hr>
+</span></span></code></pre></div><p>推送到Github Pages仓库<span class="hg">，</span><span class="hs"> </span>使用环境变量<code>TOKEN</code>认证Git操作<span class="ls"> </span><span class="jy l">（</span>可参考之前写的<a href="/github-actions-deploy-hugo">自动部署Hugo教程</a><span class="jy r">）</span><span class="hg">，</span><span class="hs"> </span>克隆下来到<code>/out</code>后把子集字体放到<code>/out/font</code>下<span class="hg">，</span><span class="hs"> </span>然后配置并push变更<span class="hg">。</span><span class="hs"> </span></p>
+<hr/>
 <p>完整<code>yml</code>如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Subset Source Han Sans</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Subset Source Han Sans</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_run</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">workflows</span>: [<span style="color:#e6db74">&#34;deploy&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">workflows</span>: [<span style="color:#e6db74">"deploy"</span>]
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">types</span>:
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">completed</span>
 </span></span><span style="display:flex;"><span>
@@ -178,8 +179,8 @@
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Extract used characters from content</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          mkdir -p font
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          find . -name &#39;*.md&#39; -o -name &#39;*.html&#39; | xargs cat \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            | grep -oP &#39;[\x{3000}-\x{30FF}\x{31F0}-\x{31FF}\x{4E00}-\x{9FFF}\x{AC00}-\x{D7AF}\x{FF00}-\x{FFEF}\x{FE10}-\x{FE1F}]&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          find . -name '*.md' -o -name '*.html' | xargs cat \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            | grep -oP '[\x{3000}-\x{30FF}\x{31F0}-\x{31FF}\x{4E00}-\x{9FFF}\x{AC00}-\x{D7AF}\x{FF00}-\x{FFEF}\x{FE10}-\x{FE1F}]' \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            | sort | uniq &gt; used-chars.txt</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Download fonts</span>
@@ -187,21 +188,21 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          mkdir -p font/raw
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          cd font/raw
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          declare -A urls
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls[&#34;SourceHanSansSC-Regular&#34;]=&#34;https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls[&#34;SourceHanSansTC-Regular&#34;]=&#34;https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/TraditionalChinese/SourceHanSansTC-Regular.otf&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls[&#34;SourceHanSans-Regular&#34;]=&#34;https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/Japanese/SourceHanSans-Regular.otf&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls[&#34;SourceHanSansK-Regular&#34;]=&#34;https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/Korean/SourceHanSansK-Regular.otf&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls[&#34;SourceHanSansSC-Bold&#34;]=&#34;https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Bold.otf&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls[&#34;SourceHanSansTC-Bold&#34;]=&#34;https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/TraditionalChinese/SourceHanSansTC-Bold.otf&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls[&#34;SourceHanSans-Bold&#34;]=&#34;https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/Japanese/SourceHanSans-Bold.otf&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls[&#34;SourceHanSansK-Bold&#34;]=&#34;https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/Korean/SourceHanSansK-Bold.otf&#34;</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls["SourceHanSansSC-Regular"]="https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf"
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls["SourceHanSansTC-Regular"]="https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/TraditionalChinese/SourceHanSansTC-Regular.otf"
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls["SourceHanSans-Regular"]="https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/Japanese/SourceHanSans-Regular.otf"
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls["SourceHanSansK-Regular"]="https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/Korean/SourceHanSansK-Regular.otf"
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls["SourceHanSansSC-Bold"]="https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Bold.otf"
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls["SourceHanSansTC-Bold"]="https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/TraditionalChinese/SourceHanSansTC-Bold.otf"
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls["SourceHanSans-Bold"]="https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/Japanese/SourceHanSans-Bold.otf"
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          urls["SourceHanSansK-Bold"]="https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/Korean/SourceHanSansK-Bold.otf"</span>
 </span></span><span style="display:flex;"><span>      
-</span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">for name in &#34;${!urls[@]}&#34;; do</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">echo &#34;Downloading ${name}...&#34;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">wget -nv --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 3 &#34;${urls[$name]}&#34; -O &#34;${name}.otf&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">for name in "${!urls[@]}"; do</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">echo "Downloading ${name}..."</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">wget -nv --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 3 "${urls[$name]}" -O "${name}.otf"</span>
 </span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">done</span>
 </span></span><span style="display:flex;"><span>      
-</span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">echo &#34;Copying local fonts STKaiti and DFKai-SB...&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">echo "Copying local fonts STKaiti and DFKai-SB..."</span>
 </span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">cp ../../resources/STKaiti.otf .</span>
 </span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">cp ../../resources/DFKai-SB.otf .</span>
 </span></span><span style="display:flex;"><span>
@@ -209,13 +210,13 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          mkdir -p font/woff2
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          for font in font/raw/*.otf; do
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            name=$(basename &#34;$font&#34; .otf)
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            pyftsubset &#34;$font&#34; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            name=$(basename "$font" .otf)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            pyftsubset "$font" \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              --text-file=used-chars.txt \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              --flavor=woff2 \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              --no-hinting \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              --layout-features=&#39;*&#39; \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              --output-file=&#34;font/woff2/${name}-subset.woff2&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              --layout-features='*' \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              --output-file="font/woff2/${name}-subset.woff2"
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          done</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Move subset fonts to static/font</span>
@@ -235,7 +236,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git config user.email github-actions@github.com
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git add font/*.woff2
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git add font/used-chars.txt
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git commit -m &#34;chore: update subset Source Han Sans fonts&#34; || echo &#34;No changes to commit&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git commit -m "chore: update subset Source Han Sans fonts" || echo "No changes to commit"
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git push</span>
 </span></span></code></pre></div>
   
@@ -263,7 +264,6 @@
 
 
 
-<script src="/han.min.a102d8879f19e3a6202c9fbc3d7a45615ee9ac5c45721efa19b6684c9dff62cf.js" integrity="sha256-oQLYh58Z46YgLJ&#43;8PXpFYV7prFxFch76GbZoTJ3/Ys8=" defer></script>
 
 
 

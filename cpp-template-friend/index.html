@@ -2,6 +2,7 @@
 <html lang="zh-hans" dir="ltr">
 <head>
   <meta charset="utf-8" />
+<script>window.CSS&&CSS.registerProperty||document.documentElement.classList.add("no-cjk-em")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
 <title>C&#43;&#43; 模版类重载流输入输出运算符 | Rongbin Fan</title>
@@ -73,8 +74,8 @@ int main(){
 
 
 
-<link rel="stylesheet" href="/css/main.5ceb79f3bedf6a106b38e01f08481ff7e64f73c95327b7d0c44b1af1aff22906.css" integrity="sha256-XOt5877fahBrOOAfCEgf9&#43;ZPc8lTJ7fQxEsa8a/yKQY=">
-<style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-8434dcf70dcb.woff2") format("woff2");unicode-range:U+3001-3002,U+300C-300D,U+4E0D,U+4E49,U+4EE5,U+4F7F,U+5143,U+51FD,U+524D,U+53C2,U+53CB,U+53EF,U+540C,U+5728,U+58F0,U+5982,U+5B9A,U+5E76,U+63D0,U+6570,U+6587,U+65B9,U+65E0,U+65F6,U+660E,U+679C,U+6CD5,U+7528,U+7684,U+786E,U+7AE0,U+8003,U+8BA4,U+FF08-FF09,U+FF0C,U+FF1A-FF1B}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-e7d2e31d77c6.woff2") format("woff2");unicode-range:U+3001-3002,U+300C-300D,U+4E0D,U+4E2D,U+4E3A,U+4E8B,U+4E8E,U+4F7F,U+5143,U+5148,U+5165,U+5168,U+516C,U+5176,U+51FA,U+51FD,U+5219,U+53CB,U+53EA,U+53EF,U+5458,U+5668,U+5728,U+58F0,U+5982,U+5B8C,U+5BF9,U+5E94,U+6210,U+642D,U+6570,U+65F6,U+660E,U+6709,U+6765,U+677F,U+679C,U+6A21,U+6D41,U+7248,U+7528,U+7531,U+7684,U+7B26,U+7B97,U+7C7B,U+7F16,U+80FD,U+8981,U+8BD1,U+8F7D,U+8F93,U+8FC7,U+8FD0,U+901A,U+914D,U+91CD,U+9700,U+FF08-FF09,U+FF0C,U+FF1A-FF1B}</style>
+<link rel="stylesheet" href="/css/main.082a4083214a242eb8a0ed58b9b08f78b57e2086775e7067340afbdd5cb973d9.css" integrity="sha256-CCpAgyFKJC64oO1YubCPeLV&#43;IIZ3XnBnNAr73Vy5c9k=">
+<style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-a9f416898fa4.woff2") format("woff2");unicode-range:U+4E0D,U+4E49,U+4EE5,U+4F7F,U+5143,U+51FD,U+524D,U+53C2,U+53CB,U+53EF,U+540C,U+5728,U+58F0,U+5982,U+5B9A,U+5E76,U+63D0,U+6570,U+6587,U+65B9,U+65E0,U+65F6,U+660E,U+679C,U+6CD5,U+7528,U+7684,U+786E,U+7AE0,U+8003,U+8BA4,U+FF1A}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-de45a409754a.woff2") format("woff2");unicode-range:U+3002,U+4E0D,U+4E2D,U+4E3A,U+4E8B,U+4E8E,U+4F7F,U+5143,U+5148,U+5165,U+5168,U+516C,U+5176,U+51FA,U+51FD,U+5219,U+53CB,U+53EA,U+53EF,U+5458,U+5668,U+5728,U+58F0,U+5982,U+5B8C,U+5BF9,U+5E94,U+6210,U+642D,U+6570,U+65F6,U+660E,U+6709,U+6765,U+677F,U+679C,U+6A21,U+6D41,U+7248,U+7528,U+7531,U+7684,U+7B26,U+7B97,U+7C7B,U+7F16,U+80FD,U+8981,U+8BD1,U+8F7D,U+8F93,U+8FC7,U+8FD0,U+901A,U+914D,U+91CD,U+9700,U+FF0C}</style>
 
 
 
@@ -240,14 +241,14 @@ int main(){
   </header>
   <main>
     
-  <h1 class="title">C&#43;&#43; 模版类重载流输入输出运算符</h1>
+  <h1 class="title">C++ 模版类重载流输入输出运算符</h1>
   <p class="description"></p>
 
   
 
-  <p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code>。由于搭配模板类的使用，编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版，需要事先声明。</p>
+  <p>在 C++ 中只能通过友元函数来重载流输入输出运算符 <code>&lt;&lt;</code> <code>&gt;&gt;</code><span class="hg">。</span><span class="hs"> </span>由于搭配模板类的使用<span class="hg">，</span><span class="hs"> </span>编译器可能在对应编译友元函数时<strong>无法确定</strong>其为模版<span class="hg">，</span><span class="hs"> </span>需要事先声明<span class="hg">。</span><span class="hs"> </span></p>
 <h2 id="方法-1提前声明并使用--确认">方法 1：提前声明并使用 &lt;&gt; 确认</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//需要提前进行声明，以使类中对友元函数的声明进一步确认函数为模板函数
@@ -268,7 +269,7 @@ int main(){
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
-</span></span><span style="display:flex;"><span>	newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;)&#34;</span>;
+</span></span><span style="display:flex;"><span>	newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">"("</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">","</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">")"</span>;
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> newout;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
@@ -278,7 +279,7 @@ int main(){
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>} 
 </span></span></code></pre></div><h2 id="方法-2在声明友元函数的同时定义友元函数">方法 2：在声明友元函数的同时定义友元函数</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
@@ -291,7 +292,7 @@ int main(){
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//在声明友元函数的同时定义友元函数
 </span></span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">friend</span> ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
-</span></span><span style="display:flex;"><span>			newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;)&#34;</span>;
+</span></span><span style="display:flex;"><span>			newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">"("</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">","</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">")"</span>;
 </span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> newout;
 </span></span><span style="display:flex;"><span>		}
 </span></span><span style="display:flex;"><span>}; 
@@ -302,8 +303,8 @@ int main(){
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>} 
 </span></span></code></pre></div><h2 id="如果可以不使用友元函数">如果可以不使用友元函数</h2>
-<p>如果模板类中的成员为公有，则完全不需要在模板类中声明友元。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+<p>如果模板类中的成员为公有<span class="hg">，</span><span class="hs"> </span>则完全不需要在模板类中声明友元<span class="hg">。</span><span class="hs"> </span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
@@ -318,7 +319,7 @@ int main(){
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>ostream <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">&lt;&lt;</span> (ostream <span style="color:#f92672">&amp;</span>newout, <span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>m){
-</span></span><span style="display:flex;"><span>	newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;)&#34;</span>;
+</span></span><span style="display:flex;"><span>	newout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">"("</span><span style="color:#f92672">&lt;&lt;</span>m.real<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">","</span><span style="color:#f92672">&lt;&lt;</span>m.image<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">")"</span>;
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> newout;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
@@ -329,7 +330,7 @@ int main(){
 </span></span><span style="display:flex;"><span>} 
 </span></span></code></pre></div><h2 id="参考文章">参考文章</h2>
 <ul>
-<li><a href="https://isocpp.org/wiki/faq/templates#template-friends">Why do I get linker errors when I use template friends? - Standard C++</a></li>
+<li lang="en"><a href="https://isocpp.org/wiki/faq/templates#template-friends">Why do I get linker errors when I use template friends? - Standard C++</a></li>
 </ul>
 
   
@@ -357,7 +358,6 @@ int main(){
 
 
 
-<script src="/han.min.a102d8879f19e3a6202c9fbc3d7a45615ee9ac5c45721efa19b6684c9dff62cf.js" integrity="sha256-oQLYh58Z46YgLJ&#43;8PXpFYV7prFxFch76GbZoTJ3/Ys8=" defer></script>
 
 
 

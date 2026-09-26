@@ -2,6 +2,7 @@
 <html lang="zh-hans" dir="ltr">
 <head>
   <meta charset="utf-8" />
+<script>window.CSS&&CSS.registerProperty||document.documentElement.classList.add("no-cjk-em")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
 <title>初探 Fluent Design System | Rongbin Fan</title>
@@ -29,8 +30,8 @@ Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元
 
 
 
-<link rel="stylesheet" href="/css/main.5ceb79f3bedf6a106b38e01f08481ff7e64f73c95327b7d0c44b1af1aff22906.css" integrity="sha256-XOt5877fahBrOOAfCEgf9&#43;ZPc8lTJ7fQxEsa8a/yKQY=">
-<style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-5e2f807c253b.woff2") format("woff2");unicode-range:U+3001-3002,U+300C-300D,U+4F20,U+5149,U+52A8,U+5BA3,U+6750,U+6DF1,U+7EF4,U+89C6,U+9891,U+FF08-FF09,U+FF0C,U+FF1A-FF1B}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-8cab32f222ca.woff2") format("woff2");unicode-range:U+3001-3002,U+300C-300D,U+4E00,U+4E09-4E0B,U+4E0D,U+4E14,U+4E16,U+4E2A,U+4E2D,U+4E3A-4E3B,U+4E49,U+4E4B,U+4E5F,U+4E86,U+4E88,U+4E8B-4E8C,U+4E8E,U+4E94,U+4EBA,U+4EC5,U+4ECA,U+4ECE,U+4ED6,U+4EE5,U+4EEC,U+4EFB,U+4F18,U+4F20,U+4F53,U+4F5C,U+4F7F,U+4F9B,U+4FBF,U+4FE1,U+503C,U+5047,U+505A,U+5143,U+5145,U+5148-5149,U+5165,U+516C,U+5173,U+5176-5177,U+51C6,U+51FA,U+5206,U+521B,U+521D,U+5229,U+522B,U+5230,U+524D,U+529B,U+52A0-52A1,U+52A8-52A9,U+5316,U+533A,U+5373,U+539F,U+53BB,U+53C2,U+53CB,U+53D1,U+53EB,U+53EF,U+540C,U+540E,U+5411,U+5426,U+5458,U+548C,U+5524,U+56DE,U+56E0,U+56F4,U+5728,U+5730,U+573A,U+57FA,U+5883,U+589E,U+5907,U+591A,U+591F,U+597D,U+5982,U+5B57-5B58,U+5B8C,U+5B98,U+5B9A,U+5B9E,U+5BA3,U+5BDF,U+5BF9,U+5BFC,U+5C06,U+5C1A,U+5C31,U+5C42,U+5C55,U+5C5E,U+5DE5,U+5E03,U+5E26,U+5E2E,U+5E38,U+5E73,U+5E76,U+5E94,U+5EA6,U+5F0F,U+5F15,U+5F3A,U+5F52-5F53,U+5F71,U+5F97,U+5FAE,U+5FC3,U+5FEB,U+5FF5,U+601D,U+6027,U+606F-6070,U+60A6,U+60F3,U+6109,U+610F,U+611F,U+6210-6211,U+6216,U+6237,U+6240,U+624B,U+6253,U+628A,U+62D3,U+62DF,U+6392,U+63A2,U+63A5,U+63D0,U+64CD,U+6548,U+6570,U+6587,U+6599,U+65B0,U+65B9,U+65E0,U+65E8,U+660E,U+662F,U+666F,U+66F4,U+6700,U+6709,U+672A,U+6750,U+6765,U+677E,U+67B6,U+67D0,U+6807,U+6837,U+6846,U+6A2A,U+6B21,U+6B63-6B65,U+6BCF,U+6C1B,U+6C89,U+6CD5,U+6CE8,U+6D3B,U+6D41,U+6D4F,U+6D78,U+6DB5,U+6E21,U+6E29,U+6F14,U+70B9,U+7136,U+7269,U+7279,U+73AF-73B0,U+7406,U+751F,U+7528,U+7531,U+7535,U+753B,U+7545,U+754C,U+7684,U+76D6,U+76EE,U+76F8,U+770B,U+771F,U+7740,U+77E5,U+7834,U+7840,U+786E,U+78B0,U+793A,U+79CD,U+7A7A,U+7CFB,U+7D20,U+7EBF,U+7EC6,U+7EC8,U+7ED9,U+7EDF,U+7EF4,U+7F1D,U+7F51,U+8003,U+800C,U+8054,U+80FD,U+81EA,U+822C,U+8282,U+8303,U+8425,U+8651,U+865A,U+884C,U+8981,U+89C2,U+89C4,U+89C8,U+89E3,U+89E6,U+8A00,U+8BA1,U+8BA4,U+8BA9,U+8BB2,U+8BB8,U+8BBE,U+8BCD,U+8BD1,U+8BE5,U+8BED,U+8BF4,U+8D77,U+8DE8,U+8F6C,U+8F6F,U+8F74,U+8F7B,U+8FB9,U+8FC7,U+8FD0-8FD1,U+8FD9,U+8FDB,U+8FF0,U+9002,U+901A,U+9020,U+90E8,U+9177,U+91CD,U+95F4,U+9610,U+9634,U+9645,U+9650,U+96C6,U+96F6,U+9700,U+9762,U+9875,U+9879,U+9A8C,U+9AD8,U+FF08-FF09,U+FF0C,U+FF1A-FF1B}</style>
+<link rel="stylesheet" href="/css/main.082a4083214a242eb8a0ed58b9b08f78b57e2086775e7067340afbdd5cb973d9.css" integrity="sha256-CCpAgyFKJC64oO1YubCPeLV&#43;IIZ3XnBnNAr73Vy5c9k=">
+<style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-d7f2467908e4.woff2") format("woff2");unicode-range:U+4F20,U+5149,U+52A8,U+5BA3,U+6750,U+6DF1,U+7EF4,U+89C6,U+9891}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-ad456bdec877.woff2") format("woff2");unicode-range:U+3001-3002,U+300C-300D,U+4E00,U+4E09-4E0B,U+4E0D,U+4E14,U+4E16,U+4E2A,U+4E2D,U+4E3A-4E3B,U+4E49,U+4E4B,U+4E5F,U+4E86,U+4E88,U+4E8B-4E8C,U+4E8E,U+4E94,U+4EBA,U+4EC5,U+4ECA,U+4ECE,U+4ED6,U+4EE5,U+4EEC,U+4EFB,U+4F18,U+4F20,U+4F53,U+4F5C,U+4F7F,U+4F9B,U+4FBF,U+4FE1,U+503C,U+5047,U+505A,U+5143,U+5145,U+5148-5149,U+5165,U+516C,U+5173,U+5176-5177,U+51C6,U+51FA,U+5206,U+521B,U+521D,U+5229,U+522B,U+5230,U+524D,U+529B,U+52A0-52A1,U+52A8-52A9,U+5316,U+533A,U+5373,U+539F,U+53BB,U+53C2,U+53CB,U+53D1,U+53EB,U+53EF,U+540C,U+540E,U+5411,U+5426,U+5458,U+548C,U+5524,U+56DE,U+56E0,U+56F4,U+5728,U+5730,U+573A,U+57FA,U+5883,U+589E,U+5907,U+591A,U+591F,U+597D,U+5982,U+5B57-5B58,U+5B8C,U+5B98,U+5B9A,U+5B9E,U+5BA3,U+5BDF,U+5BF9,U+5BFC,U+5C06,U+5C1A,U+5C31,U+5C42,U+5C55,U+5C5E,U+5DE5,U+5E03,U+5E26,U+5E2E,U+5E38,U+5E73,U+5E76,U+5E94,U+5EA6,U+5F0F,U+5F15,U+5F3A,U+5F52-5F53,U+5F71,U+5F97,U+5FAE,U+5FC3,U+5FEB,U+5FF5,U+601D,U+6027,U+606F-6070,U+60A6,U+60F3,U+6109,U+610F,U+611F,U+6210-6211,U+6216,U+6237,U+6240,U+624B,U+6253,U+628A,U+62D3,U+62DF,U+6392,U+63A2,U+63A5,U+63D0,U+64CD,U+6548,U+6570,U+6587,U+6599,U+65B0,U+65B9,U+65E0,U+65E8,U+660E,U+662F,U+666F,U+66F4,U+6700,U+6709,U+672A,U+6750,U+6765,U+677E,U+67B6,U+67D0,U+6807,U+6837,U+6846,U+6A2A,U+6B21,U+6B63-6B65,U+6BCF,U+6C1B,U+6C89,U+6CD5,U+6CE8,U+6D3B,U+6D41,U+6D4F,U+6D78,U+6DB5,U+6E21,U+6E29,U+6F14,U+70B9,U+7136,U+7269,U+7279,U+73AF-73B0,U+7406,U+751F,U+7528,U+7531,U+7535,U+753B,U+7545,U+754C,U+7684,U+76D6,U+76EE,U+76F8,U+770B,U+771F,U+7740,U+77E5,U+7834,U+7840,U+786E,U+78B0,U+793A,U+79CD,U+7A7A,U+7CFB,U+7D20,U+7EBF,U+7EC6,U+7EC8,U+7ED9,U+7EDF,U+7EF4,U+7F1D,U+7F51,U+8003,U+800C,U+8054,U+80FD,U+81EA,U+822C,U+8282,U+8303,U+8425,U+8651,U+865A,U+884C,U+8981,U+89C2,U+89C4,U+89C8,U+89E3,U+89E6,U+8A00,U+8BA1,U+8BA4,U+8BA9,U+8BB2,U+8BB8,U+8BBE,U+8BCD,U+8BD1,U+8BE5,U+8BED,U+8BF4,U+8D77,U+8DE8,U+8F6C,U+8F6F,U+8F74,U+8F7B,U+8FB9,U+8FC7,U+8FD0-8FD1,U+8FD9,U+8FDB,U+8FF0,U+9002,U+901A,U+9020,U+90E8,U+9177,U+91CD,U+95F4,U+9610,U+9634,U+9645,U+9650,U+96C6,U+96F6,U+9700,U+9762,U+9875,U+9879,U+9A8C,U+9AD8,U+FF08-FF09,U+FF0C}</style>
 
 
 
@@ -113,45 +114,45 @@ Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元
 
   
 
-  <p>微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System，即先前传言为 Project Neon 的设计语言。通用，可拓展，横跨多种设备，可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备。该设计语言涵盖五种理念，分别是 Light, Depth, Motion, Material, Scale。</p>
-<p><img src="https://img.fanrongbin.com/m-1.webp" alt="microsoft-fluent-design-elements.png"></p>
+  <p>微软在 Build 2017 Day Two 主旨演讲中正式宣布 Fluent Design System<span class="hg">，</span><span class="hs"> </span>即先前传言为 Project Neon 的设计语言<span class="hg">。</span><span class="hs"> </span>通用<span class="hg">，</span><span class="hs"> </span>可拓展<span class="hg">，</span><span class="hs"> </span>横跨多种设备<span class="hg">，</span><span class="hs"> </span>可以说微软这一设计语言就是为 Mixed Reality 的发展做好准备<span class="hg">。</span><span class="hs"> </span>该设计语言涵盖五种理念<span class="hg">，</span><span class="hs"> </span>分别是 Light, Depth, Motion, Material, Scale<span class="hg">。</span><span class="hs"> </span></p>
+<p><img alt="microsoft-fluent-design-elements.png" src="https://img.fanrongbin.com/m-1.webp"/></p>
 <h2 id="宣传视频">宣传视频</h2>
 <p><a href="http://fluent.microsoft.com">官方网页</a> （无法在以中文为界面语言的 Chrome 正常浏览）| <a href="http://v.youku.com/v_show/id_XMjc1ODYzMjcwMA==.html">优酷</a> (来自 Livesino)</p>
 <h2 id="light-光">Light (光)</h2>
-<p><img src="https://img.fanrongbin.com/m-2.webp" alt="2040_VRG0158.jpg" title="via The Verge"></p>
-<p>利用光线引导用户使用，增强现实感，使得目标和行动更加集中和准确。将光作为设计理念的一部分，或许是一种高出平面、回归自然的目的。实际应用中，设计人员需要充分考虑场景光线排布和导向性操作是否可行，需要基于用户心理的考察得出最终的设计。</p>
-<blockquote>
+<p><img alt="2040_VRG0158.jpg" src="https://img.fanrongbin.com/m-2.webp" title="via The Verge"/></p>
+<p>利用光线引导用户使用<span class="hg">，</span><span class="hs"> </span>增强现实感<span class="hg">，</span><span class="hs"> </span>使得目标和行动更加集中和准确<span class="hg">。</span><span class="hs"> </span>将光作为设计理念的一部分<span class="hg">，</span><span class="hs"> </span>或许是一种高出平面<span class="hg">、</span><span class="hs"> </span>回归自然的目的<span class="hg">。</span><span class="hs"> </span>实际应用中<span class="hg">，</span><span class="hs"> </span>设计人员需要充分考虑场景光线排布和导向性操作是否可行<span class="hg">，</span><span class="hs"> </span>需要基于用户心理的考察得出最终的设计<span class="hg">。</span><span class="hs"> </span></p>
+<blockquote lang="en">
 <p>Light has a way of drawing our attention. It’s warm and inviting; it’s fluid and purposeful. Light creates atmosphere and a sense of place, and it’s a practical tool to illuminate information.</p>
 </blockquote>
-<p>引用部分是微软官方的定义。</p>
-<p>光线引起人们注意，而其特点也正是温和友好、流畅、目的性明确。光能创造氛围更能营造范围，是阐述信息的实用工具。</p>
+<p>引用部分是微软官方的定义<span class="hg">。</span><span class="hs"> </span></p>
+<p>光线引起人们注意<span class="hg">，</span><span class="hs"> </span>而其特点也正是温和友好<span class="hg">、</span><span class="hs"> </span>流畅<span class="hg">、</span><span class="hs"> </span>目的性明确<span class="hg">。</span><span class="hs"> </span>光能创造氛围更能营造范围<span class="hg">，</span><span class="hs"> </span>是阐述信息的实用工具<span class="hg">。</span><span class="hs"> </span></p>
 <h2 id="depth-深">Depth (深)</h2>
-<p>Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元素的相对重要性，让他们能够集中于手边的工作，即引入了 Z 轴这一属性。Fluent Design System 中体现为 Depth，在微软尚未公布更多细节前，我们可以参考 Material Design 中相关的规范得出初步思考。</p>
-<p><img src="https://img.fanrongbin.com/m-3.webp" alt="whatismaterial_3d_elevation1-1024x647.png" title="via Android Developers"></p>
-<p>不同高度下(Z 值)的阴影。</p>
-<p>Fluent Design System 的出现就是为了打破原有仅适用于平面的设计语言 (Metro UI)，引入三维空间的设计理念便于在今后发展 VR/AR/MR，实现统一可操作的设计规范。</p>
-<blockquote>
+<p>Material Design 为 UI 元素引入高度<span class="hg">。</span><span class="hs"> </span>高度将帮助用户了解每个元素的相对重要性<span class="hg">，</span><span class="hs"> </span>让他们能够集中于手边的工作<span class="hg">，</span><span class="hs"> </span>即引入了 Z 轴这一属性<span class="hg">。</span><span class="hs"> </span>Fluent Design System 中体现为 Depth<span class="hg">，</span><span class="hs"> </span>在微软尚未公布更多细节前<span class="hg">，</span><span class="hs"> </span>我们可以参考 Material Design 中相关的规范得出初步思考<span class="hg">。</span><span class="hs"> </span></p>
+<p><img alt="whatismaterial_3d_elevation1-1024x647.png" src="https://img.fanrongbin.com/m-3.webp" title="via Android Developers"/></p>
+<p>不同高度下(Z 值)的阴影<span class="hg">。</span><span class="hs"> </span></p>
+<p>Fluent Design System 的出现就是为了打破原有仅适用于平面的设计语言 (Metro UI)<span class="hg">，</span><span class="hs"> </span>引入三维空间的设计理念便于在今后发展 VR/AR/MR<span class="hg">，</span><span class="hs"> </span>实现统一可操作的设计规范<span class="hg">。</span><span class="hs"> </span></p>
+<blockquote lang="en">
 <p>Think about the frame that contains your information. Now break it apart, and reinvent how things relate to each other within a more layered, physical environment. This is how we’ll keep people in their flow – by giving them more space.</p>
 </blockquote>
-<p>打破原有二维框架，在层次区分度更高的物理环境（三维空间）中重新思考事物中的联系。</p>
+<p>打破原有二维框架<span class="hg">，</span><span class="hs"> </span>在层次区分度更高的物理环境<span class="ls"> </span><span class="jy l">（</span>三维空间）中重新思考事物中的联系<span class="hg">。</span><span class="hs"> </span></p>
 <h2 id="motion-动">Motion (动)</h2>
-<p><img src="https://img.fanrongbin.com/m-4.webp" alt="2040_VRG0159.jpg" title="via The Verge"></p>
-<blockquote>
+<p><img alt="2040_VRG0159.jpg" src="https://img.fanrongbin.com/m-4.webp" title="via The Verge"/></p>
+<blockquote lang="en">
 <p>Think of motion design like a movie. Seamless transitions keep you focused on the story, and bring experiences to life. We can invite that feeling into our designs, leading people from one task to the next with cinematic ease.</p>
 </blockquote>
-<p>微软认为，动效的作用在于带给用户如同观看电影般的沉浸感，做到无缝过渡、由虚转实，使用户轻松、愉快地完成多项任务。在我看来，动效一词需要分真假。「真动效」无限接近生活，能够唤起用户对物理环境下该操作引起动效的感知，因此也可叫「拟物动效」。「假动效」即对二维动画进行空间上的拓展，主要作用是提示用户完成了某一操作，并且能通过细节优化给予愉悦感。</p>
+<p>微软认为<span class="hg">，</span><span class="hs"> </span>动效的作用在于带给用户如同观看电影般的沉浸感<span class="hg">，</span><span class="hs"> </span>做到无缝过渡<span class="hg">、</span><span class="hs"> </span>由虚转实<span class="hg">，</span><span class="hs"> </span>使用户轻松<span class="hg">、</span><span class="hs"> </span>愉快地完成多项任务<span class="hg">。</span><span class="hs"> </span>在我看来<span class="hg">，</span><span class="hs"> </span>动效一词需要分真假<span class="jy r">。</span><span class="ls"> </span><span class="jy l">「</span>真动效」无限接近生活<span class="hg">，</span><span class="hs"> </span>能够唤起用户对物理环境下该操作引起动效的感知<span class="hg">，</span><span class="hs"> </span>因此也可叫<span class="ls"> </span><span class="jy l">「</span>拟物动效<span class="jy r">」</span><span class="jy r">。</span><span class="ls"> </span><span class="jy l">「</span>假动效」即对二维动画进行空间上的拓展<span class="hg">，</span><span class="hs"> </span>主要作用是提示用户完成了某一操作<span class="hg">，</span><span class="hs"> </span>并且能通过细节优化给予愉悦感<span class="hg">。</span><span class="hs"> </span></p>
 <h2 id="material-材">Material (材)</h2>
-<p><img src="https://img.fanrongbin.com/m-5.webp" alt="2040_VRG0160.jpg" title="via The Verge"></p>
-<blockquote>
+<p><img alt="2040_VRG0160.jpg" src="https://img.fanrongbin.com/m-5.webp" title="via The Verge"/></p>
+<blockquote lang="en">
 <p>The things that surround us in the real world are sensory and invigorating. They bend, stretch, bounce, shatter, and glide. Those material qualities translate to digital environments, making people want to reach out and touch our designs.</p>
 </blockquote>
-<p>真实世界中存在着「感知」和「活力」。在数字环境中运用恰当的材料，带给用户想去触碰的想法，增加了操作的可能性，是和 Light 一样体现着以自然为设计基础的理念。</p>
+<p>真实世界中存在着<span class="ls"> </span><span class="jy l">「</span>感知」和<span class="ls"> </span><span class="jy l">「</span>活力<span class="jy r">」</span><span class="hg">。</span><span class="hs"> </span>在数字环境中运用恰当的材料<span class="hg">，</span><span class="hs"> </span>带给用户想去触碰的想法<span class="hg">，</span><span class="hs"> </span>增加了操作的可能性<span class="hg">，</span><span class="hs"> </span>是和 Light 一样体现着以自然为设计基础的理念<span class="hg">。</span><span class="hs"> </span></p>
 <h2 id="scale-维">Scale (维)</h2>
-<p><img src="https://img.fanrongbin.com/m-6.webp" alt="2040_VRG0161.jpg" title="via The Verge"></p>
-<blockquote>
+<p><img alt="2040_VRG0161.jpg" src="https://img.fanrongbin.com/m-6.webp" title="via The Verge"/></p>
+<blockquote lang="en">
 <p>The industry lives and breathes 2D design. Now’s the time to expand our toolkit for more dimensions. We’re scaling our design system from 0D to 3D, inviting innovation across new forms. And we’re looking to you to help us imagine this new world.</p>
 </blockquote>
-<p>之所以把 Scale 译作「维」，是因为这一点集中体现了 Fluent Design System 最终的作用——实现从零维到三维的，多种场景适用的设计规范，利用设备提供并拓展面向多维度的体验。</p>
+<p>之所以把 Scale 译作<span class="ls"> </span><span class="jy l">「</span>维<span class="jy r">」</span><span class="hg">，</span><span class="hs"> </span>是因为这一点集中体现了 Fluent Design System 最终的作用——实现从零维到三维的<span class="hg">，</span><span class="hs"> </span>多种场景适用的设计规范<span class="hg">，</span><span class="hs"> </span>利用设备提供并拓展面向多维度的体验<span class="hg">。</span><span class="hs"> </span></p>
 
   
 
@@ -174,7 +175,6 @@ Material Design 为 UI 元素引入高度。高度将帮助用户了解每个元
 
 
 
-<script src="/han.min.a102d8879f19e3a6202c9fbc3d7a45615ee9ac5c45721efa19b6684c9dff62cf.js" integrity="sha256-oQLYh58Z46YgLJ&#43;8PXpFYV7prFxFch76GbZoTJ3/Ys8=" defer></script>
 
 
 
