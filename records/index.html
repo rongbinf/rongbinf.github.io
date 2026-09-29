@@ -17,7 +17,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.8f3aae3c8f8a2f5198efd26a1e3315ac5fbcbe82f4d4e5c78ff9c7cdeb43a874.css" integrity="sha256-jzquPI&#43;KL1GY79JqHjMVrF&#43;8voL01OXHj/nHzetDqHQ=">
+<link rel="stylesheet" href="/css/main.556ab25eb778c853e55884835286f70e405d16a7f26505361c19964b95c073a7.css" integrity="sha256-VWqyXrd4yFPlWISDUob3DkBdFqfyZQU2HBmWS5XAc6c=">
 <style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-f04e69f32b5f.woff2") format("woff2");unicode-range:U+3002,U+4E0D,U+4E16,U+4E8C,U+4E9E,U+4EBA,U+4ED6,U+4EEC,U+4F60,U+4F7F,U+4F86,U+50B3,U+512A,U+5149,U+5225,U+5230,U+523A,U+5341,U+53BB,U+53BF,U+53EA,U+5531,U+5584,U+57CE,U+5883,U+591F,U+5929,U+5931,U+5979,U+5982,U+5999,U+59CB,U+5A1B,U+5BA4,U+5BB6,U+5C07,U+5C0D,U+5C0F,U+5E74,U+5F00,U+60F3,U+611B,U+6211,U+6232,U+6416,U+64FA,U+6587,U+65C5,U+660E,U+6700,U+6708,U+6728,U+677E,U+679C,U+68A6,U+6A02,U+6A13,U+6A59,U+6B63,U+6E38,U+751F,U+754C,U+767C,U+7684,U+77E5,U+78B0,U+795E,U+7ED1,U+7F8E,U+8005,U+80FD,U+8207,U+826F,U+82E5,U+83AB,U+83F2,U+84CB,U+851A,U+875F,U+884C,U+897F,U+89AA,U+8A71,U+8A9E,U+8AAC,U+8BB0,U+904A,U+9053,U+9084,U+91CD,U+963F,U+964C,U+96C5,U+971E,U+9A6C,U+9B3C,U+9B54,U+AE30,U+B208,U+B2EC,U+B54C,U+B791,U+BB38,U+C0AC,U+C124,U+C379,U+C5D0,U+C804,U+D558,U+D56D,U+D574}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-928c864e791b.woff2") format("woff2");unicode-range:U+30AB,U+30D2,U+30EB,U+4E01,U+4E2D,U+4E94,U+4EBA,U+4F55,U+4F69,U+5065,U+5177,U+5361,U+540C,U+5730,U+57C3,U+5875,U+58F0,U+591A,U+5927,U+5955,U+5982,U+5B5D,U+5B87,U+5C0F,U+5CF6,U+5F35,U+5F37,U+61B6,U+61F8,U+64CE,U+6587,U+65B9,U+6728,U+6734,U+6761,U+6797,U+6811,U+6B23,U+6D2A,U+738B,U+73A9,U+7425,U+745C,U+7530,U+78C1,U+7A57,U+83AB,U+83F2,U+8431,U+84EE,U+851A,U+8521,U+8587,U+862D,U+885B,U+8FC5,U+9673,U+96C5,U+96F7,U+971E,U+97F3,U+9A6C,U+9B4F,U+9EC3,U+B098,U+B3D9,U+B77C,U+B9BC,U+BBA4,U+BE44,U+C120,U+C158,U+C18C,U+C544-C545,U+C5C4,U+C6B0,U+C720,U+C774,U+C790,U+C794,U+C7AC,U+C815,U+C9C0,U+D558,U+D654}</style>
 
 
@@ -8276,6 +8276,10 @@
 <div class="stack" data-grid-cols="1" data-grid-fly="" data-grid-max="0" data-grid-pick="row" data-idle="2000" id="stack">
   <div class="stack-backdrop"></div>
   <div class="stack-buttons">
+    <button id="stack-row" type="button">
+      <svg aria-hidden="true" height="14" viewBox="0 0 16 16" width="14"><path d="M4.5 1.5h10v10M1.5 4.5h10v10h-10z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+      <span>Stack</span>
+    </button>
     <button id="stack-close" type="button">
       <svg aria-hidden="true" height="14" viewBox="0 0 16 16" width="14"><path d="M3.5 3.5l9 9m0-9l-9 9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
       <span>Close</span>
@@ -10291,6 +10295,9 @@
     const isOpen = () => root.classList.contains("stacked");
     const clamp = i => Math.max(0, Math.min(cards.length - 1, i));
     const opts = stack.dataset;
+    
+    
+    let ordered = cards, rank = cards.map((_, i) => i), gridFrom = "row";
 
     
     
@@ -10421,11 +10428,11 @@
 
     
     
-    const layout = at => {
+    const layout = (at, refit = at !== undefined) => {
       stack.style.setProperty("--stack-top", scrollY + "px");
       stack.style.setProperty("--stack-height", innerHeight + "px");
       if (gridded) return tile();
-      fit(at !== undefined);
+      fit(refit);
       card = cards[0].offsetWidth;
       step = card * 0.7;
       half = track.clientWidth / 2;
@@ -10515,9 +10522,9 @@
     
     const extent = () => {
       const cols = +track.style.getPropertyValue("--stack-cols"), n = cards.length;
-      const first = cards[0].getBoundingClientRect();
-      const right = cards[Math.min(cols, n) - 1].getBoundingClientRect().right;
-      const bottom = cards[(Math.ceil(n / cols) - 1) * cols].getBoundingClientRect().bottom;
+      const first = ordered[0].getBoundingClientRect();
+      const right = ordered[Math.min(cols, n) - 1].getBoundingClientRect().right;
+      const bottom = ordered[(Math.ceil(n / cols) - 1) * cols].getBoundingClientRect().bottom;
       return { cols, left: first.left, top: first.top, width: right - first.left, height: bottom - first.top };
     };
     
@@ -10571,21 +10578,31 @@
     
     
     
-    const grounded = () => document.getAnimations().forEach(anim => {
-      if (anim.effect?.target?.parentNode === track) anim.cancel();
-    });
+    
+    const moving = new Set();
+    const move = (a, frames, timing) => {
+      const anim = a.animate(frames, timing);
+      moving.add(anim);
+      anim.onfinish = anim.oncancel = () => moving.delete(anim);
+      return anim;
+    };
+    const grounded = () => moving.forEach(anim => anim.cancel());
+    
     
     
     const setGrid = (on, at = Math.max(shown, 0)) => {
       gridded = on;
       stack.classList.toggle("grid", on);
+      stack.classList.toggle("from-page", on && gridFrom === "page");
       gridToggle.setAttribute("aria-pressed", on);
       grounded();
       cards.forEach((a, i) => {
         a.style.transform = a.style.zIndex = a.style.display = "";
         drawn[i] = {};
       });
-      if (isOpen()) layout(at);
+      
+      
+      if (isOpen()) layout(at, false);
     };
     
     
@@ -10614,8 +10631,8 @@
       const dy = r.top + r.height / 2 - (l.top + l.height / 2);
       return `translate(${dx}px, ${dy}px) scale(${r.far ? 1 : r.width / l.width})`;
     };
-    const fly = (a, l, f, timing) => a.animate([{ transform: shift(l, f) }, { transform: "none" }], timing);
-    const flyTo = (a, l, t, timing) => a.animate([{ transform: "none" }, { transform: shift(l, t) }], timing);
+    const fly = (a, l, f, timing) => move(a, [{ transform: shift(l, f) }, { transform: "none" }], timing);
+    const flyTo = (a, l, t, timing) => move(a, [{ transform: "none" }, { transform: shift(l, t) }], timing);
     
     
     
@@ -10624,8 +10641,8 @@
       const at = rects();
       return cards.map((a, i) => {
         const f = from[i];
-        const timing = { duration: f?.far ? 460 : 380, delay: Math.min(i * 0.6, 120), easing: "cubic-bezier(0.2, 1.05, 0.35, 1)", fill: "backwards" };
-        return f ? fly(a, at[i], f, timing) : a.animate({ opacity: [0, 1], transform: ["scale(0.6)", "none"] }, timing);
+        const timing = { duration: f?.far ? 460 : 380, delay: Math.min(rank[i] * 0.6, 120), easing: "cubic-bezier(0.2, 1.05, 0.35, 1)", fill: "backwards" };
+        return f ? fly(a, at[i], f, timing) : move(a, { opacity: [0, 1], transform: ["scale(0.6)", "none"] }, timing);
       });
     };
     
@@ -10633,8 +10650,8 @@
       const at = rects();
       return cards.map((a, i) => {
         const t = to[i];
-        const timing = { duration: t?.far ? 420 : 340, delay: Math.min(i * 0.6, 120), easing: "cubic-bezier(0.4, 0, 0.2, 1)", fill: "forwards" };
-        return t ? flyTo(a, at[i], t, timing) : a.animate({ opacity: [1, 0], transform: ["none", "scale(0.6)"] }, timing);
+        const timing = { duration: t?.far ? 420 : 340, delay: Math.min(rank[i] * 0.6, 120), easing: "cubic-bezier(0.4, 0, 0.2, 1)", fill: "forwards" };
+        return t ? flyTo(a, at[i], t, timing) : move(a, { opacity: [1, 0], transform: ["none", "scale(0.6)"] }, timing);
       });
     };
     
@@ -10668,6 +10685,63 @@
       return el ? pageRect(el) : null;
     });
     const lift = on => origins.forEach(el => { el.style.visibility = on ? "hidden" : ""; });
+    
+    
+    
+    const pageOrder = new Map([...origins.keys()].map((id, k) => [id, k]));
+    let byPage = false;
+    const arrange = page => {
+      if (page === byPage) return;
+      byPage = page;
+      const key = a => pageOrder.get(a.dataset.stackId) ?? cards.length;
+      cards.forEach(a => { a.style.order = page ? key(a) : ""; });
+      ordered = page ? [...cards].sort((x, y) => key(x) - key(y)) : cards;
+      const place = new Map(ordered.map((a, k) => [a, k]));
+      rank = cards.map(a => place.get(a));
+    };
+
+    
+    
+    const switchTo = (on, at) => {
+      setGrid(on, at);
+      if (!still()) fadeParts([captionBox, ...shownCards()], true).forEach(a => a.finished.then(() => a.cancel()));
+    };
+    
+    
+    
+    
+    
+    let switching = false;
+    const toRow = async at => {
+      if (switching) return;
+      if (still() || !("gridFly" in opts)) return switchTo(false, at);
+      switching = true;
+      const c = card || Math.min(track.clientWidth * 0.64, 320), room = track.clientWidth / 2 + c * 0.9;
+      const shows = i => {
+        const ad = Math.abs(i - at);
+        return ad < 2 || 0.7 * c + (ad - 1) * c * 0.2 - c * 0.425 <= room;
+      };
+      const fades = cards.filter((a, i) => !shows(i))
+        .map(a => move(a, { opacity: [1, 0] }, { duration: 140, easing: "ease-out", fill: "forwards" }));
+      await Promise.allSettled(fades.map(f => f.finished));
+      const from = rects();
+      setGrid(false, at);
+      const flying = cards.flatMap((a, i) => drawn[i].transform && !drawn[i].display ? [i] : []);
+      
+      const t = track.getBoundingClientRect();
+      const boxes = flying.map(i => ({ left: t.left + cards[i].offsetLeft, top: t.top + cards[i].offsetTop, width: cards[i].offsetWidth, height: cards[i].offsetHeight }));
+      
+      
+      track.classList.add("landing");
+      const flights = flying.map((i, k) => move(cards[i], [
+        { transform: shift(boxes[k], from[i]) },
+        { transform: drawn[i].transform }
+      ], { duration: 440, delay: Math.min(Math.abs(i - at) * 14, 120), easing: "cubic-bezier(0.2, 1, 0.35, 1)", fill: "backwards" }));
+      fadeParts([captionBox], true).forEach(a => a.finished.then(() => a.cancel()));
+      switching = false;
+      await Promise.allSettled(flights.map(f => f.finished));
+      track.classList.remove("landing");
+    };
 
     
     
@@ -10706,13 +10780,13 @@
     
     
     
-    let gridFrom = "row";
     const gridOpen = document.getElementById("stack-grid-open");
     if (gridOpen) {
       gridOpen.addEventListener("click", async () => {
         if (isOpen()) return;
-        if (!gridded) setGrid(true);
         gridFrom = "page";
+        arrange(true);
+        setGrid(true);
         imgs.forEach(img => gridFile(img, "48px"));
         await settled(imgs, 300);
         run(true, true);
@@ -10723,28 +10797,17 @@
     
     
     
+    
     stack.addEventListener("click", e => {
       if (dragged) return e.preventDefault();
       
       if (tapIdle && !e.target.closest(".stack-track a")) return;
-      
-      
-      const switchTo = (on, at, flier) => {
-        const from = flier?.getBoundingClientRect();
-        setGrid(on, at);
-        if (still()) return;
-        fadeParts([captionBox, ...shownCards().filter(c => c !== flier)], true).forEach(a => a.finished.then(() => a.cancel()));
-        if (!flier) return;
-        const end = flier.style.transform;
-        flier.animate([
-          { transform: `${shift(flier.getBoundingClientRect(), from)} ${end}` },
-          { transform: end }
-        ], { duration: 420, easing: "cubic-bezier(0.2, 1, 0.35, 1)" });
-      };
+      if (e.target.closest("#stack-row")) return toRow(Math.max(shown, 0));
       if (e.target.closest("#stack-grid")) {
-        if (gridded && gridFrom === "page") return run(false, true);
+        if (gridded) return gridFrom === "page" ? run(false, true) : toRow(Math.max(shown, 0));
         gridFrom = "row";
-        if (gridded || still() || !("gridFly" in opts)) return switchTo(!gridded);
+        arrange(false);
+        if (still() || !("gridFly" in opts)) return switchTo(true);
         const from = rowRects();
         setGrid(true);
         return flyIn(from);
@@ -10753,7 +10816,7 @@
       if (!a) return run(false);
       const i = cards.indexOf(a);
       if (gridded) {
-        if (opts.gridPick === "row") { e.preventDefault(); switchTo(false, i, a); }
+        if (opts.gridPick === "row") { e.preventDefault(); toRow(i); }
         return;
       }
       if (i !== Math.round(pos)) { e.preventDefault(); go(i); }
