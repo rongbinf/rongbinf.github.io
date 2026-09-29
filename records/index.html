@@ -17,7 +17,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.6b9c9c4643fce9390e22eb0b746d9f197a80c228de4cd894b89c3acddd77509e.css" integrity="sha256-a5ycRkP86TkOIusLdG2fGXqAwijeTNiUuJw6zd13UJ4=">
+<link rel="stylesheet" href="/css/main.8f3aae3c8f8a2f5198efd26a1e3315ac5fbcbe82f4d4e5c78ff9c7cdeb43a874.css" integrity="sha256-jzquPI&#43;KL1GY79JqHjMVrF&#43;8voL01OXHj/nHzetDqHQ=">
 <style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-f04e69f32b5f.woff2") format("woff2");unicode-range:U+3002,U+4E0D,U+4E16,U+4E8C,U+4E9E,U+4EBA,U+4ED6,U+4EEC,U+4F60,U+4F7F,U+4F86,U+50B3,U+512A,U+5149,U+5225,U+5230,U+523A,U+5341,U+53BB,U+53BF,U+53EA,U+5531,U+5584,U+57CE,U+5883,U+591F,U+5929,U+5931,U+5979,U+5982,U+5999,U+59CB,U+5A1B,U+5BA4,U+5BB6,U+5C07,U+5C0D,U+5C0F,U+5E74,U+5F00,U+60F3,U+611B,U+6211,U+6232,U+6416,U+64FA,U+6587,U+65C5,U+660E,U+6700,U+6708,U+6728,U+677E,U+679C,U+68A6,U+6A02,U+6A13,U+6A59,U+6B63,U+6E38,U+751F,U+754C,U+767C,U+7684,U+77E5,U+78B0,U+795E,U+7ED1,U+7F8E,U+8005,U+80FD,U+8207,U+826F,U+82E5,U+83AB,U+83F2,U+84CB,U+851A,U+875F,U+884C,U+897F,U+89AA,U+8A71,U+8A9E,U+8AAC,U+8BB0,U+904A,U+9053,U+9084,U+91CD,U+963F,U+964C,U+96C5,U+971E,U+9A6C,U+9B3C,U+9B54,U+AE30,U+B208,U+B2EC,U+B54C,U+B791,U+BB38,U+C0AC,U+C124,U+C379,U+C5D0,U+C804,U+D558,U+D56D,U+D574}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-928c864e791b.woff2") format("woff2");unicode-range:U+30AB,U+30D2,U+30EB,U+4E01,U+4E2D,U+4E94,U+4EBA,U+4F55,U+4F69,U+5065,U+5177,U+5361,U+540C,U+5730,U+57C3,U+5875,U+58F0,U+591A,U+5927,U+5955,U+5982,U+5B5D,U+5B87,U+5C0F,U+5CF6,U+5F35,U+5F37,U+61B6,U+61F8,U+64CE,U+6587,U+65B9,U+6728,U+6734,U+6761,U+6797,U+6811,U+6B23,U+6D2A,U+738B,U+73A9,U+7425,U+745C,U+7530,U+78C1,U+7A57,U+83AB,U+83F2,U+8431,U+84EE,U+851A,U+8521,U+8587,U+862D,U+885B,U+8FC5,U+9673,U+96C5,U+96F7,U+971E,U+97F3,U+9A6C,U+9B4F,U+9EC3,U+B098,U+B3D9,U+B77C,U+B9BC,U+BBA4,U+BE44,U+C120,U+C158,U+C18C,U+C544-C545,U+C5C4,U+C6B0,U+C720,U+C774,U+C790,U+C794,U+C7AC,U+C815,U+C9C0,U+D558,U+D654}</style>
 
 
@@ -10304,12 +10304,22 @@
     
     
     
+    
+    
+    
     const drawn = cards.map(() => ({}));
-    const load = img => {
-      if (img.getAttribute("src")) return;
-      img.srcset = img.dataset.srcset;
-      img.src = img.dataset.src;
+    
+    
+    
+    
+    
+    const offer = (img, srcset, sizes) => {
+      if (img.getAttribute("sizes") !== sizes) img.sizes = sizes;
+      if (img.getAttribute("srcset") !== srcset) img.srcset = srcset;
+      if (!img.getAttribute("src")) img.src = img.dataset.src;
     };
+    const load = img => offer(img, img.dataset.srcset, rowSizes);
+    const gridFile = (img, sizes) => offer(img, img.dataset.srcset.split(",")[0].trim(), sizes);
     const draw = (i, key, value) => {
       if (drawn[i][key] === value) return;
       drawn[i][key] = cards[i].style[key] = value;
@@ -10321,12 +10331,12 @@
         const x = ad <= 1 ? d * step : Math.sign(d) * (step + (ad - 1) * card * 0.2);
         const scale = 1 - 0.15 * Math.min(ad, 1);
         const edge = Math.abs(x) - card * scale / 2 - half;
-        draw(i, "visibility", edge > card * 0.5 && ad >= 2 ? "hidden" : "");
-        if (drawn[i].visibility) return;
+        draw(i, "display", edge > card * 0.5 && ad >= 2 ? "none" : "");
+        if (drawn[i].display) return;
         const turn = -Math.sign(d) * 60 * Math.min(ad, 1);
         draw(i, "transform", `translateX(${x}px) perspective(${card * 2}px) rotateY(${turn}deg) scale(${scale})`);
         draw(i, "zIndex", String(1000 - Math.round(ad * 10)));
-        if (edge < card * 0.2 || ad < 2) load(imgs[i]);
+        if ((edge < card * 0.2 || ad < 2) && (!gliding || Math.abs(i - target) < 8)) load(imgs[i]);
       });
       const i = clamp(Math.round(pos));
       if (i === shown) return;
@@ -10358,7 +10368,7 @@
       track.style.setProperty("--stack-cols", best.cols);
       track.style.setProperty("--stack-size", best.size + "px");
       track.style.setProperty("--stack-gap", best.gap + "px");
-      imgs.forEach(img => { img.sizes = best.size + "px"; load(img); });
+      imgs.forEach(img => gridFile(img, best.size + "px"));
     };
 
     
@@ -10501,18 +10511,40 @@
     const idleMs = +opts.idle || 0;
     let idleTimer = 0, tapIdle = false;
     const isIdle = () => stack.classList.contains("idle");
+    
+    
+    const extent = () => {
+      const cols = +track.style.getPropertyValue("--stack-cols"), n = cards.length;
+      const first = cards[0].getBoundingClientRect();
+      const right = cards[Math.min(cols, n) - 1].getBoundingClientRect().right;
+      const bottom = cards[(Math.ceil(n / cols) - 1) * cols].getBoundingClientRect().bottom;
+      return { cols, left: first.left, top: first.top, width: right - first.left, height: bottom - first.top };
+    };
+    
+    
     const setIdle = on => {
       if (isIdle() === on) return;
       const reflow = gridded && isOpen();
-      const before = reflow && cards.map(a => a.getBoundingClientRect());
+      const before = reflow && extent();
+      const covers = reflow && before.cols && rects();
       stack.classList.toggle("idle", on);
       if (!reflow) return;
+      track.getAnimations().forEach(anim => anim.cancel());
       tile();
       if (still()) return;
-      cards.forEach((a, i) => {
-        a.getAnimations().forEach(anim => anim.cancel());
-        fly(a, before[i], { duration: 300, easing: "cubic-bezier(0.2, 1, 0.35, 1)" });
-      });
+      const after = extent(), timing = { duration: 250, easing: "cubic-bezier(0.25, 1, 0.5, 1)" };
+      if (after.cols !== before.cols) {
+        const now = rects();
+        return cards.forEach((a, i) => fly(a, now[i], covers[i], timing));
+      }
+      const box = track.getBoundingClientRect();
+      const sx = before.width / after.width, sy = before.height / after.height;
+      const tx = before.left - box.left - sx * (after.left - box.left);
+      const ty = before.top - box.top - sy * (after.top - box.top);
+      track.animate([
+        { transform: `translate(${tx}px, ${ty}px) scale(${sx}, ${sy})`, transformOrigin: "0 0" },
+        { transform: "none", transformOrigin: "0 0" }
+      ], timing);
     };
     const stopIdle = () => { clearTimeout(idleTimer); setIdle(false); };
     const wake = () => {
@@ -10538,16 +10570,21 @@
     };
     
     
+    
+    const grounded = () => document.getAnimations().forEach(anim => {
+      if (anim.effect?.target?.parentNode === track) anim.cancel();
+    });
+    
+    
     const setGrid = (on, at = Math.max(shown, 0)) => {
       gridded = on;
       stack.classList.toggle("grid", on);
       gridToggle.setAttribute("aria-pressed", on);
+      grounded();
       cards.forEach((a, i) => {
-        a.getAnimations().forEach(anim => anim.cancel());
-        a.style.transform = a.style.zIndex = a.style.visibility = "";
+        a.style.transform = a.style.zIndex = a.style.display = "";
         drawn[i] = {};
       });
-      if (!on) imgs.forEach(img => { img.sizes = rowSizes; });
       if (isOpen()) layout(at);
     };
     
@@ -10566,35 +10603,46 @@
 
     
     
-    const shift = (a, r) => {
-      const l = a.getBoundingClientRect();
+    
+    
+    
+    
+    
+    const rects = () => cards.map(a => a.getBoundingClientRect());
+    const shift = (l, r) => {
       const dx = r.left + r.width / 2 - (l.left + l.width / 2);
       const dy = r.top + r.height / 2 - (l.top + l.height / 2);
-      return `translate(${dx}px, ${dy}px) scale(${r.width / l.width})`;
+      return `translate(${dx}px, ${dy}px) scale(${r.far ? 1 : r.width / l.width})`;
     };
-    const fly = (a, f, timing) => a.animate([{ transform: shift(a, f) }, { transform: "none" }], timing);
-    const flyTo = (a, t, timing) => a.animate([{ transform: "none" }, { transform: shift(a, t) }], timing);
+    const fly = (a, l, f, timing) => a.animate([{ transform: shift(l, f) }, { transform: "none" }], timing);
+    const flyTo = (a, l, t, timing) => a.animate([{ transform: "none" }, { transform: shift(l, t) }], timing);
     
     
     
     
-    const flyIn = from => cards.map((a, i) => {
-      const f = from[i];
-      const timing = { duration: f?.far ? 460 : 380, delay: Math.min(i * 0.6, 120), easing: "cubic-bezier(0.2, 1.05, 0.35, 1)", fill: "backwards" };
-      return f ? fly(a, f, timing) : a.animate({ opacity: [0, 1], transform: ["scale(0.6)", "none"] }, timing);
-    });
+    const flyIn = from => {
+      const at = rects();
+      return cards.map((a, i) => {
+        const f = from[i];
+        const timing = { duration: f?.far ? 460 : 380, delay: Math.min(i * 0.6, 120), easing: "cubic-bezier(0.2, 1.05, 0.35, 1)", fill: "backwards" };
+        return f ? fly(a, at[i], f, timing) : a.animate({ opacity: [0, 1], transform: ["scale(0.6)", "none"] }, timing);
+      });
+    };
     
-    const flyOut = to => cards.map((a, i) => {
-      const t = to[i];
-      const timing = { duration: t?.far ? 420 : 340, delay: Math.min(i * 0.6, 120), easing: "cubic-bezier(0.4, 0, 0.2, 1)", fill: "forwards" };
-      return t ? flyTo(a, t, timing) : a.animate({ opacity: [1, 0], transform: ["none", "scale(0.6)"] }, timing);
-    });
+    const flyOut = to => {
+      const at = rects();
+      return cards.map((a, i) => {
+        const t = to[i];
+        const timing = { duration: t?.far ? 420 : 340, delay: Math.min(i * 0.6, 120), easing: "cubic-bezier(0.4, 0, 0.2, 1)", fill: "forwards" };
+        return t ? flyTo(a, at[i], t, timing) : a.animate({ opacity: [1, 0], transform: ["none", "scale(0.6)"] }, timing);
+      });
+    };
     
     
     const rowRects = () => {
       const w = card * 0.85, t = track.getBoundingClientRect(), top = t.top + (t.height - w) / 2;
       return cards.map((a, i) => {
-        if (drawn[i].transform && !drawn[i].visibility) return a.getBoundingClientRect();
+        if (drawn[i].transform && !drawn[i].display) return a.getBoundingClientRect();
         const off = 24 + Math.abs(i - pos) * 4;
         return { left: i < pos ? -w - off : innerWidth + off, top, width: w, height: w, far: true };
       });
@@ -10665,7 +10713,7 @@
         if (isOpen()) return;
         if (!gridded) setGrid(true);
         gridFrom = "page";
-        imgs.forEach(img => { img.sizes = "48px"; load(img); });
+        imgs.forEach(img => gridFile(img, "48px"));
         await settled(imgs, 300);
         run(true, true);
       });
@@ -10679,9 +10727,19 @@
       if (dragged) return e.preventDefault();
       
       if (tapIdle && !e.target.closest(".stack-track a")) return;
-      const switchTo = (on, at) => {
+      
+      
+      const switchTo = (on, at, flier) => {
+        const from = flier?.getBoundingClientRect();
         setGrid(on, at);
-        if (!still()) fadeParts([captionBox, ...shownCards()], true).forEach(a => a.finished.then(() => a.cancel()));
+        if (still()) return;
+        fadeParts([captionBox, ...shownCards().filter(c => c !== flier)], true).forEach(a => a.finished.then(() => a.cancel()));
+        if (!flier) return;
+        const end = flier.style.transform;
+        flier.animate([
+          { transform: `${shift(flier.getBoundingClientRect(), from)} ${end}` },
+          { transform: end }
+        ], { duration: 420, easing: "cubic-bezier(0.2, 1, 0.35, 1)" });
       };
       if (e.target.closest("#stack-grid")) {
         if (gridded && gridFrom === "page") return run(false, true);
@@ -10695,7 +10753,7 @@
       if (!a) return run(false);
       const i = cards.indexOf(a);
       if (gridded) {
-        if (opts.gridPick === "row") { e.preventDefault(); switchTo(false, i); }
+        if (opts.gridPick === "row") { e.preventDefault(); switchTo(false, i, a); }
         return;
       }
       if (i !== Math.round(pos)) { e.preventDefault(); go(i); }
