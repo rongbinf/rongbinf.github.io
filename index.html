@@ -1475,8 +1475,7 @@
     const toggle = document.getElementById("stack-toggle");
     const stack = document.getElementById("stack");
     const track = stack.querySelector(".stack-track");
-    
-    const cards = [...track.querySelectorAll(":scope > a")];
+    const cards = [...track.children];
     const imgs = cards.map(a => a.firstElementChild);
     const backdrop = stack.querySelector(".stack-backdrop");
     const buttons = stack.querySelector(".stack-buttons");
