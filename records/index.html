@@ -17,7 +17,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.a1c2e2e407bb20ef98c1f4b937afebd8735c5daf0e2bae8ff5581f3692444de1.css" integrity="sha256-ocLi5Ae7IO&#43;YwfS5N6/r2HNcXa8OK66P9VgfNpJETeE=">
+<link rel="stylesheet" href="/css/main.9e1d1de59df5111cd706d6d21ab3d4a90baebdf8dfa99a666e634932d26f08a3.css" integrity="sha256-nh0d5Z31ERzXBtbSGrPUqQuuvfjfqZpmbmNJMtJvCKM=">
 <style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-f04e69f32b5f.woff2") format("woff2");unicode-range:U+3002,U+4E0D,U+4E16,U+4E8C,U+4E9E,U+4EBA,U+4ED6,U+4EEC,U+4F60,U+4F7F,U+4F86,U+50B3,U+512A,U+5149,U+5225,U+5230,U+523A,U+5341,U+53BB,U+53BF,U+53EA,U+5531,U+5584,U+57CE,U+5883,U+591F,U+5929,U+5931,U+5979,U+5982,U+5999,U+59CB,U+5A1B,U+5BA4,U+5BB6,U+5C07,U+5C0D,U+5C0F,U+5E74,U+5F00,U+60F3,U+611B,U+6211,U+6232,U+6416,U+64FA,U+6587,U+65C5,U+660E,U+6700,U+6708,U+6728,U+677E,U+679C,U+68A6,U+6A02,U+6A13,U+6A59,U+6B63,U+6E38,U+751F,U+754C,U+767C,U+7684,U+77E5,U+78B0,U+795E,U+7ED1,U+7F8E,U+8005,U+80FD,U+8207,U+826F,U+82E5,U+83AB,U+83F2,U+84CB,U+851A,U+875F,U+884C,U+897F,U+89AA,U+8A71,U+8A9E,U+8AAC,U+8BB0,U+904A,U+9053,U+9084,U+91CD,U+963F,U+964C,U+96C5,U+971E,U+9A6C,U+9B3C,U+9B54,U+AE30,U+B208,U+B2EC,U+B54C,U+B791,U+BB38,U+C0AC,U+C124,U+C379,U+C5D0,U+C804,U+D558,U+D56D,U+D574}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-928c864e791b.woff2") format("woff2");unicode-range:U+30AB,U+30D2,U+30EB,U+4E01,U+4E2D,U+4E94,U+4EBA,U+4F55,U+4F69,U+5065,U+5177,U+5361,U+540C,U+5730,U+57C3,U+5875,U+58F0,U+591A,U+5927,U+5955,U+5982,U+5B5D,U+5B87,U+5C0F,U+5CF6,U+5F35,U+5F37,U+61B6,U+61F8,U+64CE,U+6587,U+65B9,U+6728,U+6734,U+6761,U+6797,U+6811,U+6B23,U+6D2A,U+738B,U+73A9,U+7425,U+745C,U+7530,U+78C1,U+7A57,U+83AB,U+83F2,U+8431,U+84EE,U+851A,U+8521,U+8587,U+862D,U+885B,U+8FC5,U+9673,U+96C5,U+96F7,U+971E,U+97F3,U+9A6C,U+9B4F,U+9EC3,U+B098,U+B3D9,U+B77C,U+B9BC,U+BBA4,U+BE44,U+C120,U+C158,U+C18C,U+C544-C545,U+C5C4,U+C6B0,U+C720,U+C774,U+C790,U+C794,U+C7AC,U+C815,U+C9C0,U+D558,U+D654}</style>
 
 
@@ -26,7 +26,7 @@
 
 
 
-<link rel="stylesheet" href="/records.min.39dc1dd1dfa93d8b61293e8e3e0558873a376cfa78299b5820a1f57dccf99745.css">
+<link rel="stylesheet" href="/records.min.6bf782f639e7b40ef43f896a95f4b4795d3472e13ac17f1026bb3d82e3f9b432.css">
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -10333,9 +10333,11 @@
     
     
     
+    
     const far = 24, blank = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+    let holding = false;
     const unload = img => {
-      if ("gone" in img.dataset || !img.dataset.srcset || !img.getAttribute("src")) return;
+      if (holding || "gone" in img.dataset || !img.dataset.srcset || !img.getAttribute("src")) return;
       
       
       img.dataset.gone = "";
@@ -10740,36 +10742,62 @@
     
     
     
+    
+    
+    
+    const ease = "cubic-bezier(0.2, 1, 0.35, 1)";
+    const flyAway = (list, from, at, t) => {
+      const box = document.createElement("div");
+      box.className = "stack-ghosts";
+      stack.insertBefore(box, track);
+      const s = stack.getBoundingClientRect(), mid = t.top + t.height / 2;
+      const anims = list.map(i => {
+        const img = imgs[i], f = from[i], off = 24 + Math.abs(i - at) * 4;
+        Object.assign(img.style, { left: f.left - s.left + "px", top: f.top - s.top + "px", width: f.width + "px", height: f.height + "px" });
+        box.append(img);
+        const x = (i < at ? -f.width - off : innerWidth + off) - f.left, y = mid - f.height / 2 - f.top;
+        return move(img, [{ transform: "none" }, { transform: `translate(${x}px, ${y}px)` }],
+          { duration: 460, delay: Math.min(Math.abs(i - at) * 0.3, 40), easing: ease, fill: "forwards" });
+      });
+      const done = () => {
+        list.forEach(i => {
+          imgs[i].getAnimations().forEach(anim => anim.cancel());
+          imgs[i].removeAttribute("style");
+          cards[i].prepend(imgs[i]);
+        });
+        box.remove();
+      };
+      return { anims, done };
+    };
     let switching = false;
     const toRow = async at => {
       if (switching) return;
       if (still() || !("gridFly" in opts)) return switchTo(false, at);
-      switching = true;
-      const c = card || Math.min(track.clientWidth * 0.64, 320), room = track.clientWidth / 2 + c * 0.9;
-      const shows = i => {
-        const ad = Math.abs(i - at);
-        return ad < 2 || 0.7 * c + (ad - 1) * c * 0.2 - c * 0.425 <= room;
-      };
-      const fades = cards.filter((a, i) => !shows(i))
-        .map(a => move(a, { opacity: [1, 0] }, { duration: 140, easing: "ease-out", fill: "forwards" }));
-      await Promise.allSettled(fades.map(f => f.finished));
+      switching = holding = true;
       const from = rects();
       setGrid(false, at);
       const flying = cards.flatMap((a, i) => drawn[i].transform && !drawn[i].display ? [i] : []);
+      const leaving = cards.flatMap((a, i) => drawn[i].display ? [i] : []);
       
       const t = track.getBoundingClientRect();
       const boxes = flying.map(i => ({ left: t.left + cards[i].offsetLeft, top: t.top + cards[i].offsetTop, width: cards[i].offsetWidth, height: cards[i].offsetHeight }));
+      const away = flyAway(leaving, from, at, t);
       
       
       track.classList.add("landing");
       const flights = flying.map((i, k) => move(cards[i], [
         { transform: shift(boxes[k], from[i]) },
         { transform: drawn[i].transform }
-      ], { duration: 440, delay: Math.min(Math.abs(i - at) * 14, 120), easing: "cubic-bezier(0.2, 1, 0.35, 1)", fill: "backwards" }));
-      fadeParts([captionBox], true).forEach(a => a.finished.then(() => a.cancel()));
+      ], { duration: 380, delay: Math.min(Math.abs(i - at) * 8, 40), easing: ease, fill: "backwards" }));
+      const caption = captionBox.animate({ opacity: [0, 1] }, { duration: 180, delay: 200, easing: "ease-out", fill: "backwards" });
       switching = false;
-      await Promise.allSettled(flights.map(f => f.finished));
+      await Promise.allSettled([...flights, ...away.anims, caption].map(f => f.finished));
+      away.done();
+      caption.cancel();
       track.classList.remove("landing");
+      
+      holding = false;
+      if (!gridded) leaving.forEach(i => { if (drawn[i].display && Math.abs(i - pos) > far) unload(imgs[i]); });
     };
 
     
@@ -10841,8 +10869,9 @@
         setGrid(true);
         return flyIn(from);
       }
+      
       const a = e.target.closest(".stack-track a");
-      if (!a) return run(false);
+      if (!a) return run(false, gridded);
       const i = cards.indexOf(a);
       if (gridded) {
         if (opts.gridPick === "row") { e.preventDefault(); toRow(i); }
@@ -10855,7 +10884,7 @@
     addEventListener("keydown", e => {
       if (!isOpen()) return;
       const row = !gridded;
-      if (e.key === "Escape") run(false);
+      if (e.key === "Escape") run(false, gridded);
       else if (row && (e.key === "ArrowLeft" || e.key === "ArrowRight")) flip(e.key === "ArrowLeft" ? -1 : 1);
       else if (row && (e.key === "Home" || e.key === "End")) go(e.key === "Home" ? 0 : cards.length - 1);
       else if (row && e.key === "Enter" && !e.target.closest("a, button")) cards[shown].click();
