@@ -2031,12 +2031,15 @@
           const c = rowColor(pic, left, top, size, edge.getBoundingClientRect().top + 6);
           
           
+          
+          
+          
           blooming.push(edge.animate([
             { backgroundColor: bg, easing: ease },
             { backgroundColor: c, offset: full },
             { backgroundColor: c, offset: hold, easing: "cubic-bezier(0.4, 0, 0.6, 1)" },
             { backgroundColor: bg }
-          ], timing));
+          ], { ...timing, delay: -35 }));
         });
       }
       const mine = blooming;
