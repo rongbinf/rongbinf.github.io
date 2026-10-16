@@ -2031,13 +2031,14 @@
           const c = rowColor(pic, left, top, size, edge.getBoundingClientRect().top + 6);
           
           
-          const ms = timing.duration, tail = 560, out = 700;
+          
+          const ms = timing.duration, len = ms + 150;
           blooming.push(edge.animate([
             { backgroundColor: bg, easing: ease },
-            { backgroundColor: c, offset: full * ms / (tail + out) },
-            { backgroundColor: c, offset: tail / (tail + out), easing: "cubic-bezier(0.45, 0, 0.55, 1)" },
+            { backgroundColor: c, offset: full * ms / len },
+            { backgroundColor: c, offset: hold * ms / len, easing: "cubic-bezier(0.4, 0, 0.6, 1)" },
             { backgroundColor: bg }
-          ], { duration: tail + out }));
+          ], { duration: len }));
         });
       }
       const mine = blooming;
