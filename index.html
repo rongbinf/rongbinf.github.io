@@ -1977,6 +1977,7 @@
     
     
     
+    
     let blooming = [];
     const edges = [...stack.querySelectorAll(".stack-edge")];
     const unbloom = () => {
@@ -2025,16 +2026,19 @@
         stack.classList.add("blooming");
         edges.forEach(edge => {
           const c = rowColor(pic, left, top, size, edge.getBoundingClientRect().top + 6);
+          
+          
+          const ms = timing.duration, tail = 560, out = 700;
           blooming.push(edge.animate([
             { backgroundColor: bg, easing: ease },
-            { backgroundColor: c, offset: full },
-            { backgroundColor: c, offset: hold, easing: "cubic-bezier(0.4, 0, 0.6, 1)" },
+            { backgroundColor: c, offset: full * ms / (tail + out) },
+            { backgroundColor: c, offset: tail / (tail + out), easing: "cubic-bezier(0.45, 0, 0.55, 1)" },
             { backgroundColor: bg }
-          ], timing));
+          ], { duration: tail + out }));
         });
       }
       const mine = blooming;
-      blooming[0].onfinish = () => { if (blooming === mine) unbloom(); };
+      Promise.allSettled(mine.map(anim => anim.finished)).then(() => { if (blooming === mine) unbloom(); });
     };
     let warmed = false;
     const warm = () => {
