@@ -1795,7 +1795,7 @@
     
     const hold = e => e.preventDefault();
     const set = on => {
-      if (!on) unbloom();
+      if (!on) { unbloom(); hideLinks(); }
       root.classList.toggle("stacked", on);
       on ? wake() : stopIdle();
       on ? addEventListener("touchmove", hold, { passive: false }) : removeEventListener("touchmove", hold);
@@ -1843,7 +1843,7 @@
       el.animate({ opacity: on ? [0, 1] : [1, 0] }, { duration: 180, easing: "ease-out", fill: "forwards" }));
     
     
-    const captionsShown = () => gridded ? [] : [captionBox];
+    const captionsShown = () => gridded ? [] : linksBox ? [captionBox, linksBox] : [captionBox];
     const shownCards = () => cards.filter(a => {
       const r = a.getBoundingClientRect();
       return r.right > 0 && r.left < innerWidth;
