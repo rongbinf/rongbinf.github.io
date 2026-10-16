@@ -1679,7 +1679,7 @@
     stack.addEventListener("pointerdown", () => { dragged = false; });
     track.addEventListener("pointerdown", e => {
       if (gridded || e.button) return;
-      drag = { id: e.pointerId, x: e.clientX, pos, stopped: !!gliding, moves: [[e.timeStamp, e.clientX]] };
+      drag = { id: e.pointerId, x: e.clientX, y: e.clientY, pos, stopped: !!gliding, moves: [[e.timeStamp, e.clientX]] };
       stop();
     });
     track.addEventListener("pointermove", e => {
@@ -1687,6 +1687,8 @@
       const dx = e.clientX - drag.x;
       if (!dragged) {
         if (Math.abs(dx) < 6) return;
+        
+        if (Math.abs(e.clientY - drag.y) > Math.abs(dx)) { drag = null; return; }
         dragged = true;
         track.setPointerCapture(e.pointerId);
         track.classList.add("dragging");
@@ -2296,6 +2298,107 @@
         linksFor === i ? hideLinks() : showLinks(i);
       }
     });
+    
+    
+    
+    let pull = null;
+    const pulled = () => [track, captionBox, linksBox].filter(Boolean);
+    const thinned = () => [backdrop, edge, buttons].filter(Boolean);
+    const pullTo = d => {
+      const k = Math.min(d / innerHeight, 1);
+      pulled().forEach(el => { el.style.transform = `translateY(${d}px) scale(${1 - k * 0.2})`; });
+      thinned().forEach(el => { el.style.opacity = String(Math.max(0, 1 - k * 1.6)); });
+    };
+    const unpull = () => {
+      pulled().forEach(el => { el.style.transform = ""; });
+      thinned().forEach(el => { el.style.opacity = ""; });
+    };
+    stack.addEventListener("pointerdown", e => {
+      if (e.button || pull || root.classList.contains("stack-fading")) return;
+      pull = { id: e.pointerId, x: e.clientX, y: e.clientY, d: 0, on: false, moves: [[e.timeStamp, 0]] };
+    });
+    stack.addEventListener("pointermove", e => {
+      if (!pull || e.pointerId !== pull.id) return;
+      const dx = e.clientX - pull.x, dy = e.clientY - pull.y;
+      if (!pull.on) {
+        if (track.classList.contains("dragging") || dy < -10 || Math.abs(dx) > 10 && Math.abs(dx) >= dy) { pull = null; return; }
+        if (dy < 10) return;
+        pull.on = dragged = true;
+        stop();
+        stack.setPointerCapture(e.pointerId);
+        root.classList.add("stack-fading");
+      }
+      
+      pull.d = dy > 0 ? dy : dy / 4;
+      pullTo(pull.d);
+      pull.moves.push([e.timeStamp, pull.d]);
+      while (pull.moves.length > 2 && e.timeStamp - pull.moves[0][0] > 100) pull.moves.shift();
+    });
+    const letGo = async e => {
+      if (!pull || e.pointerId !== pull.id) return;
+      const { on, d, moves } = pull;
+      pull = null;
+      if (!on) return;
+      const [[t0, d0]] = moves, [t1, d1] = moves[moves.length - 1];
+      const v = t1 > t0 ? (d1 - d0) / (t1 - t0) : 0;
+      const away = d > innerHeight * 0.18 || v > 0.5;
+      const k = Math.min(d / innerHeight, 1), to = away ? d + Math.max(innerHeight * 0.35, v * 160) : 0;
+      const kTo = Math.min(to / innerHeight, 1);
+      const timing = away ? { duration: 220, easing: "cubic-bezier(0.3, 0, 0.6, 1)", fill: "forwards" } : { duration: 320, easing: ease, fill: "forwards" };
+      const fadeTo = away ? 0 : 1, fadeFrom = Math.max(0, 1 - k * 1.6);
+      const anims = [
+        ...pulled().map(el => el.animate({ transform: [`translateY(${d}px) scale(${1 - k * 0.2})`, `translateY(${to}px) scale(${1 - kTo * 0.2})`], opacity: away ? [1, 0] : [1, 1] }, timing)),
+        ...thinned().map(el => el.animate({ opacity: [fadeFrom, fadeTo] }, timing))
+      ];
+      unpull();
+      await Promise.allSettled(anims.map(a => a.finished));
+      if (away) set(false);
+      anims.forEach(a => a.cancel());
+      root.classList.remove("stack-fading");
+    };
+    stack.addEventListener("pointerup", letGo);
+    stack.addEventListener("pointercancel", letGo);
+
+    
+    
+    
+    addEventListener("stack:open", async e => {
+      const i = cards.findIndex(a => a.dataset.stackId === e.detail);
+      if (i < 0 || isOpen() || root.classList.contains("stack-fading")) return;
+      const from = origins.get(e.detail);
+      warm();
+      gridFrom = "row";
+      arrange(false);
+      if (gridded) setGrid(false, i);
+      const near = imgs.slice(Math.max(i - 7, 0), i + 8);
+      near.forEach(load);
+      
+      await Promise.race([Promise.all([settled(near, 300), picOf(i)?.decode().catch(() => {})]), new Promise(done => setTimeout(done, 350))]);
+      if (still() || !from) {
+        set(true);
+        layout(i);
+        return showLinks(i);
+      }
+      root.classList.add("stack-fading");
+      set(true);
+      layout(i);
+      showLinks(i);
+      const f = from.getBoundingClientRect(), a = cards[i], t = track.getBoundingClientRect();
+      const box = { left: t.left + a.offsetLeft, top: t.top + a.offsetTop, width: a.offsetWidth, height: a.offsetHeight };
+      from.style.visibility = "hidden";
+      bloom(i, f);
+      const anims = [
+        move(a, [{ transform: shift(box, f) }, { transform: drawn[i].transform }], { duration: 380, easing: ease }),
+        ...fadeParts([backdrop, buttons], true),
+        ...[captionBox, linksBox, ...shownCards().filter(c => c !== a)].map(el =>
+          el.animate({ opacity: [0, 1] }, { duration: 200, delay: 160, easing: "ease-out", fill: "backwards" }))
+      ];
+      await Promise.allSettled(anims.map(x => x.finished));
+      anims.forEach(x => x.cancel());
+      from.style.visibility = "";
+      root.classList.remove("stack-fading");
+    });
+
     
     const keys = [" ", "PageUp", "PageDown", "Home", "End", "ArrowUp", "ArrowDown"];
     addEventListener("keydown", e => {
