@@ -10587,6 +10587,7 @@
       captions[shown]?.classList.remove("on");
       captions[i].classList.add("on");
       shown = i;
+      retint(i);
     };
 
     
@@ -11001,13 +11002,11 @@
     
     
     
-    let blooming = [];
-    const edges = [...stack.querySelectorAll(".stack-edge")];
-    const unbloom = () => {
-      blooming.forEach(anim => anim.cancel());
-      blooming = [];
-      stack.classList.remove("blooming");
-    };
+    
+    
+    
+    
+    const edge = stack.querySelector(".stack-edge"), lead = 35;
     const pics = new Map(), canvas = document.createElement("canvas");
     
     
@@ -11025,47 +11024,104 @@
       }
       return `rgb(${sum.map(v => Math.round(v / k)).join(", ")})`;
     };
-    const bloom = (i, f, l) => {
-      unbloom();
+    
+    let tinted = -1, tintTimer = 0, edgeAnim = null;
+    const layers = () => [...backdrop.querySelectorAll(".stack-bloom")].filter(el => el !== bloomBox);
+    const picOf = i => {
       const src = cards[i].dataset.bloom;
-      if (!bloomBox || !src) return;
-      const b = backdrop.getBoundingClientRect();
-      const x = l.left + l.width / 2 - b.left, y = l.top + l.height / 2 - b.top;
-      
-      const size = 2 * Math.max(x, b.width - x, y, b.height - y) / 0.7;
-      Object.assign(bloomBox.style, { left: x - size / 2 + "px", top: y - size / 2 + "px", width: size + "px", height: size + "px" });
+      if (!bloomBox || !src) return null;
       if (!pics.has(src)) pics.set(src, Object.assign(new Image(), { src }));
-      const pic = pics.get(src);
-      bloomBox.replaceChildren(pic);
-      const dx = f.left + f.width / 2 - b.left - x, dy = f.top + f.height / 2 - b.top - y;
-      const timing = { duration: 700 }, full = 0.54, hold = 0.6;
-      blooming.push(bloomBox.animate([
-        { transform: `translate(${dx}px, ${dy}px) scale(${f.width / size / 0.7})`, opacity: 1, easing: ease },
-        { transform: "none", opacity: 1, offset: full, easing: "linear" },
-        { transform: "scale(1.02)", opacity: 1, offset: hold, easing: "cubic-bezier(0.4, 0, 0.6, 1)" },
-        { transform: "scale(1.1)", opacity: 0 }
-      ], timing));
-      if (pic.complete && pic.naturalWidth) {
-        const bg = getComputedStyle(backdrop).backgroundColor;
-        const left = b.left + x - size / 2, top = b.top + y - size / 2;
-        stack.classList.add("blooming");
-        edges.forEach(edge => {
-          const c = rowColor(pic, left, top, size, edge.getBoundingClientRect().top + 6);
-          
-          
-          
-          
-          
-          blooming.push(edge.animate([
-            { backgroundColor: bg, easing: ease },
-            { backgroundColor: c, offset: full },
-            { backgroundColor: c, offset: hold, easing: "cubic-bezier(0.4, 0, 0.6, 1)" },
-            { backgroundColor: bg }
-          ], { ...timing, delay: -35 }));
-        });
-      }
-      const mine = blooming;
-      Promise.allSettled(mine.map(anim => anim.finished)).then(() => { if (blooming === mine) unbloom(); });
+      return pics.get(src);
+    };
+    
+    
+    const spread = () => {
+      const b = backdrop.getBoundingClientRect(), t = track.getBoundingClientRect();
+      const a = cards[clamp(Math.round(pos))];
+      const x = t.left + a.offsetLeft + a.offsetWidth / 2 - b.left, y = t.top + a.offsetTop + a.offsetHeight / 2 - b.top;
+      return { b, x, y, size: 2 * Math.max(x, b.width - x, y, b.height - y) / 0.7 };
+    };
+    const setBox = (el, s) => Object.assign(el.style, { left: s.x - s.size / 2 + "px", top: s.y - s.size / 2 + "px", width: s.size + "px", height: s.size + "px" });
+    const newLayer = (pic, s) => {
+      const el = bloomBox.cloneNode(false);
+      setBox(el, s);
+      el.style.opacity = "1";
+      
+      el.append(pic.isConnected ? pic.cloneNode() : pic);
+      backdrop.append(el);
+      return el;
+    };
+    const topColor = (pic, s) => pic.complete && pic.naturalWidth
+      ? rowColor(pic, s.b.left + s.x - s.size / 2, s.b.top + s.y - s.size / 2, s.size, edge.getBoundingClientRect().top + 6)
+      : null;
+    const background = () => getComputedStyle(backdrop).backgroundColor;
+    
+    const paintEdge = (to, duration, easing) => {
+      const from = getComputedStyle(edge).backgroundColor;
+      edgeAnim?.cancel();
+      edge.style.backgroundColor = to;
+      edgeAnim = edge.animate({ backgroundColor: [from, to] }, { duration, easing, delay: -lead });
+    };
+    const bloom = (i, f) => {
+      unbloom();
+      const pic = picOf(i);
+      if (!pic || still()) return;
+      tinted = i;
+      const s = spread(), el = newLayer(pic, s);
+      const dx = f.left + f.width / 2 - s.b.left - s.x, dy = f.top + f.height / 2 - s.b.top - s.y;
+      el.animate({ transform: [`translate(${dx}px, ${dy}px) scale(${f.width / s.size / 0.7})`, "none"] }, { duration: 380, easing: ease });
+      const c = topColor(pic, s);
+      if (!c) return;
+      edge.style.backgroundColor = background();
+      stack.classList.add("blooming");
+      paintEdge(c, 380, ease);
+    };
+    
+    
+    const retint = i => {
+      if (tinted < 0 || i === tinted) return;
+      clearTimeout(tintTimer);
+      tintTimer = setTimeout(() => {
+        const pic = tinted < 0 || gridded ? null : picOf(i);
+        if (!pic) return;
+        tinted = i;
+        const s = spread(), old = layers(), el = newLayer(pic, s);
+        const done = () => old.forEach(o => o.remove());
+        el.animate({ opacity: [0, 1] }, { duration: 320, easing: "ease-out" }).finished.then(done, done);
+        const c = topColor(pic, s);
+        if (c) {
+          stack.classList.add("blooming");
+          paintEdge(c, 320, "ease-out");
+        }
+      }, 80);
+    };
+    const untint = ms => {
+      clearTimeout(tintTimer);
+      if (tinted < 0) return;
+      tinted = -1;
+      layers().forEach(el => {
+        const from = getComputedStyle(el).opacity;
+        el.style.opacity = "0";
+        const gone = () => el.remove();
+        el.animate({ opacity: [from, 0] }, { duration: ms, easing: "ease-out" }).finished.then(gone, gone);
+      });
+      if (!stack.classList.contains("blooming")) return;
+      paintEdge(background(), ms, "ease-out");
+      edgeAnim.finished.then(() => { if (tinted < 0) stack.classList.remove("blooming"); }, () => {});
+    };
+    
+    const unbloom = () => {
+      clearTimeout(tintTimer);
+      tinted = -1;
+      layers().forEach(el => el.remove());
+      edgeAnim?.cancel();
+      stack.classList.remove("blooming");
+    };
+    
+    const respread = () => {
+      if (tinted < 0) return;
+      const s = spread();
+      layers().forEach(el => setBox(el, s));
     };
     let warmed = false;
     const warm = () => {
@@ -11081,7 +11137,7 @@
       });
     };
     let switching = false;
-    const toRow = async (at, picked) => {
+    const toRow = async at => {
       if (switching) return;
       if (still() || !("gridFly" in opts)) return switchTo(false, at);
       switching = holding = true;
@@ -11093,7 +11149,7 @@
       const t = track.getBoundingClientRect();
       const boxes = flying.map(i => ({ left: t.left + cards[i].offsetLeft, top: t.top + cards[i].offsetTop, width: cards[i].offsetWidth, height: cards[i].offsetHeight }));
       const away = flyAway(leaving, from, at, t);
-      if (picked) bloom(at, from[at], { left: t.left + cards[at].offsetLeft, top: t.top + cards[at].offsetTop, width: cards[at].offsetWidth, height: cards[at].offsetHeight });
+      bloom(at, from[at]);
       
       
       track.classList.add("landing");
@@ -11116,6 +11172,7 @@
     
     const run = async (on, page) => {
       if (on === isOpen() || root.classList.contains("stack-fading")) return;
+      if (!on) untint(180);
       if (still()) return set(on);
       root.classList.add("stack-fading");
       const rects = page && pageRects();
@@ -11179,6 +11236,7 @@
         warm();
         arrange(false);
         if (still() || !("gridFly" in opts)) return switchTo(true);
+        untint(300);
         const from = rowRects();
         setGrid(true);
         return flyIn(from);
@@ -11190,7 +11248,7 @@
       if (gridded) {
         if (opts.gridPick === "row") {
           e.preventDefault();
-          toRow(i, true);
+          toRow(i);
         }
         return;
       }
@@ -11208,7 +11266,7 @@
       else if (!keys.includes(e.key)) return;
       e.preventDefault();
     });
-    addEventListener("resize", () => { if (isOpen()) layout(); });
+    addEventListener("resize", () => { if (isOpen()) { layout(); respread(); } });
     toggle.hidden = false;
   })();
 </script>
