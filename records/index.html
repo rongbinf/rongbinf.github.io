@@ -27,7 +27,7 @@
 
 
 
-<link rel="stylesheet" href="/records.min.b6fdb9fa8342d299e93a0da70b822a5774003dabe736c5dbac6180693185cc5f.css">
+<link rel="stylesheet" href="/records.min.dea7419f5c3d18e668e17e795eb95d28df58dbedb98621f2de6a6bde3f637aae.css">
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -11698,7 +11698,8 @@
     const touch = matchMedia("(hover: none)");
     records.forEach(record => {
       record.addEventListener("click", e => {
-        if (!touch.matches || e.target.closest("a")) return;
+        if (!touch.matches) return;
+        e.preventDefault();
         e.stopImmediatePropagation();
         dispatchEvent(new CustomEvent("stack:open", { detail: record.dataset.stackId }));
       }, true);
@@ -12192,6 +12193,25 @@
       const place = new Map(ordered.map((a, k) => [a, k]));
       rank = cards.map(a => place.get(a));
     };
+    
+    
+    
+    
+    const captionOf = new Map(cards.map((a, i) => [a, captions[i]]));
+    const ownOrder = new Map(cards.map((a, i) => [a, i]));
+    let pageFirst = false;
+    const reorder = page => {
+      if (page === pageFirst || isOpen() || !pageOrder.size) return;
+      pageFirst = page;
+      const was = cards[shown], state = new Map(cards.map((a, i) => [a, drawn[i]]));
+      const key = page ? a => pageOrder.get(a.dataset.stackId) ?? cards.length : a => ownOrder.get(a);
+      cards.sort((x, y) => key(x) - key(y));
+      cards.forEach((a, i) => { imgs[i] = a.firstElementChild; captions[i] = captionOf.get(a); drawn[i] = state.get(a); });
+      track.append(...cards);
+      shown = was ? cards.indexOf(was) : -1;
+      byPage = null;
+      arrange(false);
+    };
 
     
     
@@ -12476,6 +12496,7 @@
       new Promise(done => setTimeout(done, ms))
     ]);
     toggle.addEventListener("click", async () => {
+      reorder(false);
       if (gridded) setGrid(false);
       const near = imgs.slice(Math.max(shown - 7, 0), Math.max(shown, 0) + 8);
       near.forEach(load);
@@ -12492,6 +12513,7 @@
         if (isOpen()) return;
         warm();
         gridFrom = "page";
+        reorder(true);
         arrange(true);
         setGrid(true);
         imgs.forEach(img => gridFile(img, "48px"));
@@ -12560,19 +12582,22 @@
     
     
     
+    
     addEventListener("stack:open", async e => {
+      if (isOpen() || root.classList.contains("stack-fading")) return;
+      reorder(true);
       const i = cards.findIndex(a => a.dataset.stackId === e.detail);
-      if (i < 0 || isOpen() || root.classList.contains("stack-fading")) return;
-      const from = origins.get(e.detail);
+      if (i < 0) return;
       warm();
       gridFrom = "row";
-      arrange(false);
       if (gridded) setGrid(false, i);
       const near = imgs.slice(Math.max(i - 7, 0), i + 8);
       near.forEach(load);
       
-      await Promise.race([Promise.all([settled(near, 300), picOf(i)?.decode().catch(() => {})]), new Promise(done => setTimeout(done, 350))]);
-      if (still() || !from) {
+      await Promise.race([Promise.all([settled(near, 200), picOf(i)?.decode().catch(() => {})]), new Promise(done => setTimeout(done, 200))]);
+      if (isOpen()) return;
+      const from = pageRects();
+      if (still() || !from[i]) {
         set(true);
         layout(i);
         return showLinks(i);
@@ -12581,19 +12606,27 @@
       set(true);
       layout(i);
       showLinks(i);
-      const f = from.getBoundingClientRect(), a = cards[i], t = track.getBoundingClientRect();
-      const box = { left: t.left + a.offsetLeft, top: t.top + a.offsetTop, width: a.offsetWidth, height: a.offsetHeight };
-      from.style.visibility = "hidden";
-      bloom(i, f);
+      const t = track.getBoundingClientRect();
+      const flying = cards.flatMap((a, k) => drawn[k].transform && !drawn[k].display ? [k] : []);
+      const lifted = flying.map(k => origins.get(cards[k].dataset.stackId)).filter(Boolean);
+      lifted.forEach(el => { el.style.visibility = "hidden"; });
+      bloom(i, from[i]);
+      track.classList.add("landing");
       const anims = [
-        move(a, [{ transform: shift(box, f) }, { transform: drawn[i].transform }], { duration: 380, easing: ease }),
+        ...flying.map(k => {
+          const a = cards[k], f = from[k];
+          if (!f) return a.animate({ opacity: [0, 1] }, { duration: 200, delay: 160, easing: "ease-out", fill: "backwards" });
+          const box = { left: t.left + a.offsetLeft, top: t.top + a.offsetTop, width: a.offsetWidth, height: a.offsetHeight };
+          return move(a, [{ transform: shift(box, f) }, { transform: drawn[k].transform }],
+            { duration: 380, delay: Math.min(Math.abs(k - i) * 8, 40), easing: ease, fill: "backwards" });
+        }),
         ...fadeParts([backdrop, buttons], true),
-        ...[captionBox, linksBox, ...shownCards().filter(c => c !== a)].map(el =>
-          el.animate({ opacity: [0, 1] }, { duration: 200, delay: 160, easing: "ease-out", fill: "backwards" }))
+        ...[captionBox, linksBox].map(el => el.animate({ opacity: [0, 1] }, { duration: 180, delay: 200, easing: "ease-out", fill: "backwards" }))
       ];
       await Promise.allSettled(anims.map(x => x.finished));
       anims.forEach(x => x.cancel());
-      from.style.visibility = "";
+      track.classList.remove("landing");
+      lifted.forEach(el => { el.style.visibility = ""; });
       root.classList.remove("stack-fading");
     });
 
