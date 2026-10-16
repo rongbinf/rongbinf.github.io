@@ -12381,10 +12381,18 @@
       stack.classList.remove("blooming");
     };
     
+    
     const respread = () => {
       if (tinted < 0) return;
-      const s = spread();
+      const s = spread(), pic = picOf(tinted);
       layers().forEach(el => setBox(el, s));
+      if (!pic) return;
+      ink(pic, s);
+      const c = topColor(pic, s);
+      if (c && stack.classList.contains("blooming")) {
+        edgeAnim?.cancel();
+        edge.style.backgroundColor = c;
+      }
     };
     let warmed = false;
     const warm = () => {
@@ -12552,7 +12560,19 @@
       else if (!keys.includes(e.key)) return;
       e.preventDefault();
     });
-    addEventListener("resize", () => { if (isOpen()) { layout(); respread(); } });
+    
+    
+    
+    const relayout = () => { if (isOpen()) { layout(); respread(); } };
+    let settle = 0;
+    addEventListener("resize", () => {
+      relayout();
+      clearTimeout(settle);
+      settle = setTimeout(relayout, 400);
+    });
+    addEventListener("scroll", () => {
+      if (isOpen()) stack.style.setProperty("--stack-top", scrollY + "px");
+    }, { passive: true });
     toggle.hidden = false;
   })();
 </script>
