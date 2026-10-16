@@ -17,7 +17,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.df804e48205cb58da86061833ea9ca3dea2e5c31392fc597c2168f2aff44492b.css" integrity="sha256-34BOSCBctY2oYGGDPqnKPeouXDE5L8WXwhaPKv9ESSs=">
+<link rel="stylesheet" href="/css/main.48c8b122f754b20d4c5e093d38dbd35bc49ae400edd6588828ed1903c6573b24.css" integrity="sha256-SMixIvdUsg1MXgk9ONvTW8Sa5ADt1liIKO0ZA8ZXOyQ=">
 <style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-f04e69f32b5f.woff2") format("woff2");unicode-range:U+3002,U+4E0D,U+4E16,U+4E8C,U+4E9E,U+4EBA,U+4ED6,U+4EEC,U+4F60,U+4F7F,U+4F86,U+50B3,U+512A,U+5149,U+5225,U+5230,U+523A,U+5341,U+53BB,U+53BF,U+53EA,U+5531,U+5584,U+57CE,U+5883,U+591F,U+5929,U+5931,U+5979,U+5982,U+5999,U+59CB,U+5A1B,U+5BA4,U+5BB6,U+5C07,U+5C0D,U+5C0F,U+5E74,U+5F00,U+60F3,U+611B,U+6211,U+6232,U+6416,U+64FA,U+6587,U+65C5,U+660E,U+6700,U+6708,U+6728,U+677E,U+679C,U+68A6,U+6A02,U+6A13,U+6A59,U+6B63,U+6E38,U+751F,U+754C,U+767C,U+7684,U+77E5,U+78B0,U+795E,U+7ED1,U+7F8E,U+8005,U+80FD,U+8207,U+826F,U+82E5,U+83AB,U+83F2,U+84CB,U+851A,U+875F,U+884C,U+897F,U+89AA,U+8A71,U+8A9E,U+8AAC,U+8BB0,U+904A,U+9053,U+9084,U+91CD,U+963F,U+964C,U+96C5,U+971E,U+9A6C,U+9B3C,U+9B54,U+AE30,U+B208,U+B2EC,U+B54C,U+B791,U+BB38,U+C0AC,U+C124,U+C379,U+C5D0,U+C804,U+D558,U+D56D,U+D574}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-928c864e791b.woff2") format("woff2");unicode-range:U+30AB,U+30D2,U+30EB,U+4E01,U+4E2D,U+4E94,U+4EBA,U+4F55,U+4F69,U+5065,U+5177,U+5361,U+540C,U+5730,U+57C3,U+5875,U+58F0,U+591A,U+5927,U+5955,U+5982,U+5B5D,U+5B87,U+5C0F,U+5CF6,U+5F35,U+5F37,U+61B6,U+61F8,U+64CE,U+6587,U+65B9,U+6728,U+6734,U+6761,U+6797,U+6811,U+6B23,U+6D2A,U+738B,U+73A9,U+7425,U+745C,U+7530,U+78C1,U+7A57,U+83AB,U+83F2,U+8431,U+84EE,U+851A,U+8521,U+8587,U+862D,U+885B,U+8FC5,U+9673,U+96C5,U+96F7,U+971E,U+97F3,U+9A6C,U+9B4F,U+9EC3,U+B098,U+B3D9,U+B77C,U+B9BC,U+BBA4,U+BE44,U+C120,U+C158,U+C18C,U+C544-C545,U+C5C4,U+C6B0,U+C720,U+C774,U+C790,U+C794,U+C7AC,U+C815,U+C9C0,U+D558,U+D654}</style>
 
 
@@ -11010,7 +11010,7 @@
     const pics = new Map(), canvas = document.createElement("canvas");
     
     
-    const rowColor = (pic, left, top, size, vy) => {
+    const rowColor = (pic, left, top, size, vy, x0 = 0, x1 = innerWidth) => {
       const n = 64;
       canvas.width = canvas.height = n;
       const ctx = canvas.getContext("2d", { willReadFrequently: true });
@@ -11018,7 +11018,7 @@
       const py = Math.min(n - 1, Math.max(0, Math.floor((vy - top) / size * n)));
       const sum = [0, 0, 0], k = 8;
       for (let j = 0; j < k; j++) {
-        const px = Math.min(n - 1, Math.max(0, Math.floor((innerWidth * (j + 0.5) / k - left) / size * n)));
+        const px = Math.min(n - 1, Math.max(0, Math.floor((x0 + (x1 - x0) * (j + 0.5) / k - left) / size * n)));
         const [r, g, b] = ctx.getImageData(px, py, 1, 1).data;
         sum[0] += r; sum[1] += g; sum[2] += b;
       }
@@ -11056,6 +11056,29 @@
       : null;
     const background = () => getComputedStyle(backdrop).backgroundColor;
     
+    
+    const luminance = rgb => {
+      const [r, g, b] = rgb.match(/\d+/g).map(v => (v /= 255) <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    };
+    const inkOn = rgb => {
+      const l = luminance(rgb);
+      return (l + 0.05) / 0.05 >= 1.05 / (l + 0.05) ? "dark" : "light";
+    };
+    const ink = (pic, s) => {
+      if (!pic.complete || !pic.naturalWidth) return;
+      const behind = el => {
+        const r = el.getBoundingClientRect();
+        return rowColor(pic, s.b.left + s.x - s.size / 2, s.b.top + s.y - s.size / 2, s.size, r.top + r.height / 2, r.left, r.right);
+      };
+      stack.dataset.captionInk = inkOn(behind(captionBox));
+      stack.dataset.buttonInk = inkOn(behind(buttons));
+    };
+    const unink = () => {
+      delete stack.dataset.captionInk;
+      delete stack.dataset.buttonInk;
+    };
+    
     const paintEdge = (to, duration, easing) => {
       const from = getComputedStyle(edge).backgroundColor;
       edgeAnim?.cancel();
@@ -11070,6 +11093,7 @@
       const s = spread(), el = newLayer(pic, s);
       const dx = f.left + f.width / 2 - s.b.left - s.x, dy = f.top + f.height / 2 - s.b.top - s.y;
       el.animate({ transform: [`translate(${dx}px, ${dy}px) scale(${f.width / s.size / 0.7})`, "none"] }, { duration: 380, easing: ease });
+      ink(pic, s);
       const c = topColor(pic, s);
       if (!c) return;
       edge.style.backgroundColor = background();
@@ -11088,6 +11112,7 @@
         const s = spread(), old = layers(), el = newLayer(pic, s);
         const done = () => old.forEach(o => o.remove());
         el.animate({ opacity: [0, 1] }, { duration: 320, easing: "ease-out" }).finished.then(done, done);
+        ink(pic, s);
         const c = topColor(pic, s);
         if (c) {
           stack.classList.add("blooming");
@@ -11099,6 +11124,7 @@
       clearTimeout(tintTimer);
       if (tinted < 0) return;
       tinted = -1;
+      unink();
       layers().forEach(el => {
         const from = getComputedStyle(el).opacity;
         el.style.opacity = "0";
@@ -11113,6 +11139,7 @@
     const unbloom = () => {
       clearTimeout(tintTimer);
       tinted = -1;
+      unink();
       layers().forEach(el => el.remove());
       edgeAnim?.cancel();
       stack.classList.remove("blooming");
