@@ -12605,6 +12605,9 @@
       root.classList.add("stack-fading");
       set(true);
       layout(i);
+      
+      
+      linksBox.style.transition = "none";
       showLinks(i);
       const t = track.getBoundingClientRect();
       const flying = cards.flatMap((a, k) => drawn[k].transform && !drawn[k].display ? [k] : []);
@@ -12626,6 +12629,7 @@
       await Promise.allSettled(anims.map(x => x.finished));
       anims.forEach(x => x.cancel());
       track.classList.remove("landing");
+      linksBox.style.transition = "";
       lifted.forEach(el => { el.style.visibility = ""; });
       root.classList.remove("stack-fading");
     });
