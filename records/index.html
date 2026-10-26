@@ -18,7 +18,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.0dc603536c9ade5f16e572e4a99375822fb3b0b7ffc7917fefd03c5530fbd9ee.css" integrity="sha256-DcYDU2ya3l8W5XLkqZN1gi&#43;zsLf/x5F/79A8VTD72e4=">
+<link rel="stylesheet" href="/css/main.708ea92131a465809bc3b2e5c76e871b5e45181f901d5f5b59050fd81a0dfbe3.css" integrity="sha256-cI6pITGkZYCbw7Llx26HG15FGB&#43;QHV9bWQUP2BoN&#43;&#43;M=">
 <style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-f04e69f32b5f.woff2") format("woff2");unicode-range:U+3002,U+4E0D,U+4E16,U+4E8C,U+4E9E,U+4EBA,U+4ED6,U+4EEC,U+4F60,U+4F7F,U+4F86,U+50B3,U+512A,U+5149,U+5225,U+5230,U+523A,U+5341,U+53BB,U+53BF,U+53EA,U+5531,U+5584,U+57CE,U+5883,U+591F,U+5929,U+5931,U+5979,U+5982,U+5999,U+59CB,U+5A1B,U+5BA4,U+5BB6,U+5C07,U+5C0D,U+5C0F,U+5E74,U+5F00,U+60F3,U+611B,U+6211,U+6232,U+6416,U+64FA,U+6587,U+65C5,U+660E,U+6700,U+6708,U+6728,U+677E,U+679C,U+68A6,U+6A02,U+6A13,U+6A59,U+6B63,U+6E38,U+751F,U+754C,U+767C,U+7684,U+77E5,U+78B0,U+795E,U+7ED1,U+7F8E,U+8005,U+80FD,U+8207,U+826F,U+82E5,U+83AB,U+83F2,U+84CB,U+851A,U+875F,U+884C,U+897F,U+89AA,U+8A71,U+8A9E,U+8AAC,U+8BB0,U+904A,U+9053,U+9084,U+91CD,U+963F,U+964C,U+96C5,U+971E,U+9A6C,U+9B3C,U+9B54,U+AE30,U+B208,U+B2EC,U+B54C,U+B791,U+BB38,U+C0AC,U+C124,U+C379,U+C5D0,U+C804,U+D558,U+D56D,U+D574}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-928c864e791b.woff2") format("woff2");unicode-range:U+30AB,U+30D2,U+30EB,U+4E01,U+4E2D,U+4E94,U+4EBA,U+4F55,U+4F69,U+5065,U+5177,U+5361,U+540C,U+5730,U+57C3,U+5875,U+58F0,U+591A,U+5927,U+5955,U+5982,U+5B5D,U+5B87,U+5C0F,U+5CF6,U+5F35,U+5F37,U+61B6,U+61F8,U+64CE,U+6587,U+65B9,U+6728,U+6734,U+6761,U+6797,U+6811,U+6B23,U+6D2A,U+738B,U+73A9,U+7425,U+745C,U+7530,U+78C1,U+7A57,U+83AB,U+83F2,U+8431,U+84EE,U+851A,U+8521,U+8587,U+862D,U+885B,U+8FC5,U+9673,U+96C5,U+96F7,U+971E,U+97F3,U+9A6C,U+9B4F,U+9EC3,U+B098,U+B3D9,U+B77C,U+B9BC,U+BBA4,U+BE44,U+C120,U+C158,U+C18C,U+C544-C545,U+C5C4,U+C6B0,U+C720,U+C774,U+C790,U+C794,U+C7AC,U+C815,U+C9C0,U+D558,U+D654}</style>
 
 
@@ -9995,6 +9995,7 @@
 <div class="stack" data-grid-cols="1" data-grid-fly="" data-grid-max="0" data-grid-pick="row" data-idle="2000" id="stack">
   <div class="stack-backdrop"><div class="stack-bloom"></div><div class="stack-frost"></div></div>
   <div aria-hidden="true" class="stack-edge"></div>
+  <div aria-hidden="true" class="stack-side"></div>
   <div class="stack-buttons">
     <button id="stack-row" type="button">
       <svg aria-hidden="true" height="14" viewBox="0 0 16 16" width="14"><path d="M4.5 1.5h10v10M1.5 4.5h10v10h-10z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path></svg>
@@ -12597,26 +12598,45 @@
     
     
     
-    const edge = stack.querySelector(".stack-edge"), lead = 35;
+    
+    
+    
+    
+    
+    
+    
+    const edge = stack.querySelector(".stack-edge"), side = stack.querySelector(".stack-side"), lead = 35;
+    const upright = matchMedia("(orientation: portrait)");
+    const sided = () => {
+      if (!/iPhone/.test(navigator.userAgent)) return "";
+      const long = Math.max(screen.width, screen.height), short = Math.min(screen.width, screen.height);
+      if (root.clientWidth >= (upright.matches ? short : long)) return "";
+      if (upright.matches) return "right";
+      const turned = screen.orientation?.type ?? (window.orientation === 90 ? "landscape-primary" : "landscape-secondary");
+      return turned === "landscape-primary" ? "left" : "right";
+    };
     const pics = new Map(), canvas = document.createElement("canvas");
     
     
-    const rowColor = (pic, left, top, size, vy, x0 = 0, x1 = innerWidth) => {
+    
+    const lineColor = (pic, left, top, size, x0, y0, x1, y1) => {
       const n = 64;
       canvas.width = canvas.height = n;
       const ctx = canvas.getContext("2d", { willReadFrequently: true });
       ctx.drawImage(pic, 0, 0, n, n);
-      const py = Math.min(n - 1, Math.max(0, Math.floor((vy - top) / size * n)));
+      const at = (v, o) => Math.min(n - 1, Math.max(0, Math.floor((v - o) / size * n)));
       const sum = [0, 0, 0], k = 8;
       for (let j = 0; j < k; j++) {
-        const px = Math.min(n - 1, Math.max(0, Math.floor((x0 + (x1 - x0) * (j + 0.5) / k - left) / size * n)));
-        const [r, g, b] = ctx.getImageData(px, py, 1, 1).data;
+        const t = (j + 0.5) / k;
+        const [r, g, b] = ctx.getImageData(at(x0 + (x1 - x0) * t, left), at(y0 + (y1 - y0) * t, top), 1, 1).data;
         sum[0] += r; sum[1] += g; sum[2] += b;
       }
       return `rgb(${sum.map(v => Math.round(v / k)).join(", ")})`;
     };
     
-    let tinted = -1, tintTimer = 0, edgeAnim = null;
+    const rowColor = (pic, left, top, size, vy, x0 = 0, x1 = innerWidth) => lineColor(pic, left, top, size, x0, vy, x1, vy);
+    
+    let tinted = -1, tintTimer = 0, edgeAnim = null, sideAnim = null;
     const layers = () => [...backdrop.querySelectorAll(".stack-bloom")].filter(el => el !== bloomBox);
     const picOf = i => {
       const src = cards[i].dataset.bloom;
@@ -12642,10 +12662,26 @@
       backdrop.append(el);
       return el;
     };
-    const topColor = (pic, s) => pic.complete && pic.naturalWidth
-      ? rowColor(pic, s.b.left + s.x - s.size / 2, s.b.top + s.y - s.size / 2, s.size, edge.getBoundingClientRect().top + 6)
-      : null;
+    
+    const edgeColors = (pic, s) => {
+      if (!pic.complete || !pic.naturalWidth) return null;
+      const bar = sided(), vx = bar === "left" ? 6 : root.clientWidth - 6;
+      const left = s.b.left + s.x - s.size / 2, top = s.b.top + s.y - s.size / 2;
+      stack.classList.toggle("sided", !!bar);
+      if (bar) stack.dataset.side = bar;
+      return {
+        top: rowColor(pic, left, top, s.size, edge.getBoundingClientRect().top + 6),
+        side: lineColor(pic, left, top, s.size, vx, 0, vx, innerHeight)
+      };
+    };
     const background = () => getComputedStyle(backdrop).backgroundColor;
+    const plain = () => { const c = background(); return { top: c, side: c }; };
+    const setEdges = c => {
+      edgeAnim?.cancel();
+      sideAnim?.cancel();
+      edge.style.backgroundColor = c.top;
+      side.style.backgroundColor = c.side;
+    };
     
     
     const luminance = rgb => {
@@ -12670,11 +12706,15 @@
       delete stack.dataset.buttonInk;
     };
     
+    const fade = (el, anim, to, duration, easing) => {
+      const from = getComputedStyle(el).backgroundColor;
+      anim?.cancel();
+      el.style.backgroundColor = to;
+      return el.animate({ backgroundColor: [from, to] }, { duration, easing, delay: -lead });
+    };
     const paintEdge = (to, duration, easing) => {
-      const from = getComputedStyle(edge).backgroundColor;
-      edgeAnim?.cancel();
-      edge.style.backgroundColor = to;
-      edgeAnim = edge.animate({ backgroundColor: [from, to] }, { duration, easing, delay: -lead });
+      edgeAnim = fade(edge, edgeAnim, to.top, duration, easing);
+      sideAnim = fade(side, sideAnim, to.side, duration, easing);
     };
     const bloom = (i, f) => {
       unbloom();
@@ -12685,9 +12725,9 @@
       const dx = f.left + f.width / 2 - s.b.left - s.x, dy = f.top + f.height / 2 - s.b.top - s.y;
       el.animate({ transform: [`translate(${dx}px, ${dy}px) scale(${f.width / s.size / 0.7})`, "none"] }, { duration: 380, easing: ease });
       ink(pic, s);
-      const c = topColor(pic, s);
+      const c = edgeColors(pic, s);
       if (!c) return;
-      edge.style.backgroundColor = background();
+      setEdges(plain());
       stack.classList.add("blooming");
       paintEdge(c, 380, ease);
     };
@@ -12704,7 +12744,7 @@
         const done = () => old.forEach(o => o.remove());
         el.animate({ opacity: [0, 1] }, { duration: 320, easing: "ease-out" }).finished.then(done, done);
         ink(pic, s);
-        const c = topColor(pic, s);
+        const c = edgeColors(pic, s);
         if (c) {
           stack.classList.add("blooming");
           paintEdge(c, 320, "ease-out");
@@ -12723,7 +12763,7 @@
         el.animate({ opacity: [from, 0] }, { duration: ms, easing: "ease-out" }).finished.then(gone, gone);
       });
       if (!stack.classList.contains("blooming")) return;
-      paintEdge(background(), ms, "ease-out");
+      paintEdge(plain(), ms, "ease-out");
       edgeAnim.finished.then(() => { if (tinted < 0) stack.classList.remove("blooming"); }, () => {});
     };
     
@@ -12733,6 +12773,7 @@
       unink();
       layers().forEach(el => el.remove());
       edgeAnim?.cancel();
+      sideAnim?.cancel();
       stack.classList.remove("blooming");
     };
     
@@ -12743,11 +12784,8 @@
       layers().forEach(el => setBox(el, s));
       if (!pic) return;
       ink(pic, s);
-      const c = topColor(pic, s);
-      if (c && stack.classList.contains("blooming")) {
-        edgeAnim?.cancel();
-        edge.style.backgroundColor = c;
-      }
+      const c = edgeColors(pic, s);
+      if (c && stack.classList.contains("blooming")) setEdges(c);
     };
     let warmed = false;
     const warm = () => {
