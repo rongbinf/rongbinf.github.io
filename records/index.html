@@ -18,7 +18,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.708ea92131a465809bc3b2e5c76e871b5e45181f901d5f5b59050fd81a0dfbe3.css" integrity="sha256-cI6pITGkZYCbw7Llx26HG15FGB&#43;QHV9bWQUP2BoN&#43;&#43;M=">
+<link rel="stylesheet" href="/css/main.9575028a237275f8c60f7d8649655bcb47e9451abc5223c71ba632141cabc115.css" integrity="sha256-lXUCiiNydfjGD32GSWVby0fpRRq8UiPHG6YyFByrwRU=">
 <style id="page-fonts">@font-face{font-family:"Han Sans SC";font-weight:bold;font-display:swap;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Bold-f04e69f32b5f.woff2") format("woff2");unicode-range:U+3002,U+4E0D,U+4E16,U+4E8C,U+4E9E,U+4EBA,U+4ED6,U+4EEC,U+4F60,U+4F7F,U+4F86,U+50B3,U+512A,U+5149,U+5225,U+5230,U+523A,U+5341,U+53BB,U+53BF,U+53EA,U+5531,U+5584,U+57CE,U+5883,U+591F,U+5929,U+5931,U+5979,U+5982,U+5999,U+59CB,U+5A1B,U+5BA4,U+5BB6,U+5C07,U+5C0D,U+5C0F,U+5E74,U+5F00,U+60F3,U+611B,U+6211,U+6232,U+6416,U+64FA,U+6587,U+65C5,U+660E,U+6700,U+6708,U+6728,U+677E,U+679C,U+68A6,U+6A02,U+6A13,U+6A59,U+6B63,U+6E38,U+751F,U+754C,U+767C,U+7684,U+77E5,U+78B0,U+795E,U+7ED1,U+7F8E,U+8005,U+80FD,U+8207,U+826F,U+82E5,U+83AB,U+83F2,U+84CB,U+851A,U+875F,U+884C,U+897F,U+89AA,U+8A71,U+8A9E,U+8AAC,U+8BB0,U+904A,U+9053,U+9084,U+91CD,U+963F,U+964C,U+96C5,U+971E,U+9A6C,U+9B3C,U+9B54,U+AE30,U+B208,U+B2EC,U+B54C,U+B791,U+BB38,U+C0AC,U+C124,U+C379,U+C5D0,U+C804,U+D558,U+D56D,U+D574}@font-face{font-family:"Han Sans SC";font-weight:normal;src:local("Noto Sans SC"),local("Noto Sans CJK"),local("Source Han Sans SC"),local("Source Han Sans TC"),local("Source Han Sans TW"),url("/font/p/SourceHanSansSC-Regular-928c864e791b.woff2") format("woff2");unicode-range:U+30AB,U+30D2,U+30EB,U+4E01,U+4E2D,U+4E94,U+4EBA,U+4F55,U+4F69,U+5065,U+5177,U+5361,U+540C,U+5730,U+57C3,U+5875,U+58F0,U+591A,U+5927,U+5955,U+5982,U+5B5D,U+5B87,U+5C0F,U+5CF6,U+5F35,U+5F37,U+61B6,U+61F8,U+64CE,U+6587,U+65B9,U+6728,U+6734,U+6761,U+6797,U+6811,U+6B23,U+6D2A,U+738B,U+73A9,U+7425,U+745C,U+7530,U+78C1,U+7A57,U+83AB,U+83F2,U+8431,U+84EE,U+851A,U+8521,U+8587,U+862D,U+885B,U+8FC5,U+9673,U+96C5,U+96F7,U+971E,U+97F3,U+9A6C,U+9B4F,U+9EC3,U+B098,U+B3D9,U+B77C,U+B9BC,U+BBA4,U+BE44,U+C120,U+C158,U+C18C,U+C544-C545,U+C5C4,U+C6B0,U+C720,U+C774,U+C790,U+C794,U+C7AC,U+C815,U+C9C0,U+D558,U+D654}</style>
 
 
@@ -9993,7 +9993,7 @@
   </button>
 </div>
 <div class="stack" data-grid-cols="1" data-grid-fly="" data-grid-max="0" data-grid-pick="row" data-idle="2000" id="stack">
-  <div class="stack-backdrop"><div class="stack-bloom"></div><div class="stack-frost"></div></div>
+  <div class="stack-backdrop"><div class="stack-bloom"></div><div class="stack-rim"></div><div class="stack-frost"></div></div>
   <div aria-hidden="true" class="stack-edge"></div>
   <div aria-hidden="true" class="stack-side"></div>
   <div class="stack-buttons">
@@ -12605,7 +12605,11 @@
     
     
     
+    
     const edge = stack.querySelector(".stack-edge"), side = stack.querySelector(".stack-side"), lead = 35;
+    const rim = backdrop.querySelector(".stack-rim");
+    
+    const bands = [[edge, "top"], [side, "side"], [rim, "side"]];
     const upright = matchMedia("(orientation: portrait)");
     const sided = () => {
       if (!/iPhone/.test(navigator.userAgent)) return "";
@@ -12636,7 +12640,7 @@
     
     const rowColor = (pic, left, top, size, vy, x0 = 0, x1 = innerWidth) => lineColor(pic, left, top, size, x0, vy, x1, vy);
     
-    let tinted = -1, tintTimer = 0, edgeAnim = null, sideAnim = null;
+    let tinted = -1, tintTimer = 0, edgeAnims = [];
     const layers = () => [...backdrop.querySelectorAll(".stack-bloom")].filter(el => el !== bloomBox);
     const picOf = i => {
       const src = cards[i].dataset.bloom;
@@ -12676,11 +12680,13 @@
     };
     const background = () => getComputedStyle(backdrop).backgroundColor;
     const plain = () => { const c = background(); return { top: c, side: c }; };
+    const unpaint = () => {
+      edgeAnims.forEach(anim => anim.cancel());
+      edgeAnims = [];
+    };
     const setEdges = c => {
-      edgeAnim?.cancel();
-      sideAnim?.cancel();
-      edge.style.backgroundColor = c.top;
-      side.style.backgroundColor = c.side;
+      unpaint();
+      bands.forEach(([el, k]) => { el.style.backgroundColor = c[k]; });
     };
     
     
@@ -12706,15 +12712,13 @@
       delete stack.dataset.buttonInk;
     };
     
-    const fade = (el, anim, to, duration, easing) => {
-      const from = getComputedStyle(el).backgroundColor;
-      anim?.cancel();
-      el.style.backgroundColor = to;
-      return el.animate({ backgroundColor: [from, to] }, { duration, easing, delay: -lead });
-    };
     const paintEdge = (to, duration, easing) => {
-      edgeAnim = fade(edge, edgeAnim, to.top, duration, easing);
-      sideAnim = fade(side, sideAnim, to.side, duration, easing);
+      const from = bands.map(([el]) => getComputedStyle(el).backgroundColor);
+      unpaint();
+      edgeAnims = bands.map(([el, k], j) => {
+        el.style.backgroundColor = to[k];
+        return el.animate({ backgroundColor: [from[j], to[k]] }, { duration, easing, delay: -lead });
+      });
     };
     const bloom = (i, f) => {
       unbloom();
@@ -12764,7 +12768,7 @@
       });
       if (!stack.classList.contains("blooming")) return;
       paintEdge(plain(), ms, "ease-out");
-      edgeAnim.finished.then(() => { if (tinted < 0) stack.classList.remove("blooming"); }, () => {});
+      edgeAnims[0].finished.then(() => { if (tinted < 0) stack.classList.remove("blooming"); }, () => {});
     };
     
     const unbloom = () => {
@@ -12772,8 +12776,7 @@
       tinted = -1;
       unink();
       layers().forEach(el => el.remove());
-      edgeAnim?.cancel();
-      sideAnim?.cancel();
+      unpaint();
       stack.classList.remove("blooming");
     };
     
